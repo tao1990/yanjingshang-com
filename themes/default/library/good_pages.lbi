@@ -1,0 +1,108 @@
+<div id="answer">
+  	<div class="show_body_pan" style="line-height:26px; width:762px;">
+        <div style="margin-left:10px; padding-top:5px; float:left; width:26px;"><img src="../images/yi_tip/pan/talk.gif" border="0"/></div>
+        <div style="float:left; color:#000000; font-family:'宋体', Arial; font-size:14px; font-weight:bold;">问答</div>
+        <div style="float:left; margin-left:10px;">(共<font class="f1">{$total1}</font>条)</div>
+        <div style="float:right; margin-right:28px; width:98px; height:26px;"><a href="javascript:void(0)" onClick="if(iflogin()){document.getElementById('yipan').style.display='block';document.getElementById('fade').style.display='block';}else{return false;}"><img src="../images/goods_wen.gif" border="0" width="98" height="26" style="cursor:pointer"/></a></div>
+    </div>  
+    <div style="width:762px; word-break:break-all; border-bottom:1px #dcdcdc solid;">
+        <!--{foreach from=$feedback name=foos item=message key=key}-->
+        <div style="width:762px; <!--{if $smarty.foreach.foos.index mod 2 == 1}-->background-color:#f2f2f2;<!--{/if}-->">
+            <div style="height:auto; margin-top:10px;">   
+                   <div style="width:110px; float:left; padding-left:10px;">
+                    <span style="display:inline-block; padding-right:8px;"><img src="themes/default/images/yi_tip/why.png"/></span>
+                    <span>{if $message.user_name}{$message.user_name|truncate:4:false}{else}匿名用户{/if}：</span>
+                    </div> 
+                   <div style="float:left; width:628px;">{$message.msg_content}</div>
+            </div><div class="clear"></div> 
+            <div style="height:auto; margin-top:10px;">                                   
+                   <div style="width:110px;float:left; padding-left:10px;"> 
+                        <span style="display:inline-block; padding-right:8px;"><img src="themes/default/images/yi_tip/laugh.png"/></span><span><font color="#EBA32A">易视回答：</font></span>
+                   </div>
+                   <div style="float:left; width:628px;"><font color="#EBA32A">{if $message.msg_re}<!--{$message.msg_re}-->{else}等待回答中...{/if}</font></div>                   
+            </div>                                             
+        </div>
+        <!--{foreachelse}-->
+        <div style="padding:15px;">暂时没有用户提问</div>
+        <!--{/foreach}-->
+	</div>
+	<div class="clear"></div>
+    
+    
+    <!--分页start-->
+    <form name="selectPageForm" action="{$smarty.server.PHP_SELF}" method="get">
+    <div id="pager" style="float:right; margin-right:15px; margin-bottom:5px; margin-top:5px;text-align:right;">
+        {$lang.pager_1}{$total1}{$lang.pager_2}{$lang.pager_3}{$pagecount1}{$lang.pager_4} 
+        <span> 
+        <!--{if $page1 == 1 }--><font color="red">第一页&nbsp;上一页</font>
+        <!--{else}--><a href="{$smarty.server.PHP_SELF}?id={$goods_ids}&amp;pages=1">第一页</a>&nbsp;
+        <a href="{$smarty.server.PHP_SELF}?id={$goods_ids}&amp;pages={$prev}" >上一页</a><!--{/if}-->&nbsp;
+        
+        <!--{if $page1 == $pagecount1 }--><font color="red">下一页&nbsp;&nbsp;最末页</font>
+        <!--{else}--><a href="{$smarty.server.PHP_SELF}?id={$goods_ids}&amp;pages={$next}">下一页</a>&nbsp;
+        <a href="{$smarty.server.PHP_SELF}?id={$goods_ids}&amp;pages={$pagecount1}">最末页</a><!--{/if}-->
+        </span>
+    </div>
+    </form>
+    <!--分页end-->
+    {literal}
+    <script type="Text/Javascript" language="JavaScript">
+    <!--
+    function selectPage(sel){  sel.form.submit();}
+    -->
+    </script>
+    {/literal}
+</div><!--answer_end-->
+<div class="clear"></div>
+
+<!--判断用户登录，只有登录之后才能提问-->
+<div id="yipan" style="display:none; width:812px; height:392px; text-align:center; background-color:#fff; padding-top:20px;">
+	<div style="width:772px; height:28px; background-image:url(../images/aq_pan/border_top.gif);"></div>
+    <div style="width:772px; height:auto; background-image:url(../images/aq_pan/border_mid.gif); background-repeat:repeat-y;"> 
+    	<div style="width:740px; height:34px; line-height:34px; padding-left:10px; color:#999; font-size:14px; text-align:left; font-weight:bold;">商品：{$goods.goods_name}</div>        
+        <div style="width:750px; height:3px;"><img src="../images/aq_pan/pan_line.gif" border="0" width="750" height="3"/></div>
+        <div class="space20"></div> 
+    <!--{if $user_info.username}--><input id="user_info"  type="hidden" value="{$user_info.username}"/><!--{else}--><input id="user_info"  type="hidden" value=""/><!--{/if}-->
+    <form action="add_message.php" method="post" enctype="multipart/form-data" name="formMsg" onsubmit="return aa();">
+    <a name="que"></a>
+    <TABLE id="table_aq" border="0" cellSpacing="5" cellPadding="0" width="746" style="margin-left:8px;" bgcolor="#F7F7F7">
+            <TBODY>    
+              <TR height="28px">
+                <TD align="right">问答类型：</TD>
+                <TD align="left"><input name="msg_type" type="radio" value="0" />
+                            {$lang.type[0]}
+                            <input type="radio" name="msg_type" value="1" />
+                            {$lang.type[1]}
+                            <input type="radio" name="msg_type" value="2" />
+                            {$lang.type[2]}
+                            <input type="radio" name="msg_type" value="3" />
+                            {$lang.type[3]}
+                            <input type="radio" name="msg_type" value="4" />
+                            {$lang.type[4]}
+                            <input type="radio" name="msg_type" value="5" />
+                            {$lang.type[5]} </TD>
+              </TR>
+              <tr height="28px">
+                          <td align="right">邮箱/电话：</td>
+                          <td align="left"><input name="msg_title" type="text" size="30"  class="inputBg" id="email2" value="{$smarty.session.email|escape}"/>&nbsp;&nbsp;&nbsp;&nbsp;(请留下联系方式，方便我们及时回复您！)</td>
+                        </tr>
+                        <tr>
+                          <td align="right" valign="top">内容：</td>
+                          <td><textarea name="msg_content" cols="50" rows="3" wrap="virtual" class="B_blue" id="context2" style="width:636px; height:125px; float:left; overflow:hidden; border:1px #ccc solid;"></textarea></td>
+                        </tr>
+             <tr height="28px;">
+                          <td>&nbsp;</td>
+                          <td><input type="hidden" name="act" value="act_add_message" />
+                              <input type="hidden" value="{$goods_id}" name="goods_id" />
+    <input name="" type="submit"  value="" class="f_r" style="border:none; background:url(images/aq_pan/pan_wen.gif) no-repeat; width:72px; height:19px; margin-right:25px; cursor:pointer;">    
+                            </td>
+                        </tr>
+            </TBODY>
+          </TABLE>
+    </form>    
+    </div>    
+    <div style="width:772px; height:28px; background-image:url(../images/aq_pan/border_bottom.gif);"></div>  
+    <div style="float:right; text-align:right; margin-right:30px; margin-top:10px;">
+    	<a href="javascript:void(0)" onClick="document.getElementById('yipan').style.display='none';document.getElementById('fade').style.display='none';">关闭</a>
+    </div>   
+</div>

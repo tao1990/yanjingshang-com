@@ -1,0 +1,118 @@
+{literal}
+<style type="text/css" media="print">
+body,td { font-size:15px; text-align:center;  font-family:"黑体";}
+#printbtn{ display:none;}
+</style>
+<style type="text/css" media="screen">
+body,td { font-size:15px; text-align:center; font-family:"黑体";}
+.int{font-size:15px; font-family:"黑体"; margin:0; padding:0;}
+</style>
+<script type="text/javascript">
+function print_yi()
+{
+	var tt1 = document.getElementById("txt1");
+	var tt2 = document.getElementById("txt2");
+	var tt3 = document.getElementById("txt3");
+	var tt4 = document.getElementById("txt4");
+	var tt5 = document.getElementById("txt5");
+	var tt6 = document.getElementById("txt6");
+	var tt7 = document.getElementById("txt7");
+	var tt8 = document.getElementById("txt8");
+	var tt9 = document.getElementById("txt9");	
+	tt1.innerHTML = tt1.childNodes[0].value;
+	tt2.innerHTML = tt2.childNodes[0].value;
+	tt3.innerHTML = tt3.childNodes[0].value;
+	tt4.innerHTML = tt4.childNodes[0].value;
+	tt5.innerHTML = tt5.childNodes[0].value;	
+	tt6.innerHTML = tt6.childNodes[0].value;
+	tt7.innerHTML = tt7.childNodes[0].value;
+	tt8.innerHTML = tt8.childNodes[0].value;
+	window.print();
+}
+function ck(ths, tp, val)
+{
+	if(tp == 1)
+	{	
+		if(ths.value=='')
+		{
+			ths.value=val;
+		}
+	}
+	else if(tp == 2)
+	{
+		if(ths.value==val)
+		{
+			ths.value='';
+		}
+	}
+}
+
+</script>
+{/literal}
+<!--宅急送货到付款快递模板-->
+<table width="860px" height="345px" cellpadding="1" border="0" style="margin-top:123px; border-collapse:collapse;">
+    <tr height="34px">
+        <td width="1px"></td>
+        <td width="299px" style="text-align:left;"><table><tr><td style="text-indent:30px;" id="txt1"><input type="text" value="{$dl_name}" size="10" class="int" onblur="ck(this,1,'{$dl_name}')" onfocus="ck(this,2,'{$dl_name}')"/></td><td style="text-indent:75px;" id="txt2"><input type="text" value="上海" size="10" class="int" onblur="ck(this,1,'上海')" onfocus="ck(this,2,'上海')"/>上海</td><td style="text-indent:38px;" id="txt3"><input type="text" value="上海" size="10" class="int" onblur="ck(this,1,'上海')" onfocus="ck(this,2,'上海')"/>上海</td></tr></table></td>              
+		<td width="10px"></td>        
+        <td width="270px" style="text-align:left; text-indent:30px;" id="txt4"><input type="text" value="{$dl_name}" size="10" class="int" onblur="ck(this,1,'{$dl_name}')" onfocus="ck(this,2,'{$dl_name}')"/></td>
+        <td width="190px"></td>
+    </tr>
+    <tr height="26px">
+    	<td width="1px"></td>
+        <td width="299px" style="text-align:left;"><table style="margin-left:-5px;"><tr><td id="txt5"><input type="text" value="闸北" size="10" class="int" onblur="ck(this,1,'闸北')" onfocus="ck(this,2,'闸北')"/></td><td style="text-indent:30px;" id="txt6"><input type="text" value="平型关路138号622号" size="10" class="int" onblur="ck(this,1,'平型关路138号622号')" onfocus="ck(this,2,'平型关路138号622号')"/></td></tr></table></td>
+        <td width="10px"></td> <td width="270px"></td>
+        <td width="190px"></td>
+    </tr>
+    <tr height="28px">
+    	<td width="1px"></td>
+        <td width="299px" style="text-align:left;" id="txt7"><input type="text" value="上海明庭贸易有限公司" size="10" class="int" onblur="ck(this,1,'上海明庭贸易有限公司')" onfocus="ck(this,2,'上海明庭贸易有限公司')"/></td>
+        <td width="10px"></td> <td width="270px"></td>
+        <td width="190px"></td>
+    </tr> 
+    <tr height="26px">
+    	<td width="1px"></td>
+        <td width="299px" style="text-align:left;" id="txt8"><input type="text" value="{$dl_tel}" size="10" class="int" onblur="ck(this,1,'{$dl_tel}')" onfocus="ck(this,2,'{$dl_tel}')"/></td>
+        <td width="10px"></td> <td width="270px"></td>
+        <td width="190px"></td>
+    </tr>
+    <tr height="20px">
+        <td width="1px"></td>
+        <td width="299px"></td>              
+		<td width="10px"></td> <td width="460px" colspan="2" style="text-align:left; text-indent:30px; vertical-align:top;"></td>    
+    </tr>      
+    <tr height="23px">
+        <td width="1px"></td>
+        <td width="299px" style="text-align:left;"><table><tr><td style="text-indent:10px; width:100px;">{$order.consignee}</td><td style="width:90px; text-align:right;">{$province}</td><td style="width:70px; text-align:right; padding-right:12px;">{$city}</td></tr></table></td>              
+		<td width="10px"></td> <td width="460px" colspan="2"></td>
+    </tr>
+    <tr height="30px">
+    	<td width="1px"></td>
+        <td width="299px" style="text-align:left;"><table style="margin-left:-5px;"><tr><td width="80px" style="text-align:left; width:auto;">{$district}</td><td style="text-align:left; text-indent:10px;">{$order.address}</td></tr></table></td>
+        <td width="10px"></td> <td width="270px"></td>
+        <td width="190px"></td>
+    </tr>
+    <tr height="24px">
+    	<td width="1px"></td>
+        <td width="299px" style="text-align:left; text-indent:6px;"></td>
+        <td width="10px"></td> <td width="270px"></td>
+        <td width="190px"></td>
+    </tr>
+    <tr height="30px;">
+    	<td width="1px"></td>
+        <td width="269px" style="text-align:right; padding-right:30px;">{if $order.tel}{$order.tel}{else}{$order.mobile}{/if}</td>
+        <td width="10px"></td> <td width="270px" rowspan="2" style="text-align:left; text-indent:16px; vertical-align:top;">
+        	<table border="0"><td colspan="4" height="16px"></td></tr><tr><td colspan="4" style="text-indent:20px;" id="txt9"><input type="text" value="{$dl_name}" size="10" class="int" onblur="ck(this,1,'{$dl_name}')" onfocus="ck(this,2,'{$dl_name}')"/></td></tr><tr><td colspan="4" height="4px"></td></tr>
+            <tr><td>{$pr_y}</td><td width="22px" style="text-indent:4px;">{$pr_m}</td><td width="22px" style="text-indent:7px">{$pr_d}</td><td width="22px" style="text-indent:6px">{$pr_h}</td></tr></table>
+        </td>
+        <td width="190px"></td>
+    </tr>        
+    <tr height="90px;">
+    	<td width="1px"></td>
+        <td width="299px" style="text-align:left;">
+        	<table><tr><td style="height:62px;"></td></tr><tr><td style="text-indent:6px;">眼镜</td></tr></table>
+        </td>
+        <td width="10px"></td> <td width="190px"></td>
+    </tr>       
+</table>
+<input type="button" value="打印快递单" id="printbtn" onclick="print_yi()" />

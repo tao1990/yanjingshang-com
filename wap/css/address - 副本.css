@@ -1,0 +1,29 @@
+.app_kuang{padding-bottom:5px;border-bottom:1px solid #dbd7d7}
+.app_address{height:38px;line-height:38px;border:1px solid #73D8EC;padding:0 10px;margin:10px 7px; border-radius:5px; text-align:center;font-size:14px;color:#26bcd3;background: white;}
+.app_address a{width:100%;color:#26bcd3;cursor:pointer;float: left;}
+.app_address span{font-size:15px;font-weight:550;margin-left:3px;}
+.address{padding:12px 15px;border-bottom:1px solid #dbd7d7;overflow: auto;border-top: 1px solid #fff;}
+.address_name{overflow:hidden;zoom:1;color:#707070;font-size:14px;font-weight:600}
+.address_name_left{width:50%;float:left}
+.address_name_right{width:50%;float:right; text-align:right}
+.address_intro{margin-top:5px}
+.address_intro span{font-size:14px;font-weight:600}
+.address_select{margin-top:8px;padding-left:3px}
+.zhuangtai{width:40%;float:left}
+.add_act{width:60%;float:right;font-size:1.15em;text-align:right}
+.add_act a{margin-right:10px;color:#26bcd3}
+/*收货地址管理结束*/
+.append_address{padding:0 15px}
+.minute{overflow:hidden;zoom:1;height:50px;line-height:50px;border-bottom:1px solid #dbd7d7}
+.minute_add{overflow:hidden;zoom:1;border-bottom:1px solid #dbd7d7;line-height:50px}
+.minute_one,.minute_add_one,.minute_cur{width:30%;float:left}
+.minute_con{width:68%;float:left}
+.minute_add_con{width:66%;float:left; text-align:left;padding-right:10px}
+.minute_con input{font-size:1em;color:#666;border:1px solid #ccc;width:100%}
+.minute_add_con select{width:100%;padding-left:5px;border:1px solid #ccc}
+.minute_add_con select option{line-height:50px;margin-right:10px;height:30px;line-height:30px}
+.minute_jiedao{overflow:hidden;zoom:1;border-bottom:1px solid #dbd7d7;padding-top:20px;padding-bottom:10px}
+.minute_jiedao textarea{height:80px;border:none;padding-bottom:5px;border:1px solid #ccc;width:100%}
+.address_button input{ background-color:#75D6E9;color:#fff;font-size:1.25em;font-weight:bold;border:none;padding:3% 30%;margin-left:5%;margin-top:10px;margin-bottom:10px;border-radius:9px}
+.minute_add_one{float:left}
+/*添加收货地址的管理结束*/

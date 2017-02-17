@@ -1,0 +1,69 @@
+<!--footer-->
+<div class="footer">
+	<div class="container">
+		<div class="ys">
+			<span><img src="http://file.easeeyes.com/b2b/images/foot_ico_1.png" /></span><span><img src="http://file.easeeyes.com/b2b/images/foot_ico_2.png" /></span><span><img src="http://file.easeeyes.com/b2b/images/foot_ico_3.png" /></span><span><img src="http://file.easeeyes.com/b2b/images/foot_ico_4.png" /></span>
+		</div>
+		<div class="cd">
+			<div>
+				<h2>新手指南</h2>
+				<ul>
+					<li><a href="#">注册与登陆</a></li>
+					<li><a href="#">购物流程</a></li>
+					<li><a href="#">电话订购</a></li>
+					<li><a href="#">眼镜学堂</a></li>
+					<li><a href="#">常见问题</a></li>
+				</ul>
+			</div>
+			<div>
+				<h2>如何付款</h2>
+				<ul>
+					<li><a href="#">网上支付</a></li>
+					<li><a href="#">货到付款</a></li>
+					<li><a href="#">银行汇款</a></li>
+					<li><a href="#">账户支付</a></li>
+					<li><a href="#">发票制度</a></li>
+				</ul>
+			</div>
+			<div>
+				<h2>售后服务</h2>
+				<ul>
+					<li><a href="#">如何配送</a></li>
+					<li><a href="#">运费说明</a></li>
+					<li><a href="#">运达时间</a></li>
+					<li><a href="#">货到付款范围</a></li>
+					<li><a href="#">签收注意</a></li>
+				</ul>
+			</div>
+			<div>
+				<h2>配送方式</h2>
+				<ul>
+					<li><a href="#">订单查询</a></li>
+					<li><a href="#">订单修改</a></li>
+					<li><a href="#">退换货政策</a></li>
+					<li><a href="#">退换货办理</a></li>
+					<li><a href="#">退款说明</a></li>
+				</ul>
+			</div>
+			<div>
+				<h2>会员中心</h2>
+				<ul>
+					<li><a href="#">会员等级</a></li>
+					<li><a href="#">会员福利</a></li>
+					<li><a href="#">积分规则</a></li>
+					<li><a href="#">瞳学返利</a></li>
+					<li><a href="#">招募经销商</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="infos">
+			<a href="#">关于我们</a>　|　<a href="#">联系我们</a>　|　<a href="#">诚聘英才</a>　|　<a href="#">商务合作</a>　|　<a href="#">隐私保护</a>　|　<a href="#">使用协议</a>　|　<a href="#">网站地图</a><br />
+			©眼镜商 2008-2015  <a href="#">上海明庭贸易有限公司</a>  版权所有  网站备案号：沪ICP备08112987号-2  <a href="#">互联网药品信息服务资格证书</a>
+			<div class="image">
+				<img src="http://file.easeeyes.com/b2b/images/yqlink.png" />
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="http://file.easeeyes.com/js/yijq.js"></script>
+<script src="http://file.easeeyes.com/b2b/js/common.js"></script>

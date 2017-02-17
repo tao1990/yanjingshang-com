@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>易视网，2015年度热销榜单出炉</title>
+<meta name="Keywords"  content="易视网,易视眼镜网,美瞳,护理液,润眼液,博士伦,海昌,海俪恩,卫康,库博,视康,强生,sho-bi" />
+<meta name="Description" content="易视网，0利底价没完没了，6重惊喜抱团迎新，24小时闪电发货，30天退换货保障" />
+<style>
+.col-2{overflow:hidden;}
+.col-2>div{float:left;width:50%;}
+.btn-yhq{position:absolute;left:0;top:2.8rem;width:7.9rem;height:5rem;}
+.btn-yhq-01{left:8rem;}
+.btn-yhq-02{left:16rem;}
+.btn-yhq-03{left:24rem;}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<!--main-->
+<div class="container">
+    <div class="box-active">
+        <div><img src="http://file.easeeyes.com/wap/images/20151228/banner.jpg" /></div>
+        <div style="position:relative;">
+            <img src="http://file.easeeyes.com/wap/images/20151228/01.jpg" />
+            <!--优惠券-->
+            <a onclick="get_bonus(1)" class="btn-yhq"></a>
+            <a onclick="get_bonus(2)" class="btn-yhq btn-yhq-01"></a>
+            <a onclick="get_bonus(3)" class="btn-yhq btn-yhq-02"></a>
+            <a onclick="get_bonus(4)" class="btn-yhq btn-yhq-03"></a>
+        </div>
+        <div><img src="http://file.easeeyes.com/wap/images/20151228/02.jpg" /></div>
+        <div><img src="http://file.easeeyes.com/wap/images/20151228/03.jpg" /></div>
+        <div><a href="http://m.easeeyes.com/active15122801.html"><img src="http://file.easeeyes.com/wap/images/20151228/04.jpg" /></a></div>
+        <div class="col-2">
+            <div><a href="http://m.easeeyes.com/active151222.html"><img src="http://file.easeeyes.com/wap/images/20151228/05.jpg" /></a></div>
+            <div><a href="http://m.easeeyes.com/active151225.html"><img src="http://file.easeeyes.com/wap/images/20151228/06.jpg" /></a></div>
+        </div>
+        <div><img src="http://file.easeeyes.com/wap/images/20151228/07.jpg" /></div>
+        <div><img src="http://file.easeeyes.com/wap/images/20151228/08.jpg" /></div>
+        <div><a href="http://m.easeeyes.com/goods119.html"><img src="http://file.easeeyes.com/wap/images/20151228/09.jpg" /></a></div>
+        <div><a href="http://m.easeeyes.com/goods767.html"><img src="http://file.easeeyes.com/wap/images/20151228/10.jpg" /></a></div>
+        <div class="col-2">
+            <div><a href="http://m.easeeyes.com/goods757.html"><img src="http://file.easeeyes.com/wap/images/20151228/11.jpg" /></a></div>
+            <div><a href="http://m.easeeyes.com/goods105.html"><img src="http://file.easeeyes.com/wap/images/20151228/12.jpg" /></a></div>
+        </div>
+        <div class="col-2">
+            <div><a href="http://m.easeeyes.com/goods92.html"><img src="http://file.easeeyes.com/wap/images/20151228/13.jpg" /></a></div>
+            <div><a href="http://m.easeeyes.com/goods101.html"><img src="http://file.easeeyes.com/wap/images/20151228/14.jpg" /></a></div>
+        </div>
+        <div class="col-2">
+            <div><a href="http://m.easeeyes.com/goods117.html"><img src="http://file.easeeyes.com/wap/images/20151228/15.jpg" /></a></div>
+            <div><a href="http://m.easeeyes.com/goods3035.html"><img src="http://file.easeeyes.com/wap/images/20151228/16.jpg" /></a></div>
+        </div>
+        <div class="col-2">
+            <div><a href="http://m.easeeyes.com/goods140.html"><img src="http://file.easeeyes.com/wap/images/20151228/17.jpg" /></a></div>
+            <div><a href="http://m.easeeyes.com/goods93.html"><img src="http://file.easeeyes.com/wap/images/20151228/18.jpg" /></a></div>
+        </div>
+        <div><img src="http://file.easeeyes.com/wap/images/20151228/19.jpg" /></div>
+        <div><a href="http://m.easeeyes.com/goods227.html"><img src="http://file.easeeyes.com/wap/images/20151228/20.jpg" /></a></div>
+        <div><a href="http://m.easeeyes.com/goods2577.html"><img src="http://file.easeeyes.com/wap/images/20151228/21.jpg" /></a></div>
+        <div class="col-2">
+            <div><a href="http://m.easeeyes.com/goods359.html"><img src="http://file.easeeyes.com/wap/images/20151228/22.jpg" /></a></div>
+            <div><a href="http://m.easeeyes.com/goods225.html"><img src="http://file.easeeyes.com/wap/images/20151228/23.jpg" /></a></div>
+        </div>
+        <div class="col-2">
+            <div><a href="http://m.easeeyes.com/goods812.html"><img src="http://file.easeeyes.com/wap/images/20151228/24.jpg" /></a></div>
+            <div><a href="http://m.easeeyes.com/goods901.html"><img src="http://file.easeeyes.com/wap/images/20151228/25.jpg" /></a></div>
+        </div>
+        <div class="col-2">
+            <div><a href="http://m.easeeyes.com/goods2999.html"><img src="http://file.easeeyes.com/wap/images/20151228/26.jpg" /></a></div>
+            <div><a href="http://m.easeeyes.com/goods2581.html"><img src="http://file.easeeyes.com/wap/images/20151228/27.jpg" /></a></div>
+        </div>
+        <div class="col-2">
+            <div><a href="http://m.easeeyes.com/goods1147.html"><img src="http://file.easeeyes.com/wap/images/20151228/28.jpg" /></a></div>
+            <div><a href="http://m.easeeyes.com/goods955.html"><img src="http://file.easeeyes.com/wap/images/20151228/29.jpg" /></a></div>
+        </div>
+        <div><img src="http://file.easeeyes.com/wap/images/20151228/30.jpg" /></div>
+        <div><a href="http://m.easeeyes.com/goods589.html"><img src="http://file.easeeyes.com/wap/images/20151228/31.jpg" /></a></div>
+        <div><a href="http://m.easeeyes.com/goods924.html"><img src="http://file.easeeyes.com/wap/images/20151228/32.jpg" /></a></div>
+        <div class="col-2">
+            <div><a href="http://m.easeeyes.com/goods599.html"><img src="http://file.easeeyes.com/wap/images/20151228/33.jpg" /></a></div>
+            <div><a href="http://m.easeeyes.com/goods592.html"><img src="http://file.easeeyes.com/wap/images/20151228/34.jpg" /></a></div>
+        </div>
+        <div class="col-2">
+            <div><a href="http://m.easeeyes.com/goods1065.html"><img src="http://file.easeeyes.com/wap/images/20151228/35.jpg" /></a></div>
+            <div><a href="http://m.easeeyes.com/goods4070.html"><img src="http://file.easeeyes.com/wap/images/20151228/36.jpg" /></a></div>
+        </div>
+        <div class="col-2">
+            <div><a href="http://m.easeeyes.com/goods609.html"><img src="http://file.easeeyes.com/wap/images/20151228/37.jpg" /></a></div>
+            <div><a href="http://m.easeeyes.com/goods596.html"><img src="http://file.easeeyes.com/wap/images/20151228/38.jpg" /></a></div>
+        </div>
+        <div class="col-2">
+            <div><a href="http://m.easeeyes.com/goods3338.html"><img src="http://file.easeeyes.com/wap/images/20151228/39.jpg" /></a></div>
+            <div><a href="http://m.easeeyes.com/goods629.html"><img src="http://file.easeeyes.com/wap/images/20151228/40.jpg" /></a></div>
+        </div>
+
+    </div>
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+<script src="http://file.easeeyes.com/index2015/js/lazyload.js"></script>
+<script>
+    $(function(){
+        $("img").not('.fixed img').not('#search-page img').lazyload({placeholder:"http://img.easeeyes.com/index2015/white.gif", effect:"fadeIn"});
+    });
+
+    function get_bonus(bonus_id){
+
+        $.ajax({
+            type:'POST',
+            url:'ajax_active.php?id=151224&act=get_bonus_151224',
+            data:'&bonus_id='+bonus_id+'&m='+Math.random(),
+            cache:false,
+            success:
+                    function(da)
+                    {
+                        if(da == 1){
+                            alert('您已成功领取优惠券！请至我的红包/优惠券查看^_^');
+                        }else if(da == 2){
+                            alert('请登录后再试^_^');
+                        }else if(da == 3){
+                            alert('每位用户最多只能领取3张该优惠券^_^');
+                        }
+                    }
+        });
+    }
+</script>
+</body>
+</html>

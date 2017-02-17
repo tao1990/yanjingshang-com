@@ -1,0 +1,22 @@
+<!--{if $bought_goods}-->
+<div id="feise">
+<div id="feisetitle">买过该商品的人还买过</div>
+<!--{foreach from=$bought_goods item=bought_goods_data}-->
+<div class="showmain">
+<div class="showmainpic"> <a href="{$bought_goods_data.url}" target="_blank"><img src="{$bought_goods_data.goods_thumb}" alt="{$bought_goods_data.goods_name}" width="150px" height="150px"  class="goodsimg" /></a></div>
+    <div class="showmaintxt">
+        <div class="showmaintxt1"><a href="{$bought_goods_data.url}" title="{$bought_goods_data.goods_name}"  class="textlv" target="_blank">{$bought_goods_data.short_name}</a></div>
+        <div class="showmaintxt2"><div>
+            <span class="shanchux"><s>{$bought_goods_data.market_price}</s></span><span class="redhong fontsize13">
+            <!--{if $bought_goods_data.promote_price neq 0}-->
+                <font class="">{$bought_goods_data.formated_promote_price}</font>
+            <!-- {else} -->
+                <font class="">{$bought_goods_data.shop_price}</font>
+            <!-- {/if} --></span>
+        </div>
+    </div>
+	</div>
+</div>
+<!--{/foreach}-->
+</div>
+<!--{/if}-->

@@ -1,0 +1,25 @@
+<link rel="stylesheet" type="text/css" href="http://file.easeeyes.com/css/active/active_weekly.css" />
+<style>
+    .weekly-actives {width: 100%;   margin: auto; overflow: hidden;}
+    .weekly-actives ul {width: 98%; margin: 0 auto; padding-top: 15px;}
+    .weekly-actives li {
+        float: left;
+        width: 29%;
+        margin: 0 15px 15px 0;
+        box-shadow: 0 15px 12px -10px rgba(0, 0, 0, 0.3), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+        transition: all .3s ease-in-out;
+    }
+</style>
+<div class="weekly-actives">
+	<h3 class="title">
+		<img src="http://img.easeeyes.com/promotion/weekly_new/head01.jpg" style="width: 20%" />
+	</h3>
+	<ul class="ulist clearfix">
+		<li><a href="miaosha.php" target="_blank"><img src="http://img.easeeyes.com/promotion/weekly_new/01.jpg" /></a></li>
+		<li><a href="active.php?id=2" target="_blank"><img src="http://img.easeeyes.com/promotion/weekly_new/02.jpg" /></a></li>
+		<li><a href="active.php?id=3" target="_blank"><img src="http://img.easeeyes.com/promotion/weekly_new/03.jpg" /></a></li>
+		<li><a href="active.php?id=4" target="_blank"><img src="http://img.easeeyes.com/promotion/weekly_new/04.jpg" /></a></li>
+		<li><a href="tuan.php" target="_blank"><img src="http://img.easeeyes.com/promotion/weekly_new/05.jpg" /></a></li>
+		<li><a href="active.php?id=6" target="_blank"><img src="http://img.easeeyes.com/promotion/weekly_new/06.jpg" /></a></li>
+	</ul>
+</div>

@@ -1,0 +1,13 @@
+<ul class="goods_list">    
+<!--{foreach from=$goods_list item=goods name=foo}-->
+    <li class="goods_li">      
+        <dl class="goods_dl">
+            <!--{if $goods.show_tip gt 0}--><dd class="goods_tip" style="background:url(../images/tip{$goods.show_tip}.gif) no-repeat;"></dd><!--{/if}-->
+            <dd><a href="{$goods.url}" target="_blank" title="{$goods.goods_name}" class="goods_li_img"><img src="{$goods.goods_thumb}" width="150" height="150" alt="{$goods.goods_name}"/></a></dd>
+            <dd class="goods_li_name"><a href="{$goods.url}" title="{$goods.name|escape:html}" class="color_qianfei" target="_blank">{$goods.goods_name}</a><span class="blue">{if $goods.goods_name_desc}{$goods.goods_name_desc}{else}{$goods.goods_brief}{/if}</span></dd>
+            <dd class="goods_li_pr"><span class="color9"><strong class="red">{$goods.shop_price}</strong> <s>{$goods.market_price}</s></span></dd>
+            <dd class="goods_li_num">（有<span class="red">{$goods.click_count}</span>人关注）{if $goods.hv_gift}<span class="hv_gift"></span>{/if}</dd>
+        </dl>
+    </li><!--{if $smarty.foreach.foo.index mod 4 eq 3}--><li class="goods_li_line"></li><!--{/if}--> 
+<!--{foreachelse}--><li>很抱歉！没有符合条件的商品，请换其它条件搜索。</li><!--{/foreach}-->        
+</ul>

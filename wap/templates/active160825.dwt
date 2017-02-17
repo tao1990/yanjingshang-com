@@ -1,0 +1,385 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>易视6周年51返利新客返</title>
+<meta name="Keywords"  content="易视网,易视眼镜网,美瞳,护理液,润眼液,博士伦,海昌,海俪恩,卫康,库博,视康,强生,sho-bi,GEO,NEO,BESCON" />
+<meta name="Description" content="视网，易视6周年店庆，半价疯抢，千万神券限量抢，元气美瞳第二件半价，微信送祝福赢智能空调扇，购物抽奖100%有礼，透明片，彩片，护理液全场低价，24小时闪电发货，30天退换货保障" />
+<link rel="stylesheet" href="http://file.easeeyes.com/index2015/css/ani.css" />
+<style>
+.pageNav{position:relative;height:3.2rem;background:#a20d2d;}	
+.pageNav-lists{position:absolute;width:100%;height:3.2rem;left:0;top:0;z-index:9;}
+.pageNav-lists a{float:left;width:8rem;height:1.6rem;background:#f12c5a;color:#fff;text-align:center;line-height:1.6rem;border-right:1px solid #a20d2d;border-bottom:1px solid #a20d2d;box-sizing:border-box;}
+.yhq-item{width:33.333%;float:left;height:6.7rem;}
+.activeLinks a{float:left;width:50%;height:29.43rem;}
+.goodsItems{background:#97037b;}
+.goodsItem{float:left;width:15.75rem;background:#fff;margin-bottom:.5rem;position:relative;}
+.goodsItem:nth-child(even){float:right;}
+.goodsItem-thumb{height:14rem;line-height:14rem;text-align:center;}
+.goodsItem-thumb img{vertical-align:middle;max-height:100%;max-width:100%;}
+.goodsItem-info{padding:.25rem;overflow:hidden;}
+.goodsItem-btn{float:right;background:#f6404c;color:#fff;width:3rem;padding:.5rem 0;line-height:1.1;margin-left:.25rem;text-align:center;}
+.goodsItem-title{color:#333;margin-bottom:.25rem;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.goodsItem-price{color:#f4464f;overflow:hidden;font-size:1rem;}
+.goodsItem-price del{color:#696969;float:right;}
+.goodsItem-price b{font-size:1.0rem;font-weight:100;}
+.goodsItem-layer{position:absolute;width:2.8rem;font-size:1rem;line-height:1.1;padding:.25rem 0;text-align:center;background:#f6404c;color:#fff;left:.25rem;top:.25rem;}
+.pricer-container{height:12.7rem;width:16.5rem;text-align:center;overflow:hidden;}
+.pricer-ulist{position:relative;}
+.pricer-ulist li{height:1.5875rem;line-height:1.5875rem;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 1rem;font-size:.8rem;}
+.pricer-ulist.ani{animation:move 1s;-webkit-animation:move 1s;}
+@keyframes move{
+	0%{}
+	100%{
+		transform:translate(0,-1.5875rem);
+		-webkit-transform:translate(0,-1.5875rem);
+	}
+}
+@-webkit-keyframes move{
+	0%{}
+	100%{
+		transform:translate(0,-1.5875rem);
+		-webkit-transform:translate(0,-1.5875rem);
+	}
+}
+.lottery{width:28.95rem;height:32.85rem;background:url(http://img.easeeyes.com/promotion/20160815/turntable.png) no-repeat center top;background-size:auto 32.85rem;padding:3.35rem 2.2rem 0 0;}
+.lottery-main{width:23.3rem;height:23.3rem;position:relative;float:right;}
+.lottery-btn{position:absolute;width:6.7rem;height:8.15rem;background:url(http://img.easeeyes.com/promotion/20160801/button.png) no-repeat center top;background-size:auto 8.15rem;left:50%;margin-left:-3.35rem;top:50%;margin-top:-4.7rem;}
+.lottery-ipt{float:right;margin:2rem 5rem 0 0;width:13rem;}
+.lottery-ipt input{height:2.5rem;line-height:2.5rem;color:#ff82dc;text-align:center;border:0 none;background:none;width:100%;}
+.newCustom a{float:left;width:33.3333%;height:100%;}
+</style>
+</head>
+<!--tpl
+<div><img src="http://file.easeeyes.com/wap/images/2016080101/banner.jpg" alt="" style="display:block;"></div>
+<div><a href=""><img src="http://file.easeeyes.com/wap/images/2016080101/banner.jpg" alt="" style="display:block;"></a></div>
+-->
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<!--main-->
+<div class="container">
+	<div><img src="http://file.easeeyes.com/wap/images/20160822/banner.jpg" alt="" style="display:block;"></div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160825/01.jpg" alt="" style="display:block;"></div>
+	<div class="newCustom clearfix" style="height:11.5rem;background:url(http://file.easeeyes.com/wap/images/20160825/02.jpg) no-repeat center top;background-size:100% auto;">
+		<a href="http://m.easeeyes.com/tuan_buy_800.html"></a>
+		<a href="http://m.easeeyes.com/tuan_buy_801.html"></a>
+		<a href="http://m.easeeyes.com/tuan_buy_802.html"></a>
+	</div>
+	<div style="height:1rem;background:#a82846;"></div>
+	<!--导航-->
+	<div class="pageNav">
+		<div class="pageNav-lists" id="pageNav-lists">
+			<a href="#f_01" style="background:#12c291;">领券购物</a>
+			<a href="#f_02" style="background:#9e16f6;">10大会场</a>
+			<a href="#f_03" style="background:#3ac2ff;">微信抽奖</a>
+			<a href="#f_04" style="background:#2793ee;">人气美瞳</a>
+			<a href="#f_05" style="background:#8351ff;">爆款透明片</a>
+			<a href="#f_06" style="background:#05c0d3;">明星护理液</a>
+			<a href="#f_07" style="background:#147bfc;">潮流太阳镜</a>
+			<a href="#f_08" style="background:#fd20d0;">购物回礼</a>
+		</div>
+	</div>
+	
+	<div style="height:1rem;background:#c3004e;"></div>
+	<!--优惠券-->
+	<div style="height:20.7rem;background:url(http://file.easeeyes.com/wap/images/20160815/03.jpg) no-repeat center top;background-size:auto 20.7rem;" class="yhq clearfix" id="f_01">
+		<span class="yhq-item" onclick="get_bonus(1)"></span>
+		<span class="yhq-item" onclick="get_bonus(2)"></span>
+		<span class="yhq-item" onclick="get_bonus(3)"></span>
+		<span class="yhq-item" onclick="get_bonus(4)"></span>
+		<span class="yhq-item" onclick="get_bonus(5)"></span>
+	</div>
+	<div id="f_02"><img src="http://file.easeeyes.com/wap/images/20160815/04.jpg" alt="" style="display:block;"></div>
+	<!--分会场链接-->
+	<div style="height:147.1rem;background:url(http://file.easeeyes.com/wap/images/20160815/05.jpg) no-repeat center top;background-size:auto 147.1rem;" class="activeLinks clearfix">
+    	<a href="active16080101.html" ></a>
+			<a href="active16080102.html" ></a>
+			<a href="active16080103.html" ></a>
+			<a href="active16080104.html" ></a>
+			<a href="active16080106.html" ></a>
+			<a href="active16080110.html" ></a>
+			<a href="active16080108.html" ></a>
+			<a href="active160824.html" ></a>
+			<a href="active16080105.html" ></a>
+			<a href="active16080107.html" ></a>
+	</div>
+	<!--微博微信-->
+	<div id="f_03" style="position:relative;">
+		<img src="http://file.easeeyes.com/wap/images/20160815/06.jpg" alt="" style="display:block;">
+		<a href="" class="btn-share" id="shareBtn" style="width:5rem;height:5rem;position:absolute;right:0;bottom:5.9rem;"></a>
+	</div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160815/07.jpg" alt="" style="display:block;"></div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160815/08.jpg" alt="" style="display:block;"></div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160815/09.jpg" alt="" style="display:block;"></div>
+	<!--美瞳-->
+	<div id="f_04"><img src="http://file.easeeyes.com/wap/images/20160815/10.jpg" alt="" style="display:block;"></div>
+	<div class="goodsItems clearfix">
+    <!--{foreach from=$goodsArr1 item=li name=li}-->
+		<div class="goodsItem">
+			<a href="{$li.goods_link}">
+                {if $li.tips}
+				    <span class="goodsItem-layer">{$li.tips}</span>
+                {elseif $li.zk}
+                    <span class="goodsItem-layer">立减{$li.zk}元</span>
+                {/if}
+				<div class="goodsItem-thumb"><img src="http://img.easeeyes.com/{$li.goods_img}" alt=""></div>
+				<div class="goodsItem-info">
+					<span class="goodsItem-btn">立即<br>抢购</span>
+					<div class="goodsItem-title">{$li.goods_name}</div>
+					<div class="goodsItem-price">
+						<del>易视价{$li.shop_price}</del>
+						周年价:&yen;<b>{$li.now_price}</b>
+					</div>
+				</div>
+			</a>
+		</div>
+	<!--{/foreach}-->
+	</div>
+	<!--透明片-->
+	<div id="f_05"><img src="http://file.easeeyes.com/wap/images/20160815/11.jpg" alt="" style="display:block;"></div>
+	<div class="goodsItems clearfix">
+		<!--{foreach from=$goodsArr2 item=li name=li}-->
+		<div class="goodsItem">
+			<a href="{$li.goods_link}">
+                {if $li.tips}
+				    <span class="goodsItem-layer">{$li.tips}</span>
+                {elseif $li.zk}
+                    <span class="goodsItem-layer">立减{$li.zk}元</span>
+                {/if}
+				<div class="goodsItem-thumb"><img src="http://img.easeeyes.com/{$li.goods_img}" alt=""></div>
+				<div class="goodsItem-info">
+					<span class="goodsItem-btn">立即<br>抢购</span>
+					<div class="goodsItem-title">{$li.goods_name}</div>
+					<div class="goodsItem-price">
+						<del>易视价{$li.shop_price}</del>
+						周年价:&yen;<b>{$li.now_price}</b>
+					</div>
+				</div>
+			</a>
+		</div>
+	<!--{/foreach}-->
+	</div>
+	<!--护理液-->
+	<div id="f_06"><img src="http://file.easeeyes.com/wap/images/20160815/12.jpg" alt="" style="display:block;"></div>
+	<div class="goodsItems clearfix">
+		<!--{foreach from=$goodsArr3 item=li name=li}-->
+		<div class="goodsItem">
+			<a href="{$li.goods_link}">
+                {if $li.tips}
+				    <span class="goodsItem-layer">{$li.tips}</span>
+                {elseif $li.zk}
+                    <span class="goodsItem-layer">立减{$li.zk}元</span>
+                {/if}
+				<div class="goodsItem-thumb"><img src="http://img.easeeyes.com/{$li.goods_img}" alt=""></div>
+				<div class="goodsItem-info">
+					<span class="goodsItem-btn">立即<br>抢购</span>
+					<div class="goodsItem-title">{$li.goods_name}</div>
+					<div class="goodsItem-price">
+						<del>易视价{$li.shop_price}</del>
+						周年价:&yen;<b>{$li.now_price}</b>
+					</div>
+				</div>
+			</a>
+		</div>
+	<!--{/foreach}-->
+	</div>
+	<!--框架太阳镜-->
+	<div id="f_07"><img src="http://file.easeeyes.com/wap/images/20160815/13.jpg" alt="" style="display:block;"></div>
+	<div class="goodsItems clearfix">
+		<!--{foreach from=$goodsArr4 item=li name=li}-->
+		<div class="goodsItem">
+			<a href="{$li.goods_link}">
+                {if $li.tips}
+				    <span class="goodsItem-layer">{$li.tips}</span>
+                {elseif $li.zk}
+                    <span class="goodsItem-layer">立减{$li.zk}元</span>
+                {/if}
+				<div class="goodsItem-thumb"><img src="http://img.easeeyes.com/{$li.goods_img}" alt=""></div>
+				<div class="goodsItem-info">
+					<span class="goodsItem-btn">立即<br>抢购</span>
+					<div class="goodsItem-title">{$li.goods_name}</div>
+					<div class="goodsItem-price">
+						<del>易视价{$li.shop_price}</del>
+						周年价:&yen;<b>{$li.now_price}</b>
+					</div>
+				</div>
+			</a>
+		</div>
+	<!--{/foreach}-->
+	</div>
+	<!--抽奖-->
+	<div id="f_08"><img src="http://file.easeeyes.com/wap/images/20160815/14.jpg" alt="" style="display:block;"></div>
+	<!--转盘-->
+	<div style="background:#c3004e;">
+		<div class="lottery">
+			<div class="lottery-main">
+				<div class="lottery-img"><img id="rotate" src="http://img.easeeyes.com/promotion/20160815/prize.png" alt="" style="display:block;"></div>
+				<div class="lottery-btn" id="lottery-btn"></div>
+			</div>
+			<div class="lottery-ipt">
+				<input type="text" placeholder="请输入订单号" id="lotteryIpt" />
+			</div>
+		</div>
+	</div>
+	<!--中奖名单-->
+	<div style="height:22.4rem;background:url(http://file.easeeyes.com/wap/images/20160815/15.jpg) no-repeat center top;background-size:100% auto;box-sizing:border-box;padding:3.5rem 0 0 1.5rem;">
+		<div class="pricer-container">
+			<ul class="pricer-ulist" id="pricer-ulist">
+				            <li>李莉1994 136****4254 获得5元无限制红包</li>
+							<li>昵称是什么东西 133****4754 获得100会员积分</li>
+							<li>sara_90 137****8891 获得护理液*1</li>
+							<li>倩倩Tel 136****6614 获得舒缓眼贴*1</li>
+							<li>霸霸 131****5631 获得舒缓眼贴*1</li>
+							<li>最爱吃米饭 136****4214 获得护理液*1</li>
+							<li>阿雅呀 133****2211 获得舒缓眼贴*1</li>
+							<li>巴拉拉小魔仙 136****8724 获得100会员积分</li>
+							<li>1995_小柏 136****2215 获得舒缓眼贴*1</li>
+							<li>QQ100000 136****2218 获得100会员积分</li>
+							<li>午饭吃虾米 133****5124 获得100会员积分</li>
+							<li>芸芸^_^ 137****9513 获得5元无限制红包</li>
+                            <li>小馒头 137****8453 获得舒缓眼贴*1</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+<script src="http://file.easeeyes.com/js/awardRotate.js"></script>
+<script src="http://file.easeeyes.com/js/navFixed.js"></script>
+<script>
+
+$(window).load(function(){
+	oFixed({
+		elem:document.getElementById('pageNav-lists')
+	})
+})
+window.addEventListener('load',luckyer_slide,false);
+
+function luckyer_slide(){
+	var ulist=document.getElementById('pricer-ulist');
+	function slide(){
+		ulist.classList.add('ani');
+		setTimeout(function(){
+			ulist.appendChild(ulist.getElementsByTagName('li')[0]);
+			ulist.classList.remove('ani');
+		},1000);
+	}
+	setInterval(slide,3000);
+}
+	
+// 获取数据 status:0不符合 1抽奖成功 2已经抽过
+function getData(order,callback){
+	$.ajax({
+		type:'POST',
+		url:'ajax_active.php?act=get_price_160801',
+		dataType:'json',
+		data:{order:order},
+		success:function(res){
+			callback(res);
+		}
+	})
+}
+
+// 生成随机数
+function createNum(a,b){
+	return Math.round(Math.random()*(b-a)+a);
+}
+
+// 状态
+var clicked=false;
+
+$(function(){
+
+	// 抽奖动画
+	function lottery(id,name){
+		var prizes=[30,90,150,210,270,330];	// 所有奖品的角度集合 *按逆时针排序
+		// 产生一个3-5随机数
+		var round=createNum(3,5);
+		$('#rotate').rotate({
+			angle:0,
+			animateTo:round*360+prizes[id],
+			duration:3000,
+			callback:function(){
+				alert('恭喜您获得'+name);
+				clicked=false;
+			}
+		});
+	}
+
+	// 点击事件
+	$('#lottery-btn').click(function(){
+		// 状态管理
+		if(clicked) return;
+		clicked=true;
+
+		// 判断订单号是否符合规定
+		var order=$.trim($('#lotteryIpt').val());
+		if(!order || isNaN(order)){
+			alert('订单号格式错误！');
+			clicked=false;
+			return;
+		}
+
+		// 获取数据，并返回结果
+		getData(order,function(res){
+			$('#lotteryIpt').val('') // 清空输入框
+			if(res.status==0){
+				alert('无效的订单号！');
+				clicked=false;
+			}else if(res.status==2){
+				alert('您已经抽过奖啦！');
+				clicked=false;
+			}else if(res.status==3){
+				alert('请登陆后再试！');
+				clicked=false;
+			}else if(res.status==1){
+				lottery(res.id,res.name);
+			}
+		})
+	})
+})	
+
+function get_bonus(bonus_id){
+    $.ajax({
+        type:'POST',
+        url:'ajax_active.php?act=get_bonus_160801',
+        data:'&bonus_id='+bonus_id+'&m='+Math.random(),
+        cache:false,
+        success:
+                function(da)
+                {
+                    if(da == 1){
+                        alert('您已成功领取优惠券！请至我的红包/优惠券查看^_^');
+                    }else if(da == 2){
+                        alert('请登录后再试^_^');
+                    }else if(da == 3){
+                        alert('您已领取过该优惠券^_^');
+                    }
+                }
+    });
+}
+/* weiboShare */
+function weiboShare(){
+ 	var wb_shareBtn = document.getElementById("shareBtn"),
+ 	  wb_url = document.URL, //获取当前页面地址m"
+ 	  wb_appkey = "3647071035",
+ 	  wb_title = "小易6岁啦，转发并@3个好友，就有机会得空调扇和美瞳等大礼",
+ 	  wb_ralateUid = "1784922960",
+ 	  wb_pic = "",
+ 	  wb_language = "zh_cn";
+ 
+ 	  wb_shareBtn.setAttribute("href","http://v.t.sina.com.cn/share/share.php?url="+wb_url+"&appkey="+wb_appkey+"&title="+wb_title+"&pic="+wb_pic+"&ralateUid="+wb_ralateUid+"&language="+wb_language+"");
+}
+weiboShare();
+
+</script>
+</body>
+</html>

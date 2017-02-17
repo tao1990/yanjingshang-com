@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>易视双十一，视康专场五重好礼相送</title>
+<meta name="Keywords"  content="易视网,易视眼镜网,美瞳,护理液,润眼液,博士伦,海昌,海俪恩,卫康,库博,视康,强生,sho-bi,GEO,NEO,BESCON" />
+<meta name="Description" content="易视网，易视双十一，视康爱尔康专场五重好礼相送，硅水凝胶买即送乐明300ml，全场满119送专属化妆镜，满199送迷你黑胶伞，满399送旅行收纳5件套，满799送定制蓝牙音箱，24小时闪电发货，30天退换货保障" />
+<style>
+.links{position:relative;}
+.links a{position:absolute;width:14rem;height:6rem;}
+</style>
+</head>
+<!--tpl
+<div><img src="http://file.easeeyes.com/wap/images/20160901/banner.jpg" alt="" style="display:block;"></div>
+<div><a href=""><img src="http://file.easeeyes.com/wap/images/20160901/banner.jpg" alt="" style="display:block;"></a></div>
+-->
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<!--main-->
+<div class="container">
+	<div><img src="http://file.easeeyes.com/wap/images/2016110103/banner.jpg" alt="" style="display:block;"></div>
+	<div><img src="http://file.easeeyes.com/wap/images/2016110103/01.jpg" alt="" style="display:block;"></div>
+	<div class="links" style="height:25.1rem;background:url(http://file.easeeyes.com/wap/images/2016110103/02.jpg) no-repeat center top;background-size:100% auto;">
+		<a style="left:.9rem;top:17.9rem;" href="http://m.easeeyes.com/goods119.html"></a>
+		<a style="left:17rem;top:17.9rem;" href="http://m.easeeyes.com/goods118.html"></a>
+	</div>
+	<div><a href="http://m.easeeyes.com/goods2686.html"><img src="http://file.easeeyes.com/wap/images/2016110103/03.jpg" alt="" style="display:block;"></a></div>
+	<div><a href="http://m.easeeyes.com/goods1010.html"><img src="http://file.easeeyes.com/wap/images/2016110103/04.jpg" alt="" style="display:block;"></a></div>
+	<div><a href="http://m.easeeyes.com/goods117.html"><img src="http://file.easeeyes.com/wap/images/2016110103/05.jpg" alt="" style="display:block;"></a></div>
+	<div><a href="http://m.easeeyes.com/category.php?search=1&keyword=%E7%88%B1%E5%B0%94%E5%BA%B7%E8%A7%86%E5%BA%B7%E7%9D%9B%E5%BD%A9%E5%A4%A9%E5%A4%A9%E6%8A%9B%E5%BD%A9%E8%89%B2%E9%9A%90%E5%BD%A2%E7%9C%BC%E9%95%9C10%E7%89%87%E8%A3%85"><img src="http://file.easeeyes.com/wap/images/2016110103/06.jpg" alt="" style="display:block;"></a></div>
+	<div class="links" style="height:28.7rem;background:url(http://file.easeeyes.com/wap/images/2016110103/07.jpg) no-repeat center top;background-size:100% auto;">
+		<a style="left:.3rem;top:21.75rem;width:10.3rem;height:6.4rem;" href="http://m.easeeyes.com/goods585.html"></a>
+		<a style="left:10.9rem;top:21.75rem;width:10.3rem;height:6.4rem;" href="http://m.easeeyes.com/goods4070.html"></a>
+		<a style="left:21.4rem;top:21.75rem;width:10.3rem;height:6.4rem;" href="http://m.easeeyes.com/goods2911.html"></a>
+	</div>
+	<div><a href="http://m.easeeyes.com/goods924.html"><img src="http://file.easeeyes.com/wap/images/2016110103/08.jpg" alt="" style="display:block;"></a></div>
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

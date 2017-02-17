@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta content="telephone=no" name="format-detection"/>
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/category.css"/>
+</head>
+
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<script type="text/javascript" src="{$image_url}wap/js/scrollpagination.js"></script>
+<div class="content">
+<!--<form action="category.php" id="searchForm">
+        <div class="ys-srch">
+			<div class="new-srch-box">
+            	<input name="keyword" id="newkeyword" type="text" required="" class="new-srch-input" {if $keyword}value="{$keyword}"{else}value="博士伦"{/if} />
+                <a href="javascript:void(0);" target="_self" onclick="cancelHotWord()" class="new-s-close"></a>
+                <a href="javascript:void(0)" target="_self" onclick="$('#searchForm').submit();" class="new-s-srch"></a>
+            </div>
+        </div>
+</form>-->
+{if $lab_img}
+    <a href="lab-35.html" title="">
+        <img src="{$image_url}themes/default/images/lab/lab-{$lab_id}.jpg" alt="" style="width: 100%" />
+    </a>
+{else}
+    {if !$gn_cat}
+        <a href="{$ad_hot_list.0.ad_link}" title="">
+            <img src="{$image_url}{$ad_hot_list.0.ad_code}" alt="" style="width: 100%" />
+        </a>
+    {else}
+        <a href="category_183.html" title="">
+            <img  src="{$image_url}themes/default/images/common/gn_cat.jpg" alt="" style="width: 100%" />
+        </a>
+    {/if}
+{/if}
+<div class="content sort labSort">
+<a id="default" class="xz">默认</a>
+<a id="sales" class="down">销量</a>
+<a id="price" class="up">价格</a>
+<!--<a id="nowChoose">筛选</a>-->
+{if $st==1}
+<a class="st" href="lab.php?lab_id={$lab_id}" style="border-right:0px;width:19%;background: url('images/st.png') no-repeat center;"></a>
+{else}
+<a class="st" href="lab.php?lab_id={$lab_id}&st=1" style="border-right:0px;width:19%;background: url('images/st.png') no-repeat center;"></a>
+{/if}
+</div>
+    {if $st!=1}
+    	<ul id="Scroll" class="content goods_list">
+        {if $goods_list}
+        <!--{foreach from=$goods_list key=k item=v}-->
+            <li {if $v.saving > 0} class="active11_badge"{/if}>
+                <a class="list_a" href="goods.php?id={$v.goods_id}">
+                    <div class="goods_list_thumb pull-left">
+                        <img src="{$img_url}{$v.goods_thumb}"/>
+                    </div>
+                    <div class="goods_list_main">
+                        <h2>{$v.goods_name}</h2>
+                        <div class="pg-tags-list">
+                            {foreach from=$v.active key=key item=item}
+                            {if $item.act_type eq 0}
+                            <span class="pg-tags">赠</span>
+                            {elseif $item.act_type eq 1}
+                            <span class="pg-tags pg-tags-orange">减</span>
+                            {elseif $item.act_type eq 3}
+                            <span class="pg-tags pg-tags-yellow">加</span>
+                            {else}
+                            {/if}
+                            {/foreach}
+                        </div>
+                        <div class="goods_list_price">
+                            ￥{$v.shop_price} {if $v.saving > 0}<span class="pg-tags pg-tags-red">已优惠{$v.saving}元</span>{/if}
+                        </div>
+                        <p>已有 {$v.click_count} 人关注</p>
+                    </div>
+                </a>
+            </li>
+        <!--{/foreach}-->
+        {else}
+        没有此类商品
+        {/if}
+        </ul>
+        <input id="st" value="0"  type="hidden"/>
+    {else}
+        <div id="Scroll" class="content list_zong">
+            <!--{foreach from=$goods_list key=k item=v}-->
+            <div class="list_zong_left">
+                <div {if $v.saving > 0} class="active11_badge_2"{/if}><a href="goods.php?id={$v.goods_id}"><img src="{$img_url}{$v.goods_thumb}"/></a></div>
+                <div><a href="goods.php?id={$v.goods_id}">{$v.goods_name}</a></div>
+                <div class="pg-tags-list">
+                    {foreach from=$v.active key=key item=item}
+                    {if $item.act_type eq 0}
+                    <span class="pg-tags">赠</span>
+                    {elseif $item.act_type eq 1}
+                    <span class="pg-tags pg-tags-orange">减</span>
+                    {elseif $item.act_type eq 3}
+                    <span class="pg-tags pg-tags-yellow">加</span>
+                    {else}
+                    {/if}
+                    {/foreach}
+                </div>
+                <div class="goods_list_price">
+                    ￥ {$v.shop_price} {if $v.saving > 0}<span class="pg-tags pg-tags-red">已优惠 {$v.saving} 元</span>{/if}
+                </div>
+                <p>已有 {$v.click_count} 人关注</p>
+                <div class="active"></div>
+            </div>
+            <!--{/foreach}-->
+        </div>
+        <input id="st" value="1"  type="hidden"/>
+    {/if}
+    <div id="lookMore"></div> 
+    <div  class="loading" id="loading" style="display: none;"></div>
+    <div class="loading" id="nomoreresults" style="display: none;">没有更多了.</div>
+    <input type="hidden" id="pageStie" value="2" />
+    <input type="hidden" id="lab_id" value="{$lab_id}" />
+    <input type="hidden" id="nomore" value="0" />
+    <input type="hidden" id="sort" value="" />
+    <input type="hidden" id="keyword" value="{$keyword}" />
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+<script type="text/javascript" src="{$image_url}wap/js/lab.js"></script>
+</body>
+</html>

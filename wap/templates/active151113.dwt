@@ -1,0 +1,370 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>易视网 刷新底价下限，谁敢与我比价！</title>
+<meta name="Keywords"  content="易视网，易视眼镜网，美瞳，护理液，润眼液，博士伦，海昌，卫康，库博，视康，强生，sho-bi" />
+<meta name="Description" content="易视网，敢低敢送敢包邮，全场满200送200，Iphone6s秒杀，美瞳买一送一，高端尖货直降100，6大品牌专场2.7折起，24小时闪电发货，30天退换货保障" />
+<style>
+.col-2,.col-3{font-size:0;white-space:nowrap;}
+.col-2>div{display:inline-block;vertical-align:middle;width:50%;}
+.col-3>div{display:inline-block;vertical-align:middle;width:33.33333%;}
+.J-tab-navs{overflow:hidden;}
+.J-tab-navs span{float:left;width:10.04rem;line-height:2rem;margin-bottom:.2rem;color:#ffff4d;font-size:1.1rem;text-align:center;}
+.J-tab-navs span[data-selected="true"]{background:#a51316;}
+.J-tab-main>div{width:33.33333%;}
+/*弹窗*/
+.J-pop{position:fixed;left:0;top:0;z-index:999;background:rgba(0,0,0,.8);width:100%;height:100%;display:table;}
+.J-pop-wrap{display:table-cell;vertical-align:middle;text-align:center;}
+.J-pop-box{background:#fff;color:#666;text-align:left;padding:2rem;display:inline-block;border-radius:5px;position:relative;width:80%;}
+.J-pop-btn-close{position:absolute;top:-.5rem;right:-.5rem;width:2.5rem;height:2.5rem;line-height:2.5rem;text-align:center;background:#fff;box-shadow:0 0 1px 1px rgba(0,0,0,.2);color:#333;border-radius:50%;font-size:1.5rem;}
+.J-pop-box h2{margin-bottom:1rem;}
+.J-pop-box p{margin-bottom:.5rem;}
+.J-pop-box input{padding:.5rem;border:1px solid #ccc;border-radius:4px;margin-left:.5rem;min-width:15rem;}
+.J-pop-box select{padding:0 1rem;line-height:2rem;margin-left:.5rem;}
+.J-pop-box button{border:0 none;background:#02afc7;color:#fff;padding:0 1.5rem;line-height:3rem;border-radius:.5rem;width:100%;margin-top:1.5rem;box-shadow:0 0 2px 1px rgba(0,0,0,.2);}
+/*分会场*/
+#recommendBox{
+    width:30.5rem;
+    padding:0 .75rem;
+    margin:auto;
+    background:#e00144;
+    overflow:hidden;
+}
+#recommendBox ul{width:32rem;}
+#recommendBox li{float:left;width:15.05rem;margin:0 .4rem .4rem 0;}
+#recommendBox li img{width:100%;display:block;}
+#recommendBox li.thumb{width:30.5rem;margin-right:0;}
+#recommendBox .text{background:url(http://img.easeeyes.com/promotion/20151111/recommend/thumb_bg.jpg) no-repeat center top;height:7.8rem;background-size:100% auto;color:#333;}
+#recommendBox del{color:#666;}
+#recommendBox .text h2{text-align:center;font-size:.8rem;padding:.7rem 0;font-weight:normal;}
+#recommendBox .text p{line-height:2.5rem;padding-left:6rem;}
+#recommendBox .text .nowprice{font-size:1.5rem;color:#d51836;}
+#recommendBox .text .small{font-size:.8rem;}
+/*秒杀*/
+.ms-box-over{position:relative;}
+.ms-box-over:after{
+    content:"已结束";
+    position:absolute;
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+    line-height:9.9rem;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.5);
+    color:#fff;
+    font-size:1.2rem;
+}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<!--main-->
+<div class="container">
+    <div><img src="http://file.easeeyes.com/wap/images/20151113/banner.jpg" /></div>
+    <div style="background:#fff;padding:.5rem 0;">
+        <div style="width:30.15rem;margin:auto;">
+            <div style="margin-bottom:.5rem;"><a href="http://m.easeeyes.com/active15111301.html"><img src="http://file.easeeyes.com/wap/images/20151113/01.jpg" /></a></div>
+            <div><a href="http://m.easeeyes.com/active15111302.html"><img src="http://file.easeeyes.com/wap/images/20151113/02.jpg" /></a></div>
+        </div>
+    </div>
+    
+    <div style="background:#e20145;">
+        <div><img src="http://file.easeeyes.com/wap/images/20151113/03.jpg" /></div>
+        <div style="width:30.15rem;margin:auto;">
+            <div><img src="http://file.easeeyes.com/wap/images/20151113/04.jpg" /></div>
+            <div class="clearfix col-3">
+                <div><a href="http://m.easeeyes.com/goods4863.html"><img src="http://file.easeeyes.com/wap/images/20151111/19.jpg" /></a></div>
+                <div><a href="http://m.easeeyes.com/goods655.html"><img src="http://file.easeeyes.com/wap/images/20151111/20.jpg" /></a></div>
+                <div><a href="http://m.easeeyes.com/goods3948.html"><img src="http://file.easeeyes.com/wap/images/20151111/21.jpg" /></a></div>
+            </div>
+            <div style="margin-top:.5rem;"><img src="http://file.easeeyes.com/wap/images/20151113/05.jpg" /></div>
+            <div class="clearfix col-3">
+                <div><a href="http://m.easeeyes.com/goods894.html"><img src="http://file.easeeyes.com/wap/images/20151111/23.jpg" /></a></div>
+                <div><a href="http://m.easeeyes.com/goods4900.html"><img src="http://file.easeeyes.com/wap/images/20151111/24.jpg" /></a></div>
+                <div><a href="http://m.easeeyes.com/goods4795.html"><img src="http://file.easeeyes.com/wap/images/20151111/25.jpg" /></a></div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div><img src="http://file.easeeyes.com/wap/images/20151113/07.jpg" /></div>
+    </div>
+    <div id="recommendBox"></div>
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+<script src="http://file.easeeyes.com/wap/js/tab.js"></script>
+<script>
+// 选项卡
+var tab=new Tab({
+    navs:document.querySelectorAll(".J-tab-navs span"),
+    tabs:document.querySelectorAll(".J-tab-main")
+});
+
+
+// 分会场
+function foreach(arrs,callback){
+    var i,len;
+    if(arrs.length){
+        for(i=0,len=arrs.length;i<len;i++){
+            callback.apply(arrs[i],arguments);
+        }
+    }else{
+        for(i in arrs){
+            callback.apply(arrs[i],arguments);
+        }
+    }
+}
+var pinpai_goods=[
+    {
+        "thumb":"http://file.easeeyes.com/wap/images/20151111/thumbs/01.jpg",
+        "thumbLink":"http://m.easeeyes.com/active15111308.html",
+        "goodsArr":[
+            {
+                "img":"http://img.easeeyes.com/promotion/20151111/recommend/01.jpg",
+                "title":"强生安视优define美瞳日抛30片装",
+                "text":"",
+                "active_price":"178",
+                "price":"269",
+                "link":"http://m.easeeyes.com/goods4475.html"
+            },
+            {
+                "img":"http://img.easeeyes.com/promotion/20151111/recommend/02.jpg",
+                "title":"强生美瞳妍妍两周抛褐色6片装",
+                "text":"",
+                "active_price":"78",
+                "price":"178",
+                "link":"http://m.easeeyes.com/goods227.html"
+            },
+            {
+                "img":"http://img.easeeyes.com/promotion/20151111/recommend/05.jpg",
+                "title":"强生舒澈月抛型隐形眼镜6片装",
+                "text":"",
+                "active_price":"58",
+                "price":"98",
+                "link":"http://m.easeeyes.com/goods1645.html"
+            },
+            {
+                "img":"http://img.easeeyes.com/promotion/20151111/recommend/06.jpg",
+                "title":"强生舒晰月抛型隐形眼镜6片装",
+                "text":"",
+                "active_price":"109",
+                "price":"184",
+                "link":"http://m.easeeyes.com/goods95.html"
+            }
+        ]
+    },
+    {
+        "thumb":"http://file.easeeyes.com/wap/images/20151111/thumbs/02.jpg",
+        "thumbLink":"http://m.easeeyes.com/active15111303.html",
+        "goodsArr":[
+            {
+                "img":"http://img.easeeyes.com/promotion/20151111/recommend/07.jpg",
+                "title":"博士伦蕾丝明眸两周抛6片装",
+                "text":"",
+                "active_price":"75",
+                "price":"225",
+                "link":"http://m.easeeyes.com/goods811.html"
+            },
+            {
+                "img":"http://img.easeeyes.com/promotion/20151111/recommend/08.jpg",
+                "title":"博士伦蕾丝炫眸日抛10片装",
+                "text":"",
+                "active_price":"45",
+                "price":"108",
+                "link":"http://m.easeeyes.com/goods2581.html"
+            },
+            {
+                "img":"http://img.easeeyes.com/promotion/20151111/recommend/09.jpg",
+                "title":"博士伦纯视2代硅水凝胶月抛3片装",
+                "text":"",
+                "active_price":"145",
+                "price":"299",
+                "link":"http://m.easeeyes.com/goods4751.html"
+            },
+            {
+                "img":"http://img.easeeyes.com/promotion/20151111/recommend/10.jpg",
+                "title":"博士伦清朗一日水润日抛30片装",
+                "text":"",
+                "active_price":"90",
+                "price":"249",
+                "link":"http://m.easeeyes.com/goods101.html"
+            }
+        ]
+    },
+    {
+        "thumb":"http://file.easeeyes.com/wap/images/20151111/thumbs/03.jpg",
+        "thumbLink":"http://m.easeeyes.com/active15111306.html",
+        "goodsArr":[
+            {
+                "img":"http://img.easeeyes.com/promotion/20151111/recommend/13.jpg",
+                "title":"卫康槑瞳眼泛桃花半年抛1片装",
+                "text":"",
+                "active_price":"25",
+                "price":"98",
+                "link":"http://m.easeeyes.com/goods4867.html"
+            },
+            {
+                "img":"http://img.easeeyes.com/promotion/20151111/recommend/14.jpg",
+                "title":"卫康水盈月抛隐形眼镜2片装",
+                "text":"",
+                "active_price":"23",
+                "price":"50",
+                "link":"http://m.easeeyes.com/goods4801.html"
+            },
+            {
+                "img":"http://img.easeeyes.com/promotion/20151111/recommend/17.jpg",
+                "title":"卫康花沁护理液80ml四瓶套装",
+                "text":"",
+                "active_price":"38",
+                "price":"70",
+                "link":"http://m.easeeyes.com/goods4884.html"
+            },
+            {
+                "img":"http://img.easeeyes.com/promotion/20151111/recommend/18.jpg",
+                "title":"卫康清凉型护理液500+125ml",
+                "text":"",
+                "active_price":"16",
+                "price":"58",
+                "link":"http://m.easeeyes.com/goods609.html"
+            }
+        ]
+    },
+    {
+        "thumb":"http://file.easeeyes.com/wap/images/20151111/thumbs/04.jpg",
+        "thumbLink":"http://m.easeeyes.com/active15111304.html",
+        "goodsArr":[
+            {
+                "img":"http://img.easeeyes.com/promotion/20151111/recommend/19.jpg",
+                "title":"库博欧柯莱视半年抛2片装",
+                "text":"",
+                "active_price":"46",
+                "price":"175",
+                "link":"http://m.easeeyes.com/goods761.html"
+            },
+            {
+                "img":"http://img.easeeyes.com/promotion/20151111/recommend/20.jpg",
+                "title":"库博欧柯莱视防紫外线日抛型30片装",
+                "text":"",
+                "active_price":"58",
+                "price":"165",
+                "link":"http://m.easeeyes.com/goods767.html"
+            },
+            {
+                "img":"http://img.easeeyes.com/promotion/20151111/recommend/21.jpg",
+                "title":"库博佰视明非球面硅水凝胶月抛3片装",
+                "text":"",
+                "active_price":"69",
+                "price":"238",
+                "link":"http://m.easeeyes.com/goods1045.html"
+            },
+            {
+                "img":"http://img.easeeyes.com/promotion/20151111/recommend/22.jpg",
+                "title":"依视明Cooper Flex非球面月抛3片装",
+                "text":"",
+                "active_price":"59",
+                "price":"85",
+                "link":"http://m.easeeyes.com/goods1151.html"
+            }
+        ]
+    },
+    {
+        "thumb":"http://file.easeeyes.com/wap/images/20151111/thumbs/05.jpg",
+        "thumbLink":"http://m.easeeyes.com/active15111307.html",
+        "goodsArr":[
+            {
+                "img":"http://img.easeeyes.com/promotion/20151111/recommend/25.jpg",
+                "title":"科莱博美妆日抛彩色5片装",
+                "text":"",
+                "active_price":"23",
+                "price":"59",
+                "link":"http://m.easeeyes.com/goods5036.html"
+            },
+            {
+                "img":"http://img.easeeyes.com/promotion/20151111/recommend/26.jpg",
+                "title":"科莱博水润目清日抛型10片装",
+                "text":"",
+                "active_price":"20",
+                "price":"58",
+                "link":"http://m.easeeyes.com/goods4934.html"
+            },
+            {
+                "img":"http://img.easeeyes.com/promotion/20151111/recommend/27.jpg",
+                "title":"科莱博简单爱系列半年抛1片装",
+                "text":"",
+                "active_price":"26",
+                "price":"98",
+                "link":"http://m.easeeyes.com/goods946.html"
+            },
+            {
+                "img":"http://img.easeeyes.com/promotion/20151111/recommend/28.jpg",
+                "title":"科莱博clear四叶草翡翠绿年抛1片装",
+                "text":"",
+                "active_price":"69",
+                "price":"199",
+                "link":"http://m.easeeyes.com/goods240.html"
+            }
+        ]
+    },
+    {
+        "thumb":"http://file.easeeyes.com/wap/images/20151111/thumbs/06.jpg",
+        "thumbLink":"http://m.easeeyes.com/active15111305.html",
+        "goodsArr":[
+            {
+                "img":"http://img.easeeyes.com/promotion/20151111/recommend/31.jpg",
+                "title":"视康水润天天抛隐形眼镜30片装",
+                "text":"",
+                "active_price":"51",
+                "price":"150",
+                "link":"http://m.easeeyes.com/goods117.html"
+            },
+            {
+                "img":"http://img.easeeyes.com/promotion/20151111/recommend/32.jpg",
+                "title":"视康舒适氧硅水凝胶月抛6片装",
+                "text":"",
+                "active_price":"69",
+                "price":"298",
+                "link":"http://m.easeeyes.com/goods119.html"
+            },
+            {
+                "img":"http://img.easeeyes.com/promotion/20151111/recommend/34.jpg",
+                "title":"视康睛彩天天抛彩色隐形眼镜10片装",
+                "text":"",
+                "active_price":"45",
+                "price":"108",
+                "link":"http://m.easeeyes.com/goods1177.html"
+            },
+            {
+                "img":"http://img.easeeyes.com/promotion/20151111/recommend/35.jpg",
+                "title":"视康洁镜双氧水护理液360ml",
+                "text":"",
+                "active_price":"16",
+                "price":"75",
+                "link":"http://m.easeeyes.com/goods589.html"
+            }
+        ]
+    }
+];
+var str="";
+foreach(pinpai_goods,function(){
+    str+="<ul class='clearfix'><li class='thumb'><a href="+this.thumbLink+"><img src="+this.thumb+" /></a></li>";
+    foreach(this.goodsArr,function(){
+        str+="<li><a href="+this.link+"><div class='image'><img src="+this.img+"></div><div class='text'><h2>"+this.title+"</h2><p><span class='nowprice'>"+this.active_price+"<small>.00</small></span>　<del>&yen;"+this.price+"</del></p></div></a></li>"
+    })
+    str+="</ul>";
+})
+document.getElementById("recommendBox").innerHTML=str;
+</script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>易视网 招行支付秒杀iphone6</title>
+<meta name="Keywords"  content="易视网，易视眼镜网，美瞳，护理液，润眼液，博士伦，海昌，卫康，库博，视康，sho-bi" />
+<meta name="Description" content="易视网双11，用招行卡支付享iphone6s秒杀，全场满68包邮，24小时闪电发货，30天退换货保障" />
+<style>
+.jjg{background:#be125e;padding-bottom:1rem;}
+.goodsbox{width:28.8rem;margin:auto;}
+.goodsbox div{width:33.333%;}
+.tjsp{background:#4d5aba;padding-bottom:1rem;}
+.tj-goodsbox,.tj-title{width:29.8rem;margin:auto;background:rgba(0,0,0,.2);}
+.tj-title span{float:left;width:33.33333%;line-height:2.5rem;color:#fff;font-size:1.3rem;background:#006cff;animation:jump .5s ease-in-out;animation-play-state:paused;-webkit-animation:jump .5s ease-in-out;-webkit-animation-play-state:paused;}
+.tj-title span[data-selected="false"]{opacity:.3;}
+.tj-title span:nth-child(2){background:#d5156a;}
+.tj-title span:nth-child(3){background:#060d67;}
+.tj-title span.run{animation-play-state:running;-webkit-animation-play-state:running;}
+.tj-goodsbox{padding:.75rem .75rem 0;box-sizing:border-box;}
+.tj-goodsbox .goods{width:13.85rem;background:#fff;margin-bottom:.75rem;}
+.tj-goodsbox .goods:nth-child(even){float:right}
+.tj-goodsbox .image{height:12.4rem;line-height:10.4rem;padding:1rem;box-sizing:border-box;}
+.tj-goodsbox .image img{max-height:100%;}
+.tj-goodsbox .text{text-align:center;}
+.tj-goodsbox .text h2{line-height:2rem;height:2rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.tj-goodsbox .btns{background:url(http://file.easeeyes.com/wap/images/20151101/block_bg.jpg) repeat;height:7.2rem;padding:.4rem 0;box-sizing:border-box;}
+.tj-goodsbox .btn{display:block;width:90%;margin:auto;line-height:1.5rem;height:1.9rem;background:#30a0ae;color:#fff;margin-bottom:.4rem;text-align:center;padding:.2rem 0;box-sizing:border-box;border-radius:.5rem;}
+.tj-goodsbox .btn span{display:inline-block;width:1.5rem;margin-left:.5rem;padding-left:.5rem;border-left:1px solid #fff;}
+.tj-goodsbox .btn:nth-child(2){background:#4d5aba;}
+.tj-goodsbox .btn:nth-child(3){background:#d5156a;}
+/*ani*/
+@keyframes jump{
+    0%{
+        transform:translate(0,0);
+        -webkit-transform:translate(0,0);
+    }
+    50%{
+        transform:translate(0,-.5rem);
+        -webkit-transform:translate(0,-.5rem);
+    }
+    100%{
+        transform:translate(0,0);
+        -webkit-transform:translate(0,0);
+    }
+}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<!--main-->
+<div class="container">
+    <div class="banner"><img src="http://file.easeeyes.com/wap/images/20151112/banner.jpg" /></div>
+    <div><a href="http://m.easeeyes.com/active.php?id=15110102"><img src="http://file.easeeyes.com/wap/images/20151112/01.jpg" /></a></div>
+    <div style="padding-top:1.4rem;background:#FFD475;"><a href="http://m.easeeyes.com/miaosha_buy_5041.html"><img src="http://file.easeeyes.com/wap/images/20151112/02.jpg" /></a></div>
+    <div><img src="http://file.easeeyes.com/wap/images/20151112/03.jpg" /></div>
+
+    <!--加价购-->
+    <div class="jjg">
+        <div><img src="http://file.easeeyes.com/wap/images/20151101/07.jpg" /></div>
+        <div class="clearfix goodsbox">
+            <div class="pull-left"><a href="goods.php?id=4863"><img src="http://file.easeeyes.com/wap/images/20151101/08.jpg" /></a></div>
+            <div class="pull-left"><a href="goods.php?id=655"><img src="http://file.easeeyes.com/wap/images/20151101/09.jpg" /></a></div>
+            <div class="pull-left"><a href="goods.php?id=3948"><img src="http://file.easeeyes.com/wap/images/20151101/10.jpg" /></a></div>
+        </div>
+        <div><img src="http://file.easeeyes.com/wap/images/20151101/11.jpg" /></div>
+        <div class="clearfix goodsbox">
+            <div class="pull-left"><a href="goods.php?id=894"><img src="http://file.easeeyes.com/wap/images/20151101/12.jpg" /></a></div>
+            <div class="pull-left"><a href="goods.php?id=618"><img src="http://file.easeeyes.com/wap/images/20151101/13.jpg" /></a></div>
+            <div class="pull-left"><a href="goods.php?id=4795"><img src="http://file.easeeyes.com/wap/images/20151101/14.jpg" /></a></div>
+        </div>
+    </div>
+    <!--商品-->
+    <div class="tjsp">
+        <div><img src="http://file.easeeyes.com/wap/images/20151101/15.jpg" /></div>
+        <div class="tj-title clearfix">
+            <span>透明片商品</span>
+            <span>美瞳商品</span>
+            <span>护理液商品</span>
+        </div>
+        <div class="tj-goodsbox clearfix">
+            <!--{foreach from=$goodsArr1 item=goods}-->
+            <div class="pull-left goods">
+                <a href="goods.php?id={$goods.goods_id}">
+                    <div class="image"><img src="{$image_url}{$goods.original_img}" /></div>
+                    <div class="text">
+                        <h2>{$goods.goods_name}</h2>
+                        <del>市场价：{$goods.market_price}</del>
+                    </div>
+                </a>
+                <div class="btns">
+
+                    <!--{if $goods.shop_price neq 0}--><a href="goods.php?id={$goods.goods_id}" class="btn">一盒价 &yen;<b>{$goods.shop_price}</b>/盒<span><img src="http://file.easeeyes.com/wap/images/20151101/cars.png" /></span></a><!--{/if}-->
+                    <!--{if $goods.tp1 neq 0}--><a href="tuan_buy.php?rec_id={$goods.t1}" class="btn">两盒价 &yen;<b>{$goods.tp1}</b>/盒<span><img src="http://file.easeeyes.com/wap/images/20151101/cars.png" /></span></a><!--{/if}-->
+                    <!--{if $goods.tp2 neq 0}--><a href="tuan_buy.php?rec_id={$goods.t2}" class="btn">四盒价 &yen;<b>{$goods.tp2}</b>/盒<span><img src="http://file.easeeyes.com/wap/images/20151101/cars.png" /></span></a><!--{/if}-->
+                </div>
+            </div>
+            <!--{/foreach}-->
+        </div>
+        <div class="tj-goodsbox clearfix">
+            <!--{foreach from=$goodsArr2 item=goods}-->
+            <div class="pull-left goods">
+                <a href="goods.php?id={$goods.goods_id}">
+                    <div class="image"><img src="{$image_url}{$goods.original_img}" /></div>
+                    <div class="text">
+                        <h2>{$goods.goods_name}</h2>
+                        <del>市场价：{$goods.market_price}</del>
+                    </div>
+                </a>
+                <div class="btns">
+                    <!--{if $goods.shop_price neq 0}--><a href="goods.php?id={$goods.goods_id}" class="btn">一盒价 &yen;<b>{$goods.shop_price}</b>/盒<span><img src="http://file.easeeyes.com/wap/images/20151101/cars.png" /></span></a><!--{/if}-->
+                    <!--{if $goods.tp1 neq 0}--><a href="tuan_buy.php?rec_id={$goods.t1}" class="btn">两盒价 &yen;<b>{$goods.tp1}</b>/盒<span><img src="http://file.easeeyes.com/wap/images/20151101/cars.png" /></span></a><!--{/if}-->
+                    <!--{if $goods.tp2 neq 0}--><a href="tuan_buy.php?rec_id={$goods.t2}" class="btn">四盒价 &yen;<b>{$goods.tp2}</b>/盒<span><img src="http://file.easeeyes.com/wap/images/20151101/cars.png" /></span></a><!--{/if}-->
+                </div>
+            </div>
+            <!--{/foreach}-->
+        </div>
+        <div class="tj-goodsbox clearfix">
+            <!--{foreach from=$goodsArr3 item=goods}-->
+            <div class="pull-left goods">
+                <a href="goods.php?id={$goods.goods_id}">
+                    <div class="image"><img src="{$image_url}{$goods.original_img}" /></div>
+                    <div class="text">
+                        <h2>{$goods.goods_name}</h2>
+                        <del>市场价：{$goods.market_price}</del>
+                    </div>
+                </a>
+                <div class="btns">
+                    <!--{if $goods.shop_price neq 0}--><a href="goods.php?id={$goods.goods_id}" class="btn">一盒价 &yen;<b>{$goods.shop_price}</b>/盒<span><img src="http://file.easeeyes.com/wap/images/20151101/cars.png" /></span></a><!--{/if}-->
+                    <!--{if $goods.tp1 neq 0}--><a href="tuan_buy.php?rec_id={$goods.t1}" class="btn">两盒价 &yen;<b>{$goods.tp1}</b>/盒<span><img src="http://file.easeeyes.com/wap/images/20151101/cars.png" /></span></a><!--{/if}-->
+                    <!--{if $goods.tp2 neq 0}--><a href="tuan_buy.php?rec_id={$goods.t2}" class="btn">四盒价 &yen;<b>{$goods.tp2}</b>/盒<span><img src="http://file.easeeyes.com/wap/images/20151101/cars.png" /></span></a><!--{/if}-->
+                </div>
+            </div>
+            <!--{/foreach}-->
+        </div>
+    </div>
+</div>
+
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+
+<script src="http://file.easeeyes.com/wap/js/tab.js"></script>
+<script>
+    // 选项卡
+    var tab=new Tab({
+        navs:document.querySelectorAll(".tj-title span"),
+        tabs:document.querySelectorAll(".tj-goodsbox")
+    });
+    //点击动画
+    var btns=document.querySelectorAll(".tj-title span");
+    btns=Array.prototype.slice.call(btns,0);
+    btns.forEach(function(btn){
+        btn.addEventListener("click",function(){
+            btns.forEach(function(_btn){
+                _btn.classList.remove("run");
+            });
+            this.className="run";
+        },false);
+    })
+    
+
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?0b2bbbfa2efacf5d67553c9fddab504d";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+<link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+<link href="http://file.easeeyes.com/wap/css/style.css" rel="stylesheet" />
+<script src="{$file_url}js/jquery.js"></script>
+
+<!--侧边导航-->
+<div id="aside_main">
+    <ul>
+        <!--{foreach from=$menu_list key=k item=v}-->
+        <!--一级-->
+        <li class="aside-list {if $k eq 1} open{else} close{/if}">
+            <h2 onclick="toggleClass(this.parentNode,['aside-list open','aside-list close'])"><span class="pull-right">^</span>{$v.cat_name}</h2>
+            <!--二级-->
+            <div class="aside-navs">
+                <!--{foreach from=$v.qbpp item=v2}-->
+                <a href="category.php?cat_id={$v2.cat_id}" {if $v2.is_show_red eq 1} class="hot"{/if}>{$v2.cat_name}</a>
+                <!--{/foreach}-->
+            </div>
+        </li>
+        <!--{/foreach}-->
+    </ul>
+</div>
+<div id="aside_close"><span><i>&times;</i></span></div>
+
+<!--header-->
+<!--内页头部-->
+<div class="container inside-header">
+    <a href="javascript:history.back();" class="pull-left btn-back"></a>
+    <span class="pull-right btn-right" id="search-switch"></span>
+    <h2 class="text-center">{$ur_here}</h2>
+    <div class="search-box" id="search-main">
+        <form action="category.php" method="get">
+            <input type="text" name="keyword" placeholder="博士伦纯视" />
+        </form>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+
+ <!--{foreach from=$categoriescsz item=cat name=arrts}-->
+<div class="leftmain"><img src="images/jsj.gif" width="6px" height="9px" >&nbsp;&nbsp;<a href="categorysea.php?attr{$smarty.foreach.arrts.index}=0"><span class="color_hei fontsize14" style="color:#C30000">{$cat.name|escape:html}</span></a>
+</div>
+
+<div class="leftmaincontent">
+ <!--{foreach from=$cat.attr_values item=catz  }-->
+ <!-- {if $smarty.foreach.arrts.index ==1||$smarty.foreach.arrts.index ==5} -->
+ <span class="classtyped"><a href="categorysea.php?attr{$smarty.foreach.arrts.index}={$catz|escape:url}">{$catz}</a></span>
+ {else}
+  <span class="classtype"><a href="categorysea.php?attr{$smarty.foreach.arrts.index}={$catz|escape:url}">{$catz}</a></span>
+  <!--{/if}--> 
+ <!--{/foreach}-->
+	 </div>
+<div class="leftmainline"><img src="images/leftmainline.jpg" height="2px" /></div>
+
+ <!--{/foreach}--> 
+ 
+ <div class="leftmain"><img src="images/jsj.gif" width="6px" height="9px" >&nbsp;&nbsp;<a href="categorysea.php"><span class="color_hei fontsize14" style="color:#C30000">产品价格</span></a>
+</div>
+
+<div class="leftmaincontent">
+
+
+ <!--{foreach from=$categoryjg item=catz}-->
+ 
+ <span class="classtype"><a href="categorysea.php?price_min={$catz.attr_type}&price_max={$catz.attr_input_type}">{$catz.name}</a></span>
+ 
+ <!--{/foreach}--> 
+
+
+
+
+
+	 </div>
+<div class="leftmainline"><img src="images/leftmainline.jpg" height="2px" /></div>

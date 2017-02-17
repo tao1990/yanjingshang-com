@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>云镜商_眼镜行业全方位服务提供商</title>
+<meta name="Keywords"    content="云镜商_眼镜行业全方位服务提供商" />
+<meta name="Description" content="云镜商_眼镜行业全方位服务提供商" />	
+<link rel="stylesheet" href="http://file.easeeyes.com/b2b/css/common.css" />
+</head>	
+<body>
+<!--头部-->
+<div class="container clearfix header">
+	<!--logo-->
+	<a href="" class="pull-left logo">
+		<img src="http://file.easeeyes.com/b2b/images/g_logo.png" />
+	</a>
+	<!--nav-->
+	<div class="pull-left nav">
+		<ul class="clearfix">
+			<li class="pull-left"><a href="" class="nav-link selected">首页</a></li>
+			<li class="pull-left"><a href="/wslss.html" class="nav-link">零售商</a></li>
+			<li class="pull-left"><a href="/wspps.html" class="nav-link">品牌商</a></li>
+			<li class="pull-left"><a href="category_6.html" class="nav-link">进货中心</a></li>
+			<li class="pull-left"><a href="/service.html" class="nav-link">服务中心</a></li>
+		</ul>
+	</div>
+	<!--登陆注册btn-->
+    {if $user_id >0}
+    <div class="pull-right header-btns">
+        <a href="user.php" style="color: white;cursor: pointer;" class="nav-link selected;">完善我的镜商信息</a>
+    </div>
+    {else}
+    <div class="pull-right header-btns">
+		<a href="user.html" class="btn-default btn-pink btn-large">登陆</a>
+		<a href="user_register.html" class="btn-default btn-pink btn-large">注册</a>
+	</div>
+    {/if}
+	
+</div>	
+
+<!--Banner-->
+<div class="banner">
+	<div class="banner-text">
+		<h1 class="scroll-fromTop">眼镜行业全方位服务提供商</h1>
+		<div class="scroll-opacity">
+			<p>为全国七万多家眼镜零售店提供一站式OAO解决方案</p>
+			<p>为眼镜品牌和线下零售门店提供最专业的服务和最具有价值的信息</p>
+		</div>
+		<div class="banner-link scroll-fromBottom">
+			<a href="user.html" class="nav-link selected">立即体验 <b>GO</b></a>
+		</div>
+	</div>
+</div>
+
+<!--做什么-->
+<div class="container dowhat">
+	<div class="dowhat-top text-center" >
+		<div class="scroll-fromTop" id="one">
+			<h1 class="blue">我们是谁</h1>
+			<h3 class="blue">About Us</h3>
+		</div>
+		<p class="scroll-opacity">云镜商是由易镜（上海）供应链管理有限公司创立的眼镜行业OAO服务平台为七万多家眼镜零售商提升全方位竞争力，创造行业价值</p>
+	</div>
+	<div class="dowhat-bottom scroll-fromBottom">
+		<ul class="ulist-dowhat">
+			<li><img src="http://file.easeeyes.com/b2b/images/dot_1.jpg"> 直接购买</li>
+			<li><img src="http://file.easeeyes.com/b2b/images/dot_1.jpg"> 验光、咨询服务</li>
+			<li><img src="http://file.easeeyes.com/b2b/images/dot_1.jpg"> 良好的用户体验</li>
+		</ul>
+		<ul class="ulist-dowhat ulist2-dowhat">
+			<li><img src="http://file.easeeyes.com/b2b/images/dot_2.jpg"> 微店管理</li>
+			<li><img src="http://file.easeeyes.com/b2b/images/dot_2.jpg"> 营销推广</li>
+			<li><img src="http://file.easeeyes.com/b2b/images/dot_2.jpg"> 客户管理关怀</li>
+		</ul>
+		<ul class="ulist-dowhat ulist3-dowhat">
+			<li><img src="http://file.easeeyes.com/b2b/images/dot_1.jpg"> 地理竞争力</li>
+			<li><img src="http://file.easeeyes.com/b2b/images/dot_1.jpg"> 品牌形象展示</li>
+			<li><img src="http://file.easeeyes.com/b2b/images/dot_1.jpg"> 建立信任度</li>
+		</ul>
+		<ul class="ulist-dowhat ulist4-dowhat">
+			<li><img src="http://file.easeeyes.com/b2b/images/dot_3.jpg"> 优质商品</li>
+			<li><img src="http://file.easeeyes.com/b2b/images/dot_3.jpg"> 微店、公众管理</li>
+			<li><img src="http://file.easeeyes.com/b2b/images/dot_3.jpg"> 供应链金融</li>
+			<li><img src="http://file.easeeyes.com/b2b/images/dot_3.jpg"> 行业大数据</li>
+			<li><img src="http://file.easeeyes.com/b2b/images/dot_3.jpg"> 专业咨询、设计</li>
+		</ul>
+		<ul class="ulist-dowhat ulist5-dowhat">
+			<li><img src="http://file.easeeyes.com/b2b/images/dot_4.jpg"> 销售渠道拓展</li>
+			<li><img src="http://file.easeeyes.com/b2b/images/dot_4.jpg"> 经销商管控</li>
+			<li><img src="http://file.easeeyes.com/b2b/images/dot_4.jpg"> 品牌推广</li>
+			<li><img src="http://file.easeeyes.com/b2b/images/dot_4.jpg"> 供应链金融</li>
+			<li><img src="http://file.easeeyes.com/b2b/images/dot_4.jpg"> 行业大数据</li>
+		</ul>
+	</div>
+</div>
+
+<!--模式-->
+<div class="buyMode">
+	<div class="container">
+		<div class="text-center buyMode-top scroll-fromTop">
+			<h2>眼镜行业优质供应链，光学产业采购新模式</h2>
+			<p>为传统眼镜零售提供全方位的互联网解决方案，保持您在行业竞争中的优势</p>
+		</div>
+		<div class="buyMode-bottom scroll-fromBottom">
+			<div class="item-buyMode">
+				<div class="image"><img src="http://file.easeeyes.com/b2b/images/ms_1.jpg" /></div>
+				<div class="text">
+					<h3>品牌资源丰富</h3>
+					<p>国际知名品牌全面入驻，价格具有绝对竞争力，掌握市场新品动态与资讯，实时上新。</p>
+				</div>
+			</div>
+			<div class="item-buyMode">
+				<div class="image"><img src="http://file.easeeyes.com/b2b/images/ms_2.jpg" /></div>
+				<div class="text">
+					<h3>轻松玩转移动电商</h3>
+					<p>提供系统模块，建立大数据精准营销，配备全国分仓快速货源配送体系。无限虚拟货架服务，规避新品引进纠结、店内陈列不全等弊端。</p>
+				</div>
+			</div>
+			<div class="item-buyMode">
+				<div class="image"><img src="http://file.easeeyes.com/b2b/images/ms_3.jpg" /></div>
+				<div class="text">
+					<h3>微信公众号深度运营</h3>
+					<p>微信设置，微信导航菜单栏，微信客服，文章资讯经典模板，自定义定制。操作简单，轻松管理！</p>
+				</div>
+			</div>
+			<div class="item-buyMode">
+				<div class="image"><img src="http://file.easeeyes.com/b2b/images/ms_4.jpg" /></div>
+				<div class="text">
+					<h3>丰富的OAO移动营销</h3>
+					<p>营销插件包括微社区，积分商城，优惠券，大转盘，微试用。全年多套促销方案和商品主题策划。</p>
+				</div>
+			</div>
+			<div class="item-buyMode">
+				<div class="image"><img src="http://file.easeeyes.com/b2b/images/ms_5.jpg" /></div>
+				<div class="text">
+					<h3>设计及咨询服务</h3>
+					<p>提供行业信息、证照办理和专业培训，以及门店广告设计（海报、灯箱片、陈列等一应俱全。）</p>
+				</div>
+			</div>
+			<div class="item-buyMode">
+				<div class="image"><img src="http://file.easeeyes.com/b2b/images/ms_6.jpg" /></div>
+				<div class="text">
+					<h3>供应链金融服务</h3>
+					<p>与知名金融机构合作，提供贷款服务，商家用户可选择多样还款方式，从而规避各类资金压力，彻底卸去后顾之忧。</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--入驻-->
+<div class="container joinUs text-center">
+	<h2 class="scroll-fromTop">免费入驻</h2>
+	<p class="text scroll-opacity">入驻商户成为云镜商专属用户，轻松进货、品类拓展、市场推广，及用户管理。</p>
+	<div class="clearfix display scroll-fromBottom">
+		<div class="display-cell">
+			<img src="http://file.easeeyes.com/b2b/images/index_04.jpg" />
+			<p>了解标准</p>
+		</div>
+		<div class="display-cell">
+			<img src="http://file.easeeyes.com/b2b/images/index_05.jpg" />
+			<p>填写详细信息</p>
+		</div>
+		<div class="display-cell">
+			<img src="http://file.easeeyes.com/b2b/images/index_06.jpg" />
+			<p>提交资料</p>
+		</div>
+		<div class="display-cell">
+			<img src="http://file.easeeyes.com/b2b/images/index_07.jpg" />
+			<p>等待审核</p>
+		</div>
+		<div class="display-cell">
+			<img src="http://file.easeeyes.com/b2b/images/index_08.jpg" />
+			<p>入驻成功</p>
+		</div>
+	</div>
+</div>
+
+<!--品牌-->
+<div class="pinPai text-center">
+	<div class="container">
+		<div class="pp-logo scroll-fromTop">
+			<img src="http://file.easeeyes.com/b2b/images/index_logo.png" />
+		</div>
+		<div class="pp-table scroll-fromLeft">
+			<table>
+				<tbody>
+					<tr>
+						<td><a href=""><img src="http://file.easeeyes.com/b2b/images/index_pp_logo.png" /></a></td>
+						<td><a href=""><img src="http://file.easeeyes.com/b2b/images/index_pp_logo.png" /></a></td>
+						<td><a href=""><img src="http://file.easeeyes.com/b2b/images/index_pp_logo.png" /></a></td>
+						<td><a href=""><img src="http://file.easeeyes.com/b2b/images/index_pp_logo.png" /></a></td>
+					</tr>
+					<tr>
+						<td><a href=""><img src="http://file.easeeyes.com/b2b/images/index_pp_logo.png" /></a></td>
+						<td><a href=""><img src="http://file.easeeyes.com/b2b/images/index_pp_logo.png" /></a></td>
+						<td><a href=""><img src="http://file.easeeyes.com/b2b/images/index_pp_logo.png" /></a></td>
+						<td><a href=""><img src="http://file.easeeyes.com/b2b/images/index_pp_logo.png" /></a></td>
+					</tr>
+					<tr>
+						<td><a href=""><img src="http://file.easeeyes.com/b2b/images/index_pp_logo.png" /></a></td>
+						<td><a href=""><img src="http://file.easeeyes.com/b2b/images/index_pp_logo.png" /></a></td>
+						<td><a href=""><img src="http://file.easeeyes.com/b2b/images/index_pp_logo.png" /></a></td>
+						<td><a href=""><img src="http://file.easeeyes.com/b2b/images/index_pp_logo.png" /></a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="pp-btn scroll-fromRight">
+			<a href=""><img src="http://file.easeeyes.com/b2b/images/index_icon_btn.png" /></a>
+		</div>
+	</div>
+</div>
+
+<!--底部-->
+<div class="footer">
+	<div class="container clearfix">
+		<div class="footer-left pull-left">
+			<p><img src="http://file.easeeyes.com/b2b/images/g_icon_member.png" /> 联系我们</p>
+			<p class="tel"><img src="http://file.easeeyes.com/b2b/images/g_icon_tel.png" /> 4006-177-176</p>
+			<p class="info">联系电话：021-60703018<br />客服QQ：4006177176<br />企业邮箱：cs@easeeyes.com</p>
+		</div>
+		<div class="footer-right pull-left">
+			<div class="pull-left">
+				<p><img src="http://file.easeeyes.com/b2b/images/g_icon_phone.png"> 云镜商手机端</p>
+				<img src="http://file.easeeyes.com/b2b/images/g_footer_ewm.jpg" />
+			</div>
+			<div class="pull-left">
+				<p><img src="http://file.easeeyes.com/b2b/images/g_icon_phone.png"> 微信公众号</p>
+				<img src="http://file.easeeyes.com/b2b/images/g_footer_ewm.jpg" />
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="http://file.easeeyes.com/b2b/js/scrollreveal.min.js"></script>
+<script>
+try{
+	//
+	var sr=ScrollReveal();
+	sr.reveal('.scroll-fromTop',{opacity:0,origin:'top',distance:'60px'});
+	sr.reveal('.scroll-fromLeft',{opacity:0,origin:'left',distance:'60px',delay:100});
+	sr.reveal('.scroll-fromBottom',{opacity:0,origin:'bottom',distance:'60px',delay:350});
+	sr.reveal('.scroll-fromRight',{opacity:0,origin:'right',distance:'60px',delay:200});
+	sr.reveal('.scroll-opacity',{delay:50});
+}catch(e){
+
+}
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?ef9a9bd99af4fd93844c923c9d8f257d";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

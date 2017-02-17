@@ -1,0 +1,28 @@
+.clear{clear:both}
+.go_jiesuan{margin-top:10px}
+.go_jiesuan_left{float:left}
+.go_jiesuan_left span{color:#F00;font-weight:bold}
+.go_jiesuan_left div{margin-bottom:5px}
+.go_jiesuan_right{float:right;margin-top:10px}
+
+
+.my_mess_one,.mess_detil_one{height:38px;line-height:38px;}
+.my_mess_one li{width:50%;float:left; text-align:center;font-size:14px;}
+.my_mess_one span{color:#3cc0d5;font-weight:bold}
+.my_mess_main{border-top:1px solid #e5e5e5}
+.my_mess_divone,.my_mess_divtwo,.my_mess_divthree{padding-top:10px;padding-bottom:10px;border-bottom:1px solid#e9e9e9;padding-left:5%;padding-right:5%}
+.my_mess_divthree{border-bottom:none}
+.my_mess_divtwo,.my_mess_divthree{border-top:1px solid #e5e5e5}
+.my_mess_left{width:85%;float:left}
+.my_chess_time{color:#b5b5b5}
+.my_mess_con{font-weight:bold;margin-top:5px}
+.my_mess_right{width:10%;float:left;padding-left:5%;padding-top:12px;color: #3cc0d5;font-weight: bold;}
+.my_mess_div_list{display: none;}
+.li_foucs{font-weight: bold;}
+
+.mess_detil_one,.mess_detail_two,.mess_detail_three{border-bottom:1px solid #e9e9e9;padding-left:5%;padding-right:5%}
+.mess_detail_two{border-top:1px solid #e5e5e5;padding-top:20px;padding-bottom:30px}
+.mess_detail_two p{line-height:20px}
+.look_mess{color:#f00}
+.mess_detail_three{border-bottom:none}
+.check_wuliu input,.mess_detail_three input{margin-top:15px;margin-bottom:15px;display:block;background-color:#75D6E9;color:#fff;border:none;font-size:15px;font-weight:bold;border-radius:5px;width:100%;padding:6px 0}

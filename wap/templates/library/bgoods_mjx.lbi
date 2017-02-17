@@ -1,0 +1,40 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+	<div id="demd">
+        	 <div style=" text-align:left;float:right; " id="botmjx">
+             	<div style=" float:left; width:160px;padding-left:10px;"><img src="images/qdtjshow.gif" />
+             	<a href="buyersshow.php?id={$goods.goods_id}" target="_blank"></a>
+             	</div>
+             
+             	<div style=" float:right; width:200px;padding-right:6px;">
+             	<a href="buyersshow.php?id={$goods.goods_id}" target="_blank"><img src="images/qdtjshowd.gif" /></a>
+                </div>
+                
+	</div>
+<div id="demdmd">
+				
+	<div class="tjcpmainmjx">
+	<!-- {if $goodlistmjxtj} -->			
+		<!--{foreach from=$goodlistmjxtj item=releated_goods_data name=foos}-->
+			<!-- {if $smarty.foreach.foos.index<5} -->
+				<div class="tjspaceclassmjx"></div>
+        <div class="tjcpcontentmjx">
+                <div class="tjcpcontentpicmjx"><a href="{$releated_goods_data.img}"><img src="{$releated_goods_data.img}" width="150" height="150" border="0" /></a></div>
+                
+                <div class="tjcpcontenttxtmjx">
+                    <div class="tjcpcontenttxt1">
+                        <a href="{$releated_goods_data.img}" title="{$releated_goods_data.short_name}" class="colorfensehong" target="_blank">{$releated_goods_data.short_name}</a>
+                    </div>
+                    <div class="tjcpcontenttxt2mjx">  by {$releated_goods_data.user_name}</div>
+                </div>
+        </div>
+			<!-- {/if} -->
+		 <!--{/foreach}-->
+	<!-- {/if} -->
+    </div>				
+</div>
+          
+
+</div>
+<br>

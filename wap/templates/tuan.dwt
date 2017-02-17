@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>最给力的隐形眼镜团购 拒绝网络虚价</title>
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="/wap/css/common.css" rel="stylesheet" type="text/css" />
+<link type="text/css" rel="stylesheet" href="/themes/default/style/base.css" />
+<link type="text/css" rel="stylesheet" href="/themes/default/style/xu_css.css" />
+<link type="text/css" rel="stylesheet" href="/themes/default/style/tuan_wap.css" /><!--zhang:150826 修改团购页面样式-->
+<link rel="stylesheet" type="text/css" href="http://file.easeeyes.com/index2015/css/base.css" />
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+
+<div style="background-color:#e7f8f9;">
+	<div id="tuan_container" class="tuan_container">
+        <div class="tuan_package_list">
+            <ul>
+                <!--{foreach from=$tuan_list item=val name=foo}-->
+                <li>
+                    <div><a href="tuan_buy.php?rec_id={$val.rec_id}" title="{$val.tuan_name}"><img src="{$image_url}{$val.tuan_img}" width="300" height="300" alt="" /></a></div>
+
+                    <div class="package_list_word">
+                        <div class="package_list_name"><a href="tuan_buy.php?rec_id={$val.rec_id}">{$val.tuan_name}</a></div>
+                        <div class="package_list_price">
+                            <div class="package_list_price_sales">{$val.tuan_price_1}<span>.{$val.tuan_price_2}</span></div>
+                            <div class="package_list_price_original"><span style="text-decoration:line-through">￥{$val.market_price}</span><span style="padding:0 3px;">|</span><span>{$val.zhekou}折</span></div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </li>
+                <!--{/foreach}-->
+            </ul>
+        </div>
+	</div>
+	<!-- tuan_container end -->
+</div>
+
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+
+</body>
+
+</html>

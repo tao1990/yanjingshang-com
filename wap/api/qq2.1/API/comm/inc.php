@@ -1,0 +1,2 @@
+<?php die('forbidden'); ?>
+{"appid":"214381","appkey":"140f449f226cc0f368c3e7602b9227b4","callback":"http://m.easeeyes.com/api/qq2.1/oauth/callback.php","scope":"<?=$val?>,<?=$val?>,<?=$val?>,<?=$val?>,<?=$val?>,<?=$val?>,<?=$val?>,<?=$val?>,<?=$val?>,<?=$val?>,<?=$val?>,<?=$val?>,<?=$val?>,<?=$val?>,<?=$val?>,<?=$val?>,<?=$val?>,<?=$val?>,<?=$val?>,<?=$val?>","errorReport":true,"storageType":"file","host":"localhost","user":"root","password":"root","database":"test"}

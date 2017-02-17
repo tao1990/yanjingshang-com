@@ -1,0 +1,11 @@
+
+.menu_ul{margin: auto;width:100%}
+.menu_ul li{margin: auto;width:100%}
+
+.menu_h3{width:100%;height:70px;line-height:70px;cursor:pointer;background-color: #f4f4f4;border: none;border-top: 1px solid #fff;border-bottom: 1px solid #ccc;}
+.menu_h3 a{padding-left:20px;}
+.menu_h3 i{width:82px;height:70px;}
+.menu_h3 abbr{padding-left:20px;}
+
+.collapsible{width:100%;overflow:auto;display: none;}
+.collapsible a{width:33%;text-align: center;float: left;min-height: 32px;padding-top: 10px;}

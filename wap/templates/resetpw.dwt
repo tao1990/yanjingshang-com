@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta content="telephone=no" name="format-detection"/>
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/address.css"/>
+</head>
+
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<style>
+.revise_password h1{ text-align:center;margin-top:10px;font-size:1.25em}
+.revise_password form{width:85%; margin:0 auto}
+.revise_password form div{line-height:35px;margin-top:10px;height:35px;border:1px solid #ccc;background: white;}
+.revise_password form div label{margin-left:5px;margin-right:5px}
+.revise_password form div input{width:80%;border:none;height:30px;line-height:30px}
+.revise_password form .revise_confirm{border:none;background: none;}
+.revise_password form .revise_confirm input{height:30px;line-height:30px; background-color:#75D6E9;color:#fff;font-size:14px;margin-left:10%;border-radius:8px}
+</style>
+
+
+<div class="revise_password">
+    <br />
+    <form name="formPassword" action="user.php" method="post" onSubmit="return editPassword();" >
+       <div><label><img src="{$image_url}wap/images/people.jpg"></label>
+       <input placeholder="请输入原密码" type="password" name="old_password" class="input_password" /></div>
+       <div><label><img src="{$image_url}wap/images/password.jpg"></label>
+       <input type="password" name="new_password" class="input_password" placeholder="请输入新密码" /></div>
+       <div><label><img src="{$image_url}wap/images/password.jpg"></label><input type="password" value="" placeholder="请再次输入密码" onFocus="if(this.value==this.defaultValue){this.value='';};"  onblur="if(this.placeholder==''){this.value=this.defaultValue;}" 
+></div>
+        <input name="act" type="hidden" value="act_edit_password"/>
+       <div class="revise_confirm"><input type="submit" name="submit" class="input_save_pw"  value="确认修改" ></div>
+    </form>
+</div>
+
+
+
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->

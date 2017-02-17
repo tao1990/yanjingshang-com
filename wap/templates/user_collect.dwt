@@ -1,0 +1,51 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/collect.css"/>
+</head>
+
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<script type="text/javascript" src="{$image_url}wap/js/scrollpagination.js"></script>
+
+<div class="content">
+
+    	<ul id="Scroll" class="content goods_list">
+        {if $goods_list}
+        <!--{foreach from=$goods_list key=k item=v}-->
+        <li>
+            <div class="list_a">
+                <img src="{$image_url}{$v.goods_img}" style="width:9rem;" />
+                <div class="list_b">
+                  <div class="sp01">{$v.goods_name} </div>
+                  <div class="sp02">
+                       <em class="price1">{$v.shop_price}</em>
+                       <em class="price2">{$v.market_price}</em>
+                       <div class="clear"></div>
+                  </div><!--sp02 end-->
+                  <div class="sp04" >
+                  <a style="color: #26bcd3;float: left;" href="goods.php?id={$v.goods_id}">立即购买</a>
+                  <a style="color: #26bcd3;float: right;" href="javascript:if(confirm('您确定要从收藏夹中删除选定的商品吗?')) location.href='user.php?act=delete_collection&collection_id={$v.rec_id}'">删除</a>
+                  </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </li>
+        <!--{/foreach}-->
+        {else}
+        您还没有收藏的商品
+        {/if}
+        </ul>
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+<script type="text/javascript" src="{$image_url}wap/js/category.js"></script>
+</body>
+</html>

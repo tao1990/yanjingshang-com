@@ -1,0 +1,22 @@
+﻿/*----------------------------------------------用户问答页面----------------------------------------------*/
+
+/*-----------------页面布局---------------*/
+#main{ width:1002px; margin:0 auto;}
+#main_left{  float:left; width:678px;min-height:380px; border:1px #dddddd solid; }
+#main_right{ float:left; width:320px;min-height:200px; border:1px #dddddd solid;border-left:none;}
+
+.left_head{ width:678px; height:32px; line-height:34px; border-bottom:1px #999 dotted; overflow:hidden;}
+.left_headtxt{float:left; width:650px; text-align:left; text-indent:13px; font-weight:bold; font-family:Tahoma; color:#999;}
+.left_headtxt a{ margin-right:2px; margin-left:3px; overflow:hidden;}
+.answer_plan{ width:678px; line-height:18px; text-align:left; padding-top:1px; word-break:break-all;}
+
+/*--------------------------右边我要提问表单--------------------------*/
+.in_t{	  color:#333; font-size:14px; font-family:宋体;}
+.in_t td{ padding-left:30px; text-align:left;}
+.yi_left{ text-align:left;}
+.yi_left_t{	margin-left:25px; margin-top:5px;}
+.yi_left_t textarea{ background-image:url('../images/yi_tip/yi_t1.jpg'); background-repeat:repeat;}
+.yi_left_f{	font-size:14px;	font-family:宋体; color:#333; margin-left:8px;}
+.yi_font{font-family:宋体; font-weight:bold; color:#666; line-height:20px;}
+#contextq{width:90%; height:110px; overflow:hidden; border-width: 0px 0px 1px; line-height:20px; font-size:12px;}
+.inputBg{background-color:#FFF; width:90%; border-color:#C6C6C6; border-style:solid; border-width:0px 0px 1px; font-size:14px; color:#BDBDBD;}

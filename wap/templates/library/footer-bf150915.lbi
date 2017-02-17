@@ -1,0 +1,207 @@
+<!-----------------------------------zhang 20150820添加-----开始------------------------------------------->
+<div style="height:3.75rem;"></div>
+<footer class="fixed">
+    <div class="f-nav container">
+        <a href="/wap">
+            <img src="http://file.easeeyes.com/wap/images/f_home.png" /><br />首页
+        </a>
+        <a href="menu.php">
+            <img src="http://file.easeeyes.com/wap/images/f_cate.png" /><br />分类
+        </a>
+        <a href="flow.php">
+            <img src="http://file.easeeyes.com/wap/images/f_cars.png" /><br />购物车
+        </a>
+        <!--{if $smarty.session.user_id!=0}-->
+        <a href="user.php">
+            <img src="http://file.easeeyes.com/wap/images/f_member.png" /><br />个人中心
+        </a>
+        <!--{else}-->
+        <a href="user.php">
+            <img src="http://file.easeeyes.com/wap/images/f_member.png" /><br />注册/登陆
+        </a>
+        <!--{/if}-->
+    </div>
+</footer>
+<!--goTop-->
+<span id="goTop"></span>
+<!--购物车-->
+<div id="shop_cars"></div>
+<script src="http://file.easeeyes.com/wap/js/news.js"></script>
+<script src="http://file.easeeyes.com/wap/js/gotop.js"></script>
+<script>
+    //自适应代码
+    (function(){
+        var win=window||{},
+                doc=document,
+                root=doc.documentElement;
+        function changeSize(){
+            root.style.fontSize=parseInt(root.clientWidth)*20/640>20?"20px":parseInt(root.clientWidth)*20/640+"px";
+        }
+        if(doc.addEventListener){
+            var evt="orientationchange" in win?"orientationchange":"resize";
+            doc.addEventListener(evt,changeSize,false);
+            doc.addEventListener("DOMContentLoaded",changeSize,false);
+        }
+    })();
+
+    //头部导航控制
+    window.addEventListener("scroll",function(){
+        var sTop=parseInt(document.body.scrollTop)||parseInt(document.documentElement.scrollTop),
+                head_elem=document.getElementsByTagName("header")[0],
+                head_height=parseInt(head_elem.clientHeight);
+        sTop>=head_height?head_elem.className="fixed":head_elem.className="";
+    },false);
+
+    //侧边导航控制
+    var aside={
+        G_aside_left:document.getElementById("aside_main"),
+        G_aside_right:document.getElementById("aside_close"),
+        open:function(){
+            this.G_aside_left.className="show";
+            this.G_aside_right.className="show";
+        },
+        close:function(){
+            this.G_aside_left.className="hide";
+            this.G_aside_right.className="hide";
+        },
+        init:function(){
+            var that=this;
+            document.getElementById("cate_btn").addEventListener("click",function(){
+                that.open.apply(that,arguments);
+            },false);
+            that.G_aside_right.addEventListener("click",function(){
+                that.close.apply(that,arguments);
+            },false);
+        }
+    }
+    aside.init();
+    /**新增20150908侧导航**/
+    function toggleClass(elem,arr){
+        elem.className=elem.className==arr[0]?arr[1]:arr[0];
+    }
+</script>
+<script src="http://file.easeeyes.com/wap/js/touch.js"></script>
+<script>
+    //banner轮播
+    function TouchSlide(opts){
+        var opts=opts||{};
+        this.count=0;
+        this.auto=opts.auto||false;
+        this.elem=opts.elem;
+        this.len=opts.len||this.elem.getElementsByTagName("li").length;
+        this.width=opts.width;
+        this.init.apply(this,arguments);
+    }
+    TouchSlide.prototype={
+        constructor:TouchSlide,
+        move:function(points){
+            if(this.count>=this.len-1){
+                this.count=0;
+            }else{
+                this.count++;
+            }
+            this.elem.style.left=-this.count*this.width+"px";
+            var i,
+                    point=points.getElementsByTagName("li"),
+                    len=point.length;
+            for(i=0;i<len;i++){
+                point[i].className="";
+            }
+            point[this.count].className="selected";
+        },
+        isAuto:function(points){
+            var that=this;
+            if(that.auto){
+                that.mover=setInterval(function(){
+                    that.move(points);
+                },that.auto);
+            }
+        },
+        createPoints:function(){
+            var i,
+                    points=document.createElement("ul");
+            points.className="points";
+            for(i=0;i<this.len;i++){
+                points.appendChild(document.createElement("li"));
+            }
+            this.elem.parentNode.appendChild(points);
+            return points;
+        },
+        binder:function(points){
+            var initp={},
+                    movep={},
+                    endp={},
+                    xpos,
+                    that=this;
+            this.elem.addEventListener("touchstart",function(e){
+                if(that.mover) clearInterval(that.mover);
+                xpos=parseInt(this.style.left)||0;
+                initp=touchEvent.getPos(e);
+            },false);
+            this.elem.addEventListener("touchmove",function(e){
+                movep=touchEvent.getPos(e);
+                this.style.left=xpos+movep.mx-initp.x+"px";
+            },false);
+            this.elem.addEventListener("touchend",function(e){
+                endp=touchEvent.getPos(e);
+                var dir=touchEvent.getDirect(initp.x,endp.ex,initp.y,endp.ey);
+                if(dir=="left"){
+                    if(Math.abs(endp.ex-initp.x)>30){
+                        if(that.count>=that.len-1){
+                            that.count=that.len-1
+                        }else{
+                            that.count++;
+                        }
+                    }
+                }else if(dir=="right"){
+                    if(Math.abs(endp.ex-initp.x)>30){
+                        if(that.count<=0){
+                            that.count=0;
+                        }else{
+                            that.count--;
+                        }
+                    }
+                }
+                var i,
+                        point=points.getElementsByTagName("li"),
+                        len=point.length;
+                for(i=0;i<len;i++){
+                    point[i].className="";
+                }
+                this.style.left=-that.count*that.width+"px";
+                point[that.count].className="selected";
+                that.isAuto(points);
+            },false);
+        },
+        init:function(){
+            var points=this.createPoints();
+            points.getElementsByTagName("li")[0].className="selected";
+            this.binder(points);
+            this.isAuto(points);
+        }
+    };
+    window.addEventListener("load",function(){
+        //调用
+        var s1=new TouchSlide({
+            elem:document.getElementById("ts-01"),
+            width:parseInt(document.getElementById("slider-01").clientWidth),
+            auto:5000
+        });
+        var s2=new TouchSlide({
+            elem:document.getElementById("ts-02"),
+            width:parseInt(document.getElementById("slider-02").clientWidth),
+            auto:3000
+        });
+        var s3=new TouchSlide({
+            elem:document.getElementById("ts-03"),
+            width:parseInt(document.getElementById("slider-03").clientWidth),
+            auto:3000
+        });
+        var s4=new TouchSlide({
+            elem:document.getElementById("ts-04"),
+            width:parseInt(document.getElementById("slider-04").clientWidth),
+            len:Math.ceil(document.getElementById("ts-04").getElementsByTagName("li").length/3)
+        });
+    },false);
+</script>
+<!-----------------------------------zhang 20150820添加-----结束------------------------------------------->

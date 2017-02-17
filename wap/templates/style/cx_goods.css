@@ -1,0 +1,17 @@
+﻿/*-------------------------------------------------------------专题促销--具体产品----------------------------------------------------*/
+#topic_main{width:1002px; height:auto;}
+.topic_img{width:1002px; max-width:1002px; height:auto; overflow:hidden;}
+#content{border:1px #dcdcdc solid; width:1002px; height:auto;}
+.con_head{width:1002px; height:32px; background-color:#dcdcdc;}
+.conh_tip{float:left; width:7px; height:32px; line-height:32px; font-size:23px; vertical-align: middle; margin-left:10px; margin-right:10px;}
+.conh_title{float:left; width:390px; height:32px; line-height:32px; text-align:left; font-family:'宋体', Arial; font-size:13px; font-weight:bold; color:#000; overflow:hidden;}
+
+/*--------------促销产品内容----------------*/
+.con_body{height:auto; width:1002px;}
+.tab{border:1px #dcdcdc solid; border-left:0; border-top:0; width:199px; float:left; text-align:center; padding-top:5px; padding-bottom:13px;}
+.tab5{border:1px #dcdcdc solid; border-left:0; border-top:0; border-right:0; width:202px; float:left; text-align:center; padding-top:5px; padding-bottom:13px;}
+.goods_brief{display:inline-block; width:150px; height:38px; color:#666; overflow:hidden;}
+.goods_title{width:180px; overflow:hidden;}
+.goods_title a{color:#C87F3A;}
+.goods_title a:hover{color:#c30000;}
+/*-------------------------------------*/

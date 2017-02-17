@@ -1,0 +1,81 @@
+<div class="header">
+	<div class="top">
+		<div id="top_main" class="middle w1210">
+			<div class="w50p fl">
+				<ul class="user_login">
+					<li class="favorite"><a href="javascript:;" onclick="add_book_mark('易视网 只售正品','http://www.easeeyes.com/')">收藏易视网</a></li>
+					<li class="login_link">{insert name='member_info'}</li>
+				</ul>
+			</div>
+			
+			<div class="w50p fr">
+				<ul class="services">
+					<li class="user_center">
+						<a href="#" target="_blank" title="">我的易视</a>
+						<dl class="my_ease disn">
+							<dd><a href="#" target="_blank" rel="nofollow"><span>我的易视</span></a></dd>
+							<dd><a href="#" target="_blank" rel="nofollow">我的订单</a></dd>
+							<dd><a href="#" target="_blank" rel="nofollow">我的积分</a></dd>
+						</dl>
+					</li>
+					
+					<li class="header_line">|</li>
+					
+					<li class="help">
+						<span>帮助中心</span>
+						<div class="help_title disn"><span>帮助中心</span></div>
+						<div class="help_article disn">
+							<span style="display:block; _display:none; width:100%; height:1px; background:url(images/bg_head_line.gif) left center no-repeat;"></span>
+							<ul>
+								<li>
+									<a href="article-35.html" target="_blank" rel="nofollow">如何购买</a>
+									<a href="article-8.html" target="_blank" rel="nofollow">运时运费</a>
+									<a href="school.html" target="_blank" rel="nofollow">眼镜学堂</a>								</li>
+								<li>
+									<a href="article-27.html" target="_blank" rel="nofollow">如何付款</a>
+									<a href="article-7.html"  target="_blank" rel="nofollow">售后保障</a>
+									<a href="questionlist.html" target="_blank" rel="nofollow">有问必答</a>								</li>
+							</ul>
+						</div>
+					</li>
+					
+					<li class="header_line">|</li>
+					
+					<li class="service_online">
+						<span class="online_title">联系在线客服</span>
+						<dl class="online_list disn">
+							<dd class="online_title2"><span>联系在线客服</span></dd>
+							<dd>服务时间 9:00~20:00</dd>
+							<dd class="kf bg_qq1"><a id="qq1" title="QQ:1340709840" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1340709840&amp;site=qq&amp;menu=yes" target="_blank" rel="nofollow">商品咨询</a></dd>
+							<dd class="kf bg_qq2"><a id="qq2" title="QQ:1223819714" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1223819714&amp;site=qq&amp;menu=yes" target="_blank" rel="nofollow">订单查询</a></dd>
+                            <dd class="kf bg_qq3"><a id="qq3" title="QQ:1282786616" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1282786616&amp;site=qq&amp;menu=yes" target="_blank" rel="nofollow">售后服务</a></dd>
+                            <dd class="kf bg_ww"><a title="旺旺:易视网" href="http://amos.im.alisoft.com/msg.aw?v=2&uid=%E6%98%93%E8%A7%86%E7%BD%91&site=cntaobao&s=2&charset=utf-8" target="_blank" rel="nofollow">旺旺客服</a></dd>
+						</dl>
+					</li>
+					
+					<li class="header_line">|</li>
+					
+					<li class="hotline">客服热线<span>4006-177-176</span></li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<!-- top end -->
+	
+	<div class="banner_top" style="background:url(images/ad/banner.gif) center center repeat-x; height:60px;">&nbsp;</div>
+	
+	<div class="site_eye w1210">
+		<div class="logo"><img src="images/logo.jpg" width="267" height="62" alt="" /></div>
+		<div class="search">
+			<ul>
+				<li class="search_input"><input type="text" name="keyword" value="请输入关键字" onfocus="if(this.value=='请输入关键字') this.value='';" onblur="if(this.value=='') this.value='请输入关键字';" /></li>
+				<li class="submit_button"><img src="images/transparent.gif" width="78" height="30" alt="搜索" /></li>
+				<li class="keywords">热门关键字：<a href="#" title="">强生美瞳</a> 博士伦清朗 海昌星眸 彩色隐形眼镜 日抛 年抛</li>
+			</ul>
+		</div>
+		<div class="baozheng"><img src="images/baozheng.jpg" width="459" height="32" alt="" /></div>
+		<div class="clear"></div>
+	</div>
+</div>
+<!-- header END -->

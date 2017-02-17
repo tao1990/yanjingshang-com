@@ -1,0 +1,65 @@
+﻿/*------------------------------------------------------------------------------【公共属性】------------------------------------------------------------------------------*/
+/* 本地和线上兼容版本 */
+body{text-align:justify;}
+
+ul li{float:left;}
+img{ border:none;}
+.mul{width:1002px; height:auto; margin:0 auto;}
+.mul > li{float:left; overflow:hidden; font-size:0;}
+.mul ul{ font-size:12px;}
+.mul a{display:block; overflow:hidden;}
+.head_space{height:0px;}
+.comment_li_con{ overflow:hidden;padding:15px 14px;}
+#share{font:12px/150% "microsoft yahei","Tahoma","Arial","宋体";}
+/*------------------------------------------------------------------【公共属性END】-----------------------------------------------------------------*/
+
+/*------------------------------------------------------------【具体秒杀页面】------------------------------------------------------------*/
+.goods_big_img{width:322px; height:356px; float:left; overflow:hidden;}
+.g_detail{width:680px; height:356px; float:right; margin:0 auto; font:12px/150% "microsoft yahei","Tahoma","Arial","宋体";}
+.g_pan_tip{width:221px; height:103px; margin-bottom:-103px; position:relative; top:0; left:459px; z-index:0; background:url(../images/active/snatchbuy/tip4.gif) no-repeat; overflow:hidden;}
+.g_name{width:100%; height:24px; line-height:24px; font-size:18px; font-weight:bold; color:#666; text-align:left; overflow:hidden;}
+.s_g_img{width:280px; height:280px; margin-left:10px;}
+.g_name_t{width:100%; height:26px; line-height:26px; color:#c00000; font-weight:bold; border-bottom:1px solid #dcdcdc; overflow:hidden;}
+.g_sn{width:100%; height:38px; line-height:38px; color:#666;}
+.g_price{width:100%; height:20px; line-height:20px; font-size:14px; color:#999; text-decoration:line-through;}
+.g_ds{width:680px; height:66px; margin:16px 0;}
+.g_ds_li{width:136px; height:64px; border:1px solid #FFD4E0;}
+.g_ds_li_txt{width:100%; height:26px; line-height:26px; border-bottom:1px solid #FFD4E0; color:#666; text-align:center;}
+.g_ds_li_val{width:100%; height:18px; padding:10px 0;}
+.g_title1{width:220px; height:26px; line-height:26px; background:url(../images/active/snatchbuy/tip_jt.jpg) no-repeat 0 5px; text-indent:26px; font-size:16px; color:#666;}
+.g_title_pan{width:220px; height:66px; text-align:left; margin-left:12px;}
+
+.time_pan{width:680px; height:146px; background:url(../images/active/snatchbuy/buy_bg2.gif) no-repeat;}
+.time_pan_end{width:680px; height:146px; background:url(../images/active/snatchbuy/buy_bg_end.gif) no-repeat;}
+.time_pan_not_begin{width:680px; height:146px; background:url(../images/active/snatchbuy/buy_bg_not_begin.gif) no-repeat;}
+.num_pr{width:208px; height:56px; margin:8px 0 0 42px; font-size:56px; line-height:56px; letter-spacing:2px; font-weight:bold; color:white; _display:inline;}
+.time_pan_buy{width:153px; height:52px; margin:8px 0 0 0px; _display:inline;}
+.time_pan_buy_a{width:153px; height:52px; display:block;}
+.time_pan_tr{width:100%; height:42px;}
+.time_pan_num{width:321px; height:33px; background:url(../images/active/snatchbuy/at_number2.gif) no-repeat 294px 0;}
+.num_time{ width:52px; height:33px; margin-left:62px; line-height:34px; font-size:32px; color:white; letter-spacing:8px; _display:inline;}
+.num_time2{width:52px; height:33px; margin-left:37px; line-height:34px; font-size:32px; color:white; letter-spacing:8px; _display:inline;}
+
+.buy2{width:1002px; height:146px; margin:10px auto;}
+.buy2_h_1{width:100%; height:28px; line-height:28px; background-color:#d7d7d7;}
+.buy2_h_2{width:28px; height:28px; background-color:#c00000;}
+.buy2_title{width:312px; height:28px; color:white; background-color:#8d8d8d; text-align:left; text-indent:15px; font-size:15px; font-weight:bold;}
+.buy2_pan{width:1000px; height:106px; border:1px solid #dcdcdc; border-top:none;}
+.buy2_g1{width:172px; height:106px; margin-left:28px;}
+.buy2_tip{width:172px; height:63px; margin-bottom:-63px; position:relative; top:0; left:90px; z-index:1; background:url(../images/active/snatchbuy/tip3.gif) no-repeat; overflow:hidden;}
+.buy2_goods_img{width:100px; height:100px; margin-top:4px;}
+.buy2_g2{width:146px; height:106px; margin:0 10px;}
+.buy2_g_name{width:100%; height:16px; line-height:16px; color:#333; font-weight:bold; margin:26px 0 5px 0; overflow:hidden;}
+.buy2_g_mp{width:100%; height:14px; line-height:14px; color:#999; text-decoration:line-through;}
+.buy2_g_pr{width:100%; height:24px; color:#c00000; margin-top:5px;}
+.buy2_bt{width:130px; height:37px; margin:35px 0 0 20px;}
+.buy2_bt_a{width:130px; height:37px; display:block; background:url(../images/active/snatchbuy/buy_bt.gif) no-repeat;}
+.aa{}
+.aa{}
+.aa{}
+.aa{}
+
+.aa{}
+.aa{}
+.aa{}
+.aa{}

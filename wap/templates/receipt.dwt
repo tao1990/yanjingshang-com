@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="templates/style/base.css" rel="stylesheet" type="text/css" />
+<link href="templates/style/user.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<!--[if lte IE 6]><link href="themes/default/style/ie6_in.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<script type="text/javascript" src="{$image_url}js/transport.js"></script>
+{insert_scripts files='common.js,user.js'}
+<script type="text/javascript" src="{$image_url}js/inner.js"></script>
+<script language="javascript">
+function fllow(oid)
+{
+	//获得订单信息数组
+	$.ajax({
+		url:'user.php?act=fllow_ajax',
+		data:'&order_id='+oid+'&m='+Math.random(),
+		cache:false,
+		success:
+		function(dd){
+			dd = eval('('+dd+')');
+			
+			//显示面板信息dd[0]快递公司 dd[1]快递单号 dd[2]url 
+			if(dd[2]!=''){
+				//加载包裹信息
+				var dw = $(document).width();
+				var dh = $(document).height();					
+				$(".pp_shadow").css({width:dw,height:dh}).show();
+				//显示面板
+				$("#fllow").show();	
+				$("#fllow_id").text(dd[1]);
+				$("#fllow_con").text(dd[0]);
+				
+				if(dd[0]!='' && dd[1]!=''){			
+				//获取该订单的物流信息
+					$.ajax({		
+						url:'plugins/kuaidi100/express.php',
+						data:'com='+dd[0]+'&nu='+dd[1],
+						cache:false,
+						success:
+						function(dx){
+							$("#fllow_div").html(dx);
+						}
+					});	
+				}else{
+					$("#fllow_div").text("<br/><br/><br/>物流信息查询失败，请登录快递官网查询！！");
+				}								
+			}else{
+				//没有发货信息的情况
+				$("#fllow_div").text("由于物流信息还未录入，暂无该物流信息，请稍后在试。");
+			}	
+		}
+	});	
+}
+
+/*=============关闭模态窗口===============*/
+function pclose(){
+	$(".pp_shadow").hide();
+	$("#fllow").hide();
+}
+</script>
+<div class="user_tab_head">我的验光单</div>
+    
+    <div class="rp_btn">
+    	<a href="javascript:location.reload();" class="rp_btn_a rp_btn_2" title="刷新"></a>        
+        <a href="javascript:void(0);" class="rp_btn_a rp_btn_1" title="添加验光单"></a>
+    </div>
+    
+    <div class="rp_table">
+    	<dl class="r_th">
+        	<dd class="r_th1"></dd><dd class="r_th2">验光单类型</dd><dd class="r_th3">球镜</dd><dd class="r_th3">双眼瞳距</dd><dd class="r_th5">柱镜</dd><dd class="r_th5">轴位</dd><dd class="r_th7">操作</dd>
+        </dl>
+        <!--{foreach from=$receipt item=li name=foo}-->
+        <dl class="r_tbody">
+        	<dd class="r_td1"><dl><dd class="td_t1">右眼（R）</dd><dd class="td_t2">左眼（L）</dd></dl></dd>
+            <dd class="r_td2">{if $li.receipt_type eq 1}隐形眼镜验光单{else}框架眼镜验光单{/if}</dd>            
+            <dd class="r_td3"><dl><dd class="td_t1">{$li.yeye_qiujin}</dd><dd class="td_t2">{$li.zeye_qiujin}</dd></dl></dd>
+            <dd class="r_td2 r_td4">{$li.eye_tongju}</dd>
+            <dd class="r_td5"><dl><dd class="td_t1">{$li.yeye_zhujin}</dd><dd class="td_t2">{$li.zeye_zhujin}</dd></dl></dd>
+            <dd class="r_td5"><dl><dd class="td_t1">{$li.yeye_zhouwei}</dd><dd class="td_t2">{$li.zeye_zhouwei}</dd></dl></dd>
+            <dd class="r_td7">
+            	<dl class="r_op">
+                	<dd><a href="javascript:show_receipt({$li.rec_id})" title="详细">详细</a></dd>
+                    <dd><a href="javascript:edit_receipt({$li.rec_id})" title="编辑">编辑</a></dd>
+                    <dd><a href="javascript:if(confirm('您确实要删除该验光单吗？'))location.href='user.php?act=remove_receipt&rec_id={$li.rec_id}'" title="删除">删除</a></dd>
+                </dl>
+            </dd>        	
+        </dl>
+       <!--{foreachelse}--> 
+        <dl class="r_tbody" style="display:none;">
+        	<dd class="r_td1"><dl><dd class="td_t1">右眼（R）</dd><dd class="td_t2">左眼（L）</dd></dl></dd>
+            <dd class="r_td2">隐形眼镜验光单</dd>            
+            <dd class="r_td3"><dl><dd class="td_t1"></dd><dd class="td_t2"></dd></dl></dd>
+            <dd class="r_td2 r_td4"></dd>
+            <dd class="r_td5"><dl><dd class="td_t1"></dd><dd class="td_t2"></dd></dl></dd>
+            <dd class="r_td5"><dl><dd class="td_t1"></dd><dd class="td_t2"></dd></dl></dd>
+            <dd class="r_td7">
+            	<dl class="r_op">
+                	<dd><a href="javascript:show_receipt(0)" title="详细">详细</a></dd>
+                    <dd><a href="javascript:edit_receipt(0)" title="编辑">编辑</a></dd>
+                    <dd><a href="javascript:if(confirm('您确实要删除该验光单吗？'))location.href='user.php?act=remove_receipt&rec_id=0'" title="删除">删除</a></dd>
+                </dl>
+            </dd>        	
+        </dl>       
+       <!--{/foreach}-->            
+    </div>
+    <!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->

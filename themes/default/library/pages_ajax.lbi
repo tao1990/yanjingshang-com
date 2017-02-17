@@ -1,0 +1,13 @@
+<!--------------------------------------【翻页条】【20120914】start------------------------------------->
+<div id="pagebar">
+<ul id="pager">    
+    <li class="page_h">&lt;{if $page>1}<a href="javascript:;" onClick="changePage({$page}-1);" title="上一页">上一页</a>{else}上一页{/if}</li>    
+    <!--{foreach from=$page_array item=pages name=foo}-->
+    <!--{if $page == $pages}--><li class="page_cell red">{$pages}</li><!--{else}--><li class="page_cell"><a href="javascript:;" onClick="changePage({$pages});">{$pages}</a></li><!--{/if}-->
+    <!--{/foreach}-->    
+    <li class="page_h">{if $page < $total_pages}<a href="javascript:;" onClick="changePage({$page}+1);" title="下一页">下一页</a>{else}下一页{/if}&gt;</li>
+    <li><span class="page_span">共{$total_pages}页</span>到第<input type="text" name="page" class="page_input" id="toPage"/>页</li>
+    <li><input type="button" class="page_submit" onClick="changePage(document.getElementById('toPage').value);"></li>   
+</ul>
+</div>
+<!--------------------------------------【翻页条】【20120914】END------------------------------------->

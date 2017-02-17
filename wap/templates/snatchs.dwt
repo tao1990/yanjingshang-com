@@ -1,0 +1,429 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<meta http-equiv="Content-Type"    content="text/html;charset=utf-8"/>
+<meta name="Keywords"    content="隐形眼镜，0元秒杀，彩色隐形眼镜，特卖，易视网限时秒杀，将0进行到底" />
+<meta name="Description" content="易视网限时秒杀，彩色隐形眼镜，正品，0元，特卖。易视网限时秒杀，将0进行到底，每日11点整点开抢" />
+<title>易视网限时秒杀，0元开抢</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+
+<link href="themes/default/style/base.css" rel="stylesheet" type="text/css" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css"/>
+<link href="themes/default/style/goods.css" rel="stylesheet" type="text/css" />
+<link href="themes/default/style/snatchs.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{$image_url}js/transport2.js"></script>
+
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+<div style="width:1002px; height:auto; margin:0 auto; margin-top:10px;">
+<div style="width:1002px; height:356px;">
+	<div class="goods_big_img">
+    	<div class="s_g_img"><a href="goods{$goods.goods_id}.html" title=""><img src="{$image_url}{$goods.original_img}" width="280" height="280" alt="{$goods.goods_name}"/></a></div>
+        <div><!-- #BeginLibraryItem "/library/share.lbi" --><!-- #EndLibraryItem --></div>
+    </div>    
+    <ul class="g_detail">
+    <form action="javascript:addToCart({$goods.goods_id})" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY">
+    	<li class="g_pan_tip"></li>
+    	<li class="g_name">{$goods.goods_name}</li>
+        <li class="g_name_t">{$goods.goods_name_desc}</li>        
+        <li class="g_sn">商品库存：可立即发货  注册号：{$goods.reg_sn}</li>        
+        <li class="g_price">市场价格：￥{$goods.market_price}</li>
+        <li class="g_ds">
+        	<ul>
+                <!--{if $goodsds}-->
+                <li class="g_ds_li">
+                    <dl>
+                        <dd class="g_ds_li_txt">请选择隐形眼镜的度数</dd>
+                        <dd class="g_ds_li_val"><select style="margin-left:24px; width:82px;" name="zselect">
+                        <option value="">请选择</option><!--{foreach from=$goodsds.ds_values item=value key=key}--><option value="{$value}">{$value}</option><!--{/foreach}-->
+                        </select>                        
+                        <input type="hidden" name="zcount" value="1"/><input type="hidden" name="yselect" value=""/><input type="hidden" name="ycount" value="0"/>  
+                        <input type="hidden" name="get_left_time" id="get_left_time" value="{$left_time_end}"/>                        
+                        </dd>
+                    </dl>                	
+                </li>
+                <!--{else}--> <!-- 没有度数商品 -->
+                	<input type="hidden" name="number" class="input_count" value="1" />
+                    <input type="hidden" name="get_left_time" id="get_left_time" value="{$left_time_end}" />
+                <!--{/if}-->
+                
+                <li class="g_title_pan">
+                	<ul>
+                    	<li class="g_title1">秒杀数量：300件 <span style="font-size:12px">
+                        	{if $goods.ok}
+                        		{if $remainder_goods gt 0}(还剩{$remainder_goods}件){else}(秒完了){/if}
+                            {else}
+                            	(还剩300件)
+                            {/if}
+                            </span></li>
+                        <li class="g_title1" style="margin-top:10px;">秒杀状态：<font style="color:#c00000;">{if $goods.ok eq 1 and ($remainder_goods gt 0)}正在进行中{elseif $goods.ok eq 0}尚未开始{else}已结束{/if}</font></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        
+        {if $goods.ok eq 1 and ($remainder_goods gt 0)} 
+    	<li class="time_pan">
+        	<ul>
+            	<li class="num_pr">{$goods_qg_pr}.00</li>
+                
+                <!--{if $goodsds}-->
+                <li class="time_pan_buy"><a href="javascript:void(0);" onclick="showDiv('mydiv',{$goods.goods_id});" class="time_pan_buy_a"></a></li>
+                <!--{else}--> <!--没有度数的商品-->
+                <li class="time_pan_buy"><a href="javascript:void(0);" onclick="showDivz('mydiv',{$goods.goods_id});" class="time_pan_buy_a"></a></li>
+                <!--{/if}-->
+                
+                <li class="time_pan_tr"><input type="hidden" name="user_id" id="get_user_id" value="{$user_id}"/></li>
+                <li class="time_pan_num"><ul><li class="num_time" id="time_h">00</li><li class="num_time2" id="time_m">00</li><li class="num_time2" id="time_s">00</li></ul></li>
+            </ul> 
+            <!---------------------------------------------mydiv------------------------------------------------------->
+            <div id="mydiv" style="position:relative; z-index:2; overflow:hidden;">
+                <div class="buydiv_close">
+                    <div class="buydiv_close_right">
+                        <div class="buydiv_close_text" onclick="showClose('mydiv');">
+                        <img src="{$image_url}/themes/default/images/cart_close.gif" height="11" width="11" alt="" class="mydiv_close"/><a href="javascript:showClose('mydiv');">关闭</a></div>
+                    </div>
+                </div>
+                <div class="buydiv_middle">
+                	<div style="float:left;"><img src="{$image_url}/themes/default/images/cart_ok.jpg" width="25" height="25" alt=""/></div>
+                    <div class="buydiv_middle_text">商品已成功添加到购物车</div>
+                </div><div class="clear"></div>
+                <div id="div_cart_info">购物车中有<span id="div_cart_info_num" class="red_bold">{insert name='cart_num'}</span>件商品</div>
+                <div class="cart_btn">
+                    <div class="cart_btn_left"><a href="javascript:showClose('mydiv')"><img src="{$image_url}/themes/default/images/cart_go.jpg" height="31" width="100" alt=""/></a></div>
+                    <div class="cart_btn_right"><a href="flow.html"><img src="{$image_url}/themes/default/images/cart_compute.jpg" height="29" width="98" border="0" alt=""/></a></div>
+                </div>
+            </div><!--[if IE 6]><iframe id="framediv" scrolling="no" frameborder="0"></iframe><![endif]-->
+            <!-------------------------------------------------------------------------------------------------------->                       
+        </li>
+        {elseif $goods.ok eq 0}
+        <li class="time_pan_not_begin">{if $today}<ul><li class="num_pr">{$goods_qg_pr}.00</li></ul>{/if}</li>
+        {else}
+        <li class="time_pan_end"><ul><li class="num_pr">{$goods_qg_pr}.00</li></ul></li>
+        {/if}
+        
+    </form>  
+    </ul>
+    
+</div>
+
+<!--{if $link_goods}-->
+<div class="buy2">
+    <div class="buy2_h_1"><ul><li class="buy2_h_2"></li><li class="buy2_title"><!--{if $goodsds}-->&gt;您可以优惠价购买同款另一片隐形眼镜<!--{else}-->更多包邮产品<!--{/if}--></li></ul></div>
+    <div class="buy2_pan">
+    	<ul>
+        	<form action="" method="post" name="buy2" id="buy2">
+        	<li class="buy2_g1">
+            	<ul>
+                	<li class="buy2_tip"></li>
+                    <li class="buy2_goods_img"><a href="goods{$link_goods.goods_id}.html"><img src="{$image_url}{$link_goods.goods_img}" width="100" height="100" alt="{$link_goods.goods_name}"/></a></li>
+                </ul>                
+            </li>
+            <li class="buy2_g2">
+            	<dl>
+                	<dd class="buy2_g_name"><a href="goods{$link_goods.goods_id}.html" title="{$link_goods.goods_name}" style="display:block; width:100%; height:16px;">{$link_goods.goods_name}</a></dd>
+                    <dd class="buy2_g_mp">市场价格：￥{$link_goods.market_price}</dd>
+                    <dd class="buy2_g_pr">优惠价：￥<font style="font-size:22px; font-weight:bold;">{$link_goods.shop_price}</font></dd>
+                </dl>
+            </li>
+            
+            <!--{if $goodsds}-->
+            <li class="g_ds_li" style="margin-top:20px;">
+                <dl>
+                    <dd class="g_ds_li_txt">请选择隐形眼镜的度数</dd>
+                    <dd class="g_ds_li_val"><select style="margin-left:24px; width:82px;" name="zselect">
+                    <option value="">请选择</option><!--{foreach from=$goodsds.ds_values item=value key=key}--><option value="{$value}">{$value}</option><!--{/foreach}-->
+                    </select><input type="hidden" name="zcount" value="1"/><input type="hidden" name="yselect" value=""/><input type="hidden" name="ycount" value="0"/>                           
+                    </dd>
+                </dl>                	
+            </li>
+            <!--{else}--> <!-- 没有度数商品 -->
+                <input type="hidden" name="number" class="input_count" value="1" >
+                <input type="hidden" name="get_left_time" id="get_left_time" value="{$left_time_end}"/>
+            <!--{/if}-->
+            
+            <!--{if $goodsds}-->
+            <li class="buy2_bt"><a href="javascript:void(0);" class="buy2_bt_a" onclick="yi_buy2_add_cart({$link_goods.goods_id}, 0)"></a></li>
+            <!--{else}--> <!--没有度数的商品-->
+            <li class="buy2_bt"><a href="javascript:void(0);" class="buy2_bt_a" onclick="yi_buy2_add_cart_2({$link_goods.goods_id}, 0)"></a></li>
+            <!--{/if}-->
+            </form>
+        </ul>
+    </div>
+</div>
+<!--{else}-->
+	<div style="margin-top:15px;"></div>
+<!--{/if}-->
+
+<div style="width:1002px; height:auto; margin:0 auto;">
+    <div id="mainleft">
+        <div class="clear"></div>
+        <div id="cat_goods">
+            <div class="cat_title">参数分类</div>
+            <!-- #BeginLibraryItem "/library/catpara_good.lbi" --><!-- #EndLibraryItem -->
+        </div>
+        <div class="space10"></div>
+        <!-- #BeginLibraryItem "/library/blought_goods.lbi" --><!-- #EndLibraryItem -->
+    </div>
+    <div id="mainright">
+        <!--产品详情项卡页-->
+        <div id="detail1">
+            <div style="width:764px; height:28px; background-image:url(images/yi_tip/pltopover1.gif);">
+                <div class="tab_li"><a href="#detail1" style="color:#ffffff;">产品详情</a></div>
+                <div class="tab_li"><a href="#detail2">真人佩戴图</a></div>
+                <div class="tab_li"><a href="#detail3">评论&amp;问答</a></div>
+                <div class="tab_li"><a href="#detail4">支付方式</a></div>
+                <div class="tab_li"><a href="#detail5">配送说明</a></div>
+            </div>
+            <div class="space10"></div>
+            <div style="width:762px; height:auto; border:1px #dcdcdc solid;">
+                <div style="width:762px; height:26px; line-height:26px; background-color:#fff; background-image:url(images/yi_tip/pan/tou.gif); background-repeat:repeat-x; overflow:hidden;">
+                    <div style="width:96px; height:16px; margin-left:10px; margin-top:5px; text-align:left;">
+                        <div style="float:left; width:16px; height:16px; margin-right:10px;"><img src="{$image_url}/themes/default/images/yi_tip/pan/details.gif" border="0" /></div>
+                        <div style="float:left; width:70px; height:16px; line-height:16px; color:#000; font-family:'宋体', Arial; font-size:14px; font-weight:bold;">产品详情</div>
+                    </div>
+                </div>
+        
+                <!-- {if $properties} -->
+                <div id="maintext" style="margin-bottom:-1px; overflow:hidden;">
+                    <div id="maintextcon">
+                    <!--{if $goods.fcat_ids=='1'||$goods.fcat_ids=='6'} -->
+                        <table cellspacing="1" cellpadding="0" style="width:750px; text-align:center; background-color:#c6c6c6; margin-top:10px;">
+                        <!--{foreach from=$properties item=property_group key=key}-->
+                        <!--{foreach from=$categoriescsz item=cat name=arrts  name=foo}-->
+                            <!--{if $smarty.foreach.foo.index  <5}-->
+                                <!--{if $smarty.foreach.foo.index==0 || $smarty.foreach.foo.index==2 || $smarty.foreach.foo.index==5}--><tr><!--{/if}-->
+                                <!--{if $smarty.foreach.foo.index==0}-->
+                                <td width="125px" height="25px" style="background-color:#f6f6f6;"><span style="color:#333333"><u>商品品牌</u></span></td>
+                                <td width="125px" style="background-color:#fff;"><span style="color:#333333">{$goods.goods_brand}</span></td>
+                                <!--{/if}-->
+                            <td style="background-color:#f6f6f6; width:125px; height:25px"><span style="color: #333333"><u>{$cat.name|escape:html}</u></span></td>
+                            <td style="background-color:#ffffff; width:125px;"><span style="color: #333333">							            		<!--{foreach from=$property_group item=property} -->
+                                <!--{if $cat.name==$property.name}-->{$property.value|escape:html}<!--{/if}-->
+                            <!--{/foreach}-->
+                            </span></td>
+                            <!--{if $smarty.foreach.foo.index==1 || $smarty.foreach.foo.index==4}换行--></tr><!--{/if}-->
+                            <!--{/if}-->
+                        <!--{/foreach}-->
+                        <!--{/foreach}-->
+                        </table>
+                    <!--{/if}-->
+                    </div>
+                </div>
+                <!--{/if}-->
+                <div id="maintextdd">
+                    <div id="maintextcondd">{$goods.goods_desc}<div class="space10"></div>
+                    <div>
+                        <div id="good_textpan">
+                            <p style="margin:18px 0 0 32px;">隐形眼镜属于国家严格管制的第三类医疗器械，请在具有国家药监局颁发的《医疗器械经营企业许可证》的企业购<br/>买。
+                            <a href="article-73.html" rel="nofollow"><u>查看易视的许可证书</u></a></p>
+                            <p style="margin:9px 0 0 32px;">隐形眼镜的佩戴度数与您验光和框架的度数并不相同，验光和框架度数400度以下无需换算，具体换算度<br/>数详见 :
+                            <a href="article-144.html" rel="nofollow"><u>《易视隐形眼镜度数换算表》</u></a></p>
+                            <p style="margin:9px 0 0 32px;">初次购买佩戴隐形眼镜，请务必做过视力检查后,再购买。患有结膜炎、沙眼、慢性泪囊炎、角膜溃疡等眼<br/>
+                            疾病，激光手术、青光眼患者、角膜移植患者请勿私自购买隐形眼镜。 隐形眼镜不可与其它人共用，共用<br/>隐形眼镜可能会传播和引起眼疾</p>
+                            <p style="margin:19px 0 0 32px;">若您的眼镜无故感到不适、眼睛流泪、视觉改变或有红眼症，请立即把镜片取出。在重新佩戴隐形眼镜以<br/>前，请与易视或眼科医生联系,联系电话
+                            <font color="#fa9006">4006-177-176</font>，切勿私自盲目处理。</p>
+                        </div>
+                        <div class="space20"></div>
+                        <img alt="" width="750" height="253" src="{$image_url}/themes/default/images/upload/Image/notice06(1).jpg" />
+                    </div>
+                    </div>
+                </div>
+            <div class="clear"></div>
+            </div>
+        </div><!--detail1 end-->
+        <div class="clear"></div><div class="space20"></div>
+        <!--买家秀-->
+        <div id="detail2">
+            <div style="width:764px; height:28px; background-image:url(images/yi_tip/pltopover2.gif); margin-bottom:10px;">
+                <div class="tab_li"><a href="#detail1">产品详情</a></div>
+                <div class="tab_li"><a href="#detail2"  style="color:#ffffff;">真人佩戴图</a></div>
+                <div class="tab_li"><a href="#detail3">评论&amp;问答</a></div>
+                <div class="tab_li"><a href="#detail4">支付方式</a></div>
+                <div class="tab_li"><a href="#detail5">配送说明</a></div>
+            </div>
+            <div style="width:764px; height:auto;">
+                <!-- #BeginLibraryItem "/library/goods_mjx.lbi" --> <!-- #EndLibraryItem -->
+            </div>
+        </div>
+        <div class="space20"></div>
+        <!--评价和问答-->
+        <div id="detail3">
+            <div style="width:764px; height:28px; background-image:url(images/yi_tip/pltopover3.gif); margin-bottom:10px;">
+                <div class="tab_li"><a href="#detail1">产品详情</a></div>
+                <div class="tab_li"><a href="#detail2">真人佩戴图</a></div>
+                <div class="tab_li"><a href="#detail3" style="color:#ffffff;">评论&amp;问答</a></div>
+                <div class="tab_li"><a href="#detail4">支付方式</a></div>
+                <div class="tab_li"><a href="#detail5">配送说明</a></div>
+            </div>
+            <!--评论lib-->
+                <!-- #BeginLibraryItem "/library/comments.lbi" --><!-- #EndLibraryItem -->
+            <!--问答-->
+            <div style="height:auto; width:764px; z-index:10;">
+                <!-- #BeginLibraryItem "/library/good_pages.lbi" --><!-- #EndLibraryItem -->
+            </div>
+        </div>
+        <div class="space20"></div>
+        <!--支付方式-->
+        <div id="detail4">
+            <div style="width:764px; height:28px; background-image:url(images/yi_tip/pltopover4.gif); margin-bottom:10px;">
+                <div class="tab_li"><a href="#detail1">产品详情</a></div>
+                <div class="tab_li"><a href="#detail2">真人佩戴图</a></div>
+                <div class="tab_li"><a href="#detail3">评论&amp;问答</a></div>
+                <div class="tab_li"><a href="#detail4" style="color:#ffffff;">支付方式</a></div>
+                <div class="tab_li"><a href="#detail5">配送说明</a></div>
+            </div>
+            <div style="border:1px #dcdcdc solid; width:762px; height:590px; overflow:hidden;">
+                <div class="show_body_pan" style="line-height:26px;">
+                    <div style="width:180px; height:16px; margin-left:10px; margin-top:5px; float:left;">
+                        <div style="float:left; width:16px; height:16px; margin-right:10px;"><img src="{$image_url}/themes/default/images/goods/s.gif" border="0" /></div>
+                        <div style="float:left; width:150px; height:16px; line-height:16px; color:#000; font-family:'宋体', Arial; font-size:14px; font-weight:bold;">支付方式</div>
+                    </div>
+                </div>
+                 <div class="txtline">
+                    <div class="txtline_l"><font style="font-size:17px; line-height:30px;">※</font>在网上支付</div>
+                    <div class="txtline_r"><a href="article-27.html" rel="nofollow"><u>查看详情</u></a></div>
+                 </div>
+                 <div style="width:100%; height:172px;">
+                    <div class="txt1">易视网为您提供支付宝在线支付、网银在线支付、财付通在线支付、网汇通在线支付等多种在线支付方式，几乎涵盖所有大中型银行发行的银行卡，覆盖率达98%。选择在线支付，您的银行卡需要开通相应在线支付功能。</div>
+                    <div class="txttb1" style="width:722px; margin-left:20px;">
+                    <table border="0" width="700px" height="82px" align="center" >
+                        <tr align="center"><td><img src="{$image_url}/themes/default/images/goods/z.gif" border="0" width="92" height="32"/></td><td><img src="{$image_url}/themes/default/images/goods/w.gif" border="0" width="108" height="32" /></td>
+                        <td><img src="{$image_url}/themes/default/images/goods/c.gif" border="0" height="33" width="107" /></td><td><img src="{$image_url}/themes/default/images/goods/wh.gif"  border="0" width="101" height="36"/></td></tr>
+                        <tr align="center"><td>支付宝支付</td><td>网银在线支付</td>
+                        <td>财付通支付</td><td>网汇通支付</td></tr>
+                    </table>
+                    </div>
+                    <div class="prompt1">温馨提示：如有疑问请致电易视网客服热线：<font class="color6">4006-177-176</font>，我们将竭诚为您服务。</div>
+                 </div>
+                 <div style="width:100%; height:30px; line-height:30px; background-color:#f7f7f7; margin-top:15px;">
+                    <div class="txtline_l"><font style="font-size:17px; line-height:30px;">※</font>不在网上支付</div>
+                    <div style="width:80px; height:30px; line-height:30px; text-align:right; float:right; margin-right:20px;"><a href="article-27.html" rel="nofollow"><u>查看详情</u></a></div>
+                 </div>
+                 <div class="txt2">货到付款支付</div>
+                 <div class="txt1">您下好订单以后，就可以等在家里收货啦。当您验货满意后签收，然后将现金交给快递员即可。 <a href="article-27.html" rel="nofollow"><u>点此查看</u></a>货到付款的支持范围。</div>
+                 <div class="txt2">银行汇款</div>
+                 <div style="width:722px; margin-top:5px;">
+                <table align="left" width="585px" height="140px" border="0"  class="txttb2" cellpadding="0" cellspacing="0" >
+                    <tr style="height:18px; line-height:18px; overflow:hidden;"><td align="right">开户行：</td><td><img src="{$image_url}/themes/default/images/yi_bank/61.gif" border="0"/> <span class="td_up">宁波银行上海分行</span></td>
+                    <td align="right">帐号：</td><td align="left">7001 0122 0006 74092</td><td align="right">帐户名：</td><td>上海明庭贸易有限公司 </td></tr>
+                    <tr><td align="right">开户行：</td><td><img src="{$image_url}/themes/default/images/yi_bank/62.gif" border="0"/> <span class="td_up">建设银行</span></td><td align="right">帐号：</td>
+                    <td>4340621210158246</td><td align="right">帐户名：</td><td>徐婷婷</td></tr>
+                    <tr><td align="right">开户行：</td><td><img src="{$image_url}/themes/default/images/yi_bank/63.gif" border="0"/> <span class="td_up">工商银行</span></td><td align="right">帐号：</td>
+                    <td>6222370350500902</td><td align="right">帐户名：</td><td>徐婷婷</td></tr>
+                    <tr><td align="right">开户行：</td><td><img src="{$image_url}/themes/default/images/yi_bank/65.gif" border="0"/> <span class="td_up">农业银行</span></td><td align="right">帐号：</td>
+                    <td>6228480030607573919</td><td align="right">帐户名：</td><td>徐婷婷</td></tr>
+                    <tr><td align="right">开户行：</td><td><img src="{$image_url}/themes/default/images/yi_bank/66.gif" border="0"/> <span class="td_up">中国银行</span></td><td align="right">帐号：</td>
+                    <td>6013820800076534070</td><td align="right">帐户名：</td><td>徐婷婷</td></tr>
+                    <tr><td align="right">开户行：</td><td><img src="{$image_url}/themes/default/images/yi_bank/64.gif" border="0"/> <span class="td_up">招商银行</span></td><td align="right">帐号：</td>
+                    <td>6225882114923557</td><td align="right">帐户名：</td><td>徐婷婷</td></tr>
+                    <tr><td align="right">开户行：</td><td><img src="{$image_url}/themes/default/images/yi_bank/67.gif" border="0"/> <span class="td_up">邮政储蓄</span></td><td align="right">帐号：</td>
+                    <td>6221502900000308056</td><td align="right">帐户名：</td><td>徐婷婷</td></tr>
+                </table>
+                 </div>
+                 <div class="txt1"><font class="color6">请您汇款后及时拨打4006-177-176联系我们，这样可以加快您订单的处理速度。</font></div>
+            </div>
+        </div>
+        <div class="space20"></div>
+        <!--配送说明-->
+        <div id="detail5">
+            <div style="width:764px; height:28px; background-image:url(images/yi_tip/pltopover5.gif); margin-bottom:10px;">
+                <div class="tab_li"><a href="#detail1">产品详情</a></div>
+                <div class="tab_li"><a href="#detail2">真人佩戴图</a></div>
+                <div class="tab_li"><a href="#detail3">评论&amp;问答</a></div>
+                <div class="tab_li"><a href="#detail4">支付方式</a></div>
+                <div class="tab_li"><a href="#detail5" style="color:#fff;">配送说明</a></div>
+            </div>
+            <div style="border:1px #dcdcdc solid; width:762px; height:auto">
+                <div class="show_body_pan" style="line-height:26px;">
+                    <div style="width:180px; height:16px; margin-left:10px; margin-top:5px; float:left;">
+                        <div style="float:left; width:16px; height:16px; margin-right:10px;"><img src="{$image_url}/themes/default/images/goods/x.gif" border="0" /></div>
+                        <div style="float:left; width:150px; height:16px; line-height:16px; color:#000; font-family:'宋体', Arial; font-size:14px; font-weight:bold;">配送方式</div>
+                    </div>
+                </div>    
+                <div class="txtline">
+                    <div class="txtline_l"><font style="font-size:17px; line-height:30px;">※</font>关于运货时间</div>
+                    <div class="txtline_r"><a href="article-8.html" rel="nofollow"><u>查看详情</u></a></div>
+                </div>
+                <div class="space10"></div>
+                <div style="width:722px; margin-left:20px;">
+                <table width="722px" height="160px" border="0" style="border:1px #dcdcdc solid;" class="yufeitb">
+                    <tr><td width="272">配送区域</td><td width="270">普通快递时间（圆通，申通等）</td><td width="160">货到付款（宅急送）</td></tr>
+                    <tr><td>江浙沪地区</td><td>1天 </td><td>1天</td></tr>            
+                    <tr><td>安徽、福建、山东、山西、广东、广西、河北<br/>河南、湖北、湖南、北京、天津、江西、陕西</td><td>2-3天左右</td><td>2-3天左右</td></tr>            
+                    <tr><td>四川、重庆、云南、贵州、辽宁<br/>吉林、黑龙江、海南</td><td>3-4天左右</td><td>3-4天左右</td></tr>            
+                    <tr><td>甘肃、青海、宁夏、内蒙古、西藏、新疆、港澳台</td><td>4天左右</td><td>4天左右</td></tr>
+                </table>
+                </div>
+                <div class="txt1">以上时间为一般条件下的大概到货时间，不排除快递公司投递时所导致的意外情况。</div>
+                <div class="txtline">
+                    <div class="txtline_l"><font style="font-size:17px; line-height:30px;">※</font>关于运费计算</div>
+                    <div class="txtline_r"><a href="article-8.html" rel="nofollow"><u>查看详情</u></a></div>
+                </div>
+                <div class="space10"></div>
+                <div style="width:722px; margin-left:20px;">
+                <table width="722px" height="160px" border="0" style="border:1px #dcdcdc solid;" class="yufeitb" cellpadding="5px" cellspacing="0">
+                    <tr><td width="272">配送区域</td><td width="270">普通快递运费（圆通，申通等）</td><td width="160">货到付款（宅急送）</td></tr>            
+                    <tr><td>江浙沪地区</td><td>购物满150免首重，不满150收 5元，续重2元/KG</td><td>首重10元，续重2元/KG</td></tr>            
+                    <tr><td>安徽、福建、山东、山西、广东、广西、河北<br/>河南、湖北、湖南、北京、天津、江西、陕西</td><td>购物满150免首重，不满150收10元，续重8元/KG</td><td>首重18元，续重10元/KG</td></tr>            
+                    <tr><td>四川、重庆、云南、贵州、辽宁<br/>吉林、黑龙江、海南</td><td>购物满150免首重，不满150收12元，续重10元/KG</td><td>首重20元，续重10元/KG</td></tr>            
+                    <tr><td>甘肃、青海、宁夏、内蒙古、西藏、新疆、港澳台</td><td>购物满150免首重，不满150收15元，续重15元/KG</td><td>首重25元，续重10元/KG</td></tr>
+                </table>
+                </div>
+                <div class="txt1">说明：上表中的快递费用，首重为1公斤。超过1公斤部分，请<a href="article-8.html" rel="nofollow"><u>查看详情</u></a>。<br/>
+                一般情况，隐形眼镜，伴侣盒，滴眼液无论多少，都不会超重。护理液，大概总和800ML左右是1公斤的重量。</div>
+            </div>
+        </div><div class="space20"></div>
+        <div class="goods_bottom_img"><img src="{$image_url}/themes/default/images/goods_bottom.jpg" width="764" height="392" alt=""/></div>
+    </div>   
+</div>
+</div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+<script type="text/javascript" src="{$image_url}js/add_cart.js"></script>
+<script type="text/javascript" src="{$image_url}js/yi_goods.js"></script>
+<script type="text/javascript">
+
+fresh();//left time
+var sh;
+sh = setInterval(fresh,1000);	
+
+/* ----------------------------------------------------------------------------------------------------------------------
+ * 函数 yi:到计时函数
+ * ----------------------------------------------------------------------------------------------------------------------
+ */
+function fresh()
+{
+	var left_time_end = document.getElementById("get_left_time").value;
+	var end_time = new Date(left_time_end);//结束时间
+	var now_time = new Date();
+	var leftsecond = parseInt((end_time.getTime()-now_time.getTime())/1000);
+	var d = parseInt(leftsecond/3600/24);  //left day
+	var h = parseInt((leftsecond/3600)%24);//left hour
+	var m = parseInt((leftsecond/60)%60);
+	var s = parseInt(leftsecond%60);
+	
+	if(h<10){h = '0'+h;}
+	if(m<10){m = '0'+m;}
+	if(s<10){s = '0'+s;}
+	
+	document.getElementById("time_h").innerHTML = h;
+	document.getElementById("time_m").innerHTML = m;
+	document.getElementById("time_s").innerHTML = s;
+	
+	if(leftsecond<=0){
+		document.getElementById("time_h").innerHTML="00";
+		document.getElementById("time_m").innerHTML="00";
+		document.getElementById("time_s").innerHTML="00";
+		$(".g_title_pan").find("font").text("已秒完");
+		$(".time_pan_num").css("background-image","url(themes/default/images/active/snatchbuy/at_num2.gif)");		
+		$(".time_pan_buy_a").remove();		
+		clearInterval(sh);
+	}	
+}
+</script>
+</html>

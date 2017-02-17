@@ -1,0 +1,82 @@
+<div class="pop_shadow"></div>
+<!-----------------------------------------------------------------------【登录注册弹窗】--------------------------------------------------------------------------------->
+<div id="lg_pan">
+    <ul class="lg_head"><li class="lg_head_left lg_rg_title">登录易视网</li><li class="lg_head_right"><a href="javascript:;" onclick="lg_pan_close()"></a></li></ul>        
+    <ul class="lg_content">
+        <li class="lg_con_left">
+            <ul>
+                <form action="" name="login_form">
+                <li class="aj_lg_error"></li>
+                <li class="lg_con_tr1">
+                    <dl><dd class="lg_con_td1 lg_pan_txt">用户名或Email：</dd>
+                    <dd class="lg_con_td2"><input type="text" name="username" id="aj_lg_name" class="lg_con_input" value=""/></dd><dd class="ts_li"></dd></dl>
+                </li>
+                <li class="lg_con_tr1">
+                    <dl>
+                        <dd class="lg_con_td1 lg_pan_txt">密 &nbsp;码：</dd><dd class="lg_con_td2"><input type="password" name="password" id="aj_lg_pwd" class="lg_con_input" value=""/></dd>
+                        <dd style="width:80px; margin-left:10px;"><a href="user.php?act=get_password" target="_blank">忘记密码？</a></dd>
+                    </dl>
+                </li>
+                <li class="lg_con_tr2"><dl><dd class="lg_con_td3"><input type="checkbox" name="autologin" id="aj_lg_auto" value=""/></dd><dd class="lg_con_td4">下次自动登录</dd></dl></li>
+                <li class="lg_con_tr3"><dl><dd><a href="javascript:;" onclick="ajax_login()" class="lg_btn1" title="登录"></a></dd></dl></li>
+                <li class="lg_con_tr4">
+                    <dl class="lg_union">
+                        <dd><a href="/api/alipay/alipay_auth_authorize.php" class="lg_union_t1">支付宝登录</a></dd>
+                        <dd><a href="/api/qq/oauth/redirect_to_login.php?jump=fd" class="lg_union_t2">QQ登录</a></dd>
+                        <dd><a href="/api/douban/index.php" class="lg_union_t3">豆瓣账号登录</a></dd>
+                        <dd><a href="/api/sina/weibodemo/index.php" class="lg_union_t4" style="border-right:none; margin-right:0;">新浪微博登录</a></dd>
+                    </dl>
+                </li>
+                </form>                                                                           
+            </ul>           
+        </li>
+        <li class="lg_con_right">
+            <ul class="lg_con_r_ul">
+                <li class="lg_turn_li">没有易视网账号？</li>
+                <li class="lg_turn_li red">注册就送100积分！</li>
+                <li class="lg_turn_bt"><a href="javascript:;" onclick="change_lg_pan(1)"></a></li>
+            </ul>
+        </li>
+    </ul>      
+    <ul class="lg_content rg_pan">
+        <li class="lg_con_left">
+            <ul id="reg_ul" style="margin-top:8px;">
+                <form action="" name="regist_form">
+                <li class="lg_con_tr1">
+                    <dl><dd class="lg_con_td1">用户名：</dd>
+                    <dd class="lg_con_td2"><input type="text" name="username" class="lg_con_input" value="" /></dd><dd class="ts_li" id="username_notice"></dd></dl>
+                </li>                
+                <li class="lg_con_tr1">
+                    <dl><dd class="lg_con_td1">密 &nbsp;码：</dd>
+                    <dd class="lg_con_td2"><input type="password" name="password" id="password1"  class="lg_con_input" value=""/></dd><dd class="ts_li" id="password_notice"></dd></dl>
+                </li>                
+                <li class="lg_con_tr1">
+                    <dl><dd class="lg_con_td1">确认密码：</dd>
+                    <dd class="lg_con_td2"><input type="password" name="confirm_password" class="lg_con_input" value=""/></dd><dd class="ts_li" id="conform_password_notice"></dd></dl>
+                </li>                
+                <li class="lg_con_tr1">
+                    <dl><dd class="lg_con_td1">Email：</dd>
+                    <dd class="lg_con_td2"><input type="text" name="email" class="lg_con_input" value=""/></dd><dd class="ts_li" id="email_notice"></dd></dl>
+                </li>                
+                <li class="lg_con_tr1">
+                    <dl><dd class="lg_con_td1">手机号码：</dd>
+                    <dd class="lg_con_td2"><input type="text" name="extend_field5" class="lg_con_input" value=""/></dd><dd class="ts_li" id="mobile_notice"></dd></dl>
+                </li>                                 
+                <li class="lg_con_tr2"><dl><dd class="lg_con_td3"><input type="checkbox" name="agreement" checked="checked" /></dd><dd class="lg_con_td4">我已看过并接受《<a href="article-112.html" target="_blank">用户协议</a>》</dd></dl></li>
+                <li class="lg_con_tr3"><dl><dd><a href="javascript:;" class="lg_btn1 lg_btn3" id="regist_bt" title="立即注册"></a></dd></dl></li>
+                <input type="hidden" name="u_can_reg" id="u_can_reg" value="0"/><input type="hidden" name="e_can_reg" id="e_can_reg" value="0"/>
+                </form>
+            </ul>           
+        </li>
+        <li class="lg_con_right">
+            <ul class="lg_con_r_ul" style="margin-top:20px;">
+            	<li class="lg_turn_li">已有易视网账号？</li>
+                <li class="lg_turn_bt"><a href="javascript:;" onclick="change_lg_pan(2)" style="width:117px; height:34px; margin-top:5px; background:url(../themes/default/images/login/user.gif) no-repeat 0 -115px; display:block;"></a></li>	<li><a href="/api/alipay/alipay_auth_authorize.php" class="lg_union_a lg_union_t1">支付宝登录</a></li>
+                <li><a href="/api/qq/oauth/redirect_to_login.php" class="lg_union_a lg_union_t2">QQ登录</a></li>
+                <li><a href="/api/douban/index.php" class="lg_union_a lg_union_t3">豆瓣账号登录</a></li>
+                <li><a href="/api/sina/weibodemo/index.php" class="lg_union_a lg_union_t4">新浪微博登录</a></li>
+            </ul>
+        </li>
+    </ul>      
+</div>
+<!-----------------------------------------------------------------------【登录注册窗口】END------------------------------------------------------------------------------>  

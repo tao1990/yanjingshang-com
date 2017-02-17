@@ -1,0 +1,135 @@
+<!--<div class="container">-->
+    <div>
+        <p class="goodsAttr-info">您选择<b>{$goods.goods_name}</b></p>
+        <!--{if $link_goods && $source.show_sk eq false}[关联商品]-->
+        <div class="goodsAttr-box">
+            <h3 class="goodsAttr-title">款式</h3>
+            <div class="goodsAttr-sliderbox" id="goodsAttr-sliderbox">
+                <ul class="goodsAttr-sliders" id="goodsAttr-sliders">
+                    <li class="current"><a href=""><img src="{$img_url}{$goods.goods_thumb}" style="width: 50%;height:50%" /></a></li>
+                    <!--{foreach from=$link_goods item=li name=foo}-->
+                    <li><a href="goods.php?act=choose_goods_attr&id={$li.link_goods_id}"><img src="{$img_url}{$li.goods_thumb}" style="width: 50%;height:50%" /></a></li>
+                    <!--{/foreach}-->
+                </ul>
+            </div>
+        </div>
+        <!--{/if}-->
+    </div>
+
+    <form action="" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY">
+    <!--{if $goodsds}-->
+        <div class="goodsAttr-box" style="margin-top:.65rem;">
+            <h3 class="goodsAttr-title">
+                <span class="pull-right btn-info" id="gdSelectInfo-btn"><img src="css/slice/l_5.jpg" style="" /> 选择说明</span>
+                光度
+            </h3>
+            <!--<p class="goodsAttr-ygd">
+                <span class="btn" id="ygdSelect-btn">更换</span> 已选择<b>xx</b>的验光单
+            </p>-->
+            <div class="goodsAttr-gd">
+                <select class="" name="left_eye_ds">
+                    <option value="">左眼光度</option>
+                    <!--{foreach from=$goodsds item=li}-->
+                    {if $li.canbuy}
+                    <option value="{$li.val}">{$li.val}</option>
+                    {else}
+                    <optgroup label="{$li.val}(补货中)" style="font-weight: normal"></optgroup>
+                    {/if}
+                    <!--{/foreach}-->
+                </select>
+                <select class="" name="right_eye_ds">
+                    <option value="">右眼光度</option>
+                    <!--{foreach from=$goodsds item=li}-->
+                    {if $li.canbuy}
+                    <option value="{$li.val}">{$li.val}</option>
+                    {else}
+                    <optgroup label="{$li.val}(补货中)" style="font-weight: normal"></optgroup>
+                    {/if}
+                    <!--{/foreach}-->
+                </select>
+            </div>
+            <!--{if $goods_is_sg && $goods_sgds}有度数商品中散光片-->
+            <div class="goodsAttr-gd" style="margin-top: 1rem">
+                <select class="" name="left_eye_sg">
+                    <option value="">左眼散光</option>
+                    <!--{foreach from=$goods_sgds.ds_values item=value key=key}-->
+                    <option value="{$value}">{$value}</option>
+                    <!--{/foreach}-->
+                </select>
+                <select class="" name="right_eye_sg">
+                    <option value="">右眼散光</option>
+                    <!--{foreach from=$goods_sgds.ds_values item=value key=key}-->
+                    <option value="{$value}">{$value}</option>
+                    <!--{/foreach}-->
+                </select>
+            </div>
+            <div class="goodsAttr-gd" style="margin-top: 1rem">
+                <select class="" name="left_eye_zw">
+                    <option value="">左眼轴位</option>
+                    <!--{foreach from=$goods_zw item=value key=key}-->
+                    <option value="{$value}">{$value}</option>
+                    <!--{/foreach}-->
+                </select>
+                <select class="" name="right_eye_zw">
+                    <option value="">右眼轴位</option>
+                    <!--{foreach from=$goods_zw item=value key=key}-->
+                    <option value="{$value}">{$value}</option>
+                    <!--{/foreach}-->
+                </select>
+            </div>
+            <!--{else}-->
+            <input type="hidden" id="is_sg" value=""/>
+            <!--{/if}-->
+        </div>
+        <div class="goodsAttr-box goodsAttr-num" style="margin-top:.65rem;">
+            <div class="item">
+                <h3 class="goodsAttr-title">左眼数量</h3>
+                <div class="numbox">
+                    <a onclick="change_count_z('-');">-</a>
+                    <input type="text" readonly="true" value="1" id="count_z" name="left_eye_num" />
+                    <a onclick="change_count_z('+');">+</a>
+                </div>
+            </div>
+            <div class="item">
+                <h3 class="goodsAttr-title">右眼数量</h3>
+                <div class="numbox">
+                    <a onclick="change_count_y('-');">-</a>
+                    <input type="text" readonly="true" value="1" id="count_y" name="right_eye_num" />
+                    <a onclick="change_count_y('+');">+</a>
+                </div>
+            </div>
+        </div>
+    <!--{else}-->
+        <div class="goodsAttr-box goodsAttr-num" style="margin-top:.65rem;">
+            <div class="item">
+                <h3 class="goodsAttr-title">数量</h3>
+                <div class="numbox">
+                    <a onclick="change_count('-');">-</a>
+                    <input type="text" readonly="true" value="1" id="count" name="goods_number" />
+                    <a onclick="change_count('+');">+</a>
+                </div>
+            </div>
+        </div>
+    <!--{/if}-->
+    <div style="height:5rem;"></div>
+    <div class="goodsBuyBottom" style="position:fixed;width:100%;left:0;bottom:0;">
+    {if $goods.is_on_sale eq 1}
+        {if $goods.goods_number>0}
+        <!--{if $goods.goods_type eq 13 || $goods.goods_type eq 14 || $goods.goods_type eq 16}-->
+            <a href="javascript:;" onclick="add_to_cart_z({$goods.goods_id}, 4);" class="g-btn-large">确认购买</a>
+        <!--{elseif $goods.goods_type eq 10 || $goods.goods_type eq 12}-->
+            <!--{if $goods_is_sg}-->
+                <a href="javascript:;" onclick="add_to_cart({$goods.goods_id}, 2);" class="g-btn-large">确认购买</a>
+            <!--{else}-->
+                <a href="javascript:;" onclick="add_to_cart({$goods.goods_id}, 1);" class="g-btn-large">确认购买</a>
+            <!--{/if}-->
+        <!--{/if}-->
+        {else}
+        <a class="g-btn-large">已售空</a>
+        {/if}
+    {else}
+        <a class="g-btn-large">已下架</a>
+    {/if}
+    </div>
+    </form>
+<!--</div>-->

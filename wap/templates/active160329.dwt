@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>踏青好礼抢不完</title>
+<meta name="Keywords"  content="易视网,易视眼镜网,美瞳,护理液,润眼液,博士伦,海昌,海俪恩,卫康,库博,视康,强生,sho-bi,GEO,NEO,BESCON" />
+<meta name="Description" content="易视网，8.8元秒杀限时抢爆品，+4.1元得尖货，全场满299送神秘大礼，24小时闪电发货，30天退换货保障" />
+<link rel="stylesheet" href="http://file.easeeyes.com/index2015/css/ani.css" />
+<style>
+body{background-color:#fff !important;}
+.link-item{position:absolute;left:0;top:0;width:50%;height:100%;}
+.link-item2{left:auto;right:0;}
+
+.links-items{position:relative;}
+.links-items .link{position:absolute;width:50%;height:50%;left:0;top:0;}
+.links-items .link-2{left:auto;right:0;}
+.links-items .link-3{bottom:0;top:auto;}
+.links-items .link-4{bottom:0;top:auto;left:auto;right:0;}
+.items-goods{width:31.2rem;margin:auto;padding:.5rem 0;}
+.item-goods{width:15.4rem;border:1px solid #a7cf91;float:left;box-sizing:border-box;margin-bottom:.5rem;position:relative;}
+.item-goods .layer{position:absolute;left:.5rem;top:0;padding:.5rem;background:#ff5c87;color:#fff;font-size:1.1rem;}
+.item-goods:nth-child(even){float:right;}
+.item-goods .top{height:13.8rem;line-height:13.8rem;text-align:center;}
+.item-goods .top img{max-width:95%;max-height:95%;vertical-align:middle;}
+.item-goods .middle{line-height:1.2rem;font-size:1.1rem;height:2.4rem;overflow:hidden;padding:0 1rem;color:#464646;}
+.item-goods .bottom{margin-top:.75rem;padding:1rem 0;overflow:hidden;background:url(http://img.easeeyes.com/promotion/20160301/title_bg.jpg) no-repeat center top;background-size:auto 1px;}
+.item-goods .bottom .left{width:8.1rem;text-align:right;color:#fe5888;line-height:1;padding:.25rem .25rem 0 0;}
+.item-goods .bottom .left b{font-size:1.6rem;font-weight:100;}
+.item-goods .bottom .right{margin-left:8.2rem;text-align:left;font-size:.8rem;}
+.item-goods .bottom .right del{color:#8f8f8f;}
+.item-goods .bottom .btn-buy{display:block;width:4.8rem;}
+.pop-fullpage{background:rgba(0,0,0,.7);position:fixed;left:0;top:0;width:100%;height:100%;opacity:0;}
+.pop-fullpage.ani{animation:fadeIn .5s;-webkit-animation:fadeIn .5s;}
+.pop-box{width:30rem;height:35.2rem;position:absolute;left:50%;top:50%;margin-left:-15rem;margin-top:-17.6rem;}
+.pop-box.ani{animation:zoomIn .5s;-webkit-animation:zoomIn .5s;}
+.pop-box .link{position:absolute;width:13.1rem;height:14.2rem;left:1.5rem;top:5.5rem;}
+.pop-box .link-2{left:auto;right:1.7rem;}
+.pop-box .link-3{top:auto;bottom:1rem;}
+.pop-box .link-4{top:auto;bottom:1rem;left:auto;right:1.7rem;}
+#pop-tips{background:rgba(0,0,0,.75);line-height:3.5rem;height:3.5rem;text-align:center;width:20rem;color:#fff;font-size:1.2rem;position:fixed;left:50%;top:50%;margin-top:-1.75rem;margin-left:-10rem;border-radius:.25rem;opacity:0;}
+#pop-tips.ani{animation:zoomIn .5s;-webkit-animation:zoomIn .5s;}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<!--main-->
+<div class="container">
+    <div><img src="http://file.easeeyes.com/wap/images/20160329/banner.jpg" style="display:block;"></div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160329/01.jpg" style="display:block;"></div>
+    <!--{if $show_tag eq 1}-->
+	<div><img src="http://file.easeeyes.com/wap/images/20160329/02.jpg" style="display:block;"></div>
+	<div style="position:relative;">
+        <!--{if $is_null}-->
+        <img src="http://file.easeeyes.com/wap/images/20160329/03_null.jpg" style="display:block;">
+        <!--{else}-->
+        <img src="http://file.easeeyes.com/wap/images/20160329/03.jpg" style="display:block;">
+        <!--{/if}-->
+		<a href="http://m.easeeyes.com/miaosha_buy_4375.html" class="link-item"></a>
+		<a href="http://m.easeeyes.com/miaosha_buy_611.html" class="link-item link-item2"></a>
+	</div>
+    <!--{elseif $show_tag eq 2}-->
+    <div><img src="http://file.easeeyes.com/wap/images/20160329/02_2.jpg" style="display:block;"></div>
+    <div style="position:relative;">
+        <!--{if $is_null}-->
+        <img src="http://file.easeeyes.com/wap/images/20160329/03_2_null.jpg" style="display:block;">
+        <!--{else}-->
+        <img src="http://file.easeeyes.com/wap/images/20160329/03_2.jpg" style="display:block;">
+        <!--{/if}-->
+        <a href="http://m.easeeyes.com/miaosha_buy_3000.html" class="link-item"></a>
+        <a href="http://m.easeeyes.com/miaosha_buy_4861.html" class="link-item link-item2"></a>
+    </div>
+    <!--{else}-->
+    <div><img src="http://file.easeeyes.com/wap/images/20160329/02_3.jpg" style="display:block;"></div>
+    <div style="position:relative;">
+        <!--{if $is_null}-->
+        <img src="http://file.easeeyes.com/wap/images/20160329/03_3_null.jpg" style="display:block;">
+        <!--{else}-->
+        <img src="http://file.easeeyes.com/wap/images/20160329/03_3.jpg" style="display:block;">
+        <!--{/if}-->
+        <a href="http://m.easeeyes.com/miaosha_buy_5157.html" class="link-item"></a>
+        <a href="http://m.easeeyes.com/miaosha_buy_1145.html" class="link-item link-item2"></a>
+    </div>
+    <!--{/if}-->
+	<div><img src="http://file.easeeyes.com/wap/images/20160329/04.jpg" style="display:block;"></div>
+	<div class="links-items">
+		<img src="http://file.easeeyes.com/wap/images/20160329/05.jpg" style="display:block;">
+		<a href="http://m.easeeyes.com/goods5109.html" class="link"></a>
+		<a href="http://m.easeeyes.com/goods4969.html" class="link link-2"></a>
+		<a href="http://m.easeeyes.com/goods4948.html" class="link link-3"></a>
+		<a href="http://m.easeeyes.com/goods5138.html" class="link link-4"></a>
+	</div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160329/06.jpg" style="display:block;"></div>
+	<div><a href="http://m.easeeyes.com/goods4796.html"><img src="http://file.easeeyes.com/wap/images/20160329/07.jpg" style="display:block;"></a></div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160329/08.jpg" style="display:block;"></div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160329/09.jpg" style="display:block;"></div>
+
+	<div class="items-goods clearfix">
+        <!--{if $goodsArr1}-->
+        <!--{foreach from=$goodsArr1 item=goods name=goods}-->
+		<div class="item-goods">
+			<a href="{$goods.href}">
+				<span class="layer">{$goods.zk}</span>
+				<div class="top">
+					<img src="http://www.easeeyes.com/{$goods.goods_thumb}" />
+				</div>
+				<div class="middle">
+					{$goods.goods_name}
+				</div>
+				<div class="bottom">
+					<div class="pull-left left">
+						&yen;<b>{$goods.promote_price}/</b>盒
+					</div>
+					<div class="right">
+						<del>{$goods.fomart_price}</del>
+						<img src="http://img.easeeyes.com/promotion/20160301/buy_btn.jpg" class="btn-buy" />
+					</div>
+				</div>
+			</a>
+		</div>
+        <!--{/foreach}-->
+        <!--{/if}-->
+	</div>
+	
+	<div><img src="http://file.easeeyes.com/wap/images/20160329/10.jpg" style="display:block;"></div>
+    <div class="items-goods clearfix">
+        <!--{if $goodsArr2}-->
+        <!--{foreach from=$goodsArr2 item=goods name=goods}-->
+        <div class="item-goods">
+            <a href="{$goods.href}">
+                <span class="layer">{$goods.zk}</span>
+                <div class="top">
+                    <img src="http://www.easeeyes.com/{$goods.goods_thumb}" />
+                </div>
+                <div class="middle">
+                    {$goods.goods_name}
+                </div>
+                <div class="bottom">
+                    <div class="pull-left left">
+                        &yen;<b>{$goods.promote_price}/</b>副
+                    </div>
+                    <div class="right">
+                        <del>{$goods.fomart_price}</del>
+                        <img src="http://img.easeeyes.com/promotion/20160301/buy_btn.jpg" class="btn-buy" />
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!--{/foreach}-->
+        <!--{/if}-->
+    </div>
+	
+	<div><img src="http://file.easeeyes.com/wap/images/20160329/11.jpg" style="display:block;"></div>
+    <div class="items-goods clearfix">
+        <!--{if $goodsArr3}-->
+        <!--{foreach from=$goodsArr3 item=goods name=goods}-->
+        <div class="item-goods">
+            <a href="{$goods.href}">
+                <span class="layer">{$goods.zk}</span>
+                <div class="top">
+                    <img src="http://www.easeeyes.com/{$goods.goods_thumb}" />
+                </div>
+                <div class="middle">
+                    {$goods.goods_name}
+                </div>
+                <div class="bottom">
+                    <div class="pull-left left">
+                        &yen;<b>{$goods.promote_price}/</b>副
+                    </div>
+                    <div class="right">
+                        <del>{$goods.fomart_price}</del>
+                        <img src="http://img.easeeyes.com/promotion/20160301/buy_btn.jpg" class="btn-buy" />
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!--{/foreach}-->
+        <!--{/if}-->
+    </div>
+	
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

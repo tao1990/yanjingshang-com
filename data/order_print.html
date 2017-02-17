@@ -1,0 +1,152 @@
+<div id="print_{$order.order_sn}">
+
+	<table class="tb_head" width="750" cellpadding="1" border="0" style="margin-top:55px; margin-bottom:4px; font-size:13px;">
+		<tr>
+			<td width="64" height="20">&nbsp;</td>
+			<td width="98">{$order.order_sn}</td>
+			<td width="68">&nbsp;</td>
+			<td width="174">{$order.order_time}</td>  
+			<td width="70">&nbsp;</td>
+			<td width="154">{$order.consignee}</td>
+			<td width="10">&nbsp;</td>
+			<td width="112">{if $order.mobile}{$order.mobile}{else}{$order.tel}{/if}</td>
+		</tr>
+		<tr>
+			<td width="64" height="20">&nbsp;</td>
+			<td colspan="5">{$order_region_temp}{$order.address|truncate:28:false}</td>
+			<td>&nbsp;</td>
+			<td>{$order.pay_name}</td>
+		</tr>
+	</table>
+
+	<div style="width:770px; height:296px; text-align:right; margin-top:20px;">
+		
+		<div style="width:770px; height:255px;">
+		<table border="0" style="border-collapse:collapse; width:760px; font-size:13px;">
+			<tr align="center">
+				<td width="100">&nbsp;</td>
+				<td width="260">&nbsp;</td>
+				<td width="155">&nbsp;</td>
+				<td width="60">&nbsp;</td>
+				<td width="60">&nbsp;</td>
+				<td width="85">&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			
+			<!--{foreach from=$goods_list item=goods key=key name=foo}-->
+			<!--{if $goods.zcount>1 && $goods.ycount eq 1 || $goods.zcount eq 1 && $goods.ycount>1 || $goods.zcount>1 && $goods.ycount>1 }-->
+			<tr>
+				<td width="100">{$goods.goods_sn}</td>
+				<td width="260">{$goods.goods_name}{$goods.goods_name_desc|tracert:18}{if $goods.is_gift}{if $goods.goods_price gt 0}{$lang.remark_favourable}{else}{$lang.remark_gift}{/if}{/if}</td>        
+				<td width="155" align="center">{if $goods.zselect && $goods.zcount>0}左眼：{$goods.zselect}{/if}<br/>{$goods.sub_a}</td>
+				<td width="60" align="right">{$goods.formated_goods_price}</td>
+				<td width="60" align="right">{$goods.zcount}</td>
+				<td width="85" align="right">{$goods.sub_z}</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td width="100">{$goods.goods_sn}</td>
+				<td width="260">{$goods.goods_name}{$goods.goods_name_desc|tracert:18}{if $goods.is_gift}{if $goods.goods_price gt 0}{$lang.remark_favourable}{else}{$lang.remark_gift}{/if}{/if}</td>        
+				<td width="155" align="center">{if $goods.yselect && $goods.ycount>0}右眼：{$goods.yselect}{/if}<br/>{$goods.sub_b}</td>
+				<td width="60" align="right">{$goods.formated_goods_price}</td>
+				<td width="60" align="right">{$goods.ycount}</td>
+				<td width="85" align="right">{$goods.sub_y}</td>
+				<td>&nbsp;</td>
+			</tr>
+			<!--{else}-->
+			<tr>
+				<td width="100">{$goods.goods_sn}</td>
+				<td width="260">
+				{$goods.goods_name}
+				{if $goods.extension_code neq 'tuan_buy'}{$goods.goods_name_desc|tracert:18}{/if}
+				{if $goods.extension_code=='package_buy'}(礼包){/if}{if $goods.extension_code=='tuan_buy'}(团购){/if}{if $goods.extension_code=='miaosha_buy'}(秒杀){/if}
+				{if $goods.is_gift}{if $goods.goods_price gt 0}{$lang.remark_favourable}{else}{$lang.remark_gift}{/if}{/if}
+				{if $goods.parent_id gt 0}{$lang.remark_fittings}{/if}
+				</td>        
+				<td width="155" align="center">{if $goods.zselect && $goods.zcount>0}左眼:{$goods.zselect}{/if}
+				{if $goods.yselect && $goods.ycount>0}右眼:{$goods.yselect}{/if}<!--{if $goods.zselect=='' && $goods.yselect==''}-->{$goods.goods_attr}
+				<!--{else}--><br/>{$goods.goods_attr}{if $goods.ds_extention}瞳距【{$goods.ds_extention}】{/if}<!--{/if}-->
+				</td>
+				<td width="60" align="right">{$goods.formated_goods_price}<!-- 商品单价 --></td>
+				<td width="60" align="right">{$goods.goods_number}<!-- 商品数量 --></td>
+				<td width="85" align="right">{$goods.formated_subtotal}<!-- 商品金额小计 --></td>
+				<td>&nbsp;</td>
+			</tr>
+			<!--{/if}-->
+			<!--{/foreach}-->
+			
+		</table>
+		
+		<table border="0" width="760" style="font-size:13px;">
+			<tr>
+				<td width="380" style="padding-left:10px;">
+					<br />
+					<table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td><img src="/themes/default/images/common/dbarcode.jpg" /></td>
+							<td align="left" style="font-size:12px; line-height:18px; text-align:left;">扫一扫，领美瞳、优惠券<br />
+							回复通关密语：“大转盘” 即可参与<br />
+							微信号：yishiwang_shop</td>
+						</tr>
+					</table>
+				</td>
+				<td width="120" align="right">商品总计：{$order_goods_number} 件</td>
+				<td>
+					<table class="tb_total" border="0" width="160" align="right" style="font-size:13px;">
+						<tr>
+							<td width="80" height="16" align="right">邮资：</td>
+							<td align="right">{if $order.all_plus neq '0.00'}￥{$order.all_plus}.00{else}￥0.00{/if}</td>
+						</tr>
+						
+						{if $order.all_minus >0}
+						<tr>
+							<td height="16" align="right">折扣金额：</td>
+							<td align="right">{if $order.all_minus neq '0.00'}￥{$order.all_minus}.00{else}￥0.00{/if}</td>
+						</tr>
+						{/if}
+						
+						<tr>
+							<td height="16" align="right">实收金额：</td>
+							<td align="right">{$order.formated_total_fee}</td>
+						</tr>
+					</table>
+				</td>
+				<td width="19">&nbsp;</td>
+			</tr>
+		</table>	
+		</div>
+	
+		<!--{if $order.postscript || $order.to_buyer}-->
+		<table border="0" width="700" style="font-size:13px;">
+			<!--{if $order.postscript}-->
+			<tr>
+				<td>客户留言:{$order.postscript}</td>
+			</tr>
+			<!--{/if}-->
+			
+			<!--{if $order.to_buyer}-->
+			<tr>
+				<td>客服备注:{$order.to_buyer}</td>
+			</tr>
+			<!--{/if}-->
+			
+			<!--{if $order.inv_payee}-->
+			<tr>
+				<td>发票抬头:[{$order.inv_payee}]</td>
+			</tr>
+			<!--{/if}-->
+		</table>
+		
+		<!--{else}-->
+		<table border="0" width="700" style="font-size:13px;">
+			<!--{if $order.inv_payee}-->
+			<tr>
+				<td>发票抬头:[{$order.inv_payee}]</td>
+			</tr>
+			<!--{/if}-->
+		</table>
+		<!--{/if}-->
+		
+	</div>
+
+</div>

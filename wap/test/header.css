@@ -1,0 +1,5 @@
+body,h1,h2,h3,h4,h5,h6,p,dl,dt,dd,ul,ol,li,form,button,input,textarea,table,tr,th,td{margin:0;padding:0;}
+body{color:#333;font-family:"微软雅黑","Microsoft YaHei";font-size:14px;}
+input{border:none;}.clear {clear: both;}
+a{color:#8D8D8D;text-decoration:none;}
+ul,ol,li{list-style:none;}

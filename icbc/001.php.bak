@@ -1,0 +1,73 @@
+<?php
+//订单提交接口
+ini_set('display_errors', true);
+error_reporting(E_ALL);
+
+require_once("Java.inc");
+
+/*
+
+<B2CReq><interfaceName>ICBC_PERBANK_B2C</interfaceName><interfaceVersion>1.0.0.11</interfaceVersion><orderInfo><orderDate>20140103111700</orderDate><curType>001</curType><merID>1001EC23725729</merID><subOrderInfoList><subOrderInfo><orderid>2014010733449</orderid><amount>474.00</amount><installmentTimes>1</installmentTimes><merAcct>1001215519300406213</merAcct><goodsID>100</goodsID><goodsName>easeeyes</goodsName><goodsNum>1</goodsNum><carriageAmt>10</carriageAmt></subOrderInfo></subOrderInfoList></orderInfo><custom><verifyJoinFlag>0</verifyJoinFlag><Language>ZH_CN</Language></custom><message><creditType>2</creditType><notifyType>HS</notifyType><resultType>1</resultType><merReference>www.easeeyes.com</merReference><merCustomIp>27.115.23.238</merCustomIp><goodsType>1</goodsType><merCustomID>18356</merCustomID><merCustomPhone>15839874569</merCustomPhone><goodsAddress>安徽安庆迎江区</goodsAddress><merOrderRemark>remark</merOrderRemark><merHint>liuyan</merHint><remark1>1</remark1><remark2>2</remark2><merURL>http://www.easeeyes.com/icbc/002.php</merURL><merVAR>8488</merVAR></message></B2CReq>
+*/
+date_default_timezone_set('PRC');
+$orderdate = date("YmdHis",time());
+//echo $orderdate;exit;
+//$password = "JKDCHKBA";
+
+//商城代码：1001EC24075824
+//企业 1001331619300000458
+
+$password = "12345678";
+$tranData = "<?xml version=\"1.0\" encoding=\"GBK\" standalone=\"no\"?>
+<B2CReq><interfaceName>ICBC_PERBANK_B2C</interfaceName><interfaceVersion>1.0.0.11</interfaceVersion><orderInfo><orderDate>".$orderdate."</orderDate><curType>001</curType><merID>1001EC24075824</merID><subOrderInfoList><subOrderInfo><orderid>201403081416290</orderid><amount>1</amount><installmentTimes>1</installmentTimes><merAcct>1001331619300000458</merAcct><goodsID></goodsID><goodsName>www.easeeyes.com</goodsName><goodsNum></goodsNum><carriageAmt>20</carriageAmt></subOrderInfo></subOrderInfoList></orderInfo><custom><verifyJoinFlag>0</verifyJoinFlag><Language>ZH_CN</Language></custom><message><creditType>2</creditType><notifyType>HS</notifyType><resultType>1</resultType><merReference>www.easeeyes.com</merReference><merCustomIp></merCustomIp><goodsType>1</goodsType><merCustomID></merCustomID><merCustomPhone></merCustomPhone><goodsAddress></goodsAddress><merOrderRemark></merOrderRemark><merHint></merHint><remark1>1</remark1><remark2>2</remark2><merURL>http://www.easeeyes.com/icbc/002.php</merURL><merVAR>test</merVAR></message></B2CReq>";
+
+$sign = new java("com.icbc.b2c.Signature");
+
+$tranData_base64 = $sign->tranDataBase64($tranData); //订单数据BASE64编码
+$signMsgBase64 = $sign->signMsgBase64($tranData, "/data/www/icbc/Easeeyes.key", $password); //签名信息base64编码
+$certBase64 = $sign->certBase64($tranData, "/data/www/icbc/Easeeyes.key", "/data/www/icbc/Easeeyes.crt", $password); //证书信息base编码
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+
+<FORM id=FORM1 name=FORM1 action="https://B2C.icbc.com.cn/servlet/ICBCINBSEBusinessServlet" method=post">
+	<font face='Arial' size='4' color='white'>商户订单数据签名页面</font>
+	<table width="98%"  border="1">
+		<tr>
+			<td width="9%">接口名称</td>
+			<td width="91%"><INPUT ID="interfaceName" NAME="interfaceName" TYPE="text" value="ICBC_PERBANK_B2C" size="120" ></td>
+		</tr>
+		<tr>
+			<td width="9%">接口版本号</td>
+			<td width="91%"><INPUT ID="interfaceVersion" NAME="interfaceVersion" TYPE="text" value="1.0.0.11" size="120"></td>
+		</tr>
+		<tr>
+			<td width="9%">接口数据</td>
+			<td width="91%"><textarea ID="tranData" name="tranData" cols="120" rows="5"><?php echo $tranData_base64; ?></textarea>
+		</tr>
+		<tr>
+			<td width="9%">签名数据</td>
+			<td width="91%"><INPUT ID="merSignMsg" NAME="merSignMsg" TYPE="text" size="120" value="<?php echo $signMsgBase64; ?>">
+		</tr>
+		<tr>
+			<td width="9%">证书数据</td>
+			<td width="91%"><INPUT ID="merCert" NAME="merCert" TYPE="text" size="120" value="<?php echo $certBase64; ?>">
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<td><INPUT TYPE="submit" value=" 提 交 订 单 "></td>
+			<td><INPUT  type="button" value=" 返 回 修 改 " onClick="self.history.back();"></td>
+		</tr>
+	</table>
+</FORM>
+
+</body>
+</html>

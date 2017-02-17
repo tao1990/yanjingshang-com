@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>疯狂眼镜城</title>
+<meta name="Keywords"  content="易视网,易视眼镜网,美瞳,护理液,润眼液,博士伦,海昌,海俪恩,卫康,库博,视康,强生,sho-bi,GEO,NEO,BESCON" />
+<meta name="Description" content="易视网，眼镜3.2折起，再送200元神券，24小时闪电发货，30天退换货保障" />
+<link rel="stylesheet" href="http://file.easeeyes.com/index2015/css/ani.css" />
+<style>
+body{background-color:#fff !important;}
+.goodsItems{background:#e8e8e8;}
+.goodsItem{
+	width:15.75rem;
+	float:left;
+	background:#fff;
+	position:relative;
+	border:1px solid #d4d4d4;
+	margin-bottom:.5rem;
+}
+.goodsItem:nth-child(odd){
+	float:right;
+}
+.goodsItem .image{
+	height:13.5rem;
+	text-align:center;
+	line-height:13.5rem;
+}
+.goodsItem .image img{
+	max-width:90%;
+	max-height:90%;
+	vertical-align:middle;
+}
+.goodsItem h3{color:#585858;line-height:1.2rem;height:2.4rem;overflow:hidden;padding:.25rem .75rem 0;}
+.goodsItem .text{padding:1rem .75rem;background:url(http://img.easeeyes.com/promotion/20160411/btn.jpg) no-repeat 9.7rem 1rem;color:#585858;background-size:5.1rem auto;font-size:1rem;}
+.goodsItem .text .red{color:#df1f34;}
+.goodsItem .text b{font-size:1.2rem;}
+.goodsItem .layer{width:4.35rem;height:3.25rem;background:url(http://img.easeeyes.com/promotion/20160411/icon.png) no-repeat center top;background-size:4.35rem auto;text-align:center;padding:.25rem 1rem;box-sizing:border-box;color:#fff;position:absolute;right:1rem;top:0;font-size:.9rem;line-height:1;}
+.link{position:absolute;width:7.9rem;height:7.8rem;left:1.5rem;bottom:1.1rem;}
+.link-02{left:11.7rem;}
+.link-03{left:21.85rem;}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<!--main-->
+<div class="container">
+    <div><img src="http://file.easeeyes.com/wap/images/20160411/banner.jpg" style="display:block;"></div>
+	<div style="position:relative;">
+		<img src="http://file.easeeyes.com/wap/images/20160411/01.jpg" style="display:block;">
+		<a class="link" href=""></a>
+		<a class="link link-02" href=""></a>
+		<a class="link link-03" href=""></a>
+	</div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160411/02.jpg" style="display:block;"></div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160411/03.jpg" style="display:block;"></div>
+	<!--goodsItems-->
+	<div class="goodsItems clearfix">
+		<div class="goodsItem">
+			<a href="">
+				<span class="layer">直降15元</span>
+				<div class="image">
+					<img src="http://img.easeeyes.com/promotion/20151224/test.jpg" />
+				</div>
+				<h3>海伦凯勒专柜正品时尚女士太阳镜H8311-P07</h3>
+				<div class="text">
+					<span class="red">&yen;<b>359</b></span>
+					易视价:459
+				</div>
+			</a>	
+		</div>
+		<div class="goodsItem">
+			<a href="">
+				<span class="layer">直降15元</span>
+				<div class="image">
+					<img src="http://img.easeeyes.com/promotion/20151224/test.jpg" />
+				</div>
+				<h3>海伦凯勒专柜正品时尚女士太阳镜H8311-P07</h3>
+				<div class="text">
+					<span class="red">&yen;<b>359</b></span>
+					易视价:459
+				</div>
+			</a>	
+		</div>
+	</div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160411/04.jpg" style="display:block;"></div>
+	<!--goodsItems-->
+	<div><img src="http://file.easeeyes.com/wap/images/20160411/05.jpg" style="display:block;"></div>
+	<!--goodsItems-->
+	<div><img src="http://file.easeeyes.com/wap/images/20160411/06.jpg" style="display:block;"></div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160411/07.jpg" style="display:block;"></div>
+	<!--goodsItems-->
+	<div><img src="http://file.easeeyes.com/wap/images/20160411/08.jpg" style="display:block;"></div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160411/09.jpg" style="display:block;"></div>
+	<!--goodsItems-->
+	<div><img src="http://file.easeeyes.com/wap/images/20160411/10.jpg" style="display:block;"></div>
+	<!--goodsItems-->
+	<div><img src="http://file.easeeyes.com/wap/images/20160411/11.jpg" style="display:block;"></div>
+	<!--goodsItems-->
+	<div><img src="http://file.easeeyes.com/wap/images/20160411/12.jpg" style="display:block;"></div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160411/13.jpg" style="display:block;"></div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160411/14.jpg" style="display:block;"></div>
+	<!--goodsItems-->
+	
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

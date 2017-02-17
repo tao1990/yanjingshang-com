@@ -1,0 +1,368 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta content="telephone=no" name="format-detection"/>
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+
+</head>
+<body>
+<!-- head -->
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<script type="text/javascript" src="{$image_url}wap/js/flow.js"></script>
+<script type="text/javascript" src="{$image_url}wap/js/shopping_flow.js"></script>
+<script type="text/javascript" src="{$image_url}wap/js/transport2.js"></script>
+<script type="text/javascript">
+    var process_request = "{$lang.process_request}";
+</script>
+<!-----------------------------------------------------------------------购物车的第二步【订单最终确认】---------------------------------------------------------------------------------------->
+<!--{if $step eq "checkout"}-->
+
+<link rel="stylesheet" type="text/css" href="css/order.css"/>
+<link rel="stylesheet" type="text/css" href="css/address.css"/>
+<input type="hidden" name="address_id" id="address_id" value="{$default_address.address_id}"/>
+<input type="hidden" name="pro_choose" id="pro_choose" value="{$default_address.province}"/>
+<input type="hidden" name="city_choose" id="city_choose" value="{$default_address.city}"/>
+<input type="hidden" name="dist_choose" id="dist_choose" value="{$default_address.district}"/>
+<input type="hidden" name="flow_type"  id="flow_type" value="{$shipping_flow_type}" />
+<input type="hidden" id="get_pay_id" value="{$order.pay_id|default:0}" />
+<!--修改地址列表start-->
+<div class="goods_address" id="address_list">
+  <div class="app_kuang">
+    <div class="app_address">
+       <a onclick="add_new_show()">+<span>添加新地址</span></a>
+    </div><!--app_address end-->
+  </div><!--app_kuang end-->
+  <!--{foreach from=$consignee_list item=consignee key=sn}-->   
+  <div class="address" id="address_{$consignee.address_id}" onclick="choose_address('{$consignee.address_id}','{$consignee.consignee}','{$consignee.province}','{$consignee.city}','{$consignee.district}','{$consignee.address}');">
+        <div class="order_add_left">
+          <div class="order_name">{$consignee.consignee|escape}<span>{$consignee.tel|escape}</span></div>
+          <div>{if $default_address_id eq $consignee.address_id}<span class="order_cur">[默认]</span>{/if}{$consignee.provincena} {$consignee.cityna} {$consignee.districtna} {$consignee.address|escape}</div>
+        </div>
+  </div>
+  <!--{/foreach}--> 
+</div>
+<!--修改地址列表end-->
+
+<!--新增地址start-->
+
+<div class="append_address">
+   <div class="minute">
+      <div class="minute_one">收货人</div>
+      <div class="minute_con"><input type="text" name="consignee" id="consignee" value="{$consignee_info.consignee}"/></div>
+   </div>
+   <div class="minute">
+      <div class="minute_one">电话或手机</div>
+      <div class="minute_con"><input type="text" name="tel" id="tel" value="{$consignee_info.tel}" class="addres_input"/></div>
+   </div>
+   <div class="minute">
+      <div class="minute_one">邮箱</div>
+      <div class="minute_con"><input type="text" name="email" id="email" value="{$consignee_info.email}" class="addres_input"/></div>
+   </div>
+   <div class="minute_add">
+      <div class="minute_add_one">省</div>
+      <div class="minute_add_con">
+            <select name="province" id="selProvinces" onchange="getDistrict(2, this.value);">
+            <option value="0">请选择</option>
+            <!--{foreach from=$provinces item=province}-->
+            <option value="{$province.region_id}">{$province.region_name}</option>
+            <!--{/foreach}-->
+            </select>
+      </div>
+   </div>
+   
+   <div class="minute_add">
+      <div class="minute_add_one">市</div>
+      <div class="minute_add_con">
+            <select name="city" id="selCities" onchange="getDistrict(3, this.value);">
+            <option value="0">请选择</option>
+            <!--{foreach from=$city item=city}-->
+            <option value="{$city.region_id}" >{$city.region_name}</option>
+            <!--{/foreach}-->
+            </select>
+      </div>
+   </div>
+   <div class="minute_add">
+      <div class="minute_add_one">区</div>
+      <div class="minute_add_con">
+            <select name="district" id="selDistricts" >
+            <option value="0">请选择{$name_of_region[3]}</option>
+            <!--{foreach from=$district item=district}-->
+            <option value="{$district.region_id}">{$district.region_name}</option>
+            <!--{/foreach}-->
+            </select> 
+      </div>
+   </div>
+   <div class="minute_jiedao">
+         <div class="minute_one">街道地址</div>
+      <div class="minute_con"><input  name="address" id="address" value="{$consignee_info.address}" style="height: 40px;" /></div> 
+   </div>
+   
+   <input type="hidden" name="act" value="act_edit_address_def" />
+   <input type="hidden" name="method" value="{$method}" />
+   
+   <div class="address_button">
+       <a href="#"><input  type="submit" id="form_button" onclick="checkSubmitJ();" value="保存地址"></a>
+   </div>
+</div>
+
+<!--新增地址end-->
+
+<form name="cart_submit" id="form_cart" action="flow.php?step=done" method="post">
+
+
+    <!--快递选择start-->
+    <div class="select_kuaidi">
+    <!--{foreach from=$shipping_list item=shipping}循环显示配送方式-->
+        <div style="display: none;">
+            <input type="radio" name="shipping" id="kd{$shipping.shipping_id}" value="{$shipping.shipping_id}" supportCod="{$shipping.support_cod}" onclick="getRadio(this)"/><label for="kd{$shipping.shipping_id}">{$shipping.shipping_name} {$shipping.shipping_desc}</label>
+        </div>
+    <!--{/foreach}-->
+    </div>
+    <!--快递选择end-->
+    <div class="order_info">
+       <div class="order_info_one">
+          收货人信息
+       </div>
+
+       {if !$default_address}
+       <div class="no_order_add replace">
+            <div class="no_order_add_left" id="choose_address">
+              点击添加收货地址
+           </div>
+           <div class="order_add_right">
+              <img src="{$image_url}wap/images/jt.png"/>
+           </div>
+           <div class="clear"></div>
+       </div>
+       {else}
+       <div class="order_add replace">
+           <div class="order_add_left" id="choose_address">
+              <div class="order_name">{$default_address.consignee}<span>{$default_address.tel}</span></div>
+              <div>{$default_province.region_name} {$default_city.region_name} {$default_district.region_name} {$default_address.address}</div>
+           </div>
+           <div class="order_add_right padding_top">
+              <img src="{$image_url}wap/images/jt.png"/>
+           </div>
+           <div class="clear"></div>
+       </div>
+       {/if}
+       <div class="order_info_two">
+           支付方式
+       </div>
+       <div class="order_zhifu">
+          <div class="order_zhifu_left">请选择支付方式</div>
+          <div class="order_zhifu_right">
+              <select name="payment" id="payment">
+                 <option value="">请选择</option>
+                 <option value="4" >支付宝</option>
+                 <option value="15" >招商银行网银</option>
+                 <!--<option value="201" >招商银行网银</option>-->
+                 {if !$no_cod_goods}<option value="3">货到付款</option>{/if}
+                 {if $is_wx eq 1}<option value="18" >微信支付</option>{/if}
+                 <option value="1">使用账户余额</option>
+              </select>
+           </div>
+          <div class="clear"></div>
+          <div id="zhhd" style="color: red"></div>
+       </div>
+
+       <div class="order_youhui">
+          <div class="order_info_four" id="use_youhui">
+           点此使用优惠券
+          </div>
+          <div class="order_youhui_quan">
+          {if $user_id && $bonus_list}
+             选择已有优惠券<select name="bonus" id="ECS_BONUS" onchange="changeBonus(this.value)">
+                                <option value="0" {if $order.bonus_id eq 0}selected="selected"{/if}>请选择</option>
+                                <!--{foreach from=$bonus_list item=bonus}-->
+                                <option value="{$bonus.bonus_id}" {if $order.bonus_id eq $bonus.bonus_id}selected{/if}>{$bonus.type_name}[{$bonus.bonus_money_formated}]</option>
+                                <!--{/foreach}-->
+                            </select>
+               <br />
+             <span>或者</span>
+          {/if}
+          {if !$no_use_bonus}
+             输入优惠券编号<input type="text" name="bonus_sn" id="bonus_sn" value="{$order.bonus_sn}" />
+             <input type="button" value="点击使用" class="click_use" onclick="validateBonus(document.getElementById('bonus_sn').value)"/>
+          {else}
+            您的订单中已包含优惠商品，该商品不能使用优惠券。
+          {/if}
+             <div class="clear"></div>
+          </div>
+       </div>
+       <div class="order_info_four">
+           配送方式
+       </div>
+       <div class="order_zhifu" id="kuaidi_select">
+          <div class="order_zhifu_left">请选择配送方式</div>
+          <div class="order_zhifu_right">
+             <img src="{$image_url}wap/images/jt.png">
+          </div>
+          <div class="clear"></div>
+       </div>
+       <div class="order_info_three order_info_fapiao">
+           发票信息
+       </div>
+       <div class="fapiao_one">
+          <div>是否需要发票<input type="checkbox" id="isfapiao" /></div>
+       </div>
+       <div class="fapiao-main" id="fapiao-main">
+          <div class="fapiao_fangshi">
+            <div class="order_zhifu_left">个人</div>
+            <div class="order_zhifu_right">
+                <select>
+                   <option>个人</option>
+                </select>
+             </div>
+            <div class="clear"></div>
+         </div>
+         <div class="fapiao_taitou">发票抬头：<input type="text"></div>
+         <div class="fapiao_nei">
+             <div class="order_zhifu_left">发票内容：</div>
+             <div class="order_zhifu_right">
+                <select>
+                   <option>隐形眼镜</option>
+                   <option>眼镜</option>
+                </select>
+             </div>
+            <div class="clear"></div>
+         </div>
+       </div>  
+            
+       <div class="order_info_three">
+           商品清单
+       </div>
+       <div class="goods_num">
+           <!--{foreach from=$goods_list item=goods}-->
+           <div class="goods_num_one">
+               <div class="goods_name">
+                   <!--{if $goods.goods_id gt 0 && $goods.extension_code eq 'tuan_buy'}团购-->
+                       【团购】
+                   <!--{elseif $goods.goods_id gt 0 && $goods.extension_code eq 'miaosha_buy'}秒杀-->
+                       【秒杀】
+                   <!--{ else }-->
+                       <!--{if $goods.parent_id > 0}-->
+                           【{$lang.accessories}】
+                       <!--{elseif $goods.is_gift && $goods.goods_price eq '0.00'}-->
+                           【赠品】
+                       <!--{elseif $goods.is_gift && $goods.goods_price neq '0.00'}-->
+                           {if $goods.extension_code eq 'group_buy'}【组合购买】{else}【特惠商品】{/if}
+                       <!--{/if}-->
+                   <!--{/if}-->
+                   <a href="goods.php?id={$goods.goods_id}">{$goods.goods_name}</a>
+               </div>
+               <div><span>数量：{$goods.goods_number}</span><span>易视价:<em>{$goods.formated_subtotal}</em></span></div>
+               <div>
+                   <!--{if $goods.zcount>0}--><span>左眼度数：{$goods.zselect}</span><!--{/if}-->
+                   <!--{if $goods.ycount>0}--><span>右眼度数：{$goods.yselect}</span><!--{/if}-->
+               </div>
+           </div>
+           <!--{/foreach}-->
+            <!--<div class="goods_num_one">
+               <div class="goods_name">【秒杀】安瞳美感系列混血灰日抛型彩色隐形眼镜5片装</div>
+               <div><span>数量：2</span><span>易视价:<em>&yen;159.60</em></span></div>
+               <div><span>左眼度数：-5.25</span><span>右眼度数:-5.25</span></div>
+               <div class="goods_fenge"></div>
+            </div>
+            <div class="goods_num_one">
+               <div class="goods_name">卫康3C金装高端隐形眼镜护理液125ML</div>
+               <div><span>数量:1</span><span>易视价:<em>&yen;16.15</em></span></div>
+               <div class="goods_fenge"></div>
+            </div>
+            <div class="goods_num_one">
+               <div class="goods_name">Helen Keller海伦凯勒专柜正品时尚女士太阳镜</div>
+               <div><span>数量:1</span><span>易视价:<em>&yen;311.10</em></span></div>
+            </div>-->
+        </div>
+        <div class="order_favour">
+            <div class="order_favour_num">订单留言</div>
+            <div>
+               <input type="text" name="postscript" />
+            </div>
+        </div>
+        <!--<div class="order_price">
+           <div class="order_price_left">
+              <div><em>商品总价:</em><span>&yen;487.35</span></div>
+              <div><em>邮资运费:</em><span>&yen;5</span></div>
+              <div><em>应付金额：</em><span class="order_price_spec">&yen;492.35</span></div>
+
+           </div>
+           <div class="order_price_right">
+              <div>应付金额：</div>
+              <div class="order_price_spec">&yen;482.35</div>
+           </div>
+           <div class="clear"></div>
+        </div>-->
+        <!-- #BeginLibraryItem "/Library/order_total.lbi" --><!-- #EndLibraryItem -->
+
+
+        <div style="clear:both;margin:1rem;text-align:center;"><input type="button" id="cart_submit" class="button_two" value="提交订单" onclick="orderSub()"></div>
+
+    </div>
+</form>
+<script src="{$image_url}wap/js/flow_wap.js"></script>
+
+<!--{/if}-->
+
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+<script>
+var fapiaoMain=document.getElementById("fapiao-main"),
+    fapiaoBtn=document.getElementById("isfapiao");
+fapiaoBtn.addEventListener("click",function(){
+    if(this.checked){
+      fapiaoMain.style.display="block";
+    }else{
+      fapiaoMain.style.display="none";
+    }
+},false);
+    function orderSub(){
+        var kuaidi_select = $("#kuaidi_select div:first").text();
+        if($('#choose_address').text().trim() == '点击添加收货地址'){
+            alert('请保存您的收货人信息!');
+            $("#choose_address").focus();
+            return false;
+        }else if( $('#payment').val() == ''){
+            alert('请保存您的支付方式!');
+            $("#payment").focus();
+            return false;
+        }else if(kuaidi_select == "请重新选择配送方式" || kuaidi_select == "请选择配送方式"){
+            alert('请保存您的配送方式!');
+            $("#payment").focus();
+            return false;
+        }else{
+            $("#cart_submit").attr("disabled",true);
+            $.ajax({
+                type: 'GET',
+                url: 'flow.php?step=check_kc',
+                success:function(d){
+                    if(d == 1){
+                        document.getElementById("form_cart").submit();
+                        return true;
+                    }else if(d == 2){
+						$("#cart_submit").attr("disabled",false);
+                        alert("购物车中没有商品！");
+                        return false;
+                    }else if(d == 3){
+						$("#cart_submit").attr("disabled",false);
+                        alert("请登陆后再进行操作！");
+                        return false;
+                    }else{
+						$("#cart_submit").attr("disabled",false);
+                        if(confirm(d)){
+                            document.getElementById("form_cart").submit();
+                        }
+                    }
+                }
+            });
+        }
+    }
+</script>
+</body>
+</html>

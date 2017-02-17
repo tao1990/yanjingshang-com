@@ -1,0 +1,23 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--{if empty($order_query)}-->
+<script>var invalid_order_sn = "{$lang.invalid_order_sn}"</script>
+<form name="ecsOrderQuery">
+<!--订单查询-->
+<div style="float:left; width:44px; height:54px; margin:2px 6px 1px 3px;"><img src="images/yi_index/bottom/ppp2.gif" border="0" width="44" height="54" /></div>
+<div class="order_con">
+    <div id="ECS_ORDER_QUERY" class="order_title">查询订单信息</div>
+    <div class="order_pan">
+        <input type="text" id="order_sn"  value="请输入订单号"  style="border:1px solid #ffffff; height:15px; line-height:18px; width:92px; float:left; color:#999999;"
+    onFocus="if(this.value=='请输入订单号')this.value='';" onBlur="if(this.value=='')this.value='请输入订单号';" />
+        <div style="float:right; width:37px; margin-top:2px; margin-right:1px; cursor:pointer;"><img src="images/yi_index/bottom/bt_search.gif" width="37" height="16" onClick="orderQuery()"/></div>
+    </div>
+</div> 
+</form>   
+<!--{else}-->
+订单查询:{$order_query.order_status}
+  <!--{if $order_query.invoice_no }-->
+<b>{$lang.consignment}：dd</b>{$order_query.invoice_no}
+  <!--{/if}-->
+  {if $order_query.shipping_date}：{$lang.shipping_date}ww {$order_query.shipping_date}
+  <!--{/if}-->
+<!--{/if}-->

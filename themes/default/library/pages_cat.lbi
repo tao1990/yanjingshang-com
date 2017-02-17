@@ -1,0 +1,28 @@
+<!--------------------------------------【翻页条】【20120914】start------------------------------------->
+<div id="pagebar">
+<form name="selectPageForm" action="{$smarty.server.PHP_SELF}" method="get">
+<!--{if $pager.styleid eq 0 }-->
+    <div id="pager" style="display:none;">
+        <span style="display:none;"> 
+        <a href="{$pager.page_first}" class="retext">{$lang.page_first}</a> <a href="{$pager.page_prev}" class="retext">{$lang.page_prev}</a> 
+        <a href="{$pager.page_next}" class="retext">{$lang.page_next}</a> <a href="{$pager.page_last}" class="retext">{$lang.page_last}</a>、
+        </span>
+        <!--{foreach from=$pager.search key=key item=item}--><input type="hidden" name="{$key}" value="{$item}" /><!--{/foreach}-->
+    </div>
+<!--{else}-->
+<!--{foreach from=$pager.search key=key item=item}--><input type="hidden" name="{$key}" value="{$item}" /><!--{/foreach}-->
+    <!--翻页start-->
+    <ul id="pager">    
+    	<li class="page_h">&lt;{if $pager.page_prev}<a href="{$pager.page_prev}" title="上一页">上一页</a>{else}上一页{/if}</li>
+        <!--{foreach from=$pager.page_number key=key item=item}-->
+        <!--{if $pager.page eq $key}--><li class="page_cell red">{$key}</li><!--{else}--><li class="page_cell"><a href="{$item}">{$key}</a></li><!--{/if}-->
+        <!--{/foreach}-->
+        <li class="page_h">{if $pager.page_next}<a href="{$pager.page_next}" title="下一页">下一页</a>{else}下一页{/if}&gt;</li>
+        <li><span class="page_span">共{$pager.page_count}页</span>到第<input type="text" name="page" class="page_input"/>页</li>
+        <li><input type="submit" value="" class="page_submit"></li>   
+    </ul>
+    <!--翻页END-->
+<!--{/if}-->
+</form>
+</div>
+<!--------------------------------------【翻页条】【20120914】END------------------------------------->

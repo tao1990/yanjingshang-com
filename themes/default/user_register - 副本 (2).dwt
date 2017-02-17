@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="Generator" content="ECSHOP v2.7.3" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$page_title}</title>
+<meta name="Keywords"    content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link href="http://file.easeeyes.com/b2b/css/base.css" rel="stylesheet" type="text/css" />
+<link href="http://file.easeeyes.com/b2b/css/dlzc.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://file.easeeyes.com/b2b/js/user.js"></script>
+<script type="text/javascript" src="http://file.easeeyes.com/b2b/js/transport.js"></script>
+<script type="text/javascript" src="http://file.easeeyes.com/b2b/js/utils.js"></script>
+
+    
+    <script type="text/javascript" src="/js/transport.js"></script>
+    {insert_scripts files='common.js,user.js'}
+    <script type="text/javascript" src="/js/inner.js"></script>
+    
+    
+<body>
+
+  	<script type="text/javascript" src="http://file.easeeyes.com/b2b/js/region.js"></script>	<script type="text/javascript">
+	<!--
+		 region.isAdmin = false;
+	//-->
+	</script>
+   <div class="yj_ding clearfix">
+                
+        </div>
+    <form action="user.php" method="post" name="formUser" enctype="multipart/form-data" onsubmit="return register();">
+      
+   <p class="zhuce_logo"><a href="index.php"><img src="http://file.easeeyes.com/b2b/images/logo.png" width="200" height="63" alt="" /></a></p>
+    <div class="zhuce_box">
+    	<p class="zhuce_t1">零售商注册</p>
+        <div class="zhuce_di">
+        	<p class="zhu_t2">账户信息</p>
+      		 <ul class="zhuce_list">
+            	<li>
+                	<span class="zhu_name"><b class="zhu_xing">*</b>用户名：</span>
+                    <p class="zhece_user01">
+                    <input name="username" type="text" size="25" class="zhu_input01" onblur="is_registered(this.value);" class="inputBg"/>
+					
+                    <i class="i_name"></i></p><span id="username_notice" style="color:#FF0000;width:150px;text-align: center; font-size: 14px;line-height: 34px;"></span>
+                </li>
+                <li>
+                	<span class="zhu_name"><b class="zhu_xing">*</b>请设置密码：</span>
+                    <p class="zhece_user01">
+                    <input name="password" type="password" id="password1" onblur="check_password(this.value);" onkeyup="checkIntensity(this.value)" class="zhu_input01" />
+                    <i class="i_name01"></i></p><span style="color:#FF0000;width:150px;text-align: center; font-size: 14px;line-height: 34px;" id="password_notice"></span>
+                </li>
+                <li>
+                	<span class="zhu_name"><b class="zhu_xing">*</b>请确认密码：</span>
+                    <p class="zhece_user01">
+                    <input name="confirm_password" type="password" id="conform_password" onblur="check_conform_password(this.value);"  class="zhu_input01" />
+                    <i class="i_name01"></i></p><span style="color:#FF0000;width:150px;text-align: center; font-size: 14px;line-height: 34px;" id="conform_password_notice"></span>
+                </li>
+                
+                <li>
+                	<span class="zhu_name"><b class="zhu_xing">*</b>验证手机：</span>
+                    <p class="zhece_user">
+                    <input name="mobile_phone" type="text" size="25" class="zhu_input02" id="phoneid" onblur="check_phone(this.value);"/>
+                    </p><span id="user_phone" style="margin-left:-27px;color:#FF0000;width:150px;text-align: center; font-size: 14px;line-height: 34px;"></span>
+                </li>
+    
+                <li>
+                	<span class="zhu_name">常用邮箱：</span>
+                    <p class="zhece_user"><!--<input type="text" value="" class="zhu_input02" />-->
+                    <input name="email" type="text" size="25" id="email" class="zhu_input02"/>
+                    </p><span id="email_notice" style="color:#FF0000;width:150px;text-align: center; font-size: 14px;line-height: 34px;"></span>
+                </li>
+   
+         
+                
+                <!-- {if $enabled_captcha}判断是否启用验证码 -->
+                <li>
+                	<span class="zhu_name"><b class="zhu_xing">*</b>{$lang.comment_captcha}:</span>
+                    <p class="zhece_user">
+                    <input class="zhu_input02" type="text" size="8" name="captcha" />
+                                    <img src="captcha.php?{$rand}" alt="captcha" style="vertical-align: middle;cursor: pointer; margin:5px 0 0 5px;" onClick="this.src='captcha.php?'+Math.random()" /></p>
+                </li>
+                <!--{/if}-->
+                
+              <li>
+                   <input type="checkbox" name="agreement" value="1" checked="checked" style="height:13px; width:13px;" />
+               	   <span class="zhu_read">我已阅读并同意<a href="#">《用户协议》</a></span>
+              </li>
+              <li>
+                <span class="zhu_read">已有账号？<a href="user.html">直接登录</a></span>
+              </li>
+              <li><!--<input type="button" value="" class="yj_zhuce" />-->
+              
+              <input name="act" type="hidden" value="act_register" >
+              <input type="hidden" name="back_act" value="" />
+              <input name="Submit" type="submit" value="" class="yj_zhuce">
+              
+              </li>
+            </ul>
+        </div>
+    	
+    </div>
+    
+    </form>
+
+
+</body>
+
+</html>
+
+<script type="text/javascript">
+	var process_request = "{$lang.process_request}";
+	<!---->{foreach from=$lang.passport_js item=item key=key}
+	<!---->var {$key} = "{$item}";
+	<!---->{/foreach}
+	var username_exist = "{$lang.username_exist}";
+</script>
+</html>

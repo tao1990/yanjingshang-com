@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>shi-bi品牌特惠</title><meta name="Keywords"  content="易视网，易视眼镜网，美瞳，sho-bi，美肌堂" /><meta name="Description" content="第二件半价，全场满150元送时尚美甲" />
+
+<link type="text/css" rel="stylesheet" href="http://file.easeeyes.com/css/base.css"/>
+<!--<link rel="stylesheet" type="text/css" href="http://file.easeeyes.com/index2015/css/base.css" />-->
+</head>
+
+<style>
+@charset "utf-8";
+/* CSS Document */
+/**修正相关搜索位置**/
+.ac_results{top:85px !important;}
+
+body,div,span { margin:0; padding:0; }
+img { border:0; width: 100%}
+.clear {clear:both; width:0; height:0; }
+.banner{
+	height:624px;
+	background:url(http://img.easeeyes.com/promotion/4_new/banner.jpg) no-repeat center top;
+}
+.container{
+	width:100%;
+	margin:auto;
+}
+.active-main{
+	background:#f8e6be;
+	/*margin-top:-10px;*/
+}
+.active-box{
+	background:#fff3f7 url(http://img.easeeyes.com/promotion/4_new/bg.jpg) no-repeat center top;
+}
+.active-logo{
+	background:#fff;
+}
+.active-title{
+	padding-top:26px;
+	padding-bottom:78px;
+}
+.active-weekly{
+	padding:30px 0;
+}
+.active-nav{
+	position:fixed;
+	right:10px;
+	top:140px;
+}
+.active-nav-left{
+	right:auto;
+	left:10px;
+}
+
+/*每周活动css*/
+#weekly_active { margin:0; padding:0; width:100%; height:224px; overflow:hidden; }
+#weekly_active li { float:left; list-style:none; width:120px; height:224px; background-color:white; cursor:pointer; }
+.current_week { width:50% !important; background-position:-120px 0px !important; }
+#week1 { background: url(http://img.easeeyes.com/promotion/weekly/1.jpg) no-repeat; }
+#week2 { background: url(http://img.easeeyes.com/promotion/weekly/2.jpg) no-repeat; }
+#week3 { background: url(http://img.easeeyes.com/promotion/weekly/3.jpg) no-repeat; }
+#week4 { background: url(http://img.easeeyes.com/promotion/weekly/4.jpg) no-repeat; }
+#week5 { background: url(http://img.easeeyes.com/promotion/weekly/5.jpg) no-repeat; }
+</style>
+
+
+
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<div class="active-main">
+	<!--<div class="active-nav">
+		<img src="http://img.easeeyes.com/promotion/4_new/nav.png" border="0" usemap="#Map9" />
+        <map name="Map9" id="Map9"><area shape="rect" coords="21,136,141,168" href="http://www.easeeyes.com/active150801.html" /><area shape="rect" coords="23,170,137,197" href="qiyeqq.html" />
+        <area shape="rect" coords="21,200,140,229" href="#f1" />
+        <area shape="rect" coords="21,232,141,263" href="#f2" />
+        <area shape="rect" coords="23,265,139,292" href="#f3" />
+        <area shape="rect" coords="18,295,141,332" href="#f0" />
+        </map>
+    </div>-->
+	<div class="active-logo" id="f0">
+		<div class="container">
+			<img src="http://img.easeeyes.com/promotion/4_new/01.jpg" />
+		</div>
+	</div>
+	<!--banner-->
+	<div class="banner">
+	</div>
+	<!--main-->
+	<div class="active-box">
+		<div class="active-title container">
+			<img src="http://img.easeeyes.com/promotion/4_new/02.jpg" />
+		</div>
+		<div class="container">
+			<div id="f1">
+				<img src="http://img.easeeyes.com/promotion/4_new/03.jpg" />
+			</div>
+			<div>
+				<img src="http://img.easeeyes.com/promotion/4_new/04.jpg" border="0" usemap="#Map" />
+<map name="Map" id="Map"><area shape="rect" coords="18,41,964,394" href="http://www.easeeyes.com/goods4528.html" />
+</map>
+		  </div>
+			<div style="padding-top:52px;padding-bottom:103px;">
+				<img src="http://img.easeeyes.com/promotion/4_new/05.jpg" border="0" usemap="#Map2" />
+<map name="Map2" id="Map2">
+  <area shape="rect" coords="24,11,966,441" href="http://www.easeeyes.com/goods4553.html" />
+</map>
+		  </div>
+			<div id="f2">
+				<img src="http://img.easeeyes.com/promotion/4_new/06.jpg" />
+			</div>
+			<div>
+				<img src="http://img.easeeyes.com/promotion/4_new/07.jpg" border="0" usemap="#Map3" />
+<map name="Map3" id="Map3"><area shape="rect" coords="15,19,968,359" href="http://www.easeeyes.com/goods4530.html" />
+</map>
+		  </div>
+			<div style="padding-bottom:236px;">
+				<img src="http://img.easeeyes.com/promotion/4_new/08.jpg" border="0" usemap="#Map4" />
+<map name="Map4" id="Map4"><area shape="rect" coords="28,39,980,404" href="http://www.easeeyes.com/goods4532.html" />
+</map>
+		  </div>
+			<div id="f3">
+				<img src="http://img.easeeyes.com/promotion/4_new/09.jpg" />
+			</div>
+			<div>
+				<img src="http://img.easeeyes.com/promotion/4_new/10.jpg" border="0" usemap="#Map5" />
+<map name="Map5" id="Map5"><area shape="rect" coords="17,24,952,380" href="http://www.easeeyes.com/goods4524.html" />
+</map>
+		  </div>
+			<div style="padding:32px 0 37px;">
+				<img src="http://img.easeeyes.com/promotion/4_new/11.jpg" border="0" usemap="#Map6" />
+<map name="Map6" id="Map6"><area shape="rect" coords="40,22,965,370" href="http://www.easeeyes.com/goods4526.html" />
+</map>
+		  </div>
+			<div>
+				<img src="http://img.easeeyes.com/promotion/4_new/12.jpg" border="0" usemap="#Map7" />
+<map name="Map7" id="Map7"><area shape="rect" coords="59,33,928,371" href="http://www.easeeyes.com/goods4525.html" />
+</map>
+		  </div>
+			<!--每周活动-->
+			<div class="active-weekly">
+        		<!-- #BeginLibraryItem "/library/weekly_new.lbi" --><!-- #EndLibraryItem -->
+			</div>
+			<!--follow-->
+			<div style="padding-bottom:30px;">
+				<img src="http://img.easeeyes.com/promotion/4_new/13.jpg" border="0" usemap="#Map8" />
+<map name="Map8" id="Map8"><area shape="rect" coords="434,75,531,183" href="http://weibo.com/easeeyes?sudaref=www.easeeyes.com." />
+<area shape="rect" coords="569,73,672,183" href="http://e.t.qq.com/yishiyanjingwang" />
+<area shape="rect" coords="701,71,812,182" href="http://user.qzone.qq.com/1282786616/" />
+<area shape="rect" coords="848,68,954,181" href="http://www.meilishuo.com/person/u/4351999?type=book" />
+</map>
+		  </div>
+		</div>
+	</div>
+</div>
+
+<!--公共文件页脚-->
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+
+</body>
+<!--<script type="text/javascript" src="http://file.easeeyes.com/js/tip-totop.js"></script>-->
+<script type="text/javascript" src="http://file.easeeyes.com/js/yi_common.js"></script>
+<script type="text/javascript" src="http://file.easeeyes.com/js/lazyload.js"></script>
+<script type="text/javascript" src="http://file.easeeyes.com/index2015/js/common.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	//-----每周活动 START----
+	$('#weekly_active li').click(function() {
+		window.open($(this).find('a').attr('href'));
+	});
+	$('#weekly_active li').mouseover(function() {
+		$(this).siblings().removeClass('current_week').animate({width:"120px"}, "slow");
+		$(this).siblings().animate({backgroundPosition:"0px"}, "fast");
+		$(this).animate({width:"510px"}, "slow");
+		$(this).animate({backgroundPosition:"-120px"}, "normal");
+	});
+	//---- 每周活动 END----
+    
+     $('#agree_view').bind('click',function(){
+            $("#agree_div").fadeIn();
+       
+    })
+	//--- 导航隐显控制 ---
+	$('.active-nav').hide();
+	$(window).scroll(function(){
+		var scrollTop=document.documentElement.scrollTop=="0"?document.body.scrollTop:document.documentElement.scrollTop;
+		if(parseInt(scrollTop)>=300){
+			$('.active-nav').fadeIn(200);
+		}else{
+			$('.active-nav').fadeOut(200);
+		}
+	});
+});
+</script>
+</html>

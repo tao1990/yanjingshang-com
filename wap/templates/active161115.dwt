@@ -1,0 +1,344 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>易视双十一感恩返场，大牌火力“团”拼</title>
+<meta name="Keywords"  content="易视网,易视眼镜网,美瞳,护理液,润眼液,博士伦,海昌,海俪恩,卫康,库博,视康,强生,sho-bi,GEO,NEO,BESCON" />
+<meta name="Description" content="易视网，易视双十一感恩返场，大牌拼团即送正装豪礼，双十一特价持续爽翻，玩微信送好礼，100%有奖，24小时闪电发货，30天退换货保障" />
+<style>
+.navBar{padding:.5rem 0 .5rem .5rem;background:#f9a0b2;box-sizing:border-box;text-align:center;}
+.navBar.fixed{position:fixed;z-index:9;width:100%;left:0;top:0;}
+.navBar a{display:inline-block;box-sizing:border-box;width:7rem;height:2.5rem;line-height:2.5rem;text-align:center;color:#fff;background:#f03882;border:1px solid #fff;border-radius:1rem;font-size:1rem;margin:0 .15rem .4rem 0;overflow:hidden;text-decoration:none;}
+.navBar a.current{background:#9a592f;color:#fff;}
+.mainTab{padding:.5rem 0 0 .5rem;background:#f9a0b2;}
+.activeMod,.goodsItem{float:left;width:15.1rem;height:23.25rem;background:#fff;margin:0 .6rem .6rem 0;position:relative;}
+.goodsItem-layer{position:absolute;background:#f40058;height:2rem;line-height:2rem;padding:0 .5rem;color:#fff;font-size:1rem;left:0;top:0;}
+.goodsItem-thumb{height:14.8rem;line-height:14.8rem;text-align:center;}
+.goodsItem-thumb img{max-width:100%;max-height:100%;vertical-align:middle;}
+.goodsItem-title{height:2.7rem;line-height:1.35rem;color:#333;padding:0 .5rem;overflow:hidden;}
+.goodsItem-price{text-align:center;color:#f84184;}
+.goodsItem-price b{font-size:1.4rem;font-weight:100;}
+.goodsItem-price del{color:#999;}
+.goodsItem-btn{width:12.5rem;height:2rem;line-height:2rem;margin:0 auto;background:#f70059;color:#fff;text-align:center;}
+/**links**/
+.links a{float:left;width:50%;height:10.4rem;}
+.links2 a{float:left;width:33.33%;height:100%;}
+.links3{position:relative;}
+.links3 span{position:absolute;width:9rem;height:3rem;top:2.75rem;}
+</style>
+</head>
+<!--tpl
+<div><img src="http://file.easeeyes.com/wap/images/20160901/banner.jpg" alt="" style="display:block;"></div>
+<div><a href=""><img src="http://file.easeeyes.com/wap/images/20160901/banner.jpg" alt="" style="display:block;"></a></div>
+-->
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<!--main-->
+<div class="container">
+	<div><img src="http://file.easeeyes.com/wap/images/20161115/banner.jpg" alt="" style="display:block;"></div>
+    <div class="links3" style="height:6.7rem;background:url(http://file.easeeyes.com/wap/images/20161115/00.jpg) no-repeat center top;background-size:100% auto;">
+        <span style="left:1rem;" onclick="get_bonus(1);"></span>
+        <span style="left:11.25rem;" onclick="get_bonus(2);"></span>
+        <span style="left:21.5rem;" onclick="get_bonus(3);"></span>
+    </div>
+    <div><img src="http://file.easeeyes.com/wap/images/20161115/01.jpg" alt="" style="display:block;"></div>
+	<div class="links" style="height:21.65rem;background:url(http://file.easeeyes.com/wap/images/20161115/02.jpg) no-repeat center top;background-size:100% auto;">
+        <a href="goods103.html"></a>
+        <a href="goods767.html"></a>
+        <a href="goods4070.html"></a>
+        <a href="goods5345.html"></a>   
+    </div>
+    <div><img src="http://file.easeeyes.com/wap/images/20161115/03.jpg" alt="" style="display:block;"></div>
+    <div><a href="http://m.easeeyes.com/category.php?search=1&keyword=%E5%8D%9A%E5%A3%AB%E4%BC%A6%E8%95%BE%E4%B8%9D%E7%82%AB%E7%9C%B8%E5%BD%A9%E8%89%B2%E9%9A%90%E5%BD%A2%E7%9C%BC%E9%95%9C%E6%97%A5%E6%8A%9B10%E7%89%87%E8%A3%85"><img src="http://file.easeeyes.com/wap/images/20161115/04.jpg" alt="" style="display:block;"></a></div>
+    <div class="links2" style="height:16.35rem;background:url(http://file.easeeyes.com/wap/images/20161115/05.jpg) no-repeat center top;background-size:100% auto;">
+        <a href="goods5399.html"></a>
+        <a href="goods1189.html"></a>
+        <a href="goods5242.html"></a>
+    </div>
+    <div class="links2" style="height:16.65rem;background:url(http://file.easeeyes.com/wap/images/20161115/06.jpg) no-repeat center top;background-size:100% auto;">
+        <a href="goods227.html"></a>
+        <a href="goods1180.html"></a>
+        <a href="goods812.html"></a>
+    </div>
+    <div><img src="http://file.easeeyes.com/wap/images/20161115/07.jpg" alt="" style="display:block;"></div>
+    <div><a href="goods118.html"><img src="http://file.easeeyes.com/wap/images/20161115/08.jpg" alt="" style="display:block;"></a></div>
+    <div class="links2" style="height:16.3rem;background:url(http://file.easeeyes.com/wap/images/20161115/09.jpg) no-repeat center top;background-size:100% auto;">
+        <a href="goods1010.html "></a>
+        <a href="goods1045.html"></a>
+        <a href="goods1153.html"></a>
+    </div>
+    <div class="links2" style="height:16.65rem;background:url(http://file.easeeyes.com/wap/images/20161115/10.jpg) no-repeat center top;background-size:100% auto;">
+        <a href="goods5443.html"></a>
+        <a href="goods5164.html"></a>
+        <a href="goods93.html"></a>
+    </div>
+    <div><img src="http://file.easeeyes.com/wap/images/20161115/11.jpg" alt="" style="display:block;"></div>
+    <div><a href="goods3338.html"><img src="http://file.easeeyes.com/wap/images/20161115/12.jpg" alt="" style="display:block;"></a></div>
+    <div class="links2" style="height:16.35rem;background:url(http://file.easeeyes.com/wap/images/20161115/13.jpg) no-repeat center top;background-size:100% auto;">
+        <a href="goods1065.html"></a>
+        <a href="goods592.html"></a>
+        <a href="goods580.html"></a>
+    </div>
+    <div class="links2" style="height:17.25rem;background:url(http://file.easeeyes.com/wap/images/20161115/14.jpg) no-repeat center top;background-size:100% auto;">
+        <a href="goods5276.html"></a>
+        <a href="goods2191.html"></a>
+        <a href="goods5427.html"></a>
+    </div>
+
+	<!--导航-->
+	<div class="navBar clearfix">
+		<a href="#f_tab_01" class="current">强生分会场</a>
+        <a href="#f_tab_02">海昌分会场</a>
+        <a href="#f_tab_03">库博分会场</a>
+        <a href="#f_tab_04">卫康分会场</a>
+        <a href="#f_tab_05">科莱博分会场</a>
+        <a href="#f_tab_06">实瞳分会场</a>
+        <a href="#f_tab_07">散光片分会场</a>
+
+	</div>
+
+	<div class="mainTab clearfix" id="f_tab_01">
+		<div class="activeMod">
+			<a href="active.php?id=16110111"><img src="http://file.easeeyes.com/wap/images/20161111/11.jpg" alt=""></a>
+		</div>
+        <!--{foreach from=$goodsArr1 key=k item=list}-->
+    		<div class="goodsItem">
+    			<a href="{$list.goods_link}">
+    				{if $list.zk>0}<span class="goodsItem-layer">直降{$list.zk}元</span>{/if}
+    				<div class="goodsItem-thumb"><img src="http://img.easeeyes.com/{$list.goods_img}" alt=""></div>
+    				<div class="goodsItem-title">{$list.goods_name}</div>
+    				<div class="goodsItem-price">
+    					双11抢购价：&yen;<b>{$list.now_price}</b><br>
+    					<del>市场价&yen;{$list.market_price}元</del>
+    				</div>
+    				<div class="goodsItem-btn">立即抢购</div>
+    			</a>
+    		</div>
+		<!--{/foreach}-->
+	</div>
+
+	<div class="mainTab clearfix" id="f_tab_02">
+        <div class="activeMod">
+            <a href="active.php?id=16110105"><img src="http://file.easeeyes.com/wap/images/20161111/13.jpg" alt=""></a>
+        </div>
+        <!--{foreach from=$goodsArr3 key=k item=list}-->
+            <div class="goodsItem">
+                <a href="{$list.goods_link}">
+                    {if $list.zk>0}<span class="goodsItem-layer">直降{$list.zk}元</span>{/if}
+                    <div class="goodsItem-thumb"><img src="http://img.easeeyes.com/{$list.goods_img}" alt=""></div>
+                    <div class="goodsItem-title">{$list.goods_name}</div>
+                    <div class="goodsItem-price">
+                        双11抢购价：&yen;<b>{$list.now_price}</b><br>
+                        <del>市场价&yen;{$list.market_price}元</del>
+                    </div>
+                    <div class="goodsItem-btn">立即抢购</div>
+                </a>
+            </div>
+        <!--{/foreach}-->
+
+
+	</div>
+
+	<div class="mainTab clearfix" id="f_tab_03">
+        <div class="activeMod">
+            <a href="lab-161.html"><img src="http://file.easeeyes.com/wap/images/20161111/16.jpg" alt=""></a>
+        </div>
+        <!--{foreach from=$goodsArr6 key=k item=list}-->
+            <div class="goodsItem">
+                <a href="{$list.goods_link}">
+                    {if $list.zk>0}<span class="goodsItem-layer">直降{$list.zk}元</span>{/if}
+                    <div class="goodsItem-thumb"><img src="http://img.easeeyes.com/{$list.goods_img}" alt=""></div>
+                    <div class="goodsItem-title">{$list.goods_name}</div>
+                    <div class="goodsItem-price">
+                        双11抢购价：&yen;<b>{$list.now_price}</b><br>
+                        <del>市场价&yen;{$list.market_price}元</del>
+                    </div>
+                    <div class="goodsItem-btn">立即抢购</div>
+                </a>
+            </div>
+        <!--{/foreach}-->
+
+	</div>
+
+	<div class="mainTab clearfix" id="f_tab_04">
+        <div class="activeMod">
+            <a href="active.php?id=16110108"><img src="http://file.easeeyes.com/wap/images/20161111/15.jpg" alt=""></a>
+        </div>
+        <!--{foreach from=$goodsArr5 key=k item=list}-->
+            <div class="goodsItem">
+                <a href="{$list.goods_link}">
+                    {if $list.zk>0}<span class="goodsItem-layer">直降{$list.zk}元</span>{/if}
+                    <div class="goodsItem-thumb"><img src="http://img.easeeyes.com/{$list.goods_img}" alt=""></div>
+                    <div class="goodsItem-title">{$list.goods_name}</div>
+                    <div class="goodsItem-price">
+                        双11抢购价：&yen;<b>{$list.now_price}</b><br>
+                        <del>市场价&yen;{$list.market_price}元</del>
+                    </div>
+                    <div class="goodsItem-btn">立即抢购</div>
+                </a>
+            </div>
+        <!--{/foreach}-->
+
+	</div>
+
+	<div class="mainTab clearfix" id="f_tab_05">
+        <div class="activeMod">
+            <a href="active.php?id=16110110"><img src="http://file.easeeyes.com/wap/images/20161111/18.jpg" alt=""></a>
+        </div>
+        <!--{foreach from=$goodsArr8 key=k item=list}-->
+            <div class="goodsItem">
+                <a href="{$list.goods_link}">
+                    {if $list.zk>0}<span class="goodsItem-layer">直降{$list.zk}元</span>{/if}
+                    <div class="goodsItem-thumb"><img src="http://img.easeeyes.com/{$list.goods_img}" alt=""></div>
+                    <div class="goodsItem-title">{$list.goods_name}</div>
+                    <div class="goodsItem-price">
+                        双11抢购价：&yen;<b>{$list.now_price}</b><br>
+                        <del>市场价&yen;{$list.market_price}元</del>
+                    </div>
+                    <div class="goodsItem-btn">立即抢购</div>
+                </a>
+            </div>
+        <!--{/foreach}-->
+
+	
+	</div>
+
+	<div class="mainTab clearfix" id="f_tab_06">
+        <div class="activeMod">
+            <a href="active.php?id=16110109"><img src="http://file.easeeyes.com/wap/images/20161111/17.jpg" alt=""></a>
+        </div>
+        <!--{foreach from=$goodsArr7 key=k item=list}-->
+            <div class="goodsItem">
+                <a href="{$list.goods_link}">
+                    {if $list.zk>0}<span class="goodsItem-layer">直降{$list.zk}元</span>{/if}
+                    <div class="goodsItem-thumb"><img src="http://img.easeeyes.com/{$list.goods_img}" alt=""></div>
+                    <div class="goodsItem-title">{$list.goods_name}</div>
+                    <div class="goodsItem-price">
+                        双11抢购价：&yen;<b>{$list.now_price}</b><br>
+                        <del>市场价&yen;{$list.market_price}元</del>
+                    </div>
+                    <div class="goodsItem-btn">立即抢购</div>
+                </a>
+            </div>
+        <!--{/foreach}-->
+
+	</div>
+
+	<div class="mainTab clearfix" id="f_tab_07">
+        <div class="activeMod">
+            <a href="active.php?id=16110113"><img src="http://file.easeeyes.com/wap/images/20161111/21.jpg" alt=""></a>
+        </div>
+        <!--{foreach from=$goodsArr11 key=k item=list}-->
+            <div class="goodsItem">
+                <a href="{$list.goods_link}">
+                    {if $list.zk>0}<span class="goodsItem-layer">直降{$list.zk}元</span>{/if}
+                    <div class="goodsItem-thumb"><img src="http://img.easeeyes.com/{$list.goods_img}" alt=""></div>
+                    <div class="goodsItem-title">{$list.goods_name}</div>
+                    <div class="goodsItem-price">
+                        双11抢购价：&yen;<b>{$list.now_price}</b><br>
+                        <del>市场价&yen;{$list.market_price}元</del>
+                    </div>
+                    <div class="goodsItem-btn">立即抢购</div>
+                </a>
+            </div>
+        <!--{/foreach}-->
+
+	</div>
+
+
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+
+<script src="http://file.easeeyes.com/index2015/js/lazyload.js"></script>
+<script>
+$(function(){
+    $(".goodsItem-thumb img").lazyload({placeholder:"http://img.easeeyes.com/index2015/white.gif", effect:"fadeIn"});
+});
+
+// 选项卡 
+/*
+new Tab({
+	navs:document.querySelectorAll('.navBar span'),
+	tabs:document.querySelectorAll('.mainTab')
+})
+*/
+// 导航悬浮
+$(window).load(function(){
+	var $fixNav=$('.navBar')
+	var navTop=parseInt($fixNav.offset().top)
+	$(window).scroll(function(){
+		var sTop=document.documentElement.scrollTop || document.body.scrollTop
+		if(parseInt(sTop)>=navTop){
+			$fixNav.addClass('fixed')
+		}else{
+			$fixNav.removeClass("fixed")
+		}
+	})
+})
+function get_bonus(bonus_id){
+    $.ajax({
+        type:'POST',
+        url:'ajax_active.php?act=get_bonus_161101_2',
+        data:'&bonus_id='+bonus_id+'&m='+Math.random(),
+        cache:false,
+        success:
+                function(da)
+                {
+                    if(da == 1){
+                        alert('您已成功领取优惠券！请至我的红包/优惠券查看^_^');
+                    }else if(da == 2){
+                        alert('请登录后再试^_^');
+                    }else if(da == 3){
+                        alert('您已领取过该优惠券^_^');
+                    }
+                }
+    });
+}
+// 导航滚动识别
+$(window).load(function(){
+  // 高度集合
+  var heights=[],navLen
+  var navHeight=parseInt($('.navBar').get(0).offsetHeight)
+  //console.log(navHeight)
+  $('.mainTab').each(function(){
+      var $this=$(this)
+      heights.push(parseInt($this.offset().top)-navHeight)
+  })
+  heights.reverse()
+  navLen=heights.length
+  // 判断
+  function checkScrollTop(s){
+      for(var i=0,len=heights.length;i<len;i++){
+          if(s>=heights[i]){
+              return navLen-1-i;
+              break;
+          }
+      }
+      return -1;
+  }
+  var sTop,
+      $navItem=$('.navBar a')
+  //console.log(heights)
+  $(window).scroll(function(){
+      sTop=document.documentElement.scrollTop || document.body.scrollTop
+      var index=checkScrollTop(parseInt(sTop))
+      if(index!=-1){
+          $($navItem[index]).addClass('current').siblings().removeClass('current')
+      }else{
+          $navItem.removeClass('current')
+      }
+  })
+})
+
+</script>
+</body>
+</html>

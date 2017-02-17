@@ -1,0 +1,37 @@
+.ys-srch {padding: 10px 12px 0;padding-bottom: 10px;}
+.ys-srch .new-srch-box {width: auto;margin-left: 0;padding-right: 90px;background-color: #fff;}
+.new-srch-box {display: block;position: relative;width: 70%;height: 30px;margin-left: 35px;border: 1px solid #999;}
+.new-srch-input {width: 100%;height: 30px;margin-right: 30px;border: 0;border-radius: 0;background: #fff;font-size: 16px;line-height: 24px;font-weight: normal;color: #c3c2c2;text-indent: 10px;vertical-align: top;-webkit-appearance: none;}
+.new-s-srch {position: absolute;top: 0;right: 0;width: 50px;height: 30px;background: url('http://m.easeeyes.com/images/serch.jpg') no-repeat ;}
+
+.sort{height: 35px;padding-bottom: 20px;}
+.sort a{width: 27%;height: 35px;line-height: 39px;float: left;text-align: center;font-size: 14px;cursor: pointer;background: url('http://m.easeeyes.com/images/gt.png') right no-repeat;}
+.st{background: url('http://m.easeeyes.com/images/st.png') no-repeat 70% 50%;}
+.xz{border-top: 2px solid #76d5e9;font-weight: bold;color:#76d5e9}
+
+.goods_list{height:100%}
+.goods_list li{border-top: 1px solid #FFF;border-bottom: 1px solid #ccc;margin: 0px;padding: 0px;}
+.list_a{max-width: 800px;margin: 0 auto;height: 120px;position: relative;display: block;}
+.goods_list li img{position: absolute;left: 12px;top: 14px;width: 92px;height: 92px;border: 1px solid #ddd;}
+.goods_list span{position: absolute;font-size: 14px;line-height: 150%;left: 114px;}
+.sp01{top: 14px;height:45px;overflow: hidden;}
+.sp02 {top: 54px;}
+.sp03 {top: 74px;}
+.sp04 {top: 94px;}
+
+.price1{color: red;font-size: 18px;}
+.price2{padding-left:10px;font-size:12px;text-decoration: line-through;}
+
+.loading{width:100%;height:40px;}
+#loading{background: url('http://m.easeeyes.com/images/loading.png') no-repeat 50%;}
+#nomoreresults{text-align: center;padding-top:10px;}
+
+
+.list_zong_left{width:45%;float:left;padding-left:10px}
+.list_zong_left img{border: 1px solid #ccc;height: 130px;width: 130px;}
+.xian_price{float:left;color:#f00;font-size:14px;font-weight:bold;width:60%}
+.yuan_price{float:right;width:40%; text-decoration:line-through}
+.list_zong_right{width:45%;float:left;padding-left:10px}
+.active{width:100%;float: left;}
+
+.list_price{width:100%;float: left;}

@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta content="telephone=no" name="format-detection"/>
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/wuliu.css"/>
+</head>
+<body>
+
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<div class="check">
+  <div class="order_num">
+     <div class="order_num_left">订单号：<span>{$order.order_sn}</span></div>
+     <div class="order_num_right">状态：<span>{$order.order_status}</span></div>
+     <div class="clear"></div>
+  </div><!--order_num end-->
+  <div class="order_bianhao">
+     <div>物流编号：<span>{$order.invoice_number}</span></div>
+     <div>物流公司：<span>{$order.invoice_name}</span></div>
+  </div><!--order_bianhao end-->
+  <div class="goods_order">
+     <div class="goods_title">
+        <div>商品清单<span><img src="{$image_url}wap/images/under_xia.png"/></span></div>
+     </div><!--goods_title end-->
+     <div class="goods_num">
+     <!--{foreach from=$goods_list item=goods}-->
+        <div class="goods_num_one">
+           <div class="goods_name">
+               <!--{if $goods.goods_id gt 0 && $goods.extension_code eq 'package_buy'}礼包-->
+                <a href="goods{$goods.goods_id}.html" style="color:#333;">{$goods.goods_name}<span style="color:#f00;">（礼包）</span></a>
+        		<!--{elseif $goods.goods_id gt 0 && $goods.extension_code eq 'tuan_buy'}礼包-->
+        		<a href="goods{$goods.goods_id}.html" style="color:#333;">{$goods.goods_name}<span style="color:#f00;">（团购）</span></a>
+                <!--{else}-->
+                <a href="goods{$goods.goods_id}.html" style="color:#333;">{$goods.goods_name}</a>
+                    <!--{if $goods.parent_id > 0}-->
+                    <span style="color:#f00">（{$lang.accessories}）</span>
+                    <!--{elseif $goods.is_gift && $goods.goods_price eq '0.00'}-->
+                    <span style="color:#f00">（赠品）</span>
+                    <!--{elseif $goods.is_gift && $goods.goods_price neq '0.00'}-->
+                    <span style="color:#f00">（特惠商品）</span>
+                    <!--{/if}-->
+                <!--{/if}-->
+                <!--{if $goods.is_shipping}-->(<span style="color:#f00">{$lang.free_goods}</span>)<!--{/if}-->
+           </div>
+           <div><span>数量：{$goods.zcount}</span><span>易视价:<em>{$goods.goods_price}</em></span></div>
+           <div><span>左眼度数：{$goods.zselect}</span><span>右眼度数:{$goods.yselect}</span></div>
+        </div>
+     <!--{/foreach}-->
+        <div class="goods_all">
+            <div class="goods_price">商品总价：<span>{$order.formated_goods_amount}</span></div>
+            <div>邮资运费：{if $order.shipping_fee > 0}{$order.formated_shipping_fee}{else}￥0.00{/if}</div>
+        </div>
+     </div>
+  </div>
+  <div class="goods_info">
+       <div class="goods_title">
+        <div>物流详情</div>
+     </div>
+     <div class="state">
+     <table>
+     {$wuliu_info}
+     </table>
+     </div>
+  </div><!--goods_info end-->
+</div>
+
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+</body>

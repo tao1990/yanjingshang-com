@@ -1,0 +1,25 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<div style="width:100%; height:auto;">
+    <div class="pagee" style="width:660px; text-align:right">
+        <!--{if $page gt 1}--><div class="page_no"><span class="pagee_l"></span><a href="buyersshow.html?ut={$smarty.get.ut}&cat_id={$smarty.get.cat_id}&attr={$smarty.get.attr}&page={$prePage}">上一页</a></div><!--{/if}-->
+        
+        <!--{foreach from=$page_array item=pages}-->
+        <!--{if $page == $pages}-->
+        <div class="pageloghong">{$pages}</div>
+        <!--{else}-->
+        <div class="pagelog"><a href="buyersshow.html?ut={$smarty.get.ut}&cat_id={$smarty.get.cat_id}&attr={$smarty.get.attr}&page={$pages}">{$pages}</a></div>
+        <!--{/if}-->
+        <!--{/foreach}-->
+        <!--pageloghong pagelog-->
+        
+        <!--{if $page < $pages}--><div class="page_no"><a href="buyersshow.html?ut={$smarty.get.ut}&cat_id={$smarty.get.cat_id}&attr={$smarty.get.attr}&page={$nextPage}">下一页</a></div><!--{/if}-->
+        <div class="pagee_r"></div>
+        <div class="page_no"><em style="line-height:1.235;">共{$total_page}页</em><span>至第</span></div>
+        <form id="form1" action="buyersshow.html" method="post">
+        <div class="page_no"><input type="text" class="page_but" name="page" id="toPage" width="10" /><input type="hidden" name="ut" value="{$smarty.get.ut}"><input type="hidden" name="cat_id" value="{$smarty.get.cat_id}"><input type="hidden" name="attr" value="{$smarty.get.attr}"></div>
+        <div class="page_no">页</div>
+        <div class="page_no"><input type="button" class="page_qued" onClick="if (parseInt(document.getElementById('toPage').value) >=0){document.getElementById('form1').submit();} else {alert('请输入数字!')}" /></div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,1125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/goods.css"/>
+<style type="text/css">
+.p_buy { height:79px; line-height:79px; background:url(templates/images/miaosha/bg_buy.gif) left center no-repeat; }
+.p_buy2 { background:url(templates/images/miaosha/bg_buy2.gif) left center no-repeat !important; }
+.p_buy3 { background:url(templates/images/miaosha/bg_buy3.gif) left center no-repeat !important; }
+.p_package_price { float:left; padding-left:30px; width:158px; color:#ffffff; font-size:48px; font-family:Arial, Helvetica, sans-serif; font-weight:bold; }
+.p_package_price span { font-size:18px; }
+.p_buy_button { float:left; width:125px; }
+.p_time { margin:auto; }
+.p_time_number { padding:0px 2px 0px 2px; font-size:30px; font-weight:bold; font-family:Arial, Helvetica, sans-serif; color:#ff510d; }
+.time_number { margin:0 3px; padding:5px; height:25px; background:url(templates/images/miaosha/bg_line2.gif) center center repeat-x; color:#ffffff; font-weight:bold; }
+.brand .brand_z .brand_zk{font-size: 12px;}
+.goods_count, .add_cart_div{display:none;}
+.ms_center{width: 90%; margin: auto}
+
+#ts-01 li{text-align:center;background:#fff;}
+#ts-01 li img{height:25rem;width:auto !important;}
+#slider-01 .points{text-align:center;}
+
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<script type="text/javascript" src="{$image_url}wap/js/koala.min.1.5.js"></script>
+<script type="text/javascript" src="{$image_url}wap/js/scrollpagination.js"></script>
+<div class="content">
+    <div class="content flowbox">
+        <a id="jbxx" class="xz" style="background: url('images/gt.png') right no-repeat;">基本信息</a>
+        <a id="cpxq" style="background: url('images/gt.png') right no-repeat;">产品详情</a>
+        <a id="yhpl">用户评论</a>
+    </div>
+    <div class="jbxx">
+      <form action="miaosha_buy.php?act=ms_to_cart" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY">
+        <input type="hidden" name="ms_rec_id" id="ms_rec_id" value="{$ms.rec_id}" />
+       
+        <div class="banMod container" id="slider-01">
+            <ul class="clearfix" id="ts-01">
+                <!--{foreach from=$gallery item=li name=foo}-->
+                <li><img src="{$img_url}{$li.thumb_url}" /></li>
+                <!--{/foreach}-->
+            </ul>
+        </div>
+
+        <div class="content goods_name">
+            <span>{$ms.ms_name}</span>
+        </div>
+        <div class="content goods_name_tr">
+            <span>{if $ms.ms_desc}{$ms.ms_desc}{else}{if $goods.goods_name_desc}{$goods.goods_name_desc}{else}{$goods.goods_brief}{/if}{/if}</span>
+        </div>
+        
+        <div class="brand">
+            <div class="brand_z">
+                <span class="price1">￥{$goods.shop_price}</span>
+                <span class="price2">市场价：{$goods.market_price}</span>
+                <span class="brand_zk">商品库存：<!--{if $goods.goods_number eq 0}--><font color='red'>{$lang.stock_up}</font><!--{else}-->{$goods.shiptime|default:可立即发货}<!--{/if}--></span>
+                <span class="brand_zk">每人限购：{if $ms.is_limited eq 1}{$ms.each_limited}{else}不限{/if}</span>
+                <!--<span class="zk"><em>vip折扣</em> {$rank_prices.7.price}-{$vip_prices}</span>-->
+            </div>
+            <!--<div class="brand_y">
+                <a href="javascript:collect_ajax({$goods.goods_id})">收藏</a>
+            </div>-->
+        </div>
+
+        <!--{if $goods.goods_type eq 15}[框架眼镜]-->
+          <style type="text/css">
+              .choose_dingzhi,.choose_dingzhi_one{padding:1rem;line-height:3rem;border-top:2px solid #e7e7e7;border-bottom:1px solid #E9E9E9;color:#666;font-size:1.2rem;}
+              .choose_dingzhi_one{border-top:1px solid #e3e3e3;border-bottom:none}
+              .choose_dingzhi img{margin-left:70%}
+              /*.choose_nei{border:1px solid #E8E8E8}*/
+              .choose_nei img{width:100%}
+              .choose_one{border:1px solid #D5D5D5;display:inline-block;width:49.2%;margin-bottom:.5rem;box-sizing:border-box;}
+              .choose_dushu{color:#707070}
+              .choose_dushu_one{margin-bottom:10px}
+              .choose_title{margin-left:5%;margin-right:5%;border-bottom:1px dashed #e3e3e3; text-align:center;padding-bottom:10px}
+              .choose_name{margin-left:5%;margin-right:5%;padding:10px 0;border-bottom:1px dashed #e3e3e3}
+              .choose_name span{float:left;width:50%}
+              .choose_name select{flaot:right;width:40%;margin-left:8%; border:1px solid #e3e3e3}
+              .selected_glass{border: 1px #2cbcd4 solid;}
+              .clear{clear:both}
+              .goods_count{border-bottom:1px solid #e8e8e8}
+              .goods_choose{border-top:1px solid #e5e5e5;padding-left:5%;padding-right:5%;border-bottom:1px solid #e9e9e9;padding-bottom:15px;padding-top:15px}
+              .goods_choose input{color:#fff;font-size:14px;font-weight:bold; background-color:#75D6E9;border:none;width:40%;margin-right:20px;height:40px;line-height:40px;border-radius:5px}
+              .buy_jingjia{margin-right:50px}
+              .red{color:red}
+          </style>
+          <div id="choose_glass">
+              <!--<div class="choose_dingzhi"><span>请选择定制镜片和度数</span><a href="#"><img src="images/jt_up.png" /></a></div>-->
+              <div class="choose_dingzhi_one">选择需要定制的镜片：</div>
+              <input type="hidden" id="get_glasses_type" value="1" />
+              <div class="choose_one">
+                  <div class="choose_nei"><img src="http://www.easeeyes.com/themes/default/images/goods/kj1.jpg" alt="" class="selected_glass" v="1" /><label class="selected_icon"></label></div>
+              </div><!--choose_one end-->
+              <div class="choose_one">
+                  <div class="choose_nei"><img src="http://www.easeeyes.com/themes/default/images/goods/kj2.jpg" alt="" v="2" /><label></label></div>
+              </div><!--choose_one end-->
+              <div class="choose_one">
+                  <div class="choose_nei"><img src="http://www.easeeyes.com/themes/default/images/goods/kj3.jpg" alt="" v="3" /><label></label></div>
+              </div><!--choose_one end-->
+              <div class="choose_one">
+                  <div class="choose_nei"><img src="http://www.easeeyes.com/themes/default/images/goods/kj4.jpg" alt="" v="4" /><label></label></div>
+              </div><!--choose_one end-->
+              <div class="choose_one">
+                  <div class="choose_nei"><img src="http://www.easeeyes.com/themes/default/images/goods/kj5.jpg" alt="" v="5" /><label></label></div>
+              </div><!--choose_one end-->
+              <div class="choose_one">
+                  <div class="choose_nei"><img src="http://www.easeeyes.com/themes/default/images/goods/kj6.jpg" alt="" v="6" /><label></label></div>
+              </div><!--choose_one end-->
+              <div class="choose_dushu">
+                  <div class="choose_dushu_one">
+                      <div class="choose_title">选择左度数</div>
+                      <div class="choose_name">
+                          <span>镜片度数(S)</span>
+                          <select id="left_eye_ds" class="classes_ds" name="zselect">
+                              <option value="">请选择度数</option><option value="0.00">0.00</option><option value="-0.50">-0.50</option><option value="-0.75">-0.75</option>
+                              <option value="-1.00">-1.00</option><option value="-1.25">-1.25</option><option value="-1.50">-1.50</option><option value="-1.75">-1.75</option>
+                              <option value="-2.00">-2.00</option><option value="-2.25">-2.25</option><option value="-2.50">-2.50</option><option value="-2.75">-2.75</option>
+                              <option value="-3.00">-3.00</option><option value="-3.25">-3.25</option><option value="-3.50">-3.50</option><option value="-3.75">-3.75</option>
+                              <option value="-4.00">-4.00</option><option value="-4.25">-4.25</option><option value="-4.50">-4.50</option><option value="-4.75">-4.75</option>
+                              <option value="-5.00">-5.00</option><option value="-5.25">-5.25</option><option value="-5.50">-5.50</option><option value="-5.75">-5.75</option>
+                              <option value="-6.00">-6.00</option><option value="-6.25">-6.25</option><option value="-6.50">-6.50</option><option value="-6.75">-6.75</option>
+                              <option value="-7.00">-7.00</option><option value="-7.25">-7.25</option><option value="-7.50">-7.50</option><option value="-7.75">-7.75</option>
+                              <option value="-8.00">-8.00</option><option value="-8.25">-8.25</option><option value="-8.50">-8.50</option><option value="-8.75">-8.75</option>
+                              <option value="-9.00">-9.00</option><option value="-9.25">-9.25</option><option value="-9.50">-9.50</option><option value="-9.75">-9.75</option>
+                              <option value="-10.00">-10.00</option><option value="-10.25">-10.25</option><option value="-10.50">-10.50</option><option value="-10.75">-10.75</option>
+                              <option value="-11.00">-11.00</option><option value="-11.25">-11.25</option><option value="-11.50">-11.50</option><option value="-11.75">-11.75</option>
+                              <option value="-12.00">-12.00</option><option value="-12.25">-12.25</option><option value="-12.50">-12.50</option><option value="-12.75">-12.75</option>
+                              <option value="-13.00">-13.00</option><option value="-13.25">-13.25</option><option value="-13.50">-13.50</option><option value="-13.75">-13.75</option>
+                              <option value="-14.00">-14.00</option><option value="-14.25">-14.25</option><option value="-14.50">-14.50</option><option value="-14.75">-14.75</option>
+                              <option value="-15.00">-15.00</option><option value="-15.25">-15.25</option><option value="-15.50">-15.50</option><option value="-15.75">-15.75</option>
+                              <option value="-16.00">-16.00</option><option value="+0.25">+0.25</option><option value="+0.50">+0.50</option><option value="+0.75">+0.75</option>
+                              <option value="+1.00">+1.00</option><option value="+1.25">+1.25</option><option value="+1.50">+1.50</option><option value="+1.75">+1.75</option>
+                              <option value="+2.00">+2.00</option><option value="+2.25">+2.25</option><option value="+2.50">+2.50</option><option value="+2.75">+2.75</option>
+                              <option value="+3.00">+3.00</option><option value="+3.25">+3.25</option><option value="+3.50">+3.50</option><option value="+3.75">+3.75</option>
+                              <option value="+4.00">+4.00</option><option value="+4.25">+4.25</option><option value="+4.50">+4.50</option><option value="+4.75">+4.75</option>
+                              <option value="+5.00">+5.00</option><option value="+5.25">+5.25</option><option value="+5.50">+5.50</option><option value="+5.75">+5.75</option>
+                              <option value="+6.00">+6.00</option><option value="+6.25">+6.25</option><option value="+6.50">+6.50</option><option value="+6.75">+6.75</option>
+                              <option value="+7.00">+7.00</option><option value="+7.25">+7.25</option><option value="+7.50">+7.50</option><option value="+7.75">+7.75</option>
+                              <option value="+8.00">+8.00</option><option value="+8.25">+8.25</option><option value="+8.50">+8.50</option><option value="+8.75">+8.75</option>
+                              <option value="+9.00">+9.00</option><option value="+9.25">+9.25</option><option value="+9.50">+9.50</option><option value="+9.75">+9.75</option>
+                              <option value="+10.00">+10.00</option>
+                          </select>
+                          <div class="clear"></div>
+                      </div><!--choose_name end-->
+                      <div class="choose_name">
+                          <span>散光度数(D)</span>
+                          <select id="left_eye_sg" name="zsg">
+                              <option value="">请选择</option><option value="-0.50">-0.50</option><option value="-0.75">-0.75</option><option value="-1.00">-1.00</option>
+                              <option value="-1.25">-1.25</option><option value="-1.50">-1.50</option><option value="-1.75">-1.75</option><option value="-2.00">-2.00</option>
+                              <option value="-2.25">-2.25</option><option value="-2.50">-2.50</option><option value="-2.75">-2.75</option><option value="-3.00">-3.00</option>
+                              <option value="-3.25">-3.25</option><option value="-3.50">-3.50</option><option value="-3.75">-3.75</option><option value="-4.00">-4.00</option>
+                              <option value="-4.25">-4.25</option><option value="-4.50">-4.50</option><option value="+0.50">+0.50</option><option value="+0.75">+0.75</option>
+                              <option value="+1.00">+1.00</option><option value="+1.25">+1.25</option><option value="+1.50">+1.50</option><option value="+1.75">+1.75</option>
+                              <option value="+2.00">+2.00</option><option value="+2.25">+2.25</option><option value="+2.50">+2.50</option><option value="+2.75">+2.75</option>
+                              <option value="+3.00">+3.00</option><option value="+3.25">+3.25</option><option value="+3.50">+3.50</option><option value="+3.75">+3.75</option>
+                              <option value="+4.00">+4.00</option><option value="+4.25">+4.25</option><option value="+4.50">+4.50</option>
+                          </select>
+                          <div class="clear"></div>
+                      </div><!--choose_name end-->
+                      <div class="choose_name">
+                          <span>散光轴位(A)</span>
+                          <select id="left_eye_zw" name="zzhou">
+                              <option value="">请选择</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
+                              <option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option>
+                              <option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option>
+                              <option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option>
+                              <option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option>
+                              <option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option>
+                              <option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option>
+                              <option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option>
+                              <option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option>
+                              <option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option>
+                              <option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option>
+                              <option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option>
+                              <option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option>
+                              <option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option>
+                              <option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option>
+                              <option value="60">60</option><option value="61">61</option><option value="62">62</option><option value="63">63</option>
+                              <option value="64">64</option><option value="65">65</option><option value="66">66</option><option value="67">67</option>
+                              <option value="68">68</option><option value="69">69</option><option value="70">70</option><option value="71">71</option>
+                              <option value="72">72</option><option value="73">73</option><option value="74">74</option><option value="75">75</option>
+                              <option value="76">76</option><option value="77">77</option><option value="78">78</option><option value="79">79</option>
+                              <option value="80">80</option><option value="81">81</option><option value="82">82</option><option value="83">83</option>
+                              <option value="84">84</option><option value="85">85</option><option value="86">86</option><option value="87">87</option>
+                              <option value="88">88</option><option value="89">89</option><option value="90">90</option><option value="91">91</option>
+                              <option value="92">92</option><option value="93">93</option><option value="94">94</option><option value="95">95</option>
+                              <option value="96">96</option><option value="97">97</option><option value="98">98</option><option value="99">99</option>
+                              <option value="100">100</option><option value="101">101</option><option value="102">102</option><option value="103">103</option>
+                              <option value="104">104</option><option value="105">105</option><option value="106">106</option><option value="107">107</option>
+                              <option value="108">108</option><option value="109">109</option><option value="110">110</option><option value="111">111</option>
+                              <option value="112">112</option><option value="113">113</option><option value="114">114</option><option value="115">115</option>
+                              <option value="116">116</option><option value="117">117</option><option value="118">118</option><option value="119">119</option>
+                              <option value="120">120</option><option value="121">121</option><option value="122">122</option><option value="123">123</option>
+                              <option value="124">124</option><option value="125">125</option><option value="126">126</option><option value="127">127</option>
+                              <option value="128">128</option><option value="129">129</option><option value="130">130</option><option value="131">131</option>
+                              <option value="132">132</option><option value="133">133</option><option value="134">134</option><option value="135">135</option>
+                              <option value="136">136</option><option value="137">137</option><option value="138">138</option><option value="139">139</option>
+                              <option value="140">140</option><option value="141">141</option><option value="142">142</option><option value="143">143</option>
+                              <option value="144">144</option><option value="145">145</option><option value="146">146</option><option value="147">147</option>
+                              <option value="148">148</option><option value="149">149</option><option value="150">150</option><option value="151">151</option>
+                              <option value="152">152</option><option value="153">153</option><option value="154">154</option><option value="155">155</option>
+                              <option value="156">156</option><option value="157">157</option><option value="158">158</option><option value="159">159</option>
+                              <option value="160">160</option><option value="161">161</option><option value="162">162</option><option value="163">163</option>
+                              <option value="164">164</option><option value="165">165</option><option value="166">166</option><option value="167">167</option>
+                              <option value="168">168</option><option value="169">169</option><option value="170">170</option><option value="171">171</option>
+                              <option value="172">172</option><option value="173">173</option><option value="174">174</option><option value="175">175</option>
+                              <option value="176">176</option><option value="177">177</option><option value="178">178</option><option value="179">179</option>
+                              <option value="180">180</option>
+                          </select>
+                          <div class="clear"></div>
+                      </div><!--choose_name end-->
+                  </div><!--choose_dushu_one end -->
+                  <div class="choose_dushu_one">
+                      <div class="choose_title">选择右度数</div>
+                      <div class="choose_name">
+                          <span>镜片度数(S)</span>
+                          <select id="right_eye_ds" name="yselect">
+                              <option value="">请选择度数</option><option value="0.00">0.00</option><option value="-0.50">-0.50</option><option value="-0.75">-0.75</option>
+                              <option value="-1.00">-1.00</option><option value="-1.25">-1.25</option><option value="-1.50">-1.50</option><option value="-1.75">-1.75</option>
+                              <option value="-2.00">-2.00</option><option value="-2.25">-2.25</option><option value="-2.50">-2.50</option><option value="-2.75">-2.75</option>
+                              <option value="-3.00">-3.00</option><option value="-3.25">-3.25</option><option value="-3.50">-3.50</option><option value="-3.75">-3.75</option>
+                              <option value="-4.00">-4.00</option><option value="-4.25">-4.25</option><option value="-4.50">-4.50</option><option value="-4.75">-4.75</option>
+                              <option value="-5.00">-5.00</option><option value="-5.25">-5.25</option><option value="-5.50">-5.50</option><option value="-5.75">-5.75</option>
+                              <option value="-6.00">-6.00</option><option value="-6.25">-6.25</option><option value="-6.50">-6.50</option><option value="-6.75">-6.75</option>
+                              <option value="-7.00">-7.00</option><option value="-7.25">-7.25</option><option value="-7.50">-7.50</option><option value="-7.75">-7.75</option>
+                              <option value="-8.00">-8.00</option><option value="-8.25">-8.25</option><option value="-8.50">-8.50</option><option value="-8.75">-8.75</option>
+                              <option value="-9.00">-9.00</option><option value="-9.25">-9.25</option><option value="-9.50">-9.50</option><option value="-9.75">-9.75</option>
+                              <option value="-10.00">-10.00</option><option value="-10.25">-10.25</option><option value="-10.50">-10.50</option><option value="-10.75">-10.75</option>
+                              <option value="-11.00">-11.00</option><option value="-11.25">-11.25</option><option value="-11.50">-11.50</option><option value="-11.75">-11.75</option>
+                              <option value="-12.00">-12.00</option><option value="-12.25">-12.25</option><option value="-12.50">-12.50</option><option value="-12.75">-12.75</option>
+                              <option value="-13.00">-13.00</option><option value="-13.25">-13.25</option><option value="-13.50">-13.50</option><option value="-13.75">-13.75</option>
+                              <option value="-14.00">-14.00</option><option value="-14.25">-14.25</option><option value="-14.50">-14.50</option><option value="-14.75">-14.75</option>
+                              <option value="-15.00">-15.00</option><option value="-15.25">-15.25</option><option value="-15.50">-15.50</option><option value="-15.75">-15.75</option>
+                              <option value="-16.00">-16.00</option><option value="+0.25">+0.25</option><option value="+0.50">+0.50</option><option value="+0.75">+0.75</option>
+                              <option value="+1.00">+1.00</option><option value="+1.25">+1.25</option><option value="+1.50">+1.50</option><option value="+1.75">+1.75</option>
+                              <option value="+2.00">+2.00</option><option value="+2.25">+2.25</option><option value="+2.50">+2.50</option><option value="+2.75">+2.75</option>
+                              <option value="+3.00">+3.00</option><option value="+3.25">+3.25</option><option value="+3.50">+3.50</option><option value="+3.75">+3.75</option>
+                              <option value="+4.00">+4.00</option><option value="+4.25">+4.25</option><option value="+4.50">+4.50</option><option value="+4.75">+4.75</option>
+                              <option value="+5.00">+5.00</option><option value="+5.25">+5.25</option><option value="+5.50">+5.50</option><option value="+5.75">+5.75</option>
+                              <option value="+6.00">+6.00</option><option value="+6.25">+6.25</option><option value="+6.50">+6.50</option><option value="+6.75">+6.75</option>
+                              <option value="+7.00">+7.00</option><option value="+7.25">+7.25</option><option value="+7.50">+7.50</option><option value="+7.75">+7.75</option>
+                              <option value="+8.00">+8.00</option><option value="+8.25">+8.25</option><option value="+8.50">+8.50</option><option value="+8.75">+8.75</option>
+                              <option value="+9.00">+9.00</option><option value="+9.25">+9.25</option><option value="+9.50">+9.50</option><option value="+9.75">+9.75</option>
+                              <option value="+10.00">+10.00</option>
+                          </select>
+                          <div class="clear"></div>
+                      </div><!--choose_name end-->
+                      <div class="choose_name">
+                          <span>散光度数(D)</span>
+                          <select id="right_eye_sg" name="ysg">
+                              <option value="">请选择</option><option value="-0.50">-0.50</option><option value="-0.75">-0.75</option><option value="-1.00">-1.00</option>
+                              <option value="-1.25">-1.25</option><option value="-1.50">-1.50</option><option value="-1.75">-1.75</option><option value="-2.00">-2.00</option>
+                              <option value="-2.25">-2.25</option><option value="-2.50">-2.50</option><option value="-2.75">-2.75</option><option value="-3.00">-3.00</option>
+                              <option value="-3.25">-3.25</option><option value="-3.50">-3.50</option><option value="-3.75">-3.75</option><option value="-4.00">-4.00</option>
+                              <option value="-4.25">-4.25</option><option value="-4.50">-4.50</option><option value="+0.50">+0.50</option><option value="+0.75">+0.75</option>
+                              <option value="+1.00">+1.00</option><option value="+1.25">+1.25</option><option value="+1.50">+1.50</option><option value="+1.75">+1.75</option>
+                              <option value="+2.00">+2.00</option><option value="+2.25">+2.25</option><option value="+2.50">+2.50</option><option value="+2.75">+2.75</option>
+                              <option value="+3.00">+3.00</option><option value="+3.25">+3.25</option><option value="+3.50">+3.50</option><option value="+3.75">+3.75</option>
+                              <option value="+4.00">+4.00</option><option value="+4.25">+4.25</option><option value="+4.50">+4.50</option>
+                          </select>
+                          <div class="clear"></div>
+                      </div><!--choose_name end-->
+                      <div class="choose_name">
+                          <span>散光轴位(A)</span>
+                          <select id="right_eye_zw" name="yzhou">
+                              <option value="">请选择</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
+                              <option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option>
+                              <option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option>
+                              <option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option>
+                              <option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option>
+                              <option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option>
+                              <option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option>
+                              <option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option>
+                              <option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option>
+                              <option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option>
+                              <option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option>
+                              <option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option>
+                              <option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option>
+                              <option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option>
+                              <option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option>
+                              <option value="60">60</option><option value="61">61</option><option value="62">62</option><option value="63">63</option>
+                              <option value="64">64</option><option value="65">65</option><option value="66">66</option><option value="67">67</option>
+                              <option value="68">68</option><option value="69">69</option><option value="70">70</option><option value="71">71</option>
+                              <option value="72">72</option><option value="73">73</option><option value="74">74</option><option value="75">75</option>
+                              <option value="76">76</option><option value="77">77</option><option value="78">78</option><option value="79">79</option>
+                              <option value="80">80</option><option value="81">81</option><option value="82">82</option><option value="83">83</option>
+                              <option value="84">84</option><option value="85">85</option><option value="86">86</option><option value="87">87</option>
+                              <option value="88">88</option><option value="89">89</option><option value="90">90</option><option value="91">91</option>
+                              <option value="92">92</option><option value="93">93</option><option value="94">94</option><option value="95">95</option>
+                              <option value="96">96</option><option value="97">97</option><option value="98">98</option><option value="99">99</option>
+                              <option value="100">100</option><option value="101">101</option><option value="102">102</option><option value="103">103</option>
+                              <option value="104">104</option><option value="105">105</option><option value="106">106</option><option value="107">107</option>
+                              <option value="108">108</option><option value="109">109</option><option value="110">110</option><option value="111">111</option>
+                              <option value="112">112</option><option value="113">113</option><option value="114">114</option><option value="115">115</option>
+                              <option value="116">116</option><option value="117">117</option><option value="118">118</option><option value="119">119</option>
+                              <option value="120">120</option><option value="121">121</option><option value="122">122</option><option value="123">123</option>
+                              <option value="124">124</option><option value="125">125</option><option value="126">126</option><option value="127">127</option>
+                              <option value="128">128</option><option value="129">129</option><option value="130">130</option><option value="131">131</option>
+                              <option value="132">132</option><option value="133">133</option><option value="134">134</option><option value="135">135</option>
+                              <option value="136">136</option><option value="137">137</option><option value="138">138</option><option value="139">139</option>
+                              <option value="140">140</option><option value="141">141</option><option value="142">142</option><option value="143">143</option>
+                              <option value="144">144</option><option value="145">145</option><option value="146">146</option><option value="147">147</option>
+                              <option value="148">148</option><option value="149">149</option><option value="150">150</option><option value="151">151</option>
+                              <option value="152">152</option><option value="153">153</option><option value="154">154</option><option value="155">155</option>
+                              <option value="156">156</option><option value="157">157</option><option value="158">158</option><option value="159">159</option>
+                              <option value="160">160</option><option value="161">161</option><option value="162">162</option><option value="163">163</option>
+                              <option value="164">164</option><option value="165">165</option><option value="166">166</option><option value="167">167</option>
+                              <option value="168">168</option><option value="169">169</option><option value="170">170</option><option value="171">171</option>
+                              <option value="172">172</option><option value="173">173</option><option value="174">174</option><option value="175">175</option>
+                              <option value="176">176</option><option value="177">177</option><option value="178">178</option><option value="179">179</option>
+                              <option value="180">180</option>
+                          </select>
+                          <div class="clear"></div>
+                      </div><!--choose_name end-->
+                  </div><!--choose_dushu_one end -->
+                  <div class="choose_dushu_one">
+                      <div class="choose_title">选择瞳距(PD)</div>
+                      <div class="choose_name">
+                          <span>瞳距(PD)</span>
+                          <select id="kj_tongju" name="kj_tongju">
+                              <option value="">选择</option><option value="54">54.0</option><option value="54.5">54.5</option><option value="55">55.0</option>
+                              <option value="55.5">55.5</option><option value="56">56.0</option><option value="56.5">56.5</option><option value="57">57.0</option>
+                              <option value="57.5">57.5</option><option value="58">58.0</option><option value="58.5">58.5</option><option value="59">59.0</option>
+                              <option value="59.5">59.5</option><option value="60">60.0</option><option value="60.5">60.5</option><option value="61">61.0</option>
+                              <option value="61.5">61.5</option><option value="62">62.0</option><option value="62.5">62.5</option><option value="63">63.0</option>
+                              <option value="63.5">63.5</option><option value="64">64.0</option><option value="64.5">64.5</option><option value="65">65.0</option>
+                              <option value="65.5">65.5</option><option value="66">66.0</option><option value="66.5">66.5</option><option value="67">67.0</option>
+                              <option value="67.5">67.5</option><option value="68">68.0</option><option value="68.5">68.5</option><option value="69">69.0</option>
+                              <option value="69.5">69.5</option><option value="70">70.0</option><option value="70.5">70.5</option><option value="71">71.0</option>
+                              <option value="71.5">71.5</option><option value="72">72.0</option><option value="72.5">72.5</option><option value="73">73.0</option>
+                              <option value="73.5">73.5</option><option value="74">74.0</option><option value="74.5">74.5</option><option value="75">75.0</option>
+                              <option value="75.5">75.5</option><option value="76">76.0</option><option value="76.5">76.5</option><option value="77">77.0</option>
+                              <option value="77.5">77.5</option><option value="78">78.0</option><option value="78.5">78.5</option><option value="79">79.0</option>
+                              <option value="79.5">79.5</option><option value="80">80.0</option>
+                          </select>
+                          <div class="clear"></div>
+                      </div><!--choose_name end-->
+                  </div><!--choose_dushu_one end -->
+              </div><!--choose_dushu end-->
+              <div class="goods_count">
+                  数量:
+                  <ul class="goods_number">
+                      <li class="bt_minus bt_minusjia"><a style="background: url('images/-.png') no-repeat;" onclick="change_count('-');" href="javascript:void(0)"></a></li>
+                      <li class="input_cunt_li"><input readonly="true" type="text" id="count" name="goods_number" value="1" class="input_count"/></li>
+                      <li class="input_count_unit">{$goods.unit|default:盒}</li>
+                      <li class="bt_add bt_minusjian"><a style="background: url('images/+.png') no-repeat" onclick="change_count('+');" href="javascript:void(0)"></a></li>
+                  </ul>
+              </div><!--goods_count end-->
+              <div class="goods_count">
+                  <span class="pl5">含镜片价格：</span>
+                  <span class="red">&yen;</span><span id="kj_price" class="shop_price red">{$goods.shop_price}</span>
+                  <input type="hidden" id="shop_price" value="{$goods.shop_price}" />
+              </div>
+              <!--goods_choose end-->
+          </div>
+        <!--{else}-->
+              <!--{if $goodsds}-->
+              <div class="content ds_choose fold">
+                  <span>度数选择:</span> <i id="glass-info"></i>
+              </div>
+              <div class="content ds_choose_info">
+                  <div class="ds_radio_list" id="ds_radio_list_1">
+                      <!--{foreach from=$goodsds item=li}-->
+                      <div class="ds_radio_div">
+                          <label for="radio-ds-{$li.pid}" class="ds_radio{if $li.status} ds_radio_disabled{/if}">{$li.val}</label>
+                          <input name="left_eye_ds" class="dsselect" id="radio-ds-{$li.pid}" value="{if $li.canbuy}{$li.val}{/if}" type="radio"/>
+                      </div>
+                      <!--{/foreach}-->
+                  </div>
+              </div>
+              <!--{if $ms.ms_number gt 1}-->
+              <div class="content ds_choose fold">
+                  <span>度数选择2:</span> <i id="glass-info-y"></i>
+              </div>
+              <div class="content ds_choose_info">
+                  <div class="ds_radio_list" id="ds_radio_list_2">
+                      <!--{foreach from=$goodsds item=li}-->
+                      <div class="ds_radio_div">
+                          <label for="radio-dsy-{$li.pid}" class="ds_radio{if $li.status} ds_radio_disabled{/if}">{$li.val}</label>
+                          <input name="right_eye_ds" class="dsselect" id="radio-dsy-{$li.pid}" value="{if $li.canbuy}{$li.val}{/if}" type="radio"/>
+                      </div>
+                      <!--{/foreach}-->
+                  </div>
+              </div>
+              <!--{/if}-->
+              <!--{/if}-->
+
+              <!--{if $goods_is_sg && $goods_sgds}有度数商品中散光片-->
+              <div class="content ds_choose fold">
+                  <span>散光选择:</span> <i id="sg-info"></i>
+              </div>
+              <div class="content ds_choose_info">
+                  <div class="sg_radio_list" id="sg_radio_list">
+                      <!--{foreach from=$goods_sgds.ds_values item=value key=key}-->
+                      <div class="ds_radio_div">
+                          <label for="radio-sg-{$key}" class="ds_radio">{$value}</label>
+                          <input name="left_eye_sg" class="dsselect" id="radio-sg-{$key}" value="{$value}" type="radio"/>
+                      </div>
+                      <!--{/foreach}-->
+                  </div>
+              </div>
+              <input type="hidden" id="is_sg" value="is_sg" />
+              <div class="content ds_choose fold">
+                  <span>轴位选择:</span> <i id="zw-info"></i>
+              </div>
+              <div class="content ds_choose_info">
+                  <div class="zw_radio_list" id="zw_radio_list">
+                      <!--{foreach from=$goods_zw item=value key=key}-->
+                      <div class="ds_radio_div">
+                          <label for="radio-zw-{$key}" class="ds_radio">{$value}</label>
+                          <input name="left_eye_zw" class="dsselect" id="radio-zw-{$key}" value="{$value}" type="radio"/>
+                      </div>
+                      <!--{/foreach}-->
+                  </div>
+              </div>
+
+              <!--{else}-->
+              <input type="hidden" id="is_sg" value=""/>
+              <!--{/if}-->
+
+              <!--{if $goods.goods_type eq 10 || $goods.goods_type eq 12}-->
+              <div class="goods_count">
+                  数量:
+                  <ul class="goods_number">
+                      <li class="bt_minus bt_minusjia"><a style="background: url('images/-.png') no-repeat;" onclick="change_count('-');" href="javascript:void(0)"></a></li>
+                      <li class="input_cunt_li"><input readonly="true" type="text" id="count" name="left_eye_num" value="1" class="input_count"/></li>
+                      <li class="input_count_unit">{$goods.unit|default:盒}</li>
+                      <li class="bt_add bt_minusjian"><a style="background: url('images/+.png') no-repeat" onclick="change_count('+');" href="javascript:void(0)"></a></li>
+                  </ul>
+              </div>
+
+              <!--{else}-->
+              <div class="goods_count">
+                  数量:
+                  <ul class="goods_number">
+                      <li class="bt_minus bt_minusjia"><a style="background: url('images/-.png') no-repeat;" onclick="change_count('-');" href="javascript:void(0)"></a></li>
+                      <li class="input_cunt_li"><input readonly="true" type="text" id="count" name="goods_number" value="1" class="input_count"/></li>
+                      <li class="input_count_unit">{$goods.unit|default:盒}</li>
+                      <li class="bt_add bt_minusjian"><a style="background: url('images/+.png') no-repeat" onclick="change_count('+');" href="javascript:void(0)"></a></li>
+                  </ul>
+              </div>
+              <!--{/if}-->
+        <!--{/if}-->
+        <!--{if $goodsds}有度数商品-->
+        <div class="content p_buy ms_center {if $ms.ms_status eq 0}p_buy2{elseif $ms.ms_status eq 1 || $num_over eq -1}p_buy{else}p_buy3{/if}">
+            <div class="p_package_price">{$ms.price_int}<span>.{$ms.price_decimal}</span></div>
+            <div class="p_buy_button">
+                <!--{if $ms.ms_status eq 1}-->
+                <img src="templates/images/tuan/transparent.gif" onclick="add_cart_miaosha({$goods.goods_id}, 1)" style="width:100%; height:78px; cursor:pointer;" />
+                <!--{else}-->
+                <img src="templates/images/tuan/transparent.gif" style="width:100%; height:78px;" />
+                <!--{/if}-->
+            </div>
+        </div>
+        <!--{else}护理液等没度数商品-->
+          <input type="hidden" name="no_ds" value="1" />
+          <div class="content p_buy ms_center {if $ms.ms_status eq 0}p_buy2{elseif $ms.ms_status eq 1 || $num_over eq -1}p_buy{else}p_buy3{/if}">
+              <div class="p_package_price">{$ms.price_int}<span>.{$ms.price_decimal}</span></div>
+              <div class="p_buy_button">
+                  <!--{if $ms.ms_status eq 1}-->
+                  <img src="templates/images/tuan/transparent.gif" onclick="add_cart_miaosha({$goods.goods_id}, 2)" style="width:100%; height:78px; cursor:pointer;" />
+                  <!--{else}-->
+                  <img src="templates/images/tuan/transparent.gif" style="width:100%; height:78px;" />
+                  <!--{/if}-->
+              </div>
+          </div>
+        <!--{/if}-->
+        <div class="content ms_center">
+            <div class="p_time" id="p_time" style="width:auto;">
+                距离秒杀{$format_ctime.time_type}还有：<span class="time_number">0</span>天<span class="time_number">0</span>时<span class="time_number">0</span>分<span class="time_number">0</span>秒
+            </div>
+        </div>
+      </form>
+        <div class="tel">
+            <a href="javascript:;" onclick="win_onload()" class="pull-left">在线咨询 <img src="http://file.easeeyes.com/wap/images/kf.jpg" /></a>
+    <a href="tel:4006177176" class="pull-right">客服：4006-177-176</a>
+        </div>
+        <div class="content zzgm">
+            <div>买了此商品的会员通常还买了</div>
+            <ul>
+                <!--{foreach from=$bought_goods item=buyg}-->
+                <li>
+                    <a href="goods.php?id={$buyg.goods_id}"><img src="{$img_url}{$buyg.goods_img}" /></a>
+                    <p class="sp01">{$buyg.goods_name}</p>
+                    <p class="sp02">￥{$buyg.shop_price}</p>
+                    <p class="sp03">￥{$buyg.market_price}</p>
+                </li>
+                <!--{/foreach}-->
+
+            </ul>
+        </div>
+        <!--<div class="box_a" id="mydiv" style="border:4px solid #2bbdd6;background: white;z-index:999;display: none;">
+            <div  style=" overflow:hidden">
+                <p style="text-align: center;">已成功添加到购物车！</p>
+                <div style="margin-top:5px ; color:#999;width:100%;overflow: hidden;">
+                    <a onclick="$('#mydiv').css('display','none')" style="width: 50%;float: left;text-align: center;">继续购物</a>
+                    <a href="flow.php" style="width: 50%;float: left;text-align: center;">去结算</a>
+                </div>
+            </div>
+        </div>-->
+
+    </div>
+
+    <div class="cpxq">
+
+        <div class="xiang_one">
+            <div><img src="{$image_url}wap/images/xiang_one.jpg"></div>
+            <div>
+                <!--{if $goods.goods_type eq 10 or $goods.goods_type eq 12}[隐形眼镜]-->
+                <!--{foreach from=$attrs item=attr name=foo}-->
+                <!--{if $attr.attr_id eq 211 or $attr.attr_id eq 219}-->
+                <div class="xiang_detail">
+                    <div class="xiang_detail_left">更换周期:</div>
+                    <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                    <div class="clear"></div>
+                </div>
+                <!--{/if}-->
+                <!--{if $attr.attr_id eq 212 or $attr.attr_id eq 220}-->
+                <div class="xiang_detail">
+                    <div class="xiang_detail_left">颜色:</div>
+                    <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                    <div class="clear"></div>
+                </div>
+                <!--{/if}-->
+                <!--{if $attr.attr_id eq 213 or $attr.attr_id eq 221}-->
+                <div class="xiang_detail">
+                    <div class="xiang_detail_left">含水量:</div>
+                    <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                    <div class="clear"></div>
+                </div>
+                <!--{/if}-->
+                <!--{if $attr.attr_id eq 214 or $attr.attr_id eq 222}-->
+                <div class="xiang_detail">
+                    <div class="xiang_detail_left">直径:</div>
+                    <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                    <div class="clear"></div>
+                </div>
+                <!--{/if}-->
+                <!--{if $attr.attr_id eq 215 or $attr.attr_id eq 223}-->
+                <div class="xiang_detail">
+                    <div class="xiang_detail_left">基弧:</div>
+                    <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                    <div class="clear"></div>
+                </div>
+                <!--{/if}-->
+                <!--{if $attr.attr_id eq 224 or $attr.attr_id eq 229}-->
+                <div class="xiang_detail">
+                    <div class="xiang_detail_left">中心厚度:</div>
+                    <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                    <div class="clear"></div>
+                </div>
+                <!--{/if}-->
+                <!--{if $attr.attr_id eq 240}-->
+                <div class="xiang_detail">
+                    <div class="xiang_detail_left">透氧系数:</div>
+                    <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                    <div class="clear"></div>
+                </div>
+                <!--{/if}-->
+                <!--{if $attr.attr_id eq 225 or $attr.attr_id eq 230}-->
+                <div class="xiang_detail">
+                    <div class="xiang_detail_left">材质:</div>
+                    <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                    <div class="clear"></div>
+                </div>
+                <!--{/if}-->
+                <!--{if $attr.attr_id eq 241 or $attr.attr_id eq 242}-->
+                <div class="xiang_detail">
+                    <div class="xiang_detail_left">单位:</div>
+                    <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                    <div class="clear"></div>
+                </div>
+                <!--{/if}-->
+                <!--{if $attr.attr_id eq 226 or $attr.attr_id eq 231}-->
+                <div class="xiang_detail">
+                    <div class="xiang_detail_left">产地:</div>
+                    <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                    <div class="clear"></div>
+                </div>
+                <!--{/if}-->
+                <!--{if $attr.attr_id eq 227 or $attr.attr_id eq 232}-->
+                <div class="xiang_detail">
+                    <div class="xiang_detail_left " >有效期:</div>
+                    <div class="xiang_detail_right " >{$attr.attr_value}&nbsp;</div>
+                    <div class="clear"></div>
+                </div>
+                <!--{/if}-->
+                <!--{if $attr.attr_id eq 228 or $attr.attr_id eq 233}-->
+                <div class="xiang_detail">
+                    <div class="xiang_detail_left ">注册号:</div>
+                    <div class="xiang_detail_right" >{$attr.attr_value}&nbsp;</div>
+                    <div class="clear"></div>
+                </div>
+                <!--{/if}-->
+
+                <!--{/foreach}-->
+                <!--{/if}-->
+
+                <!--{if $goods.goods_type eq 13 or $goods.goods_type eq 0}[护理液]-->
+                <div class="xiang_detail">
+                    <div class="xiang_detail_left">品牌:</div>
+                    <div class="xiang_detail_right">{$goods.goods_brand}&nbsp;</div>
+                    <div class="clear"></div>
+                </div>
+                <!--{foreach from=$attrs item=attr name=foo}-->
+                <!--{if $attr.attr_id eq 243}-->
+                <div class="xiang_detail">
+                    <div class="xiang_detail_left">单位:</div>
+                    <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                    <div class="clear"></div>
+                </div>
+                <!--{/if}-->
+                <!--{if $attr.attr_id eq 234}-->
+                <div class="xiang_detail">
+                    <div class="xiang_detail_left">更换周期:</div>
+                    <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                    <div class="clear"></div>
+                </div>
+                <!--{/if}-->
+                <!--{if $attr.attr_id eq 235}-->
+                <div class="xiang_detail">
+                    <div class="xiang_detail_left">主要功能:</div>
+                    <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                    <div class="clear"></div>
+                </div>
+                <!--{/if}-->
+                <!--{if $attr.attr_id eq 236}-->
+                <div class="xiang_detail">
+                    <div class="xiang_detail_left">主要成分:</div>
+                    <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                    <div class="clear"></div>
+                </div>
+                <!--{/if}-->
+                <!--{if $attr.attr_id eq 237}-->
+                <div class="xiang_detail">
+                    <div class="xiang_detail_left">产地:</div>
+                    <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                    <div class="clear"></div>
+                </div>
+                <!--{/if}-->
+                <!--{if $attr.attr_id eq 238}-->
+                <div class="xiang_detail">
+                    <div class="xiang_detail_left">有效期:</div>
+                    <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                    <div class="clear"></div>
+                </div>
+                <!--{/if}-->
+                <!--{if $attr.attr_id eq 239}-->
+                <div class="xiang_detail">
+                    <div class="xiang_detail_left">注册号:</div>
+                    <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                    <div class="clear"></div>
+                </div>
+                <!--{/if}-->
+                <!--{/foreach}-->
+                <!--{/if}-->
+
+                <!--{if $goods.goods_type eq 14}[护理工具]-->
+                <div class="xiang_detail">
+                    <div class="xiang_detail_left">品牌:</div>
+                    <div class="xiang_detail_right">{$goods.goods_brand}&nbsp;</div>
+                    <div class="clear"></div>
+                </div>
+                <div class="xiang_detail">
+                    <div class="xiang_detail_left">单位:</div>
+                    <div class="xiang_detail_right">{$goods.unit|default:盒}&nbsp;</div>
+                    <div class="clear"></div>
+                </div>
+                <!--{/if}-->
+
+                <!--{if $goods.goods_type eq 15}[框架眼镜]-->
+                <div class="xiang_detail">
+                    <div class="xiang_detail_left">品牌:</div>
+                    <div class="xiang_detail_right">{$goods.goods_brand}&nbsp;</div>
+                    <div class="clear"></div>
+                </div>
+                <!--{foreach from=$attrs item=attr name=foo}-->
+                <div class="xiang_detail">
+                    <div class="xiang_detail_left">
+                        <!--{if $attr.attr_id eq 244}-->款式
+                        <!--{elseif $attr.attr_id eq 245}-->框型
+                        <!--{elseif $attr.attr_id eq 246}-->尺寸
+                        <!--{elseif $attr.attr_id eq 247}-->材质
+                        <!--{elseif $attr.attr_id eq 248}-->颜色
+                        <!--{elseif $attr.attr_id eq 249}-->风格
+                        <!--{elseif $attr.attr_id eq 250}-->镜框尺寸
+                        <!--{elseif $attr.attr_id eq 251}-->鼻梁尺寸
+                        <!--{elseif $attr.attr_id eq 252}-->镜腿尺寸
+                        <!--{elseif $attr.attr_id eq 253}-->镜框高度
+                        <!--{elseif $attr.attr_id eq 254}-->总宽度
+                        <!--{else}--><!--{/if}-->:
+                    </div>
+                    <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                    <div class="clear"></div>
+                </div>
+                <!--{/foreach}-->
+                <div class="xiang_detail">
+                    <div class="xiang_detail_left">单位:</div>
+                    <div class="xiang_detail_right">{$goods.unit|default:副}&nbsp;</div>
+                    <div class="clear"></div>
+                </div>
+
+                <!--{/if}-->
+
+                <!--{if $goods.goods_type eq 16}[太阳眼镜]-->
+                <div class="xiang_detail">
+                    <div class="xiang_detail_left">品牌:</div>
+                    <div class="xiang_detail_right">{$goods.goods_brand}</div>
+                    <div class="clear"></div>
+                </div>
+                <!--{foreach from=$attrs item=attr name=foo}-->
+                {if $attr.attr_id< 265 || $attr.attr_id> 257}
+                <div class="xiang_detail">
+                    <div class="xiang_detail_left">
+                        <!--{if $attr.attr_id eq 258}-->款式
+                        <!--{elseif $attr.attr_id eq 259}-->框型
+                        <!--{elseif $attr.attr_id eq 260}-->尺码
+                        <!--{elseif $attr.attr_id eq 261}-->材质
+                        <!--{elseif $attr.attr_id eq 262}-->颜色
+                        <!--{elseif $attr.attr_id eq 263}-->产地
+                        <!--{elseif $attr.attr_id eq 264}-->尺寸
+                        <!--{else}--><!--{/if}-->:
+                    </div>
+                    <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                    <div class="clear"></div>
+                </div>
+                {/if}
+                <!--{/foreach}-->
+                <!--{/if}-->
+            </div>
+        </div><!--xiang_one end-->
+        <div class="xiang_two">
+            <div><img src="{$image_url}wap/images/xiang_two.png"/></div>
+        </div><!--xiang_one end-->
+        <div style="text-align: center;" class="xiang_two_box">
+            {$goods.goods_desc}
+        </div>
+    </div>
+    <div class="yhpl">
+
+        <div class="content discuss">
+            <div class="content discuss_one">
+                <div class="discuss_one_left">
+                    <p>好评率</p>
+                    <p class="percent">{$append.pre_haoping}%</p>
+                </div><!--discuss_one_left end-->
+                <div class="discuss_one_right">
+                    <div class="ju_intro">
+                        <div class="language">舒适度</div>
+                        <div class="zhishu star{$append.star_shushi}"></div>
+                    </div>
+                    <div class="ju_intro">
+                        <div class="language">美观度</div>
+                        <div class="zhishu star{$append.star_meiguan}"></div>
+                    </div>
+                    <div class="ju_intro">
+                        <div class="language">服务态度</div>
+                        <div class="zhishu star{$append.star_fuwu}"></div>
+                    </div>
+                </div><!--discuss_one_right end-->
+                <div class="clear"></div>
+            </div><!--discuss_one end-->
+            {if $comment}
+            <div class="content discuss_two" id="Scroll">
+                <!--{foreach from=$comment item=value key=key}-->
+                <div class="discuss_two_common">
+                    <div>
+                        <p class="discuss_name">{$value.user_name}</p>
+                        <p class="discuss_date">发表于{$value.add_time}</p>
+                    </div>
+                    <div class="user_discuss">{$value.content}</div>
+                    {if $value.re_comment}
+                    {foreach from=$value.re_comment item=value2 key=key2}
+                    <div class="content yishi">
+                        <div class="ys_return">{$value2.user_name}:</div>
+                        <div class="ys_return_con">{$value2.content}</div>
+                        <div class="clear"></div>
+                    </div>
+                    {/foreach}
+                    {/if}
+                    <!--yishi end-->
+                </div>
+                <!--{/foreach}-->
+            </div>
+            <div class="loading" id="nomoreresults" ><a href="goods.php?id={$goods.goods_id}&act=all_comment">点击查看更多评论.</a></div>
+            {/if}
+        </div>
+    </div>
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+<script type="text/javascript" src="{$image_url}js/transport2.js"></script>
+<script type="text/javascript" src="{$image_url}js/yijq.js"></script>
+<script type="text/javascript" src="{$image_url}js/common.js" ></script>
+<!--<script type="text/javascript" src="{$image_url}js/yi_goods.js" ></script>-->
+<script type="text/javascript" src="{$image_url}js/p_floatdiv.js"></script>
+<script type="text/javascript" src="{$image_url}js/p_thickbox.js"></script>
+<!--<script type="text/javascript" src="{$image_url}js/p_big_img.js" ></script>-->
+<script type="text/javascript" data="type=tools&amp;uid=803367" id="bdshare_js"></script>
+<script type="text/javascript" id="bdshare_js" data="type=tools" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
+</script>
+<script type="text/javascript" src="{$image_url}js/lazyload.js"></script>
+
+<script language="javascript">
+    function add_cart_miaosha(goods_id, typed)
+    {
+        //ajax判断这个商品能否加入购物车，能加入购物车则产品的数量自动设定成为1.
+        $.ajax({
+            type:'POST',
+            url:'ajax_active.php?act=weekly_miaosha',
+            data:'&goods_id='+goods_id+'&m='+Math.random(),
+            cache:false,
+            success:
+                    function(da){
+                        //document.write(da);false;
+                        //alert(da);return false;
+                        if(da == 1)
+                        {
+                            var go_cart = true;
+                            if (typed == 1) {
+                                //有度数商品
+                                var ms_number = '{$ms.ms_number}';
+                                //zselect=(document.ECS_FORMBUY.left_eye_ds.value);
+                                //yselect=(document.ECS_FORMBUY.right_eye_ds.value);
+                                //alert(check);return false;
+                                <!--{if $goods.goods_type eq 15}[框架眼镜]-->
+                                var zcheck = document.getElementById("left_eye_ds");
+                                var ycheck = document.getElementById("right_eye_ds");
+                                <!--{else}-->
+                                var zcheck = "";
+                                zselect = document.getElementsByName('left_eye_ds');
+                                for(var i=0;i<zselect.length;i++){
+                                    if(zselect[i].checked){
+                                        zcheck = i;
+                                        break;
+                                    }
+                                }
+                                if(ms_number > 1){
+                                    var ycheck = "";
+                                    yselect = document.getElementsByName('right_eye_ds');
+                                    for(var i=0;i<yselect.length;i++){
+                                        if(yselect[i].checked){
+                                            ycheck = i;
+                                            break;
+                                        }
+                                    }
+                                }
+                                <!--{/if}-->
+                                if (ms_number == '1') {
+                                    if (zcheck.length == 0) {
+                                        alert('请选择眼镜度数');
+                                        return false;
+                                    }
+
+                                } else if (ms_number == '2') {
+                                    if (zcheck < 0 || ycheck < 0) {
+                                        alert('请选择眼镜度数');
+                                        return false;
+                                    }
+                                }
+                            } else {
+                                //无度数
+                            }
+                            if (go_cart == true) {
+                                $('#ECS_FORMBUY').submit()
+                            }
+
+                        }
+                        else if (da == 2)
+                        {
+                            alert('很抱歉,您已购买过秒杀商品,或商品已加入购物车');
+                            return false;
+                        }
+                        else if (da == 5)
+                        {
+                            alert('请先登录,在进行秒杀活动');
+                            return false;
+                        }
+                        else if (da == 4)
+                        {
+                            alert('你的会员等级不够,不能进行秒杀活动');
+                            return false;
+                        }
+                        else if (da == 6)
+                        {
+                            alert('活动期间您未使用过招行卡支付,不能进行秒杀活动');
+                            return false;
+                        }
+                        else if (da == -1)
+                        {
+                            alert('活动已经结束');
+                            return false;
+                        }
+                        else if (da == 0)
+                        {
+                            alert('很抱歉,活动商品已被抢完,欢迎下次再抢');
+                            return false;
+                        }else{
+                            return false;
+                        }
+                    }
+        });
+    }
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".product_more img, .product_tlf_tedian img, .mjx_pan img").lazyload({placeholder:"/js/img/white.gif", effect:"fadeIn"});
+});
+
+/**
+ * 倒计时
+ * 参数：截至时间的年、月、日、时、分, 以及操作的div名称、提示语
+ */
+function ShowCountDown(year, month, day, param_hour, param_minute, divname, tips) { 
+	var now = new Date(); 
+	var endDate = new Date(year, month-1, day, param_hour, param_minute);
+	var leftTime=endDate.getTime()-now.getTime(); 
+	var leftsecond = parseInt(leftTime/1000); 
+	var day1=Math.floor(leftsecond/(60*60*24)); 
+	var hour=Math.floor((leftsecond-day1*24*60*60)/3600); 
+	var minute=Math.floor((leftsecond-day1*24*60*60-hour*3600)/60); 
+	var second=Math.floor(leftsecond-day1*24*60*60-hour*3600-minute*60); 
+	var cc = document.getElementById(divname); 
+    
+    var num_over = '{$num_over}';
+    
+    if(num_over == '-1'){
+       
+        cc.innerHTML = '秒杀商品已经卖完';
+    }else{
+        //alert(day1 + '-' + hour + ':' + minute + ':' + second);
+    	if (day1 <= -1) {
+    		cc.innerHTML = '<span class="time_number">0</span>天<span class="time_number">0</span>时<span class="time_number">0</span>分<span class="time_number">0</span>秒';
+    	} else {
+    		cc.innerHTML = '<span class="time_number">'+day1+'</span>天<span class="time_number">'+hour+'</span>时<span class="time_number">'+minute+'</span>分<span class="time_number">'+second+'</span>秒';
+    	}
+        
+    }
+    
+	
+}
+var c_Y = '{$format_ctime.Y}';
+var c_n = '{$format_ctime.n}';
+var c_j = '{$format_ctime.j}';
+var c_G = '{$format_ctime.G}';
+var c_i = '{$format_ctime.i}';
+window.setInterval(function(){ShowCountDown(c_Y, c_n, c_j, c_G, c_i, 'p_time', '');}, 1000);
+
+</script>
+<script type="text/javascript" src="{$image_url}wap/js/goods.js"></script>
+<script src="http://file.easeeyes.com/wap/js/touch.js"></script>
+<script src="http://file.easeeyes.com/wap/js/chooseInfo.js"></script>
+<script>
+//banner轮播
+function TouchSlide(opts){
+    var opts=opts||{};
+    this.count=0;
+    this.auto=opts.auto||false;
+    this.elem=opts.elem;
+    this.len=opts.len||this.elem.getElementsByTagName("li").length;
+    this.width=opts.width;
+    this.init.apply(this,arguments);
+}
+TouchSlide.prototype={
+    constructor:TouchSlide,
+    move:function(points){
+        if(this.count>=this.len-1){
+            this.count=0;
+        }else{
+            this.count++;
+        }
+        this.elem.style.left=-this.count*this.width+"px";
+        var i,
+                point=points.getElementsByTagName("li"),
+                len=point.length;
+        for(i=0;i<len;i++){
+            point[i].className="";
+        }
+        point[this.count].className="selected";
+    },
+    isAuto:function(points){
+        var that=this;
+        if(that.auto){
+            that.mover=setInterval(function(){
+                that.move(points);
+            },that.auto);
+        }
+    },
+    createPoints:function(){
+        var i,
+                points=document.createElement("ul");
+        points.className="points";
+        for(i=0;i<this.len;i++){
+            points.appendChild(document.createElement("li"));
+        }
+        this.elem.parentNode.appendChild(points);
+        return points;
+    },
+    binder:function(points){
+        var initp={},
+                movep={},
+                endp={},
+                xpos,
+                that=this;
+        this.elem.addEventListener("touchstart",function(e){
+            if(that.mover) clearInterval(that.mover);
+            xpos=parseInt(this.style.left)||0;
+            initp=touchEvent.getPos(e);
+        },false);
+        this.elem.addEventListener("touchmove",function(e){
+            movep=touchEvent.getPos(e);
+            this.style.left=xpos+movep.mx-initp.x+"px";
+        },false);
+        this.elem.addEventListener("touchend",function(e){
+            endp=touchEvent.getPos(e);
+            var dir=touchEvent.getDirect(initp.x,endp.ex,initp.y,endp.ey);
+            if(dir=="left"){
+                if(Math.abs(endp.ex-initp.x)>30){
+                    if(that.count>=that.len-1){
+                        that.count=that.len-1
+                    }else{
+                        that.count++;
+                    }
+                }
+            }else if(dir=="right"){
+                if(Math.abs(endp.ex-initp.x)>30){
+                    if(that.count<=0){
+                        that.count=0;
+                    }else{
+                        that.count--;
+                    }
+                }
+            }
+            var i,
+                    point=points.getElementsByTagName("li"),
+                    len=point.length;
+            for(i=0;i<len;i++){
+                point[i].className="";
+            }
+            this.style.left=-that.count*that.width+"px";
+            point[that.count].className="selected";
+            that.isAuto(points);
+        },false);
+    },
+    init:function(){
+        var points=this.createPoints();
+        points.getElementsByTagName("li")[0].className="selected";
+        this.binder(points);
+        this.isAuto(points);
+    }
+};
+window.addEventListener("load",function(){
+    //调用
+    var s1=new TouchSlide({
+        elem:document.getElementById("ts-01"),
+        width:parseInt(document.getElementById("slider-01").clientWidth),
+        auto:false
+    });
+},false);  
+
+function win_onload() {
+        var result = confirm("确认打开QQ与易视客服在线聊天？");
+        if (result == true) {
+            window.location.href = 'http://crm2.qq.com/page/portalpage/wpa.php?uin=4006177176&aty=0&a=0&curl=&ty=1';
+        }
+        else {
+            window.location.href = 'http://crm2.qq.com/page/portalpage/wpa.php?uin=4006177176&aty=0&a=0&curl=&ty=1';
+        }
+    }
+
+// 度数提示
+try{
+    /*
+    var glass_degree=null,
+        degrees=Array.prototype.slice.call(document.getElementsByClassName("ds_radio_div"),0),
+        degree_info,
+        degree_info_box=document.getElementById("glass-info");
+    degree_info_box.innerHTML="请选择度数";
+    degrees.forEach(function(degree){
+        degree.addEventListener("click",function(){
+            degree_info=this.getElementsByTagName("input")[0].value;
+            if(degree_info){
+                glass_degree=degree_info;
+                degree_info_box.innerHTML="已选 "+glass_degree+" 度";
+            }else{
+                degree_info_box.innerHTML="请选择度数";
+            }
+        },false);
+    });
+    */
+    var choose_info_1=new ChooseInfo({
+        btns:document.querySelectorAll("#ds_radio_list_1 .ds_radio_div"),
+        chooseInfo:document.getElementById("glass-info")
+    }); 
+    var choose_info_2=new ChooseInfo({
+        btns:document.querySelectorAll("#ds_radio_list_2 .ds_radio_div"),
+        chooseInfo:document.getElementById("glass-info-y")
+    });
+}catch(e){
+    //
+}
+
+</script>
+</html>

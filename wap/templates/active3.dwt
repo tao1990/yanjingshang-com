@@ -1,0 +1,1401 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>老瞳学专场</title><meta name="Keywords"  content="易视网，易视眼镜网，框架眼镜、太阳镜、护理工具、美瞳、护理液" /><meta name="Description" content="积分特惠场，省钱，积分换礼，VIP专享，欢乐大转盘" />
+
+<link type="text/css" rel="stylesheet" href="http://file.easeeyes.com/css/base.css"/>
+<link href="themes/default/style/pop_com.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="http://file.easeeyes.com/index2015/css/base.css" />
+
+</head>
+
+<style>
+@charset "utf-8";
+/* CSS Document */
+/**修正相关搜索位置**/
+.ac_results{top:85px !important;}
+
+body,div,span { margin:0; padding:0; }
+img { border:0; }
+.logo {width:36px; height: 36px}
+.clear {clear:both; width:0; height:0; }
+.mb25{
+	margin-bottom:25px;
+}
+.mb30{
+	margin-bottom:30px;
+}
+.mb35{
+	margin-bottom:35px;
+}
+.mb45{
+	margin-bottom:45px;
+}
+.banner{
+	height:514px;
+	background:url(http://img.easeeyes.com/promotion/2015080107/banner.jpg) no-repeat center top;
+}
+.container{
+	width:990px;
+	margin:auto;
+}
+.active-main{
+	background:#ff9700;
+	/*margin-top:-10px;*/
+	padding-bottom:20px;
+}
+.active-nav{
+	position:fixed;
+	right:10px;
+	top:140px;
+}
+.active-nav-left{
+	right:auto;
+	left:10px;
+}
+.active-navlist{
+	background:url(http://img.easeeyes.com/promotion/2015080107/01.jpg) no-repeat center top;
+}
+.active-box{
+	width:1334px;
+	margin:auto;
+	background:url(http://img.easeeyes.com/promotion/2015080107/bg.jpg) repeat-y center top;
+}
+.text-center{
+	text-align:center;
+}
+/*手机 邮箱验证板块*/
+.aj_lg_tishi{width:100px; text-indent:10px; color:red;}
+.aj_lg_error{width:100%; height:12px; line-height:12px; color:red; text-indent:102px;}
+
+.at_ck_input{width:188px; height:28px; line-height:28px; font-size:16px; letter-spacing:1px; text-indent:2px; color:#ccc; border:1px solid #dcdcdc;}
+
+.mobile_ck_bt{width:70px; height:32px; line-height:32px; text-align:center; color:#666; letter-spacing:1px; margin-left:16px; display:block; background:url(themes/default/images/login/pop_lg_bt.png) no-repeat 0 -1px;}
+.mobile_ck_bt:hover{color:#8e8e8e; text-decoration:none;}
+.mb_ck_li{width:320px; height:32px; margin:24px 0 0 50px;}
+.mb_ck_ts{width:100%; height:16px; line-height:16px; color:red; text-indent:50px;}
+.mbck2{background-position:0 -63px; color:white; font-size:16px; font-weight:bolder; letter-spacing:8px;}
+.mbck2:hover{color:white; background-position:0 -94px;}
+.mbck_pan{width:408px; height:230px;}
+
+/*每周活动css*/
+#weekly_active { margin:0; padding:0; width:990px; height:224px; overflow:hidden; }
+#weekly_active li { float:left; list-style:none; width:120px; height:224px; background-color:white; cursor:pointer; }
+.current_week { width:510px !important; background-position:-120px 0px !important; }
+#week1 { background: url(http://img.easeeyes.com/promotion/weekly/1.jpg) no-repeat; }
+#week2 { background: url(http://img.easeeyes.com/promotion/weekly/2.jpg) no-repeat; }
+#week3 { background: url(http://img.easeeyes.com/promotion/weekly/3.jpg) no-repeat; }
+#week4 { background: url(http://img.easeeyes.com/promotion/weekly/4.jpg) no-repeat; }
+#week5 { background: url(http://img.easeeyes.com/promotion/weekly/5.jpg) no-repeat; }
+</style>
+
+
+
+<body>
+<div class="pop_shadow"></div>
+
+<div id="lg_pan">
+    <ul class="lg_head"><li class="lg_head_left lg_rg_title">登录易视网</li><li class="lg_head_right"><a href="javascript:;" onclick="lg_pan_close()"></a></li></ul>        
+    <ul class="lg_content">
+        <li class="lg_con_left">
+            <ul>
+                <form action="" name="login_form">
+                <li class="aj_lg_error"></li>
+                <li class="lg_con_tr1">
+                    <dl><dd class="lg_con_td1 lg_pan_txt">用户名或Email：</dd>
+                    <dd class="lg_con_td2"><input type="text" name="username" id="aj_lg_name" class="lg_con_input" value=""/></dd><dd class="ts_li"></dd></dl>
+                </li>
+                <li class="lg_con_tr1">
+                    <dl>
+                        <dd class="lg_con_td1 lg_pan_txt">密 &nbsp;码：</dd><dd class="lg_con_td2"><input type="password" name="password" id="aj_lg_pwd" class="lg_con_input" value=""/></dd>
+                        <dd style="width:80px; margin-left:10px;"><a href="user.php?act=get_password">忘记密码？</a></dd>
+                    </dl>
+                </li>
+                <li class="lg_con_tr2"><dl><dd class="lg_con_td3"><input type="checkbox" name="autologin" id="aj_lg_auto" value=""/></dd><dd class="lg_con_td4">下次自动登录</dd></dl></li>
+                <li class="lg_con_tr3"><dl><dd><a href="javascript:;" onclick="ajax_login()" class="lg_btn1" title="登录"></a></dd></dl></li>
+                <li class="lg_con_tr4">
+                    <dl class="lg_union">
+                        <dd><a href="/api/alipay/alipay_auth_authorize.php" class="lg_union_t1">支付宝登录</a></dd>
+                        <dd><a href="/api/qq/oauth/redirect_to_login.php?jump=fd" class="lg_union_t2">QQ登录</a></dd>
+                        <dd><a href="/api/douban/index.php" class="lg_union_t3">豆瓣账号登录</a></dd>
+                        <dd><a href="/api/sina/weibodemo/index.php" class="lg_union_t4" style="border-right:none; margin-right:0;">新浪微博登录</a></dd>
+                    </dl>
+                </li>
+                </form>                                                                           
+            </ul>           
+        </li>
+        <li class="lg_con_right">
+            <ul class="lg_con_r_ul">
+                <li class="lg_turn_li">没有易视网账号？</li>
+                <li class="lg_turn_li red">注册就送100积分！</li>
+                <li class="lg_turn_bt"><a href="javascript:;" onclick="change_lg_pan(1)"></a></li>
+            </ul>
+        </li>
+    </ul>      
+    <ul class="lg_content rg_pan">
+        <li class="lg_con_left">
+            <ul id="reg_ul" style="margin-top:8px;">
+                <form action="" name="regist_form">
+                <li class="lg_con_tr1">
+                    <dl><dd class="lg_con_td1">用户名：</dd>
+                    <dd class="lg_con_td2"><input type="text" name="username" class="lg_con_input" value="" /></dd><dd class="ts_li" id="username_notice"></dd></dl>
+                </li>                
+                <li class="lg_con_tr1">
+                    <dl><dd class="lg_con_td1">密 &nbsp;码：</dd>
+                    <dd class="lg_con_td2"><input type="password" name="password" id="password1"  class="lg_con_input" value=""/></dd><dd class="ts_li" id="password_notice"></dd></dl>
+                </li>                
+                <li class="lg_con_tr1">
+                    <dl><dd class="lg_con_td1">确认密码：</dd>
+                    <dd class="lg_con_td2"><input type="password" name="confirm_password" class="lg_con_input" value=""/></dd><dd class="ts_li" id="conform_password_notice"></dd></dl>
+                </li>                
+                <li class="lg_con_tr1">
+                    <dl><dd class="lg_con_td1">Email：</dd>
+                    <dd class="lg_con_td2"><input type="text" name="email" class="lg_con_input" value=""/></dd><dd class="ts_li" id="email_notice"></dd></dl>
+                </li>                
+                <li class="lg_con_tr1">
+                    <dl><dd class="lg_con_td1">手机号码：</dd>
+                    <dd class="lg_con_td2"><input type="text" name="extend_field5" class="lg_con_input" value=""/></dd><dd class="ts_li" id="mobile_notice"></dd></dl>
+                </li>                                 
+                <li class="lg_con_tr2"><dl><dd class="lg_con_td3"><input type="checkbox" name="agreement" checked="checked" /></dd><dd class="lg_con_td4">我已看过并接受《<a href="article-112.html">用户协议</a>》</dd></dl></li>
+                <li class="lg_con_tr3"><dl><dd><a href="javascript:;" class="lg_btn1 lg_btn3" id="regist_bt" title="立即注册"></a></dd></dl></li>
+                <input type="hidden" name="u_can_reg" id="u_can_reg" value="0"/><input type="hidden" name="e_can_reg" id="e_can_reg" value="0"/>
+                </form>
+            </ul>           
+        </li>
+        <li class="lg_con_right">
+            <ul class="lg_con_r_ul" style="margin-top:20px;">
+            	<li class="lg_turn_li">已有易视网账号？</li>
+                <li class="lg_turn_bt"><a href="javascript:;" onclick="change_lg_pan(2)" style="width:117px; height:34px; margin-top:5px; background:url(../themes/default/images/login/user.gif) no-repeat 0 -115px; display:block;"></a></li>	<li><a href="/api/alipay/alipay_auth_authorize.php" class="lg_union_a lg_union_t1">支付宝登录</a></li>
+                <li><a href="/api/qq/oauth/redirect_to_login.php" class="lg_union_a lg_union_t2">QQ登录</a></li>
+                <li><a href="/api/douban/index.php" class="lg_union_a lg_union_t3">豆瓣账号登录</a></li>
+                <li><a href="/api/sina/weibodemo/index.php" class="lg_union_a lg_union_t4">新浪微博登录</a></li>
+            </ul>
+        </li>
+    </ul>      
+</div>
+  
+  
+
+<div id="mb_ck" class="pop_pan mbck_pan"><input type="hidden" id="get_user_id" value="0"/><input type="hidden" id="get_mb_ck" value=""/><input type="hidden" id="get_email_ck" value=""/>
+	<input type="hidden" id="get_user_email" value="" />    
+    
+    <input type="hidden" id="get_ck_type" value="0" />
+    
+	<ul class="lg_head" style="width:400px;"><li class="lg_head_left" style="width:200px;">易视网手机认证</li><li class="lg_head_right"><a href="javascript:;" onclick="pop_pan_close('mb_ck')"></a></li></ul> 
+    <ul class="lg_content" style="width:380px; height:168px;">
+		<li class="mb_ck_li"><dl><dd><input type="text" name="mobile" id="get_u_tel" class="at_ck_input" value="请输入手机号码"/></dd><dd><a class="mobile_ck_bt" href="javascript:;" onclick="send_mobile_code()">获取验证码</a></dd></dl></li>     
+        <li class="mb_ck_ts tishi"></li>
+		<li class="mb_ck_li"><dl><dd><input type="text" name="mobile" id="get_mb_code" class="at_ck_input"/></dd><dd><a class="mobile_ck_bt mbck2" href="javascript:;" onclick="ck_mobile_code()">验证</a></dd></dl></li>     
+        <li class="mb_ck_ts"></li> 
+    </ul>  
+</div>
+
+<div id="mb_ck_res" class="pop_pan mbck_pan">
+	<ul class="lg_head" style="width:400px;"><li class="lg_head_left" style="width:200px;">易视网手机认证</li><li class="lg_head_right"><a href="javascript:;" onclick="pop_pan_close('mb_ck_res')"></a></li></ul> 
+    <ul class="lg_content" style="width:380px; height:168px;">
+		<li class="mb_res_li1"> 恭喜您 手机验证成功！</li>
+        <li class="mb_res_li2">已将<font class="red">400积分</font>打人您的账户，可进入<a href="user.html">我的易视</a>查看</li>
+        <li class="mb_res_li3"><a href="exchange.html" class="mb_ck_ok_bt">用积分去购物</a></li>
+    </ul>  
+</div>
+     
+
+    
+<div id="email_ck" class="pop_pan mbck_pan">
+	<ul class="lg_head" style="width:400px;"><li class="lg_head_left" style="width:200px;">易视网邮箱认证</li><li class="lg_head_right"><a href="javascript:;" onclick="pop_pan_close('email_ck')"></a></li></ul> 
+    <ul class="lg_content" style="width:380px; height:168px;">
+		<li class="mb_res_li1">您的邮箱:<span id="user_rg_email"></span></li>
+        <li class="mb_res_li2 mb_res_li4">（如需更改当前会员注册邮箱，请在<a href="user_profile.html" class="red">我的易视</a>中进行修改）</li>
+        <li class="mb_res_li3" id="user_rg_emurl"><a href="javascript:;" onclick="fn_ck_email()" class="mb_ck_ok_bt">点击验证邮箱</a></li>
+    </ul>  
+</div>
+
+<div id="email_ck_res" class="pop_pan mbck_pan">
+	<ul class="lg_head" style="width:400px;"><li class="lg_head_left" style="width:200px;">易视网邮箱认证</li><li class="lg_head_right"><a href="javascript:;" onclick="pop_pan_close('email_ck_res')"></a></li></ul> 
+    <ul class="lg_content" style="width:380px; height:168px;">
+		<li class="mb_res_li1"> 恭喜您 邮箱验证成功！</li>
+        <li class="mb_res_li2">已将<font class="red">300积分</font>打人您的账户，可进入<a href="user.html">我的易视</a>查看</li>
+        <li class="mb_res_li3"><a href="exchange.html" class="mb_ck_ok_bt">用积分去购物</a></li>
+    </ul>  
+</div>
+
+<div id="ask_email_ck" class="pop_pan mbck_pan">
+	<ul class="lg_head" style="width:400px;"><li class="lg_head_left" style="width:200px;">易视网邮箱认证</li><li class="lg_head_right"><a href="javascript:;" onclick="pop_pan_close('ask_email_ck')"></a></li></ul> 
+    <ul class="lg_content" style="width:380px; height:168px;">
+		<li class="mb_res_li1">您的邮箱:<span id="user_rg_email2"></span></li>
+        <li class="mb_res_li3"><a href="javascript:;" onclick="ck_email_ok()" class="mb_ck_ok_bt" style="float:left;">已验证成功</a>
+        <a href="javascript:;" onclick="re_ck_email()" class="mb_ck_ok_bt" style="float:right;">重新验证</a>
+        </li>
+    </ul>  
+</div>
+    
+
+<div id="com_message_pan" class="pop_pan mbck_pan">
+	<ul class="lg_head" style="width:400px;"><li class="lg_head_left" style="width:200px;">易视网提示信息</li><li class="lg_head_right"><a href="javascript:;" onclick="pop_pan_close('com_message_pan')"></a></li></ul> 
+    <ul class="lg_content" style="width:380px; height:168px;">
+		<li class="mb_res_li1 com_msg_txt" id="com_msg_pan"></li>
+        <li class="mb_res_li3"><a href="javascript:;" onclick="pop_pan_close('com_message_pan')" class="mb_ck_ok_bt">关闭</a></li>
+    </ul>  
+</div>
+
+
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<div class="active-main">
+	<div class="active-nav">
+		<img src="http://img.easeeyes.com/promotion/2015080107/nav.png" border="0" usemap="#Map21" />
+<map name="Map21" id="Map21">
+  <area shape="rect" coords="22,76,145,105" href="qiyeqq.html" />
+  <area shape="rect" coords="24,109,143,132" href="http://www.easeeyes.com/active150801.html" />
+  <area shape="rect" coords="24,133,147,160" href="#f6" />
+  <area shape="rect" coords="26,159,147,187" href="#f1" />
+  <area shape="rect" coords="26,189,143,213" href="#f2" />
+  <area shape="rect" coords="30,216,142,242" href="#f3" />
+<area shape="rect" coords="31,246,135,269" href="#f4" />
+<area shape="rect" coords="37,273,138,295" href="#f41" />
+<area shape="rect" coords="35,299,139,320" href="#f42" />
+<area shape="rect" coords="35,321,145,342" href="#f43" />
+<area shape="rect" coords="34,343,143,367" href="#f44" />
+<area shape="rect" coords="30,400,136,425" href="#f0" />
+<area shape="rect" coords="37,370,140,398" href="#f5" />
+</map>
+  </div>
+	<!-- #BeginLibraryItem "/library/nav_201508.lbi" --><!-- #EndLibraryItem -->
+	<!--banner-->
+	<div class="banner" id="f0">
+	</div>
+	<!--导航-->
+	<div class="active-navlist">
+		<div class="container">
+			<img src="http://img.easeeyes.com/promotion/2015080107/02.jpg" border="0" usemap="#Map" />
+<map name="Map" id="Map">
+  <area shape="rect" coords="201,110,356,178" href="#f1" /><area shape="rect" coords="39,106,190,181" href="#f6" />
+<area shape="rect" coords="361,112,513,182" href="#f2" />
+<area shape="rect" coords="516,112,691,177" href="#f3" />
+<area shape="rect" coords="685,112,830,176" href="#f4" />
+<area shape="rect" coords="836,110,983,176" href="#f5" />
+</map>
+	  </div>
+	</div>
+	<!--内容区-->
+	<div class="active-box">
+		<!--赚积分-->
+		<div class="container" id="f6">
+			<h1 class="mb25"><img src="http://img.easeeyes.com/promotion/2015080107/24.jpg" border="0" usemap="#Map23" />
+<map name="Map23" id="Map23">
+  <area shape="rect" coords="234,45,350,101" href="#f1" />
+  <area shape="rect" coords="383,36,489,95" href="#f2" />
+  <area shape="rect" coords="534,38,668,101" href="#f3" /><area shape="rect" coords="693,42,816,102" href="#f4" />
+  <area shape="rect" coords="836,43,965,95" href="#f5" />
+</map></h1>
+			<div class="mb25">
+				<img src="http://img.easeeyes.com/promotion/2015080107/25.jpg" border="0" usemap="#Map24" />
+<map name="Map24" id="Map24"><area shape="rect" coords="643,192,815,269" href="javascript:;" onclick="bt_to_reg()" /><area shape="rect" coords="726,603,890,677" href="javscript:;" onclick="mobile_ck()" /><area shape="rect" coords="183,930,360,998" href="javascript:;" onclick="email_ck()" /></map>
+		  </div>
+		</div>
+		<!--省钱王-->
+		<div class="container" id="f1">
+			<h1><img src="http://img.easeeyes.com/promotion/2015080107/03.jpg" border="0" usemap="#Map2" />
+<map name="Map2" id="Map2">
+  <area shape="rect" coords="44,53,149,119" href="#f6" />
+<area shape="rect" coords="527,47,681,112" href="#f3" />
+<area shape="rect" coords="700,46,843,114" href="#f4" />
+<area shape="rect" coords="848,45,978,111" href="#f5" />
+<area shape="rect" coords="378,43,506,112" href="#f2" />
+</map></h1>
+			<div class="">
+				<img src="http://img.easeeyes.com/promotion/2015080107/04.jpg" border="0" usemap="#Map3" />
+<map name="Map3" id="Map3"><area shape="rect" coords="92,258,185,285" href="http://www.easeeyes.com/ex_coupon-10.html" />
+<area shape="rect" coords="310,256,404,288" href="http://www.easeeyes.com/ex_coupon-8.html" />
+<area shape="rect" coords="529,257,628,287" href="http://www.easeeyes.com/ex_coupon-31.html" />
+<area shape="rect" coords="751,259,845,286" href="http://www.easeeyes.com/ex_coupon-32.html" />
+</map>
+		  </div>
+		</div>
+		<!--gift-->
+		<div class="container" id="f2">
+			<h1 class="mb35"><img src="http://img.easeeyes.com/promotion/2015080107/05.jpg" border="0" usemap="#Map4" />
+<map name="Map4" id="Map4">
+  <area shape="rect" coords="203,80,318,133" href="#f1" /><area shape="rect" coords="38,87,159,136" href="#f6" />
+<area shape="rect" coords="532,75,667,131" href="#f3" />
+<area shape="rect" coords="686,77,808,135" href="#f4" />
+<area shape="rect" coords="829,73,982,126" href="#f5" />
+</map></h1>
+			<div class="mb35">
+				<img src="http://img.easeeyes.com/promotion/2015080107/06.jpg" border="0" usemap="#Map5" />
+<map name="Map5" id="Map5"><area shape="rect" coords="10,9,328,209" href="http://www.easeeyes.com/exchange216_zk.html" />
+<area shape="rect" coords="8,216,169,496" href="http://www.easeeyes.com/exchange279_zk.html" />
+<area shape="rect" coords="176,216,329,497" href="http://www.easeeyes.com/exchange201_zk.html" /><area shape="rect" coords="339,341,744,496" href="http://www.easeeyes.com/exchange252_zk.html" />
+<area shape="rect" coords="751,340,983,496" href="http://www.easeeyes.com/exchange156_zk.html" />
+<area shape="rect" coords="671,174,981,335" href="http://www.easeeyes.com/exchange207_zk.html" /><area shape="rect" coords="671,9,981,170" href="http://www.easeeyes.com/exchange148_zk.html" />
+</map>
+		  </div>
+			<div class="mb45">
+				<img src="http://img.easeeyes.com/promotion/2015080107/07.jpg" border="0" usemap="#Map6" />
+<map name="Map6" id="Map6"><area shape="rect" coords="9,8,328,206" href="http://www.easeeyes.com/exchange4084.html" />
+<area shape="rect" coords="9,212,170,493" href="http://www.easeeyes.com/exchange634.html" />
+<area shape="rect" coords="178,214,330,493" href="http://www.easeeyes.com/exchange3010.html" /><area shape="rect" coords="340,340,742,495" href="http://www.easeeyes.com/exchange3221.html" />
+<area shape="rect" coords="749,343,983,492" href="http://www.easeeyes.com/exchange.html " />
+<area shape="rect" coords="673,174,980,333" href="http://www.easeeyes.com/exchange642.html" />
+<area shape="rect" coords="672,7,981,165" href="http://www.easeeyes.com/exchange303.html" />
+</map>
+		  </div>
+		</div>
+		<!--大转盘-->
+		<div class="container" id="f3">
+			<h1><img src="http://img.easeeyes.com/promotion/2015080107/08.jpg" border="0" usemap="#Map7" />
+<map name="Map7" id="Map7">
+  <area shape="rect" coords="190,38,335,94" href="#f1" />
+<area shape="rect" coords="348,31,505,93" href="#f2" />
+<area shape="rect" coords="688,34,831,102" href="#f4" />
+<area shape="rect" coords="838,39,982,95" href="#f5" />
+<area shape="rect" coords="37,46,155,97" href="#f6" />
+</map></h1>
+			<div class="">
+				<img src="http://img.easeeyes.com/promotion/2015080107/09.jpg" border="0" usemap="#Map20" />
+<map name="Map20" id="Map20"><area shape="rect" coords="690,131,818,261" href="http://www.easeeyes.com/exchange.html" />
+</map>
+		  </div>
+		</div>
+		<!--vip-->
+		<div class="container" id="f4">
+			<h1><img src="http://img.easeeyes.com/promotion/2015080107/10.jpg" border="0" usemap="#Map8" />
+<map name="Map8" id="Map8">
+  <area shape="rect" coords="205,41,334,101" href="#f1" /><area shape="rect" coords="49,48,168,107" href="#f6" />
+<area shape="rect" coords="355,39,483,94" href="#f2" />
+<area shape="rect" coords="508,37,655,94" href="#f3" />
+<area shape="rect" coords="835,38,976,93" href="#f5" />
+</map></h1>
+			<div class="mb30">
+				<img src="http://img.easeeyes.com/promotion/2015080107/11.jpg" />
+			</div>
+			<div class="mb35" id="f41">
+				<img src="http://img.easeeyes.com/promotion/2015080107/12.jpg" border="0" usemap="#Map9" />
+<map name="Map9" id="Map9"><area shape="rect" coords="38,115,258,434" href="http://www.easeeyes.com/goods118.html" />
+<area shape="rect" coords="267,114,488,434" href="http://www.easeeyes.com/goods105.html" />
+<area shape="rect" coords="496,116,720,433" href="http://www.easeeyes.com/goods104.html" />
+<area shape="rect" coords="731,114,947,431" href="http://www.easeeyes.com/goods140.html" />
+</map>
+				<img src="http://img.easeeyes.com/promotion/2015080107/13.jpg" border="0" usemap="#Map10" />
+<map name="Map10" id="Map10"><area shape="rect" coords="36,10,256,327" href="http://www.easeeyes.com/goods103.html" />
+<area shape="rect" coords="267,11,487,327" href="http://www.easeeyes.com/goods130.html" />
+<area shape="rect" coords="498,8,717,325" href="http://www.easeeyes.com/goods1045.html" />
+<area shape="rect" coords="726,9,948,328" href="http://www.easeeyes.com/goods1097.html" />
+</map>
+		  </div>
+			<div class="mb35" id="f42">
+				<img src="http://img.easeeyes.com/promotion/2015080107/14.jpg" border="0" usemap="#Map11" />
+<map name="Map11" id="Map11"><area shape="rect" coords="37,112,259,431" href="http://www.easeeyes.com/goods1179.html" />
+<area shape="rect" coords="269,111,486,433" href="http://www.easeeyes.com/goods359.html" />
+<area shape="rect" coords="498,111,716,432" href="http://www.easeeyes.com/goods896.html" />
+<area shape="rect" coords="726,111,951,432" href="http://www.easeeyes.com/goods4282.html" />
+</map>
+				<img src="http://img.easeeyes.com/promotion/2015080107/15.jpg" border="0" usemap="#Map12" />
+<map name="Map12" id="Map12"><area shape="rect" coords="37,11,255,327" href="http://www.easeeyes.com/goods901.html" />
+<area shape="rect" coords="271,8,484,327" href="http://www.easeeyes.com/goods816.html" />
+<area shape="rect" coords="499,8,716,324" href="http://www.easeeyes.com/goods812.html" />
+<area shape="rect" coords="729,7,946,320" href="http://www.easeeyes.com/goods916.html" />
+</map>
+		  </div>
+			<div class="mb35" id="f43">
+				<img src="http://img.easeeyes.com/promotion/2015080107/16.jpg" border="0" usemap="#Map13" />
+<map name="Map13" id="Map13"><area shape="rect" coords="41,114,257,429" href="http://www.easeeyes.com/goods599.html" />
+<area shape="rect" coords="270,113,488,434" href="http://www.easeeyes.com/goods1013.html" />
+<area shape="rect" coords="498,114,717,432" href="http://www.easeeyes.com/goods633.html" />
+<area shape="rect" coords="730,110,950,432" href="http://www.easeeyes.com/goods1065.html" />
+</map>
+				<img src="http://img.easeeyes.com/promotion/2015080107/17.jpg" border="0" usemap="#Map14" />
+<map name="Map14" id="Map14"><area shape="rect" coords="35,8,254,323" href="http://www.easeeyes.com/goods592.html" />
+<area shape="rect" coords="267,6,487,326" href="http://www.easeeyes.com/goods596.html" />
+<area shape="rect" coords="498,8,718,327" href="http://www.easeeyes.com/goods580.html" />
+<area shape="rect" coords="729,7,949,326" href="http://www.easeeyes.com/goods632.html" />
+</map>
+		  </div>
+			<div class="mb25" id="f44">
+				<img src="http://img.easeeyes.com/promotion/2015080107/18.jpg" border="0" usemap="#Map15" />
+<map name="Map15" id="Map15"><area shape="rect" coords="39,111,258,432" href="http://www.easeeyes.com/goods2595.html" />
+<area shape="rect" coords="270,113,487,432" href="http://www.easeeyes.com/goods2355.html" />
+<area shape="rect" coords="499,113,716,431" href="http://www.easeeyes.com/goods2159.html" />
+<area shape="rect" coords="725,111,947,435" href="http://www.easeeyes.com/goods2172.html" />
+</map>
+				<img src="http://img.easeeyes.com/promotion/2015080107/19.jpg" border="0" usemap="#Map16" />
+<map name="Map16" id="Map16"><area shape="rect" coords="38,6,256,326" href="http://www.easeeyes.com/goods2144.html" />
+<area shape="rect" coords="269,7,489,333" href="http://www.easeeyes.com/goods2177.html" />
+<area shape="rect" coords="496,9,720,327" href="http://www.easeeyes.com/goods2160.html" />
+<area shape="rect" coords="728,9,948,331" href="http://www.easeeyes.com/goods2047.html" />
+</map>
+		  </div>
+		</div>
+		<!--积分-->
+		<div class="container" id="f5">
+			<h1><img src="http://img.easeeyes.com/promotion/2015080107/20.jpg" border="0" usemap="#Map17" />
+<map name="Map17" id="Map17">
+  <area shape="rect" coords="198,84,325,138" href="#f1" />
+<area shape="rect" coords="349,78,492,134" href="#f2" />
+<area shape="rect" coords="508,74,661,134" href="#f3" />
+<area shape="rect" coords="672,77,818,138" href="#f4" />
+<area shape="rect" coords="47,92,173,139" href="#f6" />
+</map></h1>
+			<div class="mb35">
+				<img src="http://img.easeeyes.com/promotion/2015080107/21.jpg" border="0" usemap="#Map18" />
+<map name="Map18" id="Map18"><area shape="rect" coords="281,518,369,550" href="http://www.easeeyes.com/exchange.html" />
+</map>
+		  </div>
+		</div>
+		<!--每周活动-->
+		<div class="active-weekly">
+        	<!-- #BeginLibraryItem "/library/weekly_new.lbi" --><!-- #EndLibraryItem -->
+		</div>
+		<!--follow-->
+		<div class="container">
+			<h2 class="text-center mb30"><img src="http://img.easeeyes.com/promotion/2015080107/22.jpg" /></h2>
+			<div class="text-center" style="padding-bottom:20px;">
+				<img src="http://img.easeeyes.com/promotion/2015080107/23.jpg" border="0" usemap="#Map19" />
+<map name="Map19" id="Map19">
+  <area shape="rect" coords="435,7,545,108" href="http://weibo.com/easeeyes?sudaref=www.easeeyes.com." />
+  <area shape="rect" coords="573,6,683,110" href="http://e.t.qq.com/yishiyanjingwang" />
+  <area shape="rect" coords="710,4,822,109" href="http://user.qzone.qq.com/1282786616/" />
+  <area shape="rect" coords="853,7,961,110" href="http://www.meilishuo.com/person/u/4351999?type=book" />
+</map>
+  		  </div>
+  		</div>
+	</div>
+</div>
+
+<!--公共文件页脚-->
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+<!--<script type="text/javascript" src="http://file.easeeyes.com/js/tip-totop.js"></script>-->
+<script type="text/javascript" src="http://file.easeeyes.com/js/yi_common.js"></script>
+<script type="text/javascript" src="http://file.easeeyes.com/js/lazyload.js"></script>
+<script type="text/javascript" src="http://file.easeeyes.com/index2015/js/common.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	//-----每周活动 START----
+	$('#weekly_active li').click(function() {
+		window.open($(this).find('a').attr('href'));
+	});
+	$('#weekly_active li').mouseover(function() {
+		$(this).siblings().removeClass('current_week').animate({width:"120px"}, "slow");
+		$(this).siblings().animate({backgroundPosition:"0px"}, "fast");
+		$(this).animate({width:"510px"}, "slow");
+		$(this).animate({backgroundPosition:"-120px"}, "normal");
+	});
+	//---- 每周活动 END----
+    
+     $('#agree_view').bind('click',function(){
+            $("#agree_div").fadeIn();
+       
+    })
+	//--- 导航隐显控制 ---
+	$('.active-nav').hide();
+	$(window).scroll(function(){
+		var scrollTop=document.documentElement.scrollTop=="0"?document.body.scrollTop:document.documentElement.scrollTop;
+		if(parseInt(scrollTop)>=300){
+			$('.active-nav').fadeIn(200);
+		}else{
+			$('.active-nav').fadeOut(200);
+		}
+	});
+	
+	
+	
+});
+$(document).ready(function(){
+	$("img").not(".not_lazyload").lazyload({placeholder:"/js/img/white.gif", effect:"fadeIn"});
+	
+	$('#weekly_active li').click(function() {
+		window.open($(this).find('a').attr('href'));
+	});
+	$('#weekly_active li').mouseover(function() {
+		$(this).siblings().removeClass('current_week').animate({width:"120px"}, "slow");
+		$(this).siblings().animate({backgroundPosition:"0px"}, "fast");
+		$(this).animate({width:"510px"}, "slow");
+		$(this).animate({backgroundPosition:"-120px"}, "normal");
+	});
+	
+	//yi:用户表单登录
+	$("#yi_login_bt").click(function(){
+		
+		var username = $("#yi_login_form input[name='username']").val();
+		var password = $("#yi_login_form input[name='password']").val();
+		var autologin= $("#yi_login_form input[name='autologin']").attr('checked');
+		
+		//数据提交之前进行数据验证
+		if(username == ''){
+		}
+		if(password == ''){   
+		}		
+		$("#yi_login_form").submit(false);	
+		
+		$.ajax({
+				type:'post',
+				url: 'ajax_step.php?act=ajax_user_login',	
+				data:'&username='+username+'&password='+password+'&autologin='+autologin+'&m='+Math.random(),		
+				cache:false,
+				success:
+				function(da)
+				{
+					var da = eval('('+da+')');
+										
+					if(da.error == 1)
+					{
+						//登录成功
+						document.location.reload();					
+					}
+					else
+					{
+						//登录失败
+						alert(da.content);
+					}																							
+				}					
+		});
+		
+	});	
+	//登录结束
+	/* ------------------------------------------
+	 * 登录过程中：验证会员名不能为空。
+	 * ------------------------------------------
+	 */		
+	$("#aj_lg_name").blur(function(){
+		if($("#aj_lg_name").val() == '')
+		{
+			$("#aj_lg_name").css("border", "1px red solid").parent().next().text("用户名不能为空");
+		}
+	}).focus(function(){
+		$("#aj_lg_name").css("border", "1px solid gainsboro").parent().next().text("");
+		if($(".aj_lg_error").text() != '')
+		{
+			$(".aj_lg_error").text("");
+		}
+	});	
+	
+	/* ------------------------------------------
+	 * 验证用户注册信息
+	 * ------------------------------------------
+	 */	
+	var obj_u   	= $("#reg_ul").find("input:eq(0)");
+	var obj_pwd 	= $("#reg_ul").find("input:eq(1)");
+	var obj_pwd2	= $("#reg_ul").find("input:eq(2)");
+	var obj_email	= $("#reg_ul").find("input:eq(3)");
+	var obj_mobile 	= $("#reg_ul").find("input:eq(4)");
+		
+	obj_u.blur(function(){
+		p_ck_user_name($(this).val());
+	}).focus(function(){
+		p_ts_clear("#username_notice");		
+	});	
+	
+	obj_pwd.blur(function(){
+		p_ck_pwd($(this).val());
+	}).focus(function(){	
+		p_ts_clear("#password_notice");
+	});	
+	
+	obj_pwd2.blur(function(){
+		p_ck_pwd2($(this).val());
+	}).focus(function(){
+		p_ts_clear("#conform_password_notice");
+	});	
+	
+	obj_email.blur(function(){
+		p_ck_email($(this).val());
+	}).focus(function(){	
+		p_ts_clear("#email_notice");
+	});	
+	
+	obj_mobile.blur(function(){
+		p_ck_mobile($(this).val());	
+	}).focus(function(){	
+		p_ts_clear("#mobile_notice");	
+	});	
+	
+	/* ------------------------------------------
+	 * 注册新用户
+	 * ------------------------------------------
+	 */
+	$("#regist_bt").click(function(){
+		var user_name = obj_u.val();		
+		var r_pwd     = obj_pwd.val();
+		var r_pwd2    = obj_pwd2.val();
+		var r_email   = obj_email.val();
+		var r_mobile  = obj_mobile.val();
+		
+		//验证一遍用户提交的数据。
+		p_ck_user_name(user_name);
+		p_ck_pwd(r_pwd);
+		p_ck_pwd2(r_pwd2);
+		p_ck_email(r_email);
+		p_ck_mobile(r_mobile);	
+
+		if(user_name!='' && r_email!='' && r_pwd!='' && r_pwd2!='' && (r_pwd==r_pwd2) && ($("#u_can_reg").val()==1) && ($("#e_can_reg").val()==1))
+		{
+			$("#u_can_reg").val(0); $("#e_can_reg").val(0);
+			var url = "user.html?act=ajax_register&username="+encodeURIComponent(user_name)+"&password="+encodeURIComponent(r_pwd)+"&email="+encodeURIComponent(r_email)+"&extend_field5="+encodeURIComponent(r_mobile);
+			$.ajax({
+				type:'post',
+				url: url,	
+				data:'&m='+Math.random(),		
+				cache:true,
+				success:
+				function(res)
+				{
+					var da = res.split(",");
+					if(da[0] == 'true')
+					{	
+						var yemail = da[1];//用户注册邮箱
+						var ytel   = da[2];//注册手机
+						var turl   = yemail.split("@");
+						var turl2  = "http://mail."+turl[1];						
+						
+						$("#get_user_id").val(da[3]);
+						$("#get_user_email").val(yemail);
+						$("#user_rg_email").text(yemail);
+						$("#user_rg_email2").text(yemail);						
+						$("#user_rg_emurl").children("a").attr("href", turl2);											
+						$("#get_u_tel").val(ytel);
+						
+						var ck_type = $("#get_ck_type").val();						
+						lg_pan_close_xg2();				
+						if(1 == ck_type)//1:邮箱验证，0:手机验证
+						{				
+							pop_email_ck();
+						}
+						else
+						{						
+							pop_mb_ck();						
+						}						
+					}
+					else
+					{
+						//注册失败，给出提示
+						alert('很抱歉！您刚刚的注册失败。');
+					}					
+				}
+			});		
+		}
+		else
+		{
+			//alert('no, uname=');已经注册过了，或者注册信息不正确。防止重复注册。
+		}		
+	});
+	
+	/*$("#float_div_right").css("left", Math.floor(($(window).width()-990)/2)+990+10+"px");
+	$(window).resize(function() {
+  		$("#float_div_right").css("left", Math.floor(($(window).width()-990)/2)+990+10+"px");
+	});*/
+	
+	
+});
+
+function setTab_a(num) {
+	for (var id=1; id<=3; id++) {
+		var focus_tab = "tab_a"+id; //选择的标签
+		var select_block = "a"+id;  //显示的层
+		if (id==num) {
+			document.getElementById(focus_tab).src = 'themes/default/images/active/3/button/a'+id+'_2.jpg';
+			document.getElementById(select_block).style.display="block";
+		} else {
+			document.getElementById(focus_tab).src = 'themes/default/images/active/3/button/a'+id+'.jpg';
+			document.getElementById(select_block).style.display="none";
+		}
+	}
+}
+
+function setTab_b(num) {
+	for (var id=1; id<=3; id++) {
+		var focus_tab = "tab_b"+id;
+		var select_block = "b"+id;
+		if (id==num) {
+			document.getElementById(focus_tab).src = 'themes/default/images/active/3/button/b'+id+'_2.jpg';
+			document.getElementById(select_block).style.display="block";
+		} else {
+			document.getElementById(focus_tab).src = 'themes/default/images/active/3/button/b'+id+'.jpg';
+			document.getElementById(select_block).style.display="none";
+		}
+	}
+}
+
+function setTab_c(num) {
+	for (var id=1; id<=3; id++) {
+		var focus_tab = "tab_c"+id;
+		var select_block = "c"+id;
+		if (id==num) {
+			document.getElementById(focus_tab).src = 'themes/default/images/active/3/button/c'+id+'_2.jpg';
+			document.getElementById(select_block).style.display="block";
+		} else {
+			document.getElementById(focus_tab).src = 'themes/default/images/active/3/button/c'+id+'.jpg';
+			document.getElementById(select_block).style.display="none";
+		}
+	}
+}
+
+/* -------------------------------------
+ * yi: 立即注册按钮
+ * -------------------------------------
+ */
+function bt_to_reg()
+{
+	var user_id = $("#get_user_id").val();	
+	if(user_id == 0)
+	{
+		pop_login();
+		change_lg_pan(1);	
+	}
+	else
+	{
+		com_message('您已经登录，祝您玩得愉快！');
+	}
+}
+
+/* -------------------------------------
+ * yi: 公共消息提示窗口,取代alert().
+ * -------------------------------------
+ * txt:要提示的内容。内容控制在32个汉字内。作2行显示。
+ */
+function com_message(txt)
+{
+	pop_window("com_message_pan");
+	$("#com_msg_pan").text(txt);
+}
+
+/* -------------------------------------
+ * yi: 验证邮箱的功能
+ * -------------------------------------
+ */
+function fn_ck_email()
+{	
+	//更换成一个邮件是否发送成功。
+	$("#email_ck").fadeOut();
+	pop_window("ask_email_ck");		
+	$.ajax({
+		type:'get',
+		url: 'user.php?act=send_hash_mail',	
+		data:'m='+Math.random(),		
+		cache:true,
+		success:
+		function(da)
+		{		
+		}
+	});
+}
+
+function re_ck_email()
+{
+	pop_pan_close("ask_email_ck");
+	pop_window("email_ck");
+}
+
+
+function ck_email_ok()
+{
+	//用户去验证邮箱后，点击按钮弹出提示结果。
+	var user_id = $("#get_user_id").val();
+	pop_pan_close("ask_email_ck");	
+	if(user_id>0)
+	{
+		$.ajax({
+			type:'post',
+			url: 'user.html?act=if_email_ck&user_id='+user_id,	
+			data:'m='+Math.random(),		
+			cache:true,
+			success:
+			function(da)
+			{
+				if(da == '1')	
+				{
+					pop_window("email_ck_res");	
+				}
+				else
+				{
+					com_message("^_^很抱歉，您的邮箱还未验证，请登入您的邮箱，点击验证链接进行认证");
+				}
+			}
+		});
+	}
+	else
+	{
+		com_message("^_^很抱歉，会员信息不正确，请重新登录后再尝试！");
+	}
+}
+
+/*---------------------------------------------[手机验证模块]---------------------------*/
+
+/* -------------------------------------
+ * yi: 发送手机验证短信
+ * -------------------------------------
+ */
+function send_mobile_code()
+{
+	var tel 	= $("#get_u_tel").val();
+	var user_id = $("#get_user_id").val();
+	var send 	= true;
+
+	if(user_id==0)
+	{
+		alert('对不起，您还未登录！'); send = false;		
+	}
+	if(tel == '' || isNaN(tel) || tel.length<11)
+	{
+		alert('对不起，您的手机号码不正确！'); send = false;	
+	}	
+	//alert('user_id='+user_id+'||tel='+tel);
+	
+	/**/
+	if(send==true)
+	{
+		$.ajax({
+			type:'post',
+			url: 'ajax_active.php?act=send_mobile_code',	
+			data:'&user_id='+user_id+'&tel='+tel+'&from=mobile_ck&m='+Math.random(),		
+			cache:true,
+			success:
+			function(da)
+			{		
+				if('ok' == da)
+				{
+					//短信发送成功，30秒后重新发送。					
+					yip_re_send_sms(60);
+				}
+				else if('have_tel' == da)
+				{
+					$('.tishi').text("^_^您已经参加过该活动了，不能重复参加哦！");
+				}
+				else if('fail' == da)
+				{
+					$('.tishi').text("(-_-)很抱歉，中途发送短信失败，请稍后再试！");
+				}
+				
+			}					
+		});
+	}
+	/**/
+}
+/* -------------------------------------
+ * yi: 组件 控制多少秒后重发
+ * -------------------------------------
+ */
+function yip_re_send_sms(second)
+{
+	$('.tishi').text("");					
+	$(".mobile_ck_bt").first().parent().html('<div class="mobile_ck_bt"><span id="time_ji">'+second+'</span>秒后重发</div>');
+	var time1 = setInterval(function(){					
+		var ji = $("#time_ji").text();							
+		if(ji == 0)
+		{
+			clearInterval(time1);
+			$(".mobile_ck_bt").first().parent().html('<a href="javascript:;" onclick="send_mobile_code()" class="mobile_ck_bt"/></a>');
+			$(".mobile_ck_bt").first().text("获取验证码");
+		}
+		else
+		{
+			$("#time_ji").text(ji*1-1);
+		}
+	}, 1000);		
+}
+/* -------------------------------------
+ * yi: 验证手机验证码。把验证结果输出。
+ * -------------------------------------
+ */
+function ck_mobile_code()
+{
+	var code = $("#get_mb_code").val();
+	var send = true;	
+	if(code == '')
+	{
+		alert('验证码不能为空，请输入验证码！'); send = false;
+	}
+	else if(code.length!=6)
+	{
+		alert('请输入正确的6位数字验证码！'); send = false;
+	}
+	
+	if(send == true)
+	{
+		$.ajax({
+			type:'post',
+			url: 'ajax_active.php?act=mobile_ck',	
+			data:'&code='+code+'&m='+Math.random(),		
+			cache:true,
+			success:
+			function(da)
+			{
+				da = 'ok';
+				if(da == 'ok')
+				{
+					//alert('恭喜您，手机验证通过，您已获得400积分。');		
+					pop_pan_close("mb_ck");
+					pop_window("mb_ck_res");					
+				}
+				else
+				{
+					//alert('验证码不正确，请重新操作！');
+					$(".tishi").text("验证码不正确，请重新操作!");
+				}
+			}					
+		});
+	}	
+}
+/* -------------------------------------
+ * yi: 手机验证成功。点击用积分去购物按钮。
+ * -------------------------------------
+ */
+function mb_ck_ok()
+{
+	pop_pan_close("mb_ck_res");
+	var dheight = $(document).scrollTop();//记录在cookie中 然后在读取。
+	window.location.href = window.location.href;
+	//$(document).scrollTop = '1000px';
+}
+
+
+
+/* -------------------------------------
+ * yi: 登录模块
+ * -------------------------------------
+ */ 
+function ajax_login()
+{
+	var user_name = $("#aj_lg_name").val();
+	var password  = $("#aj_lg_pwd").val();
+	var auto_login= $("#aj_lg_auto").attr("checked");
+	if(user_name!='' && password !='')
+	{
+		var url = 'user.html?act=ajax_login&user_name='+encodeURIComponent(user_name)+'&password='+encodeURIComponent(password)+'&auto_login='+auto_login;			
+		$.ajax({			
+			type:'post',
+			url: url,	
+			data:'&m='+Math.random(),		
+			cache:true,
+			success:
+			function(res)
+			{
+				var da = res.split(",");
+				if('login_ok' == da[0])
+				{	
+					//登录成功
+					var yemail = da[1];//用户注册邮箱
+					var ytel   = da[2];//
+					var turl   = yemail.split("@");
+					var turl2  = "http://mail."+turl[1];						
+					
+					$("#get_user_id").val(da[3]);
+					$("#get_user_email").val(yemail);
+					$("#user_rg_email").text(yemail);
+					$("#user_rg_email2").text(yemail);						
+					$("#user_rg_emurl").children("a").attr("href", turl2);
+										
+					$("#get_u_tel").val(ytel);
+					
+					var ck_type = $("#get_ck_type").val();						
+					lg_pan_close_xg2();				
+					if(1 == ck_type)//1:邮箱验证，0:手机验证
+					{				
+						pop_email_ck();
+					}
+					else
+					{						
+						pop_mb_ck();						
+					}
+				}
+				else if('login_fail' == da[0])
+				{
+					$(".aj_lg_error").text("您输入的用户名或密码错误，请重新输入！");
+				}
+				else
+				{
+					$(".aj_lg_error").text("您输入的用户名不存在，请重新输入！");//用户信息不能为空。重新登录
+				}
+			}			
+		});	
+	}
+	else
+	{
+		alert('登录用户名和密码不能为空，请输入正确登录信息！');
+	}
+}
+/* -------------------------------------
+ * yi: 登录和注册面板切换
+ * -------------------------------------
+ */ 
+function change_lg_pan(type)
+{
+	if(type == 1)
+	{
+		$(".lg_content").eq(0).hide().next().show();
+		$(".lg_rg_title").text('注册易视会员');
+	}
+	else
+	{
+		$(".lg_content").eq(1).hide().prev().show();
+		$(".lg_rg_title").text('登录易视网');		
+	}
+}
+
+/* -------------------------------------
+ * yi: 手机验证总入口
+ * -------------------------------------
+ */
+function mobile_ck()
+{
+	var user_id = $("#get_user_id").val();
+	if(0 == user_id)
+	{
+		//未登录用户，弹出注册窗口。用户这窗口中登录注册之后，在进行页面的浏览操作。
+		
+		$("#get_ck_type").val(0);//1:邮箱验证， 0：手机验证
+		pop_login();				
+	}
+	else
+	{
+		//判断登录用户是否已经验证过手机了
+		var mb_ck = $("#get_mb_ck").val();
+		if(1 == mb_ck)
+		{
+			//alert("^_^您已经参加过该活动了，不能重复参加哦！");
+			com_message("^_^您已经参加过该活动了，不能重复参加哦！");
+		}
+		else
+		{		
+			pop_window("mb_ck");//验证手机
+		}
+	}
+}
+
+
+
+/* -------------------------------------
+ * yi: 邮箱验证总入口
+ * -------------------------------------
+ */
+function email_ck()
+{
+	var user_id = $("#get_user_id").val();
+	if(0 == user_id)
+	{
+		//未登录用户，弹出注册窗口。用户这窗口中登录注册之后，在进行页面的浏览操作。
+		$("#get_ck_type").val(1);
+		pop_login();				
+	}
+	else
+	{
+		//判断登录用户是否已经验证过手机了
+		var email_ck = $("#get_email_ck").val();
+		if(1 == email_ck)
+		{
+			//alert("^_^您已经参加过该活动了，不能重复参加哦！");
+			com_message("^_^您已经参加过该活动了，不能重复参加哦！");
+		}
+		else
+		{		
+			pop_window("email_ck");//验证手机
+		}
+	}
+}
+
+
+
+/* -------------------------------------
+ * yi: 弹出用户登录的窗口（淡出的效果）
+ * -------------------------------------
+ */ 
+function pop_login()
+{
+	change_lg_pan(2);
+	
+	$("#lg_pan").fadeIn();
+	pop_window_center("#lg_pan");	
+	$(".pop_shadow").fadeTo("slow", 0.5);			
+}
+/* -------------------------------------
+ * yi: 设置弹窗的位置为页面居中
+ * -------------------------------------
+ */
+function pop_window_center(pan_id) 
+{
+	var f_left = ($(window).width()-$(pan_id).width())/2;
+	var f_top  = ($(window).height()-$(pan_id).height())/2;	
+	$(pan_id).css("left", f_left).css("top", f_top);	
+}
+/* -------------------------------------
+ * yi: 通用弹出窗口（淡出的效果）
+ * -------------------------------------
+ */
+function pop_window(ipan_id)
+{
+	var pan_id = ('#' == ipan_id.charAt(0))? ipan_id: "#"+ipan_id;	
+	$(pan_id).fadeIn();
+	pop_window_center(pan_id);	
+	$(".pop_shadow").fadeTo("slow", 0.5);			
+}
+/* -------------------------------------
+ * yi: 弹出手机验证窗口（拉伸的效果）
+ * -------------------------------------
+ */ 
+function pop_mb_ck()
+{
+	var mb_width  = $("#mb_ck").width();
+	var mb_height = $("#mb_ck").height();
+	pop_window_center("#mb_ck");
+	$("#mb_ck").delay(600).css({
+			"display":"block",
+			"borderWidth":"0",
+			"width":"0",
+			"height":"0"
+		}).animate({
+			"borderWidth":"4px",
+			"width":mb_width,
+			"height":mb_height			
+		}, 500);	
+		
+	$(".pop_shadow").fadeTo("slow", 0.5);		
+		
+}
+
+function pop_email_ck()
+{
+	
+	/**/
+	var mb_width  = $("#email_ck").width();
+	var mb_height = $("#email_ck").height();
+	pop_window_center("#email_ck");
+	$("#email_ck").delay(600).css({
+			"display":"block",
+			"borderWidth":"0",
+			"width":"0",
+			"height":"0"
+		}).animate({
+			"borderWidth":"4px",
+			"width":mb_width,
+			"height":mb_height			
+		}, 500);	
+	/**/
+	//window.location.href = window.location.href;
+	//$("#email_ck").fadeIn();
+	$(".pop_shadow").fadeTo("slow", 0.5);		
+		
+}
+/* -------------------------------------
+ * yi: 通用弹出窗口关闭（淡出的效果）
+ * -------------------------------------
+ */
+function pop_pan_close(pan_id)
+{
+	$("#"+pan_id).fadeOut();
+	$(".pop_shadow").fadeOut();
+}
+/* -------------------------------------
+ * yi: 登录窗口关闭（淡出的效果）
+ * -------------------------------------
+ */
+function lg_pan_close()
+{
+	$("#lg_pan").fadeOut();
+	$(".pop_shadow").fadeOut();
+}
+/* -------------------------------------
+ * yi: 登录窗口关闭（向右上角缩小的动画效果）
+ * -------------------------------------
+ */
+function lg_pan_close_xg2()
+{
+	$("#lg_pan").animate({
+			borderWidth:"0",
+			width:"0",
+			height:"0"
+		}, 600);
+	$(".pop_shadow").fadeOut();		
+}
+
+function user_rg()
+{
+	var lg_form   = document.getElementById('regist_form');	
+	lg_form.submit(true);	
+}
+function user_lg()
+{
+	var lg_form   = document.getElementById('login_form');
+	lg_form.submit(true);
+}
+
+
+/*
+ * 验证用户信息情况
+ */
+function p_ck_user_name(vl)
+{
+	var rg_user_name = vl;
+	var rg_msg       = '';
+	var rg_un_len    = rg_user_name.replace(/[^\x00-\xff]/g, "**").length;
+
+	if(rg_user_name == '')
+	{
+		rg_msg = "用户名不能为空";
+	}		
+	else if(rg_un_len < 5)
+	{
+		rg_msg = "不能少于5个字符";
+	}
+	else if(rg_un_len > 20)
+	{
+		rg_msg = "不能多于20字符";
+	}
+	else
+	{
+		var url = "user.html?act=ck_user_name&username="+encodeURIComponent(rg_user_name);
+		$.ajax({
+			type:'post',
+			url: url,	
+			data:'&m='+Math.random(),		
+			cache:true,
+			success:
+			function(res)
+			{
+				if(res == 'false')
+				{			
+					$("#username_notice").removeClass("ts_ok").text("用户名已被注册").prev().children().css("background-color", "#fcc");
+					$("#u_can_reg").val(0);
+				}
+				else
+				{
+					$("#username_notice").addClass("ts_ok").text("可以注册");
+					$("#u_can_reg").val(1);
+				}
+			}
+		});
+	}	
+	if(rg_msg != '')
+	{
+		$("#username_notice").text(rg_msg).prev().children().css("background-color", "#fcc");
+	}	
+}
+/*
+ * 验证用户邮箱
+ */
+function p_ck_email(vl)
+{
+	var rg_email = vl;
+	var rg_msg   = '';
+	if(rg_email == '')
+	{
+		rg_msg = "注册邮箱不能为空";
+	}		
+	else if(!(/([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)/.test(rg_email)))
+	{
+		rg_msg = "邮箱格式错误！";
+	}
+	else
+	{			
+		var url = "user.html?act=check_email&email="+rg_email;
+		$.ajax({
+			type:'post',
+			url: url,	
+			data:'&m='+Math.random(),		
+			cache:true,
+			success:
+			function(res)
+			{
+				if(res == 'false')
+				{			
+					$("#email_notice").removeClass("ts_ok").text("邮箱已被注册").prev().children().css("background-color", "#fcc");
+					$("#e_can_reg").val(0);
+				}
+				else
+				{
+					$("#email_notice").addClass("ts_ok").text("可以注册");
+					$("#e_can_reg").val(1);
+				}
+			}
+		});			
+	}				
+	if(rg_msg != '')
+	{
+		$("#email_notice").text(rg_msg).prev().children().css("background-color", "#fcc");
+	}	
+}
+/*
+ * 验证用户密码
+ */
+function p_ck_pwd(vl)
+{
+	var rg_pwd       = vl;
+	var rg_msg       = '';
+	var rg_pwd_len   = rg_pwd.replace(/[^\x00-\xff]/g, "**").length;
+	if(rg_pwd == '')
+	{
+		rg_msg = "密码不能为空";
+	}		
+	else if(rg_pwd_len < 6)
+	{
+		rg_msg = "密码不能少于6位";
+	}
+	else
+	{
+		$("#password_notice").addClass("ts_ok").text("可以注册");
+	}				
+	if(rg_msg != '')
+	{
+		$("#password_notice").text(rg_msg).prev().children().css("background-color", "#fcc");
+	}	
+}
+function p_ck_pwd2(vl)
+{
+	var rg_pwd2 = vl;
+	var rg_msg  = '';	
+	var old_pwd = $("#password1").val();
+	if(rg_pwd2 == '')
+	{
+		rg_msg = "请再次输入密码！";
+	}		
+	else if(rg_pwd2 != old_pwd)
+	{
+		rg_msg = "输入的密码不一致";
+	}
+	else
+	{
+		$("#conform_password_notice").addClass("ts_ok").text("可以注册");
+	}			
+	if(rg_msg != '')
+	{
+		$("#conform_password_notice").text(rg_msg).prev().children().css("background-color", "#fcc");
+	}	
+}
+function p_ck_mobile(vl)
+{
+	var rg_mobile = vl;
+	var rg_msg    = '';	
+	if(rg_mobile == '')
+	{
+		rg_msg = "手机不能为空！";
+	}
+	else if(rg_mobile.length != 11)
+	{
+		rg_msg = "手机格式错误！";
+	}
+	else
+	{
+		$("#mobile_notice").addClass("ts_ok").text("可以注册");
+	}	
+	if(rg_msg != '')
+	{
+		$("#mobile_notice").text(rg_msg).prev().children().css("background-color", "#fcc");
+	}	
+}
+//yi:提示清除
+function p_ts_clear(pan_id)
+{
+	$(pan_id).text('').removeClass("ts_ok").prev().children().css("background-color", "#fff");	
+}
+
+
+</script>
+</html>

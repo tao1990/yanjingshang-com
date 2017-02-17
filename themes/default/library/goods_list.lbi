@@ -1,0 +1,26 @@
+<!--{foreach from=$goods_list item=goods name=foo}-->
+<!--{if $goods.goods_id}-->
+    <!--{if $smarty.foreach.foo.index mod 4 !=0}--><div class="spacejx"></div><!--{/if}-->
+    <div class="showmain">
+        <div class="showmainpic"><a href="{$goods.url}" target="_blank"><img src="{$goods.goods_thumb}" width="150" height="150" alt="{$goods.goods_name}" border="0"/></a></div>
+        <!--{if $goods.show_tip gt 0}-->
+        <span style="width:46px; height:45px; display:inline-block; overflow:hidden; position:relative; top:-150px; left:70px; background:url(../images/tip{$goods.show_tip}.gif) no-repeat; margin-bottom:-45px;"></span>
+        <!--{/if}-->        
+        <div class="showmaintxt">
+            <div class="showmaintxt2">
+                <div style="width:180px; height:20px; line-height:20px; overflow:hidden;"><a href="{$goods.url}" title="{$goods.name|escape:html}" class="color_qianfei" target="_blank">{$goods.goods_name}</a></div>
+                <div style="padding-left:40px; text-align:left; height:40px; line-height:18px;">
+                <span class="color9">市场价：<!--{if $show_marketprice}-->{$goods.market_price}<!--{/if}--></span><br>易视价：<span class="redhong fontsize13"><!--{if $goods.promote_price neq "" }-->{$goods.promote_price}<!--{else}-->{$goods.shop_price}<!--{/if}--></span>
+                </div>
+            </div>
+            <div class="showmaintxt1"> <a href="{$goods.url}" class="fhongse" target="_blank">{$goods.goods_brief|truncate:24:false}</a></div> 
+        </div>
+    </div>
+    <!--{if $smarty.foreach.foo.index mod 4 eq 3}--><div style="width:780px; height:6px; margin-bottom:6px; border-bottom:1px #dcdcdc dashed; overflow:hidden;"></div><!--{/if}--> 
+<!--{/if}-->
+<!--{/foreach}-->		
+<script type="Text/Javascript" language="JavaScript">
+<!--
+{literal}function selectPage(sel){ sel.form.submit();}{/literal}
+//-->
+</script>

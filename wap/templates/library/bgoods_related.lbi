@@ -1,0 +1,19 @@
+<!--{if $related_goods}-->
+<div id="feise">
+	<div id="feisetitle">同类推荐</div>
+    <!--{foreach from=$related_goods item=releated_goods_data name=foo}-->
+    <div class="same_con">
+    <!--{if $smarty.foreach.foo.index == 0}--><div class="space5"></div><!--{/if}-->
+    	<div class="same_goods_img">
+        	<a href="{$releated_goods_data.url}" target="_blank"><img src="{$releated_goods_data.goods_thumb}" alt="{$releated_goods_data.goods_name}" border="0" width="150px" height="150px" /></a>
+        </div>
+        <div class="same_text">
+        	<div class="same_goods_name"><a href="{$releated_goods_data.url}" title="{$releated_goods_data.goods_name}" class="textlv" target="_blank">{$releated_goods_data.short_name|truncate:18:false}</a></div>
+            <div class="same_goods_price">            	
+                <span class="color_dhui"><s>{$releated_goods_data.market_price}</s></span>
+                <span class="redhong fontsize13"><!--{if $releated_goods_data.promote_price neq 0}-->{$releated_goods_data.formated_promote_price}<!--{else}-->{$releated_goods_data.shop_price}<!--{/if}--></span>
+            </div>
+        </div>
+    </div> 		
+    <!--{/foreach}-->
+</div><!--{/if}-->

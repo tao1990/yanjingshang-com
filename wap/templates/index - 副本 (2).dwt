@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<style>
+body{background:#f2f2f2 !important;}
+.loading {text-align: center;}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/header_index.lbi" --><!-- #EndLibraryItem -->
+<!--banner-->
+<div class="banMod container" id="slider-01">
+    <ul class="clearfix" id="ts-01">
+        <!--{foreach from=$big_ad item=banner name=foo}-->
+        <!-- 正式环境<li><a href="{$banner.ad_link}" title="{$banner.ad_name}"><img src="{$image_url}{$banner.ad_code}" /></a></li>-->
+        <li><a href="{$banner.ad_link}" title="{$banner.ad_name}"><img src="{$image_url}{$banner.ad_code}" /></a></li>
+        <!--{/foreach}-->
+        <!--<li><a href="#"><img src="http://file.easeeyes.com/wap/images/banner.jpg" /></a></li>
+        <li><a href="#"><img src="http://file.easeeyes.com/wap/images/banner.jpg" /></a></li>
+        <li><a href="#"><img src="http://file.easeeyes.com/wap/images/banner.jpg" /></a></li>
+        <li><a href="#"><img src="http://file.easeeyes.com/wap/images/banner.jpg" /></a></li>
+        <li><a href="#"><img src="http://file.easeeyes.com/wap/images/banner.jpg" /></a></li>-->
+    </ul>
+</div>
+<!--进入主会场-->
+<div class="container"><a href="http://m.easeeyes.com/active151111.html"><img src="http://file.easeeyes.com/wap/images/mainParty.jpg" /></a></div>
+<!--导航-->
+<div class="navMod container">
+    <div class="navlist">
+        <div class="list">
+            <a href="menu.php"><img src="http://file.easeeyes.com/wap/images/nav1.png" />全部分类</a>
+        </div>
+        <div class="list">
+            <a href="user.php"><img src="http://file.easeeyes.com/wap/images/nav2.png" />{if $smarty.session.user_id!=0}会员中心{else}注册/登陆{/if}</a>
+        </div>
+        <div class="list">
+            <a href="flow.php"><img src="http://file.easeeyes.com/wap/images/nav3.png" />购物车</a>
+        </div>
+        <div class="list">
+            <a {if $smarty.session.user_id!=0}href="wuliu.php"{else}href="user.php"{/if}><img src="http://file.easeeyes.com/wap/images/nav5.png" />物流查询</a>
+        </div>
+        <!--<div class="list">
+            <a {if $smarty.session.user_id!=0}href="user.php?act=order_list"{else}href="user.php"{/if}><img src="http://file.easeeyes.com/wap/images/nav4.png" />我的订单</a>
+        </div>
+        <div class="list">
+            <a href="footmark.php"><img src="http://file.easeeyes.com/wap/images/nav6.png" />我的足迹</a>
+        </div>
+        <div class="list">
+            <a href="user.php?act=bonus"><img src="http://file.easeeyes.com/wap/images/nav7.png" />优惠券</a>
+        </div>
+        <div class="list">
+            <a href="#"><img src="http://file.easeeyes.com/wap/images/nav8.png" />热门参数</a>
+        </div>-->
+    </div>
+</div>
+<!--公告-->
+<div class="announceMod container">
+    <div class="title pull-left">
+        易视公告 <img src="http://file.easeeyes.com/wap/images/gg.png" />
+    </div>
+    <div class="text" id="newsList-01">
+        <ul>
+            <!--{foreach from=$report_yishi item=article name=foo}-->
+            <!--{if $smarty.foreach.foo.index eq 0}-->
+            <li><a href="{$article.url}" title="{$article.title|escape:html}" class="red">{$article.title}</a></li>
+            <!--{else}-->
+            <li><a href="{$article.url}" title="{$article.title|escape:html}">{$article.title}</a></li>
+            <!--{/if}-->
+            <!--{/foreach}-->
+        </ul>
+    </div>
+</div>
+<!--秒杀团购-->
+<div class="mstgMod container">
+    <div class="msMod pull-left">
+        <div class="modlogo">
+            <img src="http://file.easeeyes.com/wap/images/ms.png" />
+        </div>
+        <div id="J_countdown" class="time" >
+            <span id="J_hours"></span> :
+            <span id="J_minutes"></span> :
+            <span id="J_seconds"></span>
+        </div>
+        <div class="title">
+            <a {if $ms.goods_id && $ms.ms_status eq 1}href="miaosha_buy.php?id={$ms.goods_id}" title="{$ms.ms_name}"{else}href="javascript:;"{/if}>{$ms.ms_name}</a>
+        </div>
+        <div class="image">
+            <a href="miaosha_buy.php?id={$ms.goods_id}">
+                <!--<img src="http://file.easeeyes.com/wap/images/g1.png" />-->
+                <img src="{$image_url}{$ms.focus_img}" />
+                <span class="layer">￥{$ms.price_int}</span>
+            </a>
+        </div>
+    </div>
+    <div class="tgMod pull-right">
+        <div class="modlogo">
+            <a href="tuan.php" class="pull-right">更多团购 <span class="enter-pg"></span></a>
+            <img src="http://file.easeeyes.com/wap/images/tg.png" />
+        </div>
+        <!--{foreach from=$tg item=tg_list name=foo}-->
+        <div class="goods">
+            <div class="thumb-pg {if $smarty.foreach.foo.index eq 1}thumb-pg-right{/if}" >
+                <a href="tuan_buy.php?rec_id={$tg_list.rec_id}">
+                    <img src="{$image_url}{$tg_list.tuan_img}" />
+                    <span class="badge-pg"><img src="http://file.easeeyes.com/wap/images/tuan.png" /></span>
+                </a>
+            </div>
+            <div class="text">
+                <h3><a href="tuan_buy.php?rec_id={$tg_list.rec_id}">{$tg_list.tuan_name}</a></h3>
+                <span class="tag-pg-capsule">立减{$tg_list.saving}元</span>
+                <span class="price">￥{$tg_list.tuan_price}</span>
+            </div>
+        </div>
+        <!--{if $smarty.foreach.foo.index eq 0}-->
+        <hr style="border:0 none;height:1px;background:#eee;background-color:#eee;margin:.5rem;clear:both;" />
+        <!--{/if}-->
+        <!--{/foreach}-->
+        <!--<div class="goods">
+            <div class="thumb-pg thumb-pg-right">
+                <a href="tuan.php">
+                    <img src="http://file.easeeyes.com/wap/images/g2.png" />
+                    <span class="badge-pg"><img src="http://file.easeeyes.com/wap/images/tuan.png" /></span>
+                </a>
+            </div>
+            <div class="text">
+                <h3><a href="tuan.php">卫康x-blue半年抛+卫康爱佳500ML</a></h3>
+                <span class="tag-pg-capsule">立减50元</span>
+                <span class="price">￥64.0</span>
+            </div>
+        </div>-->
+    </div>
+</div>
+<!--新品 品牌 周末-->
+<div class="xpzMod container">
+    <div class="box">
+        <h1><span class="circle-pg">新</span>品抢先购</h1>
+        <p><span class="color-red">{$hd1.ad_name}</span></p>
+        <div class="image">
+            <a href="{$hd1.ad_link}">
+                <img src="{$image_url}{$hd1.ad_code}"/>
+            </a>
+        </div>
+    </div>
+    <div class="box">
+        <h1><span class="circle-pg circle-pg-yellow">品</span>牌特惠</h1>
+        <p><span class="color-red">{$hd2.ad_name}</span></p>
+        <div class="image">
+            <a href="{$hd2.ad_link}">
+                <img src="{$image_url}{$hd2.ad_code}" />
+            </a>
+        </div>
+    </div>
+    <div class="box">
+        <h1><span class="circle-pg circle-pg-pink">周</span>末狂欢场</h1>
+        <p><span class="color-red">{$hd3.ad_name}</span></p>
+        <div class="image">
+            <a href="{$hd3.ad_link}">
+                <img src="{$image_url}{$hd3.ad_code}" />
+            </a>
+        </div>
+    </div>
+</div>
+<!--降价排行-->
+<div class="repriceMod container">
+    <h1 class="title-BL">
+        <span>降价排行</span>
+    </h1>
+    <div class="goodsbox" id="slider-04">
+        <ul class="goodslist clearfix" id="ts-04">
+            <!--{foreach from=$goods_reduce item=li name=foo}-->
+            <li>
+                <div class="image">
+                    <a href="goods.php?id={$li.goods_id}" title="{$li.goods_name}"><img src="{$image_url}{$li.goods_img}" /></a>
+                </div>
+                <p class="text-ellipsis"><a href="goods.php?id={$li.goods_id}" title="{$li.goods_name}">{$li.goods_name}</a></p>
+                <span class="price">{if $li.promote_price eq ""}￥{$li.shop_price}{else}{$li.promote_price}{/if}</span>
+            </li>
+            <!--{/foreach}-->
+            <!--<li>
+                <div class="image">
+                    <a href="#"><img src="http://file.easeeyes.com/wap/images/rep1.png" /></a>
+                </div>
+                <p class="text-ellipsis"><a href="#">艾爵艾瞳系列</a></p>
+                <span class="price">￥64.0</span>
+            </li>-->
+        </ul>
+    </div>
+</div>
+
+<!--banner滚动-->
+<div class="smallBanMod container" id="slider-02">
+    <ul class="slider clearfix" id="ts-02">
+        <!--{foreach from=$banner2 item=banner name=foo}-->
+        <!-- 正式环境<li><a href="{$banner.ad_link}" title="{$banner.ad_name}"><img src="{$image_url}{$banner.ad_code}" /></a></li>-->
+        <li><a href="{$banner.ad_link}" title="{$banner.ad_name}"><img src="{$image_url}{$banner.ad_code}" /></a></li>
+        <!--{/foreach}-->
+        <!--<li><a href="#"><img src="http://file.easeeyes.com/wap/images/b1.png" /></a></li>
+        <li><a href="#"><img src="http://file.easeeyes.com/wap/images/b1.png" /></a></li>-->
+    </ul>
+</div>
+
+<!--功能隐形眼镜-->
+<div class="yxMod container">
+    <h1 class="title-BL">
+        <span>功能隐形眼镜</span>
+    </h1>
+    <div class="main clearfix">
+        <div class="box pull-left patch-pg">
+            <a href="lab.php?lab_id=31">
+                <div class="text">
+                    <h1>散光定制</h1>
+                    <p>{$yx1.ad_name}</p>
+                </div>
+                <div class="image">
+                    <img src="{$image_url}{$yx1.ad_code}" />
+                </div>
+            </a>
+        </div>
+        <div class="box pull-right patch-pg">
+            <a href="lab.php?lab_id=30">
+                <div class="text">
+                    <h1>高度近视</h1>
+                    <p>{$yx2.ad_name}</p>
+                </div>
+                <div class="image">
+                    <img src="{$image_url}{$yx2.ad_code}" />
+                </div>
+            </a>
+        </div>
+        <div class="box pull-left patch-pg">
+            <a href="lab.php?lab_id=34">
+                <div class="text">
+                    <h1>远视片</h1>
+                    <p>{$yx3.ad_name}</p>
+                </div>
+                <div class="image">
+                    <img src="{$image_url}{$yx3.ad_code}" />
+                </div>
+            </a>
+        </div>
+        <div class="box pull-right patch-pg">
+            <a href="lab.php?lab_id=32">
+                <div class="text">
+                    <h1>防紫外线</h1>
+                    <p>{$yx4.ad_name}</p>
+                </div>
+                <div class="image">
+                    <img src="{$image_url}{$yx4.ad_code}" />
+                </div>
+            </a>
+        </div>
+        <div class="box pull-left patch-pg">
+            <a href="lab.php?lab_id=35">
+                <div class="text">
+                    <h1>色盲片</h1>
+                    <p>{$yx5.ad_name}</p>
+                </div>
+                <div class="image">
+                    <img src="{$image_url}{$yx5.ad_code}" />
+                </div>
+            </a>
+        </div>
+        <div class="box pull-right patch-pg">
+            <a href="lab.php?lab_id=43">
+                <div class="text">
+                    <h1>美容片</h1>
+                    <p>{$yx6.ad_name}</p>
+                </div>
+                <div class="image">
+                    <img src="{$image_url}{$yx6.ad_code}" />
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!--功能框架眼镜-->
+<div class="kjMod container">
+    <h1 class="title-BL">
+        <span>功能框架眼镜</span>
+    </h1>
+    <div class="main clearfix">
+        <div class="box pull-left patch-pg">
+            <a href="lab.php?lab_id=64">
+                <div class="text">
+                    <h1>电脑眼镜</h1>
+                    <p>{$kj1.ad_name}</p>
+                </div>
+                <div class="image">
+                    <img src="{$image_url}{$kj1.ad_code}" />
+                </div>
+            </a>
+        </div>
+        <div class="box pull-right patch-pg">
+            <a href="lab.php?lab_id=65">
+                <div class="text">
+                    <h1>运动户外</h1>
+                    <p>{$kj2.ad_name}</p>
+                </div>
+                <div class="image">
+                    <img src="{$image_url}{$kj2.ad_code}" />
+                </div>
+            </a>
+        </div>
+        <div class="box pull-left patch-pg">
+            <a href="lab.php?lab_id=63">
+                <div class="text">
+                    <h1>偏光镜</h1>
+                    <p>{$kj3.ad_name}</p>
+                </div>
+                <div class="image">
+                    <img src="{$image_url}{$kj3.ad_code}" />
+                </div>
+            </a>
+        </div>
+        <!--
+        <div class="box pull-left patch-pg patch-pg-s">
+            <a href="lab.php?lab_id=62">
+                <div class="">
+                    <h1>老花镜</h1>
+                    <p>{$kj4.ad_name}</p>
+                    <div class="patch-pg-s-image">
+                        <img src="{$image_url}{$kj4.ad_code}" />
+                    </div>
+                </div>
+            </a>
+        </div>
+        -->
+        <div class="box pull-right patch-pg">
+            <a href="lab.php?lab_id=77">
+                <div class="text">
+                    <h1>儿童太阳镜</h1>
+                    <p>{$kj5.ad_name}</p>
+                </div>
+                <div class="image">
+                    <img src="{$image_url}{$kj5.ad_code}" />
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<!--主题街-->
+<div class="ztMod container">
+    <h1 class="title-BL">
+        <span>主题街</span>
+    </h1>
+    <div class="topban">
+        <!--{foreach from=$ztbb item=banner name=foo}-->
+        <a href="{$banner.ad_link}"><img src="{$image_url}{$banner.ad_code}" class="topban-img1" /></a>
+        <!--{/foreach}-->
+        <!--{foreach from=$ztbs item=banner name=foo}-->
+        <a href="{$banner.ad_link}"><img src="{$image_url}{$banner.ad_code}" class="topban-img2" /></a>
+        <!--{/foreach}-->
+    </div>
+    <div class="main clearfix">
+        <div class="box">
+            <div class="text">
+                <h1><a href="category.php?cat_id=1">透明隐形眼镜</a></h1>
+                <p>{$zt1.ad_name}</p>
+            </div>
+            <div class="image">
+                <a href="category.php?cat_id=1"><img src="{$image_url}{$zt1.ad_code}" /></a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="text">
+                <h1><a href="category.php?cat_id=6">彩色隐形眼镜</a></h1>
+                <p>{$zt2.ad_name}</p>
+            </div>
+            <div class="image">
+                <a href="category.php?cat_id=6"><img src="{$image_url}{$zt2.ad_code}" /></a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="text">
+                <h1><a href="category.php?cat_id=159">框架眼镜</a></h1>
+                <p>{$zt3.ad_name}</p>
+            </div>
+            <div class="image">
+                <a href="category.php?cat_id=159"><img src="{$image_url}{$zt3.ad_code}" /></a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="text">
+                <h1><a href="category.php?cat_id=190">太阳眼镜</a></h1>
+                <p>{$zt4.ad_name}</p>
+            </div>
+            <div class="image">
+                <a href="category.php?cat_id=190"><img src="{$image_url}{$zt4.ad_code}" /></a>
+            </div>
+        </div>
+        <div class="box box2">
+            <div class="text">
+                <h1><a href="category.php?cat_id=64">护理液</a></h1>
+                <p>{$zt5.ad_name}</p>
+            </div>
+            <div class="image">
+                <a href="category.php?cat_id=64"><img src="{$image_url}{$zt5.ad_code}" /></a>
+            </div>
+            <!--<span class="badge-pg badge-pg-right badge-pg-text">低价</span>-->
+        </div>
+        <div class="box box2">
+            <div class="text">
+                <h1><a href="category.php?cat_id=64">润眼液</a></h1>
+                <p>{$zt6.ad_name}</p>
+            </div>
+            <div class="image">
+                <a href="category.php?cat_id=64"><img src="{$image_url}{$zt6.ad_code}" /></a>
+            </div>
+        </div>
+        <div class="box box2">
+            <div class="text">
+                <h1><a href="category.php?cat_id=76">护理工具</a></h1>
+                <p>{$zt7.ad_name}</p>
+            </div>
+            <div class="image">
+                <a href="category.php?cat_id=76"><img src="{$image_url}{$zt7.ad_code}" /></a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--banner滚动-->
+<div class="smallBanMod container" id="slider-03">
+    <ul class="slider clearfix" id="ts-03">
+        <!--{foreach from=$banner3 item=banner name=foo}-->
+        <!-- 正式环境<li><a href="{$banner.ad_link}" title="{$banner.ad_name}"><img src="{$image_url}{$banner.ad_code}" /></a></li>-->
+        <li><a href="{$banner.ad_link}" title="{$banner.ad_name}"><img src="{$image_url}{$banner.ad_code}" /></a></li>
+        <!--{/foreach}-->
+        <!--<li><a href="#"><img src="http://file.easeeyes.com/wap/images/b1.png" /></a></li>
+        <li><a href="#"><img src="http://file.easeeyes.com/wap/images/b1.png" /></a></li>-->
+    </ul>
+</div>
+<!--品牌推荐-->
+<div class="ppMod container">
+    <h1 class="title-BL">
+        <a href="brands.php" class="pull-right">更多品牌 <i class="enter-pg enter-pg-blue"></i></a>
+        <span>品牌推荐</span>
+    </h1>
+    <div class="main">
+        <table class="table-default">
+            <tbody>
+            <tr>
+                <!--{foreach from=$brand_list item=li name=foo}-->
+                <!--{if $smarty.foreach.foo.index < 3 &&  $smarty.foreach.foo.index >= 0}-->
+                <td>
+                    <a href="{$li.site_url}" title="{$li.brand_name}"><img src="http://img.easeeyes.com/brands/{$li.brand_id}.gif" width="124" height="41" /></a>
+                </td>
+                <!--{/if}-->
+                <!--{/foreach}-->
+            </tr>
+            <tr>
+                <!--{foreach from=$brand_list item=li name=foo}-->
+                <!--{if $smarty.foreach.foo.index < 6 &&  $smarty.foreach.foo.index >= 3}-->
+                <td>
+                    <a href="{$li.site_url}" title="{$li.brand_name}"><img src="http://img.easeeyes.com/brands/{$li.brand_id}.gif" width="124" height="41" /></a>
+                </td>
+                <!--{/if}-->
+                <!--{/foreach}-->
+            </tr>
+            <tr>
+                <!--{foreach from=$brand_list item=li name=foo}-->
+                <!--{if $smarty.foreach.foo.index < 9 &&  $smarty.foreach.foo.index >= 6}-->
+                <td>
+                    <a href="{$li.site_url}" title="{$li.brand_name}"><img src="http://img.easeeyes.com/brands/{$li.brand_id}.gif" width="124" height="41" /></a>
+                </td>
+                <!--{/if}-->
+                <!--{/foreach}-->
+            </tr>
+            <!--<tr>
+                <td>
+                    <a href="#"><img src="http://file.easeeyes.com/wap/images/pp.png" /></a>
+                </td>
+                <td>
+                    <a href="#"><img src="http://file.easeeyes.com/wap/images/pp.png" /></a>
+                </td>
+                <td>
+                    <a href="#"><img src="http://file.easeeyes.com/wap/images/pp.png" /></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#"><img src="http://file.easeeyes.com/wap/images/pp.png" /></a>
+                </td>
+                <td>
+                    <a href="#"><img src="http://file.easeeyes.com/wap/images/pp.png" /></a>
+                </td>
+                <td>
+                    <a href="#"><img src="http://file.easeeyes.com/wap/images/pp.png" /></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#"><img src="http://file.easeeyes.com/wap/images/pp.png" /></a>
+                </td>
+                <td>
+                    <a href="#"><img src="http://file.easeeyes.com/wap/images/pp.png" /></a>
+                </td>
+                <td>
+                    <a href="#"><img src="http://file.easeeyes.com/wap/images/pp.png" /></a>
+                </td>
+            </tr>-->
+            </tbody>
+        </table>
+    </div>
+</div>
+<!--热销-->
+<div class="rxMod container">
+    <h3 class="title-BC"><span>热销推荐</span></h3>
+    <div class="main">
+        <div class="J_touch_slide_nav">
+            <!--热销分类导航-->
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <!--分类推荐产品循环-->
+        <div class="J_touch_slide_main goodsbox">
+            <div class="goodslist clearfix" id="more">
+                <!--{foreach from=$hot_goods item=goods name=foo}-->
+                <div class="box">
+                    {if $goods.sales_tag neq ""}
+                    <span class="badge-pg badge-pg-goods">{$goods.sales_tag}</span>
+                    {/if}
+                    <div class="image {if $goods.saving > 0} active11_badge_2{/if}">
+                        <a href="{$goods.url}" title="{$goods.name|escape:html}"><img src="{$image_url}{$goods.original_img}" /></a>
+                    </div>
+                    <div class="text">
+                        <h3><a href="{$goods.url}">{$goods.goods_name|escape:html}</a></h3>
+                        <span class="price">{if $goods.saving > 0}{$goods.promote_price}{else}￥{$goods.shop_price}{/if}</span> <del>￥{$goods.market_price}</del>
+                    </div>
+                </div>
+                <!--{/foreach}-->
+                <!--<div class="box">
+                    <div class="image">
+                        <a href="#"><img src="http://file.easeeyes.com/wap/images/r01.png" /></a>
+                    </div>
+                    <div class="text">
+                        <h3><a href="#">BESCON三色润彩系列半年抛1片装</a></h3>
+                        <span class="price">￥9.9</span> <del>￥29.9</del>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <a href="#"><img src="http://file.easeeyes.com/wap/images/r01.png" /></a>
+                    </div>
+                    <div class="text">
+                        <h3><a href="#">BESCON三色润彩系列半年抛1片装</a></h3>
+                        <span class="price">￥9.9</span> <del>￥29.9</del>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <a href="#"><img src="http://file.easeeyes.com/wap/images/r01.png" /></a>
+                    </div>
+                    <div class="text">
+                        <h3><a href="#">BESCON三色润彩系列半年抛1片装</a></h3>
+                        <span class="price">￥9.9</span> <del>￥29.9</del>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <a href="#"><img src="http://file.easeeyes.com/wap/images/r01.png" /></a>
+                    </div>
+                    <div class="text">
+                        <h3><a href="#">BESCON三色润彩系列半年抛1片装</a></h3>
+                        <span class="price">￥9.9</span> <del>￥29.9</del>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <a href="#"><img src="http://file.easeeyes.com/wap/images/r01.png" /></a>
+                    </div>
+                    <div class="text">
+                        <h3><a href="#">BESCON三色润彩系列半年抛1片装</a></h3>
+                        <span class="price">￥9.9</span> <del>￥29.9</del>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <a href="#"><img src="http://file.easeeyes.com/wap/images/r01.png" /></a>
+                    </div>
+                    <div class="text">
+                        <h3><a href="#">BESCON三色润彩系列半年抛1片装</a></h3>
+                        <span class="price">￥9.9</span> <del>￥29.9</del>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <a href="#"><img src="http://file.easeeyes.com/wap/images/r01.png" /></a>
+                    </div>
+                    <div class="text">
+                        <h3><a href="#">BESCON三色润彩系列半年抛1片装</a></h3>
+                        <span class="price">￥9.9</span> <del>￥29.9</del>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="image">
+                        <a href="#"><img src="http://file.easeeyes.com/wap/images/r01.png" /></a>
+                    </div>
+                    <div class="text">
+                        <h3><a href="#">BESCON三色润彩系列半年抛1片装</a></h3>
+                        <span class="price">￥9.9</span> <del>￥29.9</del>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+        <!--分类推荐产品循环结束-->
+        <!--<div style="text-align: center; padding: 10px;"><a href="javascript:;" id="add_more">点击加载更多</a></div>-->
+        <div id="lookMore"></div>
+        <div class="loading" id="loading" style="display: none;"></div>
+        <div class="loading" id="nomoreresults" style="display: none;">没有更多了...</div>
+        <input type="hidden" id="nomore" value="0" />
+        <input type="hidden" id="pageStie" value="{$m_page}" />
+    </div>
+</div>
+<!--底部-->
+<div class="f-commitMod container">
+    <ul class="f-commit clearfix">
+        <li>
+            <div class="image"><span><img src="http://file.easeeyes.com/wap/images/f1.png" /></span></div>
+            <div class="text">24小时<br />闪电发货</div>
+        </li>
+        <li>
+            <div class="image"><span><img src="http://file.easeeyes.com/wap/images/f2.png" /></span></div>
+            <div class="text">100%<br />正品保障</div>
+        </li>
+        <li>
+            <div class="image"><span><img src="http://file.easeeyes.com/wap/images/f3.png" /></span></div>
+            <div class="text"> <br />30天退换货</div>
+        </li>
+        <li>
+            <div class="image"><span><img src="http://file.easeeyes.com/wap/images/f4.png" /></span></div>
+            <div class="text"> <br />满68元包邮</div>
+        </li>
+        <li>
+            <div class="image"><span><img src="http://file.easeeyes.com/wap/images/f5.png" /></span></div>
+            <div class="text">600城市<br />货到付款</div>
+        </li>
+        <li>
+            <div class="image"><span><img src="http://file.easeeyes.com/wap/images/f6.png" /></span></div>
+            <div class="text">医疗器械<br />许可证</div>
+        </li>
+    </ul>
+</div>
+<!--秒杀倒计时效果-->
+<script src="http://file.easeeyes.com/wap/js/countdown.js"></script>
+<script>
+    //var date=new Date();
+    //var str=date.getFullYear()+"/"+(parseInt(date.getMonth())+1)+"/"+date.getDate()+" "+"16:00";
+    //倒计时执行代码
+    var countDown=new CountDown("{$ms.djs_time}");
+</script>
+<!-- #BeginLibraryItem "/library/footer_index.lbi" --><!-- #EndLibraryItem -->
+<script src="http://file.easeeyes.com/wap/js/news.js"></script>
+<script src="http://file.easeeyes.com/wap/js/touch.js"></script>
+<script>
+    //banner轮播
+    function TouchSlide(opts){
+        var opts=opts||{};
+        this.count=0;
+        this.auto=opts.auto||false;
+        this.elem=opts.elem;
+        this.len=opts.len||this.elem.getElementsByTagName("li").length;
+        this.width=opts.width;
+        this.init.apply(this,arguments);
+    }
+    TouchSlide.prototype={
+        constructor:TouchSlide,
+        move:function(points){
+            if(this.count>=this.len-1){
+                this.count=0;
+            }else{
+                this.count++;
+            }
+            this.elem.style.left=-this.count*this.width+"px";
+            var i,
+                    point=points.getElementsByTagName("li"),
+                    len=point.length;
+            for(i=0;i<len;i++){
+                point[i].className="";
+            }
+            point[this.count].className="selected";
+        },
+        isAuto:function(points){
+            var that=this;
+            if(that.auto){
+                that.mover=setInterval(function(){
+                    that.move(points);
+                },that.auto);
+            }
+        },
+        createPoints:function(){
+            var i,
+                    points=document.createElement("ul");
+            points.className="points";
+            for(i=0;i<this.len;i++){
+                points.appendChild(document.createElement("li"));
+            }
+            this.elem.parentNode.appendChild(points);
+            return points;
+        },
+        binder:function(points){
+            var initp={},
+                    movep={},
+                    endp={},
+                    xpos,
+                    that=this;
+            this.elem.addEventListener("touchstart",function(e){
+                if(that.mover) clearInterval(that.mover);
+                xpos=parseInt(this.style.left)||0;
+                initp=touchEvent.getPos(e);
+            },false);
+            this.elem.addEventListener("touchmove",function(e){
+                movep=touchEvent.getPos(e);
+                this.style.left=xpos+movep.mx-initp.x+"px";
+            },false);
+            this.elem.addEventListener("touchend",function(e){
+                endp=touchEvent.getPos(e);
+                var dir=touchEvent.getDirect(initp.x,endp.ex,initp.y,endp.ey);
+                if(dir=="left"){
+                    if(Math.abs(endp.ex-initp.x)>30){
+                        if(that.count>=that.len-1){
+                            that.count=that.len-1
+                        }else{
+                            that.count++;
+                        }
+                    }
+                }else if(dir=="right"){
+                    if(Math.abs(endp.ex-initp.x)>30){
+                        if(that.count<=0){
+                            that.count=0;
+                        }else{
+                            that.count--;
+                        }
+                    }
+                }
+                var i,
+                        point=points.getElementsByTagName("li"),
+                        len=point.length;
+                for(i=0;i<len;i++){
+                    point[i].className="";
+                }
+                this.style.left=-that.count*that.width+"px";
+                point[that.count].className="selected";
+                that.isAuto(points);
+            },false);
+        },
+        init:function(){
+            var points=this.createPoints();
+            points.getElementsByTagName("li")[0].className="selected";
+            this.binder(points);
+            this.isAuto(points);
+        }
+    };
+    window.addEventListener("load",function(){
+        //调用
+        var s1=new TouchSlide({
+            elem:document.getElementById("ts-01"),
+            width:parseInt(document.getElementById("slider-01").clientWidth),
+            auto:5000
+        });
+        var s2=new TouchSlide({
+            elem:document.getElementById("ts-02"),
+            width:parseInt(document.getElementById("slider-02").clientWidth),
+            auto:3000
+        });
+        var s3=new TouchSlide({
+            elem:document.getElementById("ts-03"),
+            width:parseInt(document.getElementById("slider-03").clientWidth),
+            auto:3000
+        });
+        var s4=new TouchSlide({
+            elem:document.getElementById("ts-04"),
+            width:parseInt(document.getElementById("slider-04").clientWidth),
+            len:Math.ceil(document.getElementById("ts-04").getElementsByTagName("li").length/3)
+        });
+    },false);
+
+// 加载更多热销产品
+    $(window).scroll(function(e){
+        if($('#nomore').val()==0){
+            if ($(window).scrollTop() + $(window).height() > $("#lookMore").offset().top){
+                $.ajax({
+                    type : "get",
+                    async:false,
+                    url : "index.php?act=more",
+                    data:{page:$("#pageStie").val()},
+                    beforeSend :function(msg){
+                        $('#loading').fadeIn(500);
+                    },
+                    success : function(msg){
+                        $('#loading').fadeOut(500);
+                        if(msg){
+                            $("#more").append(msg);
+                            var  pageStie= parseInt($('#pageStie').val())+parseInt(1);
+                            $('#pageStie').val(pageStie);
+                        }else{
+                            $('#nomore').val(1);
+                        }
+                    }
+                });
+            }
+        }else{
+            $('#nomoreresults').fadeIn(1000);
+        }
+    });
+    $("#add_more").click(function(e){
+        $.ajax({
+            type : "get",
+            async:false,
+            url : "index.php?act=more",
+            data:{page:$("#pageStie").val()},
+            success : function(msg){
+                if(msg){
+                    $("#more").append(msg);
+                    var  pageStie= parseInt($('#pageStie').val())+parseInt(1);
+                    $('#pageStie').val(pageStie);
+                }else{
+                    $("#add_more").html("没有更多了···");
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>

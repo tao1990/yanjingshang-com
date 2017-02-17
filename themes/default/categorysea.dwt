@@ -1,0 +1,542 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$page_title}</title>
+<meta name="Keywords"    content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link rel="stylesheet" type="text/css" href="/themes/default/style/category.css" />
+<link rel="stylesheet" href="http://file.easeeyes.com/b2b/css/index.css" />
+<script src="http://file.easeeyes.com/b2b/js/jquery.min.js"></script>
+</head>
+<style>
+.disn {
+  display: none;
+}
+.w990{
+    width:890px;
+}
+</style>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+<div class="jhMod">
+	<div class="figure"></div>
+	<div class="container">
+		<div class="species">
+			<ul>
+				<a href="category_1.html"><li {if $parent_id eq 1} class="selected" {/if}><img src="http://file.easeeyes.com/b2b/images/ico1.png" /> 普通隐形眼镜</li></a>
+				<a href="category_6.html"><li {if $parent_id eq 6} class="selected" {/if}><img src="http://file.easeeyes.com/b2b/images/ico2.png" /> 彩色隐形眼镜</li></a>
+				<!--<li><a href="category_1.html"><img src="http://file.easeeyes.com/b2b/images/ico3.png" /> 光学眼镜</a></li>-->
+				<a href="category_190.html"><li {if $parent_id eq 190} class="selected" {/if}><img src="http://file.easeeyes.com/b2b/images/ico4.png" /> 太阳眼镜</li></a>
+				<a href="category_159.html"><li {if $parent_id eq 159} class="selected" {/if}><img src="http://file.easeeyes.com/b2b/images/ico5.png" /> 框架眼镜</li></a>
+				<a href="category_64.html"><li {if $parent_id eq 64} class="selected" {/if}><img src="http://file.easeeyes.com/b2b/images/ico6.png" /> 护理液/润眼液</li></a>
+				<a href="category_76.html"><li {if $parent_id eq 76} class="selected" {/if}><img src="http://file.easeeyes.com/b2b/images/ico7.png" /> 护理工具</li></a>
+			</ul>
+		</div>
+        <script type="text/javascript" language="javascript">
+        			var parent_id = "{$parent_id}"; //大类ID
+        			var cat_id = "{$cat_id}" //小类ID
+        			
+        			var searchAttr = new Array();			
+        			if (parent_id == cat_id) searchAttr[0] = "";
+        			else searchAttr[0] = "{$current_category.cat_name}";
+        			//searchAttr[0] = ""; //栏目ID
+        			searchAttr[1] = ""; //周期
+        			searchAttr[2] = ""; //含水量
+        			searchAttr[3] = ""; //直径
+        			searchAttr[4] = ""; //基弧
+        			searchAttr[5] = ""; //颜色
+        			searchAttr[6] = ""; //价格
+        			searchAttr[7] = ""; //护理液:功能
+        			searchAttr[8] = ""; //护理液:规格
+        			searchAttr[9] = ""; //护理工具:类型
+        			searchAttr[10] = ""; //框架,太阳镜:款式
+        			searchAttr[11] = ""; //框架,太阳镜:框型
+        			searchAttr[12] = ""; //框架,太阳镜:尺码
+        			searchAttr[13] = ""; //框架,太阳镜:材质
+        			
+        			var page = 1;
+        			var order_by = "";
+        			
+        			var opt_selected = "";
+        		</script>
+        		<div class="filter">
+        			<div class="selected_item">
+        				<dl>
+        					<dt>您已经选择：</dt>
+        					<dd class="w780">
+        						<div id="attr_0" {if $parent_id eq $cat_id}class="disn"{else}class=""{/if}>品牌：<span>{if $parent_id neq $cat_id}{$current_category.cat_name}{/if}<b></b></span></div>
+        						<div id="attr_1" class="disn">周期：<span><b></b></span></div>
+        						<div id="attr_2" class="disn">含水量：<span><b></b></span></div>
+        						<div id="attr_3" class="disn">直径：<span><b></b></span></div>
+        						<div id="attr_4" class="disn">基弧：<span><b></b></span></div>
+        						<div id="attr_5" class="disn">颜色：<span><b></b></span></div>
+        						<div id="attr_6" class="disn">价格：<span><b></b></span></div>
+        						<div id="attr_7" class="disn">功能：<span><b></b></span></div>
+        						<div id="attr_8" class="disn">规格：<span><b></b></span></div>
+        						<div id="attr_9" class="disn">类型：<span><b></b></span></div>
+        						<div id="attr_10" class="disn">款式：<span><b></b></span></div>
+        						<div id="attr_11" class="disn">框型：<span><b></b></span></div>
+        						<div id="attr_12" class="disn">尺码：<span><b></b></span></div>
+        						<div id="attr_13" class="disn">材质：<span><b></b></span></div>
+        					</dd>
+        				</dl>
+        				<div class="clear"></div>
+        			</div>
+    
+        			
+        			<div id="item_1" class="items">
+        				<div class="item_name">周期：</div>
+        				<div class="item_all item_selected">全部</div>
+        				<div class="item_list w760">
+        					<dl>
+        						<dd><span>日抛</span></dd>
+        						<dd><span>两周抛</span></dd>
+        						<dd><span>月抛</span></dd>
+        						<dd><span>季抛</span></dd>
+        						<dd><span>半年抛</span></dd>
+        						<dd><span>年抛</span></dd>
+        					</dl>
+        				</div>
+        				<div class="clear"></div>
+        			</div>
+        			
+        			<div id="item_2" class="items toggle_panel">
+        				<div class="item_name">含水量：</div>
+        				<div class="item_all item_selected">全部</div>
+        				<div class="item_list w760">
+        					<dl>
+        						<dd><span>37%以下(低含水量)</span></dd>
+        						<dd><span>38%～49%(中含水量)</span></dd>
+        						<dd><span>50%～58%(高含水量)</span></dd>
+        						<dd><span>59%以上(超高含水量)</span></dd>
+        					</dl>
+        				</div>
+        				<div class="clear"></div>
+        			</div>
+        			
+        			<div id="item_3" class="items toggle_panel">
+        				<div class="item_name">直径：</div>
+        				<div class="item_all item_selected">全部</div>
+        				<div class="item_list w760">
+        					<dl>
+        						<!--{foreach from=$zj_array item=zj}-->
+        						<dd><span>{$zj}</span></dd>
+        						<!--{/foreach}-->
+        					</dl>
+        				</div>
+        				<div class="clear"></div>
+        			</div>
+        			
+        			<div id="item_4" class="items toggle_panel">
+        				<div class="item_name">基弧：</div>
+        				<div class="item_all item_selected">全部</div>
+        				<div class="item_list w760">
+        					<dl>
+        						<!--{foreach from=$jh_array item=jh}-->
+        						<dd><span>{$jh}</span></dd>
+        						<!--{/foreach}-->
+        					</dl>
+        				</div>
+        				<div class="clear"></div>
+        			</div>
+       
+        			<div id="item_5" class="items">
+        				<div class="item_name">颜色：</div>
+        				<div class="item_all item_selected">全部</div>
+        				<div class="item_list w760">
+        					<dl>
+        						<!--{foreach from=$color_array item=color}-->
+        						<dd><span>{$color}</span></dd>
+        						<!--{/foreach}-->
+        					</dl>
+        				</div>
+        				<div class="clear"></div>
+        			</div>
+        			<!--{if $parent_id eq 64}-->
+        			<div id="item_7" class="items">
+        				<div class="item_name">功能：</div>
+        				<div class="item_all item_selected">全部</div>
+        				<div class="item_list w760">
+        					<dl>
+        						<dd><span>护理液</span></dd>
+        						<dd><span>润眼液</span></dd>
+        						<dd><span>洗眼液</span></dd>
+        						<dd><span>眼贴膜</span></dd>
+        						<dd><span>硬性RGP护理</span></dd>
+        					</dl>
+        				</div>
+        				<div class="clear"></div>
+        			</div>
+        			
+        			<div id="item_8" class="items">
+        				<div class="item_name">规格：</div>
+        				<div class="item_all item_selected">全部</div>
+        				<div class="item_list w760">
+        					<dl>
+        						<dd><span>便携装（60ml以下）</span></dd>
+        						<dd><span>小瓶装（100ml~125ml)</span></dd>
+        						<dd><span>中瓶装（240ml~380ml）</span></dd>
+        						<dd><span>大瓶装（450ml以上）</span></dd>
+        						<dd><span>组合套装</span></dd>
+        					</dl>
+        				</div>
+        				<div class="clear"></div>
+        			</div>
+        			<!--{/if}-->
+        			
+        			<!--{if $parent_id eq 76}-->
+        			<div id="item_9" class="items">
+        				<div class="item_name">类型：</div>
+        				<div class="item_all item_selected">类型</div>
+        				<div class="item_list w760">
+        					<dl>
+        						<dd><span>伴侣盒</span></dd>
+        						<dd><span>双联盒</span></dd>
+        						<dd><span>清洗护理工具</span></dd>
+        						<dd><span>镊子</span></dd>
+        					</dl>
+        				</div>
+        				<div class="clear"></div>
+        			</div>
+        			<!--{/if}-->
+        			
+        			<!--{if $parent_id eq 159 || $parent_id eq 190}-->
+        			<div id="item_10" class="items">
+        				<div class="item_name">款式：</div>
+        				<div class="item_all item_selected">全部</div>
+        				<div class="item_list w760">
+        					<dl>
+        						<dd><span>中性款</span></dd>
+        						<dd><span>男款</span></dd>
+        						<dd><span>女款</span></dd>
+        						<dd><span>儿童款</span></dd>
+        					</dl>
+        				</div>
+        				<div class="clear"></div>
+        			</div>
+        			
+        			<div id="item_11" class="items">
+        				<div class="item_name">框型：</div>
+        				<div class="item_all item_selected">全部</div>
+        				<div class="item_list w760">
+        					<dl>
+        						<dd><span>半框</span></dd>
+        						<dd><span>全框</span></dd>
+        						<dd><span>无框</span></dd>
+        					</dl>
+        				</div>
+        				<div class="clear"></div>
+        			</div>
+        			
+        			<div id="item_12" class="items">
+        				<div class="item_name">尺码：</div>
+        				<div class="item_all item_selected">全部</div>
+        				<div class="item_list w760">
+        					<dl>
+        						<dd><span>小尺码</span></dd>
+        						<dd><span>中尺码</span></dd>
+        						<dd><span>大尺码</span></dd>
+        					</dl>
+        				</div>
+        				<div class="clear"></div>
+        			</div>
+        			
+        			<div id="item_13" class="items toggle_panel">
+        				<div class="item_name">材质：</div>
+        				<div class="item_all item_selected">全部</div>
+        				<div class="item_list w760">
+        					<dl>
+        						<!--{foreach from=$cz_array item=cz}-->
+        						<dd><span>{$cz}</span></dd>
+        						<!--{/foreach}-->
+        					</dl>
+        				</div>
+        				<div class="clear"></div>
+        			</div>
+        			<!--{/if}-->
+        			
+        			<div id="item_6" class="items noborder mb5">
+        				<div class="item_name">价格：</div>
+        				<div class="item_all item_selected">全部</div>
+        				<div class="item_list w760">
+        					<dl>
+        						<dd><span>50元以下</span></dd>
+        						<dd><span>50元～99元</span></dd>
+        						<dd><span>100元～149元</span></dd>
+        						<dd><span>150元～199元</span></dd>
+        						<dd><span>200元～299元</span></dd>
+        						<dd><span>300元及以上</span></dd>
+        					</dl>
+        				</div>
+        				<div class="clear"></div>
+        			</div>
+        			
+        			<span class="reset_seleted">删除筛选条件</span>
+        		</div>
+        		<!-- filter END -->
+        		
+                
+        		<div class="slide_item">
+        			<span id="slide_btn" class="slide_hidden">显示全部选项 &or;</span>
+        		</div>
+            
+                <input type="hidden" id="search_keyword" value="{$smarty.get.keyword} " />
+                
+        <div class="sequence-pg-main clearfix">
+        
+        	<!-- category_left END -->
+        	
+        	<div class="fl left">
+        		<div id="ajax_result" class="goods_list w990">
+        		</div>
+        		<!-- goods_list END -->
+        	</div>
+            
+            <div class="fr right-common-Mod" style="padding-top: 0px;">
+					<div class="adv">
+						<a href="#"><img src="http://file.easeeyes.com/b2b/images/adv01.png"></a>
+					</div>
+					<div class="move-slider hotgoods">
+						<div class="title">热销商品推荐</div>
+						<div class="goods">
+            				<ul class="main">
+            					<li>
+                                    <!--{foreach from=$sales_charts1 item=li name=foo}-->     
+            						<div class="thumb-pg">
+            							<div class="image">
+            								<a href="goods{$li.goods_id}.html" target="_blank"><img src="thumb/goods/60x60/goods_{$li.goods_id}_60x60.jpg" /></a>
+            							</div>
+            							<div class="text">
+            								<a href="goods{$li.goods_id}.html" target="_blank">{$li.goods_name}</a><br />
+            								<span class="price">¥ {$li.shop_price}</span>
+            							</div>
+            						</div>
+            			             <!--{/foreach}-->   
+            					</li>
+            					<li>
+                                    <!--{foreach from=$sales_charts2 item=li name=foo}-->     
+            						<div class="thumb-pg">
+            							<div class="image">
+            								<a href="goods{$li.goods_id}.html" target="_blank"><img src="thumb/goods/60x60/goods_{$li.goods_id}_60x60.jpg" /></a>
+            							</div>
+            							<div class="text">
+            								<a href="goods{$li.goods_id}.html" target="_blank">{$li.goods_name}</a><br />
+            								<span class="price">¥ {$li.shop_price}</span>
+            							</div>
+            						</div>
+            			             <!--{/foreach}-->   
+            					</li>
+                                <li>
+                                    <!--{foreach from=$sales_charts3 item=li name=foo}-->     
+            						<div class="thumb-pg">
+            							<div class="image">
+            								<a href="goods{$li.goods_id}.html" target="_blank"><img src="thumb/goods/60x60/goods_{$li.goods_id}_60x60.jpg" /></a>
+            							</div>
+            							<div class="text">
+            								<a href="goods{$li.goods_id}.html" target="_blank">{$li.goods_name}</a><br />
+            								<span class="price">¥ {$li.shop_price}</span>
+            							</div>
+            						</div>
+            			             <!--{/foreach}-->   
+            					</li>
+            				</ul>
+            			</div>
+					</div>
+					<div class="adv">
+						<a href="#"><img src="http://file.easeeyes.com/b2b/images/adv02.png"></a>
+					</div>
+				</div>
+        	<!-- category_right END -->
+        	
+        	<div class="clear"></div>
+        </div>
+        
+		<div class="goods-pg">
+			<span class="goods-pg-arrow"></span>
+			<span class="goods-pg-arrow goods-pg-arrow-right"></span>
+			<div class="goods-pg-title">商品精选</div>
+			<div class="goods-pg-main">
+				<ul>
+                <!--{foreach from=$spjx item=li}-->
+					<li>
+						<div class="image">
+							<a href="goods{$li.goods_id}.html" target="_blank"><img title="{$li.goods_name}" src="http://easeeyes.com/{$li.goods_thumb}" /></a>
+						</div>
+						<div class="text">
+							<a href="goods{$li.goods_id}.html" title="{$li.goods_name}" target="_blank">{$li.goods_name|truncate:10}</a><br />
+							<span class="price">¥ {$li.b2b_shop_price}</span>
+						</div>
+					</li>
+                <!--{/foreach}-->
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+<!-- footer END -->
+
+<script type="text/javascript" src="/js/common.js"></script>
+<!--[if IE 6]>
+<script src="/js/dd_png.js"></script>
+<script>
+  DD_belatedPNG.fix('.cart_number,.mm_hot');
+</script>
+<![endif]-->
+<script type="text/javascript">
+$(document).ready(function(){
+	//$("img").lazyload({placeholder:"/js/img/white.gif", effect:"fadeIn"});
+	
+	getData(searchAttr); //初始化载入数据
+	
+	//browser_resize();
+	$(window).resize(function(){
+		//browser_resize();
+	});
+	
+	//显示下拉导航
+	$(".cate_title").mouseenter(function(){
+		$(".dropdown").css("display", "block");
+	});
+	$(".cate_title").mouseleave(function(){
+		$(".dropdown").css("display", "none");
+	});
+	
+	//打开下拉导航子项
+	$(".submenu").mouseenter(function(){
+		var li_index = $(".submenu").index(this); //当前li的索引值
+		$(this).addClass('submenu_over submenu_over' + li_index);
+		$(this).find('.extensive_menu').removeClass('disn').addClass('ext_menu' + li_index); //展开扩展菜单
+		$(this).find('.hidden_left_line').removeClass('disn'); //遮住子菜单与扩展菜单相连的边框
+	});
+	$(".submenu").mouseleave(function(){
+		var li_index = $(".submenu").index(this);
+		$(this).removeClass('submenu_over submenu_over' + li_index);
+		$(this).find('.extensive_menu').addClass('disn');
+		$(this).find('.hidden_left_line').addClass('disn');
+	});
+	
+	//取消选择的属性
+	$(".selected_item dd div").click(function(){
+		var item_index = $(".selected_item dd div").index(this);
+		$(this).addClass("disn");
+		
+		searchAttr[item_index] = "";
+		getData(searchAttr);
+		
+		//更改样式
+		$("#item_" + item_index).find(".item_all").addClass("item_selected"); //选中全部
+		$("#item_" + item_index).find("span").removeClass("item_selected"); //移除子项选中
+	});
+	
+	//选择属性
+	$(".items dd span").click(function(){
+		var attr_value = $(this).text(); //属性值
+		var item_name = $(this).parents(".items").find(".item_name").text(); //属性组名称
+		var temp = $(this).parents(".items").attr("id").split("_"); //属性组DIV的id
+		var item_index = temp[1];
+		
+		//<div id="attr_0" class="disn">品牌：<span>博士伦蕾丝<b></b></span></div>
+		$("#attr_" + item_index).html(item_name + "<span>" + attr_value + "<b></b></span>");
+		$("#attr_" + item_index).removeClass("disn");
+		
+		searchAttr[item_index] = attr_value;
+		getData(searchAttr);
+		
+		//更改样式
+		$(this).parents(".items").find(".item_all").removeClass("item_selected"); //取消全部
+		$(this).parents("dl").find("span").removeClass("item_selected"); //移除本组所有选中项
+		$(this).addClass("item_selected"); //选中本项
+	});
+	
+	//选择“全部”
+	$(".item_all").click(function(){
+		$(this).addClass("item_selected");
+		var temp = $(this).parents(".items").attr("id").split("_"); //属性组DIV的id
+		var item_index = temp[1];
+		
+		$("#attr_" + item_index).addClass("disn");
+		searchAttr[item_index] = '';
+		getData(searchAttr);
+		
+		$(this).parents(".items").find("span").removeClass("item_selected");
+	});
+	
+	//清除所有选中项reset_seleted
+	$(".reset_seleted").click(function(){
+		$(".item_all").addClass("item_selected");
+		$(".selected_item dd div").addClass("disn");
+		$(".item_list dd span").removeClass("item_selected");
+		
+		searchAttr[0] = ""; //大类ID
+		searchAttr[1] = "";
+		searchAttr[2] = "";
+		searchAttr[3] = "";
+		searchAttr[4] = "";
+		searchAttr[5] = "";
+		searchAttr[6] = "";
+		searchAttr[7] = "";
+		searchAttr[8] = "";
+		searchAttr[9] = "";
+		searchAttr[10] = "";
+		searchAttr[11] = "";
+		searchAttr[12] = "";
+		searchAttr[13] = "";
+		
+		getData(searchAttr);
+	});
+	
+	//展开,收起选项
+	$("#slide_btn").click(function(){
+		$(".toggle_panel").slideToggle("slow");
+		if ($(this).attr("class") == "slide_hidden") {
+			$(this).removeClass("slide_hidden");
+			$(this).html("收起 &and;");
+		} else {
+			$(this).addClass("slide_hidden");
+			$(this).html("显示全部选项 &or;");
+		}
+	});
+	
+});
+
+//ajax获取商品数据
+function getData(searchAttr) {
+	var params = searchAttr.join("||"); //将数组用||号连接
+	var keyword = $("#search_keyword").val();
+	$.ajax({
+		type: "POST",
+		url: "ajax_goods.php?act=category_goods&parent_id=0" + "&page="+page+"&order_by="+order_by+"&params=" + encodeURIComponent(params)+"&search=1&keyword=" + keyword,
+		success:function(d){
+			$("#ajax_result").html(d);
+		},
+		error:function(d){
+			alert('error:'+d.toSource());
+		}
+	});
+}
+
+//resize page width
+function browser_resize() {
+	var browser_width = $(document).width();
+	if (browser_width < 1350) {
+		$("#top_main").removeClass("w1210");
+		$("#top_main").addClass("w990");
+	} else {
+		$("#top_main").removeClass("w990");
+		$("#top_main").addClass("w1210");
+	}
+}
+
+</script>
+
+
+
+</body>
+</html>

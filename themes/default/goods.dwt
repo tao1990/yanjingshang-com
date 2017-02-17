@@ -1,0 +1,312 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>{$page_title}</title>
+<meta name="Keywords"    content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link rel="stylesheet" href="http://file.easeeyes.com/b2b/css/base.css" />
+<link rel="stylesheet" href="http://file.easeeyes.com/b2b/css/index.css" />
+<link href="http://file.easeeyes.com/b2b/css/jquery.jqzoom.css" rel="stylesheet" />
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<!--main-->
+<div class="container detailMod">
+	<div class="topPart clearfix">
+		<div class="leftPart fl">
+			<div class="position-2-pg">
+			{$ur_here}
+			</div>
+			<div class="clearfix">
+                <!--商品放大镜-->
+				<div class="zoom-pg fl">
+					<div class="zoom-pg-main">
+                    {if $gallery.0.img_original}
+						<a href="{$img_url}{$gallery.0.img_original}" class="jqzoom"> 
+							<img src="{$img_url}{$gallery.0.img_original}" id="zoom-img" />
+						</a>	
+                    {/if}	
+					</div>
+					<div class="zoom-pg-list">
+						<div class="zoom-pg-list-box">
+							<ul class="clearfix">
+                                <!--{foreach from=$gallery item=li key=key name=foo}-->    
+                                    {if $li.thumb_url && $li.img_original}                 
+                                    <li><img src="{$img_url}{$li.thumb_url}" data-href="{$img_url}{$li.img_original}" width="60" height="60"  /></li> 
+                                    {/if}
+                                <!--{/foreach}--> 
+							</ul>
+						</div>
+						<span class="zoom-pg-arrow">&lt;</span>
+						<span class="zoom-pg-arrow zoom-pg-arrow-right">&gt;</span>
+					</div>
+				</div>
+				<!--商品放大镜end-->
+				<!--商品价格详情-->
+                <!--{if $is_jp}镜片模板-->
+                    <!-- #BeginLibraryItem "/library/goods_jp.lbi" --><!-- #EndLibraryItem -->
+                <!--{else}-->
+                    <!--{if $goodsds}有度数商品-->
+    				    <!-- #BeginLibraryItem "/library/goods_info_ds.lbi" --><!-- #EndLibraryItem -->
+                    <!--{else}护理液等没度数商品-->     
+                        <!-- #BeginLibraryItem "/library/goods_info_nods.lbi" --><!-- #EndLibraryItem -->
+                    <!--{/if}-->
+                <!--{/if}-->
+			</div>
+		</div>
+        
+        <input type="hidden" id="goods_id" value="{$goods_id}" />
+        <input type="hidden" id="shop_price" value="{$shop_price}" />
+        <input type="hidden" id="rank_price" value="{$rank_price}" />
+        <input type="hidden" id="pifa_confirm" value="{$pifa_confirm}" />
+        <input type="hidden" id="pifa_array" value="{$wholesale_arr_serialize}" />
+  
+        <!--{if $link_goods}-->
+		<div class="rightPart fr">
+			<h4>同类型商品推荐</h4>
+            <!--{foreach from=$link_goods item=li key=key name=foo}-->     
+			<div class="box">
+				<div class="image">
+					<a href="goods{$li.link_goods_id}.html" target="_blank">
+						<img title="{$li.goods_name}" src="{$img_url}data/goods_img/150x150/G_{$li.link_goods_id}.jpg" />
+					</a>
+				</div>
+				<div class="text">¥ {$li.b2b_shop_price}</div>
+			</div>
+            <!--{/foreach}-->
+		</div>
+        <!--{/if}-->
+	</div>
+	<div class="botPart clearfix">
+		<!--选项卡导航-->
+		<div class="tab-pg-nav" id="tab-nav-01">
+			<ul>
+				<li class="selected">商品详情</li>
+				<!--<li>订购说明</li>-->
+			</ul>
+		</div>
+		<div class="clearfix">
+			<!--选项卡内容-->
+			<div class="fl" id="tab-box-01">
+				<div class="tab-pg-box">
+					<div class="table">
+						<table>
+							<tbody>
+								<tr>
+                                <!--{foreach from=$attrs item=li key=key name=foo}-->        
+                                {if $key < 3}    
+                                    <th>{$li.attr_name}</th>
+									<td>{$li.attr_value}</td>
+                                {/if}
+                                <!--{/foreach}--> 
+								</tr>
+								<tr>
+                                <!--{foreach from=$attrs item=li key=key name=foo}-->        
+                                {if $key >=3 && $key <6}    
+                                    <th>{$li.attr_name}</th>
+									<td>{$li.attr_value}</td>
+                                {/if}
+                                <!--{/foreach}--> 
+								</tr>
+                                <tr>
+                                <!--{foreach from=$attrs item=li key=key name=foo}-->        
+                                {if $key >=6 && $key <9}    
+                                    <th>{$li.attr_name}</th>
+									<td>{$li.attr_value}</td>
+                                {/if}
+                                <!--{/foreach}--> 
+								</tr>
+                                <tr>
+                                <!--{foreach from=$attrs item=li key=key name=foo}-->        
+                                {if $key >=9 && $key <12}    
+                                    <th>{$li.attr_name}</th>
+									<td>{$li.attr_value}</td>
+                                {/if}
+                                <!--{/foreach}--> 
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div>
+                        {$goods.goods_desc}
+                    </div>
+				</div>
+				<div class="tab-pg-box">
+					2
+				</div>
+			
+			</div>
+			<!--热销推荐-->
+			<div class="fr right-common-Mod">
+			     <div class="move-slider hotgoods">
+        			<div class="title">热销商品推荐</div>
+        			<div class="goods">
+        				<ul class="main">
+              
+        					<li>
+                                <!--{foreach from=$sales_charts1 item=li name=foo}-->     
+        						<div class="thumb-pg">
+        							<div class="image">
+        								<a href="goods{$li.goods_id}.html" target="_blank"><img src="{$img_url}data/goods_img/60x60/G_{$li.goods_id}.jpg" /></a>
+        							</div>
+        							<div class="text">
+        								<a href="goods{$li.goods_id}.html" target="_blank">{$li.goods_name}</a><br />
+        								<span class="price">¥ {$li.shop_price}</span>
+        							</div>
+        						</div>
+        			             <!--{/foreach}-->   
+        					</li>
+        					<li>
+                                <!--{foreach from=$sales_charts2 item=li name=foo}-->     
+        						<div class="thumb-pg">
+        							<div class="image">
+        								<a href="goods{$li.goods_id}.html" target="_blank"><img src="{$img_url}data/goods_img/60x60/G_{$li.goods_id}.jpg" /></a>
+        							</div>
+        							<div class="text">
+        								<a href="goods{$li.goods_id}.html" target="_blank">{$li.goods_name}</a><br />
+        								<span class="price">¥ {$li.shop_price}</span>
+        							</div>
+        						</div>
+        			             <!--{/foreach}-->   
+        					</li>
+                            <li>
+                                <!--{foreach from=$sales_charts3 item=li name=foo}-->     
+        						<div class="thumb-pg">
+        							<div class="image">
+        								<a href="goods{$li.goods_id}.html" target="_blank"><img src="{$img_url}data/goods_img/60x60/G_{$li.goods_id}.jpg" /></a>
+        							</div>
+        							<div class="text">
+        								<a href="goods{$li.goods_id}.html" target="_blank">{$li.goods_name}</a><br />
+        								<span class="price">¥ {$li.shop_price}</span>
+        							</div>
+        						</div>
+        			             <!--{/foreach}-->   
+        					</li>
+        				</ul>
+        			</div>
+        		</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+
+<script src="http://file.easeeyes.com/b2b/js/jquery.min.js"></script>
+<script src="http://file.easeeyes.com/b2b/js/zoom.js"></script>
+<script type="text/javascript" src="/js/common.js" ></script>
+<script>
+$(function(){
+    //提示助手
+	$(".J_helper").hover(function(){
+		$(".J_helper_layer").show();
+	},function(){
+		$(".J_helper_layer").hide();
+	});
+    
+    var pifa_confirm = $("#pifa_confirm").val();
+    var pifa_array   = $("#pifa_array").val();
+    
+	//增减数量
+	$(".numCount-pg-cut").click(function(){
+		var val=$(this).siblings(".numCount-pg-num").find("input").val();
+		if(val>1){
+			val--;
+		}
+		$(this).siblings(".numCount-pg-num").find("input").val(val);
+		totalPrice.init();
+	});
+	$(".numCount-pg-add").click(function(){
+		var val=$(this).siblings(".numCount-pg-num").find("input").val();
+		val++;
+		$(this).siblings(".numCount-pg-num").find("input").val(val);
+		totalPrice.init();
+	});
+    
+	//商品价格计算 批发商品需ajax计算价格
+	var totalPrice={
+
+		pifaSinPrice:function(num){//批发价
+        
+            var goods_id = $("#goods_id").val();
+		    var num      = $("#number").val();
+            
+                $.ajax({
+    				url:"ajax_goods.php?act=change_buy_num",
+    				type:"POST",
+    				data:{
+    				    goods_id : goods_id,    
+                        num : num
+    				},
+    				success:function(data){
+                        $(".d-value-total span").text(data);
+                        $(".d-value-count span").text(num);
+    				}
+    			})
+           
+		},
+        SinPrice:function(num){//非批发
+		    var num      = $("#number").val();
+            var shop_price = $("#shop_price").val();
+            var rank_price = $("#rank_price").val();
+            if(rank_price > 0){
+                shop_price = rank_price;
+            }
+            
+            $(".d-value-total span").text(num*shop_price);
+            $(".d-value-count span").text(num);
+         
+		},
+		init:function(){
+				val = $("#number").val();
+                pifa_confirm = $("#pifa_confirm").val();  
+                if(pifa_confirm == 1){
+				    singlePrice=this.pifaSinPrice(val);
+                }else{
+                    singlePrice=this.SinPrice(val);
+                }
+		}
+	}
+	//页面加载时触发
+	totalPrice.init();
+	//手动修改数量时触发
+	$("#number").change(function(){
+		totalPrice.init();
+	});
+
+	//缩略图控制
+	(function(){
+		var $list_box=$(".zoom-pg-list-box"),
+			$arrow=$(".zoom-pg-arrow"),
+			$list=$list_box.find("li"),
+			$ulist=$list_box.find("ul"),
+			count=0;
+		$arrow.click(function(){
+			var index=$arrow.index($(this));
+			//alert(index)
+			if(!$ulist.is(":animated")){
+				if(index==0){
+					if(count<=0){
+						count=0;
+					}else{
+						count--;
+					}
+				}else{
+					if(count>=$list.length-5){
+						count=$list.length-5;
+					}else{
+						count++;
+					}
+				}
+				$ulist.stop().animate({
+					"left":-count*70+"px"
+				},200)
+			}
+		})
+	})();
+});
+</script>
+</body>
+</html>

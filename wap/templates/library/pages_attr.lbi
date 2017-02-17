@@ -1,0 +1,43 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--翻页 start-->
+<form name="selectPageForm" action="{$smarty.server.PHP_SELF}" method="get">
+
+ <div class="page">
+  <!-- {if $total_rows > 0} -->
+      <div class="pagelogo"><a href="{$smarty.server.PHP_SELF}?cat_id={$cat_id}&sort={$sort}&order={$order}&attr0={$attr0}&page=1" class="color_qianfei">{$lang.page_first}</a></div>
+      
+		<!-- {if $page_prev} -->
+			<div class="pagelogo"><a href="{$smarty.server.PHP_SELF}?cat_id={$cat_id}&sort={$sort}&order={$order}&attr0={$attr0}&page={$page_prev}"  class="color_qianfei">{$lang.page_prev}</a></div>
+		<!--{else}-->
+			<div class="pagelogo"><span class="color_qianfei">{$lang.page_prev}</span></div>
+		<!-- {/if} -->
+
+		<!--{foreach from=$pages_array item=each_page}-->
+			<div class="pages_num pagelogohong" style="background-color:#fff;"><a href="{$each_page.url}"><!--{if $each_page.p == $page}--><span style="color:red;">{$each_page.p}</span><!--{else}-->{$each_page.p}<!--{/if}--></a></div>
+		<!--{/foreach}-->
+
+      <!-- {if $page_next}-->
+	  	<div class="pagelogo"><a href="{$smarty.server.PHP_SELF}?cat_id={$cat_id}&sort={$sort}&order={$order}&attr0={$attr0}&page={$page_next}" class="color_qianfei">{$lang.page_next}</a></div>
+      <!--{else}-->
+	  	<div class="pagelogo"><span  class="color_qianfei">{$lang.page_next}</span></div>  
+      <!-- {/if} -->
+	  
+      <!-- {if $total_pages} -->
+	  	<div class="pagelogo"><a href="{$smarty.server.PHP_SELF}?cat_id={$cat_id}&sort={$sort}&order={$order}&attr0={$attr0}&page={$total_pages}" class="color_qianfei">{$lang.page_last}</a></div>
+      <!--{else}-->
+	  	<div class="pagelogo"><span class="color_qianfei">{$lang.page_last}</span></div>
+      <!-- {/if} -->
+  <!-- {/if} -->
+  
+
+	<div class="pagelogo">{$lang.pager_1}<b>{$total_rows}</b> {$lang.pager_2}</div>
+</div>
+
+</form>
+{literal}
+<script type="Text/Javascript" language="JavaScript">
+<!--
+function selectPage(sel){  sel.form.submit();}
+//-->
+</script>
+{/literal}

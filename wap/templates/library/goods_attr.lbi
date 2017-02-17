@@ -1,0 +1,203 @@
+	<div style="background:#fff;margin-top:.7rem;" class="proGg">
+			<h2 class="detailpage-title">产品规格</h2>
+            <div class="items detailpage-main">
+				<div class="item">
+					<span class="key">品牌</span>
+					<span class="value">{$goods.goods_brand}</span>
+				</div>
+                <!--{if $goods.goods_type eq 10 or $goods.goods_type eq 12}[隐形眼镜]-->
+                    <!--{foreach from=$attrs item=attr name=foo}-->
+                    <!--{if $attr.attr_id eq 211 or $attr.attr_id eq 219}-->
+                    <div class="item">
+                        <span class="key">周期</span>
+                        <span class="value">{$attr.attr_value}</span>
+                    </div>
+                    <!--{/if}-->
+                    <!--{if $attr.attr_id eq 212 or $attr.attr_id eq 220}-->
+                    <div class="item">
+                        <span class="key">颜色</span>
+                        <span class="value">{$attr.attr_value}</span>
+                    </div>
+                    <!--{/if}-->
+                    <!--{if $attr.attr_id eq 213 or $attr.attr_id eq 221}-->
+                    <div class="item">
+                        <span class="key">含水量</span>
+                        <span class="value">{$attr.attr_value}</span>
+                    </div>
+                    <!--{/if}-->
+                    <!--{if $attr.attr_id eq 214 or $attr.attr_id eq 222}-->
+                    <div class="item">
+                        <span class="key">直径</span>
+                        <span class="value">{$attr.attr_value}</span>
+                    </div>
+                    <!--{/if}-->
+                    <!--{if $attr.attr_id eq 215 or $attr.attr_id eq 223}-->
+                    <div class="item">
+                        <span class="key">基弧</span>
+                        <span class="value">{$attr.attr_value}</span>
+                    </div>
+                    <!--{/if}-->
+                    <!--{if $attr.attr_id eq 224 or $attr.attr_id eq 229}-->
+                    <div class="item">
+                        <span class="key">中心厚度</span>
+                        <span class="value">{$attr.attr_value}</span>
+                    </div>
+                    <!--{/if}-->
+                    <!--{if $attr.attr_id eq 240}-->
+                    <div class="item">
+                        <span class="key">透氧系数</span>
+                        <span class="value">{$attr.attr_value}</span>
+                    </div>
+                    <!--{/if}-->
+                    <!--{if $attr.attr_id eq 225 or $attr.attr_id eq 230}-->
+                    <div class="item">
+                        <span class="key">材质</span>
+                        <span class="value">{$attr.attr_value}</span>
+                    </div>
+                    <!--{/if}-->
+                    <!--{if $attr.attr_id eq 241 or $attr.attr_id eq 242}-->
+                    <div class="item">
+                        <span class="key">单位</span>
+                        <span class="value">{$attr.attr_value}</span>
+                    </div>
+                    <!--{/if}-->
+                    <!--{if $attr.attr_id eq 226 or $attr.attr_id eq 231}-->
+                    <div class="item">
+                        <span class="key">产地</span>
+                        <span class="value">{$attr.attr_value}</span>
+                    </div>
+                    <!--{/if}-->
+                    <!--{if $attr.attr_id eq 227 or $attr.attr_id eq 232}-->
+                    <div class="item">
+                        <span class="key">有效期</span>
+                        <span class="value">{$attr.attr_value}</span>
+                    </div>
+                    <!--{/if}-->
+                    <!--{if $attr.attr_id eq 228 or $attr.attr_id eq 233}-->
+                    <div class="item">
+                        <span class="key">注册号</span>
+                        <span class="value">{$attr.attr_value}</span>
+                    </div>
+                    <!--{/if}-->
+                    <!--{/foreach}-->
+                <!--{/if}-->
+
+                <!--{if $goods.goods_type eq 13 or $goods.goods_type eq 0}[护理液]-->
+                    <div class="item">
+                        <span class="key">品牌</span>
+                        <span class="value">{$goods.goods_brand}</span>
+                    </div>
+                    <!--{foreach from=$attrs item=attr name=foo}-->
+                    <!--{if $attr.attr_id eq 243}-->
+                    <div class="item">
+                        <span class="key">单位</span>
+                        <span class="value">{$attr.attr_value}</span>
+                    </div>
+                    <!--{/if}-->
+                    <!--{if $attr.attr_id eq 234}-->
+                    <div class="item">
+                        <span class="key">更换周期</span>
+                        <span class="value">{$attr.attr_value}</span>
+                    </div>
+                    <!--{/if}-->
+                    <!--{if $attr.attr_id eq 235}-->
+                    <div class="item">
+                        <span class="key">主要功能</span>
+                        <span class="value">{$attr.attr_value}</span>
+                    </div>
+                    <!--{/if}-->
+                    <!--{if $attr.attr_id eq 236}-->
+                    <div class="item">
+                        <span class="key">主要成分</span>
+                        <span class="value">{$attr.attr_value}</span>
+                    </div>
+                    <!--{/if}-->
+                    <!--{if $attr.attr_id eq 237}-->
+                    <div class="item">
+                        <span class="key">产地</span>
+                        <span class="value">{$attr.attr_value}</span>
+                    </div>
+                    <!--{/if}-->
+                    <!--{if $attr.attr_id eq 238}-->
+                    <div class="item">
+                        <span class="key">有效期</span>
+                        <span class="value">{$attr.attr_value}</span>
+                    </div>
+                    <!--{/if}-->
+                    <!--{if $attr.attr_id eq 239}-->
+                    <div class="item">
+                        <span class="key">注册号</span>
+                        <span class="value">{$attr.attr_value}</span>
+                    </div>
+                    <!--{/if}-->
+                    <!--{/foreach}-->
+                <!--{/if}-->
+
+                <!--{if $goods.goods_type eq 14}[护理工具]-->
+                    <div class="item">
+                        <span class="key">品牌</span>
+                        <span class="value">{$goods.goods_brand}</span>
+                    </div>
+                    <div class="item">
+                        <span class="key">单位</span>
+                        <span class="value">{$goods.unit|default:盒}</span>
+                    </div>
+                <!--{/if}-->
+
+                <!--{if $goods.goods_type eq 15}[框架眼镜]-->
+                    <div class="item">
+                        <span class="key">品牌</span>
+                        <span class="value">{$goods.goods_brand}</span>
+                    </div>
+                    <!--{foreach from=$attrs item=attr name=foo}-->
+                    <div class="item">
+                        <span class="key">
+                            <!--{if $attr.attr_id eq 244}-->款式
+                            <!--{elseif $attr.attr_id eq 245}-->框型
+                            <!--{elseif $attr.attr_id eq 246}-->尺寸
+                            <!--{elseif $attr.attr_id eq 247}-->材质
+                            <!--{elseif $attr.attr_id eq 248}-->颜色
+                            <!--{elseif $attr.attr_id eq 249}-->风格
+                            <!--{elseif $attr.attr_id eq 250}-->镜框尺寸
+                            <!--{elseif $attr.attr_id eq 251}-->鼻梁尺寸
+                            <!--{elseif $attr.attr_id eq 252}-->镜腿尺寸
+                            <!--{elseif $attr.attr_id eq 253}-->镜框高度
+                            <!--{elseif $attr.attr_id eq 254}-->总宽度
+                            <!--{else}--><!--{/if}-->:
+                        </span>
+                        <span class="value">{$attr.attr_value}</span>
+                    </div>
+                    <!--{/foreach}-->
+                    <div class="item">
+                        <span class="key">单位</span>
+                        <span class="value">{$goods.unit|default:副}</span>
+                    </div>
+                <!--{/if}-->
+
+                <!--{if $goods.goods_type eq 16}[太阳眼镜]-->
+                    <div class="item">
+                        <span class="key">品牌</span>
+                        <span class="value">{$goods.goods_brand}</span>
+                    </div>
+                    <!--{foreach from=$attrs item=attr name=foo}-->
+                    {if $attr.attr_id< 265 || $attr.attr_id> 257}
+                    <div class="item">
+                        <span class="key">周期</span>
+                        <span class="value">{$attr.attr_value}</span>
+                        <span class="key">
+                            <!--{if $attr.attr_id eq 258}-->款式
+                            <!--{elseif $attr.attr_id eq 259}-->框型
+                            <!--{elseif $attr.attr_id eq 260}-->尺码
+                            <!--{elseif $attr.attr_id eq 261}-->材质
+                            <!--{elseif $attr.attr_id eq 262}-->颜色
+                            <!--{elseif $attr.attr_id eq 263}-->产地
+                            <!--{elseif $attr.attr_id eq 264}-->尺寸
+                            <!--{else}--><!--{/if}-->:
+                        </span>
+                        <span class="value">{$attr.attr_value}</span>
+                    </div>
+                    {/if}
+                    <!--{/foreach}-->
+                <!--{/if}-->
+			</div>
+		</div>

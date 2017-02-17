@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<meta name="keywords" content="周一秒杀，{$ms.ms_name}{$ms.price}元，限时开秒" />
+<meta name="description" content="周一秒杀 博士伦、强生、海昌、视康隐形眼镜、CK、coach框架镜1折起，全网最低价，正品保障，官方授权" />
+<title>周一秒杀 1折起</title>
+<style type="text/css">
+body,div,span { margin:0; padding:0; }
+img { border:0; }
+.clear { clear:both; width:0; height:0; }
+.miaosha { margin: 0; background-color:#d54e4b; width: 100%}
+.bg_head { margin:0 auto; width:100%; height:400px; background:url(templates/images/miaosha/top.jpg) top center repeat-x; }
+.miaosha_main { margin:0 auto; width:100%; }
+.m_left { float:left; width:100%; height:auto; background-color:#ffffff; overflow:hidden; }
+.m_right { float:right; width:207px; }
+.m_title1 { height:49px; background-color:#ffe9dc; }
+.miaosha_desc { padding:15px 15px 10px 15px; color:#686868; line-height:35px; font-size:24px; font-family:"微软雅黑", "宋体"; font-weight:bold; }
+.miaosha_desc span { color:#e43232; }
+
+.miaosha_focus { padding:5px 0 0 0; }
+.miaosha_price { /*float:left;*/ background:url(templates/images/miaosha/price.gif) top left no-repeat; width:100%; height:auto; }
+.miaosha_price2 { /*float:left;*/ background:url(templates/images/miaosha/price2.gif) top left no-repeat; width:100%; height:auto; }
+.miaosha_price3 { /*float:left;*/ background:url(templates/images/miaosha/price3.gif) top left no-repeat; width:100%; height:auto; }
+.miaosha_img { /*float:left;*/  text-align:center; vertical-align:middle; clear:both; }
+ul.zhekou { margin:0; padding:42px 0 0 0; overflow:hidden; width: 100%}
+.zhekou li { float:left; list-style:none; text-align:center; font-size:16px; font-weight:bold; font-family:"微软雅黑", "宋体"; }
+.market_price { width:130px; text-decoration:line-through; color:#686868 }
+.zhekou_price { width:80px; color:#e43232; }
+.jiesheng_price { width:110px; color:#e43232; }
+
+ul.sales_price { margin:0; padding:0 0 0 4rem; color:#ffffff; font-family:Arial, Helvetica, sans-serif; font-size:48px; font-weight:bold; overflow:hidden; }
+.sales_price li { float:left; list-style:none; }
+.sales_price li img{height:7rem !important;width:12rem;}
+.promotion_price { padding-top:1rem; width:140px; }
+.to_buy { padding-top:1rem; }
+.price_point { font-size:18px; }
+
+.end_time { padding:1rem 1rem 1rem 3rem; height:25px; line-height:25px; overflow:hidden; }
+.time_number { margin:0 3px; padding:5px; height:25px; background:url(templates/images/miaosha/bg_line2.gif) center center repeat-x; color:#ffffff; font-weight:bold; }
+.miaosha_share { padding:1rem 0px 1rem 3rem; }
+
+.follow_me { margin:0; padding:0; background-color:#ffffff;}
+.follow_me ul {margin:0; padding:0; height:119px; }
+.follow_me ul li { float:left; list-style:none; text-align:center; }
+
+.m_right p, .float_span p { margin:0; padding:0; }
+
+.goods_main { margin:0 auto; width:991px; }/*商品列表*/
+.float_span { display:block; float:left; width:244px; height:auto; background-color:#ffffff; overflow:hidden; }
+.more_goods_name { padding:5px !important; width:100%; height:14px; font-size:14px; color:#909090; overflow:hidden; }
+.more_goods_name a:link { color:#909090; text-decoration:none; }
+.more_goods_name a:visited { color:#909090; text-decoration:none; }
+.more_goods_name a:hover { color:#d54e4b; text-decoration:underline; }
+
+.more_goods_market_price { color:#b6b6b6; text-align:center; text-decoration:line-through; }
+.more_goods_star { padding:5px 0px 10px 0px !important; color:#999999; text-align:center; line-height:8px; overflow:hidden; }
+.click_count { color:#e8327e;}
+
+.price_buy { background-color:#ff8c11; height:42px; border:1px solid #ffc88d; }
+.price_buy span { display:block; float:left; line-height:42px; overflow:hidden; }
+.shop_price { padding-left:10px; width:138px; color:#ffffff; font-weight:bold; font-size:24px; font-family:"Times New Roman", Times, serif; }
+.button_buy { padding-top:5px; text-align:center; }
+
+.link_span { display:block; float:left; width:auto; height:auto; }
+.ys-footer-left {padding-left: 10px;  padding-top: 5px; height: 30px; width: 50%; float: left;}
+.ys-footer-right {padding-right: 10px; padding-top: 5px; height: 30px; float: right;}
+</style>
+</head>
+
+<body>
+
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<div class="miaosha">
+	<div class="bg_head">&nbsp;</div>
+	<div class="miaosha_main clearfix">
+		<div class="m_left">
+			<div class="m_title1"><img src="templates/images/miaosha/1.jpg" alt="" title="" /></div>
+			<div class="miaosha_desc"><span>【秒杀】</span><a {if $ms.goods_id && $ms.ms_status eq 1}href="miaosha_buy.php?id={$ms.goods_id}"{else}href="javascript:;"{/if}>{$ms.ms_desc}</a></div>
+
+			<div class="miaosha_focus">
+				<div {if $ms.ms_status eq 1}class="miaosha_price"{elseif $ms.ms_status eq 2}class="miaosha_price2"{else}class="miaosha_price3"{/if}>
+					<ul class="zhekou">
+						<li class="market_price">￥{$ms.market_price}</li>
+						<li class="zhekou_price">{$ms.zhekou}折</li>
+						<li class="jiesheng_price">￥{$ms.saving}</li>
+					</ul>
+					<ul class="sales_price">
+						<li class="promotion_price">{$ms.price_int}<span class="price_point">.{$ms.price_decimal}</span></li>
+						<li class="to_buy">
+							{if $ms.ms_status eq 1}
+								<a {if $ms.goods_id}href="miaosha_buy.php?id={$ms.goods_id}"{else}href="javascript:;"{/if}><img src="templates/images/tuan/transparent.gif" width="120" height="74" alt="" /></a>
+							{else}
+								<img src="templates/images/tuan/transparent.gif" width="120" height="74" alt="" />
+							{/if}
+						</li>
+					</ul>
+					<div class="end_time" id="current_end_time">距离秒杀{$format_ctime.time_type}还有：<span class="time_number">0</span>天<span class="time_number">0</span>时<span class="time_number">0</span>分<span class="time_number">0</span>秒</div>
+					<div class="miaosha_share pull-left">
+						<div class="jiathis_style">
+							<span class="jiathis_txt">分享到：</span>
+							<a class="jiathis_button_qzone"></a>
+							<a class="jiathis_button_tsina"></a>
+							<a class="jiathis_button_tqq"></a>
+							<a class="jiathis_button_renren"></a>
+							<a class="jiathis_button_kaixin001"></a>
+							<a class="jiathis_button_weixin"></a>
+							<a class="jiathis_button_douban"></a>
+							<a class="jiathis_button_taobao"></a>
+							<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis"></a>
+							<a class="jiathis_counter_style"></a>
+						</div>
+					</div>
+                </div>
+			</div>
+				<div class="miaosha_img"><a {if $ms.goods_id && $ms.ms_status eq 1}href="miaosha_buy.php?id={$ms.goods_id}"{else}href="javascript:;"{/if}><img src="{$image_url}{$ms.focus_img}" width="330" height="262" {if $ms.ms_status neq 0}title="{$ms.ms_name}" alt="{$ms.ms_name}"{else}title="" alt=""{/if} /></a></div>
+				<div class="clear"></div>
+		</div>
+
+	</div>
+		<!-- m_left end -->
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+
+<script type="text/javascript" src="{$image_url}js/yijq.js"></script>
+<script type="text/javascript" src="{$image_url}js/yi_common.js"></script>
+<script type="text/javascript" src="{$image_url}js/p_thickbox.js"></script>
+<!--<script type="text/javascript" src="{$image_url}js/tip-totop.js"></script>-->
+<script type="text/javascript">
+$(document).ready(function(){
+	//$("img").lazyload({placeholder:"/js/img/white.gif", effect:"fadeIn"});
+
+	/*$("#float_div_right").css("left", Math.floor(($(window).width()-990)/2)+990+10+"px");
+	$(window).resize(function() {
+  		$("#float_div_right").css("left", Math.floor(($(window).width()-990)/2)+990+10+"px");
+	});*/
+
+	//yi:用户表单登录
+	$("#yi_login_bt").click(function(){
+
+		var username = $("#yi_login_form input[name='username']").val();
+		var password = $("#yi_login_form input[name='password']").val();
+		var autologin= $("#yi_login_form input[name='autologin']").attr('checked');
+
+		//数据提交之前进行数据验证
+		if(username == ''){
+		}
+		if(password == ''){
+		}
+		$("#yi_login_form").submit(false);
+
+		$.ajax({
+				type:'post',
+				url: 'ajax_step.php?act=ajax_user_login',
+				data:'&username='+username+'&password='+password+'&autologin='+autologin+'&m='+Math.random(),
+				cache:false,
+				success:
+				function(da)
+				{
+					var da = eval('('+da+')');
+
+					if(da.error == 1)
+					{
+						//登录成功
+						document.location.reload();
+					}
+					else
+					{
+						//登录失败
+						alert(da.content);
+					}
+				}
+		});
+
+	});
+	//登录结束
+
+});
+
+/**
+ * 倒计时
+ * 参数：截至时间的年、月、日、时、分, 以及操作的div名称、提示语
+ */
+function ShowCountDown(year, month, day, param_hour, param_minute, divname, tips) {
+	var now = new Date();
+	var endDate = new Date(year, month-1, day, param_hour, param_minute);
+	var leftTime=endDate.getTime()-now.getTime();
+	var leftsecond = parseInt(leftTime/1000);
+	var day1=Math.floor(leftsecond/(60*60*24));
+	var hour=Math.floor((leftsecond-day1*24*60*60)/3600);
+	var minute=Math.floor((leftsecond-day1*24*60*60-hour*3600)/60);
+	var second=Math.floor(leftsecond-day1*24*60*60-hour*3600-minute*60);
+	var cc = document.getElementById(divname);
+
+	//alert(day1 + '-' + hour + ':' + minute + ':' + second);
+	if (day1 <= -1) {
+		cc.innerHTML = '距离秒杀'+tips+'还有：<span class="time_number">0</span>天<span class="time_number">0</span>时<span class="time_number">0</span>分<span class="time_number">0</span>秒';
+	} else {
+		cc.innerHTML = '距离秒杀'+tips+'还有：<span class="time_number">'+day1+'</span>天<span class="time_number">'+hour+'</span>时<span class="time_number">'+minute+'</span>分<span class="time_number">'+second+'</span>秒';
+	}
+}
+var c_Y = '{$format_ctime.Y}';
+var c_n = '{$format_ctime.n}';
+var c_j = '{$format_ctime.j}';
+var c_G = '{$format_ctime.G}';
+var c_i = '{$format_ctime.i}';
+window.setInterval(function(){ShowCountDown(c_Y, c_n, c_j, c_G, c_i, 'current_end_time', '{$format_ctime.time_type}');}, 1000);
+
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1363255556971306" charset="utf-8"></script>
+</html>

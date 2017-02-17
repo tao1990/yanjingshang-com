@@ -1,0 +1,65 @@
+/*common*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table {border-collapse:collapse;border-spacing:0}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+ul,ol,li{list-style:none}
+em,i{font-style:normal}
+img{border:0;}
+input,img{vertical-align:middle;}
+input:focus{outline:none;}
+a{color:#666;text-decoration:none;}
+*{-webkit-tap-highlight-color: rgba(0,0,0,0);}
+html{font-size:12px;}
+/* Site Global */
+body{color:#666;font-family:"微软雅黑","Microsoft YaHei";font-size:14px;background:#F2F2F2;}
+.content{margin: auto;width:100%;height:auto;overflow: hidden;}
+.overtouch{overflow-y:auto;-webkit-overflow-scrolling:touch;}
+/* layout */
+
+.space{margin:auto;width:320px;height:10px;}
+h4 {-webkit-box-sizing: border-box;width: 100%;height: 27px;overflow: hidden;line-height: 27px;text-align: center;background: url(http://m.easeeyes.com/images/line2.png) repeat-x 0 center;}
+h1, h2, h3, h4, h5, p {margin: 0;}
+h4.title span {width: 95px;font-size: 1.2rem;color: #999;}
+h4 span {display: inline-block;height: 12px;line-height: 12px;background-color: #F1F1F1;}
+#cartnum li {
+left: 18px;
+top: 2px;
+height: 14px;
+line-height: 14px;
+padding: 0px 4px;
+text-align: center;
+border-radius: 7px;
+background: rgba(255,0,0,0.8);
+color: #fff;
+font-size: 10px;
+}
+/* head-index */
+.ys-nav ,.ys_smallnav{width:100%;position: relative;height: 45px;background: url(http://m.easeeyes.com/images/nav.jpg);line-height: 44px;border-bottom: 1px solid #DCDCDC;font-size: 1.25rem;}
+.ys-nav-left {position: absolute;left: 0;top: 0;height: 45px;width: 19%;}
+.ys-nav-left .ys-home {position: absolute;left: 15px;top: 10px;width: 155px;height: 34px;background: url(http://m.easeeyes.com/images/logo.png) no-repeat;background-size: 8.1em;}
+.ys-nav-title {width: 60%;margin: 0 auto;text-align: center;font-size: 1.41rem;}
+
+.ys-nav-right {position: absolute;right: 0;top: 0;height: 45px;width: 19%;}
+
+.ys-nav-right .my-account {position: absolute;right: 56px;top: 14px;width: 24px;height: 18px;background: url(http://m.easeeyes.com/images/my-account.png) no-repeat;}
+
+.ys-nav-right .menu {position: absolute;right: 100px;top: 14px;width: 24px;height: 18px;background: url(http://m.easeeyes.com/images/menu.png) no-repeat}
+
+.ys-nav-right .my-cart {position: absolute;right: 15px;top: 14px;width: 24px;height: 18px;background: url(http://m.easeeyes.com/images/my-cart.png) no-repeat }
+
+#head_cart_num{position: absolute;right: -9px;top: -7px;width: 19px;height: 19px;background: url(http://m.easeeyes.com/images/o.png) no-repeat;text-align: center;line-height: 15px;color: #fff;display: block;text-align: center;font-size: 13px;}
+#head_cart_num em{padding-right:3px;}
+.here{color:white}
+/* head-other */
+.ys_smallnav_left{float:left;padding-left:10px}
+.ys_smallnav_left img,.ys_smallnav_right img{margin-right:10px}
+.smallnav_intro{width:50%;float:left; text-align:center;color:#fff;font-size:16px;}
+.ys_smallnav_right{float:right;overflow:hidden;zoom:1; text-align:right}
+/*正品保证*/
+.zpbz{width:320px;height: 70px;margin:auto;background: url(http://m.easeeyes.com/images/footer.jpg) no-repeat;margin-bottom: 14px;}	
+/*footer*/
+.footer{width:100%;height: 35px;margin:0 auto;background: white;border-top: 1px solid #cacaca;
+border-bottom: 1px solid #cacaca;position: relative;bottom:0;position: relative;}
+.ys-footer-left{padding-left:10px ;padding-top:5px;height: 30px;width: 50%;float:left;position: absolute;bottom:0;left:0}
+.ys-footer-right{padding-right:10px ;padding-top:5px;height: 30px;float: right;position: absolute;bottom:0;right:0}
+#goTop {width: 41px;height: 36px;background: url(http://m.easeeyes.com/images/btn_bg.jpg);border-radius: 5px;position: fixed;bottom: 25px;right: 15px;text-indent: -9999px;cursor: pointer;z-index: 9999;}

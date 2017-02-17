@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>易视双十二，库博硅水凝胶半价起售</title>
+<meta name="Keywords"  content="易视网,易视眼镜网,美瞳,护理液,润眼液,博士伦,海昌,海俪恩,卫康,库博,视康,强生,sho-bi,GEO,NEO,BESCON" />
+<meta name="Description" content="易视网，易视双十二，库博全场一降到底，热销好货半价起售，满199返300再送好礼，24小时闪电发货，30天退换货保障" />
+<link rel="stylesheet" href="http://file.easeeyes.com/js/mlayer.css"/>
+<style>
+.yhq{position:relative;}
+.yhq span,.yhq a{position:absolute;width:5.2rem;height:8.3rem;top:2.2rem;}
+.yhq a{width:9.3rem;height:2.9rem;}
+.links{position:relative;}
+.links a{position:absolute;width:12rem;height:2.15rem;left:1rem;}
+.links02 a{height:100%;float:left;width:50%;}
+</style>
+</head>
+<!--tpl
+<div><img src="http://file.easeeyes.com/wap/images/20160901/banner.jpg" alt="" style="display:block;"></div>
+<div><a href=""><img src="http://file.easeeyes.com/wap/images/20160901/banner.jpg" alt="" style="display:block;"></a></div>
+-->
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<!--main-->
+<div class="container">
+	<div><img src="http://file.easeeyes.com/wap/images/2016121204/banner.jpg" alt="" style="display:block;"></div>
+	<div class="yhq" style="height:22.1rem;background:url(http://file.easeeyes.com/wap/images/2016121204/01.jpg) no-repeat center top;background-size:100% auto;">
+		<span onclick="get_bonus(1)" style="left:.4rem;"></span>
+		<span onclick="get_bonus(2)" style="left:5.5rem;"></span>
+    <span onclick="get_bonus(3)" style="left:10.8rem;"></span>
+    <span onclick="get_bonus(4)" style="left:16rem;"></span>
+		<a style="left:22rem;top:7rem;" href="javascript:openLayer('yhq');"></a>
+	</div>
+	<div><img src="http://file.easeeyes.com/wap/images/2016121204/02.jpg" alt="" style="display:block;"></div>
+	<div class="links" style="height:16.45rem;background:url(http://file.easeeyes.com/wap/images/2016121204/03.jpg) no-repeat center top;background-size:100% auto;">
+		<a style="top:10.4rem;" href="http://m.easeeyes.com/goods767.html"></a>
+		<a style="top:13rem;" href="http://m.easeeyes.com/goods2406.html"></a>
+	</div>
+	<div><a href="http://m.easeeyes.com/goods1045.html"><img src="http://file.easeeyes.com/wap/images/2016121204/04.jpg" alt="" style="display:block;"></a></div>
+	<div><a href="http://m.easeeyes.com/goods185.html"><img src="http://file.easeeyes.com/wap/images/2016121204/05.jpg" alt="" style="display:block;"></a></div>
+	<div><img src="http://file.easeeyes.com/wap/images/2016121204/06.jpg" alt="" style="display:block;"></div>
+	<div class="links02" style="height:14.4rem;background:url(http://file.easeeyes.com/wap/images/2016121204/07.jpg) no-repeat center top;background-size:100% auto;">
+		<a href="http://m.easeeyes.com/goods662.html"></a>
+		<a href="http://m.easeeyes.com/goods4820.html"></a>
+	</div>
+	<div class="links02" style="height:13.25rem;background:url(http://file.easeeyes.com/wap/images/2016121204/08.jpg) no-repeat center top;background-size:100% auto;">
+		<a href="http://m.easeeyes.com/goods1149.html"></a>
+		<a href="http://m.easeeyes.com/goods1150.html"></a>
+	</div>
+	<div class="links02" style="height:13.6rem;background:url(http://file.easeeyes.com/wap/images/2016121204/09.jpg) no-repeat center top;background-size:100% auto;">
+		<a href="http://m.easeeyes.com/goods761.html"></a>
+		<a href="http://m.easeeyes.com/goods1011.html"></a>
+	</div>
+	<div class="links02" style="height:15.2rem;background:url(http://file.easeeyes.com/wap/images/2016121204/10.jpg) no-repeat center top;background-size:100% auto;">
+		<a href="http://m.easeeyes.com/goods1151.html"></a>
+		<a href="http://m.easeeyes.com/goods1153.html"></a>
+	</div>
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+<script type="text/tpl" id="mlayer-yhq">
+    <img src="http://img.easeeyes.com/promotion/20161212/pop.png" style="width:30rem;height:28.5rem;">
+    <span id="yhq_close" style="position:absolute;right:.8rem;top:.8rem;width:2rem;height:2rem;"></span>
+</script>
+<script src="http://file.easeeyes.com/js/mlayer.js"></script>
+<script>
+function openLayer(id){
+	// 弹窗
+	layer.open({
+		content:document.getElementById('mlayer-'+id).innerHTML,
+		shadow:1,
+		closeBtns:[id+'_close']
+	})
+}
+
+function get_bonus(bonus_id){
+    $.ajax({
+        type:'POST',
+        url:'ajax_active.php?act=get_bonus_16110101',
+        data:'&bonus_id='+bonus_id+'&m='+Math.random(),
+        cache:false,
+        success:
+                function(da)
+                {
+                    if(da == 1){
+                        alert('您已成功领取优惠券！请至我的红包/优惠券查看^_^');
+                    }else if(da == 2){
+                        alert('请登录后再试^_^');
+                    }else if(da == 3){
+                        alert('您已领取过该优惠券^_^');
+                    }
+                }
+    });
+}
+</script>
+</body>
+</html>

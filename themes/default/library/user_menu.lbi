@@ -1,0 +1,81 @@
+<div class="main_left">
+	<div class="menu_pan1">    
+    	<div class="menu_title">订单管理</div>
+        <div class="menu_ul">                
+        	<div class="menu_li">
+            	<div class="menu_tip"></div>
+                <div class="menu_text"><a href="user_order_list.html" {if $action eq 'order_list' || $action eq 'order_detail'}class="visited"{/if}>我的订单</a></div>
+            </div>
+        	<div class="menu_li">
+            	<div class="menu_tip"></div>
+                <div class="menu_text"><a href="user_have_buy.html" {if $action eq 'have_buy'}class="visited"{/if}>购买过的商品</a></div>
+            </div>
+        	<div class="menu_li">
+            	<div class="menu_tip"></div>
+                <div class="menu_text"><a href="user_collection_list.html" {if $action eq 'collection_list'}class="visited"{/if}>我的收藏</a></div>
+            </div>
+        	<div class="menu_li">
+            	<div class="menu_tip"></div>
+                <div class="menu_text"><a href="user_booking_list.html" {if $action eq 'booking_list'}class="visited"{/if}>缺货登记</a></div>
+            </div>   
+        	<div class="menu_li">
+            	<div class="menu_tip"></div>
+                <div class="menu_text"><a href="user_msg.html" {if $action eq 'msg' || $action eq 'msg_info'}class="visited"{/if} >我的消息{if $user.unread_msg>0}<font class="red">({$user.unread_msg})</font>{/if}</a></div>
+            </div>                    
+        </div>
+    </div>    
+    <div class="menu_pan2">
+    	<div class="menu_title">账户信息</div>
+        <div class="menu_ul">                
+        	<div class="menu_li">
+            	<div class="menu_tip"></div>
+                <div class="menu_text"><a href="user_account_log.html" {if $action eq 'account_log'}class="visited"{/if}>资金管理</a></div>
+            </div>
+        	<div class="menu_li">
+            	<div class="menu_tip"></div>
+                <div class="menu_text"><a href="user_bonus.html" {if $action eq 'bonus'}class="visited"{/if}>我的优惠券/红包</a></div>
+            </div>
+        	<div class="menu_li">
+            	<div class="menu_tip"></div>
+                <div class="menu_text"><a href="user_transform_points.html" {if $action eq 'transform_points'}class="visited"{/if}>积分与兑换</a></div>
+            </div>
+        	<div class="menu_li">
+            	<div class="menu_tip"></div>
+                <div class="menu_text"><a href="user_affiliate.html" {if $action eq 'affiliate'}class="visited"{/if}>零用钱计划</a></div>
+            </div>           
+        </div> 
+    </div>    
+    <div class="menu_pan3">
+    	<div class="menu_title">个人信息</div>
+        <div class="menu_ul">                
+        	<div class="menu_li">
+            	<div class="menu_tip"></div>
+                <div class="menu_text"><a href="user_member_rank.html" {if $action eq 'member_rank'}class="visited"{/if}>会员等级</a></div>
+            </div>
+        	<div class="menu_li">
+            	<div class="menu_tip"></div>
+                <div class="menu_text"><a href="user_profile.html" {if $action eq 'profile'}class="visited"{/if}>个人资料</a></div>
+            </div>
+        	<div class="menu_li">
+            	<div class="menu_tip"></div>
+                <div class="menu_text"><a href="user_resetpw.html" {if $action eq 'resetpw'}class="visited"{/if}>修改密码</a></div>
+            </div>
+        	<div class="menu_li">
+            	<div class="menu_tip"></div>
+                <div class="menu_text"><a href="user_address_list.html" {if $action eq 'address_list'}class="visited"{/if}>收货地址</a></div>
+            </div>      
+        	<div class="menu_li">
+            	<div class="menu_tip"></div>
+                <div class="menu_text"><a href="user_comment_list.html" {if $action eq 'comment_list'}class="visited"{/if}>我的评论</a></div>
+            </div>   
+        	<div class="menu_li">
+            	<div class="menu_tip"></div>
+                <div class="menu_text"><a href="user_message_list.html" {if $action eq 'message_list'}class="visited"{/if}>我的留言</a></div>
+            </div>
+        	<div class="menu_li">
+            	<div class="menu_tip"></div>
+                <div class="menu_text"><a href="user_receipt.html" {if $action eq 'receipt'}class="visited"{/if}>我的验光单</a></div>
+            </div>                                   
+        </div> 
+    </div>
+</div>

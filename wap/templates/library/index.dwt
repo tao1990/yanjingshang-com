@@ -1,0 +1,559 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<meta http-equiv="Content-Type"    content="text/html; charset=utf-8"/>
+<meta name="Keywords"    content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" --><title>{$page_title}</title><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="themes/default/style/base.css" rel="stylesheet" type="text/css" />
+<link href="themes/default/style/css.css"  rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/yijq.js"></script>
+<script type="text/javascript" src="/js/yi_common.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+</head>
+<body style="background:url(images/Chinese_new_year.jpg) center top no-repeat fixed;">
+<!--{if $show_qq_head}--><div class="cb_head"><ul class="cb_line">
+<li class="cb_logo">{$cb_msg}</li><li class="cb_msg">{$cb_alias}</li><li class="cb_url"><a href="http://cb.qq.com/my/my_jifen_source.html" target="_blank">我的积分</a></li>
+</ul></div><!--{/if}-->
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div class="main">
+<div class="main_ad">
+	<div class="ad_head fl">
+        <!--{if $big_ad}-->
+        <div class="ad_panel">
+            <div class="ad_wrap" id="ad_slide">
+            	<!--{foreach from=$big_ad item=it}-->
+                <a href="{$it.ad_link}" target="_blank"><img src="{$it.ad_code}" width="714" height="300" alt="{$it.ad_name}"/></a>
+            	<!--{/foreach}-->
+            </div>            
+            <div class="ad_nav" id="ad_nav">
+            <!--{foreach from=$big_ad item=it name=fo}-->
+            	<a href="{$it.ad_link}" target="_blank" {if $smarty.foreach.fo.index eq 4}style="margin-right:0;"{/if}><span class="ad_link_bg"></span><span class="ad_link_txt">{$it.ad_name}</span></a>
+            <!--{/foreach}-->
+            </div>
+        </div>
+        <!--{/if}-->
+	</div>    
+    <ul class="ad_0 fr"><li class="ad_0_1"><a href="{$ad_line1_r1.0.ad_link}" target="_blank"><img src="{$ad_line1_r1.0.ad_code}" width="266" height="178"/></a></li><li class="ad_0_2">{if $ad_line1_r2.0.ad_link}<a href="{$ad_line1_r2.0.ad_link}" target="_blank"><img src="{$ad_line1_r2.0.ad_code}" width="266" height="122"/></a>{else}<img src="{$ad_line1_r2.0.ad_code}" width="266" height="122"/>{/if}</li></ul>
+</div>
+
+
+<div class="new_cats_index">
+	<div class="brand_and_cats">
+		<div class="hot_brands">      
+			<ul class="t_ul">
+				<li class="t_p" style="background-image:url(images/index/r1.gif);"></li>
+				<li class="p_h_p" style="margin:0; float:left; padding-top:2px; *padding:0;"><a href="brands.html" target="_blank" title="更多品牌"><img src="images/index/r8.gif" width="41" height="13" alt="更多品牌"/></a></li>
+				<li style="float:right; width:305px; overflow:hidden;">
+					<div id="public_notice" class="public_notice">
+						<ul>
+							<!--{foreach from=$report_yishi item=article name=foo}-->
+							<!--{if $smarty.foreach.foo.index eq 0}-->
+							<li><span style="color:#2bbdd5">网站公告：</span><a href="{$article.url}" target="_blank" title="{$article.title|escape:html}" class="red">{$article.title}</a></li>
+							<!--{else}-->
+							<li><span style="color:#2bbdd5">网站公告：</span><a href="{$article.url}" target="_blank" title="{$article.title|escape:html}">{$article.title}</a></li>
+							<!--{/if}-->
+							<!--{/foreach}-->
+						</ul>
+						<div class="clear"></div>
+					</div>
+				</li>
+			</ul>
+			<ul class="p_bd">
+			<!--{foreach from=$brand_list item=li name=foo}-->
+				<li><a href="{$li.site_url}" target="_blank" title="{$li.brand_name}"><img src="images/brands/{$li.brand_id}.gif" width="98" height="56" alt="{$li.brand_name}"/></a></li>
+			<!--{/foreach}-->          
+			</ul> 
+			<ul class="t_ul"><li class="t_p" style="background-image:url(images/index/r2.gif);"></li></ul>
+		</div>
+		
+		<ul class="cats_index">     
+			<li class="p_cat_li cat_pan1">
+				<ul class="p_cat_a"><a href="category_1.html" target="_blank" title=""></a></ul>
+				<ul class="cs_ul">
+					<li class="cs_h">周期：</li>                
+					<!--{foreach from=$base_cat1.attr_values item=cat name=fo}--><li><a target="_blank" href="search_attr.php?cat_id=1&attr0={$cat|escape:url}">{$cat}</a></li>{if $smarty.foreach.fo.index neq $smarty.foreach.fo.last||$smarty.foreach.fo.index eq 0}<li class="cs_sp"></li>{/if}
+					<!--{/foreach}-->
+				</ul>  
+				<ul class="cs_ul">
+					<li class="cs_h">特性：</li>                
+					<!--{foreach from=$tmp_tx item=cat name=fo}--><li><a target="_blank" href="lab-{$cat.lab_id}.html" {if $cat.show_red}class="red"{/if}>{$cat.lab_name}</a></li>{if $smarty.foreach.fo.index neq $smarty.foreach.fo.last||$smarty.foreach.fo.index eq 0}<li class="cs_sp"></li>{/if}
+					<!--{/foreach}-->
+				</ul> 
+				<ul class="cs_ul">
+					<li class="cs_h">价格：</li>                
+					<!--{foreach from=$tmp_jg item=cat name=fo}--><li><a target="_blank" href="{if $cat.lab_id eq 24}packages{else}lab-{$cat.lab_id}{/if}.html" {if $cat.show_red}class="red"{/if}>{$cat.lab_name}</a></li>{if $smarty.foreach.fo.index neq $smarty.foreach.fo.last||$smarty.foreach.fo.index eq 0}<li class="cs_sp"></li>{/if}
+					<!--{/foreach}-->
+				</ul>       
+			</li>        
+			<li class="p_cat_li cat_pan2">
+				<ul class="p_cat_a"><a href="category_6.html" target="_blank" title=""></a></ul>
+				<ul class="cs_ul">
+					<li class="cs_h">颜色：</li>                
+					<!--{foreach from=$base_cat2.attr_values item=cat name=fo}--><li><a target="_blank" href="category_6.html?&attr1={$cat|escape:url}">{$cat}</a></li>{if $smarty.foreach.fo.index neq $smarty.foreach.fo.last||$smarty.foreach.fo.index eq 0}<li class="cs_sp"></li>{/if}
+					<!--{/foreach}-->
+				</ul>  
+				<ul class="cs_ul">
+					<li class="cs_h">特性：</li>                
+					<!--{foreach from=$csp_tx item=cat name=fo}--><li><a target="_blank" href="lab-{$cat.lab_id}.html" {if $cat.show_red}class="red"{/if}>{$cat.lab_name}</a></li>{if $smarty.foreach.fo.index neq $smarty.foreach.fo.last||$smarty.foreach.fo.index eq 0}<li class="cs_sp"></li>{/if}
+					<!--{/foreach}-->
+				</ul> 
+				<ul class="cs_ul">
+					<li class="cs_h">价格：</li>                
+					<!--{foreach from=$csp_jg item=cat name=fo}--><li><a target="_blank" href="{if $cat.lab_id eq 20}packages{else}lab-{$cat.lab_id}{/if}.html" {if $cat.show_red}class="red"{/if}>{$cat.lab_name}</a></li>{if $smarty.foreach.fo.index neq $smarty.foreach.fo.last||$smarty.foreach.fo.index eq 0}<li class="cs_sp"></li>{/if}
+					<!--{/foreach}-->
+				</ul>       
+			</li>        
+			<li class="p_cat_li cat_pan3">
+				<ul class="p_cat_a"><a href="category_159.html" target="_blank" title=""></a></ul>
+				<ul class="cs_ul">
+					<li class="cs_h">风格：</li>                
+					<!--{foreach from=$kj_fg item=cat name=fo}--><li><a target="_blank" href="lab-{$cat.lab_id}.html" {if $cat.show_red}class="red"{/if}>{$cat.lab_name}</a></li>{if $smarty.foreach.fo.index neq $smarty.foreach.fo.last||$smarty.foreach.fo.index eq 0}<li class="cs_sp"></li>{/if}
+					<!--{/foreach}-->
+				</ul>  
+				<ul class="cs_ul">
+					<li class="cs_h">材质：</li>                
+					<!--{foreach from=$kj_cz item=cat name=fo}--><li><a target="_blank" href="lab-{$cat.lab_id}.html" {if $cat.show_red}class="red"{/if}>{$cat.lab_name}</a></li>{if $smarty.foreach.fo.index neq $smarty.foreach.fo.last||$smarty.foreach.fo.index eq 0}<li class="cs_sp"></li>{/if}
+					<!--{/foreach}-->
+				</ul>
+			</li>
+			<li class="p_cat_li cat_pan4">
+				<ul class="p_cat_a"><a href="category_64.html" target="_blank" title=""></a></ul>
+				<ul class="cs_ul">
+					<li class="cs_h">规格：</li>                
+					<!--{foreach from=$hly_gg item=cat name=fo}--><li><a target="_blank" href="lab-{$cat.lab_id}.html" {if $cat.show_red}class="red"{/if}>{$cat.lab_name}</a></li>{if $smarty.foreach.fo.index neq $smarty.foreach.fo.last||$smarty.foreach.fo.index eq 0}<li class="cs_sp"></li>{/if}
+					<!--{/foreach}-->
+				</ul>  
+				<ul class="cs_ul">
+					<li class="cs_h">特性：</li>                
+					<!--{foreach from=$hly_tx item=cat name=fo}--><li><a target="_blank" href="lab-{$cat.lab_id}.html" {if $cat.show_red}class="red"{/if}>{$cat.lab_name}</a></li>{if $smarty.foreach.fo.index neq $smarty.foreach.fo.last||$smarty.foreach.fo.index eq 0}<li class="cs_sp"></li>{/if}
+					<!--{/foreach}-->
+				</ul>
+			</li>
+		</ul>
+	
+	</div>
+	<!-- brand_and_cats end -->
+	
+	<!-- 每周活动 start -->
+	<div class="daily_active">
+		<div style="margin-bottom:6px;"><img src="images/index/daily_active.gif" alt="天天淘 每周活动系列" /></div>
+		<div id="da_flip1" class="da_flip {if $week eq 1}da_flip_c1{/if}" onclick="show_panel(1);"><h3>李东海代言</h3></div>
+		<div id="da_panel1" class="da_panel" {if $week eq 1}style="display:block;"{/if}><a href="miaosha.html" target="_blank"><img src="images/index/da_ad_1.jpg" /></a></div>
+		
+		<div id="da_flip2" class="da_flip {if $week eq 2}da_flip_c2 da_flip_on2{/if}" onclick="show_panel(2);"><h3>韩国进口</h3></div>
+		<div id="da_panel2" class="da_panel" {if $week eq 2}style="display:block;"{/if}><a href="active2.html" target="_blank"><img src="images/index/da_ad_2.jpg" /></a></div>
+		
+		<div id="da_flip3" class="da_flip {if $week eq 3}da_flip_c3{/if}" onclick="show_panel(3);"><h3>谁是省钱王</h3></div>
+		<div id="da_panel3" class="da_panel" {if $week eq 3}style="display:block;"{/if}><a href="active3.html" target="_blank"><img src="images/index/da_ad_3.jpg" /></a></div>
+		
+		<div id="da_flip4" class="da_flip {if $week eq 4}da_flip_c4{/if}" onclick="show_panel(4);"><h3>送欧舒丹护手霜</h3></div>
+		<div id="da_panel4" class="da_panel" {if $week eq 4}style="display:block;"{/if}><a href="active4.html" target="_blank"><img src="images/index/da_ad_4.jpg" /></a></div>
+		
+		<div id="da_flip5" class="da_flip {if $week gt 4 || $week eq 0}da_flip_c5{/if}" onclick="show_panel(5);"><h3>自然美瞳团购</h3></div>
+		<div id="da_panel5" class="da_panel" {if $week gt 4 || $week eq 0}style="display:block"{/if}><a href="tuan.html" target="_blank"><img src="images/index/da_ad_5.jpg" /></a></div>
+	</div>
+	<!-- 每周活动 end -->
+	<div class="clear"></div>
+</div>
+<!-- new_cats_index end -->
+
+<!--【品牌+分类END】-->
+
+
+<!--新品排行模块特效展示-->
+<div class="sh_goods">
+    <ul class="show_head" style="width:990px; height:26px; background-color:#f2f2f2;">
+        <li class="tab1"><a _tab="1" title="新品排行榜" href="javascript:void(0);"></a></li>        
+        <li class="tab2"><a _tab="2" title="瞳学们的最爱" href="javascript:void(0);"></a></li>
+        <li class="tab3"><a _tab="3" title="降价给力榜" href="javascript:void(0);"></a></li> 
+        <li class="tab4"><a _tab="4" title="小编推荐榜" href="javascript:void(0);"></a></li> 
+    </ul>
+        
+    <!--四个产品面板的切换-->
+    <div class="sh_p">    
+        <ul class="sh_g">
+        <!--{foreach from=$new_goods item=li name=foo}-->      
+            <li {if $smarty.foreach.foo.index eq 5}style="margin-right:0;"{/if}><a href="{$li.url}" title="{$li.goods_name}" target="_blank"><img src="{$li.goods_img}" width="130" height="130" alt=""/></a></li>
+        <!--{/foreach}-->                     
+        </ul>
+        <ul class="sh_g_t">
+        <!--{foreach from=$new_goods item=li name=foo}-->
+            <li class="sh_g_t_li {if $smarty.foreach.foo.index eq 5}m_r_0{/if}">
+            	<dl><dd class="sh_g_txt"><a href="{$li.url}" target="_blank" title="{$li.goods_name}">{$li.goods_name}</a></dd><dd class="sh_g_price"><span class="f_d">￥{$li.market_price}</span> <span class="f_b_r">￥{$li.shop_price}</span></dd></dl>
+            </li>
+        <!--{/foreach}-->  
+        </ul>
+    </div> 
+
+    <div class="sh_p" style="display:none;">    
+        <ul class="sh_g">        
+        <!--{foreach from=$hot_goods item=li name=foo}-->      
+            <li {if $smarty.foreach.foo.index eq 5}style="margin-right:0;"{/if}><a href="{$li.url}" title="{$li.goods_name}" target="_blank"><img src="{$li.goods_img}" width="130" height="130" alt=""/></a></li>
+        <!--{/foreach}-->                   
+        </ul>
+        <ul class="sh_g_t">
+        <!--{foreach from=$hot_goods item=li name=foo}-->
+            <li class="sh_g_t_li {if $smarty.foreach.foo.index eq 5}m_r_0{/if}">
+            	<dl><dd class="sh_g_txt"><a href="{$li.url}" target="_blank" title="{$li.goods_name}">{$li.goods_name}</a></dd><dd class="sh_g_price"><span class="f_d">￥{$li.market_price}</span> <span class="f_b_r">￥{$li.shop_price}</span></dd></dl>
+            </li>
+        <!--{/foreach}-->  
+        </ul>
+    </div> 
+    
+    <div class="sh_p" style="display:none;">    
+        <ul class="sh_g">        
+        <!--{foreach from=$goods_reduce item=li name=foo}-->      
+            <li {if $smarty.foreach.foo.index eq 5}style="margin-right:0;"{/if}><a href="{$li.url}" title="{$li.goods_name}" target="_blank"><img src="{$li.goods_img}" width="130" height="130" alt=""/></a></li>
+        <!--{/foreach}-->                  
+        </ul>
+        <ul class="sh_g_t">
+        <!--{foreach from=$goods_reduce item=li name=foo}-->
+            <li class="sh_g_t_li {if $smarty.foreach.foo.index eq 5}m_r_0{/if}">
+            	<dl><dd class="sh_g_txt"><a href="{$li.url}" target="_blank" title="{$li.goods_name}">{$li.goods_name}</a></dd><dd class="sh_g_price"><span class="f_d">￥{$li.market_price}</span> <span class="f_b_r">￥{$li.shop_price}</span></dd></dl>
+            </li>
+        <!--{/foreach}-->  
+        </ul>
+    </div> 
+    
+    <div class="sh_p" style="display:none;">    
+        <ul class="sh_g">        
+        <!--{foreach from=$goods_choice item=li name=foo}-->      
+            <li {if $smarty.foreach.foo.index eq 5}style="margin-right:0;"{/if}><a href="{$li.url}" title="{$li.goods_name}" target="_blank"><img src="{$li.goods_img}" width="130" height="130" alt=""/></a></li>
+        <!--{/foreach}-->                 
+        </ul>
+        <ul class="sh_g_t">
+        <!--{foreach from=$goods_choice item=li name=foo}-->
+            <li class="sh_g_t_li {if $smarty.foreach.foo.index eq 5}m_r_0{/if}">
+            	<dl><dd class="sh_g_txt"><a href="{$li.url}" target="_blank" title="{$li.goods_name}">{$li.goods_name}</a></dd><dd class="sh_g_price"><span class="f_d">￥{$li.market_price}</span> <span class="f_b_r">￥{$li.shop_price}</span></dd></dl>
+            </li>
+        <!--{/foreach}-->  
+        </ul>
+    </div>                    
+    
+</div>
+
+<!--【4个产品展示模块】-->
+<div class="pgoods">
+    <div class="p_head">
+    	<ul class="p_h_r">
+        	<li class="p_h_txt">
+            	<dl class="p_h_dl"><!--{foreach from=$showgoodst1 item=gt name=foo}-->{if $smarty.foreach.foo.index neq 0}<dd class="p_sp"></dd>{/if}<dd><a href="category_{$gt.cat_id}.html" target="_blank">{$gt.cat_name}</a></dd><!--{/foreach}--></dl>
+            </li><li class="p_h_p"><a href="category_1.html" target="_blank"><img src="images/index/r8.gif" width="41" height="13" alt="更多"/></a></li>
+        </ul>
+    </div>
+    <div class="p_body">
+    	<ul class="ad_1">
+        	<li class="ad_1_1"><a href="{$ad_goods_pan.8.ad_link}" target="_blank"><img src="{$ad_goods_pan.8.ad_code}" width="491" height="180" alt=""/></a></li><li class="ad_1_1"><a href="{$ad_goods_pan.9.ad_link}" target="_blank"><img src="{$ad_goods_pan.9.ad_code}" width="491" height="180" alt=""/></a></li>
+        </ul>
+        <ul class="p_goods">
+        <!--{foreach from=$goods_list_tmp item=goods name=foo}-->
+        	<li class="p_g_li">
+            	<ul>
+                	<li class="p_g_p"><a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}"><img src="{$goods.goods_img}" width="130" height="130" alt="{$goods.goods_name}"/></a></li>
+                    <li class="p_g_t">
+                    	<dl>
+                            <dd class="p_g_name"><a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.name|escape:html}</a></dd>
+                            <dd class="p_g_price"><span class="f_d">{$goods.market_price}</span> <span class="f_b_r">{if $goods.promote_price eq ""}{$goods.shop_price}{else}{$goods.promote_price}{/if}</span></dd>                        </dl>
+                    </li>                	
+                </ul>
+            </li>{if $smarty.foreach.foo.index neq 6}<li class="p_g_line"></li>{/if}
+        <!--{/foreach}-->                                                                   
+        </ul>
+    </div>
+</div>
+
+<div class="pgoods">
+    <div class="p_head p_h_img2">
+    	<ul class="p_h_r">
+        	<li class="p_h_txt">
+            	<dl class="p_h_dl"><!--{foreach from=$showgoodst2 item=gt name=foo}-->{if $smarty.foreach.foo.index neq 0}<dd class="p_sp"></dd>{/if}<dd><a href="category_{$gt.cat_id}.html" target="_blank">{$gt.cat_name}</a></dd><!--{/foreach}--></dl>
+            </li><li class="p_h_p"><a href="category_6.html" target="_blank"><img src="images/index/r8.gif" width="41" height="13" alt="更多"/></a></li>
+        </ul>
+    </div>
+    <div class="p_body">
+    	<ul class="ad_1">
+        	<li class="ad_1_1"><a href="{$ad_goods_pan.6.ad_link}" target="_blank"><img src="{$ad_goods_pan.6.ad_code}" width="491" height="180" alt=""/></a></li><li class="ad_1_1"><a href="{$ad_goods_pan.7.ad_link}" target="_blank"><img src="{$ad_goods_pan.7.ad_code}" width="491" height="180" alt=""/></a></li>
+        </ul>
+        <ul class="p_goods">
+        <!--{foreach from=$goods_list_csp item=goods name=foo}-->
+        	<li class="p_g_li">
+            	<ul>
+                	<li class="p_g_p"><a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}"><img src="{$goods.goods_img}" width="130" height="130" alt="{$goods.goods_name}"/></a></li>
+                    <li class="p_g_t">
+                    	<dl>
+                            <dd class="p_g_name"><a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.name|escape:html}</a></dd>
+                            <dd class="p_g_price"><span class="f_d">{$goods.market_price}</span> <span class="f_b_r">{if $goods.promote_price eq ""}{$goods.shop_price}{else}{$goods.promote_price}{/if}</span></dd>                        </dl>
+                    </li>                	
+                </ul>
+            </li>{if $smarty.foreach.foo.index neq 6}<li class="p_g_line"></li>{/if}
+        <!--{/foreach}-->                                                                   
+        </ul>
+    </div>
+</div>
+
+<div class="pgoods">
+    <div class="p_head p_h_img21">
+    	<ul class="p_h_r">
+        	<li class="p_h_txt">
+            	<dl class="p_h_dl"><!--{foreach from=$showgoodst21 item=gt name=foo}-->{if $smarty.foreach.foo.index neq 0}<dd class="p_sp"></dd>{/if}<dd><a href="category_{$gt.cat_id}.html" target="_blank">{$gt.cat_name}</a></dd><!--{/foreach}--></dl>
+            </li><li class="p_h_p"><a href="category_159.html" target="_blank"><img src="images/index/r8.gif" width="41" height="13" alt="更多"/></a></li>
+        </ul>
+    </div>
+    <div class="p_body">
+    	<ul class="ad_1">
+        	<li class="ad_1_1"><a href="{$ad_goods_pan.3.ad_link}" target="_blank"><img src="{$ad_goods_pan.3.ad_code}" width="491" height="180" alt=""/></a></li><li class="ad_1_1"><a href="{$ad_goods_pan.2.ad_link}" target="_blank"><img src="{$ad_goods_pan.2.ad_code}" width="491" height="180" alt=""/></a></li>
+        </ul>
+        <ul class="p_goods">
+        <!--{foreach from=$goods_list_kj item=goods name=foo}-->
+        	<li class="p_g_li">
+            	<ul>
+                	<li class="p_g_p"><a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}"><img src="{$goods.goods_img}" width="130" height="130" alt="{$goods.goods_name}"/></a></li>
+                    <li class="p_g_t">
+                    	<dl>
+                            <dd class="p_g_name"><a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.name|escape:html}</a></dd>
+                            <dd class="p_g_price"><span class="f_d">{$goods.market_price}</span> <span class="f_b_r">{if $goods.promote_price eq ""}{$goods.shop_price}{else}{$goods.promote_price}{/if}</span></dd>                        </dl>
+                    </li>                	
+                </ul>
+            </li>{if $smarty.foreach.foo.index neq 6}<li class="p_g_line"></li>{/if}
+        <!--{/foreach}-->                                                                   
+        </ul>
+    </div>
+</div>
+<div class="pgoods">
+    <div class="p_head p_h_img22">
+    	<ul class="p_h_r">
+        	<li class="p_h_txt">
+            	<dl class="p_h_dl"><!--{foreach from=$showgoodst22 item=gt name=foo}-->{if $smarty.foreach.foo.index neq 0}<dd class="p_sp"></dd>{/if}<dd><a href="category_{$gt.cat_id}.html" target="_blank">{$gt.cat_name}</a></dd><!--{/foreach}--></dl>
+            </li><li class="p_h_p"><a href="category_190.html" target="_blank"><img src="images/index/r8.gif" width="41" height="13" alt="更多"/></a></li>
+        </ul>
+    </div>
+    <div class="p_body">
+    	<ul class="ad_1">
+        	<li class="ad_1_1"><a href="{$ad_goods_pan.1.ad_link}" target="_blank"><img src="{$ad_goods_pan.1.ad_code}" width="491" height="180" alt=""/></a></li><li class="ad_1_1"><a href="{$ad_goods_pan.0.ad_link}" target="_blank"><img src="{$ad_goods_pan.0.ad_code}" width="491" height="180" alt=""/></a></li>
+        </ul>
+        <ul class="p_goods">
+        <!--{foreach from=$goods_list_sun item=goods name=foo}-->
+        	<li class="p_g_li">
+            	<ul>
+                	<li class="p_g_p"><a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}"><img src="{$goods.goods_img}" width="130" height="130" alt="{$goods.goods_name}"/></a></li>
+                    <li class="p_g_t">
+                    	<dl>
+                            <dd class="p_g_name"><a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.name|escape:html}</a></dd>
+                            <dd class="p_g_price"><span class="f_d">{$goods.market_price}</span> <span class="f_b_r">{if $goods.promote_price eq ""}{$goods.shop_price}{else}{$goods.promote_price}{/if}</span></dd>                        </dl>
+                    </li>                	
+                </ul>
+            </li>{if $smarty.foreach.foo.index neq 6}<li class="p_g_line"></li>{/if}
+        <!--{/foreach}-->                                                                   
+        </ul>
+    </div>
+</div>
+<div class="pgoods">
+    <div class="p_head p_h_img3">
+    	<ul class="p_h_r">
+        	<li class="p_h_txt">
+            	<dl class="p_h_dl"><!--{foreach from=$showgoodst3 item=gt name=foo}-->{if $smarty.foreach.foo.index neq 0}<dd class="p_sp"></dd>{/if}<dd><a href="category_{$gt.cat_id}.html" target="_blank">{$gt.cat_name}</a></dd><!--{/foreach}--></dl>
+            </li><li class="p_h_p"><a href="category_64.html" target="_blank"><img src="images/index/r8.gif" width="41" height="13" alt="更多"/></a></li>
+        </ul>
+    </div>
+    <div class="p_body">
+    	<ul class="ad_1">
+        	<li class="ad_1_1"><a href="{$ad_goods_pan.4.ad_link}" target="_blank"><img src="{$ad_goods_pan.4.ad_code}" width="491" height="180" alt=""/></a></li><li class="ad_1_1"><a href="{$ad_goods_pan.5.ad_link}" target="_blank"><img src="{$ad_goods_pan.5.ad_code}" width="491" height="180" alt=""/></a></li>
+        </ul>
+        <ul class="p_goods">
+        <!--{foreach from=$goods_list_hly item=goods name=foo}-->{if $smarty.foreach.foo.index<7}
+        	<li class="p_g_li">
+            	<ul>
+                	<li class="p_g_p"><a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}"><img src="{$goods.goods_img}" width="130" height="130" alt="{$goods.goods_name}"/></a></li>
+                    <li class="p_g_t">
+                    	<dl>
+                            <dd class="p_g_name"><a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.name|escape:html}</a></dd>
+                            <dd class="p_g_price"><span class="f_d">{$goods.market_price}</span> <span class="f_b_r">{if $goods.promote_price eq ""}{$goods.shop_price}{else}{$goods.promote_price}{/if}</span></dd>                        </dl>
+                    </li>                	
+                </ul>
+            </li>{if $smarty.foreach.foo.index neq 6}<li class="p_g_line"></li>{/if}{/if}
+        <!--{/foreach}-->                                                                   
+        </ul>
+    </div>
+</div>
+
+<div style="width:990px; height:auto; margin-top:10px; overflow:hidden;">
+	<div class="p_4">    
+        <div class="p4_h">
+        	<ul class="p4_h_t">
+            	<li class="p4_h_li">
+                    <dl class="p_h_dl"><!--{foreach from=$showgoodst4 item=gt name=foo}-->{if $smarty.foreach.foo.index neq 0}<dd class="p_sp"></dd>{/if}<dd><a href="category_{$gt.cat_id}.html" target="_blank">{$gt.cat_name}</a></dd><!--{/foreach}--></dl>
+                </li><li class="p4_t_m"><a href="category_75.html" target="_blank"><img src="images/index/r8.gif" width="41" height="13" alt="更多"/></a></li>
+            </ul>
+        </div>        
+        <ul class="p_4_body">
+        	<li class="ad_4_1"><a href="{$ad_goods_p1.0.ad_link}" target="_blank"><img src="{$ad_goods_p1.0.ad_code}" width="240" height="240" alt=""/></a></li>
+            <li class="ad_4_2"><a href="{$ad_goods_p2.0.ad_link}" target="_blank"><img src="{$ad_goods_p2.0.ad_code}" width="241" height="120" alt=""/></a></li>
+            <li class="ad_4_3"><a href="{$ad_goods_p2.1.ad_link}" target="_blank"><img src="{$ad_goods_p2.1.ad_code}" width="241" height="120" alt=""/></a></li>            
+            <li class="p_4_good">
+            	<ul>
+                	<!--{foreach from=$goods_list_hly item=goods name=foo}-->{if $smarty.foreach.foo.index>6 && $smarty.foreach.foo.index<10}
+                	<li class="p_4_li_good">
+                        <ul>
+                            <li class="p_4_g_p"><a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}"><img src="{$goods.goods_img}" width="130" height="130" alt="{$goods.goods_name}"/></a></li>
+                            <li class="p_4_g_t">
+                                <dl>
+                                    <dd class="p_4_g_name"><a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.name|escape:html}</a></dd>
+                                    <dd class="p_4_g_price"><span class="f_d">{$goods.market_price}</span> <span class="f_b_r">{if $goods.promote_price eq ""}{$goods.shop_price}{else}{$goods.promote_price}{/if}</span></dd>                        	
+                                </dl>
+                            </li>                	
+                        </ul>                        
+                    </li>{if $smarty.foreach.foo.index neq 2}<li class="p_g_line"></li>{/if}{/if}
+                    <!--{/foreach}-->                   
+                </ul>
+            </li>
+        </ul> 
+    </div>
+	<div class="p_4" style="float:right;">    
+        <div class="p4_h p4_h_img5">
+        	<ul class="p4_h_t">
+            	<li class="p4_h_li">
+                    <dl class="p_h_dl"><!--{foreach from=$showgoodst5 item=gt name=foo}-->{if $smarty.foreach.foo.index neq 0}<dd class="p_sp"></dd>{/if}<dd><a href="category_{$gt.cat_id}.html" target="_blank">{$gt.cat_name}</a></dd><!--{/foreach}--></dl>
+                </li><li class="p4_t_m"><a href="category_76.html" target="_blank"><img src="images/index/r8.gif" width="41" height="13" alt="更多"/></a></li>
+            </ul>
+        </div>        
+        <ul class="p_4_body">
+        	<li class="ad_4_1"><a href="{$ad_goods_p1.1.ad_link}" target="_blank"><img src="{$ad_goods_p1.1.ad_code}" width="240" height="240" alt=""/></a></li>
+            <li class="ad_4_2"><a href="{$ad_goods_p2.2.ad_link}" target="_blank"><img src="{$ad_goods_p2.2.ad_code}" width="241" height="120" alt=""/></a></li>
+            <li class="ad_4_3"><a href="{$ad_goods_p2.3.ad_link}" target="_blank"><img src="{$ad_goods_p2.3.ad_code}" width="241" height="120" alt=""/></a></li>            
+            <li class="p_4_good">
+            	<ul>
+                	<!--{foreach from=$goods_list_tool item=goods name=foo}-->
+                	<li class="p_4_li_good">
+                        <ul>
+                            <li class="p_4_g_p"><a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}"><img src="{$goods.goods_img}" width="130" height="130" alt="{$goods.goods_name}"/></a></li>
+                            <li class="p_4_g_t">
+                                <dl>
+                                    <dd class="p_4_g_name"><a href="{$goods.url}" target="_blank" title="{$goods.name|escape:html}">{$goods.name|escape:html}</a></dd>
+                                    <dd class="p_4_g_price"><span class="f_d">{$goods.market_price}</span> <span class="f_b_r">{if $goods.promote_price eq ""}{$goods.shop_price}{else}{$goods.promote_price}{/if}</span></dd>                        	
+                                </dl>
+                            </li>                	
+                        </ul>                        
+                    </li>{if $smarty.foreach.foo.index neq 2}<li class="p_g_line"></li>{/if}
+                    <!--{/foreach}-->                   
+                </ul>
+            </li>
+        </ul> 
+    </div>
+</div>
+<!--【4个产品展示模块END】-->
+
+<!-- 外站广告 -->
+<div class="website">
+	<div class="website_link">
+		<ul>
+			<li><a href="active131226.html" target="_blank" onmousemove="website_ad(1);"><img src="images/transparent.gif" /></a></li>
+			<li><a href="active140101.html" target="_blank" onmousemove="website_ad(2);"><img src="images/transparent.gif" /></a></li>
+			<li><a href="active140102.html" target="_blank" onmousemove="website_ad(3);"><img src="images/transparent.gif" /></a></li>
+			<li><a href="active130528.html" target="_blank" onmousemove="website_ad(4);"><img src="images/transparent.gif" /></a></li>
+		</ul>
+	</div>
+	<div class="website_ad" id="website1" style="display:block;"><a href="active131226.html" target="_blank"><img src="images/index/website0.jpg" /></a></div>
+	<div class="website_ad" id="website2"><a href="active140101.html" target="_blank"><img src="images/index/website1.jpg" /></a></div>
+	<div class="website_ad" id="website3"><a href="active140102.html" target="_blank"><img src="images/index/website2.jpg" /></a></div>
+	<div class="website_ad" id="website4"><a href="active130528.html" target="_blank"><img src="images/index/website3.jpg" /></a></div>
+	<div class="clear"></div>
+</div>
+<!-- 外站广告 sEND -->
+
+<!--【最后文章模块】-->
+<div class="article">
+	<div class="article_pan">    
+    	<div class="art_pan1">
+            <ul class="t_ul"><li class="t_p" style="background-image:url(images/index/r6.gif);"><a href="article_cat-16.html" target="_blank" class="t_p_head_a"></a></li><li class="t_m"><a href="article_cat-14.html" target="_blank"><img src="images/index/r8.gif" width="41" height="13" alt="更多"/></a></li></ul>
+            <div class="art_p_con">
+            	<div class="ad_5"><a href="{$ad_know.0.ad_link}" target="_blank"><img src="{$ad_know.0.ad_code}" width="342" height="138" alt=""/></a></div>                
+                <div class="art_p_txt">
+                	<div class="art_p_first"><a href="{$new_article_yishi.0.url}" target="_blank">{$new_article_yishi.0.title|truncate:50:false}</a></div>
+                    <div class="art_p_first_con"><a href="{$new_article_yishi.0.url}" target="_blank">{$new_article_yishi.0.content|truncate:50:false}</a></div>                    
+                    <ul class="art_p_ul">
+                    <!--{foreach from=$school_yishi item=yishi}-->
+                    	<li class="tdot">•</li><li class="art_pan_li"><a href="{$yishi.url}" target="_blank" title="{$yishi.title}">{$yishi.title|truncate:12:false}</a></li><!--{/foreach}-->
+                    <!--{foreach from=$info_yishi item=yishi}-->
+                    	<li class="tdot">•</li><li class="art_pan_li"><a href="{$yishi.url}" target="_blank" title="{$yishi.title}">{$yishi.title|truncate:12:false}</a></li><!--{/foreach}-->
+                    </ul>
+                </div>
+            </div>        
+        </div>
+        <div class="art_pan2">
+        	<div class="ap2_con"> 
+                <ul class="t_ul"><li class="t_p" style="background-image:url(images/index/r5.gif);"></li><li class="t_m"><a href="article_cat-15.html" target="_blank"><img src="images/index/r8.gif" width="41" height="13" alt="更多"/></a></li></ul> 
+                <div class="ap2_txt">
+                    <ul class="ap2_tip_ul">                
+                        <li class="art_tip_li"><a href="{$ad_tip.0.ad_link}" target="_blank" rel="nofollow"><img src="{$ad_tip.0.ad_code}" width="94" height="44" alt=""/></a></li>
+                        <li class="art_tip_li"><a href="{$ad_tip.1.ad_link}" target="_blank" rel="nofollow"><img src="{$ad_tip.1.ad_code}" width="94" height="44" alt=""/></a></li>
+                        <li class="art_tip_li"><a href="{$ad_tip.2.ad_link}" target="_blank" rel="nofollow"><img src="{$ad_tip.2.ad_code}" width="94" height="44" alt=""/></a></li>
+                        <li class="art_tip_li"><a href="{$ad_tip.3.ad_link}" target="_blank" rel="nofollow"><img src="{$ad_tip.3.ad_code}" width="94" height="44" alt=""/></a></li>
+                        <li class="art_tip_li"><a href="{$ad_tip.4.ad_link}" target="_blank" rel="nofollow"><img src="{$ad_tip.4.ad_code}" width="94" height="44" alt=""/></a></li>
+                        <li class="art_tip_li"><a href="{$ad_tip.5.ad_link}" target="_blank" rel="nofollow"><img src="{$ad_tip.5.ad_code}" width="94" height="44" alt=""/></a></li>
+                    </ul>                
+                    <ul class="ap2_txt_ul">
+                    	<li class="ap2_first"><a href="{$new_article_yishi2.0.url}" target="_blank">{$new_article_yishi2.0.title|truncate:24:false}</a></li>
+                        <li class="ap2_first_con"><a href="{$new_article_yishi2.0.url}" target="_blank">{$new_article_yishi2.0.content|truncate:50:false}</a></li>
+                        <li>
+                            <ul class="ap2_con_ul">
+                            <!--{foreach from=$about_yishi item=yishi name=foo}-->{if $smarty.foreach.foo.index <6}
+                                <li class="tdot">•</li><li class="ap2_con_li"><a href="{$yishi.url}" target="_blank" title="{$yishi.title}">{$yishi.title|truncate:12:false}</a></li>{/if}
+							<!--{/foreach}-->                                               	
+                            </ul>                        	
+                        </li>
+                    </ul> 
+                </div>           
+            </div><div class="ad_6"><img src="{$ad_line1_88.0.ad_code}" width="150" height="164" alt="易视网微信"/></div>        
+        </div>
+    </div>    
+    <div class="mjx">
+		<ul class="t_ul"><li class="t_p" style="background-image:url(images/index/r4.gif);"></li><li class="t_m"><a href="buyersshow.html" target="_blank"><img src="images/index/r8.gif" width="41" height="13" alt="更多"/></a></li></ul>                
+        <ul class="mjx_ul">
+            <li class="mjx_prev"></li>
+            <!--{foreach from=$mjx_list item=goods name=foo}-->
+            <li class="mjx_img" {if $smarty.foreach.foo.index neq 0}style="display:none;"{/if}><a href="buyersshow.html" target="_blank"><img src="{if $goods.thumb_img}{$goods.thumb_img}{else}{$goods.img}{/if}" width="180" height="228" alt="易视网"/></a></li>
+            <!--{/foreach}-->
+            <li class="mjx_next"></li>
+        </ul> 
+        <!--{foreach from=$mjx_list item=goods name=foo}-->
+        <ul class="mjx_txt_pan" {if $smarty.foreach.foo.index neq 0}style="display:none;"{/if}>
+        	<li class="mjx_txt"><a href="goods{$goods.goods_id}.html" target="_blank" title="{$goods.name}">{$goods.title|truncate:14:false}</a></li>
+            <li class="mjx_detail"><dl><dd class="mjx_detail_txt">{$goods.detail}</dd><dd class="mjx_detail_name">by {$goods.user_name}</dd></dl></li>
+        </ul>
+        <!--{/foreach}-->       
+    </div>
+</div>
+
+<div class="pl_ban">
+	<ul class="t_ul"><li class="t_p"></li><li class="t_m"><a href="comentlist.html" target="_blank"><img src="images/index/r8.gif" width="41" height="13" alt="更多"/></a></li></ul>    
+    <ul class="pl_pan_ul">
+    <!--{foreach from=$pl_list item=goods name=foo}-->
+     	<li class="pl_li" {if $smarty.foreach.foo.index eq 3}style="margin-right:0;"{/if}>
+            <ul>
+                <li class="pl_img"><a href="goods{$goods.id}.html" target="_blank" title=""><img src="thumb/goods/60x60/goods_{$goods.id}_60x60.jpg" width="60" height="60" alt=""/></a></li>
+                <li><dl class="pl"><dd class="pl_name">{$goods.user_name}</dd><dd class="pl_time">{$goods.add_time}</dd><dd class="pl_con">{$goods.content|truncate:36:false}</dd></dl></li>       
+            </ul>
+        </li>
+    <!--{/foreach}-->      
+    </ul>
+</div>
+
+</div><!--【main END】-->
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+
+</body>
+<script type="text/javascript" src="/js/tip-totop.js"></script>
+<script type="text/javascript" src="/js/inner.js"></script>
+<script type="text/javascript" src="/js/index_end.js"></script>
+<script type="text/javascript" src="/js/lazyload.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".latest_promote img, .sh_g img, .p_body img, .p_4_body img, .article img, .pl_img img").lazyload({placeholder:"/js/img/white.gif", effect:"fadeIn"});
+});
+</script>
+</html>

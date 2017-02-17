@@ -1,0 +1,12 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="ad_img">
+    <div>    
+    <!--随机读取三张广告图片中的一张-->
+    <!--{foreach from=$rand_ads item=cat name=foo}-->
+    	<!--{if $smarty.foreach.foo.index eq $rand_num}-->
+        	<div><a href="{$cat.ad_link}" target="_blank"><img src="{$cat.ad_code}" width="206" height="260" border="0" alt="EaseEyes.com"/></a></div>
+        <!--{/if}-->
+	<!--{/foreach}-->        
+    </div>
+    <div class="clear"></div> 
+</div>

@@ -1,0 +1,317 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>168四件随心配，购物即有机会免费享受189元眼部护理服务</title>
+<meta name="Keywords"  content="易视网,易视眼镜网,美瞳,护理液,润眼液,博士伦,海昌,海俪恩,卫康,库博,视康,强生,sho-bi,GEO,NEO,BESCON" />
+<meta name="Description" content="易视网，168四件随心配，购物即有机会免费享受189元眼部护理服务，还有免费的线上课程体验，24小时闪电发货，30天退换货保障" />
+<link rel="stylesheet" href="http://file.easeeyes.com/index2015/css/ani.css" />
+<style>
+.col-2{overflow:hidden;}
+.col-2 div{width:50%;float:left;}
+.box-items{overflow:hidden;background:url(http://img.easeeyes.com/promotion/20160118/bg2.jpg) repeat;}
+.box-items .item{float:left;width:15.75rem;margin-bottom:.5rem;background:#fff;overflow:hidden;position:relative;}
+.box-items .item:nth-child(even){float:right;}
+.box-items .layer{width:5rem;text-align:center;padding:.25rem;box-sizing:border-box;position:absolute;left:.5rem;top:0;background:#fa3458;color:#fff;font-size:1.1rem;}
+.box-items .image{text-align:center;padding:.5rem;height:15rem;line-height:15rem;}
+.box-items .image img{max-height:15rem;}
+.box-items .text{color:#666;padding:.5rem;}
+.box-items .text p{color:#666;font-size:1.1rem;white-space:nowrap;}
+.box-items .text h3{font-size:1.2rem;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;line-height:2;color:#333;}
+.box-items .text del{color:#666;font-size:1rem;}
+.box-items .btn-buy{display:block;width:8rem;margin:.25rem auto 0;}
+.box-items .red{color:#e43232;}
+.box-items .text b{font-size:1.3rem;}
+.link{position:absolute;width:8.8rem;height:3.25rem;left:2.85rem;bottom:1.5rem;}
+.link2{left:12rem;}
+.link3{left:21rem;}
+
+.red{color:#e05e51;font-size:1.3rem;}
+.items-goods{padding:.5rem 0 0 .5rem;background:#feece2;color:#666;}
+.item-goods{width:15.25rem;margin:0 .5rem .5rem 0;overflow:hidden;float:left;text-align:center;background:#fff;padding-bottom:.5rem;}
+.item-goods .image{height:13rem;line-height:13rem;}
+.item-goods .image img{max-width:11rem;max-height:11rem;vertical-align:middle;}
+.item-goods .text{font-size:1.1rem;height:6rem;}
+.item-goods .text h3{background:#f89492;color:#fff;font-size:1.2rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:.2rem;}
+.item-goods .text p{color:#666;padding:.3rem 0;}
+.item-goods .text p select{width:5rem;height:1.2rem;vertical-align:middle;}
+.item-goods .price-text{color:#999;}
+.item-goods .btns{padding-top:.5rem;}
+.item-goods .btns button{width:10rem;line-height:2rem;background:#f89492;color:#fff;font-size:1.2rem;}
+.box-selected{position:fixed;bottom:5rem;left:1rem;width:3rem;height:3rem;border-radius:50%;background:rgba(243,91,139,0.75);color:#fff;font-size:1.3rem;text-align:center;line-height:3rem;box-shadow:2px 2px 3px rgba(0,0,0,.2);}
+
+/** 弹窗及动画 **/
+html,body{height:100%;}
+.bg-pop{position:fixed;width:100%;height:100%;background:rgba(0,0,0,.85);left:0;top:0;z-index:999;display:table;opacity:0;}
+.bg-pop.ani{animation:zoomIn .5s;-webkit-animation:zoomIn .5s;}
+.box-pop{width:100%;height:100%;vertical-align:middle;display:table-cell;}
+.items-pop{width:30rem;margin:auto;background:#fff;border-radius:.25rem;padding:1rem;box-sizing:border-box;}
+.item-pop{overflow:hidden;padding:.5rem 0;}
+.item-pop .image{width:10rem;height:10rem;float:left;margin-right:1rem;border:1px dotted #dfdfdf;}
+.item-pop .image img{max-width:100%;max-height:100%;}
+.item-pop .text{color:#666;padding-top:.5rem;}
+.item-pop .text h3{font-size:1.3rem;color:#333;line-height:1.5rem;height:3rem;overflow:hidden;}
+.item-pop .text p{color:#cf114d;font-size:1.3rem;padding:.5rem 0;}
+.item-pop .text button{background:#cf114d;color:#fff;width:5rem;height:2rem;border-radius:.25rem;}
+.pop-msg{display:none;opacity:0;background:rgba(0,0,0,.8);color:#fff;font-size:1.2rem;width:8rem;height:4rem;line-height:4rem;text-align:center;position:fixed;left:50%;top:50%;margin-left:-4rem;margin-top:-2rem;border-radius:.25rem;}
+.pop-msg.ani{animation:zoomIn .5s;-webkit-animation:zoomIn .5s;}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<!--main-->
+<div class="container">
+    <div><img src="http://file.easeeyes.com/wap/images/20160606/banner.jpg" style="display:block;" /></div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160606/01.jpg" style="display:block;" /></div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160606/02.jpg" style="display:block;" /></div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160606/03.jpg" style="display:block;" /></div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160606/04.jpg" style="display:block;" /></div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160606/05.jpg" style="display:block;" /></div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160606/_06.jpg" style="display:block;" /></div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160606/08.jpg" style="display:block;" /></div>
+	
+	<!-- 随心配产品 -->
+	<div class="items-goods clearfix">
+    
+        
+        <!--{foreach from=$goodsArr1 item=li}-->
+		<div class="item-goods" id="goods-{$li.goods_id}">
+			<div class="image">
+				<a href="goods{$li.goods_id}.html"><img src="http://img.easeeyes.com/{$li.original_img}" /></a>
+			</div>
+			<div class="text">
+				<h3>{$li.goods_name}</h3>
+                {if !$li.is_hly}
+				<p>
+					左 
+					<select name="zselect" id="zselect_ds_{$li.goods_id}">
+						<option value="">请选择</option>
+						<!--{foreach from=$li.goods_ds item=li2}-->
+						  <option value="{if $li2.canbuy}{$li2.val}{else}nobuy{/if}">{$li2.val}{$li2.status}</option>
+					    <!--{/foreach}-->
+					</select>
+					
+                    右 
+					<select name="yselect" id="yselect_ds_{$li.goods_id}">
+						<option value="">请选择</option>
+						<!--{foreach from=$li.goods_ds item=li2}-->
+						  <option value="{if $li2.canbuy}{$li2.val}{else}nobuy{/if}">{$li2.val}{$li2.status}</option>
+					    <!--{/foreach}-->
+					</select>
+				</p>
+                {/if}
+				<div class="price-text">
+					<span class="red">&yen;{$li.shop_price}</span> <del>&yen;{$li.market_price}</del> 两盒
+				</div>
+			</div>
+			<div class="btns">
+				<button onclick="addGoods('{$li.goods_id}',{if !$li.is_hly}0{else}1{/if})">立即购买</button>
+			</div>
+		</div>
+        <!--{/foreach}-->
+
+        
+        
+        
+
+	</div>
+
+	<!-- 悬浮 -->
+	<span class="box-selected" id="box-selected">0</span>
+</div>
+<!-- 选中商品弹窗 -->
+<div class="bg-pop" id="bg-pop">
+	<div class="box-pop" id="box-pop">
+		<div class="items-pop" id="tpl-box"></div>
+	</div>
+</div>
+<!--状态提示-->
+<div class="pop-msg" id="pop-msg">添加成功</div>
+
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+<script type="text/tpl" id="tpl-1">
+	<div class="item-pop" id="item-pop-{{id}}"><div class="image"><img src="{{img}}" /></div><div class="text"><h3>{{title}}</h3><p>{{price}}x2</p><button onclick="deleteGoods('{{id}}')">移出</button></div></div>
+</script>
+<script src="http://file.easeeyes.com/wap/js/fastclick.min.js"></script>
+<script>
+/** fastClick **/
+window.addEventListener('load',function(){
+    FastClick.attach(document.body);
+},false);
+</script>
+<script>
+/** 全局变量 **/
+var goods=[];	// 选中商品列表
+
+/** 弹窗 **/
+document.addEventListener('DOMContentLoaded',function(){
+	var pop=document.getElementById('bg-pop'),
+		msg=document.getElementById('pop-msg');
+	var poper={
+		init:function(){
+			pop.style.display="none";
+		},
+		open:function(){
+			pop.style.display="table";
+			pop.style.opacity="1";
+			pop.classList.add('ani');
+		},
+		close:function(){
+			setTimeout(function(){
+				pop.classList.remove('ani');
+				pop.style.display="none";
+				pop.style.opacity="0";
+			},100);
+		}
+	}
+	poper.init();
+	// 提示弹窗
+	var pop_msg={
+		open:function(){
+			var self=this;
+			msg.style.display="block";
+			msg.style.opacity="1";
+			msg.classList.add('ani');
+			setTimeout(function(){
+				self.close();
+			},2000);
+		},
+		close:function(){
+			msg.classList.remove('ani');
+			msg.style.display="none";
+			msg.style.opacity="0";
+		}
+	}
+	//全局暴漏
+	window.pop_msg=pop_msg;
+	document.getElementById('box-selected').addEventListener('click',function(){
+		if(goods.length>=1){
+			poper.open();
+		}
+	},false);
+	document.getElementById('box-pop').addEventListener('click',function(e){
+		if(e.target===this){
+			poper.close();
+		}
+	},false);
+
+},false);
+
+/** 添加商品 **/
+function addGoods(id,type){
+	var o=document.getElementById('goods-'+id);
+	// 判断个数是否超过2个
+	if(goods.length>=2){
+		alert('已经选择2个，请删除后再试');
+		return;
+	}
+	/*
+	* type (0:美瞳,1:护理液)
+	*/
+	if(!type){
+		var zsel=document.getElementById('zselect_ds_'+id).value;
+    	var ysel=document.getElementById('yselect_ds_'+id).value;
+    	if(zsel == '' || zsel == 'nobuy' || ysel == '' || ysel == 'nobuy'){
+	        alert('请先选择度数');
+	        return;
+	    }
+	    // 成功添加
+		goods.push({
+			"id":id,
+			"img":o.querySelectorAll('.image img')[0].src,
+			"title":o.querySelectorAll('.text h3')[0].innerHTML,
+			"ds":zsel+','+ysel,
+			"price":o.querySelectorAll('.red')[0].innerHTML
+		});
+	}else{
+		goods.push({
+			"id":id,
+			"img":o.querySelectorAll('.image img')[0].src,
+			"title":o.querySelectorAll('.text h3')[0].innerHTML,
+			"price":o.querySelectorAll('.red')[0].innerHTML
+		});
+	}
+	// 成功提示
+	pop_msg.open();
+	// 悬浮显示控制
+	document.getElementById('box-selected').innerHTML=parseInt(document.getElementById('box-selected').innerHTML)+1;
+	render(goods,document.getElementById('tpl-1').innerHTML);
+}
+
+/** 删除商品 **/
+function deleteGoods(id){
+	// 数据层删除
+	goods.forEach(function(good,index){
+		if(good.id===id){
+			goods.splice(index,1);
+		}
+	})
+	//console.log(goods)
+	// DOM删除
+	// 是否还存在商品
+	if(goods.length<=0){
+		document.getElementById('tpl-box').innerHTML='请在随心配中添加商品';
+	}else{
+		render(goods,document.getElementById('tpl-1').innerHTML)
+	}
+	// 悬浮显示控制
+	document.getElementById('box-selected').innerHTML=parseInt(document.getElementById('box-selected').innerHTML)-1;
+}
+
+function render(data,tpl){
+	var str='';
+	data.forEach(function(d){
+		var s=tpl.replace(/{{id}}/ig,d.id).replace(/{{img}}/ig,d.img).replace(/{{title}}/ig,d.title).replace(/{{price}}/ig,d.price);
+		str+=s;
+	})
+	if(data.length>=2){
+		str+="<a href='javascript:;' style='display:block;font-size:1.1rem;width:8rem;margin:1rem auto 0;height:3rem;line-height:3rem;background:#CF114D;color:#fff;text-align:center;' onclick='submitForm_149()'>加入购物车</a>"
+	}
+	document.getElementById('tpl-box').innerHTML=str;
+}
+
+
+function submitForm_149() {
+    
+    var goodsArr=new Array();
+    for(var i=0;i<2;i++){
+        goodsArr[i]=new Array(); 
+        for(var j=0;j<2;j++){
+            goodsArr[i][j]=1;
+        }
+    }
+    goods.forEach(function(goods,index){
+        goodsArr[index][0] =  goods.id;
+        goodsArr[index][1] =  goods.ds;
+	})
+	$.ajax({
+		type:'POST',
+		url:'active.php?id=160606&act=add_to_cart&num=149',
+		data:{goodsData:goodsArr},	//表单字段序列化
+		cache:false,
+		success: function(d){
+			//alert(d);
+			//window.open("flow.php");
+            window.location.href="flow.php";
+		},
+		complete: function(){
+			//parent.location.reload();	//刷新父窗口
+			//parentDialog.close();		//关闭弹窗
+		},
+		error:function(d){
+			alert('error:'+d.toSource());
+		}
+	});
+}
+</script>
+</body>
+</html>

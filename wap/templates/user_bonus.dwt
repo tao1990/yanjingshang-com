@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta content="telephone=no" name="format-detection"/>
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/bonus.css"/>
+
+</head>
+<body>
+<!-- head -->
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<script>
+// JavaScript Document
+$(function(){
+
+	 //当点击列表里的选项时触发这个函数
+	 $(".youhui_title li").click(function(){
+		 var index=$(this).index();
+		 $(this).addClass('youhui_current a').siblings().removeClass();
+		 if(index==0){
+				$(".youhui_one").show();
+				$(".youhui_two").hide();
+		 }else{
+				$(".youhui_one").hide();
+				$(".youhui_two").show();
+		 }
+		 });
+	})
+
+
+</script>
+<div class="content">
+<div class="youhui_box">
+   <ul class="youhui_title">
+      <li class="youhui_current"><a href="#">未使用</a></li>
+      <li><a href="#">已过期</a></li>
+      <div class="clear"></div>
+   </ul>
+   <div class="youhui_content">
+      <div class="youhui_one">
+      <!--{foreach from=$bonus item=item}-->
+      {if $item.status=='未使用'}      
+        <div class="youhui_kuang">
+          <div>
+             <span class="youhui_num">优惠券号：<br />{$item.bonus_sn|default:N/A}</span>
+             <span class="youhui_time">过期时间:<br />{$item.use_enddate}</span>
+             <div class="clear"></div>
+          </div>
+          <div class="youhui_one_main">
+              <div class="youhui_money">
+                 &yen;{$item.type_money}
+              </div>
+              <div class="youhui_name">
+                 <div>{$item.type_name}</div>
+                 <div>&yen;最小订单金{$item.min_goods_amount}</div>
+              </div>
+              <div class="clear"></div>
+          </div>
+        </div>
+       {/if}
+        <!--{/foreach}-->    
+      </div>
+      
+      <div class="youhui_two">
+        <!--{foreach from=$bonus item=item}-->
+          {if $item.status=='已过期'}      
+            <div class="youhui_kuang">
+              <div>
+                 <span class="youhui_num">优惠券号：<br />{$item.bonus_sn|default:N/A}</span>
+                 <span class="youhui_time">过期时间:<br />{$item.use_enddate}</span>
+                 <div class="clear"></div>
+              </div>
+              <div class="youhui_one_main">
+                  <div class="youhui_money">
+                     &yen;{$item.type_money}
+                  </div>
+                  <div class="youhui_name">
+                     <div>{$item.type_name}</div>
+                     <div>最小订单金&yen;{$item.min_goods_amount}</div>
+                  </div>
+                  <div class="clear"></div>
+              </div>
+            </div>
+           {/if}
+        <!--{/foreach}-->    
+      </div>
+   </div>
+</div>
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+
+</body>
+</html>

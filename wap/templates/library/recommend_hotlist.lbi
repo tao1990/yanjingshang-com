@@ -1,0 +1,8 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<!-- {if $hot_goodshot} -->
+<!--{foreach from=$hot_goodshot item=goods}-->
+<div class="yuandian"><img src="images/yuandian.jpg" /></div>
+<div class="newstitle"><span><a href="{$goods.url}" title="{$goods.name|escape:html}" >{$goods.short_style_name}</a></span></div>
+<!--{/foreach}-->
+<!-- {/if} -->

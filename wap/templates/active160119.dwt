@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>易视网，抢年货，日韩美睛神器大搜罗</title>
+<meta name="Keywords"  content="易视网，易视眼镜网，美瞳，护理液，润眼液，博士伦，海昌，海俪恩，卫康，库博，视康，强生，sho-bi，GEO，NEO，BESCON" />
+<meta name="Description" content="易视网，5折萌翻日系小公举，24小时闪电发货，30天退换货保障" />
+<style>
+.box-items{background:#ffc8c7;font-family:'Microsoft Yahei';overflow:hidden;}
+.box-items .pink{color:#ff3261;}
+.box-items .item{width:15.75rem;float:left;background:#fff;margin-bottom:.5rem;position:relative;}
+.box-items .item:nth-child(even){float:right;}
+.box-items .image{height:18rem;line-height:18rem;text-align:center;}
+.box-items .image img{vertical-align:middle;max-height:100%;}
+.box-items .text{color:#666;font-size:1.1rem;}
+.box-items .text h3{font-size:1.2rem;font-weight:100;padding:0 .25rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.box-items .box-price{padding:0 .25rem;height:4rem;background:url(http://img.easeeyes.com/promotion/20160119/buy_btn.png) no-repeat 12rem top;background-size:3.5rem auto;}
+.box-items del{color:#999;font-size:1rem;}
+.box-items .box-price b{font-size:1.3rem;}
+.box-items .layer{width:5rem;text-align:center;padding:.25rem;box-sizing:border-box;position:absolute;left:.5rem;top:0;background:#fa3458;color:#fff;font-size:1.1rem;}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<!--main-->
+<div class="container">
+    <div><img src="http://file.easeeyes.com/wap/images/20160119/banner.jpg" /></div>
+    <div><img src="http://file.easeeyes.com/wap/images/20160119/01.jpg" /></div>
+    <div class="box-items">
+        <!--{if $goodsArr1}-->
+        <!--{foreach from=$goodsArr1 item=goods name=goods}-->
+		<div class="item">
+			<a href="{$goods.href}">
+				<div class="layer">{$goods.zk}</div>
+				<div class="image">
+					<img src="http://www.easeeyes.com/{$goods.goods_thumb}" />
+				</div>
+				<div class="text">
+					<h3>{$goods.goods_name}</h3>
+					<div class="box-price">
+						<del>{$goods.fomart_price}</del>
+						<p>抢购价：<span class="pink">&yen;<b>{$goods.promote_price}</b></span></p>
+					</div>
+				</div>
+			</a>
+		</div>
+        <!--{/foreach}-->
+        <!--{/if}-->
+	</div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160119/02.jpg" /></div>
+    <div class="box-items">
+        <!--{if $goodsArr2}-->
+        <!--{foreach from=$goodsArr2 item=goods name=goods}-->
+		<div class="item">
+			<a href="{$goods.href}">
+                <div class="layer">{$goods.zk}</div>
+				<div class="image">
+					<img src="http://www.easeeyes.com/{$goods.goods_thumb}" />
+				</div>
+				<div class="text">
+					<h3>{$goods.goods_name}</h3>
+					<div class="box-price">
+						<del>{$goods.fomart_price}</del>
+						<p>抢购价：<span class="pink">&yen;<b>{$goods.promote_price}</b></span></p>
+					</div>
+				</div>
+			</a>
+		</div>
+        <!--{/foreach}-->
+        <!--{/if}-->
+	</div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160119/03.jpg" /></div>
+    <div class="box-items">
+        <!--{if $goodsArr3}-->
+        <!--{foreach from=$goodsArr3 item=goods name=goods}-->
+		<div class="item">
+			<a href="{$goods.href}">
+                <div class="layer">{$goods.zk}</div>
+				<div class="image">
+					<img src="http://www.easeeyes.com/{$goods.goods_thumb}" />
+				</div>
+				<div class="text">
+					<h3>{$goods.goods_name}</h3>
+					<div class="box-price">
+						<del>{$goods.fomart_price}</del>
+						<p>抢购价：<span class="pink">&yen;<b>{$goods.promote_price}</b></span></p>
+					</div>
+				</div>
+			</a>
+		</div>
+        <!--{/foreach}-->
+        <!--{/if}-->
+	</div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160119/04.jpg" /></div>
+    <div class="box-items">
+        <!--{if $goodsArr4}-->
+        <!--{foreach from=$goodsArr4 item=goods name=goods}-->
+		<div class="item">
+			<a href="{$goods.href}">
+                <div class="layer">{$goods.zk}</div>
+				<div class="image">
+					<img src="http://www.easeeyes.com/{$goods.goods_thumb}" />
+				</div>
+				<div class="text">
+					<h3>{$goods.goods_name}</h3>
+					<div class="box-price">
+						<del>{$goods.fomart_price}</del>
+						<p>抢购价：<span class="pink">&yen;<b>{$goods.promote_price}</b></span></p>
+					</div>
+				</div>
+			</a>
+		</div>
+        <!--{/foreach}-->
+        <!--{/if}-->
+	</div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160119/05.jpg" /></div>
+    <div class="box-items">
+        <!--{if $goodsArr5}-->
+        <!--{foreach from=$goodsArr5 item=goods name=goods}-->
+		<div class="item">
+			<a href="{$goods.href}">
+                <div class="layer">{$goods.zk}</div>
+				<div class="image">
+					<img src="http://www.easeeyes.com/{$goods.goods_thumb}" />
+				</div>
+				<div class="text">
+					<h3>{$goods.goods_name}</h3>
+					<div class="box-price">
+						<del>{$goods.fomart_price}</del>
+						<p>抢购价：<span class="pink">&yen;<b>{$goods.promote_price}</b></span></p>
+					</div>
+				</div>
+			</a>
+		</div>
+        <!--{/foreach}-->
+        <!--{/if}-->
+	</div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160119/06.jpg" /></div>
+    <div class="box-items">
+        <!--{if $goodsArr6}-->
+        <!--{foreach from=$goodsArr6 item=goods name=goods}-->
+		<div class="item">
+			<a href="{$goods.href}">
+                <div class="layer">{$goods.zk}</div>
+				<div class="image">
+					<img src="http://www.easeeyes.com/{$goods.goods_thumb}" />
+				</div>
+				<div class="text">
+					<h3>{$goods.goods_name}</h3>
+					<div class="box-price">
+						<del>{$goods.fomart_price}</del>
+						<p>抢购价：<span class="pink">&yen;<b>{$goods.promote_price}</b></span></p>
+					</div>
+				</div>
+			</a>
+		</div>
+        <!--{/foreach}-->
+        <!--{/if}-->
+	</div>
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

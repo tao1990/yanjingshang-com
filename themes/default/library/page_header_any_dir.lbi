@@ -1,0 +1,100 @@
+<script type="text/javascript">var process_request = "{$lang.process_request}";</script>
+<div id="top_bg">
+    <ul id="top_line"><!--{foreach from=$newbanner_ym item=cat name=foo}--><!--{if $cat.title}--><!--{if $smarty.foreach.foo.index !=0}--><li class="hfd"></li><!--{/if}--> 
+        <li class="hfdbt"><!--{if $cat.link=='http://'||!$cat.link}--><!--{if $cat.file_url}-->
+        <a href="{$cat.url}" target="_blank" rel="nofollow"><img src="{$cat.file_url}" width="160px" height="30px" alt="{$cat.title|escape:html}"/></a>{else}{$cat.title}<!--{/if}--><!--{else}-->
+        <a href="{$cat.link}" target="_blank" rel="nofollow"><!--{if $cat.file_url}--><img src="{$cat.file_url}" width="160px" height="30px" alt=""/>{else}{$cat.title}<!--{/if}--></a><!--{/if}--></li><!--{/if}--><!--{/foreach}-->
+    </ul>
+    <div id="logotr">
+        <div id="logo"><a href="/"><img src="/themes/default/images/logo.gif" width="160" height="64" alt="易视网"/></a></div>
+        <div class="logo_txt">
+            <ul class="logo_txt_tr">
+            	<li class="vline2 padding_l4_r7">|</li>
+                <li style="line-height:14px;"><a href="/user_order_list.html" onfocus="this.blur()" title="查看我的订单" rel="nofollow">我的订单</a></li>
+                <li class="vline2 padding_l4_r7">|</li>
+                <li style="position:relative;">
+                    <a href="/user.html" title="" onMouseOver="user_center_show()" onMouseOut="user_center_hide()">我的易视<span class="logo_text_tip"></span></a>
+                    <ul id="user_tip_pan" onMouseOver="user_center_show()" onMouseOut="user_center_hide()">
+                        <a href="/user.html" target="_blank" rel="nofollow">我的易视<span class="logo_text_tip"></span></a>
+                        <a href="/user_order_list.html" target="_blank" rel="nofollow">我的订单</a>
+                        <a href="/user_transform_points.html" target="_blank" rel="nofollow">我的积分</a>
+                        <a href="/user_collection_list.html"  target="_blank" rel="nofollow">我的收藏夹</a>
+                    </ul>
+                </li> 
+                <li class="vline2 padding_l6_r7">|</li>
+                <li style="line-height:14px;"><a href="/questionlist.html" title="有问必答" target="_blank" rel="nofollow">有问必答</a></li>
+                <li class="vline2 padding_l6_r9">|</li>
+                <li style="position:relative;">
+                    <a href="javascript:void(0)" onmouseover="user_center_show2()" onmouseout="user_center_hide2()">帮助中心<span class="logo_text_tip"></span></a>                
+                    <ul id="help_tip_pan" onmouseover="user_center_show2()" onmouseout="user_center_hide2()">                
+                        <a href="javascript:void(0)">帮助中心<span class="logo_text_tip"></span></a>                    
+                        <a href="/article-35.html" target="_blank" rel="nofollow">如何购买</a>
+                        <a href="/article-27.html" target="_blank" rel="nofollow">如何付款</a>
+                        <a href="/article-8.html"  target="_blank" rel="nofollow">运时运费</a>
+                        <a href="/article-7.html"  target="_blank" rel="nofollow">售后保障</a>
+                    </ul>
+                </li> 
+                <li class="vline2 padding_l7_r9" style="_padding-right:2px;">|</li> 
+                <li style="position:relative;">            
+                    <a href="javascript:void(0)" onmouseover="user_center_show3()" onmouseout="user_center_hide3()"><span class="kefu_tip"></span>联系在线客服<span class="logo_text_tip"></span></a> 
+                    <ul id="kefu" onmouseover="user_center_show3()" onmouseout="user_center_hide3()">
+                        <a href="javascript:void(0)" ><span class="kefu_tip ml8"></span>联系在线客服<span class="logo_text_tip"></span></a>                
+                        <div class="ht4px"></div>
+                        <li class="kefu_time">在线客服服务时间: <br/>工作日9:00~18:00</li>  
+                        <!--{foreach from=$qq item=catq}-->
+                        <li class="kefu_list bg_qq"><a title="QQ:{$catq}" href="http://wpa.qq.com/msgrd?v=3&amp;uin={$catq}&amp;site=qq&amp;menu=yes" target="_blank" rel="nofollow">QQ<span class="wid12"></span>点击联系</a></li>
+                        <!--{/foreach}--><!--{foreach from=$ww item=catq}-->
+                        <li class="kefu_list bg_ww">
+                            <a title="旺旺:{$catq}" href="http://amos.im.alisoft.com/msg.aw?v=2&uid=%E6%98%93%E8%A7%86%E7%BD%91&site=cntaobao&s=2&charset=utf-8" target="_blank" rel="nofollow">旺旺 点击联系</a>
+                        </li>
+                        <!--{/foreach}--><!--{foreach from=$msn item=catq}-->
+                        <li class="kefu_list bg_msn"><a title="msn:{$catq}" href="msnim:chat?contact={$catq}" target="_blank" rel="nofollow">MSN 点击联系</a></li><!--{/foreach}-->
+                   </ul>           
+                </li>
+            </ul>                   
+            <ul class="tel400"><li class="text400">订购热线(免长途费)</li><li class="font400">4006-177-176</li></ul>
+        </div>
+        <div class="head_middle fl">
+        	<div id="ECS_MEMBERZONE" class="logints">欢迎来到易视网！<a href="/user.html" onfocus="this.blur()">[请登录]</a>，新用户？<a href="/user_register.html" onfocus="this.blur()"><font class="red">[免费注册]</font></a></div>   
+            <div class="shop_word"></div>         
+        </div>   
+    </div>
+    <ul id="menu">
+        <li class="menu_left">
+        <a href="/"><!--{if 1}--><img src="/themes/default/images/common/11.gif" width="115" height="28" alt=""/><!--{else}--><img src="/themes/default/images/common/1.gif" width="115" height="28" alt="" onmouseover="this.src='/themes/default/images/common/11.gif'" onmouseout="this.src='/themes/default/images/common/1.gif'"/><!--{/if}--></a><a href="/category_1.html"><!--{if $topdh2}--><img src="/themes/default/images/common/21.gif" width="115" height="28" alt=""/><!--{else}--><img src="/themes/default/images/common/2.gif" width="115" height="28" alt="" onmouseover="this.src='/themes/default/images/common/21.gif'" onmouseout="this.src='/themes/default/images/common/2.gif'"/><!--{/if}--></a><a href="/category_6.html"><!--{if $topdh3}--><img src="/themes/default/images/common/31.gif" width="115" height="28" alt=""/><!--{else}--><img src="/themes/default/images/common/3.gif" width="115" height="28" alt="" onmouseover="this.src='/themes/default/images/common/31.gif'" onmouseout="this.src='/themes/default/images/common/3.gif'"/><!--{/if}--></a><a href="/category_64.html"><!--{if $topdh4}--><img src="/themes/default/images/common/41.gif" width="115" height="28" alt=""/><!--{else}--><img src="/themes/default/images/common/4.gif" width="115" height="28" alt="" onmouseover="this.src='/themes/default/images/common/41.gif'" onmouseout="this.src='/themes/default/images/common/4.gif'"/><!--{/if}--></a><a href="/category_76.html"><!--{if $topdh5}--><img src="/themes/default/images/common/51.gif" width="115" height="28" alt=""/><!--{else}--><img src="/themes/default/images/common/5.gif" width="115" height="28" alt="" onmouseover="this.src='/themes/default/images/common/51.gif'" onmouseout="this.src='/themes/default/images/common/5.gif'"/><!--{/if}--></a><a href="/packages.html"><!--{if $topdh6}--><img src="/themes/default/images/common/61.gif" width="115" height="28" alt=""/><!--{else}--><img src="/themes/default/images/common/6.gif" width="115" height="28" alt="" onmouseover="this.src='/themes/default/images/common/61.gif'" onmouseout="this.src='/themes/default/images/common/6.gif'"/><!--{/if}--></a><a href="/buyersshow.html"><!--{if $topdh7}--><img src="/themes/default/images/common/71.gif" width="115" height="28" alt=""/><!--{else}--><img src="/themes/default/images/common/7.gif" width="115" height="28" alt="" onmouseover="this.src='/themes/default/images/common/71.gif'" onmouseout="this.src='/themes/default/images/common/7.gif'"/><!--{/if}--></a>
+        </li>                 
+        <li class="cart_pan"> 
+        	<a href="/flow.html">             	       
+            <ul class="cart_con">                    
+            	<li id="cart_info">购物车<span id="cart_info_num" class="red_bold">{insert name='cart_num'}</span>件<span class="cart_jt"></span></li>
+            	<li class="cart_pop">{insert name='cart_infopan'}</li>           
+            </ul></a>
+            <a href="/flow.html" class="cart_js">去结算&gt;&gt;</a>           
+        </li>       
+    </ul>
+</div>
+<div class="menu_bt">
+    <ul class="head_tj">    
+        <a href="/school.html" class="color6" target="_blank"><span class="art_keywords">眼镜学堂</span></a><span class="art_key_span"><img src="/themes/default/images/index/vline13px.gif" width="2" height="24" alt=""/></span>       
+        <a href="/exchange.html" class="color6" target="_blank"><span class="art_keywords">积分兑换</span></a><span class="art_key_span"><img src="/themes/default/images/index/vline13px.gif" width="2" height="24" alt=""/></span>
+        <a href="/promotions.html" class="color6" target="_blank"><span class="art_keywords">专题促销</span><span class="head_hot"></span></a><span class="art_key_span"><img src="/themes/default/images/index/vline13px.gif" width="2" height="24" alt=""/></span>
+        <a href="/recommend.html" class="color6" target="_blank"><span class="art_keywords">首席推荐</span><span class="head_hot"></span></a>
+    </ul>
+    <ul class="search">    
+    	<form method="get" action="categorysea.php"><input type="hidden" name="search" value="1"/>    
+    	<li class="se_input"><!--{if $keyword}-->
+            <input type="text" id="autocomplete" name="keyword" class="kw_input" value="{$keyword}" onFocus="if(this.value=='请输入关键字')this.value='';this.style.color='#333';" onBlur="if(this.value=='')this.value='请输入关键字';this.style.color='#636363';" ><!--{else}-->
+            <input type="text" id="autocomplete" name="keyword" class="kw_input" value="{$keyword}" onFocus="if(this.value=='请输入关键字')this.value='';this.style.color='#333';" onBlur="if(this.value=='')this.value='请输入关键字';this.style.color='#636363';"><!--{/if}-->            
+        </li>
+        <li onclick="submit()" class="se_submit"></li>
+        </form>
+    </ul>
+    <ul class="head_fenlei">
+    	<span class="color9">热门分类：</span><!--{foreach from=$newbanner_fl item=cat name=foo}--><!--{if $cat.title}--><!--{if $cat.link=='http://'}--><a href="#" class="color6">{$cat.title}</a>{else}
+    	<a href="/{$cat.link}" title="{$cat.title|escape:html}" class="color6" target="_blank">{$cat.short_title|truncate:10:false}&nbsp;</a><!--{/if}--><!--{/if}--><!--{/foreach}-->
+    </ul>
+</div>
+<!--{if $topbanner.0.ad_code}-->
+<ul class="ad_head"><!--{if $topbanner.0.ad_link}--><a href="/{$topbanner.0.ad_link}" target="_blank"><img src="{$topbanner.0.ad_code}" width="1002px" height="44px" alt=""/></a><!--{else}-->
+<img src="{$topbanner.0.ad_code}" width="1002px" height="44px" alt=""/><!--{/if}--></ul><!--{/if}-->
+<ul class="head_space"></ul>

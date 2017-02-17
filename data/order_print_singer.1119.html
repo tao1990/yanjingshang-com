@@ -1,0 +1,142 @@
+{literal}
+<style type="text/css" media="print">
+body,td { font-size:13px; text-align:center;}
+table td{ height:22px;}
+.tb_head td{ text-align:right; height:20px; line-height:18px;}
+
+.table1 td{ padding-right:20px;}
+.table3{ border:1px #000 solid; margin-top:3px;}
+.msg_line{width:100%; height:26px; text-align:left; line-height:16px;}
+.msg_line_left{float:left; width:60px; height:16px; line-height:16px;}
+.msg_line_right{float:left; text-align:left; margin-left:5px;}
+.msg_btline{border-bottom:1px #dcdcdc solid;}
+
+.tb_total td{height:16px; line-height:16px;}
+#printbtn{ display:none;}
+</style>
+
+<style type="text/css" media="screen">
+body,td { font-size:13px; text-align:center;}
+table td{ height:22px;}
+.tb_head td{ text-align:right; height:20px; line-height:18px;}
+
+.table1 td{ padding-right:20px;}
+.table3{ border:1px #000 solid; margin-top:3px;}
+.msg_line{width:100%; height:26px; text-align:left; line-height:16px;}
+.msg_line_left{float:left; width:60px; height:16px; line-height:16px;}
+.msg_line_right{float:left; text-align:left; margin-left:5px;}
+.msg_btline{border-bottom:1px #dcdcdc solid;}
+
+.tb_total td{height:16px; line-height:16px;}
+</style>
+{/literal}
+<table class="tb_head" width="750px" cellpadding="1" border="0"  style="margin-top:52px; margin-bottom:4px;">
+    <tr>
+        <td width="64px" align="left"></td><td  width="98px" style="text-align:left;">{$order.order_sn}</td>
+        <td width="68px" align="right"></td><td width="174px" style="text-align:left;">{$order.order_time}</td>  
+              
+		<td width="70px" align="right"></td><td width="154" style="text-align:left;">{$order.consignee}</td>
+        
+        <td width="10px" align="right"></td><td width="112px" style="text-align:left;">{if $order.mobile}{$order.mobile}{else}{$order.tel}{/if}</td>
+    </tr>
+    <tr>
+        <td align="left" width="64px"></td><td colspan="5" style="text-align:left; font-family:'宋体', Arial;">{$order_region_temp}{$order.address|truncate:28:false}</td>
+        <td align="right"></td><td style="text-align:left;">{$order.pay_name}</td>
+    </tr>
+</table>
+<div style="width:770px; height:296px; text-align:right;">
+<div style="width:770px; height:255px;">
+<table border="0" style="border-collapse:collapse; width:760px;">
+    <tr align="center">
+        <td width="120px"></td>
+        <td width="270px"></td>
+        <td width="155px"></td>
+        <td width="70px"></td>
+        <td width="60px"></td>
+        <td width="85px"></td>
+    </tr>
+    <!--{foreach from=$goods_list item=goods key=key name=foo}-->
+    <!--{if $goods.zcount>1 && $goods.ycount eq 1 || $goods.zcount eq 1 && $goods.ycount>1 || $goods.zcount>1 && $goods.ycount>1 }-->
+    <tr>
+    	<td>{$goods.goods_sn}</td>
+        <td>{$goods.goods_name}{$goods.goods_name_desc|tracert:18}{if $goods.is_gift}{if $goods.goods_price gt 0}{$lang.remark_favourable}{else}{$lang.remark_gift}{/if}{/if}</td>        
+        <td>{if $goods.zselect && $goods.zcount>0}左眼：{$goods.zselect}{/if}<br/>{$goods.sub_a}</td>
+        <td align="right">{$goods.formated_goods_price}</td>
+        <td align="right">{$goods.zcount}</td>
+        <td align="right">{$goods.sub_z}</td>
+    </tr>
+    <tr>
+    	<td>{$goods.goods_sn}</td>
+        <td>{$goods.goods_name}{$goods.goods_name_desc|tracert:18}{if $goods.is_gift}{if $goods.goods_price gt 0}{$lang.remark_favourable}{else}{$lang.remark_gift}{/if}{/if}</td>        
+        <td>{if $goods.yselect && $goods.ycount>0}右眼：{$goods.yselect}{/if}<br/>{$goods.sub_b}</td>
+        <td align="right">{$goods.formated_goods_price}</td>
+        <td align="right">{$goods.ycount}</td>
+        <td align="right">{$goods.sub_y}</td>
+    </tr>
+    <!--{else}-->
+    <tr>
+    	<td>{$goods.goods_sn}</td>
+        <td>
+		{$goods.goods_name}
+		{if $goods.extension_code neq 'tuan_buy'}{$goods.goods_name_desc|tracert:18}{/if}
+		{if $goods.extension_code=='package_buy'}(礼包){/if}{if $goods.extension_code=='tuan_buy'}(团购){/if}
+        {if $goods.is_gift}{if $goods.goods_price gt 0}{$lang.remark_favourable}{else}{$lang.remark_gift}{/if}{/if}
+        {if $goods.parent_id gt 0}{$lang.remark_fittings}{/if}
+        </td>        
+        <td>{if $goods.zselect && $goods.zcount>0}左眼:{$goods.zselect}{/if}
+        {if $goods.yselect && $goods.ycount>0}右眼:{$goods.yselect}{/if}<!--{if $goods.zselect=='' && $goods.yselect==''}-->{$goods.goods_attr}
+        <!--{else}--><br/>{$goods.goods_attr}{if $goods.ds_extention}瞳距【{$goods.ds_extention}】{/if}<!--{/if}-->
+        </td>
+        <td align="right">{$goods.formated_goods_price}<!-- 商品单价 --></td>
+        <td align="right">{$goods.goods_number}<!-- 商品数量 --></td>
+        <td align="right">{$goods.formated_subtotal}<!-- 商品金额小计 --></td>
+    </tr>
+    <!--{/if}-->
+    <!--{/foreach}-->
+    <tr>
+        <td colspan="2" style="text-align:right; padding-left:10px;"></td>        
+        <td style="padding-top:20px; text-align:right;">商品总计：{$order_goods_number} 件</td>
+        <td colspan="3" align="right" rowspan="3" style="">
+        <table class="tb_total" border="0" width="160px;" align="right">
+            <tr><td style="width:88px; text-align:right;">邮资： </td><td style="text-align:left;">
+            {if $order.all_plus neq '0.00'}<!-- 邮资=快递费+保价费+手续费 -->￥{$order.all_plus}.00{else}￥0.00{/if}</td></tr>
+            {if $order.all_minus >0}<tr><td style="text-align:right;">折扣金额： </td><td style="text-align:left;">
+            {if $order.all_minus neq '0.00'}￥{$order.all_minus}.00{else}￥0.00{/if}</td></tr>{/if}
+            <tr><td style="text-align:right;">实收金额： </td><td style="text-align:left;">{$order.formated_total_fee} </td></tr>
+        </table>
+        </td>
+    </tr>
+</table>
+</div>
+	{if $order.inv_payee == ''}<div style="width:760px; height:20px;"></div>{/if}
+    <div style="width:750px; padding-left:15px;">
+    <!--{if $order.postscript || $order.to_buyer}-->
+        <!--{if $order.postscript}-->
+        <div class="msg_line <!--{if $order.postscript && $order.to_buyer}-->msg_btline<!--{/if}-->">
+            <div class="msg_line_left">客户留言:</div> 
+            <div class="msg_line_right">{$order.postscript}</div>
+        </div>            
+        <!--{/if}-->            
+        <!--{if $order.to_buyer}-->
+        <div class="msg_line" style="height:16px; line-height:16px;">
+            <div class="msg_line_left">商家备注:</div>
+            <div class="msg_line_right">{$order.to_buyer}</div>
+        </div><!--{/if}-->            
+        <!--{if $order.inv_payee}-->
+        <div class="msg_line" style="height:12px; line-height:12px;">
+            <div class="msg_line_left" style="line-height:12px;">发票抬头:</div>
+            <div class="msg_line_right">[{$order.inv_payee}]</div>
+        </div>
+        <!--{/if}-->
+    <!--{else}-->
+        <!--{if $order.inv_payee}-->
+        <div class="msg_line">
+            <div class="msg_line_left">发票抬头:</div>
+            <div class="msg_line_right">[{$order.inv_payee}]</div>
+        </div>
+        <!--{/if}-->                  
+    <!--{/if}-->
+    </div>
+</div>
+<br/><br/>
+<input type="button" value="打印订单" id="printbtn" onclick="window.print();" />

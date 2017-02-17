@@ -1,0 +1,17 @@
+<!--{foreach from=$new_articles_zl item=article name=faa}-->
+    <!--{if $smarty.foreach.faa.index < 3}-->
+        <!--{if $smarty.foreach.faa.index == 1}-->
+            <div class="quality"><span><img alt="" src="../images/yi_tip/dot.gif" border=0>&nbsp;
+            <a href="{$article.url}" title="{$article.title|escape:html}" target="_blank">
+            <font color="#c30000">{$article.short_title}</font></a></span>
+            </div>
+            <div class="clear"></div>
+        <!--{else}--> 
+            <div class="quality"><span><img alt="" src="../images/yi_tip/dot.gif" border=0>&nbsp;
+            <a href="{$article.url}" title="{$article.title|escape:html}" target="_blank">
+            {$article.short_title}</a></span>
+            </div>
+            <div class="clear"></div>
+        <!--{/if}-->
+    <!--{/if}-->     
+<!--{/foreach}-->

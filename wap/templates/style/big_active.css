@@ -1,0 +1,53 @@
+﻿img{border:none;}
+.mul{width:990px; height:auto; margin:10px auto 0 auto;}
+.mul > li{float:left; overflow:hidden; font-size:0;}
+.mul ul{ font-size:12px;}
+.mul a, .mul img{display:block; overflow:hidden;}
+.head_space{height:0px;}
+
+
+
+
+.get_bonus_pan{width:966px; height:247px; border:1px solid #99ddb9; margin:10px auto 20px auto;}
+
+.get_bonus_list{width:483px; height:247px; background:url(../images/active/20120917/3.jpg) no-repeat;}
+
+
+/* 问答 */
+.wen_pan{width:471px; height:78px; margin:12px 0 0 6px; color:#5abece;}
+.wen_a{width:471px; height:22px; line-height:22px; background:url(../images/active/20120917/11.jpg) no-repeat; overflow:hidden; text-indent:28px;}
+
+.wen_a_bg2{background:url(../images/active/20120917/14.jpg) no-repeat;}
+
+.wen_q_li{width:471px; height:60px; line-height:30px; text-align:left;}
+.88wen_q dd{width:180px; height:30px; text-indent:65px; overflow:hidden; background:url(../images/active/20120917/13.jpg) no-repeat 45px 9px;}
+.wen_q dd{width:200px; height:30px; text-indent:70px; overflow:hidden;}
+.wen_bt{width:471px; height:32px; text-align:center; margin:9px auto;}
+.wen_title{width:483px; height:24px; line-height:24px; background-color:#e5ffd0; color:#E43232; text-align:center;}
+
+
+/* 中奖列表 */
+
+.get_bonus_ul li{width:100%; height:21px; line-height:21px; color:white;}
+.get_bonus_dd1{width:88px; height:21px; overflow:hidden;}
+.get_bonus_dd2{width:100px; height:21px; margin-left:10px; margin-right:10px; overflow:hidden;}
+.get_bonus_title{width:471px; height:20px; line-height:20px; color:white; text-align:right; float:left;}
+
+
+/* radio重写操作 */
+
+/*
+#dx dd{
+padding-left: 20px;
+background: url(http://kawika.org/jquery/cssRadio/unchecked.gif) no-repeat;
+}
+#dx dd.checked {
+padding-left: 20px;
+background: url(http://kawika.org/jquery/cssRadio/checked.gif) no-repeat;
+color: #008800;
+}
+#dx label.over {
+color: #0000FF;
+}
+*/
+

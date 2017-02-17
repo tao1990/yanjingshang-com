@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>{$page_title}</title>
+<meta name="Keywords"    content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link rel="stylesheet" href="http://file.easeeyes.com/b2b/css/base.css" />
+<link rel="stylesheet" href="http://file.easeeyes.com/b2b/css/index.css" />
+</head>
+<body>
+<!--header-tag-->
+<!-- #BeginLibraryItem "/library/user_header.lbi" --><!-- #EndLibraryItem -->
+<!--MAIN-->
+<div class="m-memberinfo container">
+	<!--LEFT-->
+	<!-- #BeginLibraryItem "/library/user_left_nav.lbi" --><!-- #EndLibraryItem -->
+	<!--CENTER-->
+	<div class="memberinfo-center fl">
+		
+        <!-- #BeginLibraryItem "/library/user_top.lbi" --><!-- #EndLibraryItem -->
+		<div class="memberinfo-center-order">
+			<h4>
+				<a href="user_order_list.html" class="fr">查看全部的订单</a>
+				我的订单
+			</h4>
+			<table>
+				<tbody>
+					<tr>
+						<th>商品信息</th>
+						<th>总计</th>
+						<th>状态</th>
+						<th>操作</th>
+					</tr>
+                    <!--{foreach from=$order_list item=item}-->
+					<tr class="order-date" style="background: #F0F3F7;">
+						<td colspan="4">{$item.order_time}&nbsp;&nbsp;&nbsp; 订单号：{$item.order_sn}</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="order-goods">
+								<a target="_blank" href="user_order_detail_{$item.order_id}.html" class="fl order-goods-thumb">
+									<img src="{$img_url}data/goods_img/150x150/G_{$item.goods_id}.jpg" width="60" height="60" />
+								</a>
+								<div class="order-goods-text">
+									<a target="_blank" href="user_order_detail_{$item.order_id}.html">{$item.goods_name}</a>
+									<p>数量：{$item.goods_number}{$item.unit}&nbsp;&nbsp;&nbsp;{if $item.zselect}度数：{$item.zselect}{/if}</p>
+								</div>
+							</div>
+						</td>
+						<td>{$item.total_fee}</td>
+						<td>{$item.order_status}</td>
+						<td>
+							<a target="_blank" href="user_order_detail_{$item.order_id}.html">查看订单</a>
+						</td>
+					</tr>
+                    <!--{/foreach}--> 
+                    
+				</tbody>
+			</table>
+		</div>
+        <!-- #BeginLibraryItem "/library/user_bottom.lbi" --><!-- #EndLibraryItem -->
+		
+	</div>
+	<!--RIGHT-->
+	<!-- #BeginLibraryItem "/library/user_right.lbi" --><!-- #EndLibraryItem -->
+</div>
+<!--底部-->
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+<script src="http://file.easeeyes.com/b2b/js/jquery.min.js"></script>
+<script src="http://file.easeeyes.com/b2b/js/goodslide3.js"></script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="x-ua-compatible" content="ie=7"/>
+<meta http-equiv="Content-Type"    content="text/html; charset=utf-8" />
+<title>购物流程_云镜商</title>
+<meta name="Keywords"    content="购物流程_云镜商" />
+<meta name="Description" content="购物流程_云镜商" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="themes/default/style/cart.css" rel="stylesheet" type="text/css" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://file.easeeyes.com/js/yijq.js"></script>
+<script type="text/javascript" src="/js/jquery.form.js"></script>
+{insert_scripts files='common.js,region.js,shopping_flow.js,flow.js'}
+{insert_scripts files='showdiv.js'}
+</head>
+<body><div class="pop_shadow"></div>
+<!-- #BeginLibraryItem "/library/flow_header.lbi" --><!-- #EndLibraryItem -->
+<link href="http://file.easeeyes.com/b2b/css/index.css" rel="stylesheet" type="text/css" />
+
+<!----------------购物车（第一步:商品加入到购物车）------------->
+
+<script type="text/javascript">
+<!---->{foreach from=$lang.password_js item=item key=key}var {$key} = "{$item}";{/foreach}
+</script>
+<div id="main" class="container">
+    <div id="carthead" style="border-bottom:1px solid #dfdfdf">
+		<span>全部商品 ({$total_num})</span>
+	</div>
+    <div class="border_1_dc mt10">    
+    <form id="formCart" name="formCart" method="post" action="">        
+    <div id="cartzt">
+    <table id="datatb" width="100%">
+        <tr class="md-carslist-nav">
+            <th width="102"><div class="J_select_all"><input type="checkbox" id="all" class="all" /> <label for="all">全选</label></th>
+            <th width="305" align="center">商品名称</th>
+            <th width="188" align="center"><span>度数</span><span>数量</span></th>
+            <th width="87" align="center">单价</th>
+            <th width="105" align="center">小计</th>
+            <th width="105" align="center">操作</th>
+        </tr>      
+        <!--{foreach from=$goods_list item=goods}-->
+		<tr class="wrapper-tr">
+            <td>
+                <!--{if $show_goods_thumb eq 2}-->
+                	<input type="checkbox" class="all_son" name="all_son" id="son_{$goods.rec_id}" value="{$goods.rec_id}"  /> <a href="goods{$goods.goods_id}.html" target="_blank"><img src="{$img_url}{$goods.goods_thumb}" alt="{$goods.goods_name}" width="150" height="150"/></a>
+                <!--{else}-->
+                    <input type="checkbox" class="all_son" name="all_son" id="son_{$goods.rec_id}" value="{$goods.rec_id}" /><a href="goods{$goods.goods_id}.html" target="_blank"><!--{if $goods.extension_code neq 'package_buy'}--><img src="{$img_url}{$goods.goods_thumb}" alt="{$goods.goods_name}" width="150" height="150"/><!--{else}礼包--><img src="{$goods.goods_attr_id}" alt="{$goods.goods_name}" width="15" height="150"/><!--{/if}--></a>
+                <!--{/if}-->                    
+            </td>
+            <td align="left">
+            	<!--{if $show_goods_attribute eq 1 && $goods.extension_code neq 'package_buy' && $goods.extension_code neq 'tuan_buy' && $goods.extension_code neq 'miaosha_buy'}商品属性--><!--{/if}--> <!--$goods.goods_attr|nl2br}<br/>-->
+                <!--{if $goods.extension_code neq 'package_buy' && $goods.extension_code neq 'group_buy' && $goods.extension_code neq 'exchange_buy' && $goods.extension_code neq 'miaosha_buy' && $goods.extension_code neq 'tuan_buy'}商品-->
+                    <!--{if $goods.is_gift gt 0 && $goods.goods_price eq '￥0.00'}--><span class="redf">（赠品）</span><!--{/if}-->
+                    <!--{if $goods.is_gift gt 0 && $goods.goods_price neq '￥0.00'}--><span class="redf">（特惠商品）</span><!--{/if}-->
+                    {if $goods.extension_code eq 'exchange'}<span class="redf">（积分兑换商品）</span>{/if}
+                    <a href="goods{$goods.goods_id}.html" target="_blank" class="f6">{$goods.goods_name}</a><br />
+					<!--<span class="tag-pg tag-pg-green">新品</span>-->
+                <!--{elseif $goods.extension_code eq 'package_buy'}礼包-->
+					<a href="goods{$goods.goods_id}.html" target="_blank" onclick="setSuitShow({$goods.goods_id})" class="f6"><span class="redf">（礼包）</span>{$goods.goods_name|truncate:15:false}</a>
+                <!--{elseif $goods.extension_code eq 'group_buy'}组合购买-->
+                	<a href="goods{$goods.goods_id}.html" target="_blank" class="f6"><span class="redf">（组合购买）</span>{$goods.goods_name|truncate:15:false}</a>
+                <!--{elseif $goods.extension_code eq 'exchange_buy'}积分购买-->
+                	<a href="goods{$goods.goods_id}.html" target="_blank" class="f6"><span class="redf">（积分折扣购买）</span>{$goods.goods_name|truncate:15:false}</a> 
+                <!--{elseif $goods.extension_code eq 'miaosha_buy'}秒杀-->
+                	<a href="snatchs{$goods.goods_id}.html" target="_blank" class="f6"><span class="redf">（秒杀）</span>{$goods.goods_name|truncate:15:false}</a>
+				<!--{elseif $goods.extension_code eq 'tuan_buy'}团购-->
+                	<a href="goods{$goods.goods_id}.html" target="_blank" class="f6"><span class="redf">（团购）</span>{$goods.goods_name|truncate:15:false}</a>
+                <!--{/if}-->               
+            </td>                
+     	<td>
+        {if $goods.extension_code neq 'exchange' && $goods.extension_code neq 'exchange_buy' && $goods.extension_code neq 'group_buy' && $goods.extension_code neq 'miaosha_buy' && $goods.extension_code neq 'unchange' && $goods.is_kj neq 1 && $goods.extension_code neq 'source_buy'}
+        <!--{if $goods.is_gift eq 0 && $goods.zcount eq 0 && $goods.ycount eq 0}无度数商品和礼包和团购-->        
+            <table width="100%">
+                <tr>
+                    <td>{if $goods.goods_attr}<span class="flow_ds_td">眼镜度数：{$goods.goods_attr}</span>{/if}</td>
+                    <!--{if $goods.extension_code eq 'package_buy' && $goods.goods_attr_id neq ''}-->
+						<!--{if $goods.goods_sn eq 1}礼包主商品-->
+						<td>数量： <img src="images/jianhao.jpg" onclick="reducep({$goods.rec_id})" style="cursor:pointer;"/> 
+						<input type="text" onchange="changep({$goods.rec_id})" name="package[{$goods.rec_id}]" id="package_{$goods.rec_id}" value="{$goods.goods_number}" style="border:1px solid #666666;width:20px;text-align:center;"/> 
+						<img src="images/jiahao.jpg" onclick="addp({$goods.rec_id})" style="cursor:pointer;"/>
+						</td><!--{else}礼包副商品-->
+						<td>数量： <img src="images/jianhao.jpg"/> <input type="text" readonly="readonly" name="package[{$goods.rec_id}]" id="package_{$goods.rec_id}" value="{$goods.goods_number}" style="border:1px solid #999999;width:20px;text-align:center; color:#999;"/> <img src="images/jiahao.jpg"/>
+						</td>
+						<!--{/if}-->
+						
+                    <!--{elseif $goods.extension_code eq 'tuan_buy'}-->
+						<!--{if $goods.goods_sn eq 1}团购主商品-->
+						<td>数量： <img src="images/jianhao.jpg" onclick="reduce_tuan({$goods.rec_id})" style="cursor:pointer;"/> 
+						<input type="text" onchange="change_tuan({$goods.rec_id})" name="package[{$goods.rec_id}]" id="package_{$goods.rec_id}" value="{$goods.goods_number}" style="border:1px solid #666666;width:20px;text-align:center;"/> 
+						<img src="images/jiahao.jpg" onclick="add_tuan({$goods.rec_id})" style="cursor:pointer;"/>
+						</td><!--{else}副商品-->
+						<td>数量： <img src="images/jianhao.jpg"/> <input type="text" readonly="readonly" name="package[{$goods.rec_id}]" id="package_{$goods.rec_id}" value="{$goods.goods_number}" style="border:1px solid #999999;width:20px;text-align:center; color:#999;"/> <img src="images/jiahao.jpg"/>
+						</td>
+						<!--{/if}-->
+
+					<!--{else}非礼包商品-->
+						<td>数量： <img src="images/jianhao.jpg" onclick="reduce({$goods.rec_id})" style="cursor:pointer;"/> 
+						<input type="text" onchange="change({$goods.rec_id})" name="goods_number[{$goods.rec_id}]" id="goods_number_{$goods.rec_id}" value="{$goods.goods_number}" style="border:1px solid #666666;width:20px;text-align:center;"/> <img src="images/jiahao.jpg" onclick="add({$goods.rec_id})" style="cursor:pointer;"/>
+						</td>
+                    <!--{/if}-->
+                </tr>
+            </table>
+        <!--{else}度数商品-->
+        <!--{if $goods.zcount+$goods.ycount > 0}-->  
+            <!--{if $goods.is_gift gt 0 && $goods.goods_price neq '￥0.00'}特惠品-->
+            <table width="100%">
+              <tr>
+                <td width="50%" align="center">度数：<!--{if $goods.zselect}-->{$goods.zselect}<!--{else}--><span class="widthspace27"></span><!--{/if}--></td>
+                <td width="50%" align="center" style="white-space:nowrap;">数量：<!--{if $goods.zselect}-->
+                <img src="images/jianhao.jpg" /> 
+                <input type="text" onchange="changez({$goods.rec_id})" name="sszb[{$goods.rec_id}]" readonly="readonly" id="goods_number_{$goods.rec_id}" value="{$goods.zcount}" style="border:1px solid #666666; width:20px; text-align:center;"  /> 
+                <img src="images/jiahao.jpg" />
+				<!--有无货-->
+				<!--<span class="goods-status">无货</span>-->
+                <!--{else}--> <input type="hidden" name="sszb[{$goods.rec_id}]" id="goods_number_{$goods.rec_id}" value="{$goods.zcount}"/> <span class="widthspace54"></span><!--{/if}-->
+                </td>  
+              </tr>
+              <tr>
+                <td width="50%" align="center">度数：<!--{if $goods.yselect}-->{$goods.yselect}<!--{else}--><span class="widthspace27"></span><!--{/if}--></td>
+                <td width="50%" align="center" style="white-space:nowrap;">数量：<!--{if $goods.yselect}-->
+                <img src="images/jianhao.jpg" />
+                <input type="text" onchange="changey({$goods.rec_id})" name="ssyb[{$goods.rec_id}]" readonly="readonly" id="goods_number2_{$goods.rec_id}" value="{$goods.ycount}" style="border:1px solid #666666; width:20px; text-align:center;"/> 
+                <img src="images/jiahao.jpg" />
+				<!--有无货-->
+				<!--<span class="goods-status">无货</span>-->
+                <!--{else}--> <input type="hidden" name="ssyb[{$goods.rec_id}]" id="goods_number2_{$goods.rec_id}" value="{$goods.ycount}"/> <span class="widthspace54"></span><!--{/if}-->             
+                </td>  
+             </tr>
+            </table>                 
+            <!--{else}--> 
+            <table width="100%">
+              <tr>
+                <td width="50%" align="center">度数：<!--{if $goods.zselect}-->{$goods.zselect}<!--{else}--><span class="widthspace27"></span><!--{/if}--></td>
+                <td width="50%" align="center">数量： <!--{if $goods.zselect}-->
+                <img src="images/jianhao.jpg" onclick="reducez({$goods.rec_id})" style="cursor:pointer;"/> 
+                <input type="text" onchange="changez({$goods.rec_id})" name="sszb[{$goods.rec_id}]" id="goods_number_{$goods.rec_id}" value="{$goods.zcount}" style="border:1px solid #666666; width:20px; text-align:center;"  /> 
+                <img src="images/jiahao.jpg" onclick="addz({$goods.rec_id})" style="cursor:pointer;"/>
+				<!--有无货-->
+				<!--<span class="goods-status">无货</span>-->
+                <!--{else}--><input type="hidden" name="sszb[{$goods.rec_id}]" id="goods_number_{$goods.rec_id}" value="{$goods.zcount}"/> <span class="widthspace54"></span><!--{/if}-->
+                </td>  
+              </tr>
+            </table>
+            <!--{/if}-->     
+        <!--{/if}-->  
+        <!--{/if}-->
+    {else}<!--[数量不变商品]-->
+        <!--{if $goods.is_kj eq 1}--> 
+            <table>
+              <tr>
+                <td>{if $goods.ds_extention}左：{$goods.zselect} 右：{$goods.yselect}{/if}</td>
+                <td>数量：
+                <img src="images/jianhao.jpg"/> 
+                <input type="text" onchange="changez({$goods.rec_id})" name="sszb[{$goods.rec_id}]" readonly="readonly" id="goods_number_{$goods.rec_id}" value="{$goods.goods_number}" style="border:1px solid #999; width:20px; text-align:center; color:#999;"/> 
+                <img src="images/jiahao.jpg"/>
+                </td>  
+              </tr>
+              <tr>
+                <td>{if $goods.ds_extention}瞳距：{$goods.ds_extention}{/if}</td>
+                <td>单位：副</td>  
+             </tr>
+            </table>        
+        <!--{else}--> 
+        <table>
+            <tr>
+                <td>{if $goods.is_gift gt 0 && $goods.goods_price eq '￥0.00' && $goods.eye_id>0 && $goods.zselect eq ''}<span class="red"><!--度数请填在<br/>订单附言中--></span>{else}<span class="flow_ds_td">{if $goods.goods_attr}眼镜度数：{$goods.goods_attr}{else}{if $goods.zselect}左：{$goods.zselect}{/if}{if $goods.yselect}<br />右：{$goods.yselect}{/if}{/if}</span>{/if}</td>
+                <td>数量： <img src="images/jianhao.jpg"/> <input type="text" readonly="readonly" name="package[{$goods.rec_id}]" id="package_{$goods.rec_id}" value="{$goods.goods_number}" style="border:1px solid #999999;width:20px;text-align:center; color:#999;"/> <img src="images/jiahao.jpg"/>
+                </td>
+            </tr>
+        </table><!--{/if}-->         
+    {/if}
+	</td>
+        <!--{if $goods.goods_id gt 0 && $goods.extension_code eq 'package_buy'}礼包价-->
+            <!--{if $goods.goods_sn eq 1}-->
+            <td align="center"><font class="red">礼包价：</font>{$goods.goods_price}</td><td align="center"><div id="sum_{$goods.rec_id}">{$goods.subtotal}</div></td>
+            <td align="center"><a href="javascript:drop_package({$goods.rec_id})" style="color:#993300">{$lang.drop}</a></td>
+            <!--{else}-->
+			<td align="center"><s><font color="#666666">{$goods.goods_price}</font></s></td><td align="center"><s><font color="#666666">{$goods.subtotal}</font></s></td>
+            <td align="center"><font style="color:#999999">{$lang.drop}</font></td>
+			<!--{/if}-->
+		<!--{elseif $goods.goods_id gt 0 && $goods.extension_code eq 'tuan_buy'}团购价-->
+            <!--{if $goods.goods_sn eq 1}-->
+            <td align="center"><font class="red">团购价：</font>{$goods.goods_price}</td><td align="center"><div id="sum_{$goods.rec_id}">{$goods.subtotal}</div></td>
+            <td align="center"><a href="javascript:drop_tuan({$goods.rec_id})" style="color:#993300">{$lang.drop}</a></td>
+            <!--{else}-->
+			<td align="center"><s><font color="#666666">{$goods.goods_price}</font></s></td><td align="center"><s><font color="#666666">{$goods.subtotal}</font></s></td>
+            <td align="center"><font style="color:#999999">{$lang.drop}</font></td>
+			<!--{/if}-->
+        <!--{else}普通商品-->
+            <td align="center"><div id="price_{$goods.rec_id}">{$goods.goods_price}</div></td><td align="center"><div id="sum_{$goods.rec_id}">{$goods.subtotal}</div></td>
+            <!--{if $goods.extension_code eq 'exchange_buy'}-->
+            <td align="center"><a href="javascript:drop_defined({$goods.rec_id}, 1);" style="color:#930;">{$lang.drop}</a></td>
+            <!--{else}-->
+			<td align="center"><a href="javascript:if(confirm('{$lang.drop_goods_confirm}')) location.href='flow.php?step=drop_goods&amp;id={$goods.rec_id}'; " style="color:#993300">{$lang.drop}</a></td>
+			<!--{/if}-->
+        <!--{/if}-->
+        </tr>      
+       	<!--<tr><td colspan="6" align="center"><img src="images/cartfgx.jpg" width="962" height="6" alt=""/></td></tr>-->
+        <!--{/foreach}-->               
+        <tr height="50px" style="color:#999">
+            <td><div class="J_select_all" style="white-space:nowrap;"><input type="checkbox" id="all2" class="all" /> <label for="all2">全选</label>　<a onclick="drop_goods_sel()">删除选中的商品</a></td>
+            
+			<!--<td><span class="blocka" style="display:inline-block; margin-left:15px;"><a href="javascript:void(0)" onclick="location.href='flow.php?step=clear'"><img src="images/cart_clear.jpg" width="86" height="22" alt=""/></a></span></td>-->
+            <td colspan="3" align="right">
+            	<!--<span style="display:inline-block; width:130px; text-align:left;">商品总重：<font class="red"><span id="cart_weight">{$total_weight}</span>kg</font></span>-->            	
+                <span>已选择<span id="cart_num">{$total_num}</span>件商品</span>
+                <!--<span style="display:inline-block; width:150px;">赠送积分总计：<font class="red"><span id="cart_point">{$shopping_integral}</span>分</font></span>-->
+                <!--{if $discount gt 0}优惠活动--><span style="display:inline-block; width:290px; text-align:center;">{$your_discount}元</span><!--{/if}--> 
+            </td>
+            <td colspan="2" align="center">总价：<span class="hongse" id="cart_sum">{$shopping_moneyn}</span>　　<span class="to-checkout"><a href="javascript:void(0);" onclick="to_checkout();return false;">去结算</a></span> </td>
+        </tr>
+        
+        
+    </table>    
+    </div><input type="hidden" name="user_id" id="get_user_id" value="{$user_id}"/>            
+    </form>
+    </div>  
+    <div id="cartsub">
+        <div class="cart1_end">
+            <span id="freepx">
+            
+		
+			{if $goods_pricex neq -1}
+                {if $smarty.session.base_line == 1}
+                    <span class="red">您是钻石VIP会员，全场免邮费（货到付款除外）</span>
+                {else}
+                    <!--{if $goods_pricex}-->
+                        <span class="note1">您还差<font class="red">{$goods_pricex}元</font>就可以得到免费配送</span>
+                    <!--{else}-->
+                        <span class="note1">购物已超过{$base_line}元，您可以享受免费快递。</span>
+                    <!--{/if}-->
+                {/if}
+            {elseif $goods_pricex eq -1}
+                  <span class="note1">您选择的商品已经参加包邮活动</span>
+            {/if}
+            
+			</span>
+            <span class="to-checkout"><a href="./" >继续购物</a></span>
+            
+        </div>
+    </div> 
+     
+<!--登陆注册删除-->
+
+	<div class="md-cart-page">
+		<!--商品推荐-->
+		<div class="goods-pg">
+			<span class="goods-pg-arrow"></span>
+			<span class="goods-pg-arrow goods-pg-arrow-right"></span>
+			<div class="goods-pg-title">商品精选</div>
+			<div class="goods-pg-main">
+				<ul>
+                <!--{foreach from=$sort_order_list item=item name=li}-->
+                {if $item.b2b_original_img}
+					<li>
+						<div class="image">
+							<a title="{$item.goods_name}" target="_blank"  href="goods{$item.goods_id}.html"><img src="{$img_site}{$item.b2b_original_img}" /></a>
+						</div>
+						<div class="text">
+							<a href="goods{$item.goods_id}.html" target="_blank" title="{$item.goods_name}">{$item.goods_name|truncate:10}</a><br />
+							<!--<span class="price">¥ {$li.shop_price}</span>-->
+						</div>
+					</li>
+                {/if}
+			     <!--{/foreach}-->
+				
+				</ul>
+			</div>
+		</div>
+	</div>
+
+   
+
+<div class="space45"></div>
+
+       
+</div>
+
+<!----------------------购物流程第一步end------------------> 
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+
+</body>
+<script type="text/javascript">
+	var process_request = "{$lang.process_request}";
+	<!---->{foreach from=$lang.passport_js item=item key=key}var {$key} = "{$item}";{/foreach}
+	var username_exist = "{$lang.username_exist}";
+	var compare_no_goods = "{$lang.compare_no_goods}";
+	var btn_buy = "{$lang.btn_buy}";
+	var is_cancel = "{$lang.is_cancel}";
+	var select_spe = "{$lang.select_spe}";
+</script>
+<script src="http://file.easeeyes.com/b2b/js/goodslide2.js"></script>
+
+<script>
+// 默认为全选
+$(function(){
+	$('.all').each(function(){
+		this.checked=true;
+	});
+	$('.all_son').each(function(){
+		this.checked=true;
+	});	
+});
+// 全选/全不选
+$(".all").click(function (){
+	var that=this;
+	$('.all').each(function(){
+		this.checked=that.checked;
+	});
+	$(".all_son").each(function(){
+		this.checked=that.checked;
+	});
+});
+// 判断是否全部选中
+$('.all_son').click(function(){
+	$('.all').each(function(){
+		this.checked=true;
+	});
+	$('.all_son').each(function(){
+		if(!this.checked){
+			$('.all').each(function(){
+				this.checked=false;
+			});
+		}
+	});
+})
+
+</script>
+<script>
+function drop_goods_sel(){
+    if(confirm('确定要删除吗？')){
+        var chk_value =[]; 
+        $('input[name="all_son"]:checked').each(function(){ 
+            chk_value.push($(this).val()); 
+        });
+        $.ajax({
+			url:'flow.php?step=drop_goods_sel',
+			data:'&id='+chk_value+'&m='+Math.random(),
+			type:'POST',
+			cache:false,
+			success:
+			function(res){
+				window.location.href=window.location.href;
+			}
+		});
+    }
+    
+}
+</script>
+</html>

@@ -1,0 +1,230 @@
+<!----------------------【商品评论模块】【TIME:20120915】---------------------->
+<div class="conSetTabItem fl">
+    <dl>    
+        <!--{foreach from=$comments item=comment}-->
+        <dt class="color6"><!--{if $comment.username}-->{$comment.username|escape:html}<!--{else}-->{$lang.anonymous}<!--{/if}--><span class="color9 pd05">发表于{$comment.add_time|truncate:10:false}</span></dt>
+        <dd>
+            <div class="conSTI_t_jiao"></div>
+            <div class="conSTI_t">
+                <ul>
+                    <li><span class="fl">舒适度</span><p class="sp-star sp-starie8"><span class="star{$comment.score_shushi}"></span></p></li>
+                    <li><span class="fl">美观度</span><p class="sp-star sp-starie8"><span class="star{$comment.score_meiguan}"></span></p></li>
+                    <li><span class="fl">服务态度</span><p class="sp-star sp-starie8"><span class="star{$comment.score_fuwu}"></span></p></li>
+                </ul>
+                <div class="mt10 conSTI_t_txt fl color6">{$comment.content}</div>
+                {if $comment.suggest}<div class="mt10 conSTI_t_txt fl color9">佩戴效果建议：{$comment.suggest}</div>{/if}
+            </div>
+            <div class="conSTI_b">{if $comment.reply}<span class="blue conSTI_b_s1">易视回复：</span><p class="conSTI_b_s2 color6">{$comment.reply}</p>{/if}</div>
+        </dd>
+        <!--{/foreach}-->                        
+    </dl>	
+    <div class="Com-plpageNum fr">
+    <form name="selectPageForm" action="{$smarty.server.PHP_SELF}" method="get">
+    <!--{if $pager.styleid eq 0 }-->
+        <div id="pager">
+        {$lang.pager_1}{$pager.record_count}{$lang.pager_2}{$lang.pager_3}{$pager.page_count}{$lang.pager_4} 
+        <span> 
+            <a href="{$pager.page_first}">{$lang.page_first}</a>
+            <a href="{$pager.page_prev}">{$lang.page_prev}</a> <a href="{$pager.page_next}">{$lang.page_next}</a> 
+            <a href="{$pager.page_last}">{$lang.page_last}</a> 
+        </span>
+            <!--{foreach from=$pager.search key=key item=item}-->
+            <input type="hidden" name="{$key}" value="{$item}" />
+            <!--{/foreach}-->
+        </div>
+    <!--{else}-->    
+    	<div id="pager" class="pagebar">
+        <span class="fl f6" style="margin-right:10px;">{$lang.total} <b>{$pager.record_count}</b> {$lang.user_comment_num}</span>              
+        <!-- {if $pager.page_first} --><a href="{$pager.page_first}">1 ...</a><!-- {/if} -->              
+        <!-- {if $pager.page_prev} --><a class="prev" href="{$pager.page_prev}">{$lang.page_prev}</a><!-- {/if} -->              
+        <!--{foreach from=$pager.page_number key=key item=item}-->
+        <!-- {if $pager.page eq $key} -->
+        <span class="page_now">{$key}</span>
+        <!-- {else} -->
+        <a href="{$item}">[{$key}]</a>
+        <!-- {/if} -->
+        <!--{/foreach}-->    
+        <!-- {if $pager.page_next} --><a class="next" href="{$pager.page_next}">{$lang.page_next}</a><!-- {/if} -->
+        <!-- {if $pager.page_last} --><a class="last" href="{$pager.page_last}">...{$pager.page_count}</a><!-- {/if} -->              
+        <!-- {if $pager.page_kbd} -->
+        <!--{foreach from=$pager.search key=key item=item}-->
+            <input type="hidden" name="{$key}" value="{$item}" />
+        <!--{/foreach}-->
+        <kbd style="float:left; margin-left:8px; position:relative; bottom:3px;">
+            <input type="text" name="page" onkeydown="if(event.keyCode==13)selectPage(this)" size="3" class="B_blue" />
+        </kbd>
+        <!-- {/if} -->
+    </div>
+    <!--{/if}-->    
+    </form>    
+    {literal}
+    <script type="Text/Javascript" language="JavaScript">
+        <!--        
+        function selectPage(sel){sel.form.submit();}       
+        //-->
+    </script> 
+    {/literal}    
+    </div>
+</div>
+<div style="clear:both"></div>
+<!----------------------【商品评论END】---------------------->   
+
+{literal}
+<script type="text/javascript">
+//<![CDATA[
+
+//yi:用户是否登录验证
+
+//显示评论面板
+function show_comment(){
+	if($.browser.msie && $.browser.version == '6.0'){
+		//ie6
+		var sh = document.body.scrollHeight; 
+		var ww = document.body.scrollWidth; 		  
+		var wh = document.documentElement.scrollTop+window.screen.height/2;    
+		var yw = $('#commentpan').width();
+		var yh = $('#commentpan').height();
+		//alert("ww:"+yw+",wh:"+yh);
+		var x = (ww-yw)/2;
+		var y = (wh-yh) + 60;
+		
+		$("#commentpan").css({    
+			"position": "absolute", 
+			"display":"block",   
+			"top": y,    
+			"left": x    
+		});  
+		//黑色背景
+		$('#fade').css({"display":"block",
+			"width":ww,
+			"height":sh
+		});	
+	}else{
+		//非ie6
+		document.getElementById('commentpan').style.display='block';
+		document.getElementById('fade').style.display='block';
+	}	
+}
+
+//yi：商品评论表单的验证
+function submitComment(frm)
+{
+	var cmt = new Object;
+	cmt.email           = frm.elements['email'].value;
+	cmt.content         = frm.elements['content'].value;
+	cmt.type            = frm.elements['cmt_type'].value;
+	cmt.id              = frm.elements['id'].value;//goods_id
+	cmt.enabled_captcha = frm.elements['enabled_captcha'] ? frm.elements['enabled_captcha'].value : '0';
+	cmt.captcha         = frm.elements['captcha'] ? frm.elements['captcha'].value : '';
+	cmt.rank            = 0;
+	cmt.suggest         = frm.elements['suggest'].value;
+	cmt.rank            = 5;
+	
+	//yi:验证用户是否已经评论过或者还未购买该商品//这里放在提交数据的时候进行的操作。
+	
+	/*
+	for(i = 0; i < frm.elements['comment_rank'].length; i++)
+	{
+		if (frm.elements['comment_rank'][i].checked)
+		{
+			cmt.rank = frm.elements['comment_rank'][i].value;
+		}
+	}*/
+	
+	for(i=0; i<frm.elements['score_shushi'].length; i++)
+	{
+		if(frm.elements['score_shushi'][i].checked)
+		{
+			cmt.score_shushi = frm.elements['score_shushi'][i].value;
+		}
+	}
+	
+	for(i=0; i<frm.elements['score_meiguan'].length; i++)
+	{
+		if(frm.elements['score_meiguan'][i].checked)
+		{
+			cmt.score_meiguan = frm.elements['score_meiguan'][i].value;
+		}
+	}
+	
+	for(i=0; i<frm.elements['score_fuwu'].length; i++)
+	{
+		if(frm.elements['score_fuwu'][i].checked)
+		{
+			cmt.score_fuwu = frm.elements['score_fuwu'][i].value;
+		}
+	}	
+  
+	//邮箱不能为空
+	if(cmt.email.length > 0)
+	{
+		if (!(Utils.isEmail(cmt.email)))
+		{
+			//alert("你填写的邮箱格式不正确!");
+			//return false;
+		}
+	}
+	else
+	{
+		//alert("邮箱不能为空！");
+		//return false;
+		cmt.email = cmt.id+'@easeeyes.com';
+	}
+	//内容验证
+	if(cmt.content.length == 0)
+	{
+	  alert("评论内容不能为空！");
+	  return false;
+	}  
+	 
+	//过滤评论非法内容
+	var ifstr1 = cmt.content.match("</a>");
+	var ifstr2 = cmt.content.match("<a"); 
+	var ifstr3 = cmt.content.match("href="); 
+	if( ifstr1 != null || ifstr2 != null || ifstr3 != null ){
+		alert("你提交评论不正确，请修正!");
+		return false;
+	}   
+	//验证码
+	/*
+	if (cmt.enabled_captcha > 0 && cmt.captcha.length == 0 )
+	{
+		alert(captcha_not_null);
+		return false;
+	}*/
+	//alert('888');
+	
+   //ajax提交评论数据
+   Ajax.call('comment.php', 'cmt=' + cmt.toJSONString(), commentResponse, 'POST', 'JSON');
+   return false;
+}
+
+//yi:提交评论之后的回调函数
+function commentResponse(result)
+{	
+	if(result.error==0)
+	{
+		//评论提交成功,关闭评论窗口
+		tb_remove();//关闭弹窗		
+		//document.getElementById('commentpan').style.display='none';//关闭阴影
+		//document.getElementById('myOnPageContent').style.display='none';		
+	  
+		//页面显示提交的结果
+		var layer = document.getElementById('ECS_COMMENT');	
+		if(layer)
+		{
+			layer.innerHTML = result.content;		
+		}
+	}
+	else
+	{
+		if(result.message)
+		{
+			alert(result.message);
+			tb_remove();//关闭弹窗	
+		}		
+	}
+}
+//]]>
+</script>
+{/literal}

@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>女人节我最大</title>
+<meta name="Keywords"  content="易视网,易视眼镜网,美瞳,护理液,润眼液,博士伦,海昌,海俪恩,卫康,库博,视康,强生,sho-bi,GEO,NEO,BESCON" />
+<meta name="Description" content="易视网，全场满238抽神秘礼品，百分百有奖，大牌尖货直降至3.8折起，24小时闪电发货，30天退换货保障" />
+<style>
+body{background-color:#fff !important;}
+.box-links{font-size:0;text-align:center;}
+.box-links .link{display:inline-block;width:10.55rem;}
+.btn-link{position:absolute;width:7.35rem;height:2rem;bottom:1.35rem;left:12.6rem;}
+.btn-link2{left:22.35rem;}
+.items-goods{width:31.2rem;margin:auto;padding:.5rem 0;}
+.item-goods{width:15.4rem;border:1px solid #ff5c87;float:left;box-sizing:border-box;margin-bottom:.5rem;position:relative;}
+.item-goods .layer{position:absolute;left:.5rem;top:0;padding:.5rem;background:#ff5c87;color:#fff;font-size:1.1rem;}
+.item-goods:nth-child(even){float:right;}
+.item-goods .top{height:13.8rem;line-height:13.8rem;text-align:center;}
+.item-goods .top img{max-width:95%;max-height:95%;vertical-align:middle;}
+.item-goods .middle{line-height:1.2rem;font-size:1.1rem;height:2.4rem;overflow:hidden;padding:0 1rem;color:#464646;}
+.item-goods .bottom{margin-top:.75rem;padding:1rem 0;overflow:hidden;background:url(http://img.easeeyes.com/promotion/20160301/title_bg.jpg) no-repeat center top;background-size:auto 1px;}
+.item-goods .bottom .left{width:8.1rem;text-align:right;color:#fe5888;font-size:1.2rem;line-height:1;}
+.item-goods .bottom .left b{font-size:1.8rem;font-weight:100;}
+.item-goods .bottom .right{margin-left:8.2rem;text-align:left;font-size:.8rem;}
+.item-goods .bottom .right del{color:#8f8f8f;}
+.item-goods .bottom .btn-buy{display:block;width:4.8rem;}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<!--main-->
+<div class="container">
+    <div><img src="http://file.easeeyes.com/wap/images/20160301/banner.jpg" style="display:block;"></div>
+	<div style="position:relative;">
+		<img src="http://file.easeeyes.com/wap/images/20160301/01.jpg" style="display:block;">
+		<a href="javascript:alert('亲，抽奖尚未开始哦！只要在3.1-3.7之前完成订单（已收货），即可参与3.8-3.14的抽奖活动');" class="btn-link"></a>
+		<a href="#f_01" class="btn-link btn-link2"></a>
+	</div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160301/02.jpg" style="display:block;"></div>
+	<div class="box-links">
+		<div class="link"><a href="http://m.easeeyes.com/active160223.html"><img src="http://file.easeeyes.com/wap/images/20160301/03.jpg" style="display:block;"></a></div>
+		<div class="link"><a href="http://m.easeeyes.com/active160225.html"><img src="http://file.easeeyes.com/wap/images/20160301/04.jpg" style="display:block;"></a></div>
+		<div class="link"><img src="http://file.easeeyes.com/wap/images/20160301/05.jpg" style="display:block;"></div>
+	</div>
+	<div id="f_01"><img src="http://file.easeeyes.com/wap/images/20160301/06.jpg" style="display:block;"></div>
+	<div class="items-goods clearfix">
+        <!--{if $goodsArr1}-->
+        <!--{foreach from=$goodsArr1 item=goods name=goods}-->
+		<div class="item-goods">
+			<a href="{$goods.href}">
+				<span class="layer">{$goods.zk}</span>
+				<div class="top">
+					<img src="http://www.easeeyes.com/{$goods.goods_thumb}" />
+				</div>
+				<div class="middle">
+					{$goods.goods_name}
+				</div>
+				<div class="bottom">
+					<div class="pull-left left">
+						&yen;<b>{$goods.promote_price}</b><b>/</b>
+					</div>
+					<div class="right">
+						<del>{$goods.fomart_price}</del>
+						<img src="http://img.easeeyes.com/promotion/20160301/buy_btn.jpg" class="btn-buy" />
+					</div>
+				</div>
+			</a>
+		</div>
+        <!--{/foreach}-->
+        <!--{/if}-->
+	</div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160301/07.jpg" style="display:block;"></div>
+	<div onclick="alert('亲，抽奖尚未开始哦！只要在3.1-3.7之前完成订单（已收货），即可参与3.8-3.14的抽奖活动')"><img src="http://file.easeeyes.com/wap/images/20160301/08.jpg" style="display:block;"></div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160301/09.jpg" style="display:block;"></div>	
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+<script type="text/javascript">
+    
+</script>
+</body>
+</html>

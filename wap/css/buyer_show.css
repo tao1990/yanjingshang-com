@@ -1,0 +1,85 @@
+.clear{clear:both}
+.go_jiesuan{margin-top:10px}
+.go_jiesuan_left{float:left}
+.go_jiesuan_left span{color:#F00;font-weight:bold}
+.go_jiesuan_left div{margin-bottom:5px}
+.go_jiesuan_right{float:right;margin-top:10px}
+/*去结算第一部分*/
+
+.buy_show_detail{border:1px solid}
+.buy_show_title{margin-top:5px;padding-left:5%;padding-right:5%;}
+.buy_img img{width:90%;margin-top:5px;margin-bottom:5px;padding-left:5%;padding-right:5%;}
+.buy_fav,.buy_show_say,.buy_goods,.buy_other,.buy_other_goods{padding-left:5%;padding-right:5%;}
+.buy_fav_left{width:50%;float:left}
+.buy_fav_left span{padding:1px 6px;border:2px solid #f58d8d;border-radius:5px;margin-left:10px}
+.buy_fav_right{width:50%;float:right; text-align:right}
+.buy_fav_right img{margin-right:5px}
+.buy_show_say{border-bottom:1px solid #E9E9E9;padding-top:10px;padding-bottom:10px}
+.buy_show_say span,.buy_show_one span{color:#2dbdd6;float:left}
+.buy_show_one span{color:#707070}
+.buy_show_say em,.buy_show_one em{color:#b5b5b5;float:right}
+.buy_goods{border-top:1px solid #e5e5e5;padding-top:10px;padding-bottom:5px;border-bottom:1px solid #e9e9e9}
+.buy_goods_left{width:20%;float:left}
+.buy_goods_right{width:70%;float:left;margin-left:10%}
+.buy_goods_price{margin-top:5px}
+.buy_cu{width:30%;float:left}
+.buy_price{width:60%;float:left;margin-left:10%}
+.buy_price span{color:#FD3B3B}
+.buy_price em{font-size:10px; text-decoration:line-through;margin-left:10px}
+.buy_goods_bottom input,.buy_goods_pinglun input{padding:2% 26%; margin-top:3%;background-color:#75D6E9;color:#fff;border:none;font-size:15px;font-weight:bold;border-radius:5px}
+.buy_goods_pinglun input{padding:2% 40%}
+.buy_other{border-top:1px solid #e5e5e5;padding-top:5px;padding-bottom:5px;border-bottom:1px solid #e9e9e9}
+.buy_other_left{width:8%;float:left}
+.buy_other_right{width:92%;float:left;font-size:12px}
+.buy_ping{font-size:14px}
+.buy_show_one{border-top:1px solid #E6E6E6;padding-top:5px;margin-top:5px}
+.buy_onedetail{color:#A0A0A0;font-weight:normal}
+.buy_other_goods{border-top:1px solid #e5e5e5;padding-top:5px}
+.buy_other_bottom{margin-top:5px}
+.buy_other_one{width:30%;float:left;margin-right:7px}
+.buy_other_img{margin-bottom:5px}
+.buy_other_img img{border:1px solid #DCDDDD;}
+.buy_other_bottom .buy_other_name{font-weight:normal;font-size:11px}
+.buy_other_xian{color:#f00;font-size:16px}
+.buy_other_yuan{font-size:12px; text-decoration:line-through}
+/*买家秀内页*/
+.buy_pinpai,.buy_peidai{line-height:50px;border-bottom:1px solid #e9e9e9;padding-left:5%}
+.shaitu_my{padding-bottom:10px;border-bottom:1px solid #e9e9e9}
+.shaitu_my input{padding:2% 25%; margin-left:10%;margin-top:3%;background-color:#75D6E9;color:#fff;border:none;font-size:15px;font-weight:bold;border-radius:5px}
+.buy_peidai,.shaitu_my,#lxf-box{border-top:1px solid #e5e5e5}
+.buy_pinpai select,.buy_peidai select{margin-left:10px;width:60%;color:#707070; border:1px solid #AFACA3;font-size:14px}
+#lxf-box {position: relative;width:100%}
+#lxf-box li {position: absolute;left:5%; top: 0;width:40%;padding-left:5%;padding-top:5px}
+.shaitu_detail div{margin-top:3px}
+.shaitu_img{ width: 100%; height: auto; display: block; border: 0 }
+.shaitu_img img{width:100%}
+.shaitu_fav span{margin-right:20px}
+.shaitu_fav span em{margin-left:10px}
+.shaitu_name span{color:#2dbdd6;margin-right:4px}
+.shaitu_time{color:#a69f9f}
+.shaitu_mess{color:#707070}
+/*买家秀*/
+.loading{width:100%;height:40px;}
+#loading{background: url('http://m.easeeyes.com/images/loading.png') no-repeat 50%;}
+#nomoreresults{text-align: center;padding-top:10px;}
+.load_site{position: absolute;text-align: center;width: 100%;}
+
+/*买家秀上传*/
+.showUp{height:50px;border-bottom:1px solid #E9E9E9;line-height:50px;padding-left:5%}
+.showUp_one{border-top:1px solid #E5E5E5;border-bottom:1px solid #e9e9e9}
+.showUp span,.showUp_one span{float:left;width:110px;}
+.showUp img,showUp_one img{float:right;padding-right:5%;margin-top:16px}
+
+.add_pic a{height:27px;line-height:30px;margin:0 5%; background-color:#75D6E9;border-radius:5px;width:90%; text-align:center;display:block;color:#fff;font-size:14px;font-weight:bold; cursor:pointer}
+.showUp_intro{font-size:12px;color:#009aaf;padding:0 5%;margin-top:5px}
+.add_fabu{margin-top:10px}
+.showUp_quen,.showUp_off{padding-left:5%;margin-top:10px}
+.showUp_img {width:30%;float:left;margin-right:8px;margin-top:5px}
+.showUp_img p{font-size:12px;margin-top:4px}
+
+.showUp_del{ position:relative}
+.show_del_img{ position:absolute;right:-5px ;top:-5px}
+.show_pic{width:100%}
+
+.showUp_text{padding:0 5%;margin-top:10px}
+.buyshow_shangchuan textarea{width:100% }

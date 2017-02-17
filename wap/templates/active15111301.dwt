@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>易视网，大牌露底直降100元！</title>
+<meta name="Keywords"  content="易视网，易视眼镜网，美瞳，护理液，润眼液，博士伦，海昌，卫康，库博，视康，强生，sho-bi" />
+<meta name="Description" content="易视网，6大品牌超值底价齐聚”惠“，24小时闪电发货，30天退换货保障" />
+<style>
+.col-2{font-size:0;white-space:nowrap;}
+.col-2>div{display:inline-block;vertical-align:middle;width:50%;}
+.link-box{position:relative;}
+.link-box>a{width:6.5rem;height:3.75rem;position:absolute;}
+#link-box1 a{right:.5rem;top:1.5rem;}
+#link-box1 .link-01,#link-box1 .link-03,#link-box1 .link-05{right:7rem;}
+#link-box1 .link-03,#link-box1 .link-04{top:6.5rem;}
+#link-box1 .link-05,#link-box1 .link-06{top:11.5rem;}
+#link-box2 a{top:5rem;height:5rem;right:.5rem;}
+#link-box2 a.link-01{right:7.5rem;}
+.load-btns{text-align:center;padding-bottom:.5rem;}
+.load-btns a{display:inline-block;line-height:4rem;width:100%;background:#D44242;color:#fff;font-size:1.2rem;}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<!--main-->
+<div class="container">
+    <div><img src="http://file.easeeyes.com/wap/images/2015111101/banner.jpg" /></div>
+    <div><img src="http://file.easeeyes.com/wap/images/2015111101/01.jpg" /></div>
+    <div><img src="http://file.easeeyes.com/wap/images/2015111101/02.jpg" /></div>
+    <div class="col-2">
+        <div><a href="http://m.easeeyes.com/goods4298.html"><img src="http://file.easeeyes.com/wap/images/2015111101/03.jpg" /></a></div>
+        <div><a href="http://m.easeeyes.com/goods1144.html"><img src="http://file.easeeyes.com/wap/images/2015111101/04.jpg" /></a></div>
+    </div>
+    <div><img src="http://file.easeeyes.com/wap/images/2015111101/05.jpg" /></div>
+    <div class="link-box" id="link-box1">
+        <img src="http://file.easeeyes.com/wap/images/2015111101/06.jpg" />
+        <a href="http://m.easeeyes.com/goods2607.html" class="link-01"></a>
+        <a href="http://m.easeeyes.com/goods1188.html" class="link-02"></a>
+        <a href="http://m.easeeyes.com/goods2608.html" class="link-03"></a>
+        <a href="http://m.easeeyes.com/goods1189.html" class="link-04"></a>
+        <a href="http://m.easeeyes.com/goods2606.html" class="link-05"></a>
+        <a href="http://m.easeeyes.com/goods1187.html" class="link-06"></a>
+    </div>
+    <div><a href="http://m.easeeyes.com/goods1146.html"><img src="http://file.easeeyes.com/wap/images/2015111101/07.jpg" /></a></div>
+    <div class="link-box" id="link-box2">
+        <img src="http://file.easeeyes.com/wap/images/2015111101/08.jpg" />
+        <a href="http://m.easeeyes.com/goods3631.html" class="link-01"></a>
+        <a href="http://m.easeeyes.com/goods3630.html" class="link-02"></a>  
+    </div>
+    <div><img src="http://file.easeeyes.com/wap/images/2015111101/09.jpg" /></div>
+    <div class="col-2">
+        <div><a href="http://m.easeeyes.com/goods4786.html"><img src="http://file.easeeyes.com/wap/images/2015111101/10.jpg" /></a></div>
+        <div><a href="http://m.easeeyes.com/goods2958.html"><img src="http://file.easeeyes.com/wap/images/2015111101/11.jpg" /></a></div>
+    </div>
+    <div class="load-btns">
+        <a href="http://m.easeeyes.com/active151113.html">返回主会场</a>
+    </div>
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

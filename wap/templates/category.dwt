@@ -1,0 +1,304 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta content="telephone=no" name="format-detection"/>
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/category.css"/>
+<style>
+
+    #filters-box{font-family:"Microsoft Yahei";background:#f2f2f2;position:fixed;width:100%;height:100%;left:0;top:0;z-index:99;overflow-y:scroll;}
+    .filter-header{color:#333;background:#fff;position:fixed;left:0;top:0;width:100%;border-bottom:1px solid #dfdfdf;}
+    .filter-header h2{line-height:4rem;font-size:1.5rem;}
+    .filter-header h2 span{font-size:1.5rem;color:#999;}
+    .filter-container{padding-top:5rem;}
+    .filter-option,.filter-item{padding:0 1rem;line-height:4rem;border-bottom:1px solid #dfdfdf;font-size:1.2rem;background:#fff;}
+    .filter-option span{color:#999;padding-right:1rem;background:url(http://file.easeeyes.com/wap/images/select_arrow.png) no-repeat right center;background-size:auto 1rem;}
+    .filter-clearbtn{font-size:0;position:fixed;bottom:0;left:0;width:100%;}
+    .filter-clearbtn button{font-size:1.3rem;background:#000;width:50%;line-height:5rem;color:#fff;text-align:center;}
+    #submit{background:#2BBDD6;}
+    .filter-item{display:block;}
+    .filter-back{width:1rem;height:4rem;background: transparent url("http://file.easeeyes.com/wap/images/arrow_left.png") no-repeat scroll 1rem center;background-size:1rem auto;padding:0 1rem;}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<script type="text/javascript" src="{$file_url}js/scrollpagination.js"></script>
+<div class="content">
+<div class="content sort">
+<a id="default" class="xz">默认</a>
+<a id="sales" class="down">销量</a>
+<a id="price" class="up">价格</a>
+<a id="nowChoose">筛选 <img src="http://file.easeeyes.com/wap/images/filter.png" style="height:1.3rem" /></a>
+<a class="st" onclick="changeSt();" style="border-right:0px;width:10%;background: url('images/st.png') no-repeat 70% 50%;"></a>
+    <!--{if $st==1}
+    <a class="st" href="category.php?cat_id={$cat_id}" style="border-right:0px;width:10%;background: url('images/st.png') no-repeat 70% 50%;"></a>
+    {else}
+    <a class="st" href="category.php?cat_id={$cat_id}&st=1" style="border-right:0px;width:10%;background: url('images/st.png') no-repeat 70% 50%;"></a>
+    {/if}-->
+</div>
+    {if $st!=1}
+    	<ul id="Scroll" class="content goods_list">
+        {if $goods_list}
+        <!--{foreach from=$goods_list key=k item=v}-->
+        <li {if $v.saving > 0} class="active11_badge"{/if}>
+            <!--{if $v.is_by}-->
+            <span class="icon-chris"></span>
+            <!--{/if}-->
+            <a class="list_a" href="goods.php?id={$v.goods_id}">
+                <div class="goods_list_thumb pull-left">
+                    <img src="{$img_url}{$v.b2b_goods_thumb}"/>
+                </div>
+                <div class="goods_list_main">
+                    <h2>{$v.goods_name}</h2>
+                    <div class="goods_list_price">
+                        ￥{$v.b2b_shop_price}
+                    </div>
+                </div>
+            </a>
+        </li>
+        <!--{/foreach}-->
+        {else}
+        没有此类商品
+        {/if}
+        </ul>
+        <input id="st" value="0"  type="hidden"/>
+    {else}
+        <div id="Scroll" class="content list_zong">
+            {if $goods_list}
+            <!--{foreach from=$goods_list key=k item=v}-->
+            <div class="list_zong_left">
+                <div {if $v.saving > 0} class="active11_badge_2"{/if}>
+                    <!--{if $v.is_by}-->
+                    <span class="icon-chris"></span>
+                    <!--{/if}-->
+                    <a href="goods.php?id={$v.goods_id}"><img src="{$img_url}{$v.b2b_goods_thumb}"/></a>
+                </div>
+                <div><a href="goods.php?id={$v.goods_id}">{$v.goods_name}</a></div>
+                <div class="goods_list_price">
+                        ￥{$v.b2b_shop_price}
+                </div>
+            </div>
+            <!--{/foreach}-->
+            {else}
+            没有此类商品
+            {/if}
+        </div>
+        <input id="st" value="1"  type="hidden"/>
+    {/if}
+    <div id="lookMore"></div> 
+    <div  class="loading" id="loading" style="display: none;"></div>
+    <div class="loading" id="nomoreresults" style="display: none;">没有更多了.</div>
+    <input type="hidden" id="pageStie" value="2" />
+    <input type="hidden" id="cat_id" value="{$cat_id}" />
+    <input type="hidden" id="nomore" value="0" />
+    <input type="hidden" id="sort" value="" />
+    <input type="hidden" id="keyword" value="{$keyword}" />
+</div>
+<!--筛选主体-->
+<div id="filters-box" class="filter filter-right" style="display:none;">
+    <div id="filter-option-box">
+        <div class="filter-header">
+            <h2 class="text-center">
+                <span class="pull-left filter-back" onclick="pop1.close();"></span>
+                
+                筛选
+            </h2>
+        </div>
+        <div class="filter-container">
+            <div class="filter-option" id="filter-option_001" data-key="brand"><span class="pull-right">{if $cur.brand_id > 0}{$cur.brand_name}{else}全部{/if}</span>品牌</div>
+            <!--{foreach from=$categories item=val name=categories}-->
+            <div class="filter-option" id="filter-option_{$val.id}" data-key="{$val.id}"><span class="pull-right">全部</span>{$val.name}</div>
+            <!--{/foreach}-->
+            <div class="filter-option" id="filter-option_002" data-key="price"><span class="pull-right">全部</span>价格</div>
+        </div>
+        <div class="filter-clearbtn text-center">
+            <button id="clearfilter">重置</button>
+            <button id="submit">确定</span>
+        </div>
+    </div>
+    <div id="filter-detail-tpl-001" style="display:none">
+        <div class="filter-header">
+            <h2 class="text-center">
+                品牌
+            </h2>
+        </div>
+        <div class="filter-container">
+            <div class="filter-item" data-item='{"key":"brand","value":"","name":"全部"}'>全部</div>
+            <!--{foreach from=$y_brands item=val name=brand}-->
+            <div class="filter-item" data-item='{"key":"brand","value":"{$val.brand_id}","name":"{$val.brand_name}"}'>{$val.brand_name}</div>
+            <!--{/foreach}-->
+        </div>
+    </div>
+    <!--{foreach from=$categories item=val name=categories}-->
+    <div id="filter-detail-tpl-{$val.id}" style="display:none">
+        <div class="filter-header">
+            <h2 class="text-center">
+                {$val.name}
+            </h2>
+        </div>
+        <div class="filter-container">
+            <div class="filter-item" data-item='{"key":"{$val.id}","value":"","name":"全部"}'>全部</div>
+            <!--{foreach from=$val.attr_values item=v name=attr}-->
+            <div class="filter-item" data-item='{"key":"{$val.id}","value":"{$v}","name":"{$v}"}'>{$v}</div>
+            <!--{/foreach}-->
+        </div>
+    </div>
+    <!--{/foreach}-->
+    <div id="filter-detail-tpl-002" style="display:none">
+        <div class="filter-header">
+            <h2 class="text-center">
+                品牌
+            </h2>
+        </div>
+        <div class="filter-container">
+            <div class="filter-item" data-item='{"key":"price","value":"","name":"全部"}'>全部</div>
+            <!--{foreach from=$price item=val name=price}-->
+            <div class="filter-item" data-item='{"key":"price","value":"{$val.id}","name":"{$val.name}"}'>{$val.name}</div>
+            <!--{/foreach}-->
+        </div>
+    </div>
+</div>
+<script src="http://file.easeeyes.com/wap/js/wappop2.js"></script>
+<script>
+    //自适应代码
+    (function(){
+        var win=window||{},
+                doc=document,
+                root=doc.documentElement;
+        function changeSize(){
+            root.style.fontSize=parseInt(root.clientWidth)*20/640>20?"20px":parseInt(root.clientWidth)*20/640+"px";
+        }
+        if(doc.addEventListener){
+            var evt="orientationchange" in win?"orientationchange":"resize";
+            doc.addEventListener(evt,changeSize,false);
+            doc.addEventListener("DOMContentLoaded",changeSize,false);
+        }
+    })();
+
+    // 执行
+    var pop1=new Pop({id:"filters-box"}),
+            pop2=new Pop({id:"filter-option-box"});
+    document.getElementById("nowChoose").addEventListener("click",function(){
+        pop1.open();
+        pop2.open();
+    },false);
+
+    /*
+     *	key 为键值
+     *	value 为值
+     *	name 为显示数据
+     */
+    var options=Array.prototype.slice.call(document.querySelectorAll(".filter-option"),0),	// 筛选条件
+            items=Array.prototype.slice.call(document.querySelectorAll(".filter-item"),0),	// 选项
+            num,
+            bn = "{$cur.brand_id}",
+            filter={brand:bn};	// 筛选结果
+    /*绑定条件和选项*/
+    options.forEach(function(option){
+        option.addEventListener("click",function(){
+            num=this.id.split("_")[1];
+            pop2.close();
+            document.getElementById("filter-detail-tpl-"+num).style.display="block";
+        },false);
+    });
+    /*保存数据和dom控制*/
+    items.forEach(function(item){
+        item.addEventListener("click",function(){
+            var itemData=JSON.parse(this.dataset.item);
+            filter[itemData.key]=itemData.value;	// 保存结果
+            //console.log(filter)
+            refresh(itemData);  // 选中数据前台显示
+            document.getElementById("filter-detail-tpl-"+num).style.display="none";
+            pop2.open();
+        },false);
+    })
+
+    function refresh(item){
+        options.forEach(function(option){
+            if(option.dataset.key==item.key){
+                option.getElementsByTagName("span")[0].innerHTML=item.name;
+            }
+        });
+    }
+    // 点击清除选项
+    document.getElementById("clearfilter").addEventListener("click",function(){
+        filter={};
+        options.forEach(function(option){
+            option.getElementsByTagName("span")[0].innerHTML="全部";
+        });
+    },false);
+    // 点击确定按钮，filter为所有条件
+    document.getElementById("submit").addEventListener("click",function(){
+        //console.log(filter)
+        $('#nomore').val(0);
+        $('#nomoreresults').hide();
+        $.ajax({
+            type : "get",
+            async:false,
+            url : "category.php?act=filter",
+            data:{cat_id:{$fcat_ids},attr:JSON.stringify(filter),st:$("#st").val()},
+            success : function(msg){
+                //alert(msg);return false;
+                if(msg != ''){
+                    $("#Scroll").html(msg);
+                }else{
+                    $("#Scroll").html("没有此类产品");
+                }
+                pop1.close();
+                $('#cat_id').val({$fcat_ids});
+            }
+        });
+    },false);
+
+    // 切换展示方式
+    function changeSt(){
+        $("#nomore").val(0);
+        $('#nomoreresults').hide();
+        var st = $("#st").val();
+        if(st != 1){
+            st =1;
+        }else{
+            st =0;
+        }
+        $("#st").val(st);
+        $.ajax({
+            type : "get",
+            async:false,
+            url : "category.php?act=stp",
+            data:{st:st,sort:$("#sort").val(),cat_id:$("#cat_id").val(),keyword:$("#keyword").val(),attr:$("#filter").val()},
+            beforeSend :function(msg){
+
+            },
+            success : function(msg){
+                $("#Scroll").html(msg);
+            }
+        });
+    }
+</script>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+<script type="text/javascript" src="/wap/js/category.js"></script>
+<script>
+//自适应代码
+(function(){
+    var win=window||{},
+        doc=document,
+        root=doc.documentElement;
+    function changeSize(){
+        root.style.fontSize=parseInt(root.clientWidth)*20/640>20?"20px":parseInt(root.clientWidth)*20/640+"px";
+    }
+    if(doc.addEventListener){
+        var evt="orientationchange" in win?"orientationchange":"resize"; 
+        doc.addEventListener(evt,changeSize,false);
+        doc.addEventListener("DOMContentLoaded",changeSize,false);
+    }
+})();    
+</script>
+</body>
+</html>

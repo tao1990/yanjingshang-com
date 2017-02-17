@@ -1,0 +1,74 @@
+
+<form action="" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY">
+    <div class="content ds_choose fold">
+        <span>度数选择:</span> <i id="glass-info"></i>
+    </div>
+    <div class="content ds_choose_info">
+        <div class="ds_radio_list">
+            <div class="ds_radio_div">
+                <label for="radio-ds-100" class="ds_radio">+1.00</label>
+                <input name="left_eye_ds" class="dsselect" id="radio-ds-100" value="+1.00" type="radio"/>
+            </div>
+            <div class="ds_radio_div">
+                <label for="radio-ds-150" class="ds_radio">+1.50</label>
+                <input name="left_eye_ds" class="dsselect" id="radio-ds-150" value="+1.50" type="radio"/>
+            </div>
+            <div class="ds_radio_div">
+                <label for="radio-ds-200" class="ds_radio">+2.00</label>
+                <input name="left_eye_ds" class="dsselect" id="radio-ds-200" value="+2.00" type="radio"/>
+            </div>
+            <div class="ds_radio_div">
+                <label for="radio-ds-250" class="ds_radio">+2.50</label>
+                <input name="left_eye_ds" class="dsselect" id="radio-ds-250" value="+2.50" type="radio"/>
+            </div>
+            <div class="ds_radio_div">
+                <label for="radio-ds-300" class="ds_radio">+3.00</label>
+                <input name="left_eye_ds" class="dsselect" id="radio-ds-300" value="+3.00" type="radio"/>
+            </div>
+            <div class="ds_radio_div">
+                <label for="radio-ds-350" class="ds_radio">+3.50</label>
+                <input name="left_eye_ds" class="dsselect" id="radio-ds-350" value="+3.50" type="radio"/>
+            </div>
+            <div class="ds_radio_div">
+                <label for="radio-ds-400" class="ds_radio">+4.00</label>
+                <input name="left_eye_ds" class="dsselect" id="radio-ds-400" value="+4.00" type="radio"/>
+            </div>
+        </div>
+    </div>
+    <div class="goods_count">
+        数量:
+        <ul class="goods_number">
+            <li class="bt_minus bt_minusjia"><a style="background: url('images/-.png') no-repeat;" onclick="change_count('-');" href="javascript:void(0)"></a></li>
+            <li class="input_cunt_li"><input readonly="true" type="text" id="count" name="left_eye_num" value="1" class="input_count"/></li>
+            <li class="input_count_unit">{$goods.unit|default:盒}</li>
+            <li class="bt_add bt_minusjian"><a style="background: url('images/+.png') no-repeat" onclick="change_count('+');" href="javascript:void(0)"></a></li>
+        </ul>
+    </div>
+    <div class="footer-fixed-mod">
+        <!--分类-->
+        <div class="footer-fixed-category">
+            <a href="javascript:" id="btn_menu">
+                <img src="http://file.easeeyes.com/wap/images/f_cate.png" /><br />分类
+            </a>
+        </div>
+        <!--购物车-->
+        <div class="footer-fixed-car">
+            <a href="flow.php">
+                <img src="http://file.easeeyes.com/wap/images/f_cars.png" /><br />购物车
+                <span class="pg-cars-num">{insert name='cart_num'}</span>
+            </a>
+        </div>
+        <!--加入购物车-->
+        <div class="footer-fixed-addCar">
+        {if $goods.is_on_sale eq 1}
+            {if $goods.goods_number>0}
+            <a class="btn_to_cart" onclick="add_to_cart({$goods.goods_id}, 4);">加入购物车</a>
+            {else}
+            <div class="not_on_sale">已售空</div>
+            {/if}
+        {else}
+            <div class="not_on_sale">已下架</div>
+        {/if}
+        </div>
+    </div>
+</form>

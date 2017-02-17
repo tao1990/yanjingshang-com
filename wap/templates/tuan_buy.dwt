@@ -1,0 +1,368 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>最给力的隐形眼镜团购 拒绝网络虚价</title>
+<meta name="Keywords"    content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" --><title>{$page_title}</title><!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link href="{$image_url}wap/css/common.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/goods.css"/>
+<link href="{$image_url}wap/css/focus_goods.css" rel="stylesheet" type="text/css" />
+<link type="text/css" rel="stylesheet" href="{$image_url}themes/default/style/tuan_wap.css" /><!--zhang:150826 修改团购页面样式-->
+<style>
+#ts-01 li{text-align:center;background:#fff;}
+#ts-01 li img{height:20rem;width:auto !important;}
+#slider-01 .points{text-align:center;}
+</style>
+<!--[if IE 6]><link href="{$image_url}themes/default/style/ie6_in.css" rel="stylesheet" type="text/css" /><![endif]-->
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<script type="text/javascript" src="{$image_url}wap/js/koala.min.1.5.js"></script>
+<script type="text/javascript" src="{$image_url}js/common.js" ></script>
+<script type="text/javascript" src="{$image_url}wap/js/goods.js" ></script>
+<script type="text/javascript" src="{$image_url}wap/js/scrollpagination.js"></script>
+
+<div class="p_container">
+	<div class="banMod container" id="slider-01">
+	    <ul class="clearfix" id="ts-01">
+	        <li><img src="{$image_url}{$goods_img_main}" /></li>
+	        <!--{foreach from=$goods_img_array item=li name=foo}-->
+	        <li><img src="{$img_url}{$li.thumb_url}" /></li>
+	        <!--{/foreach}-->
+	    </ul>
+	</div>
+
+
+    
+	<!-- p_intro 礼包图片,购买操作 start  -->
+	<div class="p_intro">
+		<div class="p_detail">
+			<h1 class="p_title">{$tuan_info.tuan_name}<span class="p_desc">{$tuan_info.tuan_desc}</span></h1>
+			<div class="p_price">
+				<p>商品库存：{if $tuan_info.tuan_status == 0}<span class="color6">团购未开始</span>{elseif $tuan_info.tuan_status == 1}<span class="color6">可立即发货</span>{else}<span class="color6">团购已结束</span>{/if}</p>
+				<p>易视原价(总价)：￥{$tuan_info.shop_price}</p>
+				<p>市 场 价(总价)：￥{$tuan_info.market_price}</p>
+			</div>
+			<form name="tuan_buy" id="tuan_buy" action="tuan_buy.php?act=tuan_to_cart" method="post" onsubmit="return checkForm(this);">
+			<input type="hidden" name="tuan_id" value="{$tuan_info.rec_id}" />
+			<div class="p_choose_param">
+				<ul>
+					<!--{foreach from=$p_goods_info item=val name=tg}-->
+					
+						<!--有同款商品-->
+						<!--{if $val.same_goods}-->
+							<li>
+								<div id="p_goods_img_{$smarty.foreach.tg.index}" class="p_goods_img"><a href="goods.php?id={$val.goods_id}" title="{$val.goods_name}"><img src="{$img_url}{$val.goods_img}" alt="{$val.goods_name}" /></a></div>
+								<div id="p_goods_name_{$smarty.foreach.tg.index}" class="p_goods_name"><a href="goods.php?id={$val.goods_id}" title="{$val.goods_name}">{$val.goods_name|truncate:18:false}</a></div>
+								
+								<div id="p_goods_color_{$smarty.foreach.tg.index}" class="p_goods_attribute">
+									<span>颜色</span>
+									<select name="choose_color" style="width:68px;" onchange="select_color(this.value, '{$smarty.foreach.tg.index}');">
+										<!--{foreach from=$val.same_goods item=color}--><option value="{$color.goods_id}">{$color.attr_value}</option><!--{/foreach}-->
+									</select>
+								</div>
+								
+								<!--{if $val.goods_ds}-->
+								<div id="p_goods_ds_{$smarty.foreach.tg.index}" class="p_goods_attribute">
+									<span>度数</span>
+									<select name="choose_ds" id="choose_ds_{$smarty.foreach.tg.index}" onchange="select_ds(this.value, '{$smarty.foreach.tg.index}');" class="choose_ds" style="width:68px;">
+										<option value="">请选择</option>
+										<!--{foreach from=$val.goods_ds item=li}--><option value="{if $li.canbuy}{$li.val}{else}{/if}">{$li.val}{$li.status}</option><!--{/foreach}-->
+									</select>
+								</div>
+								<!--{/if}-->
+								
+								<input type="hidden" id="to_cart_value_{$smarty.foreach.tg.index}" name="to_cart_value[]" size="10" value="{$val.goods_id}|" />
+							</li>
+						<!--无同款商品-->
+						<!--{else}-->
+							<li>
+								<div id="p_goods_img_{$smarty.foreach.tg.index}" class="p_goods_img"><a href="goods.php?id={$val.goods_id}" title="{$val.goods_name}"><img src="{$img_url}{$val.goods_img}" alt="{$val.goods_name}" /></a></div>
+								<div id="p_goods_name_{$smarty.foreach.tg.index}" class="p_goods_name"><a href="goods.php?id={$val.goods_id}" title="{$val.goods_name}">{$val.goods_name|truncate:18:false}</a></div>
+								
+								<!--{if $val.goods_ds}-->
+								<div id="p_goods_ds_{$smarty.foreach.tg.index}" class="p_goods_attribute">
+									<span>度数</span>
+									<select name="choose_ds" id="choose_ds_{$smarty.foreach.tg.index}" onchange="select_ds(this.value, '{$smarty.foreach.tg.index}');" class="choose_ds" style="width:68px;">
+										<option value="">请选择</option>
+										<!--{foreach from=$val.goods_ds item=li}--><option value="{if $li.canbuy}{$li.val}{else}{/if}">{$li.val}{$li.status}</option><!--{/foreach}-->
+									</select>
+								</div>
+								<!--{/if}-->
+								
+								<input type="hidden" id="to_cart_value_{$smarty.foreach.tg.index}" name="to_cart_value[]" size="10" value="{$val.goods_id}|" />
+							</li>
+						<!--{/if}-->
+						<!--{if $total_number != $smarty.foreach.tg.index + 1}--><li class="plus">+</li><!--{/if}-->
+					<!--{/foreach}-->
+				</ul>
+				<div class="clear"></div>
+				<div class="p_buy {if $tuan_info.tuan_status eq 0}p_buy2{elseif $tuan_info.tuan_status eq 2}p_buy3{else}{/if}">
+					<div class="p_package_price">{$tuan_info.package_price_1}<span>.{$tuan_info.package_price_2}</span></div>
+					<div class="p_buy_button"><!--{if $tuan_info.tuan_status eq 1}--><input type="image" src="templates/images/tuan/transparent.gif" style="width:120px; height:78px; border: none" title="立刻参团购买" /><!--{else}--><img src="{$image_url}/wap/templates/images/tuan/transparent.gif" style="width:120px; height:78px; border: none" /><!--{/if}--></div>
+					<div class="p_time" id="p_time"><span class="p_time_number">0</span>天<span class="p_time_number">0</span>时<span class="p_time_number">0</span>分<span class="p_time_number">0</span>秒 后团购{if $tuan_info.tuan_status == 0}开始{else}结束{/if}</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			</form>
+		</div>
+		<!-- p_detail end -->
+		<div class="clear"></div>
+	</div>
+	<!-- p_intro 礼包图片,购买操作 end  -->
+	<!-- 主商品详情 start -->
+	<div class="p_goods_desc">
+		<div class="goods_nbtm">
+        <div class="product_lf">
+            <div class="product_tlf_tedian">
+            	{if $goods.goods_type eq 15}
+            	<ul class="kuang_cs">
+                	<li><img src="http://www.easeeyes.com/images/goods/kj_size.jpg" width="740" height="27" alt="" style="margin:20px 0 0 5px;"/></li>               	
+                	<li><img src="http://www.easeeyes.com/images/goods/kuangjia_canshu.jpg" width="778" height="42" alt="" style="margin-top:10px;"/></li>
+                    <li class="kuang_cs_txt">
+                    	<dl>
+                        	<dd style="width:140px; margin-left:12px;">镜框尺寸：<span>{$attr_kj.0.attr_value}</span></dd>
+                        	<dd>鼻梁尺寸：<span>{$attr_kj.1.attr_value}</span></dd>
+                            <dd>镜腿尺寸：<span>{$attr_kj.2.attr_value}</span></dd>
+                            <dd style="width:156px;">镜框高度：<span>{$attr_kj.3.attr_value}</span></dd>
+                            <dd style="width:156px;">总宽度：<span>{$attr_kj.4.attr_value}</span></dd>
+                        </dl>
+                    </li>
+                </ul>
+                {/if}
+                <ul><li>{$goods.goods_desc}</li></ul>
+                {if $goods.brand_sq}<div class="g_desc_pic"><img src="http://www.easeeyes.com/images/brands/brands_{$goods.brand_img}.jpg" width="778" alt=""/></div>{/if}
+            
+            </div>
+        </div>
+        <!--[右边数据信息表的内容]-->
+        </div>
+	</div>
+	<!-- 主商品详情 p_goods_desc end -->
+</div>
+<!-- p_container end -->
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+<script type="text/javascript" src="{$image_url}wap/js/goods.js"></script>
+<!--<script type="text/javascript" src="{$image_url}js/transport.js"></script>-->
+
+<script type="text/javascript">
+
+
+    //选择不同颜色商品(参数：选中颜色的商品id, 序列号)
+  //暂时解决团购无法购买问题   这里的js报错了  暂未找到原因 先注释了
+    function select_color(id, index) {
+        //alert(id);
+        $.ajax({
+            type:'POST',
+            url:'ajax_step.php?act=tuan_select_color',
+            data:'&goods_id='+id,
+            cache:false,
+            success:
+                    function(dd){
+                        var dd = eval('('+dd+')');
+                        var goods_id = dd['goods_id'];
+                        var goods_name = dd['goods_name'];
+                        var goods_img = dd['goods_img'];
+                        var goods_ds = dd['goods_ds'];
+                        var img_url = '{$img_url}';
+
+                        if (goods_id != '' && goods_name != '' && goods_img != '') {
+                            $('#p_goods_img_'+index).html('<a href="goods'+goods_id+'.html" title="'+goods_name+'"><img src="'+img_url+goods_img+'" alt="" /></a>'); //更新图片和链接
+                            $('#p_goods_name_'+index).html('<a href="goods'+goods_id+'.html" title="'+goods_name+'">'+goods_name.substring(0,18)+'</a>'); //更新商品名
+
+                            if (goods_ds != '') {
+                                $('#choose_ds_'+index).html(goods_ds)
+                            } else {
+                                $('#p_goods_ds_'+index).html('');
+                            }
+
+                            //更改提交的值(商品ID)
+                            $('#to_cart_value_'+index).val(id + '|0');
+                        }
+                    }
+        });
+    }
+
+
+//选择度数,更改提交的值(参数：所选度数, smarty索引值)
+function select_ds(ds, index) {
+	var value = $('#to_cart_value_'+index).val().split('|');
+	//alert(value[0] + '|' + value[1]);
+	$('#to_cart_value_'+index).val(value[0] + '|' + ds);
+}
+
+//验证表单
+function checkForm(obj) {
+	var ds = true;
+	$(".choose_ds").each(function(){
+		//alert($(this).val());
+		if ($(this).val() == '') {
+			alert('请选择团购商品度数!');
+			ds = false;
+			return false;
+		}
+	});
+	
+	if (!ds) return false;
+}
+
+/**
+ * 倒计时
+ * 参数：截至时间的年、月、日、时、分, 以及操作的div名称
+ */
+function ShowCountDown(year, month, day, param_hour, param_minute, divname) { 
+	var now = new Date(); 
+	var endDate = new Date(year, month-1, day, param_hour, param_minute);
+	var leftTime=endDate.getTime()-now.getTime(); 
+	var leftsecond = parseInt(leftTime/1000); 
+	var day1=Math.floor(leftsecond/(60*60*24)); 
+	var hour=Math.floor((leftsecond-day1*24*60*60)/3600); 
+	var minute=Math.floor((leftsecond-day1*24*60*60-hour*3600)/60); 
+	var second=Math.floor(leftsecond-day1*24*60*60-hour*3600-minute*60); 
+	var cc = document.getElementById(divname);
+	
+	//alert(day1 + '-' + hour + ':' + minute + ':' + second);
+	if (day1 <= -1) {
+		//cc.innerHTML = '<span class="p_time_number">0</span>天<span class="p_time_number">0</span>时<span class="p_time_number">0</span>分<span class="p_time_number">0</span>秒 后团购结束';
+		cc.innerHTML = '团购已结束';
+	} else {
+		cc.innerHTML = '<span class="p_time_number">'+day1+'</span>天<span class="p_time_number">'+hour+'</span>时<span class="p_time_number">'+minute+'</span>分<span class="p_time_number">'+second+'</span>秒后团购结束';
+	}
+}
+var c_Y = '{$format_end_time.Y}';
+var c_n = '{$format_end_time.n}';
+var c_j = '{$format_end_time.j}';
+var c_G = '{$format_end_time.G}';
+var c_i = '{$format_end_time.i}';
+
+var promotion_start_time = '{$promotion_start_time}';
+if (promotion_start_time != '') {
+	document.getElementById('p_time').innerHTML = '{$promotion_start_time} 团购价￥{$promotion_price}';
+} else {
+	window.setInterval(function(){ShowCountDown(c_Y, c_n, c_j, c_G, c_i, 'p_time');}, 1000);
+}
+
+</script>
+<script src="http://file.easeeyes.com/wap/js/touch.js"></script>
+<script>
+//banner轮播
+function TouchSlide(opts){
+    var opts=opts||{};
+    this.count=0;
+    this.auto=opts.auto||false;
+    this.elem=opts.elem;
+    this.len=opts.len||this.elem.getElementsByTagName("li").length;
+    this.width=opts.width;
+    this.init.apply(this,arguments);
+}
+TouchSlide.prototype={
+    constructor:TouchSlide,
+    move:function(points){
+        if(this.count>=this.len-1){
+            this.count=0;
+        }else{
+            this.count++;
+        }
+        this.elem.style.left=-this.count*this.width+"px";
+        var i,
+                point=points.getElementsByTagName("li"),
+                len=point.length;
+        for(i=0;i<len;i++){
+            point[i].className="";
+        }
+        point[this.count].className="selected";
+    },
+    isAuto:function(points){
+        var that=this;
+        if(that.auto){
+            that.mover=setInterval(function(){
+                that.move(points);
+            },that.auto);
+        }
+    },
+    createPoints:function(){
+        var i,
+                points=document.createElement("ul");
+        points.className="points";
+        for(i=0;i<this.len;i++){
+            points.appendChild(document.createElement("li"));
+        }
+        this.elem.parentNode.appendChild(points);
+        return points;
+    },
+    binder:function(points){
+        var initp={},
+                movep={},
+                endp={},
+                xpos,
+                that=this;
+        this.elem.addEventListener("touchstart",function(e){
+            if(that.mover) clearInterval(that.mover);
+            xpos=parseInt(this.style.left)||0;
+            initp=touchEvent.getPos(e);
+        },false);
+        this.elem.addEventListener("touchmove",function(e){
+            movep=touchEvent.getPos(e);
+            this.style.left=xpos+movep.mx-initp.x+"px";
+        },false);
+        this.elem.addEventListener("touchend",function(e){
+            endp=touchEvent.getPos(e);
+            var dir=touchEvent.getDirect(initp.x,endp.ex,initp.y,endp.ey);
+            if(dir=="left"){
+                if(Math.abs(endp.ex-initp.x)>30){
+                    if(that.count>=that.len-1){
+                        that.count=that.len-1
+                    }else{
+                        that.count++;
+                    }
+                }
+            }else if(dir=="right"){
+                if(Math.abs(endp.ex-initp.x)>30){
+                    if(that.count<=0){
+                        that.count=0;
+                    }else{
+                        that.count--;
+                    }
+                }
+            }
+            var i,
+                    point=points.getElementsByTagName("li"),
+                    len=point.length;
+            for(i=0;i<len;i++){
+                point[i].className="";
+            }
+            this.style.left=-that.count*that.width+"px";
+            point[that.count].className="selected";
+            that.isAuto(points);
+        },false);
+    },
+    init:function(){
+        var points=this.createPoints();
+        points.getElementsByTagName("li")[0].className="selected";
+        this.binder(points);
+        this.isAuto(points);
+    }
+};
+window.addEventListener("load",function(){
+    //调用
+    var s1=new TouchSlide({
+        elem:document.getElementById("ts-01"),
+        width:parseInt(document.getElementById("slider-01").clientWidth),
+        auto:false
+    });
+},false);  
+</script>
+
+</html>

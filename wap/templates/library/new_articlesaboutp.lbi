@@ -1,0 +1,8 @@
+<!--{foreach from=$new_articles_zl item=article}-->
+<div class="yuandian">
+<img src="images/arr.jpg" style=" padding-top:2px;" />
+</div>
+<div class="newstitle"><span><a href="{$article.url}" title="{$article.title|escape:html}" target="_blank">
+{$article.short_title}</a></span>
+</div>
+<!--{/foreach}-->

@@ -1,0 +1,1570 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>易视网免费试用活动进行中</title>
+<meta name="Keywords" content="易视网,易视眼镜网,美瞳,护理液,润眼液,博士伦,实瞳,海昌,海俪恩,卫康,库博,视康,强生,sho-bi,GEO,BESCON,Fendi,CK,雷朋,levis,coach" />
+<meta name="Description" content="易视网，美瞳免费试戴活动进行中，前来申请，即有机会获得，马上行动！24小时闪电发货，30天退换货保障" />
+<link rel="stylesheet" href="http://file.easeeyes.com/wap/js/mlayer.css">
+<style>
+.lightblue{color:#03afc7;}
+.orange{color:#ff4200;}
+.rectangle{color:#fff;background:#03afc7;padding:0 .75rem;line-height:1.4rem;font-size:1.2rem;}
+
+.goods{background:#fff;text-align:center;position:relative;}
+.countdown{position:absolute;line-height:2.35rem;border-radius:1.175rem;background:rgba(54,191,210,.8);color:#fff;bottom:3.5rem;left:50%;width:18rem;margin-left:-9rem;}
+.countdown img{height:1.8rem;width:auto;}
+.countdown span{vertical-align:middle;display:inline-block;}
+.goodsinfo{padding:.75rem .75rem .5rem;}
+.goodsinfo h2{color:#333;font-size:1.3rem;padding-bottom:.5rem;}
+.goodsinfo h2 small{font-size:1.2rem;}
+.goodsinfo b{font-size:1.3rem;}
+.condition{background:#ececec url(http://file.easeeyes.com/wap/images/20151027/bg.jpg) no-repeat center top;background-size:100% auto;padding:1.75rem .75rem .5rem;font-size:1rem;}
+.condition .badge{padding:0 .25rem;line-height:2rem;background:#7bd3dd;color:#fff;font-size:1.1rem;border-radius:.25rem;position:relative;}
+.condition .badge:after{content:"";position:absolute;right:-1rem;top:.5rem;width:0;height:0;border:.5rem solid transparent;border-left-color:#7bd3dd;}
+.condition .text{margin-left:6rem;color:#999;}
+.apply-btns{text-align:center;line-height:5rem;border-top:.6rem solid #b4b4b4;}
+.apply-btns .collect,.apply-btns .goDaren{width:8.5rem;background:#e1e1e1;color:#03aec8;font-size:1.4rem;}
+.apply-btns .collect img{height:2rem;}
+.toApply{width:15rem;border:0 none;background:#03afc7;color:#fff;font-size:1.5rem;line-height:5rem;}
+.goods-detail{background:#f2f2f2;margin-top:1rem;}
+.goods-detail h2{line-height:3.5rem;color:#666;}
+.goods-detail h2 span{font-size:1.4rem;padding:0 .75rem;}
+.goods-detail h2 span[data-selected="true"]{background:#fff;border-top:.25rem solid #01afc7;}
+.tab-main{background:#fff;}
+.product_tlf_tedian img{max-width:30rem;}
+.tab-nav .current{background:#fff;}
+.detail-title{border-left:3px solid #9adeb9;padding-left:.75rem;line-height:1;margin-bottom:1rem;line-height:2;font-size:1.3rem;}
+.detail-sqers-box{padding:1rem;}
+.detail-sqer{float:left;width:20%;text-align:center;margin-bottom:.25rem;}
+.detail-sqer p{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.detail-sqer .image{height:3rem;line-height:3rem;}
+.detail-sqer .image img{max-height:3rem;max-width:100%;}
+/*弹窗*/
+.J-pop-box{background:#fff;color:#666;text-align:left;padding:2rem;border-radius:5px;}
+.J-pop-btn-close{position:absolute;top:-.5rem;right:-.5rem;width:2.5rem;height:2.5rem;line-height:2.5rem;text-align:center;background:#fff;box-shadow:0 0 1px 1px rgba(0,0,0,.2);color:#333;border-radius:50%;font-size:1.5rem;}
+.J-pop-box h2{margin-bottom:1rem;}
+.J-pop-box p{margin-bottom:.5rem;}
+.J-pop-box input{padding:.5rem;border:1px solid #ccc;border-radius:4px;margin-left:.5rem;min-width:15rem;}
+.J-pop-box select{padding:0 1rem;line-height:2rem;margin-left:.5rem;}
+.J-pop-box button{border:0 none;background:#02afc7;color:#fff;padding:0 1.5rem;line-height:3rem;border-radius:.5rem;width:100%;margin-top:1.5rem;box-shadow:0 0 2px 1px rgba(0,0,0,.2);}       
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<!--main-->
+
+	<div class="">
+		<img src="http://file.easeeyes.com/wap/images/sysl/banner.jpg" />
+	</div>
+
+	<div class="goods">
+		<img src="http://file.easeeyes.com/wap/images/sysl/01.jpg" />
+		<div class="countdown">
+			<img src="http://file.easeeyes.com/wap/images/20151027/time.png" />
+			<span id="daybox">0</span>天<span id="hourbox">0</span>小时<span id="minutebox">0</span>分钟后结束
+		</div>
+	</div>
+	<div class="goodsinfo">
+		<h2><span class="rectangle" style="background:#ff4e70;">免费</span> <small>【优先体验】</small> 可丽博日抛5片装（简装）</h2>
+		<p>免费提供：<b class="lightblue">300</b>份　　<b class="lightblue">{$count}</b>人已申请　　价值：<span class="orange" style="color:#ff4e6e;">&yen;<b>45</b></span></p>
+	</div>
+	<div class="condition">
+		<span class="pull-left badge">申领条件</span>
+		<div class="text">
+			1.对美有追求、有品位、爱生活的人都可免费申领；<br />
+			2.申领成功，包邮寄到家无需支付任何费用；<br />
+			3.请根据自身眼睛需求，填写度数、收货人、地址、手机号等以便发货。
+		</div>
+	</div>
+
+	<div class="apply-btns clearfix">
+		<a href="javascript:collect(5517);" class="collect pull-left"><img src="http://file.easeeyes.com/wap/images/20151027/star.png" /> 收藏</a>
+        {if $user_id eq 0}
+        <!--<button class="pull-left toApply" onclick="re_login();" >免费申领</button>-->
+        <a href="user_register.html"><button class="pull-left toApply" onclick="re_login();" >免费申领</button></a>
+        {else}
+        <button id="toApply" class="pull-left toApply">免费申领</button>
+        {/if}
+        <a href="http://m.easeeyes.com/active160405.html" class="pull-left goDaren">美瞳达人</a>
+	</div>
+	<div class="goods-detail">
+		<h2 class="clearfix tab-nav">
+			<span class="pull-left selected">使用规则</span>
+			<span class="pull-left">产品详情</span>
+      <span class="pull-left">公告栏</span>
+		</h2>
+		<div class="tab-main">
+			<div><img src="http://file.easeeyes.com/wap/images/20160712/02.jpg" style="display:block;" /></div>
+			<div><img src="http://file.easeeyes.com/wap/images/sysl/02.jpg" style="display:block;" /></div>
+            <div><img src="http://file.easeeyes.com/wap/images/20160712/04.jpg" style="display:block;" /></div>
+            <div><img src="http://file.easeeyes.com/wap/images/20160712/05.jpg" style="display:block;" /></div>
+		</div>
+		<div class="tab-main">
+			<!--详情-->
+			<div class="product_tlf_tedian">
+                                <ul><li><table cellspacing="1" cellpadding="0" style="text-align: center; line-height: 24px; margin-top: 0px; width: 750px" sizset="48" sizcache="2">
+    <tbody>
+        <tr sizcache="2">
+            <td style="text-align: left; background-color: #ffffff; padding-left: 4px; padding-right: 4px; height: 25px">
+            <p>&nbsp;&nbsp;<img alt="" src="{$image_url}images/upload/Image/(1).jpg" /></p>
+            <p><span style="color: rgb(102, 102, 102);"><img width="740" height="28" style="color: rgb(12, 165, 189); font-family: 宋体; font-weight: bold;" alt="" src="{$image_url}images/upload/Image/编辑推荐(334).jpg" /></span><span style="color: rgb(102, 102, 102);">&nbsp; &nbsp;</span>&nbsp;<span style="color: rgb(102, 102, 102); font-family: 微软雅黑, 黑体, 宋体, Arial, Helvetica, sans-serif; line-height: 20px;">&nbsp; &nbsp;可丽博clearcolor1-day日抛彩色隐形眼镜</span><span style="color: rgb(102, 102, 102);">首款眼部健康的创新彩片Aquagriptm锁水技术融入镜片，使水分子和镜片材料紧密结合，5.5水平衡比例保持视觉的稳定性和一整天的超凡舒适。该系列锐意创新的工程技术，采用具备多种有点的先进材料Hioxifilcon A，为眼睛带来种种好处，成功结合了一次性镜片在临床上的简便性，创造了第一种生物相容日抛镜片！打造真正的秋水明眸，灿若星辰。 &nbsp; &nbsp;&nbsp;</span><span style="color: rgb(102, 102, 102);">&nbsp; &nbsp; &nbsp;</span></p>
+            <p>&nbsp;</p>
+            <p><span style="color: rgb(102, 102, 102);"><img width="740" height="26" style="color: rgb(12, 165, 189); font-family: 宋体; font-weight: bold;" alt="" src="{$image_url}images/upload/Image/商品特性(298).jpg" /></span></p>
+            <p style="margin-top: 0pt; margin-bottom: 0pt;" class="p0"><img width="740" height="314" style="font-family: 宋体;" alt="" src="{$image_url}images/upload/Image/超安全(7).jpg" /></p>
+            <p style="margin-top: 0pt; margin-bottom: 0pt;" class="p0"><span style="color: rgb(102, 102, 102);">&nbsp;</span></p>
+            <p style="margin-top: 0pt; margin-bottom: 0pt;" class="p0"><span style="color: rgb(102, 102, 102);"><img width="740" height="27" alt="" src="{$image_url}images/upload/Image/产品展示(259).jpg" /></span></p>
+            <div><span style="color: rgb(102, 102, 102);">&nbsp;<img width="750" height="278" alt="" src="{$image_url}images/upload/Image/1 (3)(52).jpg" />             </span></div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div><span style="color: rgb(102, 102, 102);"><img width="750" height="321" alt="" src="{$image_url}images/upload/Image/1 (4)(28).jpg" /></span></div>
+            <div>&nbsp;</div>
+            <div><span style="color: rgb(102, 102, 102);"><img width="750" height="48" alt="" src="{$image_url}images/upload/Image/细节图_04(423).jpg" /></span></div>
+            <div>&nbsp;<img width="750" height="252" alt="" src="{$image_url}images/upload/Image/1 (5)(48).jpg" /><img width="750" height="315" alt="" src="{$image_url}images/upload/Image/1 (6)(34).jpg" /><img width="750" height="361" alt="" src="{$image_url}images/upload/Image/1 (7)(8).jpg" /></div>
+            <div>&nbsp;</div>
+            <p style="margin: 0pt 0px; padding: 0px; border: 0px none; outline: none 0px; width: auto;" class="p0"><span style="margin: 0px; padding: 0px; border: 0px none; outline: none 0px; font-family: 宋体; font-size: 9pt;"><img src="{$image_url}images/upload/Image/适用人群(127).jpg" width="750" height="48" alt="" /><img src="{$image_url}images/upload/Image/适用人群2(1).jpg" width="750" height="511" alt="" /><br />
+            </span></p>
+            <p style="margin: 0pt 0px; padding: 0px; border: 0px none; outline: none 0px; width: auto;" class="p0">&nbsp;<span style="margin: 0px; padding: 0px; border: 0px none; outline: none 0px; font-family: 宋体; font-size: 9pt;"><br />
+            </span></p>
+            <div>&nbsp;</div>
+            <div>
+            <div><img width="740" height="28" style="color: rgb(12, 165, 189); font-family: 宋体; font-weight: bold;" alt="" src="{$image_url}images/upload/Image/品牌简介(292).jpg" /></div>
+            <div>&nbsp;</div>
+            <div><img width="740" height="602" src="{$image_url}images/upload/Image/可丽博品牌介绍(2).jpg" alt="" /></div>
+            </div>
+            </td>
+        </tr>
+    </tbody>
+</table></li></ul>
+                                <div class="g_desc_pic">  
+                                        <img src="{$image_url}themes/default/images/xu/productmore/por_2.gif" width="778" height="235" alt=""/>    
+                    <img src="{$image_url}themes/default/images/xu/productmore/por1.png" width="778" height="296" style="margin-top:10px;"/>
+                    <img src="{$image_url}themes/default/images/xu/productmore/por2.png" width="778" height="324" alt=""/>
+                    <img src="{$image_url}themes/default/images/xu/productmore/por3.png" width="778" height="305" alt=""/>
+                    <img src="{$image_url}themes/default/images/xu/productmore/por4.png" width="778" height="301" alt=""/>
+                    <img src="{$image_url}themes/default/images/xu/productmore/por5.png" width="778" height="279" alt=""/>
+                    <img src="{$image_url}themes/default/images/xu/productmore/por6.png" width="778" height="363" alt=""/>
+                    <img src="{$image_url}themes/default/images/xu/productmore/por7.png" width="778" height="287" alt=""/>
+                    <img src="{$image_url}themes/default/images/xu/productmore/por8.png" width="778" height="298" alt=""/>
+                </div>
+            </div>
+			
+    </div> 
+		        
+    <div class="tab-main" style="padding-top:1rem;">
+        <h3 class="detail-title">成功申请者（300）</h3>
+        <div class="detail-sqers-box">
+					<div class="detail-sqers clearfix">
+						<div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>cyc970827</p>
+						</div>
+						<div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>titti</p>
+						</div>
+						<div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>方诗雅</p>
+						</div>
+						<div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>枝子1117</p>
+						</div>
+						<div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>原小雯</p>
+						</div>
+						<div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>给我一点念想</p>
+						</div>
+						<div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>memoruirui</p>
+						</div>
+						<div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>sunmin0308</p>
+						</div>
+						<div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>a36821322</p>
+						</div>
+						<div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>3甲甲</p>
+						</div>
+	                    <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>黄雪媛</p>
+						</div>
+	                    <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>徐菲闹闹</p>
+						</div>
+	                    <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>兜猫儿</p>
+						</div>
+	                    <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>似笑非笑。</p>
+						</div>  
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>sisishih</p>
+						</div>  
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>F95C2FEC</p>
+						</div>  
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>bluetiffany</p>
+						</div>  
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>5E916368</p>
+						</div>  
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>tvxq0630</p>
+						</div>  <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>1475266@51fanli</p>
+						</div>  
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>小雪雪</p>
+						</div>  
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>gudanqin1120</p>
+						</div>  
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>yzh655</p>
+						</div>  
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>F2DD8F09</p>
+						</div>  
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>zzztear</p>
+						</div>  
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>张雯</p>
+						</div>  
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>fadaiing55</p>
+						</div>  
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>李李李李劲宜</p>
+						</div>  
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>shuiyingxing</p>
+						</div>  
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>sweetjoanna</p>
+						</div>  
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>taurus朱砂</p>
+						</div>  
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>wo59616666</p>
+						</div>
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>puxiaqing</p>
+						</div>
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>jasmineqq</p>
+						</div>
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>傅佳兰</p>
+						</div>
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>Yiszza</p>
+						</div>
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>yy721521</p>
+						</div>
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>teamo</p>
+						</div>
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>icemilk</p>
+						</div><div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>gaogao</p>
+						</div>
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>qw874629162</p>
+						</div>
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>15077185250</p>
+						</div>
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>丁帅</p>
+						</div>
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>C613A4A7</p>
+						</div>
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>bonnieisme</p>
+						</div>
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>5EBD2A64</p>
+						</div>
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>amazing</p>
+						</div>
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>eerruuii</p>
+						</div>
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>牛奶吃貨</p>
+						</div><div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>梦里雪花飞</p>
+						</div> 
+                        <div class="detail-sqer">
+							<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+							<p>souptang</p>
+						</div>  
+                        <div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>xiaoge667</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>lovelykyo</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>娃娃鱼</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>EI007KYE</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>那一年</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>city1990</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>kongxue</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>冷霜霜</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>小布丁</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>rikepark</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>黑麦酱紫</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>leilei0806</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>好先生</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>古德拉克</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>nana19880611</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>我爱吉他</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>粉粉小猪猪</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>LUCKYYU</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>韩筱熙</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>离子末</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>天天好心情</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>qdasf0093</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>Alittlllo</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>伍思倩</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>Badgirlby01</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>hotstriplong</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>暗夜精灵</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>啦啦啦哇咔卡</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>limei2008</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>谭香菱</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>yangguang1202</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>曾丹丹</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>喜之千年喜</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>cyessorr</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>jurenkeng</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>e0k122g</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>smsmsmmli</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>mumuji153</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>爱一个人好难</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>killcrash</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>开心有你</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>元芳在此</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>小小香香草</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>小小小茉莉</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>婚纱摄影2026</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>蒙娜妮莎憨笑</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>用户10007026</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>zhekou888</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>崇高想象</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>妖精me</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>小小仙</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>心雨26</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>DNODQA</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>橘子香水</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>maykv</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>爱无知的BOY</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>hbp04551</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>瓶子56</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>安知若素</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>baby美瞳瞳</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>bella</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>xirui7885</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>syui0711</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>keruoyi</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>luanna</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>precious</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>毛毛妈妈</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>melanyee</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>summergirl</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>TQTOT</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>叮当静</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>叮当颖</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>里约约吗</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>咖喱菜饭</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>littlevilet</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>兜兜里有糖</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>糖宝</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>牛奶咪咪</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>似水亦流年</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>upon2u</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>复晴</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>chiken酱</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>拂袖花丛中</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>娃娃菜高汤</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>猪猪蛛蛛</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>爱猫咪的蜜蜜</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>来个栗子呗</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>唐的宝贝</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>heiduy</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>菜花</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>Ada弯弯</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>白鹭为霜</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>朱小罩</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>胡薇薇</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>舒雅</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>大仙儿</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>轻描淡写</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>外婆的红烧肉</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>付金媚</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>迁移的鸟</p>
+</div>
+
+
+
+
+
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>thames</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>c37度夏季</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>lina</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>justin</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>VIVIan</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>yinabibibi</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>美人鱼</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>南瓜米</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>小肉肉</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>againquike</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>夕颜</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>史莱克</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>萧萧雨滴</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>柠檬不萌</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>我是女王大人</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>寄语明月</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>王诗语</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>江上鱼</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>作作-9110</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>BEtty</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>tsykq_83</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>柳滚滚</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>小瑶</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>芭啦芭啦樱之花</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>zhlabacd7</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>丽娜好强</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>Jayzhao</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>sunshine1203</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>雷安娜</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>雪梨仔仔</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>天使翅膀</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>joyceyyy</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>teascorpio</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>joan巧小姐</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>bobolook</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>tinaa</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>悠然冰晶</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>春萍</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>Newzhou</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>winonafirst</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>飞飞爱学习</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>加鲁鲁fairiy</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>第三视角</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>麻油麻油培根龟</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>萱萱</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>熙星辰</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>Firlworks-anna</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>adoubeyi</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>scarllete</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>jingyazai</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>神秘西红柿酱</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>孙颖</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>大大木子</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>莹莹</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>雨晴zhong</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>小苏打</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>大爱抹茶</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>guoguolo</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>lusqin</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>suki2s</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>蓝睛灵逗比</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>maybe05</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>evayanzhenzhen</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>alfivery</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>winlikes</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>月薪更悦心</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>无限月读</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>紫玉玲</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>哈罗celima</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>COCO罗</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>anglela</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>翼翼丰满</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>靠谱的瞳学</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>大吃货玉</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>lifenqueen</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>everybady01</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>lbgeyingying</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>dpusee</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>lu芬芳</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>陈家宝珠</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>落玉液</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>乖乖小老虎</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>坏坏的颜色</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>chundan0505</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>fannyhu</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>hellokity123</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>王博士17</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>吃不胖的芊芊</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>loveyaya</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>静静妈妈</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>路儿</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>东天牛牛</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>周末好运</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>朴玉晶</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>凤雪飘零</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p> zmy念</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>7788MM26</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>黑牡丹</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>babyme0830</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>kyzy077</p>
+</div>
+
+
+
+
+
+
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>珊珊835</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>NIna</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>兔子爱胖子</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>汤糖躺烫</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>心乐米虫</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>sundy</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>karen机智</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>雨文081</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>钱多多</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>莫小莫</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>LOVE倩倩</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>麦芽糖</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>lowB</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>花样年华</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>可爱小猪猪</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>荡漾人间</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>会说话的提拉米苏</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>小欣欣</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>四叶草</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>小兔子乖乖</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>dacey</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>feifei1222</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>又做吃货又爱漂亮</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>安静002</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>你懂的</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>喜喜吸熙</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>倩冰月</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>七巧板</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>吴婷婷妈妈</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>double培根</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>麒麟子</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>angle1998sh</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>fancygood</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>ddanggel</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>reyiyi</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>HCT遇见你</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>未来女王</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>Winter0518</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>神羔羊</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>趣味秘密</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>安娜苏</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>淡淡微笑</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>faryyawe</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>lililybo</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>tellmememe</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>meitingguo</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>showyuan</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>颜如玉二小姐</p>
+</div>
+<div class="detail-sqer">
+	<div class="image"><img src="http://img.easeeyes.com/promotion/shiyong/11.jpg"></div>
+	<p>LOVEJOJO</p>
+</div>          
+					</div>
+				</div>
+      </div>
+    
+	</div>
+
+
+<!--弹窗-->
+<script type="text/tpl" id="pop-01">
+
+	<div class="J-pop-box">
+		<span class="J-pop-btn-close" id="mlayer-close">&times;</span>
+        <h2>请填写以下信息</h2>
+        <p>姓名：<input type="text" name="name" class="name" id="name" /></p>
+        <p>地址：<input type="text" name="address" class="address" id="address" /></p>
+        <p>手机：<input type="text" name="phone" class="phone" id="phonenum" /></p>
+        <p>度数:
+            <select class="ds" id="ds">
+                <option value="平光">平光</option>
+                <option value="-1.00">-1.00</option>
+                <option value="-1.25">-1.25</option>
+                <option value="-1.50">-1.50</option>
+                <option value="-1.75">-1.75</option>
+                <option value="-2.00">-2.00</option>
+                <option value="-2.25">-2.25</option>
+                <option value="-2.50">-2.50</option>
+                <option value="-2.75">-2.75</option>
+                <option value="-3.00">-3.00</option>
+                <option value="-3.25">-3.25</option>
+                <option value="-3.50">-3.50</option>
+                <option value="-3.75">-3.75</option>
+                <option value="-4.00">-4.00</option>
+                <option value="-4.25">-4.25</option>
+                <option value="-4.50">-4.50</option>
+                <option value="-4.75">-4.75</option>
+                <option value="-5.00">-5.00</option>
+                <option value="-5.25">-5.25</option>
+                <option value="-5.50">-5.50</option>
+                <option value="-5.75">-5.75</option>
+                <option value="-6.00">-6.00</option>
+                <option value="-6.50">-6.50</option>
+                <option value="-7.00">-7.00</option>
+                <option value="-7.50">-7.50</option>
+                <option value="-8.00">-8.00</option>
+                <option value="-8.50">-8.50</option>
+                <option value="-9.00">-9.00</option>
+                <option value="-9.50">-9.50</option>
+                <option value="-10.00">-10.00</option>
+            </select>
+            <select class="ds2" id="ds2">
+                <option value="平光">平光</option>
+                <option value="-1.00">-1.00</option>
+                <option value="-1.25">-1.25</option>
+                <option value="-1.50">-1.50</option>
+                <option value="-1.75">-1.75</option>
+                <option value="-2.00">-2.00</option>
+                <option value="-2.25">-2.25</option>
+                <option value="-2.50">-2.50</option>
+                <option value="-2.75">-2.75</option>
+                <option value="-3.00">-3.00</option>
+                <option value="-3.25">-3.25</option>
+                <option value="-3.50">-3.50</option>
+                <option value="-3.75">-3.75</option>
+                <option value="-4.00">-4.00</option>
+                <option value="-4.25">-4.25</option>
+                <option value="-4.50">-4.50</option>
+                <option value="-4.75">-4.75</option>
+                <option value="-5.00">-5.00</option>
+                <option value="-5.25">-5.25</option>
+                <option value="-5.50">-5.50</option>
+                <option value="-5.75">-5.75</option>
+                <option value="-6.00">-6.00</option>
+                <option value="-6.50">-6.50</option>
+                <option value="-7.00">-7.00</option>
+                <option value="-7.50">-7.50</option>
+                <option value="-8.00">-8.00</option>
+                <option value="-8.50">-8.50</option>
+                <option value="-9.00">-9.00</option>
+                <option value="-9.50">-9.50</option>
+                <option value="-10.00">-10.00</option>
+            </select>
+        </p><!--
+        <p>验证码:<input type="text" size="4" name="captcha" class="captcha" /></p>
+        <p><img src="captcha.php?{$rand}" alt="captcha" style="vertical-align:middle; cursor:pointer;" onClick="this.src='captcha.php?&'+Math.random()" /></p>-->
+        <input type="hidden" name="act" value="160712" />
+        <p><button class="sub_btn">提交申请</button></p>
+	</div>	
+
+</script>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+<script src="http://file.easeeyes.com/wap/js/countdown_v2.js"></script>
+<script src="http://file.easeeyes.com/wap/js/tab.js"></script>
+<script src="http://file.easeeyes.com/wap/js/mlayer.js"></script>
+<script>
+var binded=false;
+// 倒计时
+var countdown=new CountDown("2017/1/1 0:00",{
+	day_box:document.getElementById("daybox"),
+	hour_box:document.getElementById("hourbox"),
+	minute_box:document.getElementById("minutebox")
+});
+// 选项卡
+var tab=new Tab({
+	navs:document.querySelectorAll(".tab-nav span"),
+	tabs:document.querySelectorAll(".tab-main")
+});
+
+function re_login(){
+    alert('请先登录后再申请！');
+    window.location.href = "user.php";
+}
+
+// 收藏
+function collect(id){
+    $.ajax({
+        url:"user.php?act=collect",
+        type:"GET",
+        data:"id=" + id,
+        dataType:"json",
+        success:function(d){
+            if(d.error){
+                alert(d.message);
+            }else{
+                alert('收藏成功')
+            }
+            //alert(d.message);
+        }
+    })
+}
+
+
+$(document).ready(function(){
+
+    $('#toApply').click(function(){
+        layer.open({
+            content:$('#pop-01').html(),
+            closeBtns:['mlayer-close'],
+            shadow:1,
+            effect:1
+        });
+        if(!binded){
+            binded=true;
+            $(".sub_btn").click(function(){
+                $.ajax({
+                    url: 'ajax_active.php',
+                    type: "post",
+                    data:{act:'160712',name:$(".name").val(),phone:$(".phone").val(),ds:$(".ds").val(),ds2:$(".ds2").val(),captcha:$(".captcha").val(),address:$(".address").val()},
+                    success: function(res){
+                        alert(res);
+                    }
+                });
+            })
+        }
+        
+    })
+
+    /*
+    $(".sub_btn").click(function(){
+
+        $.ajax({
+            url: 'ajax_active.php',
+            type: "post",
+            data:{act:'151027',name:$(".name").val(),phone:$(".phone").val(),ds:$(".ds").val(),captcha:$(".captcha").val(),address:$(".address").val()},
+            success: function(res){
+                alert(res);
+            }
+        });
+        var phone=$("#phonenum").val(),
+            name=$("#name").val(),
+            address=$("#address").val(),
+            reg=/^^[1][3578][0-9]{9}$/;
+        if(!reg.test(phone)){
+            alert("手机号码格式不正确");
+            return false;
+        }else if(name == ''){
+            alert("请填写姓名");
+            return false;
+        }else if(address == ''){
+            alert("请填写地址");
+            return false;
+        }else{
+            $.ajax({
+                url: 'ajax_active.php',
+                type: "post",
+                data:{act:'151027',name:$(".name").val(),phone:$(".phone").val(),ds:$(".ds").val(),captcha:$(".captcha").val(),address:$(".address").val()},
+                success: function(res){
+                    alert(res);
+                }
+            });
+        }
+    })*/
+});
+</script>
+</body>
+</html>

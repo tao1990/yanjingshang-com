@@ -1,0 +1,373 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="x-ua-compatible" content="ie=7"/>
+<meta http-equiv="Content-Type"    content="text/html; charset=utf-8" />
+<meta name="Keywords"    content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" --><title>{$page_title}</title><!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="http://file.easeeyes.com/css/base.css"     rel="stylesheet" type="text/css" />
+<link href="themes/default/style/xu_css.css"   rel="stylesheet" type="text/css" />
+<link href="themes/default/style/category.css" rel="stylesheet" type="text/css" />
+<link href="themes/default/style/yi_cat.css"   rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="http://file.easeeyes.com/index2015/css/base.css" />
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header_new.lbi" --><!-- #EndLibraryItem -->
+<ul id="dtop"><li id="dtoptxt">{$lang.ur_here} {$ur_here}</li></ul>
+<div class="main">
+	<div class="help_liift">
+   		<div class="classfied_lift"><h2></h2></div>
+        <div class="cat_pan">
+        	<div class="cat_li_1 cat_title {if $cat2}display_image{/if}">透明隐形眼镜</div>
+            <div id="cat_content_1" class="cat_content {if $cat2}display{/if}">
+            	<ul class="cat_tab_ul">
+                	<!--{foreach from=$cat_all.1.cat_id item=cat name=aa}-->
+                    <li><a href="{$cat.url}" {if $cat.is_show_red}class="red"{/if}>{$cat.name}</a></li>
+					<!--{/foreach}-->                    
+                </ul>   
+            </div>                               
+            <div class="cat_li_6 cat_title {if $cat3}display_image{/if}">彩色隐形眼镜</div>
+            <div id="cat_content_6" class="cat_content {if $cat3}display{/if}">
+                <div class="cat_txt">
+                <!--{foreach from=$cat_all.6.cat_id item=child name=aa}-->
+                    <!--{if $smarty.foreach.aa.index%2 == 0}-->
+                    <a href="{$child.url}"><span class="yiaa {if $child.is_show_red}red{/if}">{$child.name}</span></a>
+                    <!--{else}-->
+                    <a href="{$child.url}"><span class="classtype_yi yihover {if $child.is_show_red}red{/if}" style="cursor:pointer;">{$child.name}</span></a><br/>
+                    <!--{/if}-->                
+                <!--{/foreach}-->
+                </div>            
+            </div> 
+            <div class="cat_li_159 cat_title {if $cat6}display_image{/if}">框架眼镜</div>
+            <div id="cat_content_159" class="cat_content {if $cat6}display{/if}">
+            	<ul class="cat_tab_ul">
+                	<!--{foreach from=$cat_all.159.cat_id item=cat name=aa}-->
+                    <li><a href="{$cat.url}" {if $cat.is_show_red}class="red"{/if}>{$cat.name}</a></li>
+					<!--{/foreach}-->                    
+                </ul>  
+            </div>             
+            <div class="cat_li_64 cat_title {if $cat4}display_image{/if}">护理液润眼液</div>
+            <div id="cat_content_64" class="cat_content {if $cat4}display{/if}">
+            	<ul class="cat_tab_ul">
+                	<!--{foreach from=$cat_all.64.cat_id item=cat name=aa}-->
+                    <li><a href="{$cat.url}" {if $cat.is_show_red}class="red"{/if}>{$cat.name}</a></li>
+					<!--{/foreach}-->                    
+                </ul>  
+            </div>  
+            <div class="cat_li_76 cat_title {if $cat5}display_image{/if}" style="border:none;">隐形眼镜护理工具</div>            
+            <div id="cat_content_76" class="cat_content {if $cat5}display{/if}" style="border:none;">
+            	<ul class="cat_tab_ul">
+                	<!--{foreach from=$cat_all.76.cat_id item=cat name=aa}-->
+                    <li><a href="{$cat.url}" {if $cat.is_show_red}class="red"{/if}>{$cat.name}</a></li>
+					<!--{/foreach}-->                    
+                </ul>
+            </div> 
+        </div>        
+        <!--热销排行榜-->
+        <div class="classfd_hot">
+        	<h2 class="classfd_hot_h2"></h2>
+            <ul class="classfd_hot_ul" style="padding-bottom:10px;">
+            	<!--{foreach from=$sale_order item=sale key=k name=foo}-->
+                <li>
+                    <p class="fl {if $smarty.foreach.foo.iteration lt 4}classfd_hot_shu{else}classfd_hot_shus{/if}">{$smarty.foreach.foo.iteration}</p>                                        
+                    <div style="float:left; width:60px; padding-left:10px;"><a href="goods{$sale.goods_id}.html" target="_blank"><img src="{$sale.goods_img}" width="60" height="60" alt=""/></a></div>
+                    <div style="float:left; width:70px; padding-left:10px;"><p style="height:32px; line-height:20px; overflow:hidden;"><a href="goods{$sale.goods_id}.html" target="_blank" class="hot_sale_name" title="{$sale.goods_name}">{$sale.goods_name}</a></p><strong class="classfd_hot_jg reds">￥{$sale.shop_price}</strong></div>
+                    <div style="clear:both"></div>
+                </li>
+                <!--{/foreach}-->
+            </ul>
+        </div>        
+        <div class="classfd_ll mt10 fl">
+        	<h2>&nbsp;</h2>
+            <div style="border:1px solid #f2f2f2; width:198px; overflow:hidden;">
+                <ul>
+                    <!-- #BeginLibraryItem "/library/bhistory_xu.lbi" --><!-- #EndLibraryItem -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+<!--<div id="m_r">-->
+
+    <script type="text/javascript" language="javascript">
+		var selectedAttr = new Array();
+		selectedAttr[0] = "brandx=0";
+		selectedAttr[1] = "attr0=0";
+		selectedAttr[2] = "attr1=0";
+		selectedAttr[3] = "attr2=0";
+		selectedAttr[4] = "attr3=0";
+		selectedAttr[5] = "attr4=0";
+		selectedAttr[6] = "price_min=0&price_max=0";
+		selectedAttr[7] = "id={$cat_ids}"; //品牌对应的栏目ID
+		var groupid = ""; //本选项组ID：当选择不同属性选项是，用于判断是哪个属性组，相同则变更“您已选择”的内容，不同则不变
+		var url = "";
+		var lastId = "";
+	</script>
+    <div class="abou_righ fl">
+    
+        <div class="body1">
+        	<a name="focus_selected"></a>
+            <dl class="fore1">
+            	<dt><strong>您已经选择：</strong></dt>
+                <dd id="dd_selected">
+                    <div id="selected_brandx" style="display:none;" onclick="cancelChoose('selected_brandx');"></div>
+                    <div id="selected_attr0" style="display:none;" onclick="cancelChoose('selected_attr0');"></div>
+                    <div id="selected_attr1" style="display:none;" onclick="cancelChoose('selected_attr1');"></div>
+                    <div id="selected_attr2" style="display:none;" onclick="cancelChoose('selected_attr2');"></div>
+                    <div id="selected_attr3" style="display:none;" onclick="cancelChoose('selected_attr3');"></div>
+                    <div id="selected_attr4" style="display:none;" onclick="cancelChoose('selected_attr4');"></div>
+                    <div id="selected_price" style="display:none;" onclick="cancelChoose('selected_price');"></div>
+                </dd>
+            </dl>
+            
+<!--old start-->
+
+<!--{if $fcat_ids!=64 && $fcat_ids!=76}-->
+<!--{foreach from=$categoriescsz item=cat name=arrts}--> 
+<!--{if $smarty.foreach.arrts.index!=5 && !($smarty.foreach.arrts.index==1 && $fcat_ids==1) && $smarty.foreach.arrts.index!=6 && $smarty.foreach.arrts.index!=7 && $smarty.foreach.arrts.index!=8 && $smarty.foreach.arrts.index!=9 && $smarty.foreach.arrts.index!=10}-->
+
+    <!--{if $smarty.foreach.arrts.index==0}-->
+    <div class="filter">
+        <h1 class=" mm1">周期：</h1>
+        <div class="filter_b">
+            <a class="all_on fl all_o-n2" href="javascript:;" id="selected_attr0_all" onclick="chooseOption('周期', '全部', 'selected_attr0', 'attr0=0', 'selected_attr0_all', '0');">全部</a>
+            <p class="filter_b_p mm1">
+            	<!--{foreach from=$cat.attr_values item=catz name=autoid_0}-->
+                <!--{if $catz eq $attr0}-->
+                <a class="all_on" href="javascript:;" id="selected_attr0_{$smarty.foreach.autoid_0.index}" onclick="chooseOption('周期', '{$catz}', 'selected_attr0', 'attr0={$catz}', 'selected_attr0_{$smarty.foreach.autoid_0.index}', '0'); this.style.display='none';">{$catz}</a>
+                <!--{else}-->
+                <a href="javascript:;" id="selected_attr0_{$smarty.foreach.autoid_0.index}" onclick="chooseOption('周期', '{$catz}', 'selected_attr0', 'attr0={$catz}', 'selected_attr0_{$smarty.foreach.autoid_0.index}', '0'); this.style.display='none';">{$catz}</a>
+                <!--{/if}-->
+                <!--{/foreach}-->
+            </p>
+        </div>
+    </div>
+    <!--{/if}-->
+    
+    <!--{if $smarty.foreach.arrts.index==1 && $fcat_ids!=1}-->
+    <div class="filter">
+        <h1 class=" mm1">颜色：</h1>
+        <div class="filter_b">
+            <a class="all_on fl all_o-n2" href="javascript:;" id="selected_attr1_all" onclick="chooseOption('颜色', '全部', 'selected_attr1', 'attr1=0', 'selected_attr1_all', '1');">全部</a>
+            <p class="filter_b_p mm1">
+            	<!--{foreach from=$cat.attr_values item=catz name=autoid_1}-->
+                <!--{if $catz eq $attr1}-->
+                <a class="all_on" href="javascript:;" id="selected_attr1_{$smarty.foreach.autoid_1.index}" onclick="chooseOption('颜色', '{$catz}', 'selected_attr1', 'attr1={$catz}', 'selected_attr1_{$smarty.foreach.autoid_1.index}', '1'); this.style.display='none';">{$catz}</a>
+                <!--{else}-->
+                <a href="javascript:;" id="selected_attr1_{$smarty.foreach.autoid_1.index}" onclick="chooseOption('颜色', '{$catz}', 'selected_attr1', 'attr1={$catz}', 'selected_attr1_{$smarty.foreach.autoid_1.index}', '1'); this.style.display='none';">{$catz}</a>
+                <!--{/if}-->
+                <!--{/foreach}-->
+            </p>
+        </div>
+    </div>
+    <!--{/if}-->
+    
+    <!-- {if $smarty.foreach.arrts.index==2} -->
+    <div class="filter">
+        <h1 class=" mm1">含水量：</h1>
+        <div class="filter_b">
+            <a class="all_on fl all_o-n2" href="javascript:;" id="selected_attr2_all" onclick="chooseOption('含水量', '全部', 'selected_attr2', 'attr2=0', 'selected_attr2_all', '2');">全部</a>
+            <p class="filter_b_p mm1">
+            	<!--{foreach from=$cat.attr_values item=catz name=autoid_2}-->
+                <!--{if $catz eq $attr2}-->
+                <a class="all_on" style="width:auto;" href="javascript:;" id="selected_attr2_{$smarty.foreach.autoid_2.index}" onclick="chooseOption('含水量', '{$catz}', 'selected_attr2', 'attr2={$catz}', 'selected_attr2_{$smarty.foreach.autoid_2.index}', '2'); this.style.display='none';">{$catz}</a>
+                <!--{else}-->
+                <a href="javascript:;" id="selected_attr2_{$smarty.foreach.autoid_2.index}" onclick="chooseOption('含水量', '{$catz}', 'selected_attr2', 'attr2={$catz}', 'selected_attr2_{$smarty.foreach.autoid_2.index}', '2'); this.style.display='none';">{$catz}</a>
+                <!--{/if}-->
+                <!--{/foreach}-->
+            </p>
+        </div>
+    </div>
+    <!--{/if}-->
+    
+    <!-- {if $smarty.foreach.arrts.index==3} -->
+    <div class="filter">
+        <h1 class=" mm1">直径：</h1>
+        <div class="filter_b">
+            <a class="all_on fl all_o-n2" href="javascript:;" id="selected_attr3_all" onclick="chooseOption('直径', '全部', 'selected_attr3', 'attr3=0', 'selected_attr3_all', '3');">全部</a>
+            <p class="filter_b_p mm1">
+            	<!--{foreach from=$cat.attr_values item=catz name=autoid_3}-->
+                <!--{if $catz eq $attr3}-->
+                <a class="all_on" style="width:auto;" href="javascript:;" id="selected_attr3_{$smarty.foreach.autoid_3.index}" onclick="chooseOption('直径', '{$catz}', 'selected_attr3', 'attr3={$catz}', 'selected_attr3_{$smarty.foreach.autoid_3.index}', '3'); this.style.display='none';">{$catz}</a>
+                <!--{else}-->
+                <a href="javascript:;" id="selected_attr3_{$smarty.foreach.autoid_3.index}" onclick="chooseOption('直径', '{$catz}', 'selected_attr3', 'attr3={$catz}', 'selected_attr3_{$smarty.foreach.autoid_3.index}', '3'); this.style.display='none';">{$catz}</a>
+                <!--{/if}-->
+                <!--{/foreach}-->
+            </p>
+        </div>
+    </div>
+    <!--{/if}-->
+    
+    <!-- {if $smarty.foreach.arrts.index==4} -->
+    <div class="filter">
+        <h1 class=" mm1">基弧：</h1>
+        <div class="filter_b">
+            <a class="all_on fl all_o-n2" href="javascript:;" id="selected_attr4_all" onclick="chooseOption('基弧', '全部', 'selected_attr4', 'attr4=0', 'selected_attr4_all', '4');">全部</a>
+            <p class="filter_b_p mm1">
+            	<!--{foreach from=$cat.attr_values item=catz name=autoid_4}-->
+                <!--{if $catz eq $attr4}-->
+                <a class="all_on" href="javascript:;" id="selected_attr4_{$smarty.foreach.autoid_4.index}" onclick="chooseOption('基弧', '{$catz}', 'selected_attr4', 'attr4={$catz}', 'selected_attr4_{$smarty.foreach.autoid_4.index}', '4'); this.style.display='none';">{$catz}</a>
+                <!--{else}-->
+                <a href="javascript:;" id="selected_attr4_{$smarty.foreach.autoid_4.index}" onclick="chooseOption('基弧', '{$catz}', 'selected_attr4', 'attr4={$catz}', 'selected_attr4_{$smarty.foreach.autoid_4.index}', '4'); this.style.display='none';">{$catz}</a>
+                <!--{/if}-->
+                <!--{/foreach}-->
+            </p>
+        </div>
+    </div>
+    <!--{/if}-->
+        
+    <!--中心厚度等-->
+    <!--{if $smarty.foreach.arrts.index==6 or $smarty.foreach.arrts.index==7 or $smarty.foreach.arrts.index==8 or $smarty.foreach.arrts.index==9}--><!-- {/if} -->
+
+<!-- {/if} -->
+<!--{/foreach}-->
+<!--{/if}-->
+
+    <!--{if $categoryjg}价格-->
+    <div class="filter">
+        <h1 class=" mm1">价格：</h1>
+        <div class="filter_b">
+            <a class="all_on fl all_o-n2" href="javascript:;" id="selected_price_all" onclick="chooseOption('价格', '全部', 'selected_price', 'price_min=0&amp;price_max=0', 'selected_price_all', '5');">全部</a>
+            <p class="filter_b_p mm1">
+            	<a style="width:auto;" href="javascript:;" id="selected_price_1" onclick="chooseOption('价格', '50元以下', 'selected_price', 'price_min=0&amp;price_max=50', 'selected_price_1', '5'); this.style.display='none';">50元以下</a>
+                <a style="width:auto;" href="javascript:;" id="selected_price_2" onclick="chooseOption('价格', '50元～100元', 'selected_price', 'price_min=50&amp;price_max=100', 'selected_price_2', '5'); this.style.display='none';">50元～100元</a>
+                <a style="width:auto;" href="javascript:;" id="selected_price_3" onclick="chooseOption('价格', '100元～150元', 'selected_price', 'price_min=100&amp;price_max=150', 'selected_price_3', '5'); this.style.display='none';">100元～150元</a>
+                <a style="width:auto;" href="javascript:;" id="selected_price_4" onclick="chooseOption('价格', '150元～200元', 'selected_price', 'price_min=150&amp;price_max=200', 'selected_price_4', '5'); this.style.display='none';">150元～200元</a>
+                <a style="width:auto;" href="javascript:;" id="selected_price_5" onclick="chooseOption('价格', '200元～300元', 'selected_price', 'price_min=200&amp;price_max=300', 'selected_price_5', '5'); this.style.display='none';">200元～300元</a>
+                <a style="width:auto;" href="javascript:;" id="selected_price_6" onclick="chooseOption('价格', '300元以上', 'selected_price', 'price_min=300&amp;price_max=0', 'selected_price_6', '5'); this.style.display='none';">300元以上</a>
+            </p>
+        </div>
+    </div>
+    <!--{/if}-->
+
+
+<!-- old end -->
+    
+            
+		</div>
+        
+        <!-- ajax_result start -->
+        <div id="ajax_result">
+        	<a name="search_goods_result"></a>
+            
+            <div class="searchBar mb5 mt10">
+                <h1 class="color9">排序：</h1>
+                <ul class="rank clearfix">
+                    <li><a href="?id={$id}&sort=last_update&order=desc&category={$category}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&attr0={$attr0|escape:url}&attr1={$attr1|escape:url}&attr2={$attr2|escape:url}&attr3={$attr3|escape:url}&attr4={$attr4|escape:url}&attr5={$attr5|escape:url}&keyword={$keyword|escape:url}#focus_selected">默认</a></li>
+                    <li class="default"><a href="?id={$id}&sort=click_count&order=desc&category={$category}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&attr0={$attr0|escape:url}&attr1={$attr1|escape:url}&attr2={$attr2|escape:url}&attr3={$attr3|escape:url}&attr4={$attr4|escape:url}&attr5={$attr5|escape:url}&keyword={$keyword|escape:url}#focus_selected"><span>热销</span></a></li>
+                    <li class="default"><a href="?id={$id}&sort=is_new&order=desc&category={$category}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&attr0={$attr0|escape:url}&attr1={$attr1|escape:url}&attr2={$attr2|escape:url}&attr3={$attr3|escape:url}&attr4={$attr4|escape:url}&attr5={$attr5|escape:url}&keyword={$keyword|escape:url}#focus_selected"><span>新品</span></a></li>
+                    
+                    <!--{if $order eq 'asc'}-->
+                    <li class="priceDown"><a href="?id={$id}&sort=shop_price&order=desc&category={$category}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&attr0={$attr0|escape:url}&attr1={$attr1|escape:url}&attr2={$attr2|escape:url}&attr3={$attr3|escape:url}&attr4={$attr4|escape:url}&attr5={$attr5|escape:url}&keyword={$keyword|escape:url}#focus_selected"><span>价格</span></a></li>
+                    <!--{else}-->
+                    <li class="priceUp"><a href="?id={$id}&sort=shop_price&order=asc&category={$category}&brand={$brand_id}&price_min={$price_min}&price_max={$price_max}&filter_attr={$filter_attr}&attr0={$attr0|escape:url}&attr1={$attr1|escape:url}&attr2={$attr2|escape:url}&attr3={$attr3|escape:url}&attr4={$attr4|escape:url}&attr5={$attr5|escape:url}&keyword={$keyword|escape:url}#focus_selected"><span>价格</span></a></li>
+                    <!--{/if}-->
+                </ul>
+                <ul class="paagee clearfix">
+                    <!--{if $pager.page_prev}--><li class="l_page"><a href="{$pager.page_prev}#search_goods_result"><span>上一页</span></a></li><!--{/if}-->
+                    <!--{if $pager.page_next}--><li class="r_page"><a href="{$pager.page_next}#search_goods_result"><span>下一页</span></a></li><!--{/if}-->
+                    <li class="pr25" style="padding-top:1px;">共<span class="reds">{$pager.record_count}</span>件商品</li>
+                </ul>
+            </div>
+        
+            <div class="spaceclass" style="height:4px;"></div>
+            <!-- #BeginLibraryItem "/library/goods_list_new.lbi" --><!-- #EndLibraryItem -->
+            <!-- #BeginLibraryItem "/library/pages_cat.lbi" --><!-- #EndLibraryItem -->        
+        </div>
+        <!-- ajax result end -->
+        
+    </div>
+    <!-- 筛选部分结束-->
+
+
+<!--</div>m_r_end-->
+
+</div>
+<div class="clear"></div>
+<!-- #BeginLibraryItem "/library/page_footer_new.lbi" --><!-- #EndLibraryItem -->
+</body>
+<script type="text/javascript" src="/js/yi_common.js"></script>
+<script type="text/javascript" src="/js/inner.js"></script>
+<script type="text/javascript" src="/js/tip-totop.js"></script>
+<script type="text/javascript" src="http://file.easeeyes.com/index2015/js/common.js"></script>
+<script type="text/javascript" language="javascript">
+function chooseOption(option, value, id, param, fromId, group) {
+	if (lastId == "") {
+		//第一次点击选择的选项
+		lastId = fromId;
+		groupid = group;
+	} else {
+		$("#"+lastId).css("display", "inline-block");
+		lastId = fromId;
+	}
+	
+	$("#"+id).css("display", "inline-block");
+	$("#"+id).html("<a href='#focus_selected' onclick='document.getElementById(\""+fromId+"\").style.display=\"inline-block\";this.parentNode.style.display=\"none\";'>" + option + "：<span class='col0ca'>" + value + "<b></b></span></a>");
+	
+	if (id == 'selected_brandx') {
+		selectedAttr[0] = param;
+		selectedAttr[7] = "id=" + fromId.replace("selected_brandx_", "");
+	}
+	if (id == 'selected_attr0') selectedAttr[1] = param;
+	if (id == 'selected_attr1') selectedAttr[2] = param;
+	if (id == 'selected_attr2') selectedAttr[3] = param;
+	if (id == 'selected_attr3') selectedAttr[4] = param;
+	if (id == 'selected_attr4') selectedAttr[5] = param;
+	if (id == 'selected_price') selectedAttr[6] = param;
+	
+	//将js数组用&号连接
+	var url = selectedAttr.join("&");
+	//alert(url);
+	//alert(encodeURI(url));
+	
+	//刷新数据
+	$(document).ready(function() {
+		$.ajax({
+			type: 'POST',
+			url: 'goods_list_ajax.php?' + encodeURI(url+'&keyword={$keyword}'),
+			success:function(d){
+				$("#ajax_result").html(d);		
+			},
+			error:function(d){
+				alert('error:'+d.toSource());
+			} 
+		});
+	});
+	
+}
+
+//取消选择
+function cancelChoose(id) {
+	if (id == 'selected_brandx') {
+		selectedAttr[0] = "brandx=0";
+		selectedAttr[7] = "id={$cat_ids}"; //如果取消品牌选项，则返回栏目ID
+	}
+	if (id == 'selected_attr0') selectedAttr[1] = "attr0=0";
+	if (id == 'selected_attr1') selectedAttr[2] = "attr1=0";
+	if (id == 'selected_attr2') selectedAttr[3] = "attr2=0";
+	if (id == 'selected_attr3') selectedAttr[4] = "attr3=0";
+	if (id == 'selected_attr4') selectedAttr[5] = "attr4=0";
+	if (id == 'selected_price') selectedAttr[6] = "price_min=0&price_max=0";
+
+	 var url = selectedAttr.join("&");
+	
+	//刷新数据
+	$(document).ready(function() {
+		$.ajax({
+			type: 'POST',
+			url: 'goods_list_ajax.php?' + encodeURI(url+'&keyword={$keyword}'),
+			success:function(d){
+				$("#ajax_result").html("" + d + "");				
+			},
+			error:function(d){
+				alert('error:'+d.toSource());
+			} 
+		});
+	});
+}
+</script>
+</html>

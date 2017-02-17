@@ -1,0 +1,360 @@
+<script type="text/javascript">var process_request = "{$lang.process_request}";</script>
+<script type="text/javascript" src="/js/cart.js"></script>
+
+<div class="header">
+	<div class="lg_tr">
+        <ul class="lg_ul">
+        	<li><a href="javascript:;" class="lg_sc" onclick="add_book_mark('易视网 只售正品','http://www.easeeyes.com/')">收藏易视网</a></li>            
+            <li class="lg_tr_u">            
+                <ul>
+                	<li style="position:relative; z-index:98; width:115px;">
+                    	<ul style="width:115px; height:28px; background:url(../images/common/head_cart_bg.gif) no-repeat 0px 2px;">
+                            <li style="padding-left:26px;"><a href="flow.html" onmouseover="show_cart()" onmouseout="hidden_cart()">购物车&nbsp;<strong class="red" id="head_cart_num">{insert name='cart_num'}</strong>&nbsp;件</a></li>
+                        </ul>
+                        
+                        <ul id="head_cart" onmouseover="show_cart()" onmouseout="hidden_cart()">
+                            <li style="padding-left:26px;"><a href="flow.html" onmouseover="show_cart()" onmouseout="hidden_cart()">购物车&nbsp;<strong class="red" id="head_cart_num2">{insert name='cart_num'}</strong>&nbsp;件</a></li>
+                        </ul>
+                        <div id="head_cart2" onmouseover="show_cart()" onmouseout="hidden_cart()"></div>
+                    </li>
+                    <li class="vline2"></li>                    
+                    <li style="position:relative;">
+                        <a href="user.html" onmouseover="pan_show('user_tip_pan')" onmouseout="pan_hide('user_tip_pan')"><ul class="lg_tr_tip">我的易视</ul></a>
+                        <ul id="user_tip_pan" onmouseover="pan_show('user_tip_pan')" onmouseout="pan_hide('user_tip_pan')">
+                            <a href="user.html"            target="_blank" rel="nofollow"><ul class="lg_tr_tip2">我的易视</ul></a>
+                            <a href="user_order_list.html" target="_blank" rel="nofollow">我的订单</a>
+                            <a href="user_transform_points.html" target="_blank" rel="nofollow">我的积分</a>
+                            <a href="user_collection_list.html"  target="_blank" rel="nofollow">我的收藏夹</a>
+                        </ul>
+                    </li><li class="vline2"></li>
+                    <li style="position:relative;">                           
+                        <a href="javascript:void();" onmouseover="pan_show_h2()" onmouseout="pan_hide_h2()"><ul class="lg_tr_tip">帮助中心</ul></a>                       
+                        <ul id="help_tip_pan"  onmouseover="pan_show_h2()" onmouseout="pan_hide_h2()"><a href="javascript:void();"><ul class="lg_tr_tip2">帮助中心</ul></a></ul>
+                        <ul id="help_tip_pan2" onmouseover="pan_show_h2()" onmouseout="pan_hide_h2()">
+                        	<li class="bh_p_li_1">
+                                <a href="article-35.html" target="_blank" rel="nofollow">如何购买</a>
+                                <a href="article-8.html"  target="_blank" rel="nofollow">运时运费</a>
+                                <a href="school.html"  target="_blank" rel="nofollow">眼镜学堂</a>
+                            </li>  
+                            <li class="bh_p_li_2">
+                                <a href="article-27.html" target="_blank" rel="nofollow">如何付款</a>
+                                <a href="article-7.html"  target="_blank" rel="nofollow">售后保障</a>
+                                <a href="questionlist.html" target="_blank" rel="nofollow">有问必答</a>
+                            </li>
+                        </ul>  
+                    </li><li class="vline2"></li>                    
+                    <li style="position:relative;"> 
+                    	<a href="javascript:void();" onmouseover="pan_show('kefu')" onmouseout="pan_hide('kefu')"><ul class="lg_tr_tip3"><li class="lg_tr_kf"></li><li>联系在线客服</li></ul></a>                       
+                        <ul id="kefu" onmouseover="pan_show('kefu')" onmouseout="pan_hide('kefu')">
+                            <a href="javascript:void();" ><ul class="lg_tr_tip3" style="margin-left:8px;"><li class="lg_tr_kf"></li><li>联系在线客服</li></ul></a>                
+                            <li class="kefu_time">服务时间 9:00~20:00</li>                                                 
+                            <li class="kefu_li bg_qq1"><a id="qq1" title="QQ:1340709840" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1340709840&amp;site=qq&amp;menu=yes" target="_blank" rel="nofollow">商品咨询</a></li>                  			<li class="kefu_li bg_qq2"><a id="qq2" title="QQ:1223819714" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1223819714&amp;site=qq&amp;menu=yes" target="_blank" rel="nofollow">订单查询</a></li>
+                            <li class="kefu_li bg_qq3"><a id="qq3" title="QQ:1282786616" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1282786616&amp;site=qq&amp;menu=yes" target="_blank" rel="nofollow">售后服务</a></li>
+                            <li class="kefu_li bg_ww"><a title="旺旺:易视网" href="http://amos.im.alisoft.com/msg.aw?v=2&uid=%E6%98%93%E8%A7%86%E7%BD%91&site=cntaobao&s=2&charset=utf-8" target="_blank" rel="nofollow">旺旺客服</a></li>
+                       </ul>           
+                    </li>
+                    <li class="vline2"></li> 
+                    <li>
+                    	<ul>
+                        	<li class="lg_tr_xu_dh"></li>
+                        	<li>客服热线&nbsp;<strong style="color:#72ce9d; font-size:13px;">4006-177-176</strong></li>
+                        </ul>
+                   	</li>
+                </ul>            
+            </li>
+            <li class="lg_mb_info"><div id="ECS_MEMBERZONE" class="mb_info">{insert name='member_info'}</div></li>                 
+        </ul>
+    </div>
+	
+	<!--{if $topbanner.0.ad_code}-->
+	<div class="index_banner" style="background:url({$topbanner.0.ad_code}) center center repeat-x;">{if $topbanner.0.ad_link}<a href="{$topbanner.0.ad_link}" target="_blank">{/if}<img src="images/transparent.gif" alt="" />{if $topbanner.0.ad_link}</a>{/if}</div>
+	<!--{/if}-->
+
+	<div style="width:1010px; margin:0 auto;  background-color:#ffffff;"><!--temp-->
+	<div class="com_h_body" style="margin:0 auto; padding-bottom:10px; height:161px; background-position:0 77px;">
+        <ul class="logotr" style="height:96px;">
+            <li><a href="/" title="易视网"><img src="images/common/2014chinese_new_year.gif" width="254" height="86" alt="易视网"/></a></li>
+            <li class="logotr_wd" style="margin-top:10px; width:489px;">
+            	<img src="../images/common/head_words_chinese.gif" width="430" height="78" alt="" usemap="#COM_YI">
+                <map id="COM_YI" name="COM_YI"><area shape="rect" href="article-74.html" coords="0,0,126,70"/><area shape="rect" href="article-120.html" coords="126,0,270,70"/><area shape="rect" href="article-73.html" coords="270,0,461,70"/></map>
+            </li>
+            <form method="get" action="categorysea.php"><input type="hidden" name="search" value="1"/> 
+            <li class="h_k_input_xu mt10" style="width:190px; margin-top:25px; background:url(../images/common/search_border_new.jpg) left top no-repeat; height:31px;"> 
+            <!--{if $keyword}--><input type="text" name="keyword" class="kw_input_xu" style="margin-top:4px;" value="{$keyword}" onFocus="if(this.value=='请输入关键字')this.value='';this.style.color='#999';" onBlur="if(this.value=='')this.value='请输入关键字';this.style.color='#999';">
+            <!--{else}--><input type="text" name="keyword" class="kw_input_xu" style="margin-top:4px;" value="请输入关键字" onFocus="if(this.value=='请输入关键字')this.value='';this.style.color='#999';" onBlur="if(this.value=='')this.value='请输入关键字';this.style.color='#999';"><!--{/if}--> 
+            </li>
+            <li class="h_k_submit_xu mt10" style="margin-top:25px;"><input type="submit" value="" class="kw_submit_xu" style="background:url(../images/common/search_button_new.jpg) left top no-repeat; width:55px; height:31px;"></li>           
+            </form>
+        </ul> 
+        <ul class="com_menu">
+            <li class="com_m_left">          
+            	<ul id="nav">
+                	<li class="nav_index"><a href="/" title="首页" class="nav_a1"></a></li>                    
+                	<li class="nav_w1 nav_h">   
+                        <a href="category_1.html" class="nav_w1 nav_a"></a>          
+                        <div class="com_nav">
+                            <ul class="nav_line"></ul>                                               
+                            <ul class="nav_pan_li">
+                                <li class="dcon_l">                                 
+                                    <ul>
+                                        <li class="dcon_head"><a href="category_1.html" class="red">全部透明片品牌</a></li><!--{foreach from=$cat_1.cat_id item=cat name=foo}-->{if $smarty.foreach.foo.index % 2 == 1}
+                                        <li class="line1"></li><li class="dcon_li d_w2"><a href="{$cat.url}" {if $cat.is_show_red}class="red"{/if} target="_blank">{$cat.name}</a></li>{else}
+                                        <li class="dcon_li d_w3"><a href="{$cat.url}" {if $cat.is_show_red}class="red"{/if} target="_blank">{$cat.name}</a></li>{/if}<!--{/foreach}-->                                        <li class="dcon_a"><a href="category_1.html" class="red">全部透明片</a></li>
+                                    </ul>
+                                </li>                    
+                                <li class="dcon_r">
+                                    <ul class="dcon_ul2">                                
+                                        <li class="dpan_r_top">
+                                            <ul class="hot_title">周期</ul>
+                                            <ul class="hot_ul" style="height:66px;">
+                                                <li class="hot_li"><a href="search_attr.php?cat_id=1&attr0=%E6%97%A5%E6%8A%9B" target="_blank">日抛</a></li>
+                                                <li class="hot_li"><a href="search_attr.php?cat_id=1&attr0=%E4%B8%A4%E5%91%A8%E6%8A%9B" target="_blank">两周抛</a></li>
+                                                <li class="hot_li"><a href="search_attr.php?cat_id=1&attr0=%E6%9C%88%E6%8A%9B" target="_blank">月抛</a></li>
+                                                <li class="hot_li"><a href="search_attr.php?cat_id=1&attr0=%E5%AD%A3%E6%8A%9B" target="_blank">季抛</a></li>
+                                                <li class="hot_li"><a href="search_attr.php?cat_id=1&attr0=%E5%8D%8A%E5%B9%B4%E6%8A%9B" target="_blank">半年抛</a></li>
+                                                <li class="hot_li"><a href="search_attr.php?cat_id=1&attr0=%E5%B9%B4%E6%8A%9B" target="_blank">年抛</a></li>
+                                            </ul>
+                                            <ul class="hot_title" style="margin-top:4px;">功能</ul>
+                                            <ul class="hot_ul" style="height:20px">
+                                            	<li class="hot_li"><a href="lab-35.html" target="_blank">色盲片</a></li>
+                                                <li class="hot_li"><a href="lab-31.html" target="_blank">散光片</a></li>
+                                            </ul>
+                                        </li>                                 
+                                        <li class="dpan_r_btm">
+                                            <ul class="sale_title">热销排行榜</ul>
+                                            <ul class="sale_ul">
+                                            <!--{foreach from=$sale_order1 item=sale key=k name=foo}-->
+                                            <li class="sale_li"><a href="goods{$sale.goods_id}.html" title="{$sale.goods_name}" target="_blank"><font {if $k lt 3}color="#c30000"{/if} class="fbold">{$smarty.foreach.foo.iteration}</font>.{$sale.goods_name}</a></li>
+                                            <!--{/foreach}-->
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>                                                                   
+                        </div>
+                    </li> 
+                    <li class="nav_w2 nav_h"> 
+                    	<a href="category_6.html" class="nav_w2 nav_a"></a>                                     
+                        <div class="com_nav nav_site2">
+                            <ul class="nav_line"></ul>                                               
+                            <ul class="nav_pan_li">
+                                <li class="dcon_l">                                 
+                                    <ul>
+                                        <li class="dcon_head"><a href="category_6.html" class="red">全部彩色片品牌</a></li><!--{foreach from=$cat_6.cat_id item=cat name=foo}-->{if $smarty.foreach.foo.index % 2 == 1}
+                                        <li class="line1"></li><li class="dcon_li d_w2"><a href="{$cat.url}" {if $cat.is_show_red}class="red"{/if} target="_blank">{$cat.name}</a></li>{else}<li class="dcon_li d_w4"><a href="{$cat.url}" {if $cat.is_show_red}class="red"{/if} target="_blank">{$cat.name}</a></li>{/if}<!--{/foreach}--><li class="dcon_a"><a href="category_6.html" class="red">全部彩色片</a></li>
+                                    </ul>
+                                </li>                    
+                                <li class="dcon_r">
+                                    <ul class="dcon_ul2">                                
+                                        <li class="dpan_r_top" style="height:auto;">
+                                            <ul class="hot_title">颜色</ul>
+                                            <ul class="hot_ul" style="height:88px;">
+                                            	<li class="hot_li"><a href="category_6.html?&attr1=%E9%BB%91%E8%89%B2" target="_blank">黑色</a>
+                                                <li class="hot_li"><a href="category_6.html?&attr1=%E7%81%B0%E8%89%B2" target="_blank">灰色</a>
+                                                <li class="hot_li"><a href="category_6.html?&attr1=%E6%A3%95%E8%89%B2" target="_blank">棕色</a>
+                                                <li class="hot_li"><a href="hot-105.html" target="_blank">巧克力色</a>
+                                                <li class="hot_li"><a href="category_6.html?&attr1=%E8%93%9D%E8%89%B2" target="_blank">蓝色</a>
+                                                <li class="hot_li"><a href="category_6.html?&attr1=%E7%B4%AB%E8%89%B2" target="_blank">紫色</a>
+                                                <li class="hot_li"><a href="category_6.html?&attr1=%E7%BB%BF%E8%89%B2" target="_blank">绿色</a>
+                                                <li class="hot_li"><a href="category_6.html?&attr1=%E7%BA%A2%E7%B2%89%E8%89%B2" target="_blank">红粉色</a>
+                                            </ul>                                         
+                                            <ul class="hot_title">热门系列</ul>
+                                            <ul class="hot_ul" style="height:auto; padding-bottom:10px;">
+                                            	<li class="hot_li"><a href="hot-37.html" target="_blank">蕾丝</a></li>
+                                                <li class="hot_li"><a href="hot-42.html" target="_blank">大美目</a></li>
+                                                <li class="hot_li"><a href="hot-106.html" target="_blank">安视优</a></li>
+                                                <li class="hot_li"><a href="hot-35.html" target="_blank">星眸</a></li>
+                                                <li class="hot_li"><a href="hot-72.html" target="_blank">菠萝三色</a></li>
+                                                <li class="hot_li"><a href="hot-79.html" target="_blank">靓彩</a></li>
+                                                <li class="hot_li"><a href="hot-76.html" target="_blank">麦田私语</a></li>
+                                                <li class="hot_li"><a href="hot-75.html" target="_blank">花雾</a></li>
+                                                <li class="hot_li"><a href="hot-97.html" target="_blank">睛彩</a></li>
+                                                <li class="hot_li"><a href="hot-74.html" target="_blank">Kitty猫</a></li>
+                                                <li class="hot_li"><a href="hot-80.html" target="_blank">水灵焕彩</a></li>
+                                                <li class="hot_li"><a href="hot-44.html" target="_blank">露珠</a></li>
+                                            </ul>                                    
+                                        </li>                                    
+                                        <li class="dpan_r_btm">
+                                            <ul class="sale_title">热销排行榜</ul>
+                                            <ul class="sale_ul">
+                                            <!--{foreach from=$sale_order6 item=sale key=k name=foo}-->
+                                            <li class="sale_li"><a href="goods{$sale.goods_id}.html" title="{$sale.goods_name}" target="_blank"><font {if $k lt 3}color="#c30000"{/if} class="fbold">{$smarty.foreach.foo.iteration}</font>.{$sale.goods_name}</a></li>
+                                            <!--{/foreach}-->
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>                                                                   
+                        </div>
+                    </li>                    
+                    <li class="nav_w3 nav_h"> 
+                    	<a href="category_159.html" class="nav_w3 nav_a"></a>                                  
+                        <div class="com_nav nav_site3">
+                            <ul class="nav_line nav_w3"></ul>                                               
+                            <ul class="nav_pan_li">
+                                <li class="dcon_l">                                 
+                                    <ul>
+                                        <li class="dcon_head"><a href="category_159.html" class="red">全部框架眼镜</a></li><!--{foreach from=$cat_159.cat_id item=cat name=foo}-->{if $smarty.foreach.foo.index % 2 == 1}
+                                        <li class="line1"></li><li class="dcon_li d_w2"><a href="{$cat.url}" {if $cat.is_show_red}class="red"{/if} target="_blank">{$cat.name}</a></li>{else}
+                                        <li class="dcon_li d_w4"><a href="{$cat.url}" {if $cat.is_show_red}class="red"{/if} target="_blank">{$cat.name}</a></li>{/if}<!--{/foreach}-->                                    	<li class="dcon_a"><a href="category_159.html" class="red">全部框架眼镜</a></li>
+                                    </ul>
+                                </li>                    
+                                <li class="dcon_r">
+                                    <ul class="dcon_ul2">                                
+                                        <li class="dpan_r_top">
+                                            <ul class="hot_title">款式</ul>
+                                            <ul class="hot_ul" style="height:44px;">
+                                            	<li class="hot_li"><a href="category_159.html?&attr0=%E7%94%B7%E6%AC%BE" target="_blank">男款</a></li>
+                                                <li class="hot_li"><a href="category_159.html?&attr0=%E5%A5%B3%E6%AC%BE" target="_blank">女款</a></li>
+                                                <li class="hot_li"><a href="category_159.html?&attr0=%E4%B8%AD%E6%80%A7%E6%AC%BE" target="_blank">中性款</a></li>                                                
+                                            </ul>  
+                                            <ul class="hot_title" style="margin-top:2px;">框型</ul>
+                                            <ul class="hot_ul" style="height:44px">
+                                            	<li class="hot_li"><a href="category_159.html?&attr1=%E5%8D%8A%E6%A1%86" target="_blank">半框</a></li>
+                                                <li class="hot_li"><a href="category_159.html?&attr1=%E5%85%A8%E6%A1%86" target="_blank">全框</a></li>
+                                                <li class="hot_li"><a href="category_159.html?&attr1=%E6%97%A0%E6%A1%86" target="_blank">无框</a></li>
+                                            </ul>                                                                              
+                                        </li>                                   
+                                        <li class="dpan_r_btm">
+                                            <ul class="sale_title">热销排行榜</ul>
+                                            <ul class="sale_ul">
+                                            <!--{foreach from=$sale_order159 item=sale key=k name=foo}-->
+                                            <li class="sale_li"><a href="goods{$sale.goods_id}.html" title="{$sale.goods_name}" target="_blank"><font {if $k lt 3}color="#c30000"{/if} class="fbold">{$smarty.foreach.foo.iteration}</font>.{$sale.goods_name}</a></li>
+                                            <!--{/foreach}-->
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>                                                                   
+                        </div>
+                    </li>                    
+                    <li class="nav_w4 nav_h"> 
+                    	<a href="category_190.html" class="nav_w4 nav_a"></a>                                   
+                        <div class="com_nav nav_site4">
+                            <ul class="nav_line nav_w4"></ul>                                               
+                            <ul class="nav_pan_li">
+                                <li class="dcon_l" style="height:342px;">                                 
+                                    <ul>
+                                        <li class="dcon_head"><a href="category_190.html" class="red">全部太阳眼镜品牌</a></li><!--{foreach from=$cat_190.cat_id item=cat name=foo}-->{if $smarty.foreach.foo.index % 2 == 1}
+                                        <li class="line1"></li><li class="dcon_li d_w2"><a href="{$cat.url}" {if $cat.is_show_red}class="red"{/if} target="_blank">{$cat.name}</a></li>{else}
+                                        <li class="dcon_li d_w4"><a href="{$cat.url}" {if $cat.is_show_red}class="red"{/if} target="_blank">{$cat.name}</a></li>{/if}<!--{/foreach}-->                                    	<li class="dcon_a"><a href="category_190.html" class="red">全部太阳眼镜</a></li>
+                                    </ul>
+                                </li>                    
+                                <li class="dcon_r">
+                                    <ul class="dcon_ul2">                                
+                                        <li class="dpan_r_top" style="height:auto;">
+                                            <ul class="hot_title">框型</ul>
+                                            <ul class="hot_ul" style="height:40px;">
+                                            	<li class="hot_li"><a href="lab-74.html" target="_blank">蛤蟆镜</a></li>
+                                                <li class="hot_li"><a href="lab-75.html" target="_blank">方形</a></li>
+                                                <li class="hot_li"><a href="lab-76.html" target="_blank">圆形</a></li>
+                                            </ul>    
+                                            <ul class="hot_title">款式</ul>
+                                            <ul class="hot_ul" style="height:60px;">
+                                            	<li class="hot_li"><a href="category_190.html?&attr0=%E4%B8%AD%E6%80%A7%E6%AC%BE" target="_blank">中性款</a></li>
+                                                <li class="hot_li"><a href="category_190.html?&attr0=%E7%94%B7%E6%AC%BE" target="_blank">男款</a></li>
+                                                <li class="hot_li"><a href="category_190.html?&attr0=%E5%A5%B3%E6%AC%BE" target="_blank">女款</a></li>
+                                                <li class="hot_li"><a href="category_190.html?&attr0=%E5%84%BF%E7%AB%A5%E6%AC%BE" target="_blank">儿童款</a></li>
+                                            </ul>                                                                              
+                                        </li>                                    
+                                        <li class="dpan_r_btm">
+                                            <ul class="sale_title">热销排行榜</ul>
+                                            <ul class="sale_ul">
+                                            <!--{foreach from=$sale_order190 item=sale key=k name=foo}-->
+                                            <li class="sale_li"><a href="goods{$sale.goods_id}.html" title="{$sale.goods_name}" target="_blank"><font {if $k lt 3}color="#c30000"{/if} class="fbold">{$smarty.foreach.foo.iteration}</font>.{$sale.goods_name}</a></li>
+                                            <!--{/foreach}-->
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>                                                                   
+                        </div>
+                    </li>                    
+                    <li class="nav_w5 nav_h"> 
+                    	<a href="category_64.html" class="nav_w5 nav_a"></a>                                  
+                        <div class="com_nav nav_site5">
+                            <ul class="nav_line nav_w5"></ul>                                               
+                            <ul class="nav_pan_li">
+                                <li class="dcon_l" style="height:440px;">    
+                                    <ul>
+                                        <li class="dcon_head"><a href="category_64.html" class="red">全部护理液品牌</a></li><!--{foreach from=$cat_64.cat_id item=cat name=foo}-->{if $smarty.foreach.foo.index % 2 == 1}
+                                        <li class="line1"></li><li class="dcon_li d_w2"><a href="{$cat.url}" {if $cat.is_show_red}class="red"{/if} target="_blank">{$cat.name}</a></li>{else}
+                                        <li class="dcon_li d_w4"><a href="{$cat.url}" {if $cat.is_show_red}class="red"{/if} target="_blank">{$cat.name}</a></li>{/if}<!--{/foreach}-->                                    	
+                                    </ul>                                                             
+                                    <ul style="margin-top:20px;">
+                                        <li class="dcon_head"><a href="category_76.html" class="red">全部护理工具品牌</a></li><!--{foreach from=$cat_76.cat_id item=cat name=foo}-->{if $smarty.foreach.foo.index % 2 == 1}
+                                        <li class="line1"></li><li class="dcon_li d_w2"><a href="{$cat.url}" {if $cat.is_show_red}class="red"{/if} target="_blank">{$cat.name}</a></li>{else}
+                                        <li class="dcon_li d_w4"><a href="{$cat.url}" {if $cat.is_show_red}class="red"{/if} target="_blank">{$cat.name}</a></li>{/if}<!--{/foreach}-->                                    </ul>
+                                </li>                    
+                                <li class="dcon_r">
+                                    <ul class="dcon_ul2">  
+                                        <li class="dpan_r_top" style="height:auto;">
+                                            <ul class="hot_title">护理液功能</ul>
+                                            <ul class="hot_ul" style="height:60px;">
+                                            	<li class="hot_li"><a href="hot-107.html" target="_blank">护理液</a></li>
+                                                <li class="hot_li"><a href="hot-108.html" target="_blank">润眼液</a></li>
+                                            	<li class="hot_li"><a href="hot-109.html" target="_blank">洗眼液</a></li>
+                                                <li class="hot_li"><a href="hot-110.html" target="_blank">眼贴膜</a></li>
+												<li class="hot_li" style="width:auto"><a href="hot-118.html" target="_blank">硬性RGP护理</a></li>
+                                            </ul>    
+                                            <ul class="hot_title">护理液规格</ul>
+                                            <ul class="hot_ul" style="height:60px;">
+                                            	<li class="hot_li"><a href="hot-111.html" target="_blank">便携装</a></li>
+                                                <li class="hot_li"><a href="hot-112.html" target="_blank">小瓶装</a></li>
+                                            	<li class="hot_li"><a href="hot-113.html" target="_blank">中瓶装</a></li>
+                                                <li class="hot_li"><a href="hot-114.html" target="_blank">大瓶装</a></li>
+                                                <li class="hot_li"><a href="hot-115.html" target="_blank">组合套装</a></li>
+                                            </ul>                                                                             
+                                            <ul class="hot_title">护理工具类型</ul>
+                                            <ul class="hot_ul" style="height:46px;">
+                                            	<li class="hot_li"><a href="hot-116.html" target="_blank">伴侣盒</a></li>
+                                                <li class="hot_li"><a href="hot-71.html" target="_blank">双联盒</a></li>
+                                            	<li class="hot_li"><a href="hot-68.html" target="_blank">清洗器</a></li>
+                                                <li class="hot_li"><a href="hot-70.html" target="_blank">大镊子</a></li>
+                                            </ul>                        
+                                        </li>                                    
+                                        <li class="dpan_r_btm">
+                                            <ul class="sale_title">热销排行榜</ul>
+                                            <ul class="sale_ul">
+                                            <!--{foreach from=$sale_order64 item=sale key=k name=foo}-->
+                                            <li class="sale_li"><a href="goods{$sale.goods_id}.html" title="{$sale.goods_name}" target="_blank"><font {if $k lt 3}color="#c30000"{/if} class="fbold">{$smarty.foreach.foo.iteration}</font>.{$sale.goods_name}</a></li>
+                                            <!--{/foreach}-->
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>                                                                   
+                        </div>
+                    </li>              
+                </ul>  
+            </li>
+            
+            <li class="mu_link" style="margin:0; padding:0; height:25px; overflow:hidden;">
+            	<dl><dd><a href="recommend.html" title="首席推荐" target="_blank" style="width:100px;"></a></dd><dd><a href="exchange.html" title="会员专区" target="_blank" style="width:100px;"></a></dd><dd><a href="buyersshow.html" title="买家秀" target="_blank" style="width:78px;"></a></dd></dl>
+            </li>
+        </ul> 
+        <ul class="h_k_pan" style="margin:0 auto; padding:0; overflow:hidden;">
+        	<li class="hot_keys_xu">
+            	<ul class="xu_keys">
+                	<li class="hot_keys_h">功能隐形眼镜：</li>
+                    <li><a href="lab-30.html" target="_blank" title="高度近视">高度近视</a></li>
+                    <li><a href="lab-31.html" target="_blank" title="散光定制片" style="color:#f24747;">散光定制片</a></li>
+                    <li><a href="lab-32.html" target="_blank" title="防紫外线">防紫外线</a></li>
+                    <li><a href="lab-34.html" target="_blank" title="远视片">远视片</a></li>
+                    <li><a href="lab-35.html" target="_blank" title="色盲片" style="color:#f24747;">色盲片</a></li>
+                    <li><a href="lab-43.html" target="_blank" title="美容片">美容片</a></li>                 
+                </ul>
+            </li>
+        	<li class="hot_keys" style="margin-left:30px;">
+            	<ul><li class="hot_keys_h" style="margin-right:5px;">功能框架眼镜：</li>                
+                    <li class="hot_keys_r_li"><a href="lab-64.html" target="_blank" title="" style="color:#f24747;">电脑眼镜</a></li>
+                    <li class="hot_keys_r_li"><a href="lab-65.html" target="_blank" title="">运动户外</a></li>                    
+                    <li class="hot_keys_r_li"><a href="lab-63.html" target="_blank" title="">偏光镜</a></li> 
+                    <li class="hot_keys_r_li"><a href="lab-62.html" target="_blank" title="" style="color:#f24747;">老花镜</a></li>  
+                    <li class="hot_keys_r_li"><a href="lab-77.html" target="_blank" title="" style="color:#f24747;">儿童太阳镜</a></li>                  
+                </ul>
+            </li>
+        </ul> 
+    </div>
+	</div><!--temp-->
+</div>

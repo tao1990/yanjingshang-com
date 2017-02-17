@@ -1,0 +1,26 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<div class="searchColMain">
+    <div class="itemSearchResult">
+        <ul>
+            <!--{foreach from=$goods_list item=goods name=foo}-->
+            <li>
+                <span><a href="{$goods.url}" target="_blank"><img src="{$goods.goods_thumb}" alt="{$goods.goods_name}" width="150" height="150"/></a></span>
+                <p class="itemSearchR_p mt5"><a href="{$goods.url}" class="color_qianfei" title="{$goods.name|escape:html}" target="_blank">{$goods.name}</a><span class="blue">{if $goods.goods_name_desc}{$goods.goods_name_desc}{else}{$goods.goods_brief}{/if}</span></p>
+                <p class="mt5">{$lang.exchange_integral}<span class="reds">{$goods.exchange_integral}</span></p>
+            </li>
+            <!--{if $smarty.foreach.foo.index mod 4 eq 3}--><li style="width:720px; height:2px; margin-top:-5px; margin-bottom:6px; border-bottom:1px #dcdcdc dashed; overflow:hidden;"></li><!--{/if}-->
+            <!--{/foreach}-->
+        </ul>
+    </div>
+</div>
+
+<form name="compareForm" method="post"></form>
+<script type="text/javascript">
+  window.onload = function()
+  {
+    Compare.init();
+    fixpng();
+  }
+  var button_compare = '';
+</script>

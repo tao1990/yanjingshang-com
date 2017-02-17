@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="x-ua-compatible" content="ie=7"/>
+<meta http-equiv="Content-Type"    content="text/html; charset=utf-8" />
+<title>{$page_title}</title>
+<meta name="Keywords"    content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="themes/default/style/cart.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://file.easeeyes.com/js/yijq.js"></script>
+<script type="text/javascript" src="/js/jquery.form.js"></script>
+{insert_scripts files='common.js,region.js,shopping_flow.js,flow.js'}
+{insert_scripts files='showdiv.js'}
+</head>
+<body><div class="pop_shadow"></div>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<link href="http://file.easeeyes.com/b2b/css/index.css" rel="stylesheet" type="text/css" />
+
+<div class="block mt10 mb20" style="width:1200px;margin:auto;padding-bottom:60px;">
+
+<!--{if $step eq "done"}-->
+<div class="main_done">
+    
+    <div class="done">
+        <div class="dhead">
+        	<div class="img_right"></div>
+    
+        </div>
+                        
+        {if $order.pay_id eq 4 || $order.pay_id eq 5 || $order.pay_id eq 6 || $order.pay_id eq 8 || $order.pay_id eq 10 || $order.pay_id eq 11 || $order.pay_id eq 12 || $order.pay_id eq 13 || $order.pay_id eq 14 || $order.pay_id eq 15 || $order.pay_id eq 16}<!--【线上支付】-->        
+        <div style="width:970px; height:14px; line-height:14px; text-align:left; margin-top:20px; color:#333; padding-left:32px;">
+        	<div class="fl" style="padding-top:2px; _padding-top:1px;">您的订单号：</div><div class="fl" style=" color:#c30000; font-size:14px; font-weight:bold; width:130px; text-align:left; font-family:'宋体', Arial;">{$order.order_sn}</div>
+            <div class="fl">应付金额：</div><div class="fl"  style=" color:#c30000; font-size:14px; font-weight:bold; text-align:left; margin-right:20px; _display:inline;">{$total.amount_formated}</div> 
+            <div class="fl">支付方式：</div><div class="fl"  style=" color:#333; text-align:left; margin-right:20px; _display:inline;">{if $order.pay_name}{$order.pay_name}{else}{$order.bank_name}{/if}</div>
+            <div class="fl">配送方式：</div><div class="fl"  style=" color:#333; text-align:left;">{$order.shipping_name}</div>
+        </div>        
+         
+        <div style="height:16px; line-height:16px; color:#333; font-size:14px; font-weight:bold; margin-top:26px;">
+        
+        	<div style="margin-left:32px; font-size:14px;">还差一步,请立即支付！</div>
+                        
+        	<div class="cart_end_a" style="float:right; text-align:right; margin-right:32px; _display:inline;">{if $order.order_id && $user_id>0}<a href="user_order_detail_{$order.order_id}.html">查看订单状态&gt;&gt;</a>{/if}<span class="width_20"></span><a href="./">继续购物&gt;&gt;</a></div>
+        </div>
+        
+        <div style="margin-top:12px;">
+                
+            <div style="border:1px #dcdcdc solid; background-color:white;margin:20px 30px;padding:20px 0;text-align:center;">
+            {$pay_online}<div style="color:#666; font-size:12px; margin-top:15px;">点击按钮进入{if $order.pay_name}{$order.pay_name}{else}{$order.bank_name}{/if}支付</div>
+            </div>
+            
+        </div>
+                
+        <div style=" width:1002px; height:16px; line-height:16px; color:#333; font-size:14px; font-weight:bold; text-align:left; text-indent:32px; margin-top:15px;">支付成功后，我们将及时为您发货！</div>
+        {elseif $order.pay_id eq 18}<!--【微信扫码支付】-->
+             <div style="width:970px; height:14px; line-height:14px; text-align:left; margin-top:20px; color:#333; padding-left:32px;">
+            	<div class="fl" style="padding-top:2px; _padding-top:1px;">您的订单号：</div><div class="fl" style=" color:#c30000; font-size:14px; font-weight:bold; width:130px; text-align:left; font-family:'宋体', Arial;">{$order.order_sn}</div>
+                <div class="fl">应付金额：</div><div class="fl"  style=" color:#c30000; font-size:14px; font-weight:bold; text-align:left; margin-right:20px; _display:inline;">{$total.amount_formated}</div> 
+                <div class="fl">支付方式：</div><div class="fl"  style=" color:#333; text-align:left; margin-right:20px; _display:inline;">{if $order.pay_name}{$order.pay_name}{else}{$order.bank_name}{/if}</div>
+                <div class="fl">配送方式：</div><div class="fl"  style=" color:#333; text-align:left;">{$order.shipping_name}</div>
+            </div>        
+             
+            <div style="width:100%; height:16px; line-height:16px; color:#333; font-size:14px; font-weight:bold; margin-top:26px;">
+            
+            	<div style="float:left; margin-left:32px; font-size:14px; _display:inline;">还差一步,请打开手机微信扫一扫支付！</div>
+                            
+            	<div class="cart_end_a" style="float:right; text-align:right; margin-right:32px; _display:inline;">{if $order.order_id && $user_id>0}<a href="user_order_detail_{$order.order_id}.html">查看订单状态&gt;&gt;</a>{/if}<span class="width_20"></span><a href="./">继续购物&gt;&gt;</a></div>
+            </div>
+            
+            <div style="width:1002px; height:80px; margin-top:12px;">
+                    
+                <div style="width:132px; height:132px; border:1px #dcdcdc solid; background-color:white; float:left; margin-left:24px; _display:inline;">
+                {$pay_online}<div style="float:left; margin-left:10px; color:#666; font-size:12px; margin-top:41px; _display:inline;">点击按钮进入{if $order.pay_name}{$order.pay_name}{else}{$order.bank_name}{/if}支付</div>
+                </div>
+                
+            </div>
+                    
+            <div style=" width:1002px; height:16px; line-height:16px; color:#333; font-size:14px; font-weight:bold; text-align:left; text-indent:32px; margin-top:15px;">支付成功后，我们将及时为您发货！</div>       
+        {elseif $order.pay_id eq 2}<!--【银行转账汇款】-->
+		<div style="width:960px; height:16px; line-height:16px; text-align:left; margin-top:20px; color:#333; padding-left:42px;">
+        	<div class="fl" style="height:14px; line-height:14px; margin-top:2px;">
+                <div class="fl" style="padding-top:2px; _padding-top:1px;">您的订单号：</div><div class="fl" style=" color:#c30000; font-size:14px; font-weight:bold; width:130px; text-align:left; font-family:'宋体', Arial;">{$order.order_sn}</div>
+                <div class="fl">应付金额：</div><div class="fl"  style=" color:#c30000; font-size:14px; font-weight:bold; text-align:left; margin-right:20px; _display:inline;">{$total.amount_formated}</div> 
+                <div class="fl">支付方式：</div><div class="fl"  style=" color:#333; text-align:left; margin-right:20px; _display:inline;">{$order.pay_name}</div>
+                <div class="fl">配送方式：</div><div class="fl"  style=" color:#333; text-align:left;">{$order.shipping_name}</div>
+            </div>           
+            
+        	<div class="cart_end_a fr" style="text-align:right; margin-right:32px; _display:inline;">{if $order.order_id && $user_id>0}<a href="user_order_detail_{$order.order_id}.html">查看订单状态&gt;&gt;</a>{/if}<span class="width_20"></span><a href="./">继续购物&gt;&gt;</a></div>            
+            
+        </div> 
+        
+        <div style="width:1002px; height:50px; margin-top:20px;">
+        
+            <div style="width:916px; height:50px; border:1px #dcdcdc solid; background-color:white; float:left; color:#333; font-family:宋体; margin-left:24px; _display:inline; ">
+            
+				<div class="fl" style=" width:90px; height:50px; line-height:50px; text-align:left; text-indent:18px; font-size:14px;">重要提示：</div>
+                <div class="fl" style=" width:800px;height:50px; line-height:50px; text-align:left; font-size:14px;">请您汇款后及时拨打4006-177-176联系我们,这样可以加快您订单的处理速度。</div>
+            </div>
+            
+        </div>   
+        
+		<div style="width:958px; padding-left:42px; height:18px; line-height:18px; font-family:宋体; font-weight:bold; color:#333; font-size:16px; text-align:left; margin-top:22px;">请记录下您需要汇款的银行账号：</div>        
+        <div style="width:1002px; margin-top:20px; text-align:center;">
+        	<img src="images/cart/pay_bank_img1.jpg" width="1002" height="178" alt=""/><img src="images/cart/pay_bank_img2.jpg" width="1002" height="150" alt=""/>
+        </div>
+        
+        {elseif $order.pay_id eq 3}<!--【货到付款】-->
+		<div style="width:960px; height:16px; line-height:16px; text-align:left; margin-top:20px; color:#333; padding-left:42px;">
+        	<div class="fl" style="height:14px; line-height:14px; margin-top:2px; ">
+                <div class="fl" style="padding-top:2px; _padding-top:1px;">您的订单号：</div><div class="fl" style=" color:#c30000; font-size:14px; font-weight:bold; width:130px; text-align:left; font-family:'宋体', Arial;">{$order.order_sn}</div>
+                <div class="fl">应付金额：</div><div class="fl"  style=" color:#c30000; font-size:14px; font-weight:bold; text-align:left; margin-right:20px; _display:inline;">{$total.amount_formated}</div> 
+                <div class="fl">支付方式：</div><div class="fl"  style=" color:#333; text-align:left; margin-right:20px; _display:inline;">{$order.pay_name}</div>
+                <div class="fl">配送方式：</div><div class="fl"  style=" color:#333; text-align:left;">{$order.shipping_name}</div>
+            </div>
+        	<div class="cart_end_a fr" style="text-align:right; margin-right:26px; _display:inline;">{if $order.order_id && $user_id>0}<a href="user_order_detail_{$order.order_id}.html">查看订单状态&gt;&gt;</a>{/if}<span class="width_20"></span><a href="./">继续购物&gt;&gt;</a></div>
+        </div> 
+        
+        <div style="width:1002px; height:66px; margin-top:20px;">
+        
+            <div style="width:916px; height:56px; border:1px #dcdcdc solid; background-color:white; float:left; color:#333; font-family:宋体; margin-left:24px; _display:inline; padding-top:8px;">
+            
+				<div class="fl" style=" width:90px; height:64px; line-height:26px; text-align:left; text-indent:18px; font-size:14px;">重要提示：</div>
+                <div class="fl" style=" width:800px;height:64px; line-height:26px; text-align:left; font-size:14px;">开箱验货后，直接将现金交付快递员。<br/> 快递配送前会与您电话联系确认，请您注意接听。如未及时收到商品，请您及时与我们取得联系!</div>
+            </div>
+            
+        </div>
+        {elseif $order.pay_id eq 9}<!--【邮政商务汇款】-->
+        
+		<div style="width:960px; height:16px; line-height:16px; text-align:left; margin-top:20px; color:#333; padding-left:42px;">
+        	<div class="fl" style="height:14px; line-height:14px; margin-top:2px;">
+                <div class="fl" style="padding-top:2px; _padding-top:1px;">您的订单号：</div><div class="fl" style=" color:#c30000; font-size:14px; font-weight:bold; width:130px; text-align:left; font-family:'宋体', Arial;">{$order.order_sn}</div>
+                <div class="fl">应付金额：</div><div class="fl"  style=" color:#c30000; font-size:14px; font-weight:bold; text-align:left; margin-right:20px; _display:inline;">{$total.amount_formated}</div> 
+                <div class="fl">支付方式：</div><div class="fl"  style=" color:#333; text-align:left; margin-right:20px; _display:inline;">{$order.pay_name}</div>
+                <div class="fl">配送方式：</div><div class="fl"  style=" color:#333; text-align:left;">{$order.shipping_name}</div>
+            </div>           
+            
+        	<div class="cart_end_a fr" style="text-align:right; margin-right:32px; _display:inline;">{if $order.order_id && $user_id>0}<a href="user_order_detail_{$order.order_id}.html">查看订单状态&gt;&gt;</a>{/if}<span class="width_20"></span><a href="./">继续购物&gt;&gt;</a></div>            
+            
+        </div> 
+        
+        <div style="width:1002px; height:50px; margin-top:20px;">
+        
+            <div style="width:916px; height:50px; border:1px #dcdcdc solid; background-color:white; float:left; color:#333; font-family:宋体; margin-left:24px; _display:inline; ">
+            
+				<div class="fl" style=" width:90px; height:50px; line-height:50px; text-align:left; text-indent:18px; font-size:14px;">重要提示：</div>
+                <div class="fl" style=" width:800px;height:50px; line-height:50px; text-align:left; font-size:14px;">请您汇款后及时拨打4006-177-176联系我们,这样可以加快您订单的处理速度。</div>
+            </div>
+            
+        </div>   
+        
+		<div style="width:958px; padding-left:42px; height:18px; line-height:18px; font-family:宋体; font-weight:bold; color:#333; font-size:16px; text-align:left; margin-top:22px;">填写汇款单请勾选商务汇款栏,易视网商户客户号为<font class="red">886421491</font>,附言栏内填写网站订单号码,及用户信息。</div>        
+        <div style="width:1002px; margin-top:20px; text-align:center;"><img src="images/cart/pay_post_img.jpg" width="720" height="507" alt=""/></div> 
+        
+        {elseif $order.pay_id eq 1}<!--【余额支付】-->
+		<div style="width:960px; height:16px; line-height:16px; text-align:left; margin-top:20px; color:#333; padding-left:42px;">
+        	<div class="fl" style="height:14px; line-height:14px; margin-top:2px;">
+                <div class="fl" style="padding-top:2px; _padding-top:1px;">您的订单号：</div><div class="fl" style=" color:#c30000; font-size:14px; font-weight:bold; width:130px; text-align:left; font-family:'宋体', Arial;">{$order.order_sn}</div>
+                <div class="fl">已付金额：</div><div class="fl"  style=" color:#c30000; font-size:14px; font-weight:bold; text-align:left; margin-right:20px; _display:inline;">{$total.amount_formated}</div> 
+                <div class="fl">支付方式：</div><div class="fl"  style=" color:#333; text-align:left; margin-right:20px; _display:inline;">{$order.pay_name}</div>
+                <div class="fl">配送方式：</div><div class="fl"  style=" color:#333; text-align:left;">{$order.shipping_name}</div>
+            </div>           
+            
+        	<div class="cart_end_a fr" style="text-align:right; margin-right:32px; _display:inline;">{if $order.order_id && $user_id>0}<a href="user_order_detail_{$order.order_id}.html">查看订单状态&gt;&gt;</a>{/if}<span class="width_20"></span><a href="./">继续购物&gt;&gt;</a></div>            
+            
+        </div> 
+        
+        <div style="width:1002px; height:66px; margin-top:20px;">
+        
+            <div style="width:916px; height:56px; border:1px #dcdcdc solid; background-color:white; float:left; color:#333; font-family:宋体; margin-left:24px; _display:inline; padding-top:8px;">
+            
+				<div class="fl" style=" width:90px; height:64px; line-height:26px; text-align:left; text-indent:18px; font-size:14px;">重要提示：</div>
+                <div class="fl" style=" width:800px;height:64px; line-height:26px; text-align:left; font-size:14px;">快递配送前会与您电话联系确认，请您注意接听。如未及时收到商品，请您及时与我们取得联系!</div>
+            </div>            
+        </div> 
+        {else}<!--【网银中具体的支付方式】-->
+        	
+        
+        <!--{/if}【支付页面结束】-->
+	</div>
+	
+</div>
+
+<!--{/if}-->
+ 
+
+</div>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fe48ccf4344d9eeb0415ec07e5c72096b' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+<script type="text/javascript">
+	var process_request = "{$lang.process_request}";
+	<!---->{foreach from=$lang.passport_js item=item key=key}var {$key} = "{$item}";{/foreach}
+	var username_exist = "{$lang.username_exist}";
+	var compare_no_goods = "{$lang.compare_no_goods}";
+	var btn_buy = "{$lang.btn_buy}";
+	var is_cancel = "{$lang.is_cancel}";
+	var select_spe = "{$lang.select_spe}";
+</script>
+</html>

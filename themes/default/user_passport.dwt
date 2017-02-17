@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="Generator" content="ECSHOP v2.7.3" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+<title>密码找回-云镜商-眼镜业采购批发第1品牌</title>
+<link href="http://file.easeeyes.com/b2b/css/base.css" rel="stylesheet" type="text/css" />
+<link href="http://file.easeeyes.com/b2b/css/dlzc.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://file.easeeyes.com/b2b/js/user.js"></script>
+<script type="text/javascript" src="http://file.easeeyes.com/b2b/js/transport.js"></script>
+<script type="text/javascript" src="http://file.easeeyes.com/b2b/js/utils.js"></script>
+
+    
+    <script type="text/javascript" src="/js/transport.js"></script>
+    {insert_scripts files='common.js,user.js'}
+    <script type="text/javascript" src="/js/inner.js"></script>
+    
+    
+<body>
+
+  	<script type="text/javascript" src="http://file.easeeyes.com/b2b/js/region.js"></script>	<script type="text/javascript">
+	<!--
+		 region.isAdmin = false;
+	//-->
+	</script>
+   <div class="yj_ding clearfix">
+                
+        </div>
+      
+   <p class="zhuce_logo"><a href="index.php"><img src="http://file.easeeyes.com/b2b/images/logo.png" width="200" height="63" alt="" /></a></p>
+    <div class="zhuce_box">
+    	<p class="zhuce_t1">密码找回</p>
+        <div class="zhuce_di">
+			<p class="zhu_t2"></p>
+            <ul class="zhuce_list">
+        	
+             <!--找回密码界面 -->
+            <!--{if $action eq 'get_password'} -->
+                {insert_scripts files='utils.js'}
+                <script type="text/javascript">
+                <!---->{foreach from=$lang.password_js item=item key=key} var {$key} = "{$item}";
+                <!---->{/foreach}
+                </script>
+                
+                <div id="getback_pwd">
+                <form action="user.php" method="post" name="getPassword" onsubmit="return submitPwdInfo();">
+                <div class="gb_con" style="width:600px; height:500px; margin-top:50px;">
+                	<div>
+                    	<div class="gb_head1" style="text-align:center;"><img src="images/login/key.gif" border="0" width="54" height="45" /></div>
+                    	<div class="gb_head2" style="text-align:center;line-height:3;font-size:15px;margin-bottom:15px;color:#333;">忘记密码？不要着急...</div>
+                    </div>
+                    <div class="gb_text" style="text-align:center;padding-bottom:10px;color:#999;">请输入注册邮箱，来找回您的密码：</div>
+                    <div class="gb_input" style="text-align:center;"><input name="email" type="text" style="padding:5px 10px;height:28px; width:300px; border:1px #dcdcdc solid; font-size:16px; line-height:28px;"/></div>
+                    <div>
+                    	<div class="gb_btdiv" style="text-align:center;padding-top:20px;">
+                        	<input type="hidden" name="act" value="send_pwd_email" />
+                        	<input type="submit" name="submit" value="提交" class="gb_bt1" style="height:45px;line-height:45px;width:250px;text-align:center;background:#015287;color:#fff;font-family:'Microsoft Yahei';font-size:15px;border:0 none;border-radius:5px;" /></div>
+                        <div style="text-align:center;padding-top:10px;"><input name="button" type="button" onclick="window.location.href='./';" value="返回首页" class="gb_bt2"  style="height:45px;line-height:45px;width:250px;text-align:center;background:#fff;color:#015287;font-family:'Microsoft Yahei';font-size:15px;border:1px solid #015287;border-radius:5px;" /></div>
+                    </div>
+                </div>
+                </form>
+                </div>
+            <!--{/if}-->
+            
+            <!--{if $action eq 'reset_password'} -->
+            <script type="text/javascript">
+            <!---->{foreach from=$lang.password_js item=item key=key}
+            <!---->	var {$key} = "{$item}";
+            <!---->{/foreach}
+            </script>
+            
+            <div style="width:600px; height:282px;text-align:center;">
+            <form action="user.php" method="post" name="getPassword2" onSubmit="return submitPwd()">
+            	<div class="space10" style="height:63px;"></div>
+                <div style="width:435px; height:32px;margin:auto">
+                	<div style="width:90px; height:32; line-height:32px; text-align:right; float:left; color:#666; font-size:14px;">新密码：</div>
+                    <div style="width:345px; float:right;"><input name="new_password" type="password" size="25" class="inputcon" style="line-height:25px;height:25px;padding:5px 10px;border:1px solid #ccc;" /></div>
+                </div>
+                <div class="space10" style="height:16px;"></div>
+                <div style="width:435px; height:32px;margin:auto">
+                	<div style="width:90px; height:32; line-height:32px; text-align:right; float:left; color:#666; font-size:14px;">确认新密码：</div>
+                    <div style="width:345px; float:right;"><input name="confirm_password" type="password" size="25"  class="inputcon" style="line-height:25px;height:25px;padding:5px 10px;border:1px solid #ccc;" /></div>
+                </div>
+                <div style="margin-top:20px;">
+                    <input type="hidden" name="act" value="act_edit_password" />
+                    <input type="hidden" name="uid" value="{$uid}" />
+                    <input type="hidden" name="code" value="{$code}" />    
+                	<input type="submit" name="submit" value="确 定" style="width:250px;height:45px;line-height:45px;background:#015287;color:#fff;font-family:'Microsoft Yahei';font-size:15px;text-align:center;border:0 none;border-radius:5px;margin-top:30px;"/>
+                </div> 
+            </form>  
+            </div>
+            <!--{/if}-->
+            <!--#找回密码界面 end-->
+                        </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script type="text/javascript">
+	var process_request = "{$lang.process_request}";
+	<!---->{foreach from=$lang.passport_js item=item key=key}
+	<!---->var {$key} = "{$item}";
+	<!---->{/foreach}
+	var username_exist = "{$lang.username_exist}";
+</script>
+</html>
+

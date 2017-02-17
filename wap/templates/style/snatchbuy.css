@@ -1,0 +1,89 @@
+﻿/*------------------------------------------------------------------------------【公共属性】------------------------------------------------------------------------------*/
+/* 本地和线上兼容版本 */
+body{text-align:justify;}
+
+ul li{float:left;}
+img{ border:none;}
+.mul{width:1002px; height:auto; margin:0 auto;}
+.mul > li{float:left; overflow:hidden; font-size:0;}
+.mul ul{ font-size:12px;}
+.mul a{display:block; overflow:hidden;}
+.head_space{height:0px;}
+dl dd{float:left;}
+.goods_name a{ color:#133a82}
+.q_pan a{ color:#6d6d6d;}
+#float_dao_pan{position:fixed; right:0; top:200px; z-index:8; _position:absolute; _bottom:auto; 
+_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-150-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));}
+/*------------------------------------------------------------------【公共属性END】-----------------------------------------------------------------*/
+
+
+/*.body_bg{background:url(../images/active/snatchbuy/top.jpg) center top no-repeat #fff; min-width:1002px; height:auto; margin:-10px auto 0 auto; padding:196px 0 0 0; overflow:hidden;}*/
+.body_bg{background:url(../images/active/snatchbuy/top.jpg) center top no-repeat #fff; min-width:1002px; height:auto; margin:-10px auto; padding:0; overflow:hidden;}
+.body_bg_qiandao{background:url(../images/active/snatchbuy/top_qiandao.jpg) center top no-repeat #fff; min-width:1002px; height:auto; margin:-10px auto; padding:0; overflow:hidden;}
+.cps_qq{background-image:url(../images/active/20120707/top-qq.jpg);}
+
+.head_box{width:1002px; height:111px; margin:0 auto; padding-top:196px;}
+.head_box_ul{width:230px; height:35px; float:right; margin-right:71px; _display:inline;}
+.head_box_li{width:48px; height:30px; line-height:30px; font-size:26px; font-weight:300; color:#000; letter-spacing:6px; text-indent:4px;}
+.head_box_num{width:28px; height:35px; float:right; background:url(../images/active/snatchbuy/at_number.gif) no-repeat;}
+
+.goods_pan{width:180px; height:296px; background-color:#f3f3f3; margin:10px 17px 0 0; text-align:center;}
+
+.g_pan_tip{width:180px; height:49px; margin-bottom:-49px; position:relative; top:0; left:0; z-index:1; background:url(../images/active/snatchbuy/z4.gif) no-repeat; overflow:hidden;}
+.g_pan_tip_qiandao{width:180px; height:49px; margin-bottom:-49px; position:relative; top:0; left:0; z-index:1; background:url(../images/active/snatchbuy/z4_qiandao.gif) no-repeat; cursor:pointer; overflow:hidden;}
+.g_tip_zhe5{background:url(../images/active/snatchbuy/z5.gif) no-repeat;}
+
+.goods_img{width:150px; height:150px; margin:10px 15px; _display:inline;}
+.goods_name{width:170px; height:20px; line-height:20px; padding:0 5px; overflow:hidden; font-size:14px; font-weight:bold; color:#133a82;}
+.goods_pr{width:180px; height:20px; line-height:20px; font-size:13px; font-weight:600; color:#133a82; text-decoration:line-through;}
+.goods_pr2{width:100%; height:20px; line-height:20px; margin-top:5px; font-size:13px; font-weight:bold; color:#ff6600;}
+.goods_bt{width:100%; height:27px; margin-top:20px;}
+.g_bt_bg{width:82px; height:27px; background:url(../images/active/snatchbuy/bt4.gif) no-repeat; margin:0 auto;}
+
+.mg_l_16{margin-left:16px;}
+.f_size20{font-size:20px;}
+
+.q_pan{width:982px; height:445px; margin:10px 0 0 10px; font:12px/150% "microsoft yahei","Tahoma","Arial","宋体";}
+.q_goods{float:left; width:322px; height:100%; background-color:white;}
+.q_g_tip{width:322px; height:82px; margin-bottom:-82px; position:relative; top:0; left:240px; z-index:1; background:url(../images/active/snatchbuy/300.gif) no-repeat; overflow:hidden;}
+.q_g_tip2{width:322px; height:82px; margin-bottom:-82px; position:relative; top:0; left:240px; z-index:1; background:url(../images/active/snatchbuy/300_disable.gif) no-repeat; overflow:hidden;}
+.q_g_tip2_qiandao{width:322px; height:82px; margin-bottom:-82px; position:relative; top:0; left:240px; z-index:1; background:url(../images/active/snatchbuy/300_disable_qiandao.gif) no-repeat; cursor:pointer; overflow:hidden;}
+.q_g_tip_qiandao{width:322px; height:82px; margin-bottom:-82px; position:relative; top:0; left:240px; z-index:1; background:url(../images/active/snatchbuy/300_qiandao.gif) no-repeat; cursor:pointer; overflow:hidden;}
+.q_g_img{width:280px; height:280px; margin:15px 0 10px 21px; _display:inline;}
+.q_g_con{width:312px; height:76px; margin:0 3px;}
+.q_zhe{width:56px; height:76px; background:url(../images/active/snatchbuy/z1.gif) no-repeat;}
+.q_zhe_disable{width:56px; height:76px; background:url(../images/active/snatchbuy/z1_disable.gif) no-repeat;}
+.q_zhe2{width:56px; height:76px; background:url(../images/active/snatchbuy/free.gif) no-repeat;}
+.q_zhe2_disable{width:56px; height:76px; background:url(../images/active/snatchbuy/free_disable.gif) no-repeat;}
+.q_pr_pan{width:256px; height:74px; border:1px dotted #dcdcdc; border-left:none; border-right:none;}
+.q_h_txt{display:inline-block; /*width:56px;*/width:70px; height:50px; line-height:20px; color:white; font-size:14px; font-weight:bold; text-align:center; margin:12px 0 0 68px;}
+.q_line{width:1px; height:65px; background-color:white; border-right:1px inset #999; overflow:hidden;}
+.q_h1{width:150px; /*width:144px;*/ height:65px; background:url(../images/active/snatchbuy/clock1.gif) no-repeat 16px 12px #871919; cursor:pointer;}
+.q_h3{width:144px; height:65px; background:url(../images/active/snatchbuy/clock3.gif) no-repeat 16px 12px #871919; cursor:pointer;}
+.q_h2{width:141px; height:65px; background:url(../images/active/snatchbuy/clock2.gif) no-repeat 16px 12px; cursor:pointer; border-right:1px inset #ffffff;}
+
+.q_pr_txt{width:90px; height:46px; margin-left:28px; color:#666; _display:inline;}
+.q_pr_txt2{font-size:25px; line-height:25px;}
+.q_pr{width:auto; height:46px; line-height:46px; font-size:45px; font-weight:bold; color:#C00000; text-align:left; overflow:hidden;}
+.q_name{width:228px; height:22px; line-height:22px; font-size:13px; font-weight:bold; color:#666; margin-top:4px; padding:0 10px; overflow:hidden;}
+.q_show{width:100%; height:46px;}
+
+.q_name_no{width:302px; text-align:center; height:22px; line-height:22px; font-size:13px; font-weight:bold; color:#666; margin-top:4px; padding:0 10px; overflow:hidden;}
+.q_pan_no{width:314px; height:30px; line-height:30px; color:#333; padding-left:8px; text-align:center; overflow:hidden; margin-top:10px; margin-bottom:18px;}
+.q_pan_no_txt{font-size:24px; font-weight:bold; font-family:'微软雅黑'; color:#c30000; margin:0 2px;}
+.q_pan_no_txt2{text-decoration:line-through; color:#999; width:92px;}
+.q_pan_no_bt{width:322px; height:35px; background:url(../images/active/snatchbuy/bt3.gif) no-repeat 86px 0;}
+
+.q_bt{width:100%; height:56px; text-align:center;}
+.q_bt_a{width:186px; height:42px; margin:0 auto; margin-top:12px; background:url(../images/active/snatchbuy/bt1.gif) no-repeat;}
+.q_bt_a2{width:186px; height:42px; margin:0 auto; margin-top:12px; background:url(../images/active/snatchbuy/bt2.gif) no-repeat;}
+
+.q_tishi{width:100%; height:42px; line-height:30px; color:white; font-size:14px; font-weight:bold; text-align:center;}
+
+.title_bg1{width:1002px; height:81px; background:url(../images/active/snatchbuy/bg1.gif) repeat-x 0 14px;}
+.title_bg2{width:1002px; height:61px; background:url(../images/active/snatchbuy/bg2.gif) repeat-x 0 10px;}
+.title1{width:100%; height:81px; background:url(../images/active/snatchbuy/t1.gif) center top no-repeat;}
+
+.title2{width:1002px; height:auto; padding-bottom:20px; background:url(../images/active/snatchbuy/t2.gif) left top no-repeat #133a82; margin-bottom:20px;}
+.title3{width:100%; height:60px; background:url(../images/active/snatchbuy/t3.gif) center top no-repeat;}
+.title4{width:1002px; height:auto; padding-bottom:20px; background:url(../images/active/snatchbuy/t4.gif) 8px top no-repeat #2c9cad; margin-bottom:10px;}

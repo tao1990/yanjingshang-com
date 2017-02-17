@@ -1,0 +1,20 @@
+<div class="yh_prompt">
+    <div class="prompt_con">    
+    	<div class="prompt_left">
+        	<div class="prompt_title"><font style="color:#c30000; font-weight:bold;">优惠提示：</font></div>            
+            <div class="prompt_lists">
+            <!--{foreach from=$fav item=favli}-->{if $favli.not_show eq 0}	
+            <div class="prompt_list"><font class="color0">&#149;</font>&nbsp; {$favli.act_name}</div>{/if}
+            <!--{/foreach}-->
+            </div>                    
+        </div>        
+        <div class="prompt_right">        
+            <div class="package_tip"><img src="images/val_icon.gif" width="14" height="16" alt=""/></div>                
+            <div class="prompt_rtitle">超值礼包[推荐]</div><br/>
+            <div class="first_title">
+            <a href="package{$tj_pk.act_id}.html" target="_blank" class="ptitle">{$tj_pk.act_name|truncate:20:false}</a></div>            
+           <div class="prompt_package_con"><font class="red">{$tj_pk.package_price}</font> <a href="promotions.html" target="_blank" style="color:#c30000; margin-left:8px; font-weight:normal;"><u>详情</u></a> </div>
+            <div class="prompt_package_buy"><a href="package{$tj_pk.act_id}.html" target="_blank"><img src="images/buyact.gif" width="40" height="16" alt=""/></a></div>
+        </div>
+    </div>
+</div>

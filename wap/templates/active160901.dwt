@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>硅水凝胶抱团疯抢，全场隐形眼镜满278减35元，护理液底价疯抢</title>
+<meta name="Keywords"  content="易视网,易视眼镜网,美瞳,护理液,润眼液,博士伦,海昌,海俪恩,卫康,库博,视康,强生,sho-bi,GEO,NEO,BESCON" />
+<meta name="Description" content="易视网，硅水凝胶抱团疯抢，全场隐形眼镜满278减35元，护理液底价疯抢，24小时闪电发货，30天退换货保障" />
+<link rel="stylesheet" href="http://file.easeeyes.com/index2015/css/ani.css" />
+<style>
+.yhqbox{position:relative;}
+.yhqbox span{width:3rem;height:3rem;position:absolute;top:7.4rem;}
+</style>
+</head>
+<!--tpl
+<div><img src="http://file.easeeyes.com/wap/images/20160901/banner.jpg" alt="" style="display:block;"></div>
+<div><a href=""><img src="http://file.easeeyes.com/wap/images/20160901/banner.jpg" alt="" style="display:block;"></a></div>
+-->
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<!--main-->
+<div class="container">
+	<div><img src="http://file.easeeyes.com/wap/images/20160901/banner.jpg" alt="" style="display:block;"></div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160901/01.jpg" alt="" style="display:block;"></div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160901/02.jpg" alt="" style="display:block;"></div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160901/03.jpg" alt="" style="display:block;"></div>
+	<div><a href="http://m.easeeyes.com/goods119.html"><img src="http://file.easeeyes.com/wap/images/20160901/04.jpg" alt="" style="display:block;"></a></div>
+	<div><a href="http://m.easeeyes.com/goods1097.html"><img src="http://file.easeeyes.com/wap/images/20160901/05.jpg" alt="" style="display:block;"></a></div>
+	<div><a href="http://m.easeeyes.com/goods2686.html"><img src="http://file.easeeyes.com/wap/images/20160901/06.jpg" alt="" style="display:block;"></a></div>
+	<div><a href="http://m.easeeyes.com/goods118.html"><img src="http://file.easeeyes.com/wap/images/20160901/07.jpg" alt="" style="display:block;"></a></div>
+	<div><a href="http://m.easeeyes.com/goods993.html"><img src="http://file.easeeyes.com/wap/images/20160901/08.jpg" alt="" style="display:block;"></a></div>
+	<div><a href="http://m.easeeyes.com/goods93.html"><img src="http://file.easeeyes.com/wap/images/20160901/09.jpg" alt="" style="display:block;"></a></div>
+	<div class="yhqbox">
+		<a href="http://m.easeeyes.com/goods1045.html">
+			<img src="http://file.easeeyes.com/wap/images/20160901/10.jpg" alt="" style="display:block;">
+		</a>
+		<!--2盒券-->
+		<span style="right:7.25rem;" onclick="get_bonus(1)"></span>
+		<!--4盒券-->
+		<span style="right:4.05rem;" onclick="get_bonus(2)"></span>
+	</div>
+	<div><a href="http://m.easeeyes.com/goods4751.html"><img src="http://file.easeeyes.com/wap/images/20160901/11.jpg" alt="" style="display:block;"></a></div>
+	<div><a href="http://m.easeeyes.com/goods5030.html"><img src="http://file.easeeyes.com/wap/images/20160901/12.jpg" alt="" style="display:block;"></a></div>
+	<div><a href="http://m.easeeyes.com/goods5031.html"><img src="http://file.easeeyes.com/wap/images/20160901/13.jpg" alt="" style="display:block;"></a></div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160901/14.jpg" alt="" style="display:block;"></div>
+	<div><a href="http://m.easeeyes.com/goods585.html"><img src="http://file.easeeyes.com/wap/images/20160901/15.jpg" alt="" style="display:block;"></a></div>
+	<div><a href="http://m.easeeyes.com/goods3338.html"><img src="http://file.easeeyes.com/wap/images/20160901/16.jpg" alt="" style="display:block;"></a></div>
+	<div><a href="http://m.easeeyes.com/goods4925.html"><img src="http://file.easeeyes.com/wap/images/20160901/17.jpg" alt="" style="display:block;"></a></div>
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+
+<script>
+function get_bonus(bonus_id){
+    $.ajax({
+        type:'POST',
+        url:'ajax_active.php?act=get_bonus_16080101',
+        data:'&bonus_id='+bonus_id+'&m='+Math.random(),
+        cache:false,
+        success:
+                function(da)
+                {
+                    if(da == 1){
+                        alert('您已成功领取优惠券！请至我的红包/优惠券查看^_^');
+                    }else if(da == 2){
+                        alert('请登录后再试^_^');
+                    }else if(da == 3){
+                        alert('您已领取过该优惠券^_^');
+                    }
+                }
+    });
+}
+</script>
+</html>

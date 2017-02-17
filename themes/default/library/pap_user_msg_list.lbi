@@ -1,0 +1,13 @@
+<ul class="u_msg_ul">
+<!--{foreach from=$list item=list name=foo}-->
+	<li class="memberinfo-item">
+    	<dl style="overflow:hidden;">
+        	<dd class="u_m_l_d1">{$list.f_add_time}</dd>
+            <dd class="u_m_l_d2 fb6" {if $list.is_read}style="font-weight:normal; color:#999;"{/if}>
+				<a href="user_msg_info_{$list.rec_id}.html" title="查看消息内容" class="fr">查看</a>
+				<a href="user_msg_info_{$list.rec_id}.html" title="查看消息内容">{$list.title}</a>
+			</dd>
+        </dl><dl class="u_m_line"></dl>
+    </li>
+<!--{/foreach}--> 
+</ul>

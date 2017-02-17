@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta content="telephone=no" name="format-detection"/>
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/menu.css"/>
+</head>
+<body>
+<!-- head -->
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<div class="content" >
+<ul class="menu_ul">
+    <!--{foreach from=$menu_list_bot key=k item=v}-->
+    <li id="menu_li_{$k}">
+        <h3 class="menu_h3" id="menu_h3_{$k}">
+        <a href="#" >
+            <i><img src="{$image_url}wap/images/menu_{$k}.png" /></i>
+            <abbr>{$v.1}</abbr>
+        </a>
+        </h3>
+        <div class="collapsible" id="collapsible_{$k}">
+                    <!--{foreach from=$v.son item=v2}-->
+                    <a  href='category.php?cat_id={$v2.cat_id}'>{$v2.cat_name}</a>
+                    <!--{/foreach}-->
+        </div>
+    </li>
+    <!--{/foreach}-->
+</ul>
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+<div id="bt"></div>
+<script>
+$(".menu_h3").bind("click",function(){
+        focusId = $(this).attr('id');
+        focusDivId = $("#"+focusId).next().attr('id');
+        if($("#"+focusDivId).css('display')=="none"){
+            $(".collapsible").css('display','none');
+            $("#"+focusDivId).show();
+        }else{
+            $("#"+focusDivId).hide();
+        }
+});
+</script>
+</body>
+</html>

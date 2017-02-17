@@ -1,0 +1,78 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--收货地址表单-->
+<form action="flow.php" method="post" name="theForm" id="theForm" onsubmit="return checkConsignee(this)">
+<div class="flowBox">
+{insert_scripts files='utils.js,transport.js'}
+<table width="100%" height="230px" cellspacing="0" cellpadding="0" border="0" style="margin-top:30px;"> 
+<colgroup>
+	<col style="width:188px; text-align:right; color:#f00;"/>
+    <col style="width:63px; text-align:right;"/>
+	<col style="width:212px; text-align:left;"/>
+    <col style="width:500px; text-align:left;"/>    
+</colgroup>    
+    <tr>
+        <td>(*必填)</td><td class="pr18">收货人姓名:</td>
+        <td>
+            <input type="text" name="consignee" class="login_input" id="consignee_{$sn}" value="{$consignee.consignee|escape}"/>
+        </td>
+        <td>请填写收货人全名</td>
+    </tr>
+    <tr>
+        <td>(*必填)</td><td class="pr18">配送区域:</td>
+        <td colspan="2">
+            <select name="country" id="selCountries_{$sn}" onchange="region.changed(this, 1, 'selProvinces_{$sn}')" style=" margin-left:2px;border:1px solid #ccc;">
+            <option value="0">{$lang.please_select}{$name_of_region[0]}</option>
+            <!-- {foreach from=$country_list item=country} -->
+            <option value="{$country.region_id}" {if $consignee.country eq $country.region_id}selected{/if}>{$country.region_name}</option>
+            <!-- {/foreach} -->
+            </select>
+            
+            <select name="province" id="selProvinces_{$sn}" onchange="region.changed(this, 2, 'selCities_{$sn}')" style="border:1px solid #ccc;">
+            <option value="0">{$lang.please_select}{$name_of_region[1]}</option>
+            <!-- {foreach from=$province_list.$sn item=province} -->
+            <option value="{$province.region_id}" {if $consignee.province eq $province.region_id}selected{/if}>{$province.region_name}</option>
+            <!-- {/foreach} -->
+            </select>
+            
+            <select name="city" id="selCities_{$sn}" onchange="region.changed(this, 3, 'selDistricts_{$sn}')" style="border:1px solid #ccc;">
+            <option value="0">{$lang.please_select}{$name_of_region[2]}</option>
+            <!-- {foreach from=$city_list.$sn item=city} -->
+            <option value="{$city.region_id}" {if $consignee.city eq $city.region_id}selected{/if}>{$city.region_name}</option>
+            <!-- {/foreach} -->            
+            </select>           
+            
+            <select name="district" id="selDistricts_{$sn}" {if !$district_list.$sn}style="display:none"{/if} >
+            <option value="0">{$lang.please_select}{$name_of_region[3]}</option>
+            <!-- {foreach from=$district_list.$sn item=district} -->
+            <option value="{$district.region_id}" {if $consignee.district eq $district.region_id}selected{/if}>{$district.region_name}</option>
+            <!-- {/foreach} -->
+            </select>        
+        </td>
+    </tr>
+    <tr>
+        <td>(*必填)</td><td class="pr18">详细地址:</td>
+        <td><input type="text" name="address" class="login_input" id="address_{$sn}" value="{$consignee.address|escape}"/></td>
+        <td>请填写详细地址</td>
+    </tr>
+    <tr>
+        <td>(*必填)</td><td class="pr18">电子邮件:</td>
+        <td><input type="text" name="email" class="login_input" id="email_{$sn}" value="{$consignee.email|escape}"/></td>
+        <td>我们会发邮件告知您订单的详细情况</td>
+    </tr>
+    <tr>
+        <td>(*必填)</td><td class="pr18">电话或手机:</td>
+        <td><input type="text" name="tel" class="login_input" id="tel_{$sn}" {if $consignee.tel} value="{$consignee.tel}"{else} value="{$consignee.mobile}"{/if}/></td>
+        <td>方便及时与您取得联系</td>
+    </tr>
+    <input type="hidden" name="zipcode" class="login_input" id="zipcode_{$sn}" value="{$consignee.zipcode|escape}"/>    
+    <input type="submit" name="Submit" class="bnt_blue_2" value="{$lang.shipping_address}" style="display:none" />
+    <!--{if $smarty.session.user_id gt 0 and $consignee.address_id gt 0}如果登录了，显示删除按钮-->
+    <input type="hidden" name="button" onclick="if (confirm('{$lang.drop_consignee_confirm}')) location.href='flow.php?step=drop_consignee&amp;id={$consignee.address_id}'" class="bnt_blue" value="删除" />
+    <!--{/if}-->
+    <input type="hidden" name="step" value="consignee" />
+    <input type="hidden" name="act" value="checkout" />
+    <input type="hidden" name="address_id" id="address_id" value="{$consignee.address_id}" />
+</table><div class="clear"></div>
+	<div class="button_next"><input type="image" src="images/nexttj.gif"></div>
+</div>
+</form>

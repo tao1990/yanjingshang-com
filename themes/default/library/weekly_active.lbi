@@ -1,0 +1,26 @@
+		<ul id="centerwell">
+			<li id="week1">
+				<h3><a href="miaosha.html" target="_blank">周一秒杀</a></h3>
+				<p></p>
+			</li>
+		
+			<li id="week2">
+				<h3><a href="active2.html" target="_blank">周二新品</a></h3>
+				<p></p>
+			</li>
+		
+			<li id="week3">
+				<h3><a href="active3.html" target="_blank">周三会员日</a></h3>
+				<p></p>
+			</li>
+		
+			<li id="week4">
+				<h3><a href="active4.html" target="_blank">周四特惠</a></h3>
+				<p></p>
+			</li>
+		
+			<li id="week5">
+				<h3><a href="tuan.html" target="_blank">周五团购</a></h3>
+				<p></p>
+			</li>
+		</ul>

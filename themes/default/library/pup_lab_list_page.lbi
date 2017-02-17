@@ -1,0 +1,33 @@
+<!--------------------------------------【翻页条】【20120914】start------------------------------------->
+<div id="pagebar">
+    <ul id="pager">   
+        <li class="page_h">{if $pager.page_prev}<a href="{$page_url}&amp;page={$pager.page_prev}" title="上一页">&lt;上一页</a>{else}&lt;上一页{/if}</li>          
+        <!--{if $pager.page_count< 11}10页以内-->       
+        <!--{foreach from=$pager.page_number key=key item=item}-->        
+        <!--{if $pager.page eq $key}--><li class="page_cell red">{$key}</li><!--{else}--><li class="page_cell"><a href="{$page_url}&amp;page={$key}">{$key}</a></li><!--{/if}-->
+        <!--{/foreach}-->        
+        <!--{else}超过10页--> 
+            <!--{if $pager.page eq 1}--><li class="page_cell red">1</li><!--{else}--><li class="page_cell"><a href="{$page_url}&amp;page=1">1</a></li><!--{/if}-->
+            <!--{foreach from=$pager.page_number key=key item=item name=pp}-->
+            	{if $smarty.foreach.pp.index < 9 && $smarty.foreach.pp.index>0}                
+                <!--{if $pager.page eq $key}--><li class="page_cell red">{$key}</li><!--{else}--><li class="page_cell"><a href="{$page_url}&amp;page={$key}">{$key}</a></li><!--{/if}-->
+                {/if}
+            <!--{/foreach}-->
+            <!--{if $pager.page eq $pager.page_count}--><li class="page_cell red">{$pager.page_count}</li><!--{else}--><li class="page_cell"><a href="{$page_url}&amp;page={$pager.page_count}">{$pager.page_count}</a></li><!--{/if}-->        
+        <!--{/if}-->
+        <li class="page_h">{if $pager.page_next}<a href="{$page_url}&amp;page={$pager.page_next}" title="下一页">下一页</a>{else}下一页{/if}&gt;</li>
+        <li><span class="page_span">共{$pager.page_count}页</span>到第<input type="text" id="get_submit_page" class="page_input" value=""/>页</li>        
+        <li><input type="button" class="page_submit" onClick="com_page_url_submit();"/></li>   
+    </ul>
+<script type="text/javascript">
+function com_page_url_submit()
+{
+	var pp = document.getElementById("get_submit_page").value;
+	if(pp != 0)
+	{
+		window.location.href= "{$page_url}&amp;page="+pp;
+	}
+}
+</script>
+</div>
+<!--------------------------------------【翻页条】【20120914】END------------------------------------->

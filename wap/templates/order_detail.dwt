@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="templates/style/base.css" rel="stylesheet" type="text/css"/>
+<link href="templates/style/user.css" rel="stylesheet" type="text/css"/>
+<!--[if lte IE 6]><link href="templates/style/ie6_in.css" rel="stylesheet" type="text/css"/><![endif]-->
+<style>
+.user_head{
+	width:100%;
+	line-height:2;
+	height:auto;
+	box-sizing:border-box;
+	margin:1rem 0;
+	padding:0 1rem;
+	background:#f2f2f2;
+}
+table tbody tr:first-child{background:#F2F2F2;}
+table{border:1px solid #dfdfdf;border-collapse:collapse;width:95% !important;margin:auto;box-sizing:border-box;}
+table tr{
+	background:#fff;
+}
+table th,table td{
+	border:1px solid #dfdfdf;
+	padding:.5rem;
+	white-space:nowrap;
+}
+.order_detail_line{
+	width:95%;
+	margin:1rem auto;
+	height:0;
+	border:0 none;
+}
+#tb_goods_info td{
+	white-space:normal;
+	line-height:1.4;
+}
+.order_detail_total{
+	width:95%;
+	margin:1rem auto;
+	line-height:1.2;
+	min-height:none;
+}
+.order_action_li{
+	width:95%;
+	height:auto;
+	padding:.5rem 0;
+	line-height:1.2;
+	margin:auto;
+	text-align:left;
+	overflow:hidden;
+}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<script type="text/javascript" src="templates/js/transport.js"></script>
+<script type="text/javascript" src="templates/js/common.js"></script>
+<script type="text/javascript" src="templates/js/user.js"></script>
+<script type="text/javascript" src="templates/js/inner.js"></script>
+{if $order.pay_id neq 3}<!--非货到付款-->
+<div style="width:95%; padding:1rem; border:1px solid #dcdcdc; background-color:#f8f8f8; margin:1rem auto 0; overflow:hidden;box-sizing:border-box;">
+	<div style="line-height:2rem; float:left; border-bottom:1px dotted #dcdcdc; text-align:left;">
+    	<div class="fl" style=" color:#666; font-size:14px; font-weight:bold; margin-right:2rem;">订单号：{$order.order_sn}</div>
+        <div class="fl" style="color:#666; font-size:14px; font-weight:bold; margin-right:2rem;">状态：<font style="color:#12a000;">{if $order.order_status eq '未确认'}等待付款{else}{$order.order_status}{/if}</font></div>                
+        {if $order.pay_online}
+            <!--{if $is_wx eq 1 && $order.pay_id eq 4}-->
+            <div class="fl" id="toPay" style="clear:both;"><div class="cart_end_bt" style="background-image:url(http://www.easeeyes.com/themes/default/images/cart/pay_4.gif);"></div></div>
+            <!--{else}-->
+            <div class="fl" style="clear:both;">{$order.pay_online}</div>
+            <!--{/if}-->
+            <div class="fl" style="color:#333; padding-top:1.2rem;clear:both;">点击进入{$order.pay_name}支付</div>
+        {/if}
+    </div>
+    <div style="line-height:2rem; color:#666; text-align:left; font-family:宋体; clear:both;padding-top:1rem;">
+    {if $order.order_flow eq 1}尊敬的客户, 我们还未收到该订单的款项，请您尽快打款，以便我们及时为您发货。(若支付过程报错，请重新下单即可！){/if}
+    {if $order.order_flow eq 2 || $order.order_flow eq 3}尊敬的客户，我们已收到您的款项，工作人员正在为您发货！{/if}
+    {if $order.order_flow eq 4}尊敬的客户，您的商品已经发出，请注意查收！{/if}
+    {if $order.order_flow eq 5}尊敬的客户，谢谢您的购买！您有什么问题，欢迎随时联系我们的客服！{/if}
+    </div>
+</div>
+
+
+<div style="width:95%; text-align:center; margin:2rem auto; color:#333;overflow:hidden;">
+	<div style="line-height:1.4rem; color:#12a000; text-align:left;">{if $order.order_flow eq 2}正在出库{/if}</div>
+	<div style=""><img src="{$image_url}themes/default/images/cart/line_pay_{$order.order_flow}.gif" style="width:;" alt=""/></div>
+    <div style="line-height:1.4rem; text-align:left;overflow:hidden"><div class="fl" style="width:20%;">提交订单</div><div class="fl" style="width:20%; {if $order.order_flow > 1}color:#333;{/if}">等待付款</div><div class="fl color9" style="width:20%; {if $order.order_flow > 2}color:#333;{/if}">商品出库</div><div class="fl color9" style="width:20%; {if $order.order_flow > 3}color:#333;{/if}">等待收货</div><div class="fl color9" {if $order.order_flow eq 5}style="color:#333;"{/if}>完成</div></div>
+</div>
+
+{else}<!--货到付款-->
+<div style="width:95%; padding:1rem; border:1px solid #dcdcdc; background-color:#f8f8f8; margin:1rem auto 0;box-sizing:border-box;">
+	<div style="line-height:2rem;border-bottom:1px dotted #dcdcdc; text-align:left;overflow:hidden;">
+    	<div class="fl" style=" color:#666; font-size:14px; font-weight:bold; margin-right:2rem;">订单号：{$order.order_sn}</div>
+        <div class="fl" style="color:#666; font-size:14px; font-weight:bold; margin-right:2rem;">订单状态：<font style="color:#12a000;">{if $order.order_status eq '未确认'}确认审核中{else}{$order.order_status}{/if}</font></div>                
+        {if $order.pay_online}<div class="fl">{$order.pay_online}</div><div class="fl" style="color:#333; margin-left:1rem; padding-top:1rem;">点击进入{$order.pay_name}支付</div>{/if}
+    </div>
+    <div style="line-height:2rem; color:#666; text-align:left; font-family:宋体;clear:both;">    
+    {if $order.order_flow eq 11}尊敬的客户，您的订单正在处理中，请您耐心等待。{/if}
+    {if $order.order_flow eq 12}尊敬的客户，您的订单已取消。<!--<a href="user.php?act=buy_again&order_id={$order.order_id}">我要再买</a>-->{/if}
+    {if $order.order_flow eq 14}尊敬的客户，您的订单已退货成功，如有问题请联系客服。我要再买{/if}
+    {if $order.order_flow eq 1 || $order.order_flow eq 2}尊敬的客户，工作人员正在为您发货，请您耐心等待。{/if}
+    {if $order.order_flow eq 3}尊敬的客户，您的商品已经发出，请保持手机畅通并注意查收！{/if}
+    {if $order.order_flow eq 4}尊敬的客户，谢谢您的购买！您有什么问题或意见，欢迎随时联系我们客服！{/if}
+    </div>
+</div>
+<div style="width:95%; text-align:center; margin:3rem auto; color:#333;">
+	<div style="line-height:1.4rem; color:#12a000; text-align:left; ">{if $order.order_flow eq 1||$order.order_flow eq 11}正在出库{/if}</div>
+	<div style=""><img src="{$image_url}themes/default/images/cart/upay_{$order.order_flow}.gif" width="" alt=""/></div>
+    <div style="line-height:1.4rem; text-align:left;overflow:hidden;"><div class="fl" style="width:25%; {if $order.order_flow > 0}color:#333;{/if}">提交订单</div><div class="fl color9" style="width:25%; {if $order.order_flow > 1}color:#333;{/if}">商品出库</div><div class="fl color9" style="width:25%; {if $order.order_flow > 2}color:#333;{/if}">等待收货</div><div class="fl color9" {if $order.order_flow eq 4}style="color:#333;"{/if}>完成</div></div>
+</div>
+{/if}
+
+
+
+
+
+
+<ul style="width:95%;margin:0 auto; line-height:2.2rem; color:#999; border-bottom:1px solid #dcdcdc;overflow:hidden;"><li class="fl" style="width:30%;">处理时间</li><li class="fl" style="width:50%;">处理信息</li><li class="fl" style="width:20%;">操作人</li></ul>
+
+{foreach from=$action_list item=action}
+<ul class="order_action_li"><li class="fl" style="width:30%;">{$action.action_time}</li><li class="fl" style="width:50%;">{$action.order_status} {$action.pay_status} {$action.shipping_status}</li><li class="fl" style="width:20%;">{if $action.action_user eq '买家'}买家{else}易视网{/if}</li></ul> 
+{/foreach}
+
+
+
+<h2 class="user_head">订单信息</h2>
+{insert_scripts files='transport.js,region.js'}
+
+<div style="width:100%; height:10px; visibility:hidden;"></div>
+<table class="tb_order" cellspacing="0" cellpadding="0" border="0" style="">
+<caption style=" text-align:left; color:#666; font-size:12px; font-weight:bold; padding-bottom:12px;">收货人信息</caption>
+<colgroup>
+<col style="width:70px;"/><col style="width:636px;"/>
+</colgroup>
+	<tr><td class="color9">地<span class="width_24"></span>址：</td><td>{$order.provincena} {$order.cityna} {$order.districtna} {$order.address}</td></tr>
+    <tr><td class="color9">姓<span class="width_24"></span>名：</td><td>{$order.consignee}</td></tr>
+    <tr><td class="color9">电子邮箱：</td><td>{$order.email}</td></tr>
+    <tr><td class="color9">联系电话：</td><td>{if $order.tel}{$order.tel}{else}{$order.mobile}{/if}</td></tr>
+</table>
+<div class="order_detail_line"></div>
+
+<table class="tb_order" cellspacing="0" cellpadding="0" border="0" style="margin:0 auto;">
+<caption style=" text-align:left; color:#666; font-size:12px; font-weight:bold; padding-bottom:12px;">支付及配送方式</caption>
+<colgroup>
+<col style="width:70px;"/><col style="width:636px;"/>
+</colgroup>
+    <tr><td class="color9">支付方式：</td><td>{$order.pay_name}</td></tr>
+    <tr><td class="color9">配送方式：</td><td>{$order.shipping_name}</td></tr>
+</table>
+<div class="order_detail_line"></div>
+
+<table class="tb_order" cellspacing="0" cellpadding="0" border="0" style="margin:0 auto;">
+<caption style=" text-align:left; color:#666; font-size:12px; font-weight:bold; padding-bottom:12px;">其它信息</caption>
+<colgroup>
+<col style="width:70px;"/><col style="width:636px;"/>
+</colgroup>
+    <tr><td class="color9">购物凭证：</td><td>{if $order.inv_payee}购物清单+发票。发票抬头：{$order.inv_payee}{else}购物清单{/if}</td></tr>
+    {if $order.postscript}<tr><td class="color9">订单附言：</td><td>{$order.postscript}</td></tr>{/if}
+</table>
+<div class="order_detail_line"></div>
+
+
+<div style="text-align:left; color:#666; font-size:12px; font-weight:bold; padding-bottom:12px; padding-left:1rem;">商品清单</div>
+          
+<table id="tb_goods_info" width="" border="0" cellpadding="0" cellspacing="0">
+    <tr style="">
+        <th class="tr_goods_info">商品名称</th>
+        <th class="tr_goods_info">属性</th>
+        <th class="tr_goods_info">易视价</th>
+        <th class="tr_goods_info">购买数量</th>
+        <th class="tr_goods_info">小计</th>
+    </tr>                
+    <!--{foreach from=$goods_list item=goods}-->
+    <tr>
+        <td align="left" style="">
+        <!--{if $goods.goods_id gt 0 && $goods.extension_code eq 'package_buy'}礼包-->
+        <a href="goods.php?id={$goods.goods_id}" style="color:#333;">{$goods.goods_name}<span style="color:#f00;">（礼包）</span></a>
+		<!--{elseif $goods.goods_id gt 0 && $goods.extension_code eq 'tuan_buy'}礼包-->
+		<a href="goods.php?id={$goods.goods_id}" style="color:#333;">{$goods.goods_name}<span style="color:#f00;">（团购）</span></a>
+        <!--{else}-->
+        <a href="goods.php?id={$goods.goods_id}" style="color:#333;">{$goods.goods_name}</a>
+            <!--{if $goods.parent_id > 0}-->
+            <span style="color:#f00">（{$lang.accessories}）</span>
+            <!--{elseif $goods.is_gift && $goods.goods_price eq '0.00'}-->
+            <span style="color:#f00">（赠品）</span>
+            <!--{elseif $goods.is_gift && $goods.goods_price neq '0.00'}-->
+            <span style="color:#f00">（特惠商品）</span>
+            <!--{/if}-->
+        <!--{/if}-->          
+        <!--{if $goods.is_shipping}-->(<span style="color:#f00">{$lang.free_goods}</span>)<!--{/if}-->
+        </td>                    
+        <td>
+            <!--{if goods.goods_attr}-->{$goods.goods_attr|nl2br}<br/><!--{/if}-->
+            <!--{if $goods.zcount > 0}--> 左眼度数：{$goods.zselect} 数量：{$goods.zcount}<br/><!--{/if}-->
+            <!--{if $goods.ycount > 0}--> 右眼度数：{$goods.yselect} 数量：{$goods.ycount}<br/><!--{/if}-->
+            <!--{if $goods.ds_extention}--> 瞳距：{$goods.ds_extention}<!--{/if}-->
+        </td>
+        <td>{$goods.goods_price}</td>
+        <td>{$goods.goods_number}</td>
+        <td>{$goods.subtotal}</td>
+    </tr>
+    <!--{/foreach}-->
+</table> 
+
+<ul class="order_detail_total">
+	<li class="fr"><ul class="order_total_ul fr"><li class="order_total_li1 fl">商品总价：</li><li class="order_total_li2 fr">{$order.formated_goods_amount}</li></ul></li>
+    <!--{if $order.discount gt 0}折扣-->
+    <li class="fr"><ul class="order_total_ul fr"><li class="order_total_li1 fl">- 折扣：</li><li class="order_total_li2 fr">{$order.formated_discount}</li></ul></li><!--{/if}-->
+    <!--{if $order.bonus > 0}红包-->
+	<li class="fr"><ul class="order_total_ul fr"><li class="order_total_li1 fl">- 红包/优惠券：</li><li class="order_total_li2 fr">{$order.formated_bonus}</li></ul></li><!--{/if}-->
+    <!--{if $order.integral_money > 0}积分-->
+	<li class="fr"><ul class="order_total_ul fr"><li class="order_total_li1 fl">- 积分：</li><li class="order_total_li2 fr">{$order.formated_integral_money}</li></ul></li><!--{/if}-->
+    <!--{if $order.money_paid > 0}现金支付-->
+	<li class="fr"><ul class="order_total_ul fr"><li class="order_total_li1 fl">- 现金支付：</li><li class="order_total_li2 fr">{$order.formated_money_paid}</li></ul></li><!--{/if}-->        
+    <!--{if $order.surplus > 0}使用余额-->
+	<li class="fr"><ul class="order_total_ul fr"><li class="order_total_li1 fl">- 使用余额：</li><li class="order_total_li2 fr">{$order.formated_surplus}</li></ul></li><!--{/if}-->
+    <li class="fr"><ul class="order_total_ul fr"><li class="order_total_li1 fl">邮资运费：</li><li class="order_total_li2 fr">{if $order.shipping_fee > 0}{$order.formated_shipping_fee}{else}￥0.00{/if}</li></ul></li>
+    <li class="fr"><ul class="order_total_ul fr"><li class="order_total_li1 fl">应付款金额：</li><li class="order_total_li2 fr">￥<font class="font_14_red">{$order.order_amount}</font></li></ul></li>
+</ul>
+<div id="wx_mask" style="width: 100%; position: absolute; top: 0px; display: none;" onclick="pop.close();"><img src="http://www.easeeyes.com/themes//default/images/cart/wx_mask.png" /></div>
+<script src="http://file.easeeyes.com/wap/js/wappop.js"></script>
+<script>
+(function(){
+        var win=window||{},
+                doc=document,
+                root=doc.documentElement;
+        function changeSize(){
+            root.style.fontSize=parseInt(root.clientWidth)*20/640>20?"20px":parseInt(root.clientWidth)*20/640+"px";
+        }
+        if(doc.addEventListener){
+            var evt="orientationchange" in win?"orientationchange":"resize";
+            doc.addEventListener(evt,changeSize,false);
+            doc.addEventListener("DOMContentLoaded",changeSize,false);
+        }
+    })();
+// 弹窗
+var pop=new Pop({id:"wx_mask"});
+document.getElementById("toPay").addEventListener("click",function(){
+    pop.open();
+    return false;
+},false);
+</script>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="Generator" content="ECSHOP v2.7.3" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$page_title}</title>
+<meta name="Keywords"    content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link href="http://file.easeeyes.com/b2b/css/base.css" rel="stylesheet" type="text/css" />
+<link href="http://file.easeeyes.com/b2b/css/dlzc.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://file.easeeyes.com/b2b/js/user.js"></script>
+<script type="text/javascript" src="http://file.easeeyes.com/b2b/js/transport.js"></script>
+<script type="text/javascript" src="http://file.easeeyes.com/b2b/js/utils.js"></script>
+{insert_scripts files='common.js,user.js'}
+<body>
+<!--{if $action eq 'login'}-->
+<div class="main_dl">
+    <form name="formLogin" action="user.php" method="post" onSubmit="return userLogin()">
+    	<div class="yj_dl_left"><img src="http://file.easeeyes.com/b2b/images/yj_dl1.jpg" width="640" height="650" alt="" /></div>
+        <div class="yj_dl_right">
+        	<p class="yj_dl_logo"><a><img src="http://file.easeeyes.com/b2b/images/logo.png" width="200" height="63" alt="" /></a></p>
+            <p class="yj_dl_t1">零售商登录</p>
+        	<ul class="login_list">
+              <li>
+                <p class="login_user_bo">
+                <input type="text" value="" name="username" placeholder="请输入用户名/手机号" class="login_input" onblur="is_registered(this.value);" />
+                </p>
+              </li>
+              <li>
+                <p class="login_password_bo">
+                <input type="password" value="" name="password" placeholder="密码" class="login_password" />
+                </p>
+              </li>
+              <li><input type="checkbox"  name="autologin" class="login_checkbox" checked="true" /><span class="car_auto">记住用户名</span><a href="user.php?act=get_password" class="login_wang">忘记密码？</a></li>
+              <li>
+                <input type="hidden" name="act" value="act_login" />
+                <input type="hidden" name="back_act" value="{$back_act}" />
+                <input type="submit" name="submit" value="登录" class="yj_dl" />
+              </li>
+             <li class="f16" style="color:#333;">没有眼镜商的账户？<a href="user.php?act=register" class="yj_dl_zhc">立即注册</a></li>
+          </ul>
+        </div>
+
+  
+    </form>
+    <div class="clear"></div>
+</div>
+
+<!--{/if}-->
+<!--登录界面end-->
+
+
+<script type="text/javascript">
+	var process_request = "{$lang.process_request}";
+	<!---->{foreach from=$lang.passport_js item=item key=key}
+	<!---->var {$key} = "{$item}";
+	<!---->{/foreach}
+	var username_exist = "{$lang.username_exist}";
+</script>

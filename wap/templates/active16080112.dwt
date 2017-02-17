@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>易视6周年庆遇上火热奥运，美瞳第二件0元</title>
+<meta name="Keywords"  content="易视网,易视眼镜网,美瞳,护理液,润眼液,博士伦,海昌,海俪恩,卫康,库博,视康,强生,sho-bi,GEO,NEO,BESCON" />
+<meta name="Description" content="易视网，易视6周年庆遇上火热奥运，戴着美瞳看奥运，第二件0元，还有更多好货第二件半价，24小时闪电发货，30天退换货保障" />
+<link rel="stylesheet" href="http://file.easeeyes.com/index2015/css/ani.css" />
+<style>
+.goodsItem{float:left;width:15.75rem;margin-bottom:.5rem;box-sizing:border-box;border:.2rem solid #0290dc;background:#fff;}
+.goodsItem:nth-child(even){float:right;}
+.goodsItem-thumb{height:12rem;line-height:12rem;text-align:center;}
+.goodsItem-thumb img{max-height:100%;max-width:100%;vertical-align:middle;}
+.goodsItem-title{height:2.8rem;overflow:hidden;padding:0 1rem;line-height:1.4rem;}
+.goodsItem-title h3{color:#333;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.goodsItem-title span{color:#ff5d7c;}
+.goodsItem-info{color:#0290dc;padding:.25rem 1rem 1rem;background:url(http://img.easeeyes.com/promotion/2016080112/05.jpg) no-repeat 9.5rem 2rem;background-size:5rem auto;}
+.goodsItem-info b{font-size:1.4rem;font-weight:100;}
+.ppBox a{float:left;width:25%;height:5.8rem;}
+.goodsItems-orange .goodsItem{border-color:#eb5000;}
+.goodsItems-orange .goodsItem-info{color:#eb5000;}
+.goodsItems-green .goodsItem{border-color:#6aaf20;}
+.goodsItems-green .goodsItem-info{color:#6aaf20;}
+</style>
+</head>
+<!--tpl
+<div><img src="http://file.easeeyes.com/wap/images/2016080101/banner.jpg" alt="" style="display:block;"></div>
+<div><a href=""><img src="http://file.easeeyes.com/wap/images/2016080101/banner.jpg" alt="" style="display:block;"></a></div>
+<div style="height:;background:url(http://file.easeeyes.com/wap/images/2016080108/01.jpg);background-size:auto;"></div>
+-->
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<!--main-->
+<div class="container">
+	<div><img src="http://file.easeeyes.com/wap/images/2016080112/banner.jpg" alt="" style="display:block;"></div>
+	<div><img src="http://file.easeeyes.com/wap/images/2016080112/01.jpg" alt="" style="display:block;"></div>
+	<div class="goodsItems clearfix">
+    
+        <!--{foreach from=$goodsArr1 item=li name=li}-->
+		<div class="goodsItem">
+			<a href="{$li.goods_link}">
+				<div class="goodsItem-thumb"><img src="http://img.easeeyes.com/{$li.goods_img}" alt=""></div>
+				<div class="goodsItem-title">
+					<h3>{$li.goods_name}</h3>
+					{if $li.tips}
+                        <span>{$li.tips}</span>
+                    {elseif $li.zk}
+    				    <span>立减{$li.zk}元</span>
+                    {/if}
+				</div>
+				<div class="goodsItem-info">
+					周年庆价:&yen;<b>{$li.now_price}</b><br>
+					<del>易视价:{$li.shop_price}元</del>
+				</div>
+			</a>
+		</div>
+	    <!--{/foreach}-->
+		
+	</div>
+
+	<div><img src="http://file.easeeyes.com/wap/images/2016080112/02.jpg" alt="" style="display:block;"></div>
+	<div class="goodsItems goodsItems-orange clearfix">
+		<!--{foreach from=$goodsArr2 item=li name=li}-->
+		<div class="goodsItem">
+			<a href="{$li.goods_link}">
+				<div class="goodsItem-thumb"><img src="http://img.easeeyes.com/{$li.goods_img}" alt=""></div>
+				<div class="goodsItem-title">
+					<h3>{$li.goods_name}</h3>
+					{if $li.tips}
+                        <span>{$li.tips}</span>
+                    {elseif $li.zk}
+    				    <span>立减{$li.zk}元</span>
+                    {/if}
+				</div>
+				<div class="goodsItem-info">
+					周年庆价:&yen;<b>{$li.now_price}</b><br>
+					<del>易视价:{$li.shop_price}元</del>
+				</div>
+			</a>
+		</div>
+	    <!--{/foreach}-->
+	</div>
+
+	<div><img src="http://file.easeeyes.com/wap/images/2016080112/03.jpg" alt="" style="display:block;"></div>
+	<div class="goodsItems goodsItems-green clearfix">
+		<!--{foreach from=$goodsArr3 item=li name=li}-->
+		<div class="goodsItem">
+			<a href="{$li.goods_link}">
+				<div class="goodsItem-thumb"><img src="http://img.easeeyes.com/{$li.goods_img}" alt=""></div>
+				<div class="goodsItem-title">
+					<h3>{$li.goods_name}</h3>
+					{if $li.tips}
+                        <span>{$li.tips}</span>
+                    {elseif $li.zk}
+    				    <span>立减{$li.zk}元</span>
+                    {/if}
+				</div>
+				<div class="goodsItem-info">
+					周年庆价:&yen;<b>{$li.now_price}</b><br>
+					<del>易视价:{$li.shop_price}元</del>
+				</div>
+			</a>
+		</div>
+	    <!--{/foreach}-->
+	</div>
+
+	<div style="height:24.5rem;background:url(http://file.easeeyes.com/wap/images/2016080112/04.jpg);background-size:auto 24.5rem;">
+		<div style="padding-top:4.25rem;" class="clearfix ppBox">
+			<a href="category_31.html" target="_blank"></a>
+			<a href="category_11.html" target="_blank"></a>
+			<a href="category_7.html" target="_blank"></a>
+			<a href="category_137.html" target="_blank"></a>
+			<a href="category_240.html" target="_blank"></a>
+			<a href="category_218.html" target="_blank"></a>
+			<a href="category_250.html" target="_blank"></a>
+			<a href="category_36.html" target="_blank"></a>
+			<a href="category_21.html" target="_blank"></a>
+			<a href="category_158.html" target="_blank"></a>
+			<a href="category_35.html" target="_blank"></a>
+			<a href="category_140.html" target="_blank"></a>
+		</div>
+	</div>
+	<div style="height:7.15rem;background:url(http://file.easeeyes.com/wap/images/2016080112/05.jpg);background-size:auto 7.15rem;">
+		<a href="active160829.html" style="height:2.5rem;width:10.7rem;display:block;margin:auto;margin-bottom:1.2rem;"></a>
+		<a href="category_6.html?id=6&sort=click_count&order=desc&category=6&brand=0&price_min=0&price_max=0&filter_attr=&attr0=&attr1=&attr2=&attr3=&attr4=&attr5=#focus_selected" style="height:2.5rem;width:16.6rem;display:block;margin:auto;"></a>
+	</div>
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

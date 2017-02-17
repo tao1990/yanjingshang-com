@@ -1,0 +1,32 @@
+.clear{clear:both}
+.go_jiesuan{margin-top:10px}
+.go_jiesuan_left{float:left}
+.go_jiesuan_left span{color:#F00;font-weight:bold}
+.go_jiesuan_left div{margin-bottom:5px}
+.go_jiesuan_right{float:right;margin-top:10px}
+/*去结算第一部分*/
+.go_content{width:100%;margin-top:1opx;overflow-x:hidden}
+.go_content_one{border-top:1px solid #fff;border-bottom: 1px solid #ccc;padding-top:10px;padding-bottom:15px}
+.go_content_one_left{width:93%;float:left}
+.detail_img{float:left;width:30%}
+.detail_intro{float:left;width:55%;margin-left:10px}
+.detail_intro p{margin-top:5px}
+.detail_intro p span{color:#f00;}
+.redf{color:#f00;}
+.go_content_bottom_left{width:40%;float:left;margin-left:10%}
+.go_content_bottom{width:70%;float:left;margin-left:33%}
+.go_con_bott_one_left{width:40%;float:left}
+.go_con_bott_one_right{width:60%;float:right}
+.go_con_bott_one_right input,.go_con_bott_one_right input{width:30%;margin-left:2%;margin-right:2%;height:20px;text-align: center;}
+/*.go_content_bottom_left div,.go_content_bottom_right div{margin-top:10px}
+.go_content_bottom_left input,.go_content_bottom_right input{width:30%;margin-left:5%;margin-right:5%;height:20px}
+*/.go_content_bottom_right{width:40%;float:right;margin-right:5%}
+.go_content_one_right{width:7%;float:right}
+.go_content_two{height:45px;line-height:45px; background-color:#f2f2f2;border-top:1px solid #ccc;border-top:1px solid #fff;border-bottom:1px solid #ccc}
+.go_content_two_left{float:left;width:93%;padding-left:10px;font-weight:bold}
+.go_content_two_right{float:right;width:7px}
+.go_content_three{padding-left:10px;}
+.go_content_three div{line-height:30px;color:#666;font-weight:bold}
+.go_content_three div span{color:#f00}
+.go_con_footer{margin-top:25px;padding-left:10px;padding-top:5px;border-top:1px solid #ccc;padding-bottom:5px}
+.go_con_footer a{width:30%;float:left}

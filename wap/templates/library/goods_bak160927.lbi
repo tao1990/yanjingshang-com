@@ -1,0 +1,110 @@
+
+<form action="" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY">
+<!--{if $goodsds}-->
+<div class="content ds_choose fold">
+<span>度数选择:</span> <i id="glass-info"></i>
+</div>
+<div class="content ds_choose_info">
+    <div class="ds_radio_list">
+        <!--{foreach from=$goodsds item=li}-->
+        <div class="ds_radio_div">
+        <label for="radio-ds-{$li.pid}" class="ds_radio{if $li.status} ds_radio_disabled{/if}">{$li.val}</label>
+        <input name="left_eye_ds" class="dsselect" id="radio-ds-{$li.pid}" value="{if $li.canbuy}{$li.val}{/if}" type="radio"/>
+        </div>
+        <!--{/foreach}-->
+    </div>
+</div>
+<!--{/if}-->
+
+<!--{if $goods_is_sg && $goods_sgds}有度数商品中散光片-->
+    <div class="content ds_choose fold">
+    <span>散光选择:</span> <i id="sg-info"></i>
+    </div>
+    <div class="content ds_choose_info">
+        <div class="sg_radio_list" id="sg_radio_list">
+            <!--{foreach from=$goods_sgds.ds_values item=value key=key}-->
+            <div class="ds_radio_div">
+            <label for="radio-sg-{$key}" class="ds_radio">{$value}</label>
+            <input name="left_eye_sg" class="dsselect" id="radio-sg-{$key}" value="{$value}" type="radio"/>
+            </div>
+            <!--{/foreach}-->
+        </div>
+    </div>
+    <input type="hidden" id="is_sg" value="is_sg" />
+    <div class="content ds_choose fold">
+    <span>轴位选择:</span> <i id="zw-info"></i>
+    </div>
+    <div class="content ds_choose_info">
+        <div class="zw_radio_list" id="zw_radio_list">
+            <!--{foreach from=$goods_zw item=value key=key}-->
+            <div class="ds_radio_div">
+            <label for="radio-zw-{$key}" class="ds_radio">{$value}</label>
+            <input name="left_eye_zw" class="dsselect" id="radio-zw-{$key}" value="{$value}" type="radio"/>
+            </div>
+            <!--{/foreach}-->
+        </div>
+    </div>
+  
+<!--{else}-->
+    <input type="hidden" id="is_sg" value=""/>
+<!--{/if}-->
+
+<!--{if $goods.goods_type eq 10 || $goods.goods_type eq 12}-->
+<div class="goods_count">
+        数量:
+        <ul class="goods_number">
+            <li class="bt_minus bt_minusjia"><a style="background: url('images/-.png') no-repeat;" onclick="change_count('-');" href="javascript:void(0)"></a></li>
+                                    <li class="input_cunt_li"><input readonly="true" type="text" id="count" name="left_eye_num" value="1" class="input_count"/></li>
+                                    <li class="input_count_unit">{$goods.unit|default:盒}</li>
+                                    <li class="bt_add bt_minusjian"><a style="background: url('images/+.png') no-repeat" onclick="change_count('+');" href="javascript:void(0)"></a></li>
+        </ul>
+</div>
+
+<!--{else}-->
+<div class="goods_count">
+        数量:
+        <ul class="goods_number">
+            <li class="bt_minus bt_minusjia"><a style="background: url('images/-.png') no-repeat;" onclick="change_count('-');" href="javascript:void(0)"></a></li>
+                                    <li class="input_cunt_li"><input readonly="true" type="text" id="count" name="goods_number" value="1" class="input_count"/></li>
+                                    <li class="input_count_unit">{$goods.unit|default:盒}</li>
+                                    <li class="bt_add bt_minusjian"><a style="background: url('images/+.png') no-repeat" onclick="change_count('+');" href="javascript:void(0)"></a></li>
+        </ul>
+</div>
+
+<!--{/if}-->
+<div class="footer-fixed-mod">
+    <!--分类-->
+    <div class="footer-fixed-category">
+        <a href="javascript:" id="btn_menu">
+            <img src="http://file.easeeyes.com/wap/images/f_cate.png" /><br />分类
+        </a>
+    </div>
+    <!--购物车-->
+    <div class="footer-fixed-car">
+        <a href="flow.php">
+            <img src="http://file.easeeyes.com/wap/images/f_cars.png" /><br />购物车
+            <span class="pg-cars-num">{insert name='cart_num'}</span>
+        </a>
+    </div>
+    <!--加入购物车-->
+    <div class="footer-fixed-addCar">
+    {if $goods.is_on_sale eq 1}
+        {if $goods.goods_number>0}
+        <!--{if $goods.goods_type eq 13 || $goods.goods_type eq 14 || $goods.goods_type eq 16}-->
+        <a class="btn_to_cart" onclick="add_to_cart_z({$goods.goods_id}, 4);">加入购物车</a>
+        <!--{elseif $goods.goods_type eq 10 || $goods.goods_type eq 12}-->
+        <!--{if $goods_is_sg}-->
+        <a class="btn_to_cart" onclick="add_to_cart({$goods.goods_id}, 2);">加入购物车</a>
+        <!--{else}-->
+        <a class="btn_to_cart" onclick="add_to_cart({$goods.goods_id}, 1);">加入购物车</a>
+        <!--{/if}-->
+        <!--{/if}-->
+        {else}
+        <div class="not_on_sale">已售空</div>
+        {/if}
+    {else}
+        <div class="not_on_sale">已下架</div>
+    {/if}
+    </div>
+</div>
+</form>

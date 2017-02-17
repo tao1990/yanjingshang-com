@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<!--品牌列表-->
+<div class="md-brands container">
+    <!--<div class="brands-title">品牌汇</div>-->
+    <div class="brands-main">
+        <div class="brands-main-banner">
+            <span class="brands-main-banner-arrow"><img src="http://file.easeeyes.com/wap/images/brands_arrow.png" /></span>
+        </div>
+        <div class="brands-main-display">
+            <ul class="clearfix">
+                <!--{foreach from=$brand_1 item=li name=foo}-->
+                    {if $li.brand_logo neq 'data/brandlogo/'}
+                    <li><a href="{$li.url}"><img src="{$image_url}{$li.brand_logo}" /></a></li>
+                    {/if}
+                <!--{/foreach}-->
+            </ul>
+        </div>
+        <div class="brands-main-banner brands-main-banner2">
+            <span class="brands-main-banner-arrow"><img src="http://file.easeeyes.com/wap/images/brands_arrow.png" /></span>
+        </div>
+        <div class="brands-main-display">
+            <ul class="clearfix">
+                <!--{foreach from=$brand_6 item=li name=foo}-->
+                    {if $li.brand_logo neq 'data/brandlogo/'}
+                    <li><a href="{$li.url}"><img src="{$image_url}{$li.brand_logo}" /></a></li>
+                    {/if}
+                <!--{/foreach}-->
+            </ul>
+        </div>
+        <div class="brands-main-banner brands-main-banner3">
+            <span class="brands-main-banner-arrow"><img src="http://file.easeeyes.com/wap/images/brands_arrow.png" /></span>
+        </div>
+        <div class="brands-main-display">
+            <ul class="clearfix">
+                <!--{foreach from=$brand_159 item=li name=foo}-->
+                    {if $li.brand_logo neq 'data/brandlogo/'}
+                    <li><a href="{$li.url}"><img src="{$image_url}{$li.brand_logo}" /></a></li>
+                    {/if}
+                <!--{/foreach}-->
+            </ul>
+        </div>
+        <div class="brands-main-banner brands-main-banner4">
+            <span class="brands-main-banner-arrow"><img src="http://file.easeeyes.com/wap/images/brands_arrow.png" /></span>
+        </div>
+        <div class="brands-main-display">
+            <ul class="clearfix">
+                <!--{foreach from=$brand_190 item=li name=foo}-->
+                    {if $li.brand_logo neq 'data/brandlogo/'}
+                    <li><a href="{$li.url}"><img src="{$image_url}{$li.brand_logo}" /></a></li>
+                    {/if}
+                <!--{/foreach}-->
+            </ul>
+        </div>
+        <div class="brands-main-banner brands-main-banner5">
+            <span class="brands-main-banner-arrow"><img src="http://file.easeeyes.com/wap/images/brands_arrow.png" /></span>
+        </div>
+        <div class="brands-main-display">
+            <ul class="clearfix">
+                <!--{foreach from=$brand_64 item=li name=foo}-->
+                    {if $li.brand_logo neq 'data/brandlogo/'}
+                    <li><a href="{$li.url}"><img src="{$image_url}{$li.brand_logo}" /></a></li>
+                    {/if}
+                <!--{/foreach}-->
+            </ul>
+        </div>
+        <div class="brands-main-banner brands-main-banner6">
+            <span class="brands-main-banner-arrow"><img src="http://file.easeeyes.com/wap/images/brands_arrow.png" /></span>
+        </div>
+        <div class="brands-main-display">
+            <ul class="clearfix">
+                <!--{foreach from=$brand_76 item=li name=foo}-->
+                    {if $li.brand_logo neq 'data/brandlogo/'}
+                    <li><a href="{$li.url}"><img src="{$image_url}{$li.brand_logo}" /></a></li>
+                    {/if}
+                <!--{/foreach}-->
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

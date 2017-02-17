@@ -1,0 +1,91 @@
+.clear{clear:both}
+.go_jiesuan{margin-top:10px}
+.go_jiesuan_left{float:left}
+.go_jiesuan_left span{color:#F00;font-weight:bold}
+.go_jiesuan_left div{margin-bottom:5px}
+.go_jiesuan_right{float:right;margin-top:10px}
+/*去结算第一部分*/
+.order_num{height:50px; text-align:center;line-height:50px; border-bottom:1px solid #ccc}
+.order_num_left{width:60%;float:left;border-right:1px solid #fff}
+.order_num_left span,.order_bianhao span{font-size:1em;font-weight:bold;color:#707070}
+.order_num_right{width:37%;float:left;border-left:1px solid #ccc}
+.order_num_right span{font-size:1em;font-weight:bold;color:#009aaf}
+.order_bianhao{padding-top:10px;padding-bottom:10px;border-bottom:1px solid #ccc;border-top:1px solid #fff}
+.order_bianhao div{margin-bottom:5px;padding-left:5%}
+.check .goods_order{ background-color:#fff}
+.goods_title{height:50px;line-height:50px;font-size:1.05em; text-align:center;border-bottom:1px solid #ccc;border-top:1px solid #fff}
+.goods_title img{margin-left:7px; vertical-align:middle}
+.goods_num{border-bottom:1px solid #ccc;border-top:1px solid #fff;padding-bottom:10px; background-color:#fff}
+.goods_num_one{padding-top:10px;padding-left:5%}
+.goods_num_one em,.goods_price span{color:#f00}
+.goods_num_one span{margin-right:10%}
+.goods_fenge{border-bottom:1px dashed #707070;margin-top:2%;width:67%;margin-left:10%}
+.goods_all{margin-left:50%;margin-top:5%}
+.goods_price{font-weight:bold}
+.state{padding-top:5%;border-top:1px solid #fff}
+.state .current1{ background:url(http://m.easeeyes.com/images/blue_wuliu.png) no-repeat;}
+.state .yi_fachu{ background:url(http://m.easeeyes.com/images/yi_fachu.png) no-repeat}
+.state li{background:url(http://m.easeeyes.com/images/wuliu_one.png) no-repeat;margin-left:5%;padding-left:6%;padding-bottom:10px}
+.current1{color:#009aaf}
+
+.order_info_one,.order_info_two,.order_info_three,.order_info_four{height:45px;line-height:45px; text-align:center;color:#707070;font-size:14px;font-weight:bold;border-bottom:1px solid #ccc}
+.order_info_two,.order_info_three,.order_info_four{border-top:1px solid #fff}
+.no_order_add,.order_add,.order_zhifu,.order_kuaidi,.order_youhui{border-bottom:1px solid #ccc;background-color:#fff;line-height:23px}
+.no_order_add{padding-left: 5%;padding-top: 10px;padding-bottom: 10px;}
+#use_youhui{ background-color:#f2f2f2}
+.order_zhifu,.order_youhui{line-height:50px}
+.order_add_left,.order_zhifu_left{width:75%;float:left;padding-left:5%;padding-top:5px;font-size:12px;font-weight:bold}
+.no_order_add_left{width:75%;float:left;padding-left:5%;font-size:16px;font-family: sans-serif;}
+.order_zhifu_left{width:50%;float:left}
+.padding_top{padding-top:25px}
+.order_add_right{width:10%;float:left;margin-left:5%; text-align:right}
+.order_zhifu_right{width:40%;float:left; text-align:right}
+.order_add_right select,.order_zhifu_right select{width:100%;border:none;color:#069898}
+.order_zhifu_right{padding-top:5px}
+.order_zhifu_cont{padding-left:5%;border-top:1px solid #ccc}
+.order_name,.order_cur{font-size:12px;font-weight:bold;color:#707070}
+.order_cur{color:#26bcd3}
+.order_name span{margin-left:30%}
+.order_favour{padding-left:5%;padding-top:7px;border-top:1px solid #fff;border-bottom:1px solid #ccc;padding-bottom:10px}
+.order_favour_num{font-sise:12px;font-weight:bold;margin-bottom:5px}
+.order_favour input{width:85%} 
+.order_price{padding-left:5%;border-top:1px solid #fff;border-bottom:1px solid #ccc;padding-bottom:10px}
+.order_price_left{float:left;width:50%;border-right:1px dashed #e6e6e6;padding-top:10px}
+.order_price_right{float:left;width:40%;margin-left:5%;padding-top:10px}
+.order_price_left div,.order_price_right div{overflow:hidden;zoom:1;margin-top:5px}
+.order_price_left div em{width:50%;float:left}
+.order_price_left div span{width:40%;float:right; text-align:right;padding-right:10%}
+.order_price_spec{color:#f00}
+.button_two,.button_three{padding:2% 25%; margin-left:10%;margin-top:3%;background-color:#75D6E9;color:#fff;border:none;font-size:15px;font-weight:bold;border-radius:5px}
+.order_info_fapiao{border-top:1px solid #fff}
+.fapiao_one{padding-left:5%;height:50px;line-height:50px;border-top:1px solid #fff;border-bottom:1px solid #ccc; background-color:#fff}
+.fapiao_taitou{height:50px; background-color:#fff;padding-left:5%;font-size:14px;line-height:50px;font-weight:bold}
+.fapiao_one input{margin-left:20px;border:none}
+.fapiao_fangshi,.fapiao_nei{line-height:50px}
+.fapiao_fangshi,.fapiao_nei,.fapiao_taitou{border-top:1px solid #fff;border-bottom:1px solid #ccc; background-color:#fff}
+.order_youhui_tubiao{padding-left:5%;font-size:14px;font-weight:bold;}
+.order_youhui_quan{padding-left:5%; background-color:#fff;display: none;}
+.order_youhui_quan select{margin-left:10%;width:50%}
+.order_youhui_quan span{font-weight:bold}
+.click_use{padding:1% 5%;background-color:#75D6E9;color:#fff;border:none;font-size:14px;font-weight:bold;border-radius:5px;margin-right:10%}
+/*订单结束*/
+.act_suc{ text-align:center;font-size:14px;font-weight:bold;margin-top:15px}
+.act_suc span{color:#F00}
+.success_one{border-bottom:1px solid #ccc;padding-bottom:10px}
+.white_success{ background-color:#fff;padding-top:10px;padding-bottom:10px;border-top:1px solid #fff;border-bottom:1px solid #ccc;}
+.success_button{border-top:1px solid #fff}
+.order_success_num{padding-left:5%;margin-top:10px}
+.order_success_num span{font-size:15px;color:#f00}
+.button_three{padding:2% 35%;margin-left:5%;margin-top:15%}
+.order_right,.order_right_go{ text-align:right;padding-right:5%;margin-top:3%}
+.order_right_go a{color:#467F90}
+/*提交订单成功*/
+.select_kuaidi{display: none;}
+.select_kuaidi div{width:95%;padding-left:5%;line-height:40px;border-bottom:1px solid #e6e6e6}
+.select_kuaidi div input{margin-right:10px}
+/*快递的选择*/
+
+
+
+.goods_address{display: none;}
+.append_address{display: none;}

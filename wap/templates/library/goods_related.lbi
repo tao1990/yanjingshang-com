@@ -1,0 +1,24 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- {if $related_goods} -->
+<div class="box">
+     <div class="box_1">
+    <div style="float:left; width:100%; text-align:center; border-bottom:1px solid #dddddd;"><img src="images/xgsp.gif"></div>
+      <div class="boxCenterList clearfix">
+      <!--{foreach from=$related_goods item=releated_goods_data}-->
+        <ul class="clearfix">
+          <li class="goodsimg"><a href="{$releated_goods_data.url}"><img src="{$releated_goods_data.goods_thumb}" alt="{$releated_goods_data.goods_name}" class="B_blue" /></a></li>
+          <li>
+        <a href="{$releated_goods_data.url}" title="{$releated_goods_data.goods_name}" class="color_lv">{$releated_goods_data.short_name}</a><br /><span class="shanchux">市场价：<s>{$releated_goods_data.market_price}</s></span><br />易视价：
+        <!-- {if $releated_goods_data.promote_price neq 0} -->
+       <font class="redhong fontsize13">{$releated_goods_data.formated_promote_price}</font>
+        <!-- {else} -->
+        <font class="redhong fontsize13">{$releated_goods_data.shop_price}</font>
+        <!-- {/if} -->
+          </li>
+        </ul>
+        <!--{/foreach}-->
+      </div>
+     </div>
+    </div>
+<div class="blank5"></div>
+<!-- {/if} -->

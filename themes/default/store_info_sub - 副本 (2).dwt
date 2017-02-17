@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="Generator" content="ECSHOP v2.7.3" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+<title>店铺信息提交_镜库网-眼镜业采购批发第1品牌</title>
+<link href="http://file.easeeyes.com/b2b/css/base.css" rel="stylesheet" type="text/css" />
+<link href="http://file.easeeyes.com/b2b/css/dlzc.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="http://file.easeeyes.com/b2b/css/index.css" />
+
+    
+    
+<body>
+<!--header-tag-->
+
+<div class="header-tag">
+	<div class="container">
+        {insert name='member_info'}	
+	</div>
+</div>
+
+<!--{if $b2b_ck eq 1}-->
+    <p class="zhuce_logo"><a href="index.php"><img src="http://file.easeeyes.com/b2b/images/logo.png" width="200" height="63" alt="" /></a></p>
+        <div class="zhuce_box jspassPage">
+        	<p class="zhuce_t1">镜商信息审结果</p>
+            <div class="zhuce_di">
+            	<p class="zhu_t2">我的镜商</p>
+          		 <ul class="zhuce_list">
+                    <li>恭喜您 您的镜商信息已经验证通过！</li>
+                	<li>
+                    	<a href="category_1.html" style="height:34px;line-height:34px;width:205px;display:block;background:#015287;color:#fff;text-align:center;border-radius:5px;">立即前往进货中心</a>
+                    </li>
+                 
+                </ul>
+            </div>
+        	
+        </div>
+
+<!--{else}-->
+
+ <!--{if $is_sub eq 1}-->
+    <p class="zhuce_logo"><a href="index.php"><img src="http://file.easeeyes.com/b2b/images/logo.png" width="200" height="63" alt="" /></a></p>
+        <div class="zhuce_box jscheckPage">
+        	<p class="zhuce_t1">镜商信息审核中……</p>
+            <div class="zhuce_di">
+            	<p class="zhu_t2">我的镜商(本页调整样式，图片固定高宽)</p>
+          		 <ul class="zhuce_list">
+                    <li>您的信息已经提交，工作人员会在2个工作日内验证您的信息</li>
+                	<li>
+                    	<span class="zhu_name"><b class="zhu_xing">*</b>眼镜商名称：</span>
+                        <p class="zhece_user01">{$storeInfo.store_name}</p>
+                    </li>
+                    <li>
+                    	<span class="zhu_name"><b class="zhu_xing">*</b>眼镜商地址：</span>
+                        <p class="zhece_user01">{$storeInfo.address}</p>
+                    </li>
+                    <li>
+                    	<span class="zhu_name"><b class="zhu_xing">*</b>负责人联系方式：</span>
+                        <p class="zhece_user01">{$storeInfo.phone}</p>
+                    </li>
+                    <li>
+                    	<span class="zhu_name"><b class="zhu_xing">*</b>负责人身份证号：</span>
+                        <p class="zhece_user01">{$storeInfo.id_card}</p>
+                    </li>
+                    <li>
+                    	<span class="zhu_name"><b class="zhu_xing">*</b>营业执照：</span>
+                        <p class="zhece_user01" style="padding-left:0"><img width="500px" height="500px" src="{$img_url}{$storeInfo.license}" /></p>
+                    </li>
+                    
+                    <li>
+                    	<span class="zhu_name"><b class="zhu_xing">*</b>负责人身份证扫描件：</span>
+                        <p class="zhece_user01" style="padding-left:0"><img width="500px" height="500px" src="{$img_url}{$storeInfo.id_card_img}" /></p>
+                    </li>
+                    <li><a style="margin-left:115px;height:34px;line-height:34px;width:205px;display:block;background:#015287;color:#fff;text-align:center;border-radius:5px;" id="toFix" href="javascript:;">提交有误，撤回修改</a></li>
+                    <li class="links">
+						<a href="index.php#one">云镜商介绍</a>
+                    	<a href="wslss.html">我是零售商</a>
+                    	<a href="wspps.html">我是品牌商</a>
+					</li>
+                </ul>
+            </div>
+        	
+        </div>
+ <!--{else}-->
+    <form action="user.php" method="post" name="formUser" enctype="multipart/form-data" id="jsinfoForm">
+          
+       <p class="zhuce_logo"><a href="index.php"><img src="http://file.easeeyes.com/b2b/images/logo.png" width="200" height="63" alt="" /></a></p>
+        <div class="zhuce_box jsinfoPage">
+        	<p class="zhuce_t1">镜商信息提交</p>
+            <div class="zhuce_di">
+            	<p class="zhu_t2">镜商信息(请提交您的店铺信息)</p>
+          		 <ul class="zhuce_list jsinfo">
+                	<li>
+                    	<span class="zhu_name"><b class="zhu_xing">*</b>镜商名称：</span>
+                        <p class="zhece_user01">
+                        <input name="store_name" type="text" size="25" class="zhu_input01" class="inputBg" id="store_name"/>
+    					
+                        <i class="i_name"></i></p><span id="username_notice" style="color:#FF0000;width:150px;text-align: center; font-size: 14px;line-height: 34px;"></span>
+                    </li>
+                    <li>
+                    	<span class="zhu_name"><b class="zhu_xing">*</b>镜商地址：</span>
+                        <p class="zhece_user01">
+                        <input name="address" type="text" size="25" class="zhu_input01" class="inputBg" id="address"/>
+    				</li>
+            
+                    <li>
+                    	<span class="zhu_name"><b class="zhu_xing">*</b>负责人联系方式：</span>
+                        <p class="zhece_user01">
+                        <input name="phone" type="text" size="25" class="zhu_input01" class="inputBg" id="phone"/>
+    					
+                        <i class="i_name"></i></p><span id="username_notice" style="color:#FF0000;width:150px;text-align: center; font-size: 14px;line-height: 34px;"></span>
+                    </li>
+                    <li>
+                    	<span class="zhu_name"><b class="zhu_xing">*</b>负责人身份证号：</span>
+                        <p class="zhece_user01">
+                        <input name="id_card" type="text" size="25" class="zhu_input01" class="inputBg" id="id_card"/>
+    					
+                        <i class="i_name"></i></p><span id="username_notice" style="color:#FF0000;width:150px;text-align: center; font-size: 14px;line-height: 34px;"></span>
+                    </li>
+                    <li>
+                    
+                    	<span class="zhu_name"><b class="zhu_xing">*</b>营业执照：</span>
+                        <p class="zhece_user01">
+                        <input name="licences" type="file" size="25" class="zhu_input01" class="inputBg" id="licences"/>
+                    </li>
+                    
+                    <li>
+                    	<span class="zhu_name"><b class="zhu_xing">*</b>负责人身份证(正反面)：</span>
+                        <p class="zhece_user01">
+                        <input name="id_card_img" type="file" size="25" class="zhu_input01" class="inputBg" id="id_card_img"/>
+                    </li>
+                    
+                  <li>
+                  <input name="act" type="hidden" value="act_store_sub" />
+                  <input type="hidden" name="back_act" value="" />
+                  <input name="Submit" type="submit" value="立即提交" class="yj_zhuce"/>
+                  </li>
+                </ul>
+            </div>
+        	
+        </div>
+    </form>
+ <!--{/if}-->
+    
+
+
+<!--{/if}-->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+<!--
+<script type="text/javascript" src="http://file.easeeyes.com/b2b/js/user.js"></script>
+<script type="text/javascript" src="http://file.easeeyes.com/b2b/js/transport.js"></script>
+-->
+<script type="text/javascript" src="http://file.easeeyes.com/b2b/js/utils.js"></script>
+<script src="http://file.easeeyes.com/b2b/js/info_check.js"></script>
+    <!--
+    <script type="text/javascript" src="/js/transport.js"></script>
+    {insert_scripts files='common.js,user.js'}
+    <script type="text/javascript" src="/js/inner.js"></script>
+	-->
+</body>
+
+</html>
+
+<script type="text/javascript">
+	var process_request = "{$lang.process_request}";
+	<!---->{foreach from=$lang.passport_js item=item key=key}
+	<!---->var {$key} = "{$item}";
+	<!---->{/foreach}
+	var username_exist = "{$lang.username_exist}";
+	
+	$(function(){
+		// 表单验证
+		
+			
+		//
+		var btn_fixed=$('#toFix');
+		btn_fixed.click(function(){
+			layer.confirm('确定修改？',function(){
+				location.href='user.php?act=cancel_sub';
+			})
+		})
+		
+	})
+	
+	
+</script>
+</html>

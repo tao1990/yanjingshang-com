@@ -1,0 +1,157 @@
+
+<div class="goodsprice fl">
+
+					<h2>{$goods.goods_name} </h2>
+					<div class="pricetable">
+						<!--{if $pifa_confirm eq 1}显示批发价格-->
+                            <div class="price-table clearfix">
+    							<div class="price-box price-box-short">
+    								<ul>
+    									<li>起批量</li>
+    									<li>价格</li>
+    								</ul>
+    							</div>
+                                
+                                <!--{foreach from=$wholesale_arr item=li key=key name=foo}-->      
+                                <div class="price-box {if $key eq 1}price-box-dark{elseif $key eq 2}price-box-darker{/if}">
+    								<ul>
+    									<li>≥{$li.quantity}{$goods.unit}</li>
+    									<li>¥ {$li.price}/{$goods.unit}</li>
+    								</ul>
+    							</div>
+                                <!--{/foreach}-->
+                        
+    						</div>
+                            
+                        <!--{else}显示正常价格-->
+                            {if $user_rank > 0}
+                                <table>
+        							<tbody>
+        								<tr>
+        									<td class="td1">价格</td>
+        									<td class="td-main">¥ {$rank_price}/{$goods.unit}</td>
+        								</tr>
+        								<tr>
+        									<td class="td1">vip价 <img src="http://file.easeeyes.com/b2b/images/help.png" class="J_helper" />
+        										<div class="J_helper_layer">
+        											此处内容为成为VIP的规则，此处内容为成为VIP的规则，此处内容为成为VIP的规则
+        										</div>
+        									</td>
+        									<td class="td-main">{$rank_prices.7.price} - {$vip_prices}/{$goods.unit}</td>
+        								</tr>
+        							</tbody>
+        						</table>
+                            {else}
+                                <table>
+        							<tbody>
+        								<tr>
+        									<td class="td1">价格</td>
+        									<td class="td-main">¥{$shop_price}/{$goods.unit}</td>
+        								</tr>
+        								<tr>
+        									<td class="td1">vip价 <img src="http://file.easeeyes.com/b2b/images/help.png" class="J_helper" />
+        										<div class="J_helper_layer">
+        											此处内容为成为VIP的规则，此处内容为成为VIP的规则，此处内容为成为VIP的规则
+        										</div>
+        									</td>
+        									<td class="td-main">{$rank_prices.7.price} - {$vip_prices}/{$goods.unit}</td>
+        								</tr>
+        							</tbody>
+        						</table>
+                            {/if}
+                        <!--{/if}-->
+					</div>
+                    
+					<div class="d-info">
+						<p><span class="">市场价</span>¥ {$market_price}</p>
+						<p><span class="">成交\评价</span><i class="ico-pg-star"></i><i class="ico-pg-star"></i><i class="ico-pg-star"></i><i class="ico-pg-star"></i><i class="ico-pg-star"></i>　|　成交 <b>{$goods.click_count}</b>{$goods.unit}　评价 <b>{$total1}</b>条</p>
+						<p><span class="">库存量</span>{$goods.goods_number}{$goods.unit}</p>
+					</div>
+                  
+					<div class="d-select">
+                        <div class="d-select-div">
+						度数　
+						<select name="goods_select">
+							<option value="">请选择</option>
+							{insert name='ds_list'}
+						</select>　
+                        </div>
+                        <div class="d-select-div clearfix">
+                        <!--{if $goods_is_sg && $goods_sgds}有度数商品中散光片-->
+                                <div class="fl ml15" style="padding-right:15px;">散光</div>
+                                <input type="hidden" id="is_sg" value="is_sg" />
+                                <select name="zsg" class="pro_top_link_selse fl">
+                                    <option value="">请选择</option>
+                                    <!--{foreach from=$goods_sgds.ds_values item=value key=key}-->
+                                    <option value="{$value}">{$value}</option>
+                                    <!--{/foreach}-->
+                                </select>
+                                <div class="fl ml15" style="padding:0 15px;">　轴位</div>
+                                <select name="zzhou" class="pro_top_link_selse fl">
+                                    <option value="">请选择</option>
+                                    <option value="5">5</option>
+                                    <option value="10">10</option>
+                                    <option value="15">15</option>
+                                    <option value="20">20</option>
+                                    <option value="25">25</option>
+                                    <option value="30">30</option>
+                                    <option value="35">35</option>
+                                    <option value="40">40</option>
+                                    <option value="45">45</option>
+                                    <option value="50">50</option>
+                                    <option value="55">55</option>
+                                    <option value="60">60</option>
+                                    <option value="65">65</option>
+                                    <option value="70">70</option>
+                                    <option value="75">75</option>
+                                    <option value="80">80</option>
+                                    <option value="85">85</option>
+                                    <option value="90">90</option>
+                                    <option value="95">95</option>
+                                    <option value="100">100</option>
+                                    <option value="105">105</option>
+                                    <option value="110">110</option>
+                                    <option value="115">115</option>
+                                    <option value="120">120</option>
+                                    <option value="125">125</option>
+                                    <option value="130">130</option>
+                                    <option value="135">135</option>
+                                    <option value="140">140</option>
+                                    <option value="145">145</option>
+                                    <option value="150">150</option>
+                                    <option value="155">155</option>
+                                    <option value="160">160</option>
+                                    <option value="165">165</option>
+                                    <option value="170">170</option>
+                                    <option value="175">175</option>
+                                    <option value="180">180</option>
+                                </select>  
+                        <!--{else}-->
+                                <input type="hidden" id="is_sg" value=""/>
+                        <!--{/if}-->  
+                        </div>
+                        <div class="d-select-div">  
+							采购量　
+							<div class="numCount-pg">
+								<button class="numCount-pg-cut">&minus;</button>
+								<div class="numCount-pg-num">
+									<input type="text" name="goods_count" value="1" id="number" />{$goods.unit}
+								</div>
+								<button class="numCount-pg-add">&#43;</button>
+							</div>
+                        </div>               
+					</div>
+                    
+                    
+					<div class="d-value">
+						<div class="d-value-count"><span>1</span>{$goods.unit}</div>
+                        
+						<div class="d-value-total"><span>{if $rank_price>0}{$rank_price}{else}{$shop_price}{/if}</span>元</div>
+					</div>
+					<div class="d-btn">
+						<button class="btn-pg" onclick="showDiv('mydiv',{$goods.goods_id},1)">立即订购</button>
+						<button class="btn-pg btn-pg-nobg J_cars_btn" onclick="showDiv('mydiv',{$goods.goods_id})">加入购物车</button>
+						<!--<a href="#"><img src="http://file.easeeyes.com/b2b/images/sc.png" /> 收藏商品</a>-->
+					</div>
+                        
+				</div>

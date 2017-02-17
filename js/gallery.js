@@ -1,0 +1,3 @@
+ $(function() {
+        $('#gallery img').lightBox();
+    });

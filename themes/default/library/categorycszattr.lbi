@@ -1,0 +1,33 @@
+
+ <!--{foreach from=$categoriescsz item=cat name=arrts}-->
+<div class="leftmain"><img src="images/yuanquan.jpg" width="9px">&nbsp;<a href="categorysea.php?attr{$smarty.foreach.arrts.index}=0"><span class="color_hei fontsize13">{$cat.name|escape:html}</span></a>
+</div>
+
+<div class="leftmaincontentx">
+ <!--{foreach from=$cat.attr_values item=catz name=foo}-->
+<span class="classtypex"><a href="categorysea.php?attr{$smarty.foreach.arrts.index}={$catz|escape:url}">{$catz}</a></span>
+
+     <!--{/foreach}-->
+	 </div>
+<div class="leftmainline"><img src="images/leftmainline.jpg" height="2px" /></div>
+
+ <!--{/foreach}--> 
+ 
+ <div class="leftmain"><img src="images/yuanquan.jpg" width="9px">&nbsp;<a href="{$cat.url}"><span class="color_hei fontsize13">产品价格</span></a>
+</div>
+
+<div class="leftmaincontent">
+
+
+ <!--{foreach from=$categoryjg item=catz}-->
+ 
+ <span class="classtype"><a href="categorysea.php?price_min={$catz.attr_type}&price_max={$catz.attr_input_type}">{$catz.name}</a></span>
+ 
+ <!--{/foreach}--> 
+
+
+
+
+
+	 </div>
+<div class="leftmainline"><img src="images/leftmainline.jpg" height="2px" /></div>

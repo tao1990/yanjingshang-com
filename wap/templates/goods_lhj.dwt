@@ -1,0 +1,1124 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="x-ua-compatible" content="ie=7"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link  type="text/css" rel="stylesheet" href="themes/default/style/base.css"/>
+<link  type="text/css" rel="stylesheet" href="themes/default/style/xu_css.css"/>
+<link  type="text/css" rel="stylesheet" href="themes/default/style/yi_goods.css"/>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div class="main clearfix">
+	<div class="product_top fl">
+    	<ul class="dao_tip"><li class="dao_gen">{$ur_here}</li></ul>        
+        <div class="product_top_l fl">
+            <div class="product_top_l_img">
+               <div id="preview">
+                    <div class="jqzoom" id="spec-n1"><img src="{$img_url}{$goods.original_img}" jqimg="{$gallery.0.img_original}" width="300" height="300" alt="{$goods.goods_name|escape:html}"/></div>
+                    <div id="spec-n5">
+                        <div id="spec-left"><img src="{$image_url}/themes/default/images/xu/productmore/left.gif" width="10" height="45" alt=""/></div>
+                        <div id="spec-list">
+                            <ul class="list-h"> 
+                            <!--{foreach from=$gallery item=li name=foo}-->                     
+                                <li><img src="{$img_url}{$li.img_url}" width="60" height="60" _tab="{$img_url}{$li.thumb_url}" _tab2="{$img_url}{$li.img_original}"/></li> 
+                            <!--{/foreach}-->                                 
+                            </ul>
+                        </div>
+                        <div id="spec-right"><img src="{$image_url}/themes/default/images/xu/productmore/right.gif" width="10" height="45" alt="" /></div>
+                    </div>
+                </div>
+            </div>
+            <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare ml10">
+                <span class="bds_more">分享到：</span>
+                <a class="bds_qzone"></a>
+                <a class="bds_tsina"></a>
+                <a class="bds_tqq"></a>
+                <a class="bds_renren"></a>
+                <a class="shareCount"></a>
+            </div>
+        </div>        
+        <div class="product_top_r_r">  
+            <div class="product_top_r ml10 fl" style="_display:inline;">
+            	<div class="goods_name_tr"><span style="color: #4B4B4B;font-weight:bold">{if $source.price_title && $source.can_add && $source.is_by}【包邮】{/if}{$goods.goods_name}</span><br />{if $goods.goods_name_desc}
+                <span style="color:#FF0000">{$goods.goods_name_desc}</span>{else}{$goods.goods_brief}{/if}
+
+                <!--<span style="color: #ff770a;font-size: 13px;">1.任意购物+29元换购进口安瞳美感日抛1盒，2.28截止</span><br />
+                <span style="color: #ff770a;font-size: 13px;">2.任意购物+24元换购怡美思曼妙丝缎小玫瑰年抛型彩色隐形眼镜1副，2.28截止</span>-->
+
+                </div>
+                <ul class="g_desc_tr" style="border-bottom:1px solid #f2f2f2;margin-top:-7px;padding-bottom:14px">
+                	<li style="width:280px; font-size:12px; line-height:12px;"><span class="fl color9 mr10" style="font-size:12px;color:#999;><span class="fl color9 mr10"><label>综合评分</label>：</span><span class="star5" style="display:inline-block; margin-top:1px; float:left;"></span><span style="margin-left: 15px;">评论数：<span style="color:#33BEDB;font-weight:bold"> {if $goods.comment_num > 0}{$goods.comment_num}{else}0{/if}</span></span></li>
+                    {if $gift_tip}
+
+                        <dl>
+                            <dd id="g_gift_text" style="width:auto; max-width:288px; _width:288px; height:auto; line-height:16px; overflow:hidden; border:1px #dcdcdc solid; z-index:10; background-color:white; padding:0px 4px 4px 4px; display:none; position:absolute; color:#E43232;">
+                            	<!--{foreach from=$gift_tip item=li name=foo}-->{$li}<!--{/foreach}-->
+                            </dd>
+                            <dd style="width:10px; height:16px; background:url(../images/common/gift2.png) no-repeat 2px 3px; z-index:10;"><a href="javascript:;" id="g_gift_tip" style="width:8px; height:16px; display:block;"></a></dd>
+                        </dl>
+                	</li>{/if}
+                </ul>
+
+                <p class="color9" style="overflow: hidden;zoom:1;margin-top:15px">
+                {if $source.price_title && $source.can_add}<label style="float: left;">{$source.price_title}</label><span style="float: left;line-height:28px">：</span><span class="reds pl10"  style="float: left;"><strong class="fontArial"style="font-size:14px";">&yen;</strong><span class="fs20 fontArial" style="float: left;">{$source.exclusive_price}</span></span>
+                {else}<!--{if $goods.is_promote and $goods.gmt_end_time }促销-->{insert_scripts files='lefttime.js'}
+                <label style="float: left;" {if $goods.is_promote}class="reds"{/if}>抢&nbsp;&nbsp;购&nbsp;&nbsp;价</label><span style="float: left;line-height:28px">：</span><span class="reds pl10" style="float: left;"><span class="fs20 fontArial">{$goods.promote_price}</span></span>
+                <!--{else}-->
+                {if $user_rank > 1}
+                <label style="float: left;">易&nbsp;&nbsp;视&nbsp;&nbsp;价</label><span style="float: left;line-height:28px">：</span><span class="pl10"><span class="fontArial" style="float: left;font-size:14px;margin-top:5px;margin-left:8px">{$rank_prices.1.price}</span></span>
+                {else}
+                <label style="float: left;">易&nbsp;&nbsp;视&nbsp;&nbsp;价</label><span style="float: left;line-height:28px">：</span><span class="reds pl10"><strong class="fontArial fs20" style="float: left;margin-left:10px">&yen;</strong>
+<span class="fs20 fontArial" style="float: left;">{$goods.shop_price_nochar}</span></span>
+                {/if}
+                <!--{/if}-->
+                {/if}
+                {if $sales >0}<span style="float:left;margin-top:3px;margin-left:10px;background-color: #E43232;color:#fff;font-size:12px;padding:2px;line-height:14px;height:14px;">已优惠{$sales}元</span>{/if}
+                </p>
+                
+                <p class="color9">
+                	<!--{if $user_rank lt 2 ||($goods.is_promote and $goods.gmt_end_time) || $source.exclusive_price}vip=2-->
+                	<label>V &nbsp;I &nbsp;P 价</label>：<span id="show_vip_tip" style="font-family:微软雅黑;padding-right:2px;line-height:15px;">VIP折扣</span> <span>{$rank_prices.7.price}<span class="vip_tip_line"></span>{$vip_prices}</span><a href="javascript:;" id="trigger2" rel="targetBox2" class="how_vip">如何成为VIP<span class="how_vip_tip"></span></a>
+                    <!--{else}-->
+					<label style="float: left;">V &nbsp;I &nbsp;P 价</label><span style="float: left;line-height:28px">：</span><span id="show_vip_tip" style="lien-height:15px;font-family:微软雅黑;float:left;margin-top:5px;padding-right:1.5px">{if $user_rank eq 2}VIP折扣{elseif $user_rank eq 8}白金VIP{elseif $user_rank eq 7}钻石VIP{/if}</span> <span class="reds"><span class="fs20 fontArial" style="margin-top:1px;float:left;font-weight:bold">{if $user_rank eq 2}{$rank_prices.2.price}{elseif $user_rank eq 8}{$rank_prices.8.price}{elseif $user_rank eq 7}{$rank_prices.7.price}{/if}</span></span><a href="javascript:;" id="trigger2" rel="targetBox2" class="how_vip">如何成为VIP<span class="how_vip_tip"></span></a>
+                    <!--{/if}-->
+                    <div id="vip_pr_p" class="vip_pr_p" >
+                    	<dl><dd id="vip_h"></dd></dl>
+                    	<dl>
+                            <dd class="vip_td">VIP会员</dd><dd class="vip_td1 {if $user_rank neq 2 && !($user_rank lt 2 ||($goods.is_promote and $goods.gmt_end_time) || $source)}vip_del{/if}">{$rank_prices.2.price}</dd>
+                            <dd class="vip_td vip_td2">白金VIP会员</dd><dd class="vip_td1 {if $user_rank neq 8 && !($user_rank lt 2 ||($goods.is_promote and $goods.gmt_end_time) || $source)}vip_del{/if}">{$rank_prices.8.price}</dd>
+                            <dd class="vip_td vip_td3">钻石VIP会员</dd><dd class="vip_td1 {if $user_rank neq 7 && !($user_rank lt 2 ||($goods.is_promote and $goods.gmt_end_time) || $source)}vip_del{/if}">{$rank_prices.7.price}</dd>
+                        </dl>
+                    </div>
+                    <div id="targetBox2" style="display:none;">
+                        <table width="0" border="0" cellpadding="0" class="product_top_r_vip">
+                            <tr><th width="45%"><img src="{$image_url}/themes/default/images/xu/productmore/vip1.gif" alt=""/><span class="pl5">Vip会员</span></th><td width="50%">累计购物≥1000元</td></tr>
+                            <tr><th><img src="{$image_url}/themes/default/images/xu/productmore/vip2.gif" alt="" /><span class="pl5">白金Vip会员</span></th><td>累计购物≥2800元</td></tr>
+                            <tr><th><img src="{$image_url}/themes/default/images/xu/productmore/vip3.gif" alt="" /><span class="pl5">钻石Vip会员</span></th><td>累计购物≥5000元</td></tr>
+                        </table>
+                    </div>
+                </p>
+
+                
+                <style>
+                    .cuxiao1 img{height:36px;width:36px;border:1px solid #f2f2f2; vertical-align:middle;}
+                    .top_001{margin-bottom:11px} 
+                    .top1_right img{ vertical-align:middle}
+                    .cuxiao1 span{font-size:12px;margin-left:3px}
+                    .cuxiao1{width:80px;float:left;margin-bottom:11px}
+                    .chakan1{float:right;margin-right:50px;width:81px;height:16px;font-size:12px;}
+                    .chakan1 a{color:#E43232; text-decoration: none;}
+                </style>
+
+                <div class="product_top_r ml10 fl" style="margin-top:5px">
+                   <div class="color9" style="margin-left: -10px;float:left"><label>促销信息</label>：</div>
+                   <div class="cu_right" style="width: 500px;float:left;margin-left:10px">
+                       <div class="top_01">
+                         <div class="top1_left" style="float:left;width:450px;">
+                         {foreach from=$arr key=key item=item}
+                            <div class="top_001"><span style="color: #fff; background-color: #E43232;padding:1px 2px;margin-right:5px;">{if $item.act_type eq 0}赠品{elseif $item.act_type eq 1}立减{elseif $item.act_type eq 2}折扣{elseif $item.act_type eq 3}加价购{/if}</span><a href="{if $item.gift_tip_url}http://{$item.gift_tip_url}{else}javascript:void(0){/if}"  {if $item.gift_tip_url}target="_blank"{/if} style="color: #E43230;"  {if $item.act_type eq 0}onclick="checkPrice({$item.act_id})"{/if}>{$item.gift_tip}</a></div>
+                            {if $item.gift}
+                            <div style="display:none" id="thunm_{$item.act_id}">
+                               {foreach from=$item.gift item=key}
+                               <div class="cuxiao1"><a href="goods{$key.id}.html" ><img src="{$img_url}{$key.thumb}" title="{$key.name}"></a><span>×{$key.number}</span></div>
+                               {/foreach}
+                               <div class="clear"></div>
+                            </div>
+                            {/if}
+                         {/foreach}
+                         </div><!--top1_left end-->
+                         <div class="clear"></div>
+                       </div><!--top_01 end-->
+                   <div class="clear"></div>
+                 </div>
+                </div>
+                
+                <!--{if $link_goods}[关联商品]-->
+                <div class="product_top_r_sp hd mt10 fl">
+                    <h2 style="height:14px; line-height:14px; float:left;"><label>同类商品</label>：</h2>
+                    <ul id="hover_img" class="fl pl10">
+                    <!--{foreach from=$link_goods item=li name=foo}-->
+                        {if $smarty.foreach.foo.index eq 0}
+                        <li class="pro_top_link pro_top_bb"><a href="goods{$li.link_goods_id}.html" id="triggera{$smarty.foreach.foo.iteration}" rel="targetBoxa{$smarty.foreach.foo.iteration}" title="{$li.title}"><img width="60" height="60" src="{$img_url}thumb/goods/60x60/goods_{$li.link_goods_id}_60x60.jpg" alt="{$li.title}"/></a></li>
+                        {else}
+                        <li><a href="goods{$li.link_goods_id}.html" id="triggera{$smarty.foreach.foo.iteration}" rel="targetBoxa{$smarty.foreach.foo.iteration}"><img width="60" height="60" src="{$img_url}thumb/goods/60x60/goods_{$li.link_goods_id}_60x60.jpg" alt="{$li.title}" /></a></li>
+                        {/if}
+                    <!--{/foreach}-->
+                    </ul>
+                </div><!--{/if}-->
+            </div>
+            <!--{foreach from=$link_goods item=li name=foo}-->
+            <div id="targetBoxa{$smarty.foreach.foo.iteration}" class="chanp_tu"><a href="goods{$li.link_goods_id}.html" title="{$li.title}"><img src="{$img_url}{$li.goods_thumb}" width="150" height="150" alt="{$li.title}"/></a></div>
+            <!--{/foreach}-->     
+            {if $user_id eq 0}                    
+            <div class="mt15 fl blue ml10" id="receipt_sh1">管理我的验光单：<a href="#TB_inline?height=220&amp;width=560&amp;inlineId=myOnPageContent1" class="thickbox denglu_dj" title="登陆易视网">[需登陆]</a></div>
+            {else}
+                {if $user_ds}
+                <div class="mt15 fl ml10 color9"><span class="receipt_h_text">选择已有验光单：</span>
+                    <select id="receipt_select" onchange="chg_receipt(this.value);" class="pro_top_link_selse fl" style="width:auto; min-width:130px; height:22px;"><option value="">请选择</option>
+                    <!--{foreach from=$user_ds item=li name=fo}-->{if $li.receipt_type eq 2}<option value="{$li.rec_id}">框架眼镜验光单{$smarty.foreach.fo.iteration}</option>{/if}<!--{/foreach}-->
+                    </select>
+                </div>                    
+                {else}
+                <div class="mt15 fl ml10 blue">管理我的验光单：<a href="user_receipt.html" title="去管理我的验光单">[去管理验光单]</a></div>
+                {/if}
+            {/if}            
+            <div class="fr pro_top_bem_r mt15"><a id="trigger1" href="javascript:;" rel="targetBox" >老花镜度数换算表</a></div>               
+            <div id="targetBox" style="display:none; height:1px; width:11111px; *position: static !important; padding-top:5px;" class="biao">
+                <span class="targetBox_huans_b">
+                <table border="0" align="center" cellspacing="1" cellpadding="0" class="targetBox_huans">
+                    <tbody>
+                        <tr>
+                            <th>年龄（岁）</th><th>40</th><th>45</th><th>50</th><th>55</th><th>60</th><th>65</th><th>70</th>
+                        </tr>
+                        <tr>
+                            <th>凸镜度数</th><td>+100°</td><td>+150°</td><td>+200°</td><td>+250°</td><td>+300°</td><td>+350°</td><td>+400°</td>
+                        </tr>
+                    </tbody>
+                </table>                    
+                <p class="targetBox_huans_p  color6">
+                    注1：您选择的度数，就是实际发货的隐形眼镜度数。<br />
+                    注2：如有疑问，请致电我们(4006-177-176)，我们会有专业技师为您解答。<br />
+                </p>
+                </span>
+            </div>  
+            
+            <div id="myOnPageContent1" style="display:none">                	
+                <div class="denglu_box aa">
+                    <div style="border:5px solid #2bbdd6; border-top:none; overflow:hidden; clear:both; zoom:1; ">
+                        <form name="login_form" id="yi_login_form" action="" method="post" onsubmit="return false;">
+                        <div class="denglu_l">                            
+                            <table width="0" border="0" cellpadding="0" class="denglu">
+                                <tr>
+                                    <td>用户名或Email：</td>
+                                    <td><input type="text" name="username" class="denglu_txt"/></td>
+                                </tr>
+                                <tr id="tip_un_tr" style="display:none;"><td></td><td style="color:red;"></td></tr>                                    
+                                <tr>
+                                    <td>密&nbsp;&nbsp;码：</td>
+                                    <td><input type="password" name="password" class="denglu_txt"/><a href="user.php?act=get_password" class="denglu_wj"><u>忘记密码？</u></a></td>
+                                </tr>
+                                <tr id="tip_un_tr2" style="display:none;"><td></td><td style="color:red;"></td></tr>   
+                                <tr>
+                                    <td></td>
+                                    <td style="height:30px;"><label style="height:20px; line-height:20px; width:160px;"><input type="checkbox" name="autologin" checked="checked" class="mr5"/>下次自动登陆</label></td>
+                                </tr>
+                            </table>                                
+                            <div class="denglu_butt"><input type="submit" name="submit" id="yi_login_bt" class="denglu_but2" value=""/></div>
+                            <div class="denglu_a color9">
+                                <a href="http://www.easeeyes.com/api/alipay/alipay_auth_authorize.php"><img src="{$image_url}/themes/default/images/xu/productmore/zhifubao.gif" width="18" height="18" alt="" class="fl"/><span class="fl pt5">支付宝登陆</span></a><span class="fl pl5">|</span>
+                                <a href="http://www.easeeyes.com/api/qq/oauth/redirect_to_login.php"><img src="{$image_url}/themes/default/images/xu/productmore/qq.gif" width="18" height="18" alt="" class="fl"/><span class="fl pt5">QQ登陆</span></a><span class="fl pl5">|</span>
+                                <a href="http://www.easeeyes.com/api/douban/index.php"><img src="{$image_url}/themes/default/images/xu/productmore/douban.gif" width="18" height="18" alt="" class="fl"/><span class="fl pt5">豆瓣账号登陆</span></a><span class="fl pl5">|</span>
+                                <a href="http://www.easeeyes.com/api/sina/weibodemo/index.php"><img src="{$image_url}/themes/default/images/xu/productmore/xinlang.gif" width="18" height="18" alt="" class="fl"/><span class="fl pt5">新浪微博登陆</span></a>
+                            </div>
+                        </div>
+                        </form>
+                    
+                        <div class="denglu_r fl pt50">
+                            <p>没有易视网账号？</p>
+                            <p class="reds">注册就送100积分！</p>
+                            <span><button id="hide" class="denglu_zc mt20" type="button"></button></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bb" style="display:none; padding-bottom:10px;">
+                    <div >
+                    <div class="denglu_box">
+                        <div style="border:#2bbdd6 5px solid;overflow:hidden;clear:both;zoom:1;border-top:none;">
+                        <div class="denglu_l">
+                            <table width="0" border="0" cellpadding="0" class="denglu">
+                              <tr>
+                                <td>用户名或：</td>
+                                <td><input class="denglu_txt" type="text" /></td>
+                              </tr>
+                              <tr>
+                                <td>用户名：</td>
+                                <td><input class="denglu_txt" type="text" /></td>
+                              </tr>
+                              <tr>
+                                <td>密码：</td>
+                                <td><input class="denglu_txt" type="text" /></td>
+                              </tr>
+                              <tr>
+                                <td>确认密码：</td>
+                                <td><input class="denglu_txt" type="text" /> </td>
+                              </tr>
+                              <tr>
+                                <td></td>
+                                <td><input type="checkbox" class="check" /><span class="denglu_span">我已看过并接受<a href="#" class="blue">《用户协议》</a></span></td>
+                              </tr>
+                            </table>
+                            <div class="denglu_butt"><button type="button" class="denglu_but2"></button></div>
+                            
+                        </div>
+                        <div class="denglu_r fl" style="height:220px !important">
+                            <p class="mt20">已有易视网账号？</p>
+                            <span><button id="show1" class="denglu_dll mt12" type="button"></button></span>
+                            <a href="#" class="mt10"><img src="{$image_url}/themes/default/images/xu/productmore/zhifubao.gif" alt="" />支付宝登陆</a>
+                            <a href="#" class="mt7"><img src="{$image_url}/themes/default/images/xu/productmore/qq.gif" alt="" />QQ登陆</a>
+                            <a href="#" class="mt7"><img src="{$image_url}/themes/default/images/xu/productmore/douban.gif" alt="" />豆瓣账号登陆</a>
+                            <a href="#" class="mt7"><img src="{$image_url}/themes/default/images/xu/productmore/xinlang.gif" alt="" />新浪微博登陆</a>
+                        </div>
+                        </div>
+                        </div>
+                    </div>					 
+                </div>
+            </div>
+            
+            <form action="" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY">
+            <div class="fl pro_top_bem_brm" >
+                <div class="pro_top_bem" style="padding: 10px;">
+                
+                    <div class="fl pro_top_bem_l" style="background-image:none;">
+                        <div class="pro_top_bem_b mb10">
+                            <div class="fl">
+                                <div class="fl">眼镜度数：</div>
+                                <select name="zselect" id="zselect_ds" class="pro_top_link_selse fl" style="width:130px; height:23px;">
+                                    <option value="">选择</option><option value="+1.00">+1.00</option><option value="+1.50">+1.50</option><option value="+2.00">+2.00</option>
+                                    <option value="+2.50">+2.50</option><option value="+3.00">+3.00</option><option value="+3.50">+3.50</option><option value="+4.00">+4.00</option>
+                                </select>
+                                
+                                <!--{if $goods_is_sg && $goods_sgds}有度数商品中散光片-->
+                                <div class="fl ml15">散光：</div>
+                                <select name="zsg" class="pro_top_link_selse fl" style="width:65px; height:23px;">
+                                    <option value="">请选择</option><!--{foreach from=$goods_sgds.ds_values item=value key=key}--><option value="{$value}">{$value}</option><!--{/foreach}-->
+                                </select>
+                                <div class="fl ml15">轴位：</div>
+                                <select name="zzhou" class="pro_top_link_selse fl" style="width:65px; height:23px;">
+                                    <option value="">请选择</option>
+                                    <option value="5">5</option>
+                                    <option value="10">10</option>
+                                    <option value="15">15</option>
+                                    <option value="20">20</option>
+                                    <option value="25">25</option>
+                                    <option value="30">30</option>
+                                    <option value="35">35</option>
+                                    <option value="40">40</option>
+                                    <option value="45">45</option>
+                                    <option value="50">50</option>
+                                    <option value="55">55</option>
+                                    <option value="60">60</option>
+                                    <option value="65">65</option>
+                                    <option value="70">70</option>
+                                    <option value="75">75</option>
+                                    <option value="80">80</option>
+                                    <option value="85">85</option>
+                                    <option value="90">90</option>
+                                    <option value="95">95</option>
+                                    <option value="100">100</option>
+                                    <option value="105">105</option>
+                                    <option value="110">110</option>
+                                    <option value="115">115</option>
+                                    <option value="120">120</option>
+                                    <option value="125">125</option>
+                                    <option value="130">130</option>
+                                    <option value="135">135</option>
+                                    <option value="140">140</option>
+                                    <option value="145">145</option>
+                                    <option value="150">150</option>
+                                    <option value="155">155</option>
+                                    <option value="160">160</option>
+                                    <option value="165">165</option>
+                                    <option value="170">170</option>
+                                    <option value="175">175</option>
+                                    <option value="180">180</option>
+                                </select>
+                                <!--{else}--><input type="hidden" id="is_sg" value=""/><!--{/if}-->                                    
+                            </div>
+                            <div class="fl  ml15">
+                                <ul class="goods_number">
+                                    <li>数量：</li>
+                                    <li class="bt_minus bt_minusjia"><a href="javascript:void(0)"></a></li>
+                                    <li class="input_cunt_li"><input type="text" name="zcount" value="1" class="input_count"/></li>
+                                    <li class="input_count_unit">{$goods.unit|default:盒}</li>
+                                    <li class="bt_add bt_minusjian"><a href="javascript:void(0)"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="pro_top_bem_b" style="display:none;">
+                            <div class="fl" style="display:none;"><span class="fl">右眼隐形眼镜：</span>
+                                <select name="yselect" id="yselect_ds"  class="pro_top_link_selse fl"  style="width:130px; height:23px;">
+                                    <option value="">请选择</option><!--{foreach from=$goodsds.ds_values item=value key=key}--><option value="{$value}">{$value}</option><!--{/foreach}-->
+                                </select>
+                                <!--{if $goods_is_sg && $goods_sgds}有度数商品中散光片-->
+                                <div class="fl ml15">散光：</div><input type="hidden" id="is_sg" value="is_sg" />
+                                <select name="ysg" class="pro_top_link_selse fl" style="width:65px; height:23px;">
+                                    <option value="">请选择</option><!--{foreach from=$goods_sgds.ds_values item=value key=key}--><option value="{$value}">{$value}</option><!--{/foreach}-->
+                                </select>
+                                <div class="fl ml15">轴位：</div>
+                                <select name="yzhou" class="pro_top_link_selse fl" style="width:65px; height:23px;">
+                                    <option value="">请选择</option>
+                                    <option value="5">5</option>
+                                    <option value="10">10</option>
+                                    <option value="15">15</option>
+                                    <option value="20">20</option>
+                                    <option value="25">25</option>
+                                    <option value="30">30</option>
+                                    <option value="35">35</option>
+                                    <option value="40">40</option>
+                                    <option value="45">45</option>
+                                    <option value="50">50</option>
+                                    <option value="55">55</option>
+                                    <option value="60">60</option>
+                                    <option value="65">65</option>
+                                    <option value="70">70</option>
+                                    <option value="75">75</option>
+                                    <option value="80">80</option>
+                                    <option value="85">85</option>
+                                    <option value="90">90</option>
+                                    <option value="95">95</option>
+                                    <option value="100">100</option>
+                                    <option value="105">105</option>
+                                    <option value="110">110</option>
+                                    <option value="115">115</option>
+                                    <option value="120">120</option>
+                                    <option value="125">125</option>
+                                    <option value="130">130</option>
+                                    <option value="135">135</option>
+                                    <option value="140">140</option>
+                                    <option value="145">145</option>
+                                    <option value="150">150</option>
+                                    <option value="155">155</option>
+                                    <option value="160">160</option>
+                                    <option value="165">165</option>
+                                    <option value="170">170</option>
+                                    <option value="175">175</option>
+                                    <option value="180">180</option>
+                                </select>  
+                                <!--{else}--><input type="hidden" id="is_sg" value=""/><!--{/if}-->                               
+                            </div>
+                             <div class="fl  ml15">
+                                <ul class="goods_number">
+                                    <li>数量：</li>
+                                    <li class="bt_minus bt_minusjia"><a href="javascript:void(0)"></a></li>
+                                    <li class="input_cunt_li"><input type="text" name="ycount" value="1" class="input_count"/></li>
+                                    <li class="input_count_unit">{$goods.unit|default:盒}</li>
+                                    <li class="bt_add bt_minusjian"><a href="javascript:void(0)"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="pro_top_bem_bt">
+                        {if $goods.goods_number>0}
+                        <a href="javascript:;" onclick="showDiv('mydiv',{$goods.goods_id})" style="cursor:pointer;"><div class="pro_top_bem_bt-a fl" style="margin-left: 25
+                        px;"></div></a>
+                        {else}<div class="pro_top_bem_bt-a fl goods_sale_out"></div>{/if}
+                        <a href="javascript:collect({$goods.goods_id})" class="goods_shoucang" title="收藏该宝贝">收藏该宝贝</a>
+                    </div>
+                    <!---------------------------------------------mydiv------------------------------------------------------->                
+                    <div class="box_a" id="mydiv" style="border:4px solid #d9dcda; display:none;">
+                        <div style="border:#2bbdd6 solid 4px; overflow:hidden;height:127px;">
+                        
+                            <div class="mainlista" style="background:#fff; z-index:999; overflow:hidden">                                
+                                <div class="guanb fr"><a href="javascript:void(0)" class="close"></a></div>
+                                <div class="comme_butt_goum" style="background:#FFF; width:300px; height:300px; overflow:hidden; z-index:99; position:position; top:100px; left:300px;">
+                                    <p class="comme_butt_p color3">已成功添加到购物车！</p>
+                                    
+                                    <div id="div_cart_info" style="margin:10px auto; color:#999;">购物车共有<span id="div_cart_info_num" class="f_b_r pd05">{insert name='cart_num'}</span>种宝贝</div>
+                                    <input type="button" class="comme_butt_js close" style="float:left; margin-left:45px; cursor:pointer; _display:inline;"/><a href="flow.html" style="cursor:pointer;"><div class="comme_butt_jx ml10" style="float:left;"></div></a>
+                                </div>                                    
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <!-------------------------------------------------------------------------------------------------------->                                      
+                </div>                
+                                
+            </div>
+            </form>          
+        </div>            
+    <!--[组合购买]-->
+    <div class="product_more">
+    	{if $goods.group_buy_h eq ''}<h2></h2>{else}<h2 id="group_buy_h">{$goods.group_buy_h}</h2>{/if}        
+    	<div class="product_more_b">           
+            <ul class="product_more_ul1">
+                <li style="margin-right:10px !important;">
+                	<a href="goods{$goods.goods_id}.html" class="product_rt_a" title="{$goods.goods_name}"><img width="130" height="130" src="{$img_url}{$goods.goods_img}" alt="{$goods.goods_name}" /></a>
+                    <a href="goods{$goods.goods_id}.html" title="{$goods.goods_name}"><p class="product_rt_p">{$goods.goods_name|truncate:11:false}</p></a>
+                    <!--{if $goodsds.ds_values}-->
+                    <ul style="width:130px;overflow:hidden;clear:both;zoom:1; float:left"><input type="hidden" name="goods_have_ds" id="goods_have_ds" value="1"/>
+                        <li>左眼<select class="pro_top_link_selse" style="width:70px; margin-left:5px;" id="g_zselect"><option value="">请选择</option><!--{foreach from=$goodsds.ds_values item=value}--><option value="{$value}">{$value}</option><!--{/foreach}--></select></li>
+                        <li>右眼<select class="pro_top_link_selse" style="width:70px; margin-left:5px;" id="g_yselect"><option value="">请选择</option><!--{foreach from=$goodsds.ds_values item=value}--><option value="{$value}">{$value}</option><!--{/foreach}--></select></li>                        
+                    </ul>
+                    <!--{else}--><input type="hidden" name="goods_have_ds" id="goods_have_ds" value="0"/><!--{/if}-->   
+                </li>                    
+                
+                <!--{foreach from=$peijian item=li name=foo}-->
+                {if $smarty.foreach.foo.index eq 0}
+                <li class="product_more_ul1_jia" style="background:url(images/goods/jiatip.gif) no-repeat;">
+                    <a href="goods{$li.goods_id}.html" class="product_rt_a"><img src="{$img_url}{$li.goods_img}" width="130" height="130" alt="{$li.goods_name}"/></a>
+                    <p class="product_rt_p"><a href="goods{$li.goods_id}.html">{$li.goods_name|truncate:11:false}</a></p><strong class="reds product_m_u_s">
+                    {if $li.ds}
+                    <div style="width:100%; height:24px; line-height:24px;"><select class="pro_top_link_selse" id="pei_ds_{$li.goods_id}" style="width:70px; margin-left:5px;"><option value="">请选择</option><!--{foreach from=$li.ds.ds_values item=value}--><option value="{$value}">{$value}</option><!--{/foreach}--></select></div>{/if}
+                                        
+                    <input type="checkbox" checked="checked" value="{$li.goods_id}" onclick="ck_group_buy(this)"/>
+                    
+                    <input type="hidden" id="get_price_{$li.goods_id}" value="{$li.group_price}"><input type="hidden" id="get_market_price_{$li.goods_id}" value="{$li.market_price}">
+                    <span class="product_m_u_span pl5">￥{$li.group_price}</span></strong>
+                </li>
+                
+                {else}
+                
+                <li {if $smarty.foreach.foo.index eq 3}style="margin:0 !important;"{/if}>
+                	<a href="goods{$li.goods_id}.html" class="product_rt_a"><img width="130" height="130" src="{$img_url}{$li.goods_img}" alt="{$li.goods_name}" /></a>
+                    <p class="product_rt_p"><a href="goods{$li.goods_id}.html">{$li.goods_name|truncate:11:false}</a></p>
+                    {if $li.ds}
+                    <div style="width:100%; height:24px; line-height:24px;"><select class="pro_top_link_selse" id="pei_ds_{$li.goods_id}" style="width:70px; margin-left:5px;"><option value="">请选择</option><!--{foreach from=$li.ds.ds_values item=value}--><option value="{$value}">{$value}</option><!--{/foreach}--></select></div>{/if}                    
+                    <strong class="reds product_m_u_s"><input type="checkbox" checked="checked" value="{$li.goods_id}" onclick="ck_group_buy(this)"/>                    
+                    <input type="hidden" id="get_price_{$li.goods_id}" value="{$li.group_price}"><input type="hidden" id="get_market_price_{$li.goods_id}" value="{$li.market_price}">
+                    <span class="product_m_u_span pl5">￥{$li.group_price}</span></strong>
+                </li>  
+                                              
+                {/if}
+                <!--{/foreach}-->
+            </ul>
+            <div class="product_more_zuhe fl"><input type="hidden" name="get_group_buy_id" id="get_group_buy_id" value="{$fitting_id}"/>
+                <ul style="text-align:left;">
+                	<li>市场价：<del class="fontFy_Sc pl5" style="vertical-align:middle;"> ￥<span id="yi_market_price" title="{$g_market_price}">{$g_market_price}</span></del></li>
+                    <li>组合价：<strong class="reds fontsize14 pl3">￥<span id="yi_shop_price" title="{$g_shop_price}">{$g_shop_price}</span></strong></li>
+                    <li>立&nbsp;&nbsp;省：<strong class="reds pl4">￥<span id="yi_save_price" title="{$g_save}">{$g_save}</span></strong></li>
+                    <li style="display:none;">{if $goods.goods_number && $goods.cat_id neq 181}<a href="javascript:;" onclick="yi_group_buy({$goods.goods_id});return false;" class="product_more_anniu mt10"></a>{/if}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    
+	<div class="goods_nbtm">
+        <div class="product_lf">
+            <div class="product_lf_daoh fl" id="daoh1">
+                <ul>
+                    <li class="product_daoha"><a href="javascript:daoh1.scrollIntoView()"></a></li>
+                    <li class="product_daohbh"><a href="javascript:daoh2.scrollIntoView()"></a></li>
+                    <li class="product_daohch"><a href="javascript:daoh3.scrollIntoView()"></a></li>
+                    <li class="product_daohdh"><a href="javascript:daoh4.scrollIntoView()"></a></li>
+                    <li class="product_daoheh"><a href="javascript:daoh5.scrollIntoView()"></a></li>
+                    <li class="product_daohfh"><a href="javascript:daoh6.scrollIntoView()"></a></li>
+                </ul>
+            </div>
+
+            <div class="product_tlf_tedian">
+            	{if $goods.goods_type eq 15}
+            	<ul class="kuang_cs">
+                	<li><img src="{$image_url}/themes/default/images/goods/kj_size.jpg" width="740" height="27" alt="" style="margin:20px 0 0 5px;"/></li>               	
+                	<li><img src="{$image_url}/themes/default/images/goods/kuangjia_canshu.jpg" width="778" height="42" alt="" style="margin-top:10px;"/></li>
+                    <li class="kuang_cs_txt">
+                    	<dl>
+                        	<dd style="width:140px; margin-left:12px;">镜框尺寸：<span>{$attr_kj.0.attr_value}</span></dd>
+                        	<dd>鼻梁尺寸：<span>{$attr_kj.1.attr_value}</span></dd>
+                            <dd>镜腿尺寸：<span>{$attr_kj.2.attr_value}</span></dd>
+                            <dd style="width:156px;">镜框高度：<span>{$attr_kj.3.attr_value}</span></dd>
+                            <dd style="width:156px;">总宽度：<span>{$attr_kj.4.attr_value}</span></dd>
+                        </dl>
+                    </li>
+                </ul>{/if}
+                <ul><li>{$goods.goods_desc}</li></ul>
+                {if $goods.brand_sq}<div class="g_desc_pic"><img src="{$image_url}/themes/default/images/brands/brands_{$goods.brand_img}.jpg" width="778" alt=""/></div>{/if}
+                <div class="g_desc_pic">  
+                	{if $goods.goods_type eq 13 or $goods.goods_type eq 0}<img src="{$image_url}/themes/default/images/xu/productmore/por_2_hly.jpg" width="778" height="177" alt=""/>
+                    {elseif $goods.goods_type eq 15}<img src="{$image_url}/themes/default/images/goods/kj_canshu_desc.jpg" width="778" height="263" alt=""/>{else}
+                    <img src="{$image_url}/themes/default/images/xu/productmore/por_2.gif" width="778" height="235" alt=""/>{/if}    
+                    <img src="{$image_url}/themes/default/images/xu/productmore/por1.png" width="778" height="296" style="margin-top:10px;"/>
+                    <img src="{$image_url}/themes/default/images/xu/productmore/por2.png" width="778" height="324" alt=""/>
+                    <img src="{$image_url}/themes/default/images/xu/productmore/por3.png" width="778" height="305" alt=""/>
+                    <img src="{$image_url}/themes/default/images/xu/productmore/por4.png" width="778" height="301" alt=""/>
+                    <img src="{$image_url}/themes/default/images/xu/productmore/por5.png" width="778" height="279" alt=""/>
+                    <img src="{$image_url}/themes/default/images/xu/productmore/por6.png" width="778" height="363" alt=""/>
+                    <img src="{$image_url}/themes/default/images/xu/productmore/por7.png" width="778" height="287" alt=""/>
+                    <img src="{$image_url}/themes/default/images/xu/productmore/por8.png" width="778" height="298" alt=""/>
+                </div>
+            </div> 
+                           
+            <div class="product_lf_daoh fl" id="daoh2">
+                <ul>
+                    <li class="product_daohah"><a href="javascript:daoh1.scrollIntoView()"></a></li>
+                    <li class="product_daohb"><a href="javascript:daoh2.scrollIntoView()"></a></li>
+                    <li class="product_daohch"><a href="javascript:daoh3.scrollIntoView()"></a></li>
+                    <li class="product_daohdh"><a href="javascript:daoh4.scrollIntoView()"></a></li>
+                    <li class="product_daoheh"><a href="javascript:daoh5.scrollIntoView()"></a></li>
+                    <li class="product_daohfh"><a href="javascript:daoh6.scrollIntoView()"></a></li>
+                </ul>
+            </div>
+            
+            {if $mjx_info}   
+            <!--[买家秀页面]-->                           
+            <div class="product_tlf_zhenren">
+                <h2 class="fontsize12 fontweight color9 product_tlf_zhenren_h2 mt10">
+                    <div class="product_tlf_zhenren_l">
+                        <span class="color6 fl pro_t_z_l_l">温馨提示：</span>
+                        <span class="color9 fl pro_t_z_l_r">买家秀图片均由客户上传，非易视网官方模特，图片上镜片的颜色和效果仅供参考！若由此给您带来不便请多多谅解，谢谢！</span>
+                    </div>
+                    <div class="product_tlf_zhenren_r">
+                        <span class="butt_maijia_sp">上传买家秀赠送<strong class="reds">25</strong>积分</span><a href="buyersshow.html" style="width:118px; height:29px; background:url(../images/xu/productmore/denglu.gif) no-repeat 0px -228px; display:block; float:left;"></a>
+                    </div>
+                </h2>                
+                <dl class="product_tlf_zhenren_dl mt10 fl">
+                    <dt class="fl">会员名：<strong class="blue" id="mjx_user_name">{$mjx_info.0.user_name}</strong></dt>                    
+                    <dd class="fr blue"><input type="text" id="mjx_user_vote" value="{$mjx_info.0.vote}" class="product_tlf_z_txd blue" /><a class="product_tlf_zr_an ml10 fl" href="javascript:void(0);" id="add_mjx_vote"></a></dd>
+                </dl>
+                <input type="hidden" id="get_goods_id" value="{$goods.goods_id}"/>
+                <input type="hidden" id="get_sh_mjx_id" value="{$mjx_info.0.id}"/>
+            </div>
+            <div class="mjx_pan">
+            	<div id="mjx_detail">{$mjx_info.0.detail}</div>                
+                <div class="mjx_img"><img id="sh_mjx_img" src="{$image_url}{$mjx_info.0.img}" width="398px" height="504px"/></div>                 
+                <ul class="mjx_thumb_pan">                
+                	<li class="prev_mjx"></li>                    
+                    <li class="mjx_thumb_li">
+                    	<dl class="mjx_thumb">
+                        <!--{foreach from=$mjx_info item=li name=foo}--> 
+                        	<dd><img src="{$image_url}{$li.thumb_img}" width="120px" height="150px" alt="" name="{$li.id}"/></dd>                        
+                        <!--{/foreach}--> 
+                        </dl>
+                    </li>
+                    <li class="next_mjx"></li>
+                </ul>           
+            </div>
+            {/if}
+                        
+            <div class="product_lf_daoh fl" id="daoh3">
+                <ul>
+                    <li class="product_daohah"><a href="javascript:daoh1.scrollIntoView()"></a></li>
+                    <li class="product_daohbh"><a href="javascript:daoh2.scrollIntoView()"></a></li>
+                    <li class="product_daohc"><a href="javascript:daoh3.scrollIntoView()"></a></li>
+                    <li class="product_daohdh"><a href="javascript:daoh4.scrollIntoView()"></a></li>
+                    <li class="product_daoheh"><a href="javascript:daoh5.scrollIntoView()"></a></li>
+                    <li class="product_daohfh"><a href="javascript:daoh6.scrollIntoView()"></a></li>
+                </ul>
+            </div>   
+            <div class="conpinglun mt10 fl">
+                <ul>
+                    <li class="col01 reds col01_h conpinglun_li">
+                        <p class="pt5">好评率</p>
+                        <span class="fontsize36 mt10 conpinglun_li_stron">{$append.pre_haoping}%</span>
+                    </li>
+                    <li class="col02 conpinglun_li">
+                        <ul>
+                            <li><em>好评</em><p><span style="width:{$append.pre_haoping}%"></span></p><span>{$append.pre_haoping}%</span></li>
+                            <li><em>中评</em><p><span style="width:{$append.pre_zhongping}%"></span></p><span>{$append.pre_zhongping}%</span></li>
+                            <li><em>差评</em><p><span style="width:{$append.pre_chaping}%"></span></p><span>{$append.pre_chaping}%</span></li>
+                        </ul>
+                    </li>
+                    <li class="col03 conpinglun_li">
+                        <ul class="fl">
+                            <li><span class="fl">舒适度</span><p class="sp-star sp-starie8 fl"><span class="star{$append.star_shushi}"></span></p></li>
+                            <li><span class="fl">美观度</span><p class="sp-star sp-starie8 fl"><span class="star{$append.star_meiguan}"></span></p></li>
+                            <li><span class="fl">服务态度</span><p class="sp-star sp-starie8 fl" style="margin-left:5px;"><span class="star{$append.star_fuwu}"></span></p></li>
+                        </ul>
+                        <div class="col03_r">评论赠送<strong class="reds">10</strong>积分</div>
+                    </li>
+                    <li class="col04 conpinglun_li">
+                        <span class="color6">我在易视购买过此商品</span>         
+                        
+                        {if $user_id>0}<input alt="#TB_inline?height=290&amp;width=630&amp;inlineId=myOnPageContent" title="立即评论" class="thickbox col04_inp mt10" type="button" style="cursor:pointer;"/>
+                        {else}<input type="button" alt="" title="只有会员才能评论" class="col04_inp mt10" style="cursor:pointer;" onClick="alert('只有登陆的会员才能评论!');"/>{/if} 
+                        
+                        <div id="myOnPageContent" style="display:none;">
+                            <form action="javascript:void(0)" onsubmit="submitComment(this)" method="post" name="commentForm" id="commentForm">                
+                            <div style="border:4px solid #d9dcda; border-top:none">
+                            <div class="comme_tanchuang_1">
+                                <dl>
+                                    <dt>用户名：</dt><dd><!--{if $user_name}-->{$user_name|escape:html}<!--{else}-->{$lang.anonymous}<!--{/if}--></dd>
+                                </dl>
+                                <dl>
+                                    <dt>舒适度：</dt>
+                                    <dd><input type="radio" class="fl comme_input"  name="score_shushi" value="5" checked /><span class="comme_tc_x5 fl"></span></dd>
+                                    <dd><input type="radio" class="fl comme_input"  name="score_shushi" value="4" /><span class="comme_tc_x4 fl"></span></dd>
+                                    <dd><input type="radio" class="fl comme_input"  name="score_shushi" value="3" /><span class="comme_tc_x3 fl"></span></dd>
+                                    <dd><input type="radio" class="fl comme_input"  name="score_shushi" value="2" /><span class="comme_tc_x2 fl"></span></dd>
+                                    <dd><input type="radio" class="fl comme_input"  name="score_shushi" value="1" /><span class="comme_tc_x1 fl"></span></dd>
+                                </dl>
+                                <dl>
+                                    <dt>美观度：</dt>
+                                    <dd><input type="radio" class="fl comme_input"  name="score_meiguan" value="5" checked /><span class="comme_tc_x5 fl"></span></dd>
+                                    <dd><input type="radio" class="fl comme_input"  name="score_meiguan" value="4" /><span class="comme_tc_x4 fl"></span></dd>
+                                    <dd><input type="radio" class="fl comme_input"  name="score_meiguan" value="3" /><span class="comme_tc_x3 fl"></span></dd>
+                                    <dd><input type="radio" class="fl comme_input"  name="score_meiguan" value="2" /><span class="comme_tc_x2 fl"></span></dd>
+                                    <dd><input type="radio" class="fl comme_input"  name="score_meiguan" value="1" /><span class="comme_tc_x1 fl"></span></dd>
+                                </dl>                    
+                                <dl>
+                                    <dt>服务态度：</dt>
+                                    <dd><input type="radio" class="fl comme_input" name="score_fuwu" value="5" checked/><span class="comme_tc_x5 fl"></span></dd>
+                                    <dd><input type="radio" class="fl comme_input" name="score_fuwu" value="4" /><span class="comme_tc_x4 fl"></span></dd>
+                                    <dd><input type="radio" class="fl comme_input" name="score_fuwu" value="3" /><span class="comme_tc_x3 fl"></span></dd>
+                                    <dd><input type="radio" class="fl comme_input" name="score_fuwu" value="2" /><span class="comme_tc_x2 fl"></span></dd>
+                                    <dd><input type="radio" class="fl comme_input" name="score_fuwu" value="1" /><span class="comme_tc_x1 fl"></span></dd>
+                                </dl>                    
+                                <dl>
+                                    <dt>配带效果建议：</dt>
+                                    <dd>
+                                        <select name="suggest" class="pro_top_link_selse" style="width:145px">
+                                            <option value="0">请选择配带效果</option>
+                                            <option value="1">颜色自然，直径偏大</option>
+                                            <option value="2">颜色自然，直径正常</option>
+                                            <option value="3">颜色夸张，直径偏大</option>
+                                            <option value="4">颜色夸张，直径正常</option>
+                                        </select>
+                                    </dd>
+                                </dl>                    
+                                <dl>
+                                    <dt>评论类容：</dt>
+                                    <dd>
+                                          <textarea name="content" class="comme_textarea" title=""></textarea>
+                                          <input type="hidden" name="cmt_type" value="{$comment_type}" />
+                                          <input type="hidden" name="id" value="{$id}" /> 
+                                          <input type="hidden" name="email" id="email" value="{$smarty.session.email|escape}"/> 
+                                          <input type="hidden" name="comment_rank"  value="5"/>                          
+                                    </dd>
+                                </dl>
+                                <p class="fr comne_p"><input type="submit" name=""  value="" class="comme_h_tijiao" style="cursor:pointer;"/></p>  
+                            </div>
+                            </div>
+                            </form>
+                        </div>            
+                    </li>
+                </ul>
+            </div>                 
+            <!-- #BeginLibraryItem "/library/comments.lbi" --><!-- #EndLibraryItem -->            
+              
+        <!-----------------------------[有问必答]-------------------------------->
+        <div class="product_lf_daoh fl" id="daoh4">
+            <ul>
+                <li class="product_daohah"><a href="javascript:daoh1.scrollIntoView()"></a></li>
+                <li class="product_daohbh"><a href="javascript:daoh2.scrollIntoView()"></a></li>
+                <li class="product_daohch"><a href="javascript:daoh3.scrollIntoView()"></a></li>
+                <li class="product_daohd"><a href="javascript:daoh4.scrollIntoView()"></a></li>
+                <li class="product_daoheh"><a href="javascript:daoh5.scrollIntoView()"></a></li>
+                <li class="product_daohfh"><a href="javascript:daoh6.scrollIntoView()"></a></li>
+            </ul>
+        </div>
+        <div class="conZiXun">
+            <div class="mt10 conZiXun_img">                
+                {if $user_id>0}<input type="button" class="conZiXun_imgb fr thickbox" title="我要咨询" style="cursor:pointer;" alt="#TB_inline?height=190&amp;width=620&amp;inlineId=myOnPageContent4" />
+                {else}<input type="button" class="conZiXun_imgb fr" title="咨询前请先登录会员"  style="cursor:pointer;" onClick="alert('只有登陆的会员才能咨询!');" alt=""/>{/if}                 
+                <div style="display:none" id="myOnPageContent4">
+                <form action="add_message.php" method="post" name="formMsg" onsubmit="return aa();">
+                <input type="hidden" id="user_info" value="{if $user_name}{$user_name}{else}{/if}"/>
+                    <div style="border:4px solid #d9dcda; border-top:none;">
+                        <div class="tiwen_chuang_xin">
+                            <div>
+                                <dl><dt>用户名：</dt><dd class="pl5">{if $user_name}{$user_name}{else}匿名用户{/if}</dd></dl>
+                                <dl>
+                                    <dt>问题类型：</dt>
+                                    <dd class="pl5"><input type="radio" name="msg_type" value="0" class="fl tiwen_chuang_inpu ml0" checked="checked"/>眼镜知识问答</dd>
+                                    <dd><input type="radio" name="msg_type" value="1" class="fl tiwen_chuang_inpu"/>购买问答</dd>
+                                    <dd><input type="radio" name="msg_type" value="2" class="fl tiwen_chuang_inpu"/>支付问答</dd>
+                                    <dd><input type="radio" name="msg_type" value="3" class="fl tiwen_chuang_inpu"/>配送问答</dd>
+                                    <dd><input type="radio" name="msg_type" value="4" class="fl tiwen_chuang_inpu"/>售后问答</dd>
+                                    <dd><input type="radio" name="msg_type" value="5" class="fl tiwen_chuang_inpu"/>建议与投诉问答</dd>
+                                </dl>
+                                <dl>
+                                    <dt>咨询内容：</dt>
+                                    <dd class="pl5">
+                                        <textarea name="msg_content" id="context2" class="tiwen_chuang_text"></textarea>
+                                        <input type="hidden" name="act" value="act_add_message" />
+                                        <input type="hidden" name="goods_id" value="{$goods_id}" />
+                                        <input type="hidden" name="msg_title" id="email2" value="{$smarty.session.email|default:yi@easeeyes.com}"/>
+                                    </dd>
+                                </dl>                                
+                                <p class="tijiao_anniu_p"><input type="submit" value="" style="cursor:pointer;" class="tijiao_anniu" /></p>
+                             </div>
+                        </div>
+                    </div>
+                </form>
+                </div>
+            </div>
+            <!--{foreach from=$feedback name=foos item=message key=key}-->
+            <div class="conZiXun_dl_bian">
+                <dl>
+                    <dd class="conZiXun_dl"><span class="color9 fl">{if $message.user_name}{$message.user_name|truncate:6:false}{else}匿名用户{/if}</span><s class="fl">：</s>
+                    <p><em class="fl">{$message.msg_content}</em><em class="color9 fr">{$message.msg_time}</em></p></dd>
+                    <dt class="conZiXun_dd"><span class="blue fl">易视回复</span><s class="fl">：</s><p>{if $message.msg_re}<!--{$message.msg_re}-->{else}等待回答中...{/if}</p></dt>
+                </dl> 
+            </div>
+            <!--{/foreach}-->
+        </div>
+        
+        <div class="Com-plpageNum fr" style="width:780px; height:30px; margin-bottom:50px; {if $feedback}margin-bottom:0;{/if}">
+            <!--分页start-->
+            <form name="selectPageForm" action="{$smarty.server.PHP_SELF}" method="get">
+            <div id="pager" style="float:right; margin-right:15px; margin-bottom:5px; margin-top:5px;text-align:right;">
+                {$lang.pager_1}{$total1}{$lang.pager_2}{$lang.pager_3}{$pagecount1}{$lang.pager_4} 
+                <span> 
+                <!--{if $page1 == 1 }--><font color="red">第一页&nbsp;上一页</font>
+                <!--{else}--><a href="{$smarty.server.PHP_SELF}?id={$goods_ids}&amp;pages=1">第一页</a>&nbsp;
+                <a href="{$smarty.server.PHP_SELF}?id={$goods_ids}&amp;pages={$prev}" >上一页</a><!--{/if}-->&nbsp;
+                
+                <!--{if $page1 == $pagecount1 }--><font color="red">下一页&nbsp;&nbsp;最末页</font>
+                <!--{else}--><a href="{$smarty.server.PHP_SELF}?id={$goods_ids}&amp;pages={$next}">下一页</a>&nbsp;
+                <a href="{$smarty.server.PHP_SELF}?id={$goods_ids}&amp;pages={$pagecount1}">最末页</a><!--{/if}-->
+                </span>
+            </div>
+            </form>
+            <!--分页end-->
+            {literal}
+            <script type="Text/Javascript" language="JavaScript">
+            <!--
+            function selectPage(sel){  sel.form.submit();}
+            -->
+            </script>
+            {/literal}
+        </div>
+        <!-----------------------------[有问必答END]-------------------------------->                
+                <div class="product_lf_daoh fl" id="daoh5" style="margin-top:50px;">
+                    <ul>
+                        <li class="product_daoheh"><a href="javascript:daoh1.scrollIntoView()"></a></li>
+                        <li class="product_daohbh"><a href="javascript:daoh2.scrollIntoView()"></a></li>
+                        <li class="product_daohch"><a href="javascript:daoh3.scrollIntoView()"></a></li>
+                        <li class="product_daohdh"><a href="javascript:daoh4.scrollIntoView()"></a></li>
+                        <li class="product_daohe"><a href="javascript:daoh5.scrollIntoView()"></a></li>
+                        <li class="product_daohfh"><a href="javascript:daoh6.scrollIntoView()"></a></li>
+                    </ul>
+                </div>                
+                <div style="clear:both"></div>
+                
+                <div class="mt10">
+                <div class="product_peisonga"></div>
+                <div class="txt1">易视网为您提供支付宝支付、财付通支付、手机支付、快钱支付、多家网上银行支付等多种在线支付方式，几乎涵盖所有大中型银行发行的银行卡，覆盖率达98%。选择在线支付，您的银行卡需要开通相应在线支付功能。</div>
+                <div><img src="{$image_url}/themes/default/images/goods/goods_detail1.jpg" width="778" height="58" alt="支付方式"/></div>
+                <div class="product_peisongt"></div>
+                <div class="txt1">货到付款是快递员送货上门，客户开箱验货且满意后，直接将货款交给快递员的一种结算方式。您可以不必开通网上银行，也不用去银行排队汇款了。易视网现已开通多个省份和城市的货到付款业务。
+                <a href="article-2417.html"><u>点击查看</u></a>货到付款的支持范围。</div>
+                <div class="product_peisongs"></div>
+                <div class="txt1">您下号订单以后，页面会显示所有可汇款的银行卡号和账户名，<a href="article-119.html"><u>点击查看</u></a>。您去银行汇款完成后，请及时致电易视网客服电话：4006-177-176. 这样可以加快您订单的处理速度。</div>
+                <div class="color9 product_yinhang mb20">
+                    <span class="fl">可汇款银行：</span>
+                    <ul>
+                        <li><img src="{$image_url}/themes/default/images/xu/productmore/61.gif" alt="" /><em>宁波银行</em></li>
+                        <li><img src="{$image_url}/themes/default/images/xu/productmore/62.gif" alt="" />建设银行</li>
+                        <li><img src="{$image_url}/themes/default/images/xu/productmore/63.gif" alt="" />工商银行</li>
+                        <li><img src="{$image_url}/themes/default/images/xu/productmore/64.gif" alt="" />农业银行</li>
+                        <li><img src="{$image_url}/themes/default/images/xu/productmore/65.gif" alt="" />中国银行</li>
+                        <li><img src="{$image_url}/themes/default/images/xu/productmore/66.gif" alt="" />招行银行</li>
+                        <li><img src="{$image_url}/themes/default/images/xu/productmore/67.gif" alt="" />邮政储蓄</li>  	
+                    </ul>
+                </div>
+                </div>
+                <div style=" clear:both"></div>                
+                <div class="product_lf_daoh fl" id="daoh6">
+                    <ul>
+                        <li class="product_daoheh"><a href="javascript:daoh1.scrollIntoView()"></a></li>
+                        <li class="product_daohbh"><a href="javascript:daoh2.scrollIntoView()"></a></li>
+                        <li class="product_daohch"><a href="javascript:daoh3.scrollIntoView()"></a></li>
+                        <li class="product_daohdh"><a href="javascript:daoh4.scrollIntoView()"></a></li>
+                        <li class="product_daoheh"><a href="javascript:daoh5.scrollIntoView()"></a></li>
+                        <li class="product_daohf"><a href="javascript:daoh6.scrollIntoView()"></a></li>
+                    </ul>
+                </div>
+                <div style="clear:both"></div>
+                <div class="product_peisongf"></div> 
+                <div class="mt10">
+                    <table class="goods_sh_tb" border="1" cellspacing="0" cellpadding="0" width="720">
+                        <tbody>
+                            <tr>
+                                <td class="blue" width="300px">配送区域</td>
+                                <td class="blue" width="270px">普通快递时间（中通等）</td>
+                                <td class="blue" width="150px">货到付款（宅急送）</td>            
+                            </tr>
+                            <tr>
+                                <td class="blue">江浙沪地区</td>
+                                <td>1天</td>
+                                <td>1天</td>            
+                            </tr>
+                            <tr>
+                                <td class="blue">安徽、福建、山东、山西、广东、广西、河北<br/>河南、湖北、湖南、北京、天津、江西、陕西</td>
+                                <td>2-3天左右</td>
+                                <td>2-3天左右</td>            
+                            </tr>
+                            <tr>
+                                <td class="blue">四川、重庆、云南、贵州、辽宁<br/>吉林、黑龙江、海南</td>
+                                <td>3-4天左右</td>
+                                <td>3-4天左右</td>            
+                            </tr>
+                            <tr>
+                                <td class="blue">甘肃、青海、宁夏、内蒙古、西藏、新疆、港澳台</td>
+                                <td>4天左右</td>
+                                <td>4天左右</td>            
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt10 color9 ml30 fl mb10 dsly">以上时间为一般条件下的大概到货时间，不排除快递公司投递时所导致的意外情况。</div>
+                <div style="clear:both"></div>
+                <div class="product_peisongz"></div> 
+                <div class="mt10">
+                    <table class="goods_sh_tb" border="1" cellspacing="0" cellpadding="0" width="720">
+                        <tbody>
+                            <tr>
+                                <td class="blue" width="300px">配送区域</td>
+                                <td class="blue" width="270px">普通快递时间（中通等）</td>
+                                <td class="blue" width="150px">货到付款（宅急送）</td>            
+                            </tr>
+                            <tr>
+                                <td class="blue">江浙沪地区</td>
+                                <td>购物满150免首重，不满150收 5元，续重2元/KG</td>
+                                <td>首重10元，续重2元/KG</td>            
+                            </tr>
+                            <tr>
+                                <td class="blue">安徽、福建、山东、山西、广东、广西、河北<br/>河南、湖北、湖南、北京、天津、江西、陕西</td>
+                                <td>购物满150免首重，不满150收10元，续重8元/KG</td>
+                                <td>首重18元，续重10元/KG</td>            
+                            </tr>
+                            <tr>
+                                <td class="blue">四川、重庆、云南、贵州、辽宁<br/>吉林、黑龙江、海南</td>
+                                <td>购物满150免首重，不满150收12元，续重10元/KG</td>
+                                <td>首重20元，续重10元/KG</td>            
+                            </tr>
+                            <tr>
+                                <td class="blue">甘肃、青海、宁夏、内蒙古、西藏、新疆</td>
+                                <td>购物满150免首重，不满150收15元，续重15元/KG</td>
+                                <td>首重25元，续重10元/KG</td>            
+                            </tr>
+                            <tr>
+                                <td class="blue">香港、澳门、台湾</td>
+                                <td>首重30元，续重30元/KG</td>
+                                <td>港澳台不支持货到付款</td>            
+                            </tr> 
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt10 color9 ml30 dsly fl">说明：表中的快递费用，首重为1公斤。一般购买眼镜，伴侣盒，滴眼液无论多少，都不算超重。买护理液，基本上总和800ML是1公斤的重量。相应的超重费用，实际运费会在订单中由系统自动结算，结算时所依据的费率信息，因选择的快递公司和达到的优惠金额不同，计算的方法和价格会有差别，实际以系统生成价格为准。</div>
+                <div class="mt10 fl"><img src="{$image_url}/themes/default/images/xu/productmore/por_5.gif" alt="" /></div>                
+        </div>
+        
+        <!--[右边数据信息表的内容]-->
+        <div class="product_rt ml10 mt10 fl">
+        
+<!-- 产品参数 start -->
+            <!--隐形眼镜-->
+            <!--{if $goods.goods_type eq 10 or $goods.goods_type eq 12}-->
+            <div class="product_rt_cp">
+                <h2 class="product_rt_cp_h2"></h2>
+                <table class="product_rt_table"  border="0" cellpadding="0">
+                    <!--{foreach from=$attrs item=attr name=foo}-->
+                    
+                    <!--{if $attr.attr_id eq 211 or $attr.attr_id eq 219}-->
+                    <tr>
+                        <th width="37%"><em><a href="javascript:;" onmouseover="wsug(event, '是指开封之后使用的期限。超过更换期限未使用<br/>完的护理液或润眼液，则不能再继续使用，需重<br/>现购买新鲜的产品。')" onmouseout="wsug(event, 0)">更换周期</a></em>：</th>
+                        <td>{$attr.attr_value}</td>
+                    </tr>
+                    <!--{/if}-->
+                  
+                    <!--{if $attr.attr_id eq 212 or $attr.attr_id eq 220}-->
+                    <tr>
+                        <th width="37%"><em><a href="javascript:;" onmouseover="wsug(event, '是指实际佩戴的颜色；有些透明隐形眼镜会有淡<br/>淡蓝色，主要是为了便于用户操作更方便，实际<br/>佩戴后一般没有任何颜色。')" onmouseout="wsug(event, 0)">颜色</a></em>：</th>
+                        <td>{$attr.attr_value}</td>
+                    </tr>
+                    <!--{/if}-->
+                    
+                    <!--{if $attr.attr_id eq 213 or $attr.attr_id eq 221}-->
+                    <tr>
+                        <th width="37%"><em><a href="javascript:;" onmouseover="wsug(event, '隐形眼镜材料吸水饱和后，水分占镜片总重要的<br/>百分比。50%以下为低含水，50%以上为高含水，<br/>如使用者的眼睛比较干或佩戴时间较长建议配<br/>合润眼液使用。')" onmouseout="wsug(event, 0)">含水量</a></em>：</th>
+                        <td>{$attr.attr_value}</td>
+                    </tr>
+                    <!--{/if}-->
+                    
+                    <!--{if $attr.attr_id eq 214 or $attr.attr_id eq 222}-->
+                    <tr>
+                        <th width="37%"><em><a href="javascript:;" onmouseover="wsug(event, '镜片外边缘的最大尺寸称为镜片直径，中国人的<br/>角膜平均直径为11.50～12.00mm,因此选择镜片<br/>直径为14.00mm左右较为适合，目前大多数产<br/>品的镜片直径在13.50mm～14.5mm。')" onmouseout="wsug(event, 0)">直径</a></em>：</th>
+                        <td>{$attr.attr_value}</td>
+                    </tr>
+                    <!--{/if}-->
+                    
+                    <!--{if $attr.attr_id eq 215 or $attr.attr_id eq 223}-->
+                    <tr>
+                        <th width="37%"><em><a href="javascript:;" onmouseover="wsug(event, '镜片后表面中央光学区的曲率称为基弧。基弧越<br/>大，镜片弧度越平，基弧越小，镜片弧度越弯。')" onmouseout="wsug(event, 0)">基弧</a></em>：</th>
+                        <td>{$attr.attr_value}</td>
+                    </tr>
+                    <!--{/if}-->
+                    
+                    <!--{if $attr.attr_id eq 224 or $attr.attr_id eq 229}-->
+                    <tr>
+                        <th width="37%"><em><a href="javascript:;" onmouseover="wsug(event, '镜片内外曲面的垂直距离称为中心厚度。因每个<br/>人眼睛所适合的厚度不一样，所以戴着舒服是最<br/>重要的。为了方便用户进行比较，易视网一般取<br/>-3.00度时所标注的中心厚度；')" onmouseout="wsug(event, 0)">中心厚度</a></em>：</th>
+                        <td>{$attr.attr_value}</td>
+                  	</tr>
+                    <!--{/if}-->
+                    
+                    <!--{if $attr.attr_id eq 240}-->
+                    <tr>
+                        <th width="37%"><em><a href="javascript:;">透氧系数</a></em>：</th>
+                        <td>{$attr.attr_value}</td>
+                  	</tr>
+                    <!--{/if}-->
+                    
+                    <!--{if $attr.attr_id eq 225 or $attr.attr_id eq 230}-->
+                    <tr>
+                        <th width="37%"><em><a href="javascript:;" onmouseover="wsug(event, '隐形眼镜的材质是指镜片的合成材料，一般可分<br/>为HEMA、水凝胶、硅水凝胶等，不同材质的镜片<br/>透氧性略有不同。')" onmouseout="wsug(event, 0)">材质</a></em>：</th>
+                        <td>{$attr.attr_value}</td>
+                    </tr>
+                    <!--{/if}-->
+                    
+                    <!--{if $attr.attr_id eq 241 or $attr.attr_id eq 242}-->
+                     <tr>
+                        <th width="37%"><em><a href="javascript:;">单位</a></em>：</th>
+                        <td>{$attr.attr_value}</td>
+                  	</tr>
+                    <!--{/if}-->
+                    
+                    <!--{if $attr.attr_id eq 226 or $attr.attr_id eq 231}-->
+                    <tr>
+                        <th width="37%"><em><a href="javascript:;" onmouseover="wsug(event, '隐形眼镜镜片的生产地址；生产地址在产品包装<br/>上的中文标识处有具体说明。')" onmouseout="wsug(event, 0)">产地</a></em>：</th>
+                        <td>{$attr.attr_value}</td>
+                  	</tr>
+                    <!--{/if}-->
+                    
+                    <!--{if $attr.attr_id eq 227 or $attr.attr_id eq 232}-->
+                    <tr>
+                        <th width="37%"><em><a href="javascript:;" onmouseover="wsug(event, '有效期是指产品的保质期，不管该产品有无开封<br/>使用，超过有效期的商品都是不可以再使用的。')" onmouseout="wsug(event, 0)">有效期</a></em>：</th>
+                        <td>{$attr.attr_value}</td>
+                    </tr>
+                    <!--{/if}-->
+                    
+                    <!--{if $attr.attr_id eq 228 or $attr.attr_id eq 233}-->
+                    <tr>
+                        <th width="37%"><em><a href="javascript:;" onmouseover="wsug(event, '是查询隐形眼镜和护理润眼液真伪的关键信息，<br/>在国内市场出售的所有产品都会由其生产商或代<br/>理商在国家药监局登记并获得药监局认可的正规<br/>注册号，根据注册号可以在国家食品药品监督局<br/>网站直接查询品牌的相关信息。一般国内品牌为<br/>准字号(国食药监械(准)字xxx第xxx号)，港澳台<br/>品牌为许字号(国食药监械(许)字xxx第xxx号),进<br/>口品牌为进字号(国食药监械(进)字xxx第xxx号)。<br/>注册号在产品包装上的中文标识处有具体说明。')" onmouseout="wsug(event, 0)">注册号</a></em>：</th>
+                        <td>{$attr.attr_value}</td>
+                    </tr>
+                    <!--{/if}-->
+                  
+                  <!--{/foreach}-->
+
+             </table>
+            </div>
+            <!--{/if}-->
+            <!--{if $goods.goods_type eq 13 or $goods.goods_type eq 0}[护理液]-->
+            <div class="product_rt_cp">
+                <h2 class="product_rt_cp_h2"></h2>
+                <table class="product_rt_table"  border="0" cellpadding="0">
+                  <tr><th width="37%"><em>品牌</em>：</th><td width="63%">{$goods.goods_brand}</td></tr>
+                  <!--{foreach from=$attrs item=attr name=foo}-->
+                  <!--{if $attr.attr_id eq 243}-->
+                  <tr><th width="37%"><em>单位</em>：</th><td>{$attr.attr_value}</td></tr>
+                  <!--{/if}-->
+                  <!--{if $attr.attr_id eq 234}-->
+                  <tr>
+                    <th width="37%"><em><a href="javascript:;" onmouseover="wsug(event, '是指开封之后使用的期限。超过更换期限未使用<br/>完的护理液或润眼液，则不能再继续使用，需重<br/>现购买新鲜的产品。')" onmouseout="wsug(event, 0)">更换周期</a></em>：</th><td>{$attr.attr_value}</td>
+                  </tr>
+                  <!--{/if}-->                  
+                  <!--{if $attr.attr_id eq 235}-->
+                  <tr><th width="37%"><em>主要功能</em>：</th><td>{$attr.attr_value}</td></tr>
+                  <!--{/if}-->                  
+                  <!--{if $attr.attr_id eq 236}-->
+                  <tr><th width="37%"><em>主要成分</em>：</th><td>{$attr.attr_value}</td></tr>
+                  <!--{/if}-->
+                  <!--{if $attr.attr_id eq 237}-->
+                  <tr>
+                    <th width="37%"><em><a href="javascript:;" onmouseover="wsug(event, '护理液的生产地址；生产地址在产品包装上的中<br/>文标识处有具体说明。')" onmouseout="wsug(event, 0)">产地</a></em>：</th>
+                    <td>{$attr.attr_value}</td>
+                  </tr>
+                  <!--{/if}-->                  
+                  <!--{if $attr.attr_id eq 238}-->
+                  <tr>
+                    <th width="37%"><em><a href="javascript:;" onmouseover="wsug(event, '有效期是指产品的保质期，不管该产品有无开封<br/>使用，超过有效期的商品都是不可以再使用的。')" onmouseout="wsug(event, 0)">有效期</a></em>：</th><td>{$attr.attr_value}</td>
+                  </tr>
+                  <!--{/if}-->                  
+                  <!--{if $attr.attr_id eq 239}-->
+                  <tr>
+                    <th width="37%"><em><a href="javascript:;" onmouseover="wsug(event, '是查询隐形眼镜和护理润眼液真伪的关键信息，<br/>在国内市场出售的所有产品都会由其生产商或代<br/>理商在国家药监局登记并获得药监局认可的正规<br/>注册号，根据注册号可以在国家食品药品监督局<br/>网站直接查询品牌的相关信息。一般国内品牌为<br/>准字号(国食药监械(准)字xxx第xxx号)，港澳台<br/>品牌为许字号(国食药监械(许)字xxx第xxx号),进<br/>口品牌为进字号(国食药监械(进)字xxx第xxx号)。<br/>注册号在产品包装上的中文标识处有具体说明。')" onmouseout="wsug(event, 0)">注册号</a></em>：</th>
+                    <td>{$attr.attr_value}</td>
+                  </tr>
+                  <!--{/if}-->
+                  <!--{/foreach}-->
+                </table>
+            </div>
+            <!--{/if}-->
+            <!--{if $goods.goods_type eq 14}[护理工具]-->
+            <div class="product_rt_cp">
+                <h2 class="product_rt_cp_h2"></h2>
+                <table class="product_rt_table"  border="0" cellpadding="0">
+                  <tr><th width="37%"><em>品牌</em>：</th><td width="63%">{$goods.goods_brand}</td></tr>
+                  <tr><th><em>单位</em>：</th><td>{$goods.unit|default:盒}</td></tr>
+                </table>
+            </div>
+            <!--{/if}-->
+            <!--{if $goods.goods_type eq 15}[框架眼镜]-->
+            <div class="product_rt_cp">
+                <h2 class="product_rt_cp_h2"></h2>
+                <table class="product_rt_table"  border="0" cellpadding="0">
+                  <tr><th width="37%"><em>品牌</em>：</th><td width="63%">{$goods.goods_brand}</td></tr>
+                  <!--{foreach from=$attrs item=attr name=foo}-->
+                  {if $attr.attr_id< 250 || $attr.attr_id> 254}
+                  <tr>
+                    <th width="37%">
+                    	<em>
+                        <!--{if $attr.attr_id eq 244}-->款式
+                        <!--{elseif $attr.attr_id eq 245}-->框型
+                        <!--{elseif $attr.attr_id eq 246}-->尺寸
+                        <!--{elseif $attr.attr_id eq 247}-->材质
+                        <!--{elseif $attr.attr_id eq 248}-->颜色
+                        <!--{elseif $attr.attr_id eq 249}-->风格
+                        <!--{else}--><!--{/if}-->
+                        </em>：
+                    </th><td>{$attr.attr_value}</td>
+                  </tr>{/if}
+                  <!--{/foreach}-->                  
+                  <tr><th><em>单位</em>：</th><td>{$goods.unit|default:副}</td></tr>
+                </table>
+            </div>
+            <!--{/if}-->            
+			<!-- 产品参数 end-->
+            <div class="mt10 product_rt_zz fl">
+                <h2 class="product_rt_zz_h2"></h2>
+                <ul>
+                <!--{foreach from=$bought_goods item=buyg}-->
+                    <li><div class="product_rt_a"><a href="goods{$buyg.goods_id}.html" title="{$buyg.goods_name}"><img src="{$image_url}{$buyg.goods_img}" width="130" height="130" alt="{$buyg.goods_name}" /></a></div>
+                    <p class="pt5"><a href="goods{$buyg.goods_id}.html" title="">{$buyg.goods_name}</a></p><strong class="reds">{$buyg.shop_price}</strong></li>                    
+                <!--{/foreach}-->
+                </ul>
+            </div>
+            
+            <div class="classfd_ll mt10">
+                <h2></h2>
+                <div style="border:1px solid #f2f2f2; width:198px; overflow:hidden;">                    
+                    <div id='history_div'>                        
+                        <div class="history_head"></div>
+                        <div id='history_list'>{insert name='historys'}</div>
+                    </div>                    
+                    <script type="text/javascript">
+                    if(document.getElementById('history_list').innerHTML.replace(/\s/g,'').length<1){
+                    }else{
+                        document.getElementById('history_div').style.display='block';
+                    }
+                    function clear_history(){
+                        Ajax.call('user.php', 'act=clear_history',clear_history_Response, 'GET', 'TEXT',1,1);
+                    }
+                    function clear_history_Response(res){
+                        document.getElementById('history_list').innerHTML = '{$lang.no_history}';
+                    }
+                    </script>
+                </div>
+            </div>
+        </div>    
+    </div>
+</div>
+</div>
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+<script type="text/javascript" src="{$image_url}js/transport2.js"></script>
+<script type="text/javascript" src="{$image_url}js/yijq.js"></script>
+<script type="text/javascript" src="{$image_url}js/common.js" ></script>
+<script type="text/javascript" src="{$image_url}js/yi_goods.js" ></script>
+<script type="text/javascript" src="{$image_url}js/p_floatdiv.js"></script>
+<script type="text/javascript" src="{$image_url}js/p_thickbox.js"></script>
+<script type="text/javascript" src="{$image_url}js/p_big_img.js" ></script>
+<script type="text/javascript" data="type=tools&amp;uid=803367" id="bdshare_js"></script>
+<script type="text/javascript" id="bdshare_js" data="type=tools" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
+</script>
+<script type="text/javascript" src="{$image_url}js/lazyload.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".product_more img, .product_tlf_tedian img, .mjx_pan img").lazyload({placeholder:"{$image_url}js/img/white.gif", effect:"fadeIn"});
+});
+</script>
+</html>

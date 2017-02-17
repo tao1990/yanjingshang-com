@@ -1,0 +1,15 @@
+<form id="formvote" name="ECS_VOTEFORM" method="post" action="" onSubmit="return submit_vote();">
+<!--{foreach from=$vote item=vot name=foo}--><!--{if $smarty.foreach.foo.index == 0}-->
+<div class="vote_pan">
+    <div class="vote_img"><img src="images/yi_index/bottom/dot.gif" width="16" height="16" alt=""/></div>
+    <div class="vote_title">易视调查：</div>
+    <div class="vote_name">{$vot.vote_name}</div>
+    <div class="vote_bt"><input type="submit" name="submit" class="vote_input" value=""/></div>
+</div>
+<div class="vote_con" ><!--{foreach from=$vot.options item=item name=foo}--><!--{if $vot.can_multi eq 0}多选-->            
+    <input type="checkbox" name="option_id" value="{$item.option_id}" /><span class="ck_span">{$item.option_name}</span><!--{else}单选-->
+    <input type="radio"    name="option_id" value="{$item.option_id}" /><span class="ck_span">{$item.option_name}</span><!--{/if}--> 
+    <!--{if $smarty.foreach.foo.total - $smarty.foreach.foo.index == 1}--><input type="hidden" name="len" value="{$smarty.foreach.foo.total}" /><!--{/if}--><!--{/foreach}-->
+    <input type="hidden" name="type" value="{$vot.can_multi}" /><input type="hidden" name="id"   value="{$vot.vote_id}" />
+</div><!--{/if}--><!--{/foreach}--> 
+</form>

@@ -1,0 +1,7 @@
+<!--{foreach from=$new_articles_aboutt item=article name=foo}-->
+<!--{if $smarty.foreach.foo.index > 1}-->
+<div class="newstitle"><div class="xyuandian" >&nbsp;•&nbsp;</div>
+<span><a href="{$article.url}" title="{$article.title|escape:html}" target="_blank">{$article.short_title|truncate:14:false}</a></span>
+</div>
+<!--{/if}-->
+<!--{/foreach}-->

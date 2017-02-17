@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<meta http-equiv="Content-Type"    content="text/html;charset=utf-8"/>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<meta name="Keywords"    content="" />
+<meta name="Description" content=""/>
+<title>全部品牌_隐形眼镜商城_易视网</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="themes/default/style/base.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="http://file.easeeyes.com/index2015/css/base.css" />
+<style type="text/css">
+	.main{width:100%; height:auto; margin:0 auto;}
+	#brand_2{width:100%; height:auto; overflow:hidden;}
+	.ad_8{ margin-bottom:0;}
+	.b_head{/*width:990px;*/ height:34px; margin:15px auto;}
+	.b_head li{width:102px; height:34px; margin-right:12px; cursor:pointer;}
+	.bh1{background:url(../images/brands/bt1.jpg) no-repeat; width:102px; height:34px; margin-right:12px; display:block; }
+	.bh11{background:url(../images/brands/bt11.jpg) no-repeat;}
+	.bh11:hover{background:url(../images/brands/bt111.jpg) no-repeat;}
+
+	.bh2{background:url(../images/brands/bt2.jpg) no-repeat;}	
+	.bh22{background:url(../images/brands/bt22.jpg) no-repeat; width:102px; height:34px; margin-right:12px; display:block;}
+	.bh22:hover{background:url(../images/brands/bt222.jpg) no-repeat;}
+	
+	.floatdiv{width:100%; height:66px;}
+	#letter_pan{width:100%; height:64px; border:1px solid #d9d9d9; border-left:none; border-right:none; background-color:white; overflow:hidden;}
+	.letter_dl{width:100%; height:26px; line-height:26px; margin:18px auto; overflow:hidden;}
+	.letter_h{color:#b7b7b7; font-size:16px; letter-spacing:1px; text-indent:8px; width:106px;}
+	
+	.letter{width:26px; height:26px; line-height:26px; vertical-align:middle; background-color:#e8e8e8; color:#7d7d7d; font-size:24px; text-align:center; font-family:Arial; margin-right:8px;}
+	.letter a{color:#7d7d7d; width:26px; height:26px; display:block;}
+	.letter a:hover{color:white; background-color:#60d6e2; text-decoration:none; vertical-align:middle; text-align:center; width:26px; height:26px; display:block;}
+	.letter2{color:white; background-color:#60d6e2; display:block; width:26px; height:26px;}	
+	.letter2 a{color:white;}
+	a{blr:expression(this.onFocus=this.blur())}
+	
+	.bpan{width:990px; height:auto; margin:30px auto 0 auto; background:url(../images/brands/bg.jpg) repeat-x #ededed; overflow:hidden;}
+	.bpan_h1, .bpan_h2,.bpan_h3,.bpan_h31,.bpan_h4,.bpan_h5{width:990px; height:41px; background:url(../images/brands/brand_cat1.jpg) no-repeat;}
+	.bpan_h2{background:url(../images/brands/brand_cat2.jpg) no-repeat;}
+	.bpan_h3{background:url(../images/brands/brand_cat3.jpg) no-repeat;}
+	.bpan_h31{background:url(../images/brands/brand_cat31.jpg) no-repeat;}
+	.bpan_h4{background:url(../images/brands/brand_cat4.jpg) no-repeat;}
+	.bpan_h5{background:url(../images/brands/brand_cat5.jpg) no-repeat;}
+	.bp_ad{width:982px; height:180px; margin-left:4px;}
+	.bp_ad li{width:491px; height:180px;}
+	.brands_pan{width:980px; height:auto; min-height:57px; margin:6px 0 6px 5px; overflow:hidden;}
+	.brands_pan li{width:97px; height:56px; border-bottom:1px solid #ededed; border-right:1px solid #ededed;}
+    dl dd {float:left;}
+    ul li {float:left; margin: 0;}
+    #brand_2 ul li dl dd img{height: 57px;}
+    .logo {width:36px; height: 36px; margin: 0; padding: 0}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<div class="main">
+    <div id="brand_2"><ul>
+    <!--{foreach from=$ch_arr item=lc name=foo}-->
+    	<li id="line{$lc.num}" style="width:100%; height:auto; border-bottom:1px dotted #e5e5e5;{if $lc.bnum eq 0}display:none;{/if}">
+        	<dl>
+            	<dd style="width:56px; height:56px; line-height:56px; border-right:1px dotted #e5e5e5; text-align:center; font-family:Arial; color:#cbcbcb; font-size:26px;">{$lc.char}</dd>
+                <!--{foreach from=$brand item=lib name=foo}-->
+                {if $lib.first_letter eq $lc.num}
+                <dd><a href="{$lib.site_url}" title="{$lib.brand_name}" target="_blank"><img src="http://www.easeeyes.com/{$lib.brand_logo}" width="97" height="56" alt="{$lib.brand_name}"/></a></dd>
+                {/if}
+                <!--{/foreach}--> 
+            </dl>
+        </li>
+    <!--{/foreach}--></ul>         
+    </div><ul style="width:100%; height:10px;"></ul>    
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+<script type="text/javascript" src="/js/yi_common.js"></script>
+<script type="text/javascript" src="/js/yifloat.js"></script>
+<!--<script type="text/javascript" src="/js/tip-totop.js"></script>-->
+<script type="text/javascript" src="http://file.easeeyes.com/index2015/js/common.js"></script>
+<script type="text/javascript">
+function topan(num, bnum)
+{
+	if(bnum>0)
+	{
+		if($("#brand_2").css('display') == 'none')
+		{
+			$(".b_head > li").last().html('').addClass('bh2').prev().addClass('bh11').html('<a href="javascript:;" class="bh11"></a>');
+			$("#brand_1").slideUp('slow');
+			$("#brand_2").slideDown();	
+			var tt = $("#brand_1").height();	
+		}		
+		var ph   = $("#letter_pan").height();
+		var ltop = $("#line"+num).offset().top;	
+		if(ltop>tt)
+		{
+			ltop = ltop - tt;
+		}	
+		ltop     = ltop-ph;
+		$(document).scrollTop(ltop);
+		var l_sn = num-65;
+		$(".letter").eq(l_sn).addClass('letter2').siblings().removeClass('letter2');
+	}
+}
+
+$(document).ready(function(){	
+$("#letter_pan").smartFloat();//浮动
+	
+
+$(".b_head > li").first().click(function(){
+	$(this).removeClass('bh11').html('<a href="javascript:;" class="bh1"></a>').next().removeClass('bh2').html('<a href="javascript:;" class="bh22"></a>');
+	$("#brand_2").slideUp('slow');
+	$("#brand_1").slideDown();	
+});
+$(".b_head > li").last().click(function(){
+	$(this).html('').addClass('bh2').prev().addClass('bh11').html('<a href="javascript:;" class="bh11"></a>');
+	$("#brand_1").slideUp('slow');
+	$("#brand_2").slideDown();	
+});
+
+$('.bh11').hover(
+	function(){
+		//$(this).addClass('bh222');
+		$(this).css("background-image","url(themes/default/images/brands/bt111.jpg)");
+	},
+	function(){
+		$(this).css("background-image","url(themes/default/images/brands/bt11.jpg)");
+	}
+);
+	
+})
+
+</script>
+</html>

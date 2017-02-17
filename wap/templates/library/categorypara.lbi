@@ -1,0 +1,83 @@
+<div class="clear"></div>
+<!--{foreach from=$categoriescsz item=cat name=arrts}-->
+{if $smarty.foreach.arrts.index eq 0}
+<div class="ckdivout" onmouseover="aa(this)" onmouseout="pout(this)"><div class="cs_magleft9px"></div>
+        <div class="csleft"><div style="float:left; margin-top:-7px;"><img src="../images/index/cs{$smarty.foreach.arrts.index}.gif" border="0" width="25" height="25"/></div>
+        	<a href="categorysea.php?attr{$smarty.foreach.arrts.index}=0"><font class="csleftfont">周<span class="width_12"></span>期</font></a>
+        </div>        
+        <div class="csright">
+            <!--{foreach from=$cat.attr_values item=catz }-->
+            <a href="categorysea.php?&attr{$smarty.foreach.arrts.index}={$catz|escape:url}"><font class="csrightfont" onMouseOver="changecolor(this)" onMouseOut="changecolor2(this)">{$catz}</font></a>
+            <!--{/foreach}-->
+        </div>
+</div>
+{/if}
+
+{if $smarty.foreach.arrts.index eq 1}
+<div class="ckdivout" onmouseover="aa(this)" onmouseout="pout(this)"><div class="cs_magleft9px"></div>
+        <div class="csleft"><div style="float:left; margin-top:-7px;"><img src="../images/index/cs{$smarty.foreach.arrts.index}.gif" border="0" width="25" height="25"/></div>
+            <a href="categorysea.php?attr{$smarty.foreach.arrts.index}=0"><font class="csleftfont">颜<span class="width_12"></span>色</font></a>
+        </div>        
+        <div class="csright">
+            <!--{foreach from=$cat.attr_values item=catz }-->
+            <a href="categorysea.php?&attr{$smarty.foreach.arrts.index}={$catz|escape:url}"><font class="csrightfont" onMouseOver="changecolor(this)" onMouseOut="changecolor2(this)">{$catz}</font></a>
+            <!--{/foreach}-->
+        </div>
+</div>
+{/if}
+
+{if $smarty.foreach.arrts.index eq 2}
+    <div class="ckdivout" onmouseover="aa(this)" onmouseout="pout(this)"><div class="cs_magleft9px"></div>
+        <div class="csleft"><div style="float:left; margin-top:-7px;"><img src="../images/index/cs{$smarty.foreach.arrts.index}.gif" border="0" width="25" height="25"/></div>
+            <a href="categorysea.php?attr{$smarty.foreach.arrts.index}=0"><font class="csleftfont">{$cat.name|escape:html}</font></a>
+        </div>        
+        <div class="csright">
+        <!--{foreach from=$cat.attr_values item=catz name=foo }-->
+            {if $smarty.foreach.foo.index > 0}
+            <a href="categorysea.php?&attr{$smarty.foreach.arrts.index}={$catz|escape:url}"><font class="csrightfont" style="margin-right:6px;" onMouseOver="changecolor(this)" onMouseOut="changecolor2(this)">{$catz}</font></a>
+            {/if}
+        <!--{/foreach}-->
+        </div>
+    </div>
+{/if}
+{if $smarty.foreach.arrts.index eq 3}
+    <div class="ckdivout" onmouseover="aa(this)" onmouseout="pout(this)"><div class="cs_magleft9px"></div>
+        <div class="csleft"><div style="float:left; margin-top:-7px;"><img src="../images/index/cs{$smarty.foreach.arrts.index}.gif" border="0" width="25" height="25"/></div>
+            <a href="categorysea.php?attr{$smarty.foreach.arrts.index}=0"><font class="csleftfont">直<span class="width_12"></span>径</font></a>
+        </div>        
+        <div class="csright">
+            <!--{foreach from=$cat.attr_values item=catz }-->
+                <a href="categorysea.php?&attr{$smarty.foreach.arrts.index}={$catz|escape:url}"><font class="csrightfont" onMouseOver="changecolor(this)" onMouseOut="changecolor2(this)">{$catz|truncate:4:false}mm</font></a>
+            <!--{/foreach}-->
+        </div>
+    </div>
+{/if}
+
+{if $smarty.foreach.arrts.index eq 4}
+<div class="ckdivout" onmouseover="aa(this)" onmouseout="pout(this)"><div class="cs_magleft9px"></div>
+        <div class="csleft"><div style="float:left; margin-top:-7px;"><img src="../images/index/cs{$smarty.foreach.arrts.index}.gif" border="0" width="25" height="25"/></div>
+            <a href="categorysea.php?attr{$smarty.foreach.arrts.index}=0"><font class="csleftfont">基<span class="width_12"></span>弧</font></a>
+        </div>        
+        <div class="csright">
+            <!--{foreach from=$cat.attr_values item=catz }-->
+            <a href="categorysea.php?&attr{$smarty.foreach.arrts.index}={$catz|escape:url}"><font class="csrightfont" onMouseOver="changecolor(this)" onMouseOut="changecolor2(this)">{$catz}</font></a>
+            <!--{/foreach}-->
+        </div>
+</div>
+{/if}
+
+{if $smarty.foreach.arrts.index eq 5}
+     <div class="ckdivout1" onmouseover="aa(this)" onmouseout="pout1(this)"><div class="cs_magleft9px"></div>
+        <div class="csleft"><div style="float:left; margin-top:-7px;"><img src="../images/index/cs{$smarty.foreach.arrts.index}.gif" border="0" width="25" height="25"/></div>
+        <a href="category.php?id=12"><font class="csleftfont">功能片</font></a></div>        
+        <div class="csright">            
+             <a href="category.php?id=14"><font class="csrightfont" onMouseOver="changecolor(this)" onMouseOut="changecolor2(this)">高度近视</font></a>
+             <a href="category.php?id=15"><font class="csrightfont" onMouseOver="changecolor(this)" onMouseOut="changecolor2(this)">散光片</font></a>
+             <a href="category.php?id=13"><font class="csrightfont" onMouseOver="changecolor(this)" onMouseOut="changecolor2(this)">远视片</font></a>
+             <a href="category.php?id=63"><font class="csrightfont" onMouseOver="changecolor(this)" onMouseOut="changecolor2(this)">防紫外线</font></a>
+             <a href="category.php?id=62"><font class="csrightfont" onMouseOver="changecolor(this)" onMouseOut="changecolor2(this)">艺术片cosplay</font></a>
+             <a href="category.php?id=61"><font class="csrightfont" onMouseOver="changecolor(this)" onMouseOut="changecolor2(this)">色盲片|美容片</font></a>
+        </div>
+    </div>
+{/if}
+<!--{/foreach}--> 

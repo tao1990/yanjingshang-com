@@ -1,0 +1,278 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>易视网 免费试用</title>
+<meta name="Keywords" content="易视网，易视眼镜网，美瞳，菲士康，菲士康大美目，彩色隐形眼镜，彩片" />
+<meta name="Description" content="易视网携手蜘蛛网菲士康大美目免费试用。满68包邮，24小时闪电发货，30天退换货保障" />
+<style>
+.lightblue{color:#03afc7;}
+.orange{color:#ff4200;}
+.rectangle{color:#fff;background:#03afc7;padding:0 .75rem;line-height:1.4rem;font-size:1.2rem;}
+.spider-main{background-color:#f2f2f2;}
+.spider-main .goods{margin:.1rem;padding:1rem;box-sizing:border-box;border:1px solid #cacaca;background:#fff;text-align:center;height:31rem;line-height:31rem;position:relative;}
+.spider-main .goods>img{max-height:31rem;max-width:100%;}
+.countdown{position:absolute;line-height:2.35rem;border-radius:1.175rem;background:rgba(54,191,210,.8);color:#fff;bottom:3.5rem;left:50%;width:18rem;margin-left:-9rem;}
+.countdown img{height:1.8rem;width:auto;}
+.countdown span{vertical-align:middle;display:inline-block;}
+.spider-main .goodsinfo{padding:.75rem .75rem .5rem;font-size:.5rem;}
+.spider-main .goodsinfo h2{color:#333;font-size:1.3rem;padding-bottom:.5rem;}
+.spider-main .goodsinfo h2 small{font-size:1.2rem;}
+.spider-main .goodsinfo b{font-size:1.3rem;}
+.condition{background:#ececec url(http://file.easeeyes.com/wap/images/20151027/bg.jpg) no-repeat center top;background-size:100% auto;padding:1.75rem .75rem .5rem;font-size:.5rem;}
+.condition .badge{padding:0 .25rem;line-height:2rem;background:#7bd3dd;color:#fff;font-size:1.1rem;border-radius:.25rem;position:relative;}
+.condition .badge:after{content:"";position:absolute;right:-1rem;top:.5rem;width:0;height:0;border:.5rem solid transparent;border-left-color:#7bd3dd;}
+.condition .text{margin-left:6rem;color:#999;}
+.apply-btns{text-align:center;line-height:5rem;border-top:.6rem solid #b4b4b4;}
+.apply-btns .collect{width:8.5rem;background:#e1e1e1;color:#03aec8;font-size:1.4rem;}
+.apply-btns .collect img{height:2rem;}
+#toApply{width:23.5rem;border:0 none;background:#03afc7;color:#fff;font-size:1.5rem;line-height:5rem;}
+.toApply{width:23.5rem;border:0 none;background:#03afc7;color:#fff;font-size:1.5rem;line-height:5rem;}
+.goods-detail{background:#f2f2f2;margin:2rem .2rem .5rem;border:1px solid #eeeeee;}
+.goods-detail h2{line-height:3.5rem;color:#666;}
+.goods-detail h2 span{font-size:1.4rem;padding:0 .75rem;}
+.goods-detail h2 span[data-selected="true"]{background:#fff;border-top:.25rem solid #01afc7;}
+.tab-main{background:#fff;}
+.product_tlf_tedian img{max-width:30rem;}
+/*弹窗*/
+.J-pop{position:fixed;left:0;top:0;z-index:999;background:rgba(0,0,0,.8);width:100%;height:100%;display:table;}
+.J-pop-wrap{display:table-cell;vertical-align:middle;text-align:center;}
+.J-pop-box{background:#fff;color:#666;text-align:left;padding:2rem;display:inline-block;border-radius:5px;position:relative;}
+.J-pop-btn-close{position:absolute;top:-.5rem;right:-.5rem;width:2.5rem;height:2.5rem;line-height:2.5rem;text-align:center;background:#fff;box-shadow:0 0 1px 1px rgba(0,0,0,.2);color:#333;border-radius:50%;font-size:1.5rem;}
+.J-pop-box h2{margin-bottom:1rem;}
+.J-pop-box p{margin-bottom:.5rem;}
+.J-pop-box input{padding:.5rem;border:1px solid #ccc;border-radius:4px;margin-left:.5rem;min-width:15rem;}
+.J-pop-box select{padding:0 1rem;line-height:2rem;margin-left:.5rem;}
+.J-pop-box button{border:0 none;background:#02afc7;color:#fff;padding:0 1.5rem;line-height:3rem;border-radius:.5rem;width:100%;margin-top:1.5rem;box-shadow:0 0 2px 1px rgba(0,0,0,.2);}       
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<!--main-->
+<div class="container">
+	<div class="">
+		<img src="http://file.easeeyes.com/wap/images/20151027/banner.jpg" />
+	</div>
+	<div class="spider-main">
+		<div class="goods">
+			<img src="http://file.easeeyes.com/wap/images/20151027/cp.jpg" />
+			<div class="countdown">
+				<img src="http://file.easeeyes.com/wap/images/20151027/time.png" />
+				<span id="daybox">0</span>天<span id="hourbox">0</span>小时<span id="minutebox">0</span>分钟后结束
+			</div>
+		</div>
+		<div class="goodsinfo">
+			<h2><span class="rectangle">免费</span> <small>【优先体验】</small> 菲士康大美目日抛2片+伴侣盒</h2>
+			<p>免费提供：<b class="lightblue">500</b>份　　<b class="lightblue">{$count}</b>人申请　　价值：<span class="orange">&yen;<b>118</b></span></p>
+		</div>
+		<div class="condition">
+			<span class="pull-left badge">发放条件</span>
+			<div class="text">
+				1.会员可免费申请，若申请成功无需支付邮费。<br />
+				2.每个会员只能领取一次。（相同手机号、收件人判定为同一用户。）<br />
+				3.请根据要求填写真实度数，地址，手机号，以便发货。
+			</div>
+		</div>
+	</div>
+	<div class="apply-btns clearfix">
+		<a href="" class="collect pull-left"><img src="http://file.easeeyes.com/wap/images/20151027/star.png" /> 收藏</a>
+        {if $user_id eq 0}
+        <button class="pull-left toApply" onclick="re_login();" >免费申请</button>
+        {else}
+        <button id="toApply" class="pull-left">免费申请试用</button>
+        {/if}
+	</div>
+	<div class="goods-detail">
+		<h2 class="clearfix tab-nav">
+			<span class="pull-left selected">使用规则</span>
+			<span class="pull-left">产品详情</span>
+		</h2>
+		<div class="tab-main">
+			<div style="padding:1rem;"><img src="http://file.easeeyes.com/wap/images/20151027/01.jpg" /></div>
+			<div style="padding:.5rem .25rem;"><img src="http://file.easeeyes.com/wap/images/20151027/02.jpg" /></div>
+		</div>
+		<div class="tab-main">
+			<!--详情-->
+			<div class="product_tlf_tedian">
+            	                <ul><li><table cellspacing="1" cellpadding="0" sizset="48" sizcache="2" style="text-align: center; line-height: 24px; margin-top: 0px; width: 750px">
+    <tbody>
+        <tr sizcache="2">
+            <td style="text-align: left; background-color: #ffffff; padding-left: 4px; padding-right: 4px; height: 25px">
+            <p>&nbsp;<br />
+            <span style="color: #ff0000"><img src="{$image_url}images/upload/Image/菲士康大美目日抛型彩色隐形眼镜10片装.jpg" alt="" />&nbsp; &nbsp; &nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+            &nbsp;&nbsp;<br />
+            <span style="font-family: '宋体'; background: rgb(255,255,255); font-size: 9pt; mso-spacerun: 'yes'; mso-shading: rgb(255,255,255)"><img alt="" width="740" height="28" src="{$image_url}images/upload/Image/编辑推荐(26).jpg" /><br />
+            &nbsp;&nbsp;菲士康大美目彩色隐形眼镜的神秘魔法，能让你即刻轻松拥有乌黑明亮的迷人眼睛，散发明星般的神采。</span><span style="font-family: '宋体'; background: rgb(255,255,255); font-size: 9pt; mso-spacerun: 'yes'; mso-shading: rgb(255,255,255)"><o:p></o:p></span><br />
+            <span style="font-family: '宋体'; background: rgb(255,255,255); font-size: 9pt; mso-spacerun: 'yes'; mso-shading: rgb(255,255,255)">&nbsp;&nbsp;产品产品通过<font face="Arial">CE</font><font face="宋体">和</font><font face="Arial">ISO</font><font face="宋体">认证，质量安全有保证，</font>由新加坡原装进口，选用英国优质镜片，并在技术上采用专利染色技术和国际专利仿虹膜设计，不仅让你的眼睛变得更加漂亮自然，佩戴也非常舒适哦！</span></p>
+            <p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-family: '宋体'; font-size: 9pt; font-weight: bold; mso-spacerun: 'yes'"><br />
+            <img alt="" width="740" height="26" src="{$image_url}images/upload/Image/商品特性(14).jpg" /><br />
+            1.自然</span><span style="font-family: '宋体'; font-size: 9pt; font-weight: bold; mso-spacerun: 'yes'">增大效果：</span><span style="font-family: 宋体; font-size: 9pt">仿虹膜设计，变大眼睛，美观效果立体自然。</span><span style="font-family: 宋体; font-size: 9pt"><o:p></o:p></span></p>
+            <p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-family: '宋体'; font-size: 9pt; font-weight: bold; mso-spacerun: 'yes'">2.保湿舒润无负担</span><span style="font-family: '宋体'; font-size: 9pt; font-weight: bold; mso-spacerun: 'yes'">：</span><span style="font-family: 宋体; font-size: 9pt"><font face="宋体">58%含水量，含HA保湿因子，长效锁水，佩戴舒适度极佳。</font></span><span style="font-family: 宋体; font-size: 9pt"><o:p></o:p></span></p>
+            <p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-family: '宋体'; font-size: 9pt; font-weight: bold; mso-spacerun: 'yes'">3.</span><span style="font-family: '宋体'; font-size: 9pt; font-weight: bold; mso-spacerun: 'yes'">透氧率高</span><span style="font-family: 宋体; font-size: 9pt">：采用英国优质材料，让眼睛自由呼吸。</span></p>
+            <p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-family: '宋体'; font-size: 9pt; font-weight: bold; mso-spacerun: 'yes'">4.</span><span style="font-family: '宋体'; font-size: 9pt; font-weight: bold; mso-spacerun: 'yes'">防紫外线：</span><span style="font-family: 宋体; font-size: 9pt"><font face="宋体">能有效阻挡紫外线，安全健康。</font></span><span style="font-family: 宋体; font-size: 9pt"><o:p></o:p></span></p>
+            <p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-family: '宋体'; font-size: 9pt; font-weight: bold; mso-spacerun: 'yes'">5.顺滑边缘设计</span><span style="font-family: '宋体'; font-size: 9pt; font-weight: bold; mso-spacerun: 'yes'">：</span><span style="font-family: 宋体; font-size: 9pt">无卷边顾虑，极易摘戴，使用方便。</span></p>
+            <p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-family: 宋体; font-size: 9pt"><o:p></o:p></span></p>
+            <p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-family: 宋体; font-size: 9pt"><o:p></o:p></span></p>
+            <p class="p0" style="margin-top: 0pt; margin-bottom: 0pt">&nbsp;</p>
+            <p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><img alt="" width="740" height="27" src="{$image_url}images/upload/Image/产品展示(16).jpg" /><br />
+            <img alt="" width="750" height="330" src="{$image_url}images/upload/Image/1_02(542).jpg" /><br />
+            <br />
+            <img width="750" height="290" alt="" src="{$image_url}images/upload/Image/1_03(452).jpg" /><br />
+            <br />
+            <img alt="" width="740" height="27" src="{$image_url}images/upload/Image/细节展示(16).jpg" /><br />
+            <img width="750" height="346" alt="" src="{$image_url}images/upload/Image/1_05(488).jpg" /><br />
+            <img width="750" height="266" alt="" src="{$image_url}images/upload/Image/1_06(422).jpg" /><br />
+            &nbsp;</p>
+            <p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-style: normal; font-family: '宋体'; background: rgb(255,255,255); color: rgb(12,165,189); font-size: 9pt; font-weight: bold; mso-spacerun: 'yes'; mso-shading: rgb(255,255,255)"><img alt="" width="740" height="28" src="{$image_url}images/upload/Image/品牌简介(15).jpg" />&nbsp;</span><span style="font-style: normal; font-family: '宋体'; background: rgb(255,255,255); color: rgb(12,165,189); font-size: 9pt; font-weight: bold; mso-spacerun: 'yes'; mso-shading: rgb(255,255,255)"><o:p></o:p></span></p>
+            <p class="p0" style="text-align: justify; margin-top: 0pt; margin-bottom: 0pt"><span style="font-family: 宋体; font-size: 9pt">&nbsp;上海菲士康隐形眼镜有限公司，是享誉东南亚的跨国企业<font face="Times New Roman">oculus&nbsp;Private&nbsp;Limited</font><font face="宋体">（新加坡晶亮隐形眼镜私人有限公司）在大陆的全资子公司，拥有隐形眼镜悠久的生产历史和经验，至今已有三十多年的隐形眼镜制造历史，也是国际隐形眼镜制造协会（</font><font face="Times New Roman">clma</font><font face="宋体">）会员。其产品畅销全球</font><font face="Times New Roman">60</font><font face="宋体">多个国家和地区，尤其是彩色隐形在世界上已有一定的地位。</font></span></p>
+            </td>
+        </tr>
+    </tbody>
+</table></li></ul>
+                                <div class="g_desc_pic">  
+                	                    <img src="{$image_url}themes/default/images/xu/productmore/por_2.gif" width="778" height="235" alt=""/>
+                    <img src="{$image_url}themes/default/images/xu/productmore/por1.png" width="778" height="296" style="margin-top:10px;"/>
+                    <img src="{$image_url}themes/default/images/xu/productmore/por2.png" width="778" height="324" alt=""/>
+                    <img src="{$image_url}themes/default/images/xu/productmore/por3.png" width="778" height="305" alt=""/>
+                    <img src="{$image_url}themes/default/images/xu/productmore/por4.png" width="778" height="301" alt=""/>
+                    <img src="{$image_url}themes/default/images/xu/productmore/por5.png" width="778" height="279" alt=""/>
+                    <img src="{$image_url}themes/default/images/xu/productmore/por6.png" width="778" height="363" alt=""/>
+                    <img src="{$image_url}themes/default/images/xu/productmore/por7.png" width="778" height="287" alt=""/>
+                    <img src="{$image_url}themes/default/images/xu/productmore/por8.png" width="778" height="298" alt=""/>
+                </div>
+            </div> 
+			</div>
+		</div>
+	
+			
+		</div>
+	</div>
+</div>
+
+<!--弹窗-->
+<div class="J-pop" id="pop-01">
+	<div class="J-pop-wrap">
+		<div class="J-pop-box">
+			<span class="J-pop-btn-close" onclick="pop.close();">&times;</span>
+            <h2>请填写以下信息</h2>
+            <p>姓名：<input type="text" name="name" class="name" id="name" /></p>
+            <p>地址：<input type="text" name="address" class="address" id="address" /></p>
+            <p>手机：<input type="text" name="phone" class="phone" id="phonenum" /></p>
+            <p>度　数
+                <select class="ds" id="ds">
+                    <option value="平光">平光</option>
+                    <option value="-1.00">-1.00</option>
+                    <option value="-1.25">-1.25</option>
+                    <option value="-1.50">-1.50</option>
+                    <option value="-1.75">-1.75</option>
+                    <option value="-2.00">-2.00</option>
+                    <option value="-2.25">-2.25</option>
+                    <option value="-2.50">-2.50</option>
+                    <option value="-2.75">-2.75</option>
+                    <option value="-3.00">-3.00</option>
+                    <option value="-3.25">-3.25</option>
+                    <option value="-3.50">-3.50</option>
+                    <option value="-3.75">-3.75</option>
+                    <option value="-4.00">-4.00</option>
+                    <option value="-4.25">-4.25</option>
+                    <option value="-4.50">-4.50</option>
+                    <option value="-4.75">-4.75</option>
+                    <option value="-5.00">-5.00</option>
+                    <option value="-5.25">-5.25</option>
+                    <option value="-5.50">-5.50</option>
+                    <option value="-5.75">-5.75</option>
+                    <option value="-6.00">-6.00</option>
+                    <option value="-6.50">-6.50</option>
+                    <option value="-7.00">-7.00</option>
+                    <option value="-7.50">-7.50</option>
+                    <option value="-8.00">-8.00</option>
+                    <option value="-8.50">-8.50</option>
+                    <option value="-9.00">-9.00</option>
+                    <option value="-9.50">-9.50</option>
+                    <option value="-10.00">-10.00</option>
+                </select>
+            </p><!--
+            <p>验证码:<input type="text" size="4" name="captcha" class="captcha" /></p>
+            <p><img src="captcha.php?{$rand}" alt="captcha" style="vertical-align:middle; cursor:pointer;" onClick="this.src='captcha.php?&'+Math.random()" /></p>-->
+            <input type="hidden" name="act" value="151027" />
+            <p><button class="sub_btn">提交申请</button></p>
+		</div>	
+	</div>
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+<script src="http://file.easeeyes.com/wap/js/wappop.js"></script>
+<script src="http://file.easeeyes.com/wap/js/countdown_v2.js"></script>
+<script src="http://file.easeeyes.com/wap/js/tab.js"></script>
+<script>
+// 倒计时
+var countdown=new CountDown("2015/12/1 0:00",{
+	day_box:document.getElementById("daybox"),
+	hour_box:document.getElementById("hourbox"),
+	minute_box:document.getElementById("minutebox")
+});
+// 选项卡
+var tab=new Tab({
+	navs:document.querySelectorAll(".tab-nav span"),
+	tabs:document.querySelectorAll(".tab-main")
+});
+// 弹窗
+var pop=new Pop({id:"pop-01"});
+document.getElementById("toApply").addEventListener("click",function(){
+	pop.open();
+	return false;
+},false);
+
+function re_login(){
+    alert('请先登录后再申请！');
+    window.location.href = "user.php";
+}
+
+$(document).ready(function(){
+
+    $(".sub_btn").click(function(){
+
+        $.ajax({
+            url: 'ajax_active.php',
+            type: "post",
+            data:{act:'151027',name:$(".name").val(),phone:$(".phone").val(),ds:$(".ds").val(),captcha:$(".captcha").val(),address:$(".address").val()},
+            success: function(res){
+                alert(res);
+            }
+        });
+        /*var phone=$("#phonenum").val(),
+            name=$("#name").val(),
+            address=$("#address").val(),
+            reg=/^^[1][3578][0-9]{9}$/;
+        if(!reg.test(phone)){
+            alert("手机号码格式不正确");
+            return false;
+        }else if(name == ''){
+            alert("请填写姓名");
+            return false;
+        }else if(address == ''){
+            alert("请填写地址");
+            return false;
+        }else{
+            $.ajax({
+                url: 'ajax_active.php',
+                type: "post",
+                data:{act:'151027',name:$(".name").val(),phone:$(".phone").val(),ds:$(".ds").val(),captcha:$(".captcha").val(),address:$(".address").val()},
+                success: function(res){
+                    alert(res);
+                }
+            });
+        }*/
+    })
+});
+</script>
+</body>
+</html>

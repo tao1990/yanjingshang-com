@@ -1,0 +1,450 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>中秋遇上疯狂会员日，新用户注册即升vip,普通会员登录即升VIP</title>
+<meta name="Keywords"  content="易视网,易视眼镜网,美瞳,护理液,润眼液,博士伦,海昌,海俪恩,卫康,库博,视康,强生,sho-bi,GEO,NEO,BESCON" />
+<meta name="Description" content="易视网，中秋遇上疯狂会员日，会员大升级，新用户注册即升VIP，普通会员登录即升VIP,每天5款，连续七天整点抢爆款，会员日大转盘赢好礼，积分当钱花，24小时闪电发货，30天退换货保障" />
+<style>
+#countDown{position:absolute;top:22rem;left:5rem;}
+#countDown span{width:1.25rem;height:1.2rem;line-height:1.2rem;float:left;margin-right:1.5rem;text-align:center;color:#333;font-size:.7rem;}
+.hotItems{background:#400c61;}
+.hotItem{float:left;width:15.75rem;background:#fff;padding:0 .5rem .5rem;margin-bottom:.5rem;box-sizing:border-box;}
+.hotItem:nth-child(even){float:right;}
+.hotItem-thumb{display:block;height:12rem;line-height:12rem;text-align:center;}
+.hotItem-thumb img{vertical-align:middle;max-width:100%;max-height:100%;}
+.hotItem-title{display:block;color:#666;line-height:1.2rem;height:2.4rem;overflow:hidden;margin-bottom:.5rem;}
+.hotItem-price{display:block;color:#e02a36;font-size:1.2rem;line-height:1.2;text-align:center;}
+.hotItem-price del{color:#999;font-size:1rem;}
+.hotItem-btn{display:block;width:8rem;line-height:2rem;height:2rem;margin:.5rem auto 0;background:#df2b37;color:#fff;text-align:center;}
+.lottery-box{width:27.75rem;height:26.3rem;position:absolute;top:.3rem;left:2.65rem;}
+.lottery-box ul{height:100%;}
+.lottery-box li{float:left;width:33.33%;height:33.33%;position:relative;}
+.items-lucky li.current:after{
+	content:"";
+	position:absolute;
+	left:0;
+	top:0;
+	border-radius:.5rem;
+	width:100%;
+	height:100%;
+	background:rgba(255,110,3,.3);
+}
+.lucky-box{width:25.65rem;height:5.5rem;position:absolute;left:3.6rem;top:3.7rem;overflow:hidden;position:relative;}
+.luckyItems{position:relative;}
+.lucky-box li{float:left;width:50%;color:#fff;height:1.375rem;line-height:1.375rem;font-size:1rem;padding-right:1rem;box-sizing:border-box;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.luckyItems.ani{animation:move 1s;-webkit-animation:move 1s;}
+@keyframes move{
+	0%{}
+	100%{
+		transform:translate(0,-1.625rem);
+		-webkit-transform:translate(0,-1.625rem);
+	}
+}
+@-webkit-keyframes move{
+	0%{}
+	100%{
+		transform:translate(0,-1.625rem);
+		-webkit-transform:translate(0,-1.625rem);
+	}
+}
+.goodsItems{background:#ffb5d6;}
+.goodsItem{float:left;width:15.75rem;background:#fff;padding:0 .5rem .5rem;box-sizing:border-box;margin-bottom:.5rem;position:relative;}
+.goodsItem:nth-child(even){float:right;}
+.goodsItem-layer{position:absolute;background:#f74a77;color:#fff;text-align:center;line-height:1.2;padding:.2rem;width:3rem;font-size:1rem;}
+.goodsItem-thumb{height:13rem;line-height:13rem;text-align:center;}
+.goodsItem-thumb img{vertical-align:middle;max-width:100%;max-height:100%;}
+.goodsItem-title{color:#454545;line-height:1.2rem;height:1.2rem;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.goodsItem-des{text-align:left;color:#f00;overflow:hidden;white-space:nowrap;margin-bottom:.25rem;}
+.goodsItem-price{text-align:center;color:#f64b78;}
+.goodsItem-price b{font-size:1.4rem;}
+.goodsItem-pinfo-item{width:33.33%;border-right:1px solid #fff;background:#f74a77;float:left;color:#fff;box-sizing:border-box;padding:0 .25rem;}
+.goodsItem-pinfo-item-title{height:1.5rem;line-height:1.5rem;border-bottom:1px dashed #fff;font-size:.9rem;}
+.goodsItem-pinfo-item-val{height:1.5rem;line-height:1.5rem;font-size:.9rem;}
+.goodsItem-btn{width:8rem;height:1.8rem;line-height:1.8rem;border:1px solid #f99cb7;color:#f94a75;margin:.5rem auto 0;text-align:center;}
+.goodsItems.blue .goodsItem-price{color:#45bef5;}
+.goodsItems.blue .goodsItem-pinfo-item{background:#45bef5;}
+.goodsItems.blue .goodsItem-btn{color:#45bef5;border-color:#45bef5;}
+.goodsItems.pink .goodsItem-price{color:#d642fa;}
+.goodsItems.pink .goodsItem-pinfo-item{background:#d642fa;}
+.goodsItems.pink .goodsItem-btn{color:#d642fa;border-color:#d642fa;}
+.goodsNavs{background:#feb4d5;padding:0 .5rem .5rem;}
+.goodsNavs span{float:left;width:10.3rem;height:4.2rem;background:url(http://file.easeeyes.com/wap/images/20160915/n1.jpg) no-repeat center top;background-size:10.3rem auto;}
+.goodsNavs span.current{background-image:url(http://file.easeeyes.com/wap/images/20160915/n1_1.jpg);}
+.goodsNavs span:nth-child(2){background-image:url(http://file.easeeyes.com/wap/images/20160915/n2.jpg);}
+.goodsNavs span:nth-child(2).current{background-image:url(http://file.easeeyes.com/wap/images/20160915/n2_1.jpg);}
+.goodsNavs span:nth-child(3){background-image:url(http://file.easeeyes.com/wap/images/20160915/n3.jpg);}
+.goodsNavs span:nth-child(3).current{background-image:url(http://file.easeeyes.com/wap/images/20160915/n3_1.jpg);}
+.yhqs span{float:left;width:33.33%;height:6rem;}
+</style>
+</head>
+<!--tpl
+<div><img src="http://file.easeeyes.com/wap/images/20160901/banner.jpg" alt="" style="display:block;"></div>
+<div><a href=""><img src="http://file.easeeyes.com/wap/images/20160901/banner.jpg" alt="" style="display:block;"></a></div>
+-->
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<!--main-->
+<div class="container">
+	<div style="position:relative;">
+		<img src="http://file.easeeyes.com/wap/images/20160915/banner.jpg" alt="" style="display:block;">
+		<!--倒计时-->
+		<div id="countDown" class="clearfix">
+			<span id="countDown_day">00</span>
+			<span id="countDown_hour">00</span>
+			<span id="countDown_minute">00</span>
+			<span id="countDown_second">00</span>
+		</div>
+	</div>
+	<!--yhq-->
+	<div style="height:7.65rem;background:url(http://file.easeeyes.com/wap/images/20160915/00.jpg) no-repeat center top;background-size:100% auto;" class="yhqs">
+		<span onclick="get_bonus(1)"></span>
+		<span onclick="get_bonus(2)"></span>
+		<span onclick="get_bonus(3)"></span>
+	</div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160915/01.jpg" alt="" style="display:block;"></div>
+	<!--抢购-->
+	<div><img src="http://file.easeeyes.com/wap/images/20160915/02.jpg" alt="" style="display:block;"></div>
+	
+    {if $d <= 13}
+			<div><img src="http://file.easeeyes.com/wap/images/20160915/hot_1.jpg" alt="" style="display:block;"></div>
+            {elseif $d == 14}
+			<div><img src="http://file.easeeyes.com/wap/images/20160915/hot_2.jpg" alt="" style="display:block;"></div>
+            {elseif $d == 15}
+			<div><img src="http://file.easeeyes.com/wap/images/20160915/hot_3.jpg" alt="" style="display:block;"></div>
+            {elseif $d == 16}
+			<div><img src="http://file.easeeyes.com/wap/images/20160915/hot_4.jpg" alt="" style="display:block;"></div>
+            {elseif $d == 17}
+			<div><img src="http://file.easeeyes.com/wap/images/20160915/hot_5.jpg" alt="" style="display:block;"></div>
+            {elseif $d == 18}
+			<div><img src="http://file.easeeyes.com/wap/images/20160915/hot_6.jpg" alt="" style="display:block;"></div>
+            {elseif $d == 19}
+			<div><img src="http://file.easeeyes.com/wap/images/20160915/hot_7.jpg" alt="" style="display:block;"></div>
+            {elseif $d == 20}
+			<div><img src="http://file.easeeyes.com/wap/images/20160915/hot_8.jpg" alt="" style="display:block;"></div>
+            {elseif $d == 21}
+			<div><img src="http://file.easeeyes.com/wap/images/20160915/hot_9.jpg" alt="" style="display:block;"></div>
+            
+    {/if}
+    
+	<div class="hotItems clearfix">
+        <!--{foreach from=$msGoodsArr item=li name=li}-->
+    		<div class="hotItem">
+    			<a href="{if $li.temp_link}{$li.temp_link}{else}miaosha_buy_{$li.goods_id}.html{/if}">
+    				<span class="hotItem-thumb"><img src="http://img.easeeyes.com/{$li.goods_img}" alt=""></span>
+    				<span class="hotItem-title">{$li.goods_name}</span>
+    				<span class="hotItem-price">爆款价&yen;{if $li.temp_price}{$li.temp_price}{else}{$li.ms_price}{/if} <br><del>市场价:{$li.market_price}</del></span>
+    				<span class="hotItem-btn">立即购买 ></span>
+    			</a>
+    		</div>
+		<!--{/foreach}-->
+		
+	</div>
+	<!--转盘-->
+	<div><img src="http://file.easeeyes.com/wap/images/20160915/03.jpg" alt="" style="display:block;"></div>
+	<div style="height:27.25rem;background:url(http://file.easeeyes.com/wap/images/20160915/04.jpg) no-repeat center top;background-size:100% auto;position:relative;">
+		<div class="lottery-box">
+			<ul class="clearfix items-lucky">
+				<li id="lucky-1" class="item-lucky"></li>
+				<li id="lucky-2" class="item-lucky"></li>
+				<li id="lucky-3" class="item-lucky"></li>
+				<li id="lucky-8" class="item-lucky"></li>
+				<li id="btn-lucky"></li>
+				<li id="lucky-4" class="item-lucky"></li>
+				<li id="lucky-7" class="item-lucky"></li>
+				<li id="lucky-6" class="item-lucky"></li>
+				<li id="lucky-5" class="item-lucky"></li>
+			</ul>
+		</div>
+	</div>
+	<!--中奖名单-->
+	<div style="height:10.55rem;background:url(http://file.easeeyes.com/wap/images/20160915/05.jpg) no-repeat center top;background-size:100% auto;position:relative;">
+		<div class="lucky-box">
+			<ul class="luckyItems clearfix" id="ulist-slide">
+				<li>恭喜 小k星星 抽中易视可爱伴侣盒</li>
+						<li>恭喜 KS依 抽中5元优惠券</li>
+						<li>恭喜 钱多多 抽中10元优惠券</li>
+						<li>恭喜 小宝爱吃米饭 抽中5元优惠券</li>
+						<li>恭喜 8HST6S 抽中5元优惠券</li>
+						<li>恭喜 13774439513 抽中100会员积分</li>
+						<li>恭喜 艾夫怡888 抽中10元优惠券</li>
+						<li>恭喜 蕾姆弹  抽中易视可爱伴侣盒</li>
+						<li>恭喜 黄色枫叶 抽中100会员积分</li>
+						<li>恭喜 13801955463 抽中库博宝晴5片</li>
+						<li>恭喜 18074789931 抽中100会员积分</li>
+						<li>恭喜 克雷斯888 抽中100会员积分</li>
+						<li>恭喜 J8WG6R9 抽中100会员积分</li>
+						<li>恭喜 U991ZZA 抽中5元优惠券</li>
+						<li>恭喜 KU9JG7T 抽中100会员积分</li>
+						<li>恭喜 小鸣名123 抽中10元优惠券</li>
+						<li>恭喜 泡沫之夏 抽中10元优惠券</li>
+						<li>恭喜 星光蔡澜 抽中5元优惠券</li>
+			</ul>
+		</div>
+	</div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160915/06.jpg" alt="" style="display:block;"></div>
+	<div><a href=""><img src="http://file.easeeyes.com/wap/images/20160915/07.jpg" alt="" style="display:block;"></a></div>
+	<!--推荐-->
+	<div><img src="http://file.easeeyes.com/wap/images/20160915/08.jpg" alt="" style="display:block;"></div>
+	<!--导航-->
+	<div class="goodsNavs clearfix">
+		<span class="current"></span>
+		<span></span>
+		<span></span>
+	</div>
+	<!--国货-->
+	<div class="goodsItems clearfix">
+        <!--{foreach from=$goodsArr1 item=li name=li}-->
+		<div class="goodsItem">
+			<a href="{$li.goods_link}">
+				<div class="goodsItem-thumb"><img src="http://img.easeeyes.com/{$li.goods_img}" alt=""></div>
+				<div class="goodsItem-title">{$li.goods_name}</div>
+				<p class="goodsItem-des">{$li.tips}</p>
+				<div class="goodsItem-price">
+					钻石会员价&yen;<b>{if $li.vip_price_3}{$li.vip_price_3}{else}{$li.now_price}{/if}</b>
+					<div class="goodsItem-pinfo clearfix">
+						<div class="goodsItem-pinfo-item">
+							<div class="goodsItem-pinfo-item-title">会员价</div>
+							<div class="goodsItem-pinfo-item-val">&yen;{$li.now_price}</div>
+						</div>
+						<div class="goodsItem-pinfo-item">
+							<div class="goodsItem-pinfo-item-title">VIP价</div>
+							<div class="goodsItem-pinfo-item-val">&yen;{if $li.vip_price_1}{$li.vip_price_1}{else}{$li.now_price}{/if}</div>
+						</div>
+						<div class="goodsItem-pinfo-item">
+							<div class="goodsItem-pinfo-item-title">白金VIP价</div>
+							<div class="goodsItem-pinfo-item-val">&yen;{if $li.vip_price_2}{$li.vip_price_2}{else}{$li.now_price}{/if}</div>
+						</div>
+					</div>
+				</div>
+				<div class="goodsItem-btn">立即购买</div>
+			</a>
+		</div>
+        <!--{/foreach}-->
+		
+		
+	</div>
+	<!--欧美-->
+	<div class="goodsItems blue clearfix">
+		<!--{foreach from=$goodsArr2 item=li name=li}-->
+		<div class="goodsItem">
+			<a href="{$li.goods_link}">
+				<div class="goodsItem-thumb"><img src="http://img.easeeyes.com/{$li.goods_img}" alt=""></div>
+				<div class="goodsItem-title">{$li.goods_name}</div>
+				<p class="goodsItem-des">{$li.tips}</p>
+				<div class="goodsItem-price">
+					钻石会员价&yen;<b>{if $li.vip_price_3}{$li.vip_price_3}{else}{$li.now_price}{/if}</b>
+					<div class="goodsItem-pinfo clearfix">
+						<div class="goodsItem-pinfo-item">
+							<div class="goodsItem-pinfo-item-title">会员价</div>
+							<div class="goodsItem-pinfo-item-val">&yen;{$li.now_price}</div>
+						</div>
+						<div class="goodsItem-pinfo-item">
+							<div class="goodsItem-pinfo-item-title">VIP价</div>
+							<div class="goodsItem-pinfo-item-val">&yen;{if $li.vip_price_1}{$li.vip_price_1}{else}{$li.now_price}{/if}</div>
+						</div>
+						<div class="goodsItem-pinfo-item">
+							<div class="goodsItem-pinfo-item-title">白金VIP价</div>
+							<div class="goodsItem-pinfo-item-val">&yen;{if $li.vip_price_2}{$li.vip_price_2}{else}{$li.now_price}{/if}</div>
+						</div>
+					</div>
+				</div>
+				<div class="goodsItem-btn">立即购买</div>
+			</a>
+		</div>
+        <!--{/foreach}-->
+	
+	</div>
+	<!--日韩-->
+	<div class="goodsItems pink clearfix">
+		<!--{foreach from=$goodsArr3 item=li name=li}-->
+		<div class="goodsItem">
+			<a href="{$li.goods_link}">
+				<div class="goodsItem-thumb"><img src="http://img.easeeyes.com/{$li.goods_img}" alt=""></div>
+				<div class="goodsItem-title">{$li.goods_name}</div>
+				<p class="goodsItem-des">{$li.tips}</p>
+				<div class="goodsItem-price">
+					钻石会员价&yen;<b>{if $li.vip_price_3}{$li.vip_price_3}{else}{$li.now_price}{/if}</b>
+					<div class="goodsItem-pinfo clearfix">
+						<div class="goodsItem-pinfo-item">
+							<div class="goodsItem-pinfo-item-title">会员价</div>
+							<div class="goodsItem-pinfo-item-val">&yen;{$li.now_price}</div>
+						</div>
+						<div class="goodsItem-pinfo-item">
+							<div class="goodsItem-pinfo-item-title">VIP价</div>
+							<div class="goodsItem-pinfo-item-val">&yen;{if $li.vip_price_1}{$li.vip_price_1}{else}{$li.now_price}{/if}</div>
+						</div>
+						<div class="goodsItem-pinfo-item">
+							<div class="goodsItem-pinfo-item-title">白金VIP价</div>
+							<div class="goodsItem-pinfo-item-val">&yen;{if $li.vip_price_2}{$li.vip_price_2}{else}{$li.now_price}{/if}</div>
+						</div>
+					</div>
+				</div>
+				<div class="goodsItem-btn">立即购买</div>
+			</a>
+		</div>
+        <!--{/foreach}-->
+		
+	</div>
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+<script src="http://file.easeeyes.com/js/countdown.js"></script>
+<script src="http://file.easeeyes.com/wap/js/tab.js"></script>
+<script>
+//tab
+new Tab({
+	navs:document.querySelectorAll('.goodsNavs span'),
+	tabs:document.querySelectorAll('.goodsItems')
+})
+
+//countDown
+new CountDown('2016/09/22 0:0',{
+	day_box:document.getElementById('countDown_day'),
+	hour_box:document.getElementById('countDown_hour'),
+	minute_box:document.getElementById('countDown_minute'),
+	second_box:document.getElementById('countDown_second')
+})
+
+// 抽奖
+;(function(){
+	// 配置信息
+	var options={
+		indexRange:[3,6],	// 开始加速或减速的范围
+		roundRange:[3,4],	// 旋转的圈数范围
+		interval:500,		// 初始速度
+		num:8				// 奖品个数
+	}
+
+	// 声明相关变量
+	var interval=options.interval,	// 间隔
+		index,	// 位置
+		fast,	// 开始加速或减速的位置
+		round,	// 剩余圈数
+		luckys,	// 奖品
+		started=false;	// 是否开始
+
+	// 随机数
+	function range(arr){
+		var n=Math.round(Math.random()*(arr[1]-arr[0])+arr[0]);
+		return n;
+	}	
+
+	// 抽奖过程
+	function lucky(){
+		// 圈数计数
+		if(index>options.num){
+			index=1;
+			round--;
+		}
+
+		// 状态显示
+		var items=$('.item-lucky');
+		items.each(function(){
+			$(this).removeClass('current');
+		});
+		$('#lucky-'+index).addClass('current');
+
+		// 开始加速
+		if(index>fast){
+			interval=200;
+		}
+
+		// 开始减速
+		if(round==0 && luckys.id-index<fast){
+			interval+=200;
+		}
+		
+		if(round<=0 && index==luckys.id){
+			// 选中奖品，结束
+			clearTimeout(luckyMover);
+			setTimeout(function(){
+				alert("恭喜获得"+luckys.name)
+			},1000)
+			started=false;
+		}else{
+			// 没有结束
+			luckyMover=setTimeout(lucky,interval);
+		}
+		index++;
+	}
+
+	// 开始抽奖
+	function start(){
+		if(started){
+			return;
+		}
+		started=true;
+		index=1;
+		fast=range(options.indexRange);
+		round=range(options.roundRange);
+		$.ajax({
+			url:'ajax_active.php?act=get_price_160915',
+			type:"get",
+			dataType:"json",
+			success:function(d){
+                if(d.err){
+                    started=false;
+                    alert(d.err);
+                }else{
+                    luckys=d;
+                    lucky();
+                }
+
+			}
+		})
+		
+	}
+
+	// 绑定事件
+	$('#btn-lucky').click(function(){
+      start();
+	});
+
+})();	
+
+// 名单滚动
+window.addEventListener('load',luckyer_slide,false);
+function luckyer_slide(){
+	var ulist=document.getElementById('ulist-slide');
+	function slide(){
+		ulist.classList.add('ani');
+		setTimeout(function(){
+			ulist.appendChild(ulist.getElementsByTagName('li')[0]);
+			ulist.appendChild(ulist.getElementsByTagName('li')[0]);
+			ulist.classList.remove('ani');
+		},1000);
+	}
+	setInterval(slide,3000);
+}
+
+function get_bonus(bonus_id){
+    $.ajax({
+        type:'POST',
+        url:'ajax_active.php?act=get_bonus_160915',
+        data:'&bonus_id='+bonus_id+'&m='+Math.random(),
+        cache:false,
+        success:
+                function(da)
+                {
+                    if(da == 1){
+                        alert('您已成功领取优惠券！请至我的红包/优惠券查看^_^');
+                    }else if(da == 2){
+                        alert('请登录后再试^_^');
+                    }else if(da == 3){
+                        alert('您已领取过该优惠券^_^');
+                    }
+                }
+    });
+}
+</script>
+</body>
+</html>

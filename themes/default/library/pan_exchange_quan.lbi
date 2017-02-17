@@ -1,0 +1,12 @@
+<ul class="goods_list">    
+    <!--{foreach from=$coupon_list_ex item=goods name=foo}【积分换券】-->
+    <li class="goods_li">      
+        <dl class="goods_dl">
+            <dd><a href="ex_coupon-{$goods.coupon_id}.html" target="_blank" title="{$goods.coupon_name}" class="goods_li_img"><img src="{$goods.s_image}" width="150" height="150" alt="{$goods.coupon_name}"/></a></dd>
+            <dd class="goods_li_name" style="height:24px; line-height:24px;"><a href="ex_coupon-{$goods.coupon_id}.html" title="{$goods.coupon_name}" class="color_qianfei" target="_blank">{$goods.coupon_name}</a></dd>
+            <dd class="goods_li_pr color9" style="margin-top:4px; margin-bottom:2px;">消耗积分：<span class="red">{$goods.use_integral}</span></dd>
+            <dd style="width:100%;"><a class="ex_img_a3" href="ex_coupon-{$goods.coupon_id}.html" target="_blank"></a></dd>
+        </dl>
+    </li><!--{if $smarty.foreach.foo.index mod 4 eq 3 || $smarty.foreach.foo.iteration eq $smarty.foreach.foo.total}--><li class="goods_li_line"></li><!--{/if}--> 
+    <!--{/foreach}-->        
+</ul>

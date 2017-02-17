@@ -1,0 +1,69 @@
+﻿/*---------------------------------------------------------超值大礼包详情页------------------------------------------------------------------------------*/
+/*-----页面布局-----------*/
+#main{ margin:0 auto; width:1002px; height:auto; text-align:center; border:none;}
+#main_left{  float:left; width:206px;height:auto;text-align:left;}
+#main_right{ float:right; width:792px; height:auto; min-height:1200px;}
+.com_h_body{margin-bottom:0;}
+.foot_pan{margin-top:0;}
+
+/*----左边_广告图片-------*/
+.ad_img{float:left; width:206px; height:260px; border:0px;}
+.items{}
+.items a{ color:#666;}
+.items a:hover{ color:#c30000;}
+
+
+.first_title{float:left; width:126px; height:auto; min-height:18px; max-height:36px; line-height:18px; margin-left:20px; text-align:left; overflow:hidden;}
+.first_title a{ color:#666;}
+.first_title a:hover{ color:#c30000;}
+
+/*-----购买礼包说明------------------------------*/
+.font_line{width:100%; float:left; text-align:left; height:28px; line-height:28px; font-size:12px; color:#333;}
+.span_line{ display:inline-block; margin-left:35px;}
+.r_pan_detail{width:485px; height:auto; float:right; text-align:right;}
+/*-----------------------------------------------------------------------------------------------------------------------------*/
+/*---重写部分-------------*/
+#maintextdd{ float:right; width:764px; min-height:20px; border-bottom:0px solid #cccccc; padding-bottom:0px; margin-bottom:10px;}
+#maintextcondd{float:left;width:750px; padding-left:7px;  min-height:20px; text-align:left; padding-top:0px;}
+/*-----礼包产品------------------------------*/
+.goods_pan{width:775px; height:auto; border:1px #dcdcdc solid; padding-bottom:7px; padding-left:7px;}
+.goods_img{float:left; width:100px; height:100px; margin:6px 10px 6px 10px;}
+.jiahao{width:10px; height:100px; float:left; color:#c30000; font-size:26px; font-weight:bolder; padding-top:50px;}
+.lb_title{width:100%; height:16px; line-height:16px; float:left; text-align:left; margin-bottom:13px; margin-top:6px; margin-left:0; font-family:'宋体', Arial; font-size:16px; font-weight:bold; color:#333; overflow:hidden;}
+.lb_desc{float:left; width:100%; height:auto; min-height:14px; text-align:left; margin-left:0; font-size:12px; font-family:宋体; color:#C67F39; line-height:14px;}
+.lb_msg{width:485px; height:123px; float:right; margin-right:6px; background-color:#fff7f8;}
+
+.tobuy_txt{width:291px; height:90px; float:left; margin-left:4px;}
+.tobuy{width:463px; height:90px; margin-top:4px;}
+.tobuy_bt{width:168px; height:90px; float:left; padding-top:31px;}
+.youhui_con{width:220px; height:90px; margin-left:24px; float:left; text-align:left; overflow:hidden;}
+
+/*-------------分享到重写1-------------*/
+#share{height:36px; font-size:16px; line-height:16px; margin-top:25px; text-align:left;}
+#share span{ display:inline-block; margin-right:0px;}
+
+/*-----------------------------------产品页面--参数块------------------------------------*/
+#cat_goods{border:1px #dcdcdc solid; width:204px; height:345px; margin-left:0px;}
+.catpan{width:186px; height:auto; margin-left:10px;}
+.cattitle{width:186px; height:12px; line-height:14px; text-align:left; margin-top:12px; margin-bottom:11px; font-size:12px;}
+.catimg{float:left; margin-right:7px; margin-top:2px;}
+.catline{height:25px; width:172px; line-height:25px; padding-left:12px; text-align:left; border-bottom:1px #ccc dashed;}
+.catspan{display:inline-block; width:52px; text-align:left;}
+.catspan a{ color:#333;}
+.catspan a:hover{ color:#c30000;}
+/*------------------------------------------------------------------------------------*/
+/*---------------------------历史记录栏---------------------------------*/
+#hotpro{ float:left; width:204px; border:1px #dcdcdc solid; padding-bottom:5px;}
+#hotport{float:left; width:204px; height:27px; background-image:url('../images/historyhead.gif');}
+#hotprotitle{ float:left; width:204px; height:36px; line-height:36px; text-align:center; }
+#hotbj{ float:left; width:204px;}
+.color_dhui{ color:#999999}
+/*同类推荐*/
+.showmain{ margin:0 auto; padding-top:4px; padding-bottom:2px; float:left; width:204px; text-align:center;}
+.spacejx{ float:left; width:20px; height:200px;}
+.showmainpic{ width:160px; min-height:150px; text-align:center}
+.showmaintxt{ width:180px; text-align:center; }
+.showmaintxt1{ width:180px; text-align:center;  line-height:18px;}
+.showmaintxt2{ width:180px; text-align:center; height:20px; line-height:20px;}
+
+

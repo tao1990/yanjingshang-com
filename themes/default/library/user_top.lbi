@@ -1,0 +1,30 @@
+<div class="memberinfo-center-info clearfix">
+			<!--头像-->
+			<div class="fl memberinfo-center-info-ava">
+				<img src="http://file.easeeyes.com/b2b/images/tx02.png" />
+			</div>
+			<!--信息-->
+			<div class="fl memberinfo-center-info-name">
+				<h4>{$user.user_name}</h4>
+				<p>
+					<span class="mr15">我的个人信息 <a href="user_profile.html">编辑</a></span>
+					<span>我的收货地址 <a href="user_address_list.html">编辑</a></span>
+				</p>
+				<p>镜商积分：{$user.pay_points}</p>
+                <p>镜商余额：{$user.user_money}</p>
+			</div>
+			<!--等级-->
+			<div class="fl memberinfo-center-info-grade">
+                {insert name='member_level_difference' user_rank_level=$user.user_rank_level rank_points=$user.rank_points user_rank=$user.user_rank }	
+			</div>
+		</div>
+<style>
+.memberinfo-center-tip a:hover{background-color:#3f85b1}
+</style>
+		<div class="memberinfo-center-tip">
+			<a href="user.php?act=order_list&type=1" {if $type eq 1}style="opacity:0.5;"{/if}>待付款({$type_order_num.type1})</a>
+			<a href="user.php?act=order_list&type=2" {if $type eq 2}style="opacity:0.5;"{/if}>待卖家发货({$type_order_num.type2})</a>
+			<a href="user.php?act=order_list&type=3" {if $type eq 3}style="opacity:0.5;"{/if}>待确认收货({$type_order_num.type3})</a>
+			<a href="user.php?act=order_list&type=4" {if $type eq 4}style="opacity:0.5;"{/if}>待评价({$type_order_num.type4})</a>
+			<a href="user.php?act=order_list&type=5" {if $type eq 5}style="opacity:0.5;"{/if}>退款退货中({$type_order_num.type5})</a>
+		</div>

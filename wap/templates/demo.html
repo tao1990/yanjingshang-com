@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>筛选</title>
+<style>
+*{margin:0;padding:0;}	
+body{font-size:1.1rem;}
+.pull-left{float:left;}
+.pull-right{float:right;}
+.text-center{text-align:center;}
+h2{font-weight:normal;}
+#filters-box{font-family:"Microsoft Yahei";background:#f2f2f2;position:fixed;width:100%;height:100%;left:0;top:0;z-index:99;}
+.filter-header{color:#333;background:#fff;position:fixed;left:0;top:0;width:100%;border-bottom:1px solid #dfdfdf;}
+.filter-header h2{padding:0 1rem;line-height:4rem;font-size:1.5rem;}
+.filter-header h2 span{font-size:1.1rem;color:#999;}
+.filter-container{padding-top:5rem;}
+.filter-option,.filter-item{padding:0 1rem;line-height:3.5rem;border-bottom:1px solid #dfdfdf;font-size:1.2rem;background:#fff;}
+.filter-option span{color:#999;padding-right:1rem;background:url(http://file.easeeyes.com/wap/images/select_arrow.png) no-repeat right center;background-size:auto 1rem;}
+.filter-clearbtn{padding-top:2rem;}
+.filter-clearbtn button{background:#fff;border:1px solid #ccc;padding:0 2rem;line-height:3rem;}
+.filter-item{display:block;}
+</style>
+</head>
+<body>
+<button id="nowChoose">run</button>	
+<!--筛选主体-->
+<div id="filters-box" class="filter filter-right" style="display:none;">
+	<div id="filter-option-box">
+		<div class="filter-header">
+			<h2 class="text-center">
+				<span class="pull-left" onclick="pop1.close();">取消</span>
+				<span class="pull-right">确定</span>
+				筛选
+			</h2>
+		</div>	
+		<div class="filter-container">
+			<div class="filter-option" data-options='[{"value":"","name":"全部"},{"value":"qs","name":"强生"},{"value":"hc","name":"海昌"}]' data-key="品牌"><span class="pull-right">全部</span>品牌</div>
+			<div class="filter-option" data-options='[{"value":"","name":"全部"},{"value":"1","name":"1周抛"},{"value":"2","name":"2周抛"}]' data-key="周期"><span class="pull-right">全部</span>周期</div>
+			<div class="filter-option" data-options='[]' data-key="颜色"><span class="pull-right">全部</span>颜色</div>
+			<div class="filter-option" data-options='[]' data-key="含水量"><span class="pull-right">全部</span>含水量</div>
+			<div class="filter-option" data-options='[]' data-key="直径"><span class="pull-right">全部</span>直径</div>
+			<div class="filter-option" data-options='[]' data-key="基弧"><span class="pull-right">全部</span>基弧</div>
+			<div class="filter-option" data-options='[]' data-key="价格"><span class="pull-right">全部</span>价格</div>
+		</div>
+		<div class="filter-clearbtn text-center">
+			<button>清除选项</button>
+		</div>
+	</div>
+	<div id="filter-detail-tpl" style="display:none">
+		<div class="filter-header">
+			<h2 class="text-center">
+				品牌
+			</h2>
+		</div>
+		<div class="filter-container" id="filter-items">
+			<label class="filter-item" for="option_all">全部<input type="radio" value="" id="option_all" /></label>
+			<label class="filter-item" for="option_qs">强生<input type="radio" value="" id="option_qs" /></label>
+			<label class="filter-item" for="option_hc">海昌<input type="radio" value="" id="option_hc" /></label>
+		</div>
+	</div>
+</div>
+<script src="http://file.easeeyes.com/wap/js/wappop.js"></script>
+<script>
+//自适应代码
+(function(){
+    var win=window||{},
+        doc=document,
+        root=doc.documentElement;
+    function changeSize(){
+        root.style.fontSize=parseInt(root.clientWidth)*20/640>20?"20px":parseInt(root.clientWidth)*20/640+"px";
+    }
+    if(doc.addEventListener){
+        var evt="orientationchange" in win?"orientationchange":"resize"; 
+        doc.addEventListener(evt,changeSize,false);
+        doc.addEventListener("DOMContentLoaded",changeSize,false);
+    }
+})();    
+
+// 执行
+var pop1=new Pop({id:"filters-box"}),
+	pop2=new Pop({id:"filter-option-box"}),
+	pop3=new Pop({id:"filter-detail-tpl"});
+document.getElementById("nowChoose").addEventListener("click",function(){
+	pop1.open();
+	pop2.open();
+},false);
+var options=Array.prototype.slice.call(document.querySelectorAll(".filter-option"),0),	// 筛选条件
+	items=Array.prototype.slice.call(document.querySelectorAll(".filter-item"),0),	// 选项
+	itemsBox=document.getElementById("filter-items"),
+	title=document.querySelectorAll("#filter-detail-tpl h2");
+options.forEach(function(option){
+	var Msgs=Array.prototype.slice.call(JSON.parse(option.dataset.options),0);
+	option.addEventListener("click",function(){
+		var str="";
+		pop2.close();
+		title.innerHTML=option.dataset.key;
+		Msgs.forEach(function(msg){
+			str+="<label class='filter-item' for='option_"+msg.value+"' onclick='popState()'>"+msg.name+"<input type='radio' value='"+msg.value+"' id='option_"+msg.value+"' /></label>";
+		})
+		itemsBox.innerHTML=str;
+		pop3.open();
+	},false);
+});
+function popState(){
+	pop3.close();
+	pop2.open();
+}
+
+</script>
+</body>
+</html>

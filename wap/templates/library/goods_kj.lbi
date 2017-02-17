@@ -1,0 +1,333 @@
+<form action="" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY">
+    <!-- 选择购买商品类型-->
+    <div class="kjTabs"><span class="kjTab-item current">购买镜架和镜片</span><span class="kjTab-item">单买镜架</span></div>
+    <div id="glassType-container">
+        <!-- 光度选择-->
+        <div class="gdSelect">
+            <div class="gdSelect-title"><span id="gdSelectInfo-btn" class="pull-right"> <img src="css/slice/l_5.jpg" alt=""> 选择说明</span>光度</div>
+            <!-- 光度-->
+            <div class="gdSelect-items">
+                <select id="left_eye_ds" name="zselect">
+                    <option value="">左眼光度</option><option value="0.00">0.00</option><option value="-0.50">-0.50</option><option value="-0.75">-0.75</option>
+                    <option value="-1.00">-1.00</option><option value="-1.25">-1.25</option><option value="-1.50">-1.50</option><option value="-1.75">-1.75</option>
+                    <option value="-2.00">-2.00</option><option value="-2.25">-2.25</option><option value="-2.50">-2.50</option><option value="-2.75">-2.75</option>
+                    <option value="-3.00">-3.00</option><option value="-3.25">-3.25</option><option value="-3.50">-3.50</option><option value="-3.75">-3.75</option>
+                    <option value="-4.00">-4.00</option><option value="-4.25">-4.25</option><option value="-4.50">-4.50</option><option value="-4.75">-4.75</option>
+                    <option value="-5.00">-5.00</option><option value="-5.25">-5.25</option><option value="-5.50">-5.50</option><option value="-5.75">-5.75</option>
+                    <option value="-6.00">-6.00</option><option value="-6.25">-6.25</option><option value="-6.50">-6.50</option><option value="-6.75">-6.75</option>
+                    <option value="-7.00">-7.00</option><option value="-7.25">-7.25</option><option value="-7.50">-7.50</option><option value="-7.75">-7.75</option>
+                    <option value="-8.00">-8.00</option><option value="-8.25">-8.25</option><option value="-8.50">-8.50</option><option value="-8.75">-8.75</option>
+                    <option value="-9.00">-9.00</option><option value="-9.25">-9.25</option><option value="-9.50">-9.50</option><option value="-9.75">-9.75</option>
+                    <option value="-10.00">-10.00</option><option value="-10.25">-10.25</option><option value="-10.50">-10.50</option><option value="-10.75">-10.75</option>
+                    <option value="-11.00">-11.00</option><option value="-11.25">-11.25</option><option value="-11.50">-11.50</option><option value="-11.75">-11.75</option>
+                    <option value="-12.00">-12.00</option><option value="-12.25">-12.25</option><option value="-12.50">-12.50</option><option value="-12.75">-12.75</option>
+                    <option value="-13.00">-13.00</option><option value="-13.25">-13.25</option><option value="-13.50">-13.50</option><option value="-13.75">-13.75</option>
+                    <option value="-14.00">-14.00</option><option value="-14.25">-14.25</option><option value="-14.50">-14.50</option><option value="-14.75">-14.75</option>
+                    <option value="-15.00">-15.00</option><option value="-15.25">-15.25</option><option value="-15.50">-15.50</option><option value="-15.75">-15.75</option>
+                    <option value="-16.00">-16.00</option><option value="+0.25">+0.25</option><option value="+0.50">+0.50</option><option value="+0.75">+0.75</option>
+                    <option value="+1.00">+1.00</option><option value="+1.25">+1.25</option><option value="+1.50">+1.50</option><option value="+1.75">+1.75</option>
+                    <option value="+2.00">+2.00</option><option value="+2.25">+2.25</option><option value="+2.50">+2.50</option><option value="+2.75">+2.75</option>
+                    <option value="+3.00">+3.00</option><option value="+3.25">+3.25</option><option value="+3.50">+3.50</option><option value="+3.75">+3.75</option>
+                    <option value="+4.00">+4.00</option><option value="+4.25">+4.25</option><option value="+4.50">+4.50</option><option value="+4.75">+4.75</option>
+                    <option value="+5.00">+5.00</option><option value="+5.25">+5.25</option><option value="+5.50">+5.50</option><option value="+5.75">+5.75</option>
+                    <option value="+6.00">+6.00</option><option value="+6.25">+6.25</option><option value="+6.50">+6.50</option><option value="+6.75">+6.75</option>
+                    <option value="+7.00">+7.00</option><option value="+7.25">+7.25</option><option value="+7.50">+7.50</option><option value="+7.75">+7.75</option>
+                    <option value="+8.00">+8.00</option><option value="+8.25">+8.25</option><option value="+8.50">+8.50</option><option value="+8.75">+8.75</option>
+                    <option value="+9.00">+9.00</option><option value="+9.25">+9.25</option><option value="+9.50">+9.50</option><option value="+9.75">+9.75</option>
+                    <option value="+10.00">+10.00</option>
+                </select>
+                <select id="right_eye_ds" name="yselect">
+                    <option value="">右眼光度</option><option value="0.00">0.00</option><option value="-0.50">-0.50</option><option value="-0.75">-0.75</option>
+                    <option value="-1.00">-1.00</option><option value="-1.25">-1.25</option><option value="-1.50">-1.50</option><option value="-1.75">-1.75</option>
+                    <option value="-2.00">-2.00</option><option value="-2.25">-2.25</option><option value="-2.50">-2.50</option><option value="-2.75">-2.75</option>
+                    <option value="-3.00">-3.00</option><option value="-3.25">-3.25</option><option value="-3.50">-3.50</option><option value="-3.75">-3.75</option>
+                    <option value="-4.00">-4.00</option><option value="-4.25">-4.25</option><option value="-4.50">-4.50</option><option value="-4.75">-4.75</option>
+                    <option value="-5.00">-5.00</option><option value="-5.25">-5.25</option><option value="-5.50">-5.50</option><option value="-5.75">-5.75</option>
+                    <option value="-6.00">-6.00</option><option value="-6.25">-6.25</option><option value="-6.50">-6.50</option><option value="-6.75">-6.75</option>
+                    <option value="-7.00">-7.00</option><option value="-7.25">-7.25</option><option value="-7.50">-7.50</option><option value="-7.75">-7.75</option>
+                    <option value="-8.00">-8.00</option><option value="-8.25">-8.25</option><option value="-8.50">-8.50</option><option value="-8.75">-8.75</option>
+                    <option value="-9.00">-9.00</option><option value="-9.25">-9.25</option><option value="-9.50">-9.50</option><option value="-9.75">-9.75</option>
+                    <option value="-10.00">-10.00</option><option value="-10.25">-10.25</option><option value="-10.50">-10.50</option><option value="-10.75">-10.75</option>
+                    <option value="-11.00">-11.00</option><option value="-11.25">-11.25</option><option value="-11.50">-11.50</option><option value="-11.75">-11.75</option>
+                    <option value="-12.00">-12.00</option><option value="-12.25">-12.25</option><option value="-12.50">-12.50</option><option value="-12.75">-12.75</option>
+                    <option value="-13.00">-13.00</option><option value="-13.25">-13.25</option><option value="-13.50">-13.50</option><option value="-13.75">-13.75</option>
+                    <option value="-14.00">-14.00</option><option value="-14.25">-14.25</option><option value="-14.50">-14.50</option><option value="-14.75">-14.75</option>
+                    <option value="-15.00">-15.00</option><option value="-15.25">-15.25</option><option value="-15.50">-15.50</option><option value="-15.75">-15.75</option>
+                    <option value="-16.00">-16.00</option><option value="+0.25">+0.25</option><option value="+0.50">+0.50</option><option value="+0.75">+0.75</option>
+                    <option value="+1.00">+1.00</option><option value="+1.25">+1.25</option><option value="+1.50">+1.50</option><option value="+1.75">+1.75</option>
+                    <option value="+2.00">+2.00</option><option value="+2.25">+2.25</option><option value="+2.50">+2.50</option><option value="+2.75">+2.75</option>
+                    <option value="+3.00">+3.00</option><option value="+3.25">+3.25</option><option value="+3.50">+3.50</option><option value="+3.75">+3.75</option>
+                    <option value="+4.00">+4.00</option><option value="+4.25">+4.25</option><option value="+4.50">+4.50</option><option value="+4.75">+4.75</option>
+                    <option value="+5.00">+5.00</option><option value="+5.25">+5.25</option><option value="+5.50">+5.50</option><option value="+5.75">+5.75</option>
+                    <option value="+6.00">+6.00</option><option value="+6.25">+6.25</option><option value="+6.50">+6.50</option><option value="+6.75">+6.75</option>
+                    <option value="+7.00">+7.00</option><option value="+7.25">+7.25</option><option value="+7.50">+7.50</option><option value="+7.75">+7.75</option>
+                    <option value="+8.00">+8.00</option><option value="+8.25">+8.25</option><option value="+8.50">+8.50</option><option value="+8.75">+8.75</option>
+                    <option value="+9.00">+9.00</option><option value="+9.25">+9.25</option><option value="+9.50">+9.50</option><option value="+9.75">+9.75</option>
+                    <option value="+10.00">+10.00</option>
+                </select>
+            </div>
+            <!-- 散光-->
+            <div class="sgSelect-items">
+                <select id="zsg" name="zsg">
+                    <option value="">左眼散光(默认无)</option><option value="-0.50">-0.50</option><option value="-0.75">-0.75</option><option value="-1.00">-1.00</option>
+                    <option value="-1.25">-1.25</option><option value="-1.50">-1.50</option><option value="-1.75">-1.75</option><option value="-2.00">-2.00</option>
+                    <option value="-2.25">-2.25</option><option value="-2.50">-2.50</option><option value="-2.75">-2.75</option><option value="-3.00">-3.00</option>
+                    <option value="-3.25">-3.25</option><option value="-3.50">-3.50</option><option value="-3.75">-3.75</option><option value="-4.00">-4.00</option>
+                    <option value="-4.25">-4.25</option><option value="-4.50">-4.50</option><option value="+0.50">+0.50</option><option value="+0.75">+0.75</option>
+                    <option value="+1.00">+1.00</option><option value="+1.25">+1.25</option><option value="+1.50">+1.50</option><option value="+1.75">+1.75</option>
+                    <option value="+2.00">+2.00</option><option value="+2.25">+2.25</option><option value="+2.50">+2.50</option><option value="+2.75">+2.75</option>
+                    <option value="+3.00">+3.00</option><option value="+3.25">+3.25</option><option value="+3.50">+3.50</option><option value="+3.75">+3.75</option>
+                    <option value="+4.00">+4.00</option><option value="+4.25">+4.25</option><option value="+4.50">+4.50</option>
+                </select>
+                <select id="ysg" name="ysg">
+                    <option value="">右眼散光(默认无)</option><option value="-0.50">-0.50</option><option value="-0.75">-0.75</option><option value="-1.00">-1.00</option>
+                    <option value="-1.25">-1.25</option><option value="-1.50">-1.50</option><option value="-1.75">-1.75</option><option value="-2.00">-2.00</option>
+                    <option value="-2.25">-2.25</option><option value="-2.50">-2.50</option><option value="-2.75">-2.75</option><option value="-3.00">-3.00</option>
+                    <option value="-3.25">-3.25</option><option value="-3.50">-3.50</option><option value="-3.75">-3.75</option><option value="-4.00">-4.00</option>
+                    <option value="-4.25">-4.25</option><option value="-4.50">-4.50</option><option value="+0.50">+0.50</option><option value="+0.75">+0.75</option>
+                    <option value="+1.00">+1.00</option><option value="+1.25">+1.25</option><option value="+1.50">+1.50</option><option value="+1.75">+1.75</option>
+                    <option value="+2.00">+2.00</option><option value="+2.25">+2.25</option><option value="+2.50">+2.50</option><option value="+2.75">+2.75</option>
+                    <option value="+3.00">+3.00</option><option value="+3.25">+3.25</option><option value="+3.50">+3.50</option><option value="+3.75">+3.75</option>
+                    <option value="+4.00">+4.00</option><option value="+4.25">+4.25</option><option value="+4.50">+4.50</option>
+                </select>
+            </div>
+            <!-- 轴位-->
+            <div class="zwSelec-items">
+                <select id="zzhou" name="zzhou">
+                    <option value="">左眼轴位(默认无)</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
+                    <option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option>
+                    <option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option>
+                    <option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option>
+                    <option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option>
+                    <option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option>
+                    <option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option>
+                    <option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option>
+                    <option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option>
+                    <option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option>
+                    <option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option>
+                    <option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option>
+                    <option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option>
+                    <option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option>
+                    <option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option>
+                    <option value="60">60</option><option value="61">61</option><option value="62">62</option><option value="63">63</option>
+                    <option value="64">64</option><option value="65">65</option><option value="66">66</option><option value="67">67</option>
+                    <option value="68">68</option><option value="69">69</option><option value="70">70</option><option value="71">71</option>
+                    <option value="72">72</option><option value="73">73</option><option value="74">74</option><option value="75">75</option>
+                    <option value="76">76</option><option value="77">77</option><option value="78">78</option><option value="79">79</option>
+                    <option value="80">80</option><option value="81">81</option><option value="82">82</option><option value="83">83</option>
+                    <option value="84">84</option><option value="85">85</option><option value="86">86</option><option value="87">87</option>
+                    <option value="88">88</option><option value="89">89</option><option value="90">90</option><option value="91">91</option>
+                    <option value="92">92</option><option value="93">93</option><option value="94">94</option><option value="95">95</option>
+                    <option value="96">96</option><option value="97">97</option><option value="98">98</option><option value="99">99</option>
+                    <option value="100">100</option><option value="101">101</option><option value="102">102</option><option value="103">103</option>
+                    <option value="104">104</option><option value="105">105</option><option value="106">106</option><option value="107">107</option>
+                    <option value="108">108</option><option value="109">109</option><option value="110">110</option><option value="111">111</option>
+                    <option value="112">112</option><option value="113">113</option><option value="114">114</option><option value="115">115</option>
+                    <option value="116">116</option><option value="117">117</option><option value="118">118</option><option value="119">119</option>
+                    <option value="120">120</option><option value="121">121</option><option value="122">122</option><option value="123">123</option>
+                    <option value="124">124</option><option value="125">125</option><option value="126">126</option><option value="127">127</option>
+                    <option value="128">128</option><option value="129">129</option><option value="130">130</option><option value="131">131</option>
+                    <option value="132">132</option><option value="133">133</option><option value="134">134</option><option value="135">135</option>
+                    <option value="136">136</option><option value="137">137</option><option value="138">138</option><option value="139">139</option>
+                    <option value="140">140</option><option value="141">141</option><option value="142">142</option><option value="143">143</option>
+                    <option value="144">144</option><option value="145">145</option><option value="146">146</option><option value="147">147</option>
+                    <option value="148">148</option><option value="149">149</option><option value="150">150</option><option value="151">151</option>
+                    <option value="152">152</option><option value="153">153</option><option value="154">154</option><option value="155">155</option>
+                    <option value="156">156</option><option value="157">157</option><option value="158">158</option><option value="159">159</option>
+                    <option value="160">160</option><option value="161">161</option><option value="162">162</option><option value="163">163</option>
+                    <option value="164">164</option><option value="165">165</option><option value="166">166</option><option value="167">167</option>
+                    <option value="168">168</option><option value="169">169</option><option value="170">170</option><option value="171">171</option>
+                    <option value="172">172</option><option value="173">173</option><option value="174">174</option><option value="175">175</option>
+                    <option value="176">176</option><option value="177">177</option><option value="178">178</option><option value="179">179</option>
+                    <option value="180">180</option>
+                </select>
+                <select id="yzhou" name="yzhou">
+                    <option value="">右眼轴位(默认无)</option><option value="1">1</option><option value="2">2</option><option value="3">3</option>
+                    <option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option>
+                    <option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option>
+                    <option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option>
+                    <option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option>
+                    <option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option>
+                    <option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option>
+                    <option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option>
+                    <option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option>
+                    <option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option>
+                    <option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option>
+                    <option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option>
+                    <option value="48">48</option><option value="49">49</option><option value="50">50</option><option value="51">51</option>
+                    <option value="52">52</option><option value="53">53</option><option value="54">54</option><option value="55">55</option>
+                    <option value="56">56</option><option value="57">57</option><option value="58">58</option><option value="59">59</option>
+                    <option value="60">60</option><option value="61">61</option><option value="62">62</option><option value="63">63</option>
+                    <option value="64">64</option><option value="65">65</option><option value="66">66</option><option value="67">67</option>
+                    <option value="68">68</option><option value="69">69</option><option value="70">70</option><option value="71">71</option>
+                    <option value="72">72</option><option value="73">73</option><option value="74">74</option><option value="75">75</option>
+                    <option value="76">76</option><option value="77">77</option><option value="78">78</option><option value="79">79</option>
+                    <option value="80">80</option><option value="81">81</option><option value="82">82</option><option value="83">83</option>
+                    <option value="84">84</option><option value="85">85</option><option value="86">86</option><option value="87">87</option>
+                    <option value="88">88</option><option value="89">89</option><option value="90">90</option><option value="91">91</option>
+                    <option value="92">92</option><option value="93">93</option><option value="94">94</option><option value="95">95</option>
+                    <option value="96">96</option><option value="97">97</option><option value="98">98</option><option value="99">99</option>
+                    <option value="100">100</option><option value="101">101</option><option value="102">102</option><option value="103">103</option>
+                    <option value="104">104</option><option value="105">105</option><option value="106">106</option><option value="107">107</option>
+                    <option value="108">108</option><option value="109">109</option><option value="110">110</option><option value="111">111</option>
+                    <option value="112">112</option><option value="113">113</option><option value="114">114</option><option value="115">115</option>
+                    <option value="116">116</option><option value="117">117</option><option value="118">118</option><option value="119">119</option>
+                    <option value="120">120</option><option value="121">121</option><option value="122">122</option><option value="123">123</option>
+                    <option value="124">124</option><option value="125">125</option><option value="126">126</option><option value="127">127</option>
+                    <option value="128">128</option><option value="129">129</option><option value="130">130</option><option value="131">131</option>
+                    <option value="132">132</option><option value="133">133</option><option value="134">134</option><option value="135">135</option>
+                    <option value="136">136</option><option value="137">137</option><option value="138">138</option><option value="139">139</option>
+                    <option value="140">140</option><option value="141">141</option><option value="142">142</option><option value="143">143</option>
+                    <option value="144">144</option><option value="145">145</option><option value="146">146</option><option value="147">147</option>
+                    <option value="148">148</option><option value="149">149</option><option value="150">150</option><option value="151">151</option>
+                    <option value="152">152</option><option value="153">153</option><option value="154">154</option><option value="155">155</option>
+                    <option value="156">156</option><option value="157">157</option><option value="158">158</option><option value="159">159</option>
+                    <option value="160">160</option><option value="161">161</option><option value="162">162</option><option value="163">163</option>
+                    <option value="164">164</option><option value="165">165</option><option value="166">166</option><option value="167">167</option>
+                    <option value="168">168</option><option value="169">169</option><option value="170">170</option><option value="171">171</option>
+                    <option value="172">172</option><option value="173">173</option><option value="174">174</option><option value="175">175</option>
+                    <option value="176">176</option><option value="177">177</option><option value="178">178</option><option value="179">179</option>
+                    <option value="180">180</option>
+                </select>
+            </div>
+            <!-- 瞳距-->
+            <div class="zjSelect-items">
+                <select id="kj_tongju" name="kj_tongju">
+                    <option value="">瞳距</option><option value="54">54.0</option><option value="54.5">54.5</option><option value="55">55.0</option>
+                    <option value="55.5">55.5</option><option value="56">56.0</option><option value="56.5">56.5</option><option value="57">57.0</option>
+                    <option value="57.5">57.5</option><option value="58">58.0</option><option value="58.5">58.5</option><option value="59">59.0</option>
+                    <option value="59.5">59.5</option><option value="60">60.0</option><option value="60.5">60.5</option><option value="61">61.0</option>
+                    <option value="61.5">61.5</option><option value="62">62.0</option><option value="62.5">62.5</option><option value="63">63.0</option>
+                    <option value="63.5">63.5</option><option value="64">64.0</option><option value="64.5">64.5</option><option value="65">65.0</option>
+                    <option value="65.5">65.5</option><option value="66">66.0</option><option value="66.5">66.5</option><option value="67">67.0</option>
+                    <option value="67.5">67.5</option><option value="68">68.0</option><option value="68.5">68.5</option><option value="69">69.0</option>
+                    <option value="69.5">69.5</option><option value="70">70.0</option><option value="70.5">70.5</option><option value="71">71.0</option>
+                    <option value="71.5">71.5</option><option value="72">72.0</option><option value="72.5">72.5</option><option value="73">73.0</option>
+                    <option value="73.5">73.5</option><option value="74">74.0</option><option value="74.5">74.5</option><option value="75">75.0</option>
+                    <option value="75.5">75.5</option><option value="76">76.0</option><option value="76.5">76.5</option><option value="77">77.0</option>
+                    <option value="77.5">77.5</option><option value="78">78.0</option><option value="78.5">78.5</option><option value="79">79.0</option>
+                    <option value="79.5">79.5</option><option value="80">80.0</option>
+                </select>
+            </div>
+        </div>
+        <!-- 镜片-->
+        <div class="glassSelect">
+            <div class="glassSelect-title">镜片</div>
+            <div class="glassSelect-item">
+                <label for="glassSelect-item-01">
+                    <div class="glassSelect-item-check">
+                        <input type="radio" value="1" name="glasses_type" id="glassSelect-item-01" checked="checked"><span></span>
+                    </div>
+                    <div class="glassSelect-item-text">
+                        <div class="glassSelect-item-title">锐澳标准非球面加膜2片 ￥0.00元/副</div>
+                        <p class="glassSelect-item-info">折射率:1.56 适合近视0-400度 适合散光0-100度				</p>
+                    </div>
+                </label>
+            </div>
+            <div class="glassSelect-item">
+                <label for="glassSelect-item-02">
+                    <div class="glassSelect-item-check">
+                        <input type="radio" value="2" name="glasses_type" id="glassSelect-item-02"><span></span>
+                    </div>
+                    <div class="glassSelect-item-text">
+                        <div class="glassSelect-item-title">锐澳超薄非球面加膜2片 ￥50.00元/副</div>
+                        <p class="glassSelect-item-info">折射率:1.60 适合近视100-600度 适合散光0-150度				</p>
+                    </div>
+                </label>
+            </div>
+            <div class="glassSelect-item">
+                <label for="glassSelect-item-03">
+                    <div class="glassSelect-item-check">
+                        <input type="radio" value="3" name="glasses_type" id="glassSelect-item-03"><span></span>
+                    </div>
+                    <div class="glassSelect-item-text">
+                        <div class="glassSelect-item-title">阿米娅特薄非球面加膜2片 ￥100.00元/副</div>
+                        <p class="glassSelect-item-info">折射率:1.67 适合近视200-800度 适合散光0-200度	</p>
+                    </div>
+                </label>
+            </div>
+            <div class="glassSelect-item">
+                <label for="glassSelect-item-04">
+                    <div class="glassSelect-item-check">
+                        <input type="radio" value="4" name="glasses_type" id="glassSelect-item-04"><span></span>
+                    </div>
+                    <div class="glassSelect-item-text">
+                        <div class="glassSelect-item-title">依视路钻晶超薄非球面2片 ￥320.00元/副</div>
+                        <p class="glassSelect-item-info">折射率:1.552 适合近视0-400度 适合散光0-100度	</p>
+                    </div>
+                </label>
+            </div>
+            <div class="glassSelect-item">
+                <label for="glassSelect-item-05">
+                    <div class="glassSelect-item-check">
+                        <input type="radio" value="5" name="glasses_type" id="glassSelect-item-05"><span></span>
+                    </div>
+                    <div class="glassSelect-item-text">
+                        <div class="glassSelect-item-title">依视路钻晶A2特薄非球面2片 ￥560.00元/副</div>
+                        <p class="glassSelect-item-info">折射率:1.60 适合近视100-600度 适合散光0-150度				</p>
+                    </div>
+                </label>
+            </div>
+            <div class="glassSelect-item">
+                <label for="glassSelect-item-06">
+                    <div class="glassSelect-item-check">
+                        <input type="radio" value="6" name="glasses_type" id="glassSelect-item-06"><span></span>
+                    </div>
+                    <div class="glassSelect-item-text">
+                        <div class="glassSelect-item-title">依视路钻晶A2非球面2片 ￥780.00元/副</div>
+                        <p class="glassSelect-item-info">折射率:1.665 适合近视200-800度 适合散光0-225度	</p>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </div>
+    <!-- 数量-->
+    <div class="numberSelect">
+        <div class="numberSelect-title">数量</div>
+        <div class="numSelect">
+            <span class="numSelect-btn" onclick="change_count('-');">-</span>
+            <input value="1" name="goods_number" readonly="true" id="count" class="numSelect-ipt">
+            <span class="numSelect-btn" onclick="change_count('+');">+</span>
+        </div>
+    </div>
+    <div style="height:5rem;"></div>
+    <div class="goodsBuyBottom" style="position:fixed;width:100%;left:0;bottom:0;">
+    {if $goods.is_on_sale eq 1}
+        {if $goods.goods_number>0}
+            <a href="javascript:;" onclick="add_to_cart_kj({$goods.goods_id});" class="g-btn-large" id="kjBtnType-1">确认购买</a>
+            <a href="javascript:;" onclick="add_to_cart_z({$goods.goods_id});" class="g-btn-large" id="kjBtnType-2">确认购买</a>
+        {else}
+            <a class="g-btn-large" style="background-color: #666;">已售空</a>
+        {/if}
+    {else}
+        <a class="g-btn-large" style="background-color: #666;">已下架</a>
+    {/if}
+    </div>
+</form>
+<script src="http://file.easeeyes.com/js/jquery.min.js"></script>
+<script src="http://file.easeeyes.com/js/response.js"></script>
+<script>
+    $(function(){
+        $('#kjBtnType-1').show();
+        $('#kjBtnType-2').hide();
+        $('.kjTab-item').click(function(){
+            var index=$('.kjTab-item').index($(this));
+            $(this).addClass('current').siblings().removeClass('current');
+            typeRender(index);
+        })
+    })
+    function typeRender(type){
+        if(type==1){
+            $('#glassType-container').hide();
+            $('#kjBtnType-1').hide();
+            $('#kjBtnType-2').show();
+        }else if(type==0){
+            $('#glassType-container').show();
+            $('#kjBtnType-1').show();
+            $('#kjBtnType-2').hide();
+        }
+    }
+</script>
+
+
+

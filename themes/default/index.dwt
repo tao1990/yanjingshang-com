@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>{$page_title}</title>
+<meta name="Keywords"    content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link rel="stylesheet" href="http://file.easeeyes.com/b2b/css/index.css" />
+</head>
+<body>
+
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div class="container">
+	<div class="fl">
+		<div class="category">
+			{insert name='header_menu'}	
+		</div>
+	</div>
+	<div class="fl">
+		<div class="banner">	
+			<div class="banner-main">
+				<ul class="main">
+                {foreach from=$ad_A1 key=k item=list}
+					<li><a href="{$list.ad_link}" target="_blank"><img style="width:730px;height: 360px;" src="{$img_url}{$list.ad_code}" /></a></li>
+                {/foreach}
+				</ul>
+			</div>
+			<ul class="thumbs inline-ulist">
+                {foreach from=$ad_A2 key=k item=list}
+				<li><a href="{$list.ad_link}" target="_blank"><img style="width: 242px;height:147px;" src="{$img_url}{$list.ad_code}" /></a></li>
+                {/foreach}
+			</ul>
+		</div>
+	</div>
+	<div class="fr">
+		<div class="account-box">
+        <!--{if $user_id}-->
+            <div class="account clearfix">
+				<div class="image">
+					<img src="http://file.easeeyes.com/b2b/images/ava.jpg" />
+				</div>
+				<div class="text">
+					<span class="maincolor">{$user_name}</span>
+					<div class="links">
+						<a href="user.php" class="c222">我的镜商</a>　　<a href="user_logout.html">退出</a>
+					</div>	
+				</div>
+			</div>
+			<div class="infos clearfix">
+                <div class="col-3">
+                    <a href="user.php?act=order_list&type=1" style="color: #fff;">
+					   <span class="num">{$type_order_num.type1}</span>待付款
+                    </a>
+				</div>
+				<div class="col-3">
+                    <a href="user.php?act=order_list&type=3" style="color: #fff;">
+					<span class="num">{$type_order_num.type3}</span>待收货
+                    </a>
+				</div>
+				<div class="col-3">
+                    <a href="user.php?act=order_list&type=4" style="color: #fff;">
+					<span class="num">{$type_order_num.type4}</span>待评价
+                    </a>
+				</div>
+			</div>
+        <!--{else}-->
+            <div class="account clearfix">
+				<div class="image">
+					<img src="http://file.easeeyes.com/b2b/images/ava.jpg" />
+				</div>
+				<div class="text">
+					<span class="c222">Hi,上午好</span><br />
+					欢迎来到眼镜商
+				</div>
+			</div>
+			<div class="btns">
+				<a href="" title="注册" class="border"><img src="http://file.easeeyes.com/b2b/images/zc.jpg" /> 注册</a>
+				<a href="" title="登陆"><img src="http://file.easeeyes.com/b2b/images/dl.jpg" /> 登陆</a>
+			</div>
+        <!--{/if}-->
+			
+			<div class="table-default tables">
+				<table>
+					<tbody>
+						<tr>
+							<td>
+								<img src="http://file.easeeyes.com/b2b/images/icon1.png" /><br />
+								闪电发货
+							</td>
+							<td>
+								<img src="http://file.easeeyes.com/b2b/images/icon2.png" /><br />
+								产品最低价
+							</td>
+							<td>
+								<img src="http://file.easeeyes.com/b2b/images/icon3.png" /><br />
+								品类齐全
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<img src="http://file.easeeyes.com/b2b/images/icon4.png" /><br />
+								品牌授权
+							</td>
+							<td>
+								<img src="http://file.easeeyes.com/b2b/images/icon5.png" /><br />
+								商家认证
+							</td>
+							<td>
+								<img src="http://file.easeeyes.com/b2b/images/icon6.png" /><br />
+								安全交易
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="tab">
+				<ul class="tab-title JS_tab_title" id="J-tab-01-title">
+					<li>公告</li>
+					<li>规则</li>
+					<li>买家</li>
+					<li>卖家</li>
+				</ul>
+				<div class="main JS_tab_main" id="J-tab-01-main">
+					
+					<ul class="JS_tab_m">
+                        {foreach from=$article_1 key=k item=list}
+                            <li><a href="{$list.url}" target="_blank">{$list.short_title}</a></li>
+                        {/foreach}
+					</ul>
+                    <ul class="JS_tab_m">
+                        {foreach from=$article_2 key=k item=list}
+                            <li><a href="{$list.url}" target="_blank">{$list.short_title}</a></li>
+                        {/foreach}
+					</ul>
+                    <ul class="JS_tab_m">
+                        {foreach from=$article_3 key=k item=list}
+                            <li><a href="{$list.url}" target="_blank">{$list.short_title}</a></li>
+                        {/foreach}
+					</ul>
+                    <ul class="JS_tab_m">
+                        {foreach from=$article_4 key=k item=list}
+                            <li><a href="{$list.url}" target="_blank">{$list.short_title}</a></li>
+                        {/foreach}
+					</ul>
+                    
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--入住商家-->
+<div class="container business">
+	<div class="fl left">
+		<h2 class="title"><img src="http://file.easeeyes.com/b2b/images/shop.jpg" /> 已入驻商家推荐</h2>
+		<div class="zc-link">
+            <a href="{$ad_A3.0.ad_link}" target="_blank"><img src="{$img_url}{$ad_A3.0.ad_code}" /></a>
+		</div>
+	</div>
+	<div class="fl center">
+		<div class="pp-nav">
+			<!--<a href="#" class="fr more">更多品牌 ></a>-->
+			<ul class="JS_tab_title" id="J-tab-02-title">
+				<li>透明隐形眼镜</li>
+				<li>彩色隐形眼镜</li>
+				<li>护理液</li>
+				<li>太阳镜</li>
+				<li>框架眼镜</li>
+			</ul>
+		</div>
+		<div class="JS_tab_main" id="J-tab-02-main">
+			<div class="JS_tab_m item-logos">
+				<ul class="clearfix">
+					<!--{foreach from=$brand_1 key=k item=list}-->
+					<li>
+						<a href="{$list.b2b_site_url}" target="_blank" title="{$list.brand_name}"><img src="{$img_url}{$list.b2b_brand_logo}" /></a>
+					</li>
+                    <!--{/foreach}-->
+				</ul>
+			</div>
+            <div class="JS_tab_m item-logos">
+				<ul class="clearfix">
+					<!--{foreach from=$brand_6 key=k item=list}-->
+					<li>
+						<a href="{$list.b2b_site_url}" target="_blank" title="{$list.brand_name}"><img src="{$img_url}{$list.b2b_brand_logo}" /></a>
+					</li>
+                    <!--{/foreach}-->
+				</ul>
+			</div>
+            <div class="JS_tab_m item-logos">
+				<ul class="clearfix">
+					<!--{foreach from=$brand_64 key=k item=list}-->
+					<li>
+						<a href="{$list.b2b_site_url}" target="_blank" title="{$list.brand_name}"><img src="{$img_url}{$list.b2b_brand_logo}" /></a>
+					</li>
+                    <!--{/foreach}-->
+				</ul>
+			</div>
+            <div class="JS_tab_m item-logos">
+				<ul class="clearfix">
+					<!--{foreach from=$brand_159 key=k item=list}-->
+					<li>
+						<a href="{$list.b2b_site_url}" target="_blank" title="{$list.brand_name}"><img src="{$img_url}{$list.b2b_brand_logo}" /></a>
+					</li>
+                    <!--{/foreach}-->
+				</ul>
+			</div>
+            <div class="JS_tab_m item-logos">
+				<ul class="clearfix">
+					<!--{foreach from=$brand_190 key=k item=list}-->
+					<li>
+						<a href="{$list.b2b_site_url}" target="_blank" title="{$list.brand_name}"><img src="{$img_url}{$list.b2b_brand_logo}" /></a>
+					</li>
+                    <!--{/foreach}-->
+				</ul>
+			</div>
+		   
+		
+		
+		</div>
+	</div>
+	<div class="fr right">
+		<div class="main">
+			<!--轮播图start-->
+			<div class="move-slider">
+				<ul class="main">
+                    {foreach from=$ad_A4 key=k item=list}
+					<li><a href="{$list.ad_link}" target="_blank"><img src="{$img_url}{$list.ad_code}" /></a></li>
+                    {/foreach}
+				</ul>
+			</div>
+			<!--轮播图end-->
+		</div>
+	</div>
+</div>
+<div class="container advMod">
+	<a href="{$ad_A5.0.ad_link}"><img src="{$img_url}{$ad_A5.0.ad_code}" /></a>
+</div>
+<!--product-->
+<div class="container productMod">
+	<div class="fl left">
+		<div class="choice">
+			<div class="title">
+				<img src="http://file.easeeyes.com/b2b/images/pro_t_1.jpg" />
+			</div>
+			<div class="main">
+				<h4>周期</h4>
+				<div class="btns">
+					<a target="_blank" href="/category_1.html?params=%7C%7C年抛%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C">年抛</a>
+					<a target="_blank" href="/category_1.html?params=%7C%7C半年抛%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C">半年抛</a>
+					<a target="_blank" href="/category_1.html?params=%7C%7C季抛%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C">季抛</a>
+					<a target="_blank" href="/category_1.html?params=%7C%7C月抛%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C">月抛</a>
+					<a target="_blank" href="/category_1.html?params=%7C%7C两周抛%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C">两周抛</a>
+					<a target="_blank" href="/category_1.html?params=%7C%7C日抛%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C">日抛</a>
+				</div>
+				<h4>含水量</h4>
+				<div class="btns">
+					<a href="/category_1.html?params=%7C%7C%7C%7C37%25以下(低含水量)%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C">低含水量</a>
+					<a href="/category_1.html?params=%7C%7C%7C%7C38%25～49%25(中含水量)%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C">中含水量</a>
+					<a href="/category_1.html?params=%7C%7C%7C%7C50%25～58%25(高含水量)%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C">高含水量</a>
+					<a href="/category_1.html?params=%7C%7C%7C%7C59%25以上(超高含水量)%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C">超高含水量</a>
+				</div>
+			</div>
+		</div>
+		<div class="thumb">
+			<a href="{$ad_A6.0.ad_link}" target="_blank"><img src="{$img_url}{$ad_A6.0.ad_code}" /></a>
+			<!--
+			//悬浮文字部分
+			<div class="layer">
+				海昌日抛30片 夏季特惠
+			</div>
+			-->
+		</div>
+	</div>
+	<div class="fr right">
+		<div class="goodsItems clearfix">
+			<!--{foreach from=$index_cat_rec_1 key=k item=list}-->
+			<div class="goodsItem">
+				<div class="text">
+					<a href="goods{$list.goods_id}.html" title="{$list.goods_name}" target="_blank">{$list.goods_name}</a><br />进货价：<span class="price"><b>{$list.min}</b>元起</span>
+				</div>
+				<div class="image">
+					<a href="goods{$list.goods_id}.html" target="_blank"><img src="{$img_url}{$list.goods_img}" /></a>
+				</div>
+			</div>
+            <!--{/foreach}-->
+		</div>
+	</div>
+</div>
+<div class="container productMod">
+	<div class="fl left">
+		<div class="choice">
+			<div class="title">
+				<img src="http://file.easeeyes.com/b2b/images/pro_t_2.jpg" />
+			</div>
+			<div class="main">
+				<h4>周期</h4>
+				<div class="btns">
+					<a target="_blank" href="/category_6.html?params=%7C%7C年抛%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C">年抛</a>
+					<a target="_blank" href="/category_6.html?params=%7C%7C半年抛%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C">半年抛</a>
+					<a target="_blank" href="/category_6.html?params=%7C%7C季抛%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C">季抛</a>
+					<a target="_blank" href="/category_6.html?params=%7C%7C月抛%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C">月抛</a>
+					<a target="_blank" href="/category_6.html?params=%7C%7C双周抛%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C">两周抛</a>
+					<a target="_blank" href="/category_6.html?params=%7C%7C日抛%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C">日抛</a>
+				</div>
+				<h4>含水量</h4>
+				<div class="btns">
+					<a target="_blank" href="/category_6.html?params=%7C%7C%7C%7C37%25以下(低含水量)%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C">低含水量</a>
+					<a target="_blank" href="/category_6.html?params=%7C%7C%7C%7C38%25～49%25(中含水量)%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C">中含水量</a>
+					<a target="_blank" href="/category_6.html?params=%7C%7C%7C%7C50%25～58%25(高含水量)%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C">高含水量</a>
+					<a target="_blank" href="/category_6.html?params=%7C%7C%7C%7C59%25以上(超高含水量)%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C">超高含水量</a>
+				</div>
+			</div>
+		</div>
+		<div class="thumb">
+			<a href="{$ad_A6.1.ad_link}" target="_blank"><img src="{$img_url}{$ad_A6.1.ad_code}" /></a>
+		</div>
+	</div>
+	<div class="fr right">
+		<div class="goodsItems clearfix">
+			<!--{foreach from=$index_cat_rec_6 key=k item=list}-->
+			<div class="goodsItem">
+				<div class="text">
+					<a href="goods{$list.goods_id}.html" title="{$list.goods_name}" target="_blank">{$list.goods_name}</a><br />进货价：<span class="price"><b>{$list.min}</b>元起</span>
+				</div>
+				<div class="image">
+					<a href="goods{$list.goods_id}.html" target="_blank"><img src="{$img_url}{$list.goods_img}" /></a>
+				</div>
+			</div>
+            <!--{/foreach}-->
+		</div>
+	</div>
+</div>
+<div class="container productMod">
+	<div class="fl left">
+		<div class="choice">
+			<div class="title">
+				<img src="http://file.easeeyes.com/b2b/images/pro_t_3.jpg" />
+			</div>
+			<div class="main">
+				<h4>功能</h4>
+				<div class="btns">
+					<a target="_blank" href="category_64.html?params=%7C%7C护理液%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C">护理液</a>
+				    <a target="_blank" href="category_64.html?params=%7C%7C润眼液%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C">润眼液</a>
+				</div>
+				<h4>规格</h4>
+				<div class="btns">
+                    <a target="_blank" href="category_64.html?params=%7C%7C便携装（60ml以下）%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C">便携装</a>
+                    <a target="_blank" href="category_64.html?params=%7C%7C小瓶装（100ml~125ml)%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C">小瓶装</a>
+                    <a target="_blank" href="category_64.html?params=%7C%7C中瓶装（240ml~380ml）%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C">中瓶装</a>
+                    <a target="_blank" href="category_64.html?params=%7C%7C大瓶装（450ml以上）%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C">大瓶装</a>
+                    <a target="_blank" href="category_64.html?params=%7C%7C组合套装%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C">组合套装</a>
+				</div>
+			</div>
+		</div>
+		<div class="thumb">
+			<a href="{$ad_A6.2.ad_link}" target="_blank"><img src="{$img_url}{$ad_A6.2.ad_code}" /></a>
+		</div>
+	</div>
+	<div class="fr right">
+		<div class="goodsItems clearfix">
+			<!--{foreach from=$index_cat_rec_64 key=k item=list}-->
+			<div class="goodsItem">
+				<div class="text">
+					<a href="goods{$list.goods_id}.html" title="{$list.goods_name}" target="_blank">{$list.goods_name}</a><br />进货价：<span class="price"><b>{$list.min}</b>元起</span>
+				</div>
+				<div class="image">
+					<a href="goods{$list.goods_id}.html" target="_blank"><img src="{$img_url}{$list.goods_img}" /></a>
+				</div>
+			</div>
+            <!--{/foreach}-->
+		</div>
+	</div>
+</div>
+<div class="container productMod">
+	<div class="fl left">
+		<div class="choice">
+			<div class="title">
+				<img src="http://file.easeeyes.com/b2b/images/pro_t_4.jpg" />
+			</div>
+			<div class="main">
+				<h4>类型</h4>
+				<div class="btns">
+					<a target="_blank" href="category_76.html?params=%7C%7C伴侣盒%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C">伴侣盒</a>
+					<a target="_blank" href="category_76.html?params=%7C%7C双联盒%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C">双联盒</a>
+				</div>
+			
+			</div>
+		</div>
+		<div class="thumb">
+			<a href="{$ad_A6.3.ad_link}" target="_blank"><img src="{$img_url}{$ad_A6.3.ad_code}" /></a>
+		</div>
+	</div>
+	<div class="fr right">
+		<div class="goodsItems clearfix">
+			<!--{foreach from=$index_cat_rec_76 key=k item=list}-->
+			<div class="goodsItem">
+				<div class="text">
+					<a href="goods{$list.goods_id}.html" title="{$list.goods_name}" target="_blank">{$list.goods_name}</a><br />进货价：<span class="price"><b>{$list.min}</b>元起</span>
+				</div>
+				<div class="image">
+					<a href="goods{$list.goods_id}.html" target="_blank"><img src="{$img_url}{$list.goods_img}" /></a>
+				</div>
+			</div>
+            <!--{/foreach}-->
+		</div>
+	</div>
+</div>
+<!--<div class="container productMod">
+	<div class="fl left">
+		<div class="choice">
+			<div class="title">
+				<img src="http://file.easeeyes.com/b2b/images/pro_t_5.jpg" />
+			</div>
+			<div class="main">
+				<h4>周期</h4>
+				<div class="btns">
+					<a href="#">年抛</a>
+					<a href="#">半年抛</a>
+					<a href="#">季抛</a>
+					<a href="#">月抛</a>
+					<a href="#">双周抛</a>
+					<a href="#">日抛</a>
+				</div>
+				<h4>功能</h4>
+				<div class="btns">
+					<a href="#">散光定制</a>
+					<a href="#">防紫外线</a>
+					<a href="#">高度近视</a>
+					<a href="#">色盲片</a>
+				</div>
+			</div>
+		</div>
+		<div class="thumb">
+			<a href="{$ad_A6.4.ad_link}" target="_blank"><img src="{$img_url}{$ad_A6.4.ad_code}" /></a>
+		</div>
+	</div>
+	<div class="fr right">
+		<div class="goodsItems clearfix">
+			{*foreach from=$index_cat_rec_159 key=k item=list*}
+			<div class="goodsItem">
+				<div class="text">
+					<a href="goods{$list.goods_id}.html" title="{$list.goods_name}" target="_blank">{$list.goods_name}</a><br />进货价：<span class="price"><b>{$list.min}</b>元起</span>
+				</div>
+				<div class="image">
+					<a href="goods{$list.goods_id}.html" target="_blank"><img src="{$img_url}{$list.goods_img}" /></a>
+				</div>
+			</div>
+            {*/foreach*}
+		</div>
+	</div>
+</div>-->
+<!--<div class="container productMod nopb">
+	<div class="fl left">
+		<div class="choice">
+			<div class="title">
+				<img src="http://file.easeeyes.com/b2b/images/pro_t_6.jpg" />
+			</div>
+			<div class="main">
+				<h4>款式</h4>
+				<div class="btns">
+					<a href="#">男款</a>
+					<a href="#">女款</a>
+					<a href="#">儿童款</a>
+					<a href="#">中性款</a>
+				</div>
+				<h4>框型</h4>
+				<div class="btns">
+					<a href="#">半框</a>
+					<a href="#">全框</a>
+					<a href="#">无框</a>
+				</div>
+                <h4>颜色</h4>
+				<div class="btns">
+					<a href="#">黑色</a>
+					<a href="#">白色</a>
+					<a href="#">灰色</a>
+				</div>
+			</div>
+		</div>
+		<div class="thumb">
+			<a href="{$ad_A6.5.ad_link}" target="_blank"><img src="{$img_url}{$ad_A6.5.ad_code}" /></a>
+		</div>
+	</div>
+	<div class="fr right">
+		<div class="goodsItems clearfix">
+			{*foreach from=$index_cat_rec_190 key=k item=list*}
+			<div class="goodsItem">
+				<div class="text">
+					<a href="goods{$list.goods_id}.html" title="{$list.goods_name}" target="_blank">{$list.goods_name}</a><br />进货价：<span class="price"><b>{$list.min}</b>元起</span>
+				</div>
+				<div class="image">
+					<a href="goods{$list.goods_id}.html" target="_blank"><img src="{$img_url}{$list.goods_img}" /></a>
+				</div>
+			</div>
+            {*/foreach*}
+		</div>
+	</div>
+</div>-->
+<div class="container advMod">
+	<a href="{$ad_A7.0.ad_link}" target="_blank"><img src="{$img_url}{$ad_A7.0.ad_code}" /></a>
+</div>
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

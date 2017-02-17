@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<meta name="Description" content="{$description}" />
+<!--{if $auto_redirect}--><meta http-equiv="refresh" content="3;URL={$message.back_url}" /><!--{/if}-->
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<script type="text/javascript" src="/js/yijq.js"></script>
+<script type="text/javascript" src="/js/yi_common.js"></script>
+<style type="text/css">
+.mes_div{width:auto; height:35px; line-height:35px; margin:0 auto;}
+.mes_txt{display:inline-block; width:auto; height:35x; line-height:35px; margin-right:18px; padding-left:53px; background:url(images/mes_info.gif) no-repeat; color:#333;font-size:20px; font-weight:bold;}
+
+.msg-button{display:inline-block;*display:inline;*zoom:1;padding:0 10px;line-height:34px;height:34px;background:#00529B;color:#fff;font-size:15px;border-radius:4px;margin:0 6px;}
+.msg-button:hover{color:#fff;opacity:.8;filter:alpha(opacity=80);}
+</style>
+<link rel="stylesheet" href="http://file.easeeyes.com/b2b/css/index.css">
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+<div class="block" style="width:988px; height:280px; border:1px #dcdcdc solid; margin:10px auto;">
+	<div style="width:988px; height:150px; margin:65px auto; text-align:center;">    	
+        <div class="mes_div"><span class="mes_txt">{if $message.content}{$message.content}{else}问题已提交成功，我们会及时处理，谢谢您的支持！{/if}</span></div> 
+        <div class="space10" style="height:66px;"></div>
+        <div style="width:500px; height:34px; margin:0 auto;text-align:center;">
+               <!-- {if $message.url_info} -->
+              <!--{foreach from=$message.url_info key=info item=url}-->
+              <a href="{$url}" class="msg-button">{$info}</a>
+              <!--{/foreach}-->
+              <!--{/if}-->
+   
+        </div>    
+    </div>
+</div>
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

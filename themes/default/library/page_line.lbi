@@ -1,0 +1,27 @@
+<!-------------------------------------------------------------------------商品 列表分页 yijiangwen 2011-6-26--------------------------------------------------------------------->
+<form name="selectPageForm" action="{$smarty.server.PHP_SELF}" method="get">
+<div class="page">
+<!--{if $pager.record_count > 0}-->
+    <div class="pagelogo"><a href="{$page_url}&amp;page=1">第一页</a></div>  
+    <!--{if $pager.page_prev}-->
+    	<div class="pagelogo"><a href="{$page_url}&amp;page={$pager.page_prev}" >上一页</a></div>
+    <!--{else}--><div class="pagelogo"><span>上一页</span></div><!--{/if}-->      
+    <!--{if $pager.page_count > 0}-->    
+        <!--{foreach from=$pager.page_number key=key item=item name=foo}-->
+        {if $smarty.foreach.foo.index < 10}
+          <!--{if $pager.page eq $key}--><div class="pagelogohong">{$key}</div>
+          <!--{else}--><div class="pagelogo"> <a href="{$page_url}&amp;page={$item}">{$key}</a></div><!--{/if}-->
+        {else}
+            {if $smarty.foreach.foo.index >= 29}<div class="pagelogo"> <a href="{$page_url}&amp;page={$item}">{$key}</a></div>
+            {else}{/if}
+         {/if}
+        <!--{/foreach}-->
+    <!--{/if}-->
+    <!--{if $pager.page_next}-->
+        <div class="pagelogo"><a  href="{$page_url}&amp;page={$pager.page_next}">下一页</a></div>
+    <!--{else}--><div class="pagelogo"><span  >下一页</span></div><!--{/if}-->    
+	<div class="pagelogo"><a href="{$page_url}&amp;page={$last_page}">最末页</a></div>    
+<!--{/if}-->    
+    <div class="pagelogo">总计<b>{$record_count}</b> 个记录 </div>     
+</div>
+</form>

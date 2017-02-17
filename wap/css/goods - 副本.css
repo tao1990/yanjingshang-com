@@ -1,0 +1,108 @@
+.flowbox{height: 35px;padding-bottom: 5px;}
+.flowbox a{width: 33%;height: 35px;line-height: 39px;float: left;text-align: center;font-size: 14px;cursor: pointer;}
+.scrollCls {position: fixed;background: #F2F2F2;bottom: auto;z-index: 10000;top: 0;height: 35px;}
+.xz {border-top: 2px solid #76d5e9;font-weight: bold;color: #76d5e9;}
+ul li {float: left;}
+em{color:#fff;font-size: 12px;}
+.brand{width:100%;height:auto;}
+.brand_z{width:80%;float: left;padding-left:5%;padding-top:10px;line-height: 20px;}
+.brand_z span{width:100%;float: left;}
+.brand_y{width:10%;float: left;margin-top: 20px;line-height: 20px;background: url('http://www.easeeyes.com/wap/images/collect.png') no-repeat;height: 100%;}
+.brand_y a{float:left;margin-top:30px;}
+.price1{font-size: 20px;color:red;font-weight:bolder;}
+.price2{font-size: 12px;text-decoration: line-through;}
+.zk em{background-color: red;color:white;font-size:12px;}
+
+.goods_name{font-size: 16px;overflow: hidden;padding-top: 10px;}
+.goods_name span,.same_goods_info ul,.ds_choose span{padding:10px 5%}
+.goods_name_tr {font-size: 12px;overflow: hidden;padding-bottom: 10px;border-bottom: 1px solid #ccc;padding-top: 10px;}
+.goods_name_tr span{padding:10px 5%;color: #0ca5bd;}
+
+.cx{border-top: 1px solid #FFF;background: url('http://m.easeeyes.com/images/jt_up.png') 90% 50% no-repeat;font-size: 16px;border-bottom: 1px solid #ccc;padding-top: 10px;padding-bottom: 10px;}
+
+.cx-info{background:white;font-size:12px;}
+
+.same_goods,.ds_choose{border-top: 1px solid #FFF;background: url('http://m.easeeyes.com/images/jt_up.png') 90% 50% no-repeat;font-size: 16px;border-bottom: 1px solid #ccc;overflow: auto;padding-top: 10px;padding-bottom: 10px;}
+.same_goods_info{background:white;font-size:12px;}
+.same_goods_info li{margin-right: 15px;margin-bottom: 5px;float:left;text-align: center;position: relative;width: 60px;border: 1px solid #ddd;overflow: hidden;display: block;}
+
+.ds_choose{background: url('http://m.easeeyes.com/images/jt_up.png') 90% 50% no-repeat;}
+
+.ds_radio{text-align: center;width: auto;padding:0 10px;height: 30px;line-height: 30px;text-align: center;font-size: 14px;background: #d1f7ff;float: left;}
+.ds_radio_list,.sg_radio_list,.zw_radio_list{padding:10px 5%;height:auto;float: left;background: url('http://m.easeeyes.com/images/xx.png') bottom no-repeat;}
+
+.ds_radio_div{margin:0 0 10px 6px;float: left;}
+
+.on{background: #75d6e9;}
+.ds_choose_info{background: white;overflow: auto;border-bottom:1px solid #ccc;}
+.dsselect{display:none;} 
+
+.goods_count{border-top: 1px solid #FFF;border-bottom: 1px solid #ccc;padding:10px 5%;font-size:16px}
+
+.goods_number {line-height: 27px;height: 27px;}
+.bt_minusjia,.bt_minusjian{width:27px;height:27px}
+.bt_minusjia a,.bt_minusjian a {width: 25px;height: 25px;display: block;margin-right: 5px;margin-top: 2px;}
+.input_cunt_li{height:25px;width:25px;border: 1px #ccc solid;border-right: none;}
+.bt_minusjian{padding-left: 5px;}
+.input_count {width:25px;height: 25px;border: none;line-height: 25px;background: #FFF;color: #333;text-align: right;margin-bottom: 6px;}
+.input_count_unit {height: 25px;line-height: 25px;padding: 0 8px 0 0px;font-family: 宋体;border: 1px #ccc solid;
+border-left: none;background: #FFF;color: #333;}
+
+.add_cart_div{border-top: 1px solid #FFF;border-bottom: 1px solid #ccc;text-align: center;padding-top: 10px;
+padding-bottom: 10px;overflow: auto;}
+.add_cart_div a{background:#75d6e9;color:white;border-radius: 5px;float: left;width:100%;text-decoration:none;padding-top: 5px;padding-bottom: 5px;}
+
+.tel{border-top: 1px solid #FFF;border-bottom: 1px solid #ccc;text-align: center;padding-top: 10px;
+padding-bottom: 10px;overflow: auto;background: white;}
+
+.zzgm{border-top: 1px solid #FFF;border-bottom: 1px solid #ccc;padding:10px 5%;}
+.zzgm li{width:25%;margin-right: 10px;font-size:10px}
+.zzgm img{width: 100%;height: 72px;border: 1px solid #ddd;}
+.sp02{color: red;}
+.sp03{text-decoration: line-through;font-size:10px}
+.cpxq,.yhpl{display: none;}
+.box_a{border: 4px solid #d9dcda;width: 40%;height: auto;position: fixed;top: 40%;left:25%}
+
+/*产品详情*/
+.xiang_one,.xiang_two{padding-left:6%;padding-right:6%}
+.xiang_detail{margin-bottom:2px}
+.xiang_detail_left{float:left;line-height:28px; background-color:#a5e2ee;width:40%; text-align:center;font-size:14px;font-weight:500}
+.xiang_detail_left_spec{line-height:56px}
+.xiang_detail_right{float:left;line-height:28px; background-color:#cdecf2;width:51%;padding-left:2%}
+.xiang_two{margin-top:15px}
+/*产品详情部分结束*/
+
+/*用户评论*/
+.discuss_one{border-top:1px solid #E5E5E5;border-bottom:1px solid #E5E5E5;margin-top:10px;}
+.discuss_one_left{width:34%;float:left}
+.discuss_one_left p{ text-align:center;padding-top:5px}
+.percent{font-size:18px;font-weight:600;color:#f00}
+.discuss_one_right{width:65%;float:left;border-left:1px solid #E5E5E5}
+.ju_intro{overflow:hidden;zoom:1}
+.language{width:40%;float:left;padding-left:20px}
+.zhishu{width:40%;float:left}
+.discuss_two{background: white;}
+.discuss_two_common{padding:5px 10px;border-bottom:1px solid #E5E5E5}
+.discuss_name{width:30%;float:left;color:#707070;font-weight:bold}
+.discuss_date{width:70%;float:right; text-align:right;color:#b5b5b5}
+.user_discuss{margin-top:5px;margin-bottom:5px}
+.ys_return{float:left;width:25%;color:#009aaf}
+.ys_return_con{float:left;width:75%}
+.discuss_three{padding:15px; text-align:center}
+/*用户评论结束*/
+/*星星*/
+.star1{width:12px;}
+.star2{width:25px;}
+.star3{width:38px;}
+.star4{width:51px;}
+.star5{width:64px;}
+.star15{width:19px;}
+.star25{width:32px;}
+.star35{width:45px;}
+.star45{width:58px;}
+.star5 ,.star4 ,.star3 ,.star2 ,.star1, .star45, .star35, .star25, .star15{background:url(http://m.easeeyes.com/images/bg.png) no-repeat; height:12px; display:block; float:left;}
+
+
+.loading{width:100%;height:40px;}
+#loading{background: url('http://m.easeeyes.com/images/loading.png') no-repeat 50%;}
+#nomoreresults{text-align: center;padding-top:10px;}

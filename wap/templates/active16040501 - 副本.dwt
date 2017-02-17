@@ -1,0 +1,210 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>达人申请</title>
+<meta name="Keywords"  content="易视网,易视眼镜网,美瞳,护理液,润眼液,博士伦,海昌,海俪恩,卫康,库博,视康,强生,sho-bi,GEO,NEO,BESCON" />
+<meta name="Description" content="易视网，眼镜3.2折起，再送200元神券，24小时闪电发货，30天退换货保障" />
+<link rel="stylesheet" href="http://file.easeeyes.com/index2015/css/ani.css" />
+<style>
+.container{width:32rem;margin:auto;}
+.applyTable{background:url(http://file.easeeyes.com/wap/images/daren/bg.jpg) repeat-y center top;padding:2rem 1.5rem;font-family:'Microsoft Yahei';}
+.applyTitle{text-align:center;margin-bottom:2rem;position:relative;z-index:2;}
+.applyTitle h2{width:10rem;height:3rem;line-height:3rem;background:#fad620;color:#fff;font-size:1.2rem;display:inline-block;position:relative;font-weight:100;}
+.applyTitle h2:before,.applyTitle h2:after{
+	content:'';
+	background:none;
+	position:absolute;
+	width:8rem;
+	height:2rem;
+	z-index:-2;
+	right:.5rem;
+	bottom:.5rem;
+	transform:skew(12deg) rotate(4deg);
+	-webkit-transform:skew(12deg) rotate(4deg);
+	box-shadow:0 .4rem .4rem rgba(0,0,0,.3);
+	-webkit-box-shadow:0 .4rem .4rem rgba(0,0,0,.3);
+}
+.applyTitle h2:after{
+	left:.5rem;
+	transform:skew(-12deg) rotate(-4deg);
+	-webkit-transform: skew(-12deg) rotate(-4deg);
+}
+.applyItem{background:#dbdfce;padding:.5rem .75rem;font-size:.9rem;color:#404040;margin-bottom:1.5rem;border-radius:.4rem;box-shadow:inset 0 0 5px 4px rgba(0,0,0,.1);}
+.applyItem .description{color:#999;}
+.applyItem input{border:0 none;height:2rem;line-height:2rem;background:none;width:70%;vertical-align:middle;color:#666;font-size:1.1rem;}
+.applyItem input:focus{outline:none;}
+.applyItem input.ipt-file{opacity:0;position:absolute;z-index:-999;width:0;}
+.applyItem input.ipt-filename{width:80%;}
+.toApplyBtn{width:10rem;height:3rem;line-height:3rem;font-size:1.2rem;text-align:center;border:1px solid #dedede;border-radius:.4rem;display:block;box-shadow: 0 0 .5rem 0 rgba(0,0,0,.2);margin:auto;color:#fff;background:#000;background:rgba(0,0,0,.8);font-family:'Microsoft Yahei';}
+.toApplyBtn:disabled{background:#ccc;}
+.label-file{background:#fff;padding:0 .4rem;height:2rem;line-height:2rem;float:right;color:#818774;box-shadow:0 1px 2px 1px rgba(0,0,0,.2);border-radius:.25rem;}
+.fileUpload{margin-top:.5rem;overflow:hidden;}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<!--main-->
+<div class="container">
+    <div class="applyTable">
+		<div class="applyTitle">
+			<h2>填 写 信 息</h2>
+		</div>
+		<form action="ajax_active.php?act=bm_160412" method="post" name="bm" enctype="multipart/form-data" >		
+			<div class="applyItem">
+				姓名：<input type="text" name="username" id="username" />
+			</div>
+			<div class="applyItem">
+				性别：<select id="sex" name="sex">
+					<option>女</option>
+					<option>男</option>
+				</select>
+			</div>
+			<div class="applyItem">
+				手机号：<input type="text" name="phone" id="phone" />
+			</div>
+			<div class="applyItem">
+				屈光度：<input type="text" name="diopter" id="diopter" />
+			</div>
+			<div class="applyItem">
+				偏好花色：<input type="text" name="prefercolor" id="prefercolor" />
+			</div>
+			<div class="applyItem">
+				联系邮箱：<input type="text" name="email" id="email" />
+			</div>
+			<div class="applyItem">
+				社交平台首页截图<span class="description">(如朋友圈、QQ空间、微博等)</span>：
+				<div class="fileUpload">
+					<label for="ipt-file" class="label-file">上传图片</label>
+					<input type="file" name="user_img" value="上传图片" class="ipt-file" id="ipt-file" />
+					<input type="text" readonly="true" class="ipt-filename" id="ipt-filename" />
+				</div>
+			</div>
+			<div class="applyItem">
+				备注<span class="description">(选填)</span>：<input type="text" name="note" id="note" />
+			</div>
+			
+			<input type="submit" class="toApplyBtn" id="toApply"  value="提 交"/>
+		</form>
+	</div>
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+<script>
+var file=document.getElementById('ipt-file'),
+	fileName=document.getElementById('ipt-filename');	
+file.onchange=function(){
+	fileName.value=file.value;
+	fileName.focus();
+}
+/*
+	表单验证
+*/
+var checkItems=[
+	{
+		id:'username',
+		title:'姓名',
+		required:true
+	},
+	{
+		id:'sex',
+		title:'性别',
+		required:true
+	},
+	{
+		id:'phone',
+		title:'手机号',
+		required:true,
+		isPhone:true
+	},
+	{
+		id:'diopter',
+		title:'屈光度',
+		required:true
+	},
+	{
+		id:'prefercolor',
+		title:'偏好花色',
+		required:true
+	},
+	{
+		id:'email',
+		title:'联系邮箱',
+		required:true,
+		isEmail:true
+	},
+	{
+		id:'ipt-filename',
+		title:'个人社交平台首页截图',
+		required:true,
+		isImg:true
+	}
+];
+var regPhone=/^^[1][3578][0-9]{9}$/,
+	regEmail=/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/,
+	regImg=/\.(gif|jpg|jpeg|png|GIF|JPG|PNG)$/;
+
+$('#toApply').attr('disabled',true);
+$.each(checkItems,function(index,item){
+	var checkItem=$('#'+item.id);
+	item.passed=false;
+	checkItem.bind('blur',function(){
+		var val=$.trim($(this).val());
+		if(item.required){
+			if(val==''){
+				item.passed=false;
+				$('#toApply').attr('disabled',true);
+				alert(item.title+'不能为空');
+				return;
+			}
+		}
+		if(item.isPhone){
+			if(!regPhone.test(val)){
+				item.passed=false;
+				$('#toApply').attr('disabled',true);
+				alert(item.title+'格式错误');
+				return;
+			}
+		}
+		if(item.isEmail){
+			if(!regEmail.test(val)){
+				item.passed=false;
+				$('#toApply').attr('disabled',true);
+				alert(item.title+'格式错误');
+				return;
+			}
+		}
+		if(item.isImg){
+			if(!regImg.test(val)){
+				item.passed=false;
+				$('#toApply').attr('disabled',true);
+				alert(item.title+'格式错误');
+				return;
+			}
+		}
+		item.passed=true;
+		if(allPassed(checkItems)){
+			$('#toApply').attr('disabled',false);
+		}else{
+			$('#toApply').attr('disabled',true);
+		}
+	})
+})
+function allPassed(arr){
+	var bool=true;
+	$.each(arr,function(_index,_item){
+		if(_item.passed===false) bool=false;
+	})
+	return bool;
+}
+</script>
+</body>
+</html>

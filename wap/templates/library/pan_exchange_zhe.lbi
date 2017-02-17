@@ -1,0 +1,12 @@
+<ul class="goods_list">    
+	<!--{foreach from=$exchange_zhe item=goods name=foo}【积分折扣】-->
+    <li class="goods_li">      
+        <dl class="goods_dl" style="height:248px;">                            
+            <dd><a href="exchange{$goods.rec_id}_zk.html" target="_blank" title="{$goods.goods_name}" class="goods_li_img"><img src="{$goods.goods_thumb}" width="150" height="150" alt="{$goods.goods_name}"/></a></dd>
+            <dd class="goods_li_name"><a href="exchange{$goods.rec_id}_zk.html" title="{$goods.name|escape:html}" class="color_qianfei" target="_blank">{$goods.goods_name}</a><span class="blue">{if $goods.goods_name_desc}{$goods.goods_name_desc}{else}{$goods.goods_brief}{/if}</span></dd>
+            <dd class="goods_li_pr jf_zhekou_price">折扣价：<strong class="red">￥{$goods.exchange_money}</strong>+<strong>{$goods.exchange_integral}</strong>积分</dd>
+            <dd style="width:100%;">{if goods.is_exchange}<a class="ex_img_a4" href="exchange{$goods.rec_id}_zk.html" target="_blank"></a>{/if}</dd>
+        </dl>
+    </li><!--{if $smarty.foreach.foo.index mod 4 eq 3 || $smarty.foreach.foo.iteration eq $smarty.foreach.foo.total}--><li class="goods_li_line"></li><!--{/if}--> 
+	<!--{/foreach}-->        
+</ul>

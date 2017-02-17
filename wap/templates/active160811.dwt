@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>易视网-招行活动页面</title>
+<meta name="Keywords"  content="易视网,易视眼镜网,美瞳,护理液,润眼液,博士伦,海昌,海俪恩,卫康,库博,视康,强生,sho-bi,GEO,NEO,BESCON" />
+<meta name="Description" content="易视网，博士伦专场爆款产品买三送一，满256送库博宝晴5片装，透明片、彩片、护理液值击底价，24小时闪电发货，30天退换货保障" />
+<link rel="stylesheet" href="http://file.easeeyes.com/index2015/css/ani.css" />
+<style>
+.goodsItems{padding:0 .5rem;}
+.goodsItem{float:left;width:15.25rem;margin-bottom:.5rem;background:#fff;box-sizing:border-box;padding-bottom:.5rem;position:relative;}
+.goodsItem:nth-child(even){float:right;}
+.goodsItem-layer{position:absolute;left:.5rem;top:.5rem;width:2.8rem;padding:.25rem;background:#dc855a;color:#fff;text-align:center;line-height:1.3;font-size:.9rem;}
+.goodsItem-thumb{height:12rem;line-height:12rem;text-align:center;}
+.goodsItem-thumb img{max-width:100%;max-height:100%;vertical-align:middle;}
+.goodsItem-title{color:#333;line-height:1.6rem;height:1.6rem;padding:0 .5rem;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.goodsItem-price{color:#C41921;padding:.25rem .5rem;text-align:center;font-size:1rem;}
+.goodsItem-price del{color:#999;}
+.goodsItem-price b{font-size:1.0rem;font-weight:100;}
+.goodsItem-btn{width:8rem;height:2rem;line-height:2rem;text-align:center;color:#fff;display:block;margin:auto;background:#C41921;}
+</style>
+</head>
+<!--tpl
+<div><img src="http://file.easeeyes.com/wap/images/2016080101/banner.jpg" alt="" style="display:block;"></div>
+<div><a href=""><img src="http://file.easeeyes.com/wap/images/2016080101/banner.jpg" alt="" style="display:block;"></a></div>
+<div style="height:;background:url(http://file.easeeyes.com/wap/images/2016080108/01.jpg);background-size:100% auto;"></div>
+-->
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<!--main-->
+<div class="container">
+	<div><img src="http://file.easeeyes.com/wap/images/20160811/banner.jpg" alt="" style="display:block;"></div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160811/01.jpg" alt="" border="0" usemap="#Map" style="display:block;">
+<map name="Map">
+<area shape="rect" coords="23,93,163,230"  onclick="get_bonus(1)">
+<area shape="rect" coords="175,96,314,225"  onclick="get_bonus(2)">
+<area shape="rect" coords="327,93,469,228"  onclick="get_bonus(3)">
+<area shape="rect" coords="484,88,618,227"  onclick="get_bonus(4)"></map></div>
+	
+	<div><img src="http://file.easeeyes.com/wap/images/20160811/02.jpg" alt="" border="0" usemap="#Map2" style="display:block;" id="f1">
+<map name="Map2"><area shape="rect" coords="9,6,152,64" href="#f1">
+<area shape="rect" coords="167,12,314,65" href="#f2">
+<area shape="rect" coords="324,8,470,64" href="#f3">
+<area shape="rect" coords="481,11,634,67" href="#f4">
+</map></div>
+	<div class="goodsItems clearfix">
+    
+        <!--{foreach from=$goodsArr1 item=li name=li}-->  
+		<div class="goodsItem">
+			<a href="{$li.goods_link}">
+				{if $li.tips}
+                    <span class="goodsItem-layer">{$li.tips}</span>
+                {elseif $zk}
+                    <span class="goodsItem-layer">{$li.zk}</span>
+                {/if}
+				<div class="goodsItem-thumb"><img src="http://img.easeeyes.com/{$li.goods_img}" alt=""></div>
+				<div class="goodsItem-title">{$li.goods_name}</div>
+				<div class="goodsItem-price">
+					6周年价&yen;<b>{$li.now_price}</b>
+					<del>市场价{$li.market_price}</del>
+				</div>
+				<span class="goodsItem-btn">立即购买 ></span>
+			</a>
+		</div>
+        <!--{/foreach}-->
+	</div>
+
+	<div><img src="http://file.easeeyes.com/wap/images/20160811/03.jpg" alt="" border="0" usemap="#Map3" style="display:block;" id="f2">
+<map name="Map3"><area shape="rect" coords="5,7,158,69" href="#f1">
+<area shape="rect" coords="177,15,307,66" href="#f2">
+<area shape="rect" coords="337,14,455,66" href="#f3">
+<area shape="rect" coords="494,16,626,68" href="#f4">
+</map></div>
+	<div class="goodsItems clearfix">
+		<!--{foreach from=$goodsArr2 item=li name=li}-->  
+		<div class="goodsItem">
+			<a href="{$li.goods_link}">
+				{if $li.tips}
+                    <span class="goodsItem-layer">{$li.tips}</span>
+                {elseif $zk}
+                    <span class="goodsItem-layer">{$li.zk}</span>
+                {/if}
+				<div class="goodsItem-thumb"><img src="http://img.easeeyes.com/{$li.goods_img}" alt=""></div>
+				<div class="goodsItem-title">{$li.goods_name}</div>
+				<div class="goodsItem-price">
+					6周年价&yen;<b>{$li.now_price}</b>
+					<del>市场价{$li.market_price}</del>
+				</div>
+				<span class="goodsItem-btn">立即购买 ></span>
+			</a>
+		</div>
+        <!--{/foreach}-->
+	</div>
+    
+    <div><img src="http://file.easeeyes.com/wap/images/20160811/04.jpg" alt="" border="0" usemap="#Map4" style="display:block;" id="f3">
+<map name="Map4"><area shape="rect" coords="11,9,154,68" href="#f1">
+<area shape="rect" coords="172,16,311,62" href="#f2">
+<area shape="rect" coords="328,13,475,64" href="#f3">
+<area shape="rect" coords="489,14,635,68" href="#f4">
+</map></div>
+	<div class="goodsItems clearfix">
+		<!--{foreach from=$goodsArr3 item=li name=li}-->  
+		<div class="goodsItem">
+			<a href="{$li.goods_link}">
+				{if $li.tips}
+                    <span class="goodsItem-layer">{$li.tips}</span>
+                {elseif $zk}
+                    <span class="goodsItem-layer">{$li.zk}</span>
+                {/if}
+				<div class="goodsItem-thumb"><img src="http://img.easeeyes.com/{$li.goods_img}" alt=""></div>
+				<div class="goodsItem-title">{$li.goods_name}</div>
+				<div class="goodsItem-price">
+					6周年价&yen;<b>{$li.now_price}</b>
+					<del>市场价{$li.market_price}</del>
+				</div>
+				<span class="goodsItem-btn">立即购买 ></span>
+			</a>
+		</div>
+        <!--{/foreach}-->
+	</div>
+    <div><img src="http://file.easeeyes.com/wap/images/20160811/05.jpg" alt="" border="0" usemap="#Map5" style="display:block;" id="f4">
+<map name="Map5"><area shape="rect" coords="15,18,151,64" href="#f1">
+<area shape="rect" coords="172,15,309,66" href="#f2">
+<area shape="rect" coords="336,8,461,67" href="#f3">
+<area shape="rect" coords="498,16,624,64" href="#f4">
+</map></div>
+    <div class="goodsItems clearfix">
+		<!--{foreach from=$goodsArr4 item=li name=li}-->  
+		<div class="goodsItem">
+			<a href="{$li.goods_link}">
+				{if $li.tips}
+                    <span class="goodsItem-layer">{$li.tips}</span>
+                {elseif $zk}
+                    <span class="goodsItem-layer">{$li.zk}</span>
+                {/if}
+				<div class="goodsItem-thumb"><img src="http://img.easeeyes.com/{$li.goods_img}" alt=""></div>
+				<div class="goodsItem-title">{$li.goods_name}</div>
+				<div class="goodsItem-price">
+					6周年价&yen;<b>{$li.now_price}</b>
+					<del>市场价{$li.market_price}</del>
+				</div>
+				<span class="goodsItem-btn">立即购买 ></span>
+			</a>
+		</div>
+        <!--{/foreach}-->
+	</div>
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+<script>
+
+function get_bonus(bonus_id){
+    $.ajax({
+        type:'POST',
+        url:'ajax_active.php?act=get_bonus_160703',
+        data:'&bonus_id='+bonus_id+'&m='+Math.random(),
+        cache:false,
+        success:
+                function(da)
+                {
+                    if(da == 1){
+                        alert('您已成功领取优惠券！请至我的红包/优惠券查看^_^');
+                    }else if(da == 2){
+                        alert('请登录后再试^_^');
+                    }else if(da == 3){
+                        alert('您已领取过该优惠券^_^');
+                    }
+                }
+    });
+}
+</script>
+</body>
+</html>

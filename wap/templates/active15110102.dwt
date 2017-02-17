@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<style>
+    .lottery-box{position:relative;}
+    #lottery{position:absolute;width:15.4rem;height:5.9rem;left:8.35rem;top:5.7rem;opacity:0;}
+    .price-list{height:9.75rem;padding:.85rem;background:#ee3940 url(http://file.easeeyes.com/wap/images/2015110102/02.jpg) no-repeat center;background-size:auto 9.75rem;}
+    .price-list-main{margin:1rem 1rem 1rem 4rem;height:7.75rem;overflow:hidden;}
+    .price-list-main ul.ulist{position:relative;transition:all .5s;-webkit-transition:all .5s;}
+    .price-list-main li{line-height:1.55rem;height:1.55rem;font-size:1.2rem;color:#666;}
+
+    #loading,#result{width:100%;height:100%;position:fixed;z-index:999;left:0;top:0;background:rgba(0,0,0,.8);}
+    #loading span,.result-box{position:absolute;left:50%;top:50%;width:5rem;height:5rem;background:#fff;border-radius:.5rem;margin-top:-2.5rem;margin-left:-2.5rem;text-align:center;line-height:5rem;}
+    #loading span img{width:60%;height:auto;}
+    .result-box{width:20rem;height:12rem;margin-left:-10rem;margin-top:-6rem;line-height:1.2;}
+    .result-text{padding:2rem 1rem;font-size:1.4rem;line-height:1.6rem;height:3.6rem;}
+    .result-btn button{border:0 none;background:#2BBDD6;color:#fff;line-height:2;padding:0 1rem;border-radius:.5rem;box-shadow:0 0 2px 1px rgba(0,0,0,.2);}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<!--main-->
+<div class="container">
+    <div class="banner">
+        <img src="http://file.easeeyes.com/wap/images/2015110102/banner.jpg" />
+    </div>
+    <!--抽奖-->
+    <div class="lottery-box">
+        <img src="http://file.easeeyes.com/wap/images/2015110102/01.jpg" />
+        <button id="lottery"></button>
+    </div>
+    <!--中奖名单-->
+    <div class="price-list">
+        <div class="price-list-main">
+            <ul class="ulist">
+
+                <li>恭喜 小k星星 抽中200元现金券</li>
+                <li>恭喜 geishel 抽中10元现金券</li>
+                <li>恭喜 D3E1Q89 抽中LB护理液</li>
+                <li>恭喜 草莓 抽中50元现金券</li>
+                <li>恭喜 suzka01 抽中科莱博伴侣盒</li>
+                <li>恭喜 牛麦麦 抽中5元现金券</li>
+                <li>恭喜 cocomini 抽中LB护理液</li>
+                <li>恭喜 jonshong 抽中50元现金券</li>
+                <li>恭喜 笨笨的刺猬 抽中5元现金券</li>
+                <li>恭喜 usahana 抽中50元现金券</li>
+                <li>恭喜 hczxg 抽中LB护理液</li>
+                <li>恭喜 ava41791454 抽中10元现金券</li>
+                <li>恭喜 紫夜心晨 抽中LB护理液</li>
+                <li>恭喜 miracle曦曦 抽中5元现金券</li>
+                <li>恭喜 蓝蓝1985 抽中海昌护理液</li>
+                <li>恭喜 6BB4247D 抽中LB护理液</li>
+                <li>恭喜 亚亚2134 抽中LB护理液</li>
+                <li>恭喜 傲雪飞鱼 抽中海昌护理液</li>
+                <li>恭喜 雨汐123 抽中LB护理液</li>
+                <li>恭喜 这么灿烂 抽中10元现金券</li>
+                <li>恭喜 贾愚 抽中10元现金券</li>
+                <li>恭喜 钟恋浅浅浅 抽中LB护理液</li>
+                <li>恭喜 笑依依Sophia 抽中10元现金券</li>
+                <li>恭喜 wing_Tsui0128 获得免单！</li>
+                <li>恭喜 1718490@51fanli 抽中50元现金券</li>
+                <li>恭喜 水一方 抽中LB护理液</li>
+                <li>恭喜 ing1215 抽中10元现金券</li>
+                <li>恭喜 三一九 抽中LB护理液</li>
+                <li>恭喜 evata 抽中5元现金券</li>
+                <li>恭喜 plus_V 抽中海昌护理液</li>
+                <li>恭喜 张洲 抽中LB护理液</li>
+                <li>恭喜 粉蓝色眼药水 抽中LB护理液</li>
+                <li>恭喜 swj713 抽中海昌护理液</li>
+                <li>恭喜 玩偶的部落 抽中LB护理液</li>
+                <li>恭喜 猫咪的哥哥是小熊 抽中10元现金券</li>
+                <li>恭喜 D18CF2CA 抽中10元现金券</li>
+                <li>恭喜 xiaopp 抽中LB护理液</li>
+                <li>恭喜 linger 抽中10元现金券</li>
+                <li>恭喜 020202 抽中10元现金券</li>
+            </ul>
+        </div>
+    </div>
+    <!--活动规则-->
+    <div class="rules">
+        <img src="http://file.easeeyes.com/wap/images/2015110102/03.jpg" />
+    </div>
+</div>
+
+<!--loading-->
+<div id="loading" style="display:none;">
+    <span><img src="http://file.easeeyes.com/wap/images/2015110102/loading.gif" /></span>
+</div>
+
+<!--中奖结果-->
+<div id="result" style="display:none;">
+    <div class="result-box">
+        <div class="result-text">恭喜您抽取到200元优惠券恭喜您抽取到200元优惠券</div>
+        <div class="result-btn"><button id="" onclick="document.getElementById('result').style.display='none'">再抽一次</button></div>
+    </div>
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+<script>
+    function success(data){
+        var result=document.getElementsByClassName("result-text")[0];
+        result.innerHTML=data;
+    }
+    //
+    var btn=document.getElementById("lottery"),
+            loading=document.getElementById("loading"),
+            result=document.getElementById("result");
+    btn.addEventListener("click",function(){
+        $.ajax({
+            url: 'active.php',
+            type: "post",
+            data:{id:'15110102',act:'lottery'},
+            dataType: "json",
+            timeout: 20000,
+            cache: false,
+            beforeSend: function(){// 提交之前
+            },
+            error: function(){//出错
+                flag=false;
+            },
+            success: function(res){//成功
+                //alert(res.award_id);return false;
+                if(typeof(res.award_id)!='undefined'){
+                    if(res.award_id == 5){
+                        var data = res.award_name;
+                        success(data);
+                        loading.style.display="block";
+                        setTimeout(function(){
+                            loading.style.display="none";
+                            result.style.display="block";
+                        },2000);
+                    }else{
+                        var data ="恭喜您抽取到"+ res.award_name;
+                        success(data);
+                        loading.style.display="block";
+                        setTimeout(function(){
+                            loading.style.display="none";
+                            result.style.display="block";
+                        },2000);
+                    }
+                }else{
+                    flag=false;
+                    alert(res.err);
+                }
+            }
+        });
+    },false);
+
+    // 名单滚动
+    var priceList=document.querySelectorAll(".price-list-main li"),
+            priceUlist=document.querySelectorAll(".price-list-main .ulist")[0],
+            li_height=parseInt(priceList[0].clientHeight);
+    //alert(li_height)
+    function move(){
+        var li=document.querySelectorAll(".price-list-main li")[0];
+        priceUlist.appendChild(li);
+    }
+    setInterval(move,2000);
+</script>
+</body>
+</html>

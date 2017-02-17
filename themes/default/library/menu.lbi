@@ -1,0 +1,124 @@
+<ul class="main">
+            <!--{foreach from=$column key=k item=menu}-->
+				<li>
+					<div class="media">
+						<div class="media-left">
+							<img src="http://file.easeeyes.com/b2b/images/ico{$k}.png" />
+						</div>
+						<div class="media-main">
+							<h2><a href="category_{$k}.html">{$menu.cat_name}</a></h2>
+                            
+                            {if $k eq 1}
+                            <p>
+                              <a href="category_4.html" target="_blank" title="">博士伦</a>
+    						  <a href="category_5.html" target="_blank" title="">强生</a>
+    						  <a href="category_3.html" target="_blank" title="">视康</a>
+                            </p>
+                            {elseif $k eq 6}
+                              <p>
+                                  <a href="category_29.html" target="_blank" title="">安视优</a>
+        						  <a href="category_134.html" target="_blank" title="">博士伦</a>
+        						  <a href="category_145.html" target="_blank" title="">海俪恩</a>
+                              </p>
+                            {elseif $k eq 64}
+                              <p>
+                                  <a href="hot-55.html" target="_blank" title="">傲滴乐明</a>
+    						      <a href="category_67.html" target="_blank" title="">全能</a>
+    						      <a href="hot-71.html" target="_blank" title="">双联盒</a>
+                              </p>
+                            {elseif $k eq 76}
+                              <p>
+                                  <a href="category_156.html" target="_blank" title="">迪士尼</a>
+    						      <a href="hot-73.html" target="_blank" title="">纳米银</a>
+    						      <a href="category_187.html" target="_blank" title="">凯达</a>
+                              </p>
+                            {elseif $k eq 159}
+                              <p>
+                                 <a href="category_164.html" target="_blank" title="">COACH</a>
+    						     <a href="category_160.html" target="_blank" title="">CK</a>
+    						     <a href="category_165.html" target="_blank" title="">Fendi</a>
+                              </p>
+                            {elseif $k eq 190}
+                              <p>
+                                <a href="category_192.html" target="_blank" title="">Chloe</a>
+    						    <a href="category_193.html" target="_blank" title="">Sisly</a>
+    						    <a href="category_197.html" target="_blank" title="">菲拉格慕</a>
+                              </p> 
+                            {/if}
+                            
+						</div>
+					</div>
+					<div class="layer">
+						<div class="all" style="border-bottom: 0px;">
+							<span class="fl left"><img src="http://file.easeeyes.com/b2b/images/arrow.png" /> 全部品牌</span>
+							<div class="right">
+								<div class="main clearfix">
+                                    <!--{foreach from=$menu.qbpp key=k2 item=pp}-->
+                                        <span class="col-4">
+                                        <a href="category_{$pp.cat_id}.html"  target="_blank" {if $pp.is_show_red eq 1}class="cf40"{/if}>{$pp.cat_name}</a>
+                                        </span>
+                                    <!--{/foreach}-->
+								</div>
+							</div>
+						</div>
+						
+                        <!--<div class="keyword">
+							<span class="fl left"><img src="http://file.easeeyes.com/b2b/images/arrow.png" /> 热门参数</span>
+							<div class="right">
+								<div class="main">
+									<div class="time clearfix">
+                                        {if $menu.rmxl}
+                                        {foreach from=$menu.rmxl item=xl}
+                                        <span class="col-4"><a href="hot-{$xl.hot_id}.html">{$xl.hot_name}</a></span>
+                                        {/foreach}
+    									{/if}
+										
+									</div>
+									<div class="color clearfix">
+										<span class="col-4"><a href="#">黑色</a></span>
+                                        <span class="col-4"><a href="#">黑色</a></span>
+									</div>
+								</div>
+							</div>
+						</div>-->
+                        
+					</div>		
+				</li>
+            <!--{/foreach}-->
+				
+				<li>
+					<div class="media">
+						<div class="media-left">
+							<img src="http://file.easeeyes.com/b2b/images/ico7.png" />
+						</div>
+						<div class="media-main">
+							<h2><a href="category_255.html">镜片</a></h2>
+							<p><a href="#">锐澳</a> <a href="#">依视路</a> <a href="#">阿米娅特</a> </p>
+						</div>
+					</div>
+					<div class="layer">
+						<div class="all">
+							<span class="fl left"><img src="http://file.easeeyes.com/b2b/images/arrow.png" /> 全部品牌</span>
+							<div class="right">
+								<div class="main clearfix">
+									<span class="col-4"><a href="#" class="cf40">强生美瞳</a></span>
+									<span class="col-4"><a href="#">菲士康大美目</a></span>
+								</div>
+							</div>
+						</div>
+						<div class="keyword">
+							<span class="fl left"><img src="http://file.easeeyes.com/b2b/images/arrow.png" /> 热门参数</span>
+							<div class="right">
+								<div class="main">
+									<div class="time clearfix">
+										<span class="col-4"><a href="#">年抛</a></span>
+									</div>
+									<div class="color clearfix">
+										<span class="col-4"><a href="#">黑色</a></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>

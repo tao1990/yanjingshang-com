@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>周末狂欢场</title><meta name="Keywords"  content="易视网，易视眼镜网，隐形眼镜，美瞳。透明片，护理液，海昌，视康，库博，博士伦" /><meta name="Description" content="钜惠48小时，爆品优惠券等你来疯抢" />
+<link rel="stylesheet" href="http://file.easeeyes.com/wap/css/style.css" />
+<style>
+    .ip-active-weekly-coupon{background:#f4c39a;padding:1rem 0;text-align:center;}
+    .ip-active-weekly-coupon img{width:30rem;}
+    .ip-active-weekly-recommend-navbar{
+        padding:.5rem 1rem;
+        line-height:1;
+        background:#FFC81D;
+    }
+    .ip-active-weekly-recommend-navsbox li{
+        display:inline-block;
+        vertical-align:middle;
+        padding:.5rem;
+    }
+    .ip-active-weekly-recommend-navsbox li[data-selected="true"]{
+        background:#C10402;
+        border-radius:5px;
+        color:#fff;
+    }
+    .ip-active-weekly-recommend-goods-cell,.ip-active-weekly-goods-cell{
+        width:15.25rem;
+        margin:0 .25rem;
+        display:inline-block;
+        vertical-align:middle;
+    }
+    .ip-active-weekly-recommend-goodsmain{
+        background:#FBEF41;
+    }
+    .ip-active-weekly-recommend-goodsmain .J_tab_main{
+        padding:.5rem .25rem;
+        white-space:nowrap;
+        text-align:center;
+        font-size:0;
+    }
+    .ip-active-weekly-goods{
+        font-size:0;
+        padding:.25rem;
+        background:#FE2FBF;
+    }
+    .ip-active-weekly-goods-cell{
+        margin:.25rem;
+    }
+    .ip-active-weekly-goods-cell img{
+        width:100%;
+    }
+    #J_countdown_box span{
+        display:inline-block;
+        vertical-align:middle;
+        background:#000;
+        color:#fff;
+        border-radius:0.25rem;
+        padding:.5rem;
+    }
+</style>
+</head>
+<body>
+	<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+    <div class="container">
+        <!--头图-->
+        <div class="ip-active-weekly-banner">
+            <img src="http://file.easeeyes.com/wap/images/active/banner.jpg" />
+        </div>
+
+        <!--红包-->
+        <div class="ip-active-weekly-coupon">
+            <a href=""><img src="http://file.easeeyes.com/wap/images/active/04.jpg" /></a>
+        </div>
+
+        <!--周末首推-->
+        <div class="ip-active-weekly-recommend">
+            <!--选项卡-->
+            <div class="ip-active-weekly-recommend-navbar">
+                <!--倒计时-->
+                <div class="pull-right" id="J_countdown_box">
+                    距抢购还有
+                    <span id="J_countdown_day"></span> 天
+                    <span id="J_countdown_hour"></span> 时
+                    <span id="J_countdown_minute"></span> 分
+                    <span id="J_countdown_second"></span> 秒
+                </div>
+                <ul id="J_tab_nav_1" class="ip-active-weekly-recommend-navsbox">
+                    <li>周六</li>
+                    <li>周日</li>
+                </ul>
+            </div>
+            <!--产品-->
+            <div class="ip-active-weekly-recommend-goodsmain" id="J_tab_main_1">
+                <div class="J_tab_main">
+                    <div class="ip-active-weekly-recommend-goods-cell">
+                        <a href=""><img src="http://file.easeeyes.com/wap/images/active/01.jpg" /></a>
+                    </div>
+                    <div class="ip-active-weekly-recommend-goods-cell">
+                        <a href=""><img src="http://file.easeeyes.com/wap/images/active/01.jpg" /></a>
+                    </div>
+                </div>
+                <div class="J_tab_main">
+                    <div class="ip-active-weekly-recommend-goods-cell">
+                        <a href=""><img src="http://file.easeeyes.com/wap/images/active/01.jpg" /></a>
+                    </div>
+                    <div class="ip-active-weekly-recommend-goods-cell">
+                        <a href=""><img src="http://file.easeeyes.com/wap/images/active/01.jpg" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--活动商品-->
+        <div class="ip-active-weekly-goodsbox">
+            <!--类别图-->
+            <div class="ip-active-weekly-goodsban"><img src="http://file.easeeyes.com/wap/images/active/03.jpg" /></div>
+            <!--产品-->
+            <div class="ip-active-weekly-goods">
+                <div class="ip-active-weekly-goods-cell">
+                    <a href=""><img src="http://file.easeeyes.com/wap/images/active/02.jpg" /></a>
+                </div>
+                <div class="ip-active-weekly-goods-cell">
+                    <a href=""><img src="http://file.easeeyes.com/wap/images/active/02.jpg" /></a>
+                </div>
+                <div class="ip-active-weekly-goods-cell">
+                    <a href=""><img src="http://file.easeeyes.com/wap/images/active/02.jpg" /></a>
+                </div>
+                <div class="ip-active-weekly-goods-cell">
+                    <a href=""><img src="http://file.easeeyes.com/wap/images/active/02.jpg" /></a>
+                </div>
+                <div class="ip-active-weekly-goods-cell">
+                    <a href=""><img src="http://file.easeeyes.com/wap/images/active/02.jpg" /></a>
+                </div>
+                <div class="ip-active-weekly-goods-cell">
+                    <a href=""><img src="http://file.easeeyes.com/wap/images/active/02.jpg" /></a>
+                </div>
+                <div class="ip-active-weekly-goods-cell">
+                    <a href=""><img src="http://file.easeeyes.com/wap/images/active/02.jpg" /></a>
+                </div>
+                <div class="ip-active-weekly-goods-cell">
+                    <a href=""><img src="http://file.easeeyes.com/wap/images/active/02.jpg" /></a>
+                </div>
+                <div class="ip-active-weekly-goods-cell">
+                    <a href=""><img src="http://file.easeeyes.com/wap/images/active/02.jpg" /></a>
+                </div>
+                <div class="ip-active-weekly-goods-cell">
+                    <a href=""><img src="http://file.easeeyes.com/wap/images/active/02.jpg" /></a>
+                </div>
+                <div class="ip-active-weekly-goods-cell">
+                    <a href=""><img src="http://file.easeeyes.com/wap/images/active/02.jpg" /></a>
+                </div>
+                <div class="ip-active-weekly-goods-cell">
+                    <a href=""><img src="http://file.easeeyes.com/wap/images/active/02.jpg" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!--公共文件页脚-->
+	<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+    <span id="goTop"></span>
+    <script src="http://file.easeeyes.com/wap/js/tab.js"></script>
+    <script src="http://file.easeeyes.com/wap/js/countdown_v2.js"></script>
+    <script src="http://file.easeeyes.com/wap/js/gotop.js"></script>
+    <script>
+        // 选项卡
+        var tab=new Tab({
+            navs:document.querySelectorAll("#J_tab_nav_1 li"),
+            tabs:document.querySelectorAll("#J_tab_main_1 .J_tab_main")
+        });
+        // 倒计时
+        var countdown=CountDown("2015/11/10 10:00",{
+            day_box:document.getElementById("J_countdown_day"),
+            hour_box:document.getElementById("J_countdown_hour"),
+            minute_box:document.getElementById("J_countdown_minute"),
+            second_box:document.getElementById("J_countdown_second")
+        });
+        // 适配
+        (function(){
+            var win=window||{},
+                    doc=document,
+                    root=doc.documentElement;
+            function changeSize(){
+                root.style.fontSize=parseInt(root.clientWidth)*20/640>20?"20px":parseInt(root.clientWidth)*20/640+"px";
+            }
+            if(doc.addEventListener){
+                var evt="orientationchange" in win?"orientationchange":"resize";
+                doc.addEventListener(evt,changeSize,false);
+                doc.addEventListener("DOMContentLoaded",changeSize,false);
+            }
+        })();
+        // 头部导航控制
+        window.addEventListener("scroll",function(){
+            var sTop=parseInt(document.body.scrollTop)||parseInt(document.documentElement.scrollTop),
+                    head_elem=document.getElementsByTagName("header")[0],
+                    head_height=parseInt(head_elem.clientHeight);
+            sTop>=head_height?head_elem.className="fixed":head_elem.className="";
+        },false);
+
+        // 侧边导航控制
+        var aside={
+            G_aside_left:document.getElementById("aside_main"),
+            G_aside_right:document.getElementById("aside_close"),
+            open:function(){
+                this.G_aside_left.className="show";
+                this.G_aside_right.className="show";
+            },
+            close:function(){
+                this.G_aside_left.className="hide";
+                this.G_aside_right.className="hide";
+            },
+            init:function(){
+                var that=this;
+                document.getElementById("cate_btn").addEventListener("click",function(){
+                    that.open.apply(that,arguments);
+                },false);
+                that.G_aside_right.addEventListener("click",function(){
+                    that.close.apply(that,arguments);
+                },false);
+            }
+        }
+        aside.init();
+        /**新增20150908侧导航**/
+        function toggleClass(elem,arr){
+            elem.className=elem.className==arr[0]?arr[1]:arr[0];
+        }
+        function hasClass(el,cname){
+            var arr=el.className.split(" "),
+                    i,len=arr.length;
+            for(i=0;i<len;i++){
+                if(arr[i]==cname)	return true;
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!--专用购物车页尾2 最简洁版-->
+<div class="foot_center2">
+    <div id="copyright">
+        <font class="mark_a">&copy;</font>易视网 2008-2011 上海明庭贸易有限公司 版权所有 网站备案号：<a href="http://www.miibeian.gov.cn" target="_blank" rel="nofollow">沪ICP备08112987号-2</a> <a href="api/certify/yaoping_info.jpg" target="_blank" rel="nofollow">互联网药品信息服务资格证书</a>
+    </div>    
+    <div class="help_bottom mt10">
+    <!-- 可信网站LOGO安装开始 -->
+    <script type="text/JavaScript">
+        function CNNIC_change(eleId){
+            var str= document.getElementById(eleId).href;
+            var str1 =str.substring(0,(str.length-6));
+            str1+=CNNIC_RndNum(6);  
+            document.getElementById(eleId).href=str1;
+        }
+        function CNNIC_RndNum(k){
+            var rnd="";                   
+            for (var i=0;i < k;i++)                   
+            rnd+=Math.floor(Math.random()*10); 
+            return rnd;
+        }
+     </script>
+    <a href="https://ss.cnnic.cn/verifyseal.dll?sn=2011050600100008401&pa=294005" tabindex="-1" id="urlknet" target="_blank"> 
+     <img alt="&#x53EF;&#x4FE1;&#x7F51;&#x7AD9;" name="CNNIC_seal" src="{$botbanner.5.ad_code}" height="40" oncontextmenu="return false;" onclick="CNNIC_change('urlknet')"/>
+    </a><!-- 可信网站LOGO安装结束 -->     
+    </div>
+</div>
+<!---------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- 
+<script type="text/javascript">
+document.write(unescape("%3Cscript src='http://hm.baidu.com/h.js%3Fa51db8902ab387bcee84eb75bd732be3' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="visibility:hidden;"><script type="text/javascript" src="http://js.tongji.linezing.com/2322564/tongji.js"></script></div>
+-->
+<!---------------------------------------------------------------------------------------------------------------------------------------------->

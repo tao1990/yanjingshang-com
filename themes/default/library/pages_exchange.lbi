@@ -1,0 +1,44 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<div style="width:100%; height:auto;">
+<form id="selectPageForm" name="selectPageForm" action="{$smarty.server.PHP_SELF}" method="get">
+	<input type="hidden" id="page" name="page" value="1" />
+    <div class="pagee" style="width:655px;">
+        <!--{if $page > 1}-->
+        <div class="page_no"><span class="pagee_l"></span><a href="javascript:;" onClick="changePage({$page}-1);">上一页</a></div>
+        <!--{else}-->
+        <div class="page_no"><span class="pagee_l"></span><a href="javascript:;">上一页</a></div>
+        <!--{/if}-->     
+        
+        <!--{foreach from=$page_array item=pages name=foo}-->
+        <!--{if $page == $pages}-->
+        <div class="pageloghong">{$pages}</div>
+        <!--{else}-->
+        <div class="pagelog"><a href="javascript:;" onClick="changePage({$pages});">{$pages}</a></div>
+        <!--{/if}-->
+        <!--{/foreach}-->
+        
+        <!--{if $page < $max_page}-->
+        <div class="page_no"><a href="javascript:;" onClick="changePage({$page}+1);">下一页</a></div>
+        <!--{else}-->
+        <div class="page_no"><a href="javascript:;">下一页</a></div>
+        <!--{/if}-->
+        
+        <div class="pagee_r"></div>
+        <div class="page_no"><em style="line-height:1.235;">共<!--{$max_page}-->页</em><span>至第</span></div>
+        <div class="page_no"><input type="text" id="toPage" class="page_but" width="10" /></div>
+        <div class="page_no">页</div>
+        <div class="page_no"><input type="button" class="page_qued" onClick="changePage(document.getElementById('toPage').value);" /></div>
+    </div>
+</form>
+</div>
+<script type="text/javascript" language="javascript">
+function changePage(page) {
+	if (parseInt(page) >=0) {
+		document.getElementById("page").value = page;
+		document.getElementById('selectPageForm').submit();
+	} else {
+		alert('请输入数字');
+	}
+}
+</script>

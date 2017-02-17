@@ -1,0 +1,131 @@
+﻿/* =======================================================================================================================
+ * 商品页面 全部样式【2012/12/7】【Author:yijiangwen】
+ * =======================================================================================================================
+ */
+/*-------------------------------------------------【单页公共样式】-------------------------------------------------*/
+.fs20{font-size:20px;}
+.ml15{ margin-left:15px;}
+
+.dao_tip{width:990px; height:21px; background:url(../images/goods/tip_line.jpg) no-repeat 0 20px; overflow:hidden; margin-bottom:8px;}
+.dao_gen{width:100%; height:12px; line-height:12px; color:#333;}
+.dao_gen a,.dao_gen code{color:#999;}
+.dao_gen a:hover{color:#E43232; text-decoration:none;}
+
+.goods_sh_tb{margin:0 auto; border-collapse:collapse; border: 1px solid #D0EBF9; font-size:12px;}
+.goods_sh_tb td{ text-align:center; line-height:20px; border: 1px solid #D0EBF9; padding:3px 0;}
+.goods_sh_tb th{ text-align:center; line-height:20px; border: 1px solid #D0EBF9; background-color: #EBF9FC;}
+.goods_sh_tb .blue{background-color:#EBF9FC; text-align:center; line-height:20px;}
+
+#mydiv{width:310px; height:135px; position:absolute; left:40%; top:656px; z-index:100; border:4px solid #d9dcda; display:none;}
+/*-------------------------------------------------【单页公共样式 end】---------------------------------------------*/
+
+
+/*-------------------------------------------------【xu_css覆盖】--------------------------------------------------*/
+.pro_top_bem_brm{ margin-top:8px;}
+.pro_top_bem{padding:0;}
+.g_ds_select{width:120px; height:22px; vertical-align:middle; color:#333; border:1px solid #ccc; float:left;}
+.g_desc_tr{margin:6px 0 3px 0; line-height:14px; height:14px;}
+.g_desc_tr1{width:280px; font-size:12px; line-height:12px;}
+.g_desc_gift{width:20px; height:25px; background:url(../images/common/gift1.gif) no-repeat; margin-top:-8px; margin-right:3px;}
+/*-------------------------------------------------【xu_css end】-------------------------------------------------*/
+
+
+/*-------------------------------------------------【商品详情】----------------------------------------------------*/
+.g_desc_pic{width:778px; height:auto; font-size:0; margin-top:10px;}
+.g_buy_tip1{width:42px; height:22px; line-height:22px; color:#999; text-align:center;}
+/*-------------------------------------------------【商品详情end】-------------------------------------------------*/
+
+/*-------------------------------------------------【商品价格板块】----------------------------------------------------*/
+#vip_pr_p{width:186px; height:101px; overflow:hidden; margin:-8px 0 0 74px; position:absolute; display:none; z-index:100;}
+#vip_h{width:100%; height:8px; line-height:8px; border:none; background:url(../images/goods/vip_tip.gif) no-repeat;}
+.vip_pr_p dd{height:30px; line-height:30px; border-top:none; background-color:#f6f6f6;}
+.vip_td{width:116px; border:1px solid #dcdcdc; color:#0CA6BD; text-indent:32px; font-weight:bold; background:url(../images/goods/vip1.gif) no-repeat 10px 8px;}
+.vip_td2{background:url(../images/goods/vip2.gif) no-repeat 10px 8px;}
+.vip_td3{background:url(../images/goods/vip3.gif) no-repeat 10px 8px;}
+.vip_td1{width:67px; text-indent:10px; border:1px solid #dcdcdc; border-left:none; color:#e43232;}
+.how_vip{ margin-left:10px; color:#999;}
+.how_vip_tip{display:inline-block; width:12px; height:12px; background:url(../images/xu/productmore/bg.png) no-repeat 2px -1290px; vertical-align:middle;}
+#show_vip_tip{display:inline-block; width:45px; height:15px; margin-left:10px; text-indent:2px; background-color:#e43232; color:white; font-family:'微软雅黑'; cursor:pointer;}
+.vip_tip_line{display:inline-block; margin:-2px 3px 0 4px; width:6px; height:1px; border-bottom:1px solid #999; vertical-align:middle;}
+.vip_del{color:#999;}
+/*-------------------------------------------------【商品价格板块end】-------------------------------------------------*/
+
+
+
+/*-------------------------------------------------【框架专门页面】----------------------------------------------------*/
+.kuang_cs{width:778px; height:auto; overflow:hidden;}
+.kuang_cs_txt{width:778px; height:14px; margin-top:10px;}
+.kuang_cs_txt dd{text-align:center; width:150px; height:14px; line-height:14px; color:#2bbdd5;}
+.kuang_cs_txt dd span{color:#666;}
+
+.append_ul{width:648px; height:164px; overflow:hidden; float:left; margin-left:10px;}
+.append_li{width:200px; height:66px; margin:0 12px 8px 0; }
+.append_txt{width:100%; height:14px; line-height:14px; color:#07a2ba; text-align:left; margin-bottom:10px; background:url(../images/goods/kj_tip1.jpg) no-repeat 123px 5px;}
+.goods_append{width:198px; height:64px; display:block; border:1px #dcdcdc solid; background:url(../images/goods/kj1.jpg) no-repeat;}
+.goods_append:hover{ border:1px solid #2cbcd4;}
+.g_append_img2{background-image:url(../images/goods/kj2.jpg);}
+.g_append_img3{background-image:url(../images/goods/kj3.jpg);}
+.g_append_img4{background-image:url(../images/goods/kj4.jpg);}
+.g_append_img5{background-image:url(../images/goods/kj5.jpg);}
+.g_append_img6{background-image:url(../images/goods/kj6.jpg);}
+.goods_append_b{ border:1px #2cbcd4 solid;}
+.kj_ck_tip{width:198px; height:64px; background:url(../images/goods/kj_tip2.gif) no-repeat 184px 49px; cursor:pointer;}
+
+.kj_num_ul{width:100%; height:24px; line-height:24px; margin:10px 0 13px 0;}
+.kj_n_li1{width:36px;}
+.kj_jian{width:18px; height:18px; background:url(../images/xu/productmore/bg.png) no-repeat 0 -1338px; margin:3px 6px 0 0; cursor:pointer;}
+.kj_jia{width:18px; height:18px; background:url(../images/xu/productmore/bg.png) no-repeat -18px -1338px; margin:3px 10px 0 6px; cursor:pointer;}
+.kj_number{width:20px; height:20px; border:1px #dcdcdc solid; border-right:none; overflow:hidden;}
+.kj_n_site{width:20px; height:20px; line-height:20px; border:1px #dcdcdc solid; border-left:none;}
+.kj_n_input{width:18px; height:18px; line-height:18px; border:1px #fff solid; text-align:left; text-indent:4px; color:#666; margin-top:-1px; _margin-top:0;}
+#goods_price{font-size:26px; margin-top:-3px;}
+
+
+.kj_ds_pan{width:630px; height:auto; height:180px; float:left; margin-left:15px; _display:inline; color:#666; background:url(../images/goods/kj_tip3.jpg) no-repeat 360px 0;}
+.kj_ds_h{width:630px; height:30px; line-height:30px; overflow:hidden;}
+.kj_ds_h li{width:86px; height:30px; text-align:center;}
+.ds_td1{width:110px;}
+.ds_td2{width:52px; margin-left:62px;}
+.ds_td3{width:108px; margin-left:118px;}
+.ds_td4{width:74px; margin-left:18px;}
+.kj_ds_ul{width:630px; height:54px; line-height:22px;}
+.kj_jp{width:86px; height:54px; line-height:22px; text-indent:25px; background:url(../images/xu/productmore/bg.png) 0 -1170px no-repeat;}
+.kj_jp2{background-position:0 -1220px; margin-top:10px;}
+.kj_jp_ds{width:152px; height:54px; line-height:22px;}
+.ds_tt1{width:52px; height:22px; line-height:22px; margin:14px 0 0 16px;}
+.ds_tt2{width:24px; height:30px; line-height:15px; margin:12px 0 0 30px;}
+.ds_tt3{width:108px; height:54px; line-height:22px; margin-left:23px;}
+.ds_tt4{width:74px; height:54px; line-height:54px; margin-left:18px; overflow:hidden;}
+
+.kj_cart_ul{width:100%; height:38px; line-height:38px;}
+.kj_add_cart{width:176px; height:38px; display:block;}
+.kj_cart1{background:url(../images/button/goods.png) no-repeat 0 -532px;}
+.kj_sale_out{width: 176px;height: 40px;background:url(../images/cart/sale_out.png) no-repeat;float: left;}
+.kj_not_on_sale{width: 176px;height: 40px;background:url(../images/cart/not_on_sale.png) no-repeat;float: left;}
+
+.kj_cart1:hover{background-position:0 -570px;}
+.kj_cart2{background:url(../images/button/goods.png) no-repeat 0 -451px; margin-left:15px;}
+.kj_cart2:hover{background-position:0 -489px;}
+/*-------------------------------------------------【框架专门页面】----------------------------------------------------*/
+
+
+/*-------------------------------------------------【商品页面买家秀】-------------------------------------------------*/
+.mjx_pan{width:780px; height:auto; overflow:hidden; margin-bottom:10px;}
+#mjx_detail{width:100%; height:14px; line-height:14px; margin:10px auto; text-align:center;}
+.mjx_img{width:398px; height:504px; background-color:#f2f2f2; margin:0 auto; margin-bottom:15px; overflow:hidden;}
+.mjx_thumb_pan{width:100%; height:170px; background-color:#f2f2f2;}
+.mjx_thumb_li{width:720px; height:100%;}
+.mjx_thumb{width:720px; height:152px; margin-top:9px; overflow:hidden;}
+.mjx_thumb dd{width:120px; height:150px; margin:0 11px; border:1px solid #f2f2f2; cursor:pointer;}
+.prev_mjx{width:30px; height:100%; background:url(../images/goods/mjx_left.png) no-repeat 10px 73px; cursor:pointer;}
+.next_mjx{width:30px; height:100%; background:url(../images/goods/mjx_right.png) no-repeat 10px 73px; cursor:pointer;}
+/*-------------------------------------------------【买家秀 end】----------------------------------------------------*/
+
+
+/*-------------------------------------------------【组合购买】------------------------------------------------------*/
+.goods_name_tr{width:650px; height:auto; font-size:14px;/* font-weight:bold;*/ color:#0ca5bd; line-height:22px; margin-bottom:10px; overflow:hidden;}
+.goods_name_tr span{font-size:16px; color:#333; display:inline-block; margin-right:4px;}
+.goods_shoucang{width:90px; height:16px; line-height:16px; display:block; margin:23px 0 0 30px; float:left; cursor:pointer; color:#84a801; text-align:left; text-indent:20px; background:url(../images/goods/tip_jia.gif) no-repeat;}
+.goods_shoucang:hover{color:#84a801; text-decoration:none;}
+#group_buy_h{background:url(../images/goods/group_buy_h.jpg) no-repeat #f2f2f2; height:25px; line-height:25px; color:white; font-size:16px; font-weight:bold; text-indent:40px;}
+/*-------------------------------------------------【组合购买 end】--------------------------------------------------*/

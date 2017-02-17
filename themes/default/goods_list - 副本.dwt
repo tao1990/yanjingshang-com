@@ -1,0 +1,198 @@
+<script src="http://file.easeeyes.com/b2b/js/jquery.min.js"></script>
+<div class="sort">
+	<ul class="sort_option">
+		<li id="opt_default">默认</li>
+		<li id="opt_sales" {if $sort_name eq 'click_count'}class="opt_selected"{else}class=""{/if}>销量<span {if $sort_type eq 'DESC' && $sort_name eq 'click_count'}class="opt_focus_icon_desc"{elseif $sort_type eq 'ASC' && $sort_name eq 'click_count'}class="opt_focus_icon_asc"{else}class=""{/if}></span></li>
+		<li id="opt_comment" {if $sort_name eq 'comment_count'}class="opt_selected"{else}class=""{/if}>评论<span {if $sort_type eq 'DESC' && $sort_name eq 'comment_count'}class="opt_focus_icon_desc"{elseif $sort_type eq 'ASC' && $sort_name eq 'comment_count'}class="opt_focus_icon_asc"{else}class=""{/if}></span></li>
+		<li id="opt_price" {if $sort_name eq 'shop_price'}class="opt_selected"{else}class=""{/if}>价格<span {if $sort_type eq 'DESC' && $sort_name eq 'shop_price'}class="opt_focus_icon_desc"{elseif $sort_type eq 'ASC' && $sort_name eq 'shop_price'}class="opt_focus_icon_asc"{else}class=""{/if}></span></li>
+	</ul>
+	<ul class="rows">
+		<li id="total_rows">共<span>{$total_rows}</span>件商品</li>
+		<li id="rows_pages"><span id="rp_current" class="red">{$page}</span>/<span id="rp_total">{$total_pages}</span></li>
+		<li id="rp_prev" {if $page eq 1}class="rp_prev_0"{else}class="rp_prev_1"{/if}></li>
+		<li id="rp_next" {if $page lt $total_pages}class="rp_next_1"{else}class="rp_next_0"{/if}></li>
+	</ul>
+	<div class="clear"></div>
+</div>
+<div style="clear: both"></div>
+<div class="sequence-pg-nav">
+				<table>
+					<tbody>
+						<tr>
+							
+							<td style="padding: 0px;" width="305">商品</td>
+							<td style="padding: 0px;" width="87">单价</td>
+							<td style="padding: 0px;" width="118" class="nopadding">度数</td>
+							<td style="padding: 0px;" width="73">数量</td>
+							<td style="padding: 0px;" width="105">购物车</td>
+						</tr>
+					</tbody>
+				</table>
+</div>
+
+
+<div class="results sequence-pg-main  clearfix">
+
+                    <table class="fl left">
+						<tbody>
+                        
+                        <!--{foreach from=$goods_list item=goods}-->
+							<tr>
+								<td width="102"><a target="_blank" href="goods{$goods.goods_id}.html"><img src="http://www.easeeyes.com/thumb/goods/180x180/goods_{$goods.goods_id}_180x180.jpg" /></a></td>
+								<td width="305">
+									<div class="shops">
+										<h2><a href="goods{$goods.goods_id}.html" target="_blank">{$goods.goods_name}</a></h2>
+										<p>{$goods.goods_brief}</p>
+										<span class="tag-pg tag-pg-green">新品</span>
+										<span class="tag-pg tag-pg-orange">特价</span>
+										<span class="tag-pg tag-pg-blue">赠品</span>
+									</div>
+								</td>
+								<td width="87">
+									<span class="prices">&yen;{$goods.shop_price}</span>
+								</td>
+								<td width="118" class="nopadding">
+									{insert name='cat_ds_list' id='$goods.goods_id'}
+								</td>
+								<td width="73">
+									<button class="cut J_count_cut" id="cut_{$goods.goods_id}">-</button>
+									<div class="num">
+										<input type="text" value="1" id="num_{$goods.goods_id}" />{$goods.unit}
+									</div>
+									<button class="add J_count_add" id="add_{$goods.goods_id}">+</button>
+								</td>
+								<td width="105">
+									<button class="cars" id="add_cart_{$goods.goods_id}" onclick="cat_ddToCart({$goods.goods_id})">
+                                    <img src="http://file.easeeyes.com/b2b/images/cars.png" /> 加入购物车</button>
+								</td>
+							</tr>
+            		<!--{/foreach}-->
+						</tbody>
+					</table>
+
+</div>
+
+<div class="clear"></div>
+
+			<div class="page-pg page-pg-big">
+						<a id="pages_prev" {if $page eq 1} class="disabled" {else}class="p_default"{/if}>上一页</a>
+                        {$pages_str}
+						<a id="pages_next" {if $page lt $total_pages}class="p_default"{else}class="disabled"{/if}>下一页</a>　
+						共{$total_pages}页　
+					</div>
+
+<script type="text/javascript">
+//ajax加载出的页面JS必须放在此页面
+
+//选择排序
+$("#opt_default").click(function(){
+	//点击默认,移除兄弟节点状态
+	$(this).siblings().removeClass("opt_selected");
+	$(this).siblings().find("span").removeClass("opt_focus_icon_desc opt_focus_icon_asc");
+	order_by = "";
+	getData(searchAttr);
+});
+$(".sort_option li").not("#opt_default").click(function(){
+	//移除兄弟节点状态
+	$(this).siblings().removeClass("opt_selected");
+	$(this).siblings().find("span").removeClass("opt_focus_icon_desc opt_focus_icon_asc");
+	
+	$(this).addClass("opt_selected");
+	
+	if ($(this).find("span").attr("class") == "opt_focus_icon_asc") {
+		//升序变降序
+		$(this).find("span").removeClass("opt_focus_icon_asc").addClass("opt_focus_icon_desc");
+		if ($(this).attr("id") == "opt_sales") {
+			order_by = "click_count DESC";
+		} else if ($(this).attr("id") == "opt_comment") {
+			order_by = "comment_count DESC";
+		} else if ($(this).attr("id") == "opt_price") {
+			order_by = "shop_price DESC";
+		}
+		
+	} else if ($(this).find("span").attr("class") == "opt_focus_icon_desc") {
+		//降序变升序
+		$(this).find("span").removeClass("opt_focus_icon_desc").addClass("opt_focus_icon_asc");
+		if ($(this).attr("id") == "opt_sales") {
+			order_by = "click_count ASC";
+		} else if ($(this).attr("id") == "opt_comment") {
+			order_by = "comment_count ASC";
+		} else if ($(this).attr("id") == "opt_price") {
+			order_by = "shop_price ASC";
+		}
+		
+	} else {
+		//初始状态
+		$(this).find("span").addClass("opt_focus_icon_desc");
+		if ($(this).attr("id") == "opt_sales") {
+			order_by = "click_count DESC";
+		} else if ($(this).attr("id") == "opt_comment") {
+			order_by = "comment_count DESC";
+		} else if ($(this).attr("id") == "opt_price") {
+			order_by = "shop_price DESC";
+		}
+	}
+	
+	getData(searchAttr);
+});
+
+//翻页
+$(".rp_next_1").click(function(){
+	page = parseInt("{$page}") + 1;
+	getData(searchAttr);
+});
+$(".rp_prev_1").click(function(){
+	page = parseInt("{$page}") - 1;
+	getData(searchAttr);
+});
+$(".p_default").not("#pages_prev, #pages_next").click(function(){
+	page = parseInt($(this).text());
+	getData(searchAttr);
+});
+$("#pages_next").not(".p_disable").click(function(){
+	page = parseInt("{$page}") + 1;
+	getData(searchAttr);
+});
+$("#pages_prev").not(".p_disable").click(function(){
+	page = parseInt("{$page}") - 1;
+	getData(searchAttr);
+});
+</script>
+
+
+<script>
+$(function(){
+	//表单全选
+	$(".J_select_all").click(function(){
+	   
+		var $obj=$(this).find("input[type='checkbox']"),
+			$checks=$(".sequence-pg-main input[type='checkbox']");
+		if($obj.is(":checked")){
+			$checks.each(function(){
+				$(this).prop("checked",true);
+			});
+		}else{
+			$checks.each(function(){
+				$(this).removeAttr("checked");
+			});
+		}	
+	});
+	//购买数量变更
+	$(".J_count_add").click(function(){
+		var num=parseInt($(this).siblings(".num").find("input").val());
+		$(this).siblings(".num").find("input").val(num+1);
+	});
+	$(".J_count_cut").click(function(){
+		var num=parseInt($(this).siblings(".num").find("input").val());
+		if(num>0){
+			$(this).siblings(".num").find("input").val(num-1);
+		}else{
+			$(this).siblings(".num").find("input").val(0);
+		}
+	});
+
+
+});
+</script>
+
+

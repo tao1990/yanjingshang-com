@@ -1,0 +1,20 @@
+<!--header-tag-->
+<link rel="stylesheet" href="http://file.easeeyes.com/b2b/css/base.css" />
+
+<div class="header-tag">
+	<div class="container">
+        {insert name='member_info'}	
+	</div>
+</div>
+
+<!--header-search-->
+<!--nav-->
+<div class="nav" style="height: 52px;line-height: 22px;">
+	<div class="container">
+		<a class="header-logo fl" href="user.php">
+			<img src="{$img_url}/data/images/logo2.png">
+			<span>结算中心</span>
+		</a>
+	</div>
+</div>
+<!--nav-banner-->

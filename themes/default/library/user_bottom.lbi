@@ -1,0 +1,22 @@
+<div class="goods-pg">
+			<span class="goods-pg-arrow"></span>
+			<span class="goods-pg-arrow goods-pg-arrow-right"></span>
+			<div class="goods-pg-title">商品精选</div>
+			<div class="goods-pg-main">
+				<ul>
+                    <!--{foreach from=$sort_order_list item=item}-->
+                    {if $item.b2b_original_img}
+					<li>
+						<div class="image">
+							<a target="_blank" title="{$item.b2b_goods_name}" href="goods{$item.goods_id}.html"><img src="{$img_site}{$item.b2b_original_img}" /></a>
+						</div>
+						<div class="text">
+							<a target="_blank" href="goods{$item.goods_id}.html">{$item.goods_name|truncate:10}</a><br />
+							<!--<span class="price">¥ 99.00</span>-->
+						</div>
+					</li>
+                    {/if}
+					<!--{/foreach}-->
+				</ul>
+			</div>
+</div>

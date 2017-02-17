@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>散光片专场不止5折，速度定制</title>
+<meta name="Keywords"  content="易视网,易视眼镜网,美瞳,护理液,润眼液,博士伦,海昌,海俪恩,卫康,库博,视康,强生,sho-bi,GEO,NEO,BESCON" />
+<meta name="Description" content="易视网，易视6周年庆，易视6周年庆，散光片专场不止5折，速度定制，还有更多好礼相送24小时闪电发货，30天退换货保障" />
+<link rel="stylesheet" href="http://file.easeeyes.com/index2015/css/ani.css" />
+<style>
+.goodsItems{background:#7ab8e1;padding:0 .5rem;}
+.goodsItem{float:left;width:15.25rem;background:#fff;position:relative;margin-bottom:.5rem;padding-bottom:.5rem;}
+.goodsItem:nth-child(even){float:right;}
+.goodsItem-thumb{height:13rem;line-height:13rem;text-align:center;}
+.goodsItem-thumb img{max-width:100%;max-height:100%;vertical-align:middle;}
+.goodsItem-info{width:85%;margin:auto;border:1px dashed #ffba83;color:#ffba83;text-align:center;margin:auto;height:1.6rem;line-height:1.6rem;font-size:1rem;}
+.goodsItem-title{color:#333;padding:.5rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.goodsItem-price{background:#fba45f;margin:0 .5rem;overflow:hidden;padding:.5rem;color:#fff;font-size:.9rem;}
+.goodsItem-price b{font-size:1.3rem;font-weight:100;}
+.goodsItem-btn{float:right;width:4rem;height:1.6rem;line-height:1.6rem;background:#fdfdfd;color:#faa35e;font-size:.9rem;text-align:center;}
+.goodsItem-layer{position:absolute;right:.5rem;top:.5rem;width:2rem;height:2rem;background:url(http://img.easeeyes.com/promotion/2016080110/icon.png) no-repeat center;background-size:2rem auto;}
+</style>
+</head>
+<!--tpl
+<div><img src="http://file.easeeyes.com/wap/images/2016080101/banner.jpg" alt="" style="display:block;"></div>
+<div><a href=""><img src="http://file.easeeyes.com/wap/images/2016080101/banner.jpg" alt="" style="display:block;"></a></div>
+<div style="height:;background:url(http://file.easeeyes.com/wap/images/2016080108/01.jpg);background-size:auto;"></div>
+-->
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<!--main-->
+<div class="container">
+	<div><img src="http://file.easeeyes.com/wap/images/2016080110/banner.jpg" alt="" style="display:block;"></div>
+	<div><img src="http://file.easeeyes.com/wap/images/2016080110/01.jpg" alt="" style="display:block;"></div>
+	<div><a href="http://m.easeeyes.com/goods4921.html"><img src="http://file.easeeyes.com/wap/images/2016080110/02.jpg" alt="" style="display:block;"></a></div>
+	<div><a href="http://m.easeeyes.com/goods1251.html"><img src="http://file.easeeyes.com/wap/images/2016080110/03.jpg" alt="" style="display:block;"></a></div>
+	<div><a href="http://m.easeeyes.com/goods2118.html"><img src="http://file.easeeyes.com/wap/images/2016080110/04.jpg" alt="" style="display:block;"></a></div>
+	<div><a href="http://www.easeeyes.com/goods3373.html"><img src="http://file.easeeyes.com/wap/images/2016080110/05.jpg" alt="" style="display:block;"></a></div>
+	<div class="clearfix" style="height:22.25rem;background:url(http://file.easeeyes.com/wap/images/2016080110/06.jpg);background-size:100% auto;">
+		<div style="height:100%;position:relative;float:left;width:50%;">
+			<a href="http://m.easeeyes.com/goods169.html" style="position:absolute;width:100%;height:2.2rem;left:0;bottom:5rem;"></a>
+			<a href="http://m.easeeyes.com/goods168.html" style="position:absolute;width:100%;height:2.2rem;left:0;bottom:2.3rem;"></a>
+		</div>
+		<div style="height:100%;position:relative;float:left;width:50%;">
+			<a href="http://m.easeeyes.com/goods171.html" style="position:absolute;width:100%;height:2.2rem;left:0;bottom:5rem;"></a>
+			<a href="http://m.easeeyes.com/goods170.html" style="position:absolute;width:100%;height:2.2rem;left:0;bottom:2.3rem;"></a>
+		</div>
+	</div>
+	<div class="clearfix" style="height:18.3rem;background:url(http://file.easeeyes.com/wap/images/2016080110/07.jpg);background-size:100% auto;">
+		<a href="http://m.easeeyes.com/goods993.html" style="float:left;width:50%;height:100%;"></a>
+		<a href="http://m.easeeyes.com/goods3081.html" style="float:left;width:50%;height:100%;"></a>
+	</div>
+	<div><img src="http://file.easeeyes.com/wap/images/2016080110/08.jpg" alt="" style="display:block;"></div>
+	<div class="goodsItems clearfix">
+    
+        <!--{foreach from=$goodsArr1 item=li name=li}-->
+		<div class="goodsItem">
+			<a href="{$li.goods_link}">
+                {if $li.tips}
+				    <div class="goodsItem-layer"></div>
+                {/if}
+				<div class="goodsItem-thumb"><img src="http://img.easeeyes.com/{$li.goods_img}" alt=""></div>
+				<div class="goodsItem-info">到货日期：5-10个工作日</div>
+				<div class="goodsItem-title">{$li.goods_name}</div>
+				<div class="goodsItem-price">
+					<span class="goodsItem-btn">立即购买</span>
+					抢购价 &yen;<b>{$li.now_price}</b>/件
+				</div>
+			</a>
+		</div>
+        <!--{/foreach}-->
+	
+	</div>
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

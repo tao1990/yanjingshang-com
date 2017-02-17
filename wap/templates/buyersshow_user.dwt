@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords"    content="美瞳佩戴效果,隐形眼镜真人佩戴图" />
+<meta name="Description" content="真人佩戴美瞳隐形眼镜效果,更多明星佩戴的美瞳产品,了解更多美瞳佩戴效果就在易视网买家秀" />
+<title>{$page_title}</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link type="text/css" rel="stylesheet" href="themes/default/style/base.css" />
+<link type="text/css" rel="stylesheet" href="themes/default/style/xu_buyer.css" />
+<link type="text/css" rel="stylesheet" href="/wap/css/common.css" />
+<script type="text/javascript" src="{$image_url}js/yijq.js"></script>
+<script type="text/javascript" src="{$image_url}js/buyersshow.js"></script>
+<script type="text/javascript" src="{$image_url}js/xu/xu_xuanxk.js"></script>
+<script type="text/javascript" src="{$image_url}js/xu/xu_fudong.js"></script>
+<script type="text/javascript" src="{$image_url}js/p_thickbox.js"></script>
+
+</head>
+<body style="background:#f2f2f2;">
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+
+
+<div class="main clearfix">
+
+    <!-- left start -->
+    <div class="show_shs_l fl">
+       
+        <div class="mt10 show_h2">
+            <h2 class="col0ca">我要晒一晒</h2>
+        </div>
+        
+        <div class="show_shd">
+        
+			<iframe src="buyersshow_upload.php" id="upload_target" name="upload_target" onload="this.height=upload_target.document.body.scrollHeight+10" scrolling="no" frameborder="0" style="width:715px; /*height:360px;*/"></iframe>
+           
+           
+        </div>
+        
+    </div>
+    <!-- left end -->
+
+</div>
+
+
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+{insert_scripts files='common.js,mjx.js'}
+
+<script type="text/javascript" src="{$image_url}js/xu/openwindow/zDrag.js"></script>
+<script type="text/javascript" src="{$image_url}js/xu/openwindow/zDialog.js"></script>
+
+</html>

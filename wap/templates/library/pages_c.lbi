@@ -1,0 +1,52 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!----------------------------------------------------------------------------------------最新商品分页--------------------------------------------------------------------------------------------->
+<form name="selectPageForm" action="{$smarty.server.PHP_SELF}" method="get">
+ <div class="page">
+  <!--{if $pager.record_count > 0}-->
+
+      <div class="pagelogo"><span  class="color_qianfei"><a href="new_product.php?page=1"  class="color_qianfei">第一页</a></span></div>      
+      <!-- {if $pager.page_prev} -->
+      	<div class="pagelogo"><a  href="new_product.php?page={$pager.page_prev}"  class="color_qianfei">上一页</a></div>
+      <!--{else}-->
+      	<div class="pagelogo"><span  class="color_qianfei">上一页</span></div>
+      <!-- {/if} -->
+      
+    <!-- {if $pager.page_count > 0} -->
+    
+        <!--{foreach from=$pager.page_number key=key item=item name=foo}-->
+        {if $smarty.foreach.foo.index < 10}
+          <!-- {if $pager.page eq $key} -->
+            <div class="pagelogohong">{$key}</div>
+          <!-- {else} -->
+            <div class="pagelogo"> <a href="new_product.php?page={$item}"  class="color_qianfei">{$key}</a></div>
+          <!-- {/if} -->
+         {else}
+            {if $smarty.foreach.foo.index >= 29}
+                <div class="pagelogo"> <a href="new_product.php?page={$item}"  class="color_qianfei">{$key}</a></div>
+            {else}        
+            {/if}
+         {/if}
+        <!--{/foreach}-->  
+    
+    <!-- {/if} -->
+
+    <!-- {if $pager.page_next} -->
+        <div class="pagelogo"><a  href="new_product.php?page={$pager.page_next}"  class="color_qianfei">下一页</a></div>
+    <!--{else}-->
+        <div class="pagelogo"><span  class="color_qianfei">下一页</span></div>  
+    <!-- {/if} -->
+	<div class="pagelogo"><a   href="new_product.php?page={$last_page}"  class="color_qianfei">最末页</a></div>
+    
+    <!-- {/if} -->
+    <div class="pagelogo">{$lang.pager_1}<b>{$aa}</b> {$lang.pager_2} </div>
+</div>
+</form>
+
+{literal}
+<script type="Text/Javascript" language="JavaScript">
+	function selectPage(sel){
+	//提交表单
+	  sel.form.submit();
+	}
+</script>
+{/literal}

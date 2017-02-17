@@ -1,0 +1,134 @@
+﻿/*-----------------------------------------------------------------------【积分兑换列表页 具体页面 20120713 Author:yijiangwen】【TIME:20120828】-------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------本页公用样式---------------------------------------------------------------------*/
+.main{width:990px; height:auto; margin:0 auto; overflow:hidden;}
+.main_left{  float:left; width:200px; height:auto; overflow:hidden;}
+.main_right{float:right; width:780px; height:auto; overflow:hidden;}
+.com_h_body{margin-bottom:0;}
+.blue{color:#0ca6bd;}
+/*---------------------------------------------------------------------------公用样式end----------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------重写样式-------------------------------------------------------------------------*/
+.list_number,.list_number2{width:12px; height:12px; line-height:12px; text-align:center; color:#FFF; background-color:#E43232;}
+.list_number2{background-color:#ccc;}
+.jf_zhekou_price{color:#666; height:16px; line-height:16px;}
+.jf_zhekou_buy{width:85px; height:18px; display:block; background:url(../images/exchange/add_buy.gif) no-repeat; margin-left:40px;}
+.ex_tabs li{cursor:pointer; letter-spacing:10px;}
+/*---------------------------------------------------------------------------重写样式end----------------------------------------------------------------------*/
+
+
+/*---------------------------------------------------------------------------列表页样式【exchange_list.dwt】-------------------------------------------------------------------------*/
+.sign_pan{height:220px; text-align:center; color:#666; background:url(../images/xu/exchange/bg.png) no-repeat;}
+.sign_pan span{width:200px; display:block; color:#999; line-height:34px; height:34px; text-align:right!important; }
+.sign_ul li{width:200px; text-align:center; margin-top:10px;}
+#sign_login{margin-top:50px;}
+#sign_login a{color:#e43232; padding-left:10px;}
+.sign_p_but{ border:none; background:url(../images/xu/exchange/bg.png) 0 -222px no-repeat; width:87px; height:27px;}
+
+.jf_text_head{background:url(../images/xu/exchange/bg.png) -281px -75px no-repeat #f2f2f2; width:200px; height:26px;}
+.jf_text_1{width:198px; height:auto; border:1px #f2f2f2 solid; color:#666; overflow:hidden; padding:10px 0;}
+.jf_text_1 li{width:180px; height:auto; line-height:18px; margin:0 0 8px 15px; color:#666; _display:inline;}
+.jf_text_ul{width:198px; height:auto; border:1px solid #f2f2f2; padding-bottom:10px; overflow:hidden;}
+.jf_text_ul li{width:180px; height:auto; line-height:18px; margin:0 0 8px 15px; color:#666; _display:inline;}
+.jf_text_span{display:inline-block; text-indent:10px;}
+
+.exch_jfgz{background:url(../images/xu/exchange/bg.png) -281px -33px no-repeat #f2f2f2; height:26px;}
+#colee{height:240px; border:1px solid #F2F2F2; overflow:hidden;}
+#colee p{width:196px; height:30px; line-height:30px; text-align:left; text-indent:14px; color:#666; margin:0 auto; overflow:hidden;}
+.bgc_f6{background-color:#f6f6f6;}
+
+/*top排行榜 通用组件 */
+.top_pan{width:198px; height:auto; padding-bottom:10px; border:1px #f2f2f2 solid; margin-top:10px; overflow:hidden;}
+.top_bg{width:100%; height:30px; background:url(../images/xu/exchange/bg.png) -194px 0 no-repeat #f2f2f2; margin-bottom:5px;}
+.top_li{width:178px; height:62px; margin:5px 0 5px 10px; overflow:hidden; _display:inline;}
+.top_detail{width:74px; height:62px;}
+.top_li_a{width:60px; height:60px; border:1px #fff solid; margin:0 10px 0 20px; display:block;}
+.top_li_a:hover{border:1px #99ddb9 solid;}
+.top_name{width:74px; height:42px; line-height:14px; display:block; overflow:hidden; margin-bottom:2px;}
+
+/* 其它样式表:原xu_css.css样式 */
+#menubox {float: left;height: 37px;width: 780px;}
+#menubox ul li {background: url(../images/xu/exchange/bg.png) no-repeat scroll 0 -251px transparent;color: #666666;display: inline;float: left;font-size: 16px;height: 32px;line-height: 26px;margin-right: 2px;text-align: center;width: 258px;}
+#menubox ul li.hover {background: url(../images/xu/exchange/bg.png) no-repeat scroll 0 -285px transparent;color: #fff;}
+
+.exchange_top{color:#666;}
+.exchange_top h2{background:url(../images/xu/exchange/bg.png) -205px -194px no-repeat; width:192px; height:26px;}
+.exchange_top ul{ margin-top:10px;}
+.exchange_top ul li{width:185px; text-align:center;}
+.exchange_top_li{ margin-right:10px;}
+.exchange_top_p_top6{ padding-top:3px;}
+
+/*---------------------------------------------------------------------------商品列表块start---------------------------------------------------------------------*/
+.ex_goods_pan{width:780px; height:auto; overflow:hidden; display:none;}
+.goods_list{width:760px; height:auto; overflow:hidden; padding:10px; float:right;}
+.goods_li{width:190px; height:218px; text-align:center; overflow:hidden;}
+.goods_dl{width:162px; height:auto; margin:0 auto;}
+.goods_tip{width:42px; height:23px; display:inline-block; overflow:hidden; position:relative; top:3px; left:136px; margin-bottom:-23px;}
+.goods_li_name{width:100%; height:36px; line-height:18px; overflow:hidden;}
+.goods_li_pr{width:100%; height:14px; line-height:14px; margin:10px 0 5px 0;}
+.goods_li_num{text-align:center; width:100%; height:14px; line-height:14px;}
+.goods_li_img{width:150px; height:150px; border:1px #fff solid; margin:0 0 4px 5px; display:block;}
+.goods_li_img:hover{ border:1px #99ddb9 solid;}
+.goods_li_line{width:100%; height:10px; border-bottom:1px #dcdcdc dashed; margin:10px auto; overflow:hidden;}
+/*---------------------------------------------------------------------------商品列表块end-----------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------分页重写start-----------------------------------------------------------------------*/
+#pagebar{width:760px; height:26px; line-height:26px; margin:10px auto; text-align:center; overflow:hidden;}
+#pager{}
+.p_tip_l{width:8px; height:16px; background:url(../images/common/bg.png) no-repeat 0 -232px; margin:5px 3px 0 220px;}
+.p_tip_r{width:8px; height:16px; background:url(../images/common/bg.png) no-repeat -31px -232px; margin:5px 10px 0 5px;}
+.page_cell{width:auto; min-width:22px; _width:22px; height:18px; line-height:18px; border:1px solid #ccc; margin:3px 5px; padding:0;}
+.page_cell a{display:block;}
+.page_cell a:hover{text-decoration:none;}
+.page_input{width:26px; height:14px; line-height:14px; text-indent:2px; border:1px solid #b8b8b8; color:#999;}
+.page_submit{width:45px; height:20px; border:none; background:url(../images/common/bg.png) no-repeat -64px -232px; margin-left:5px; cursor:pointer;}
+/*---------------------------------------------------------------------------分页重写END-----------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------列表页样式end----------------------------------------------------------------------*/
+
+
+
+/*---------------------------------------------------------------------------具体兑换页样式【exchange88.html】-------------------------------------------------------*/
+
+
+
+/*---------------------------------------------------------------------------具体兑换页样式end----------------------------------------------------------------------*/
+
+
+/*---------------------------------------------------------------------------ex_coupon页面-------------------------------------------------------------------------*/
+.main_ex_coupon{width:928px; height:auto; border:1px #dcdcdc solid; padding:30px; font-family:'宋体'; margin:0 auto;}
+.ex_conpon_img{float:left; width:520px; height:230px;}
+.ex_conpon_content{float:right; width:400px; height:230px; text-align:left;}
+.content_ol{text-align:left;}
+.content_ol li{ margin:12px auto; font-size:12px; font-weight:bold; color:#333; line-height:22px;}
+.content_ol span{color:#666; font-size:12px; font-weight:normal;}
+.p_content_title{width:400px; height:40px; line-height:40px; font-size:16px; font-weight:bold; color:#333; overflow:hidden;}
+.p_content_desc{width:400px; height:auto; max-height:36px; overflow:hidden; text-align:left; margin-bottom:16px; border:none; border-bottom:1px solid #dcdcdc; color:#c67f39; padding:4px 0;}
+.p_content_num{width:400px; height:14px; line-height:14px; margin-bottom:20px;}
+.ex_coupon_integral{color:#E43232; font-size:16px; font-weight:bold;}
+.ex_coupon_pan{width:398px; height:62px; border:1px solid #ffd3de; background-color:#fff7f8; margin-top:20px;}
+.ex_coupon_bt{float:left; margin:16px 0 0 20px;}
+.coupon_head_title{width:940px; height:30px; line-height:30px; background-color:#E43232; margin:20px 0; text-align:left; text-indent:5px; font-size:18px; font-family:'幼圆'; color:#fff;}
+.p_content{text-align:left; background-color:#fcc; float:left;}
+.p_supply_txt{width:100%; text-align:right; color:#666; margin-top:50px;}
+
+.c_res_main{width:928px; height:420px; border:1px #dcdcdc solid; padding:30px; margin:0 auto; text-align:center;}
+.c_res_t1{color:red; font-size:14px; text-align:left; text-indent:60px;}
+.c_res_t2{color:#333; text-align:left; text-indent:84px; margin:10px auto;}
+.c_res_ul{width:812px; height:348px; background:url(../images/inner/coupon_res.gif) no-repeat; margin:0 auto; overflow:hidden;}
+.c_res_li{margin:140px 0 0 410px; width:350px; height:22px; line-height:22px; font-size:22px; letter-spacing:1px; color:#000; font-weight:bold; text-align:center;}
+.c_res_li2{float:left; text-align:left; margin:30px 0 0 40px; width:600px; height:22px; font-size:22px; letter-spacing:1px; color:#000; font-weight:bold;}
+/*---------------------------------------------------------------------------ex_coupon页面end----------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------分页重写start-------------------------------------------------------------------------*/
+#pagebar{width:780px; height:24px; margin:10px auto 0 auto; text-align:center; overflow:hidden;}
+#pager{width:630px; height:24px; margin:0 auto;}
+.page_h{width:66px; height:22px; line-height:22px; border:1px solid #dcdcdc; margin:0 3px;}
+.page_cell{width:22px; height:22px; line-height:22px; border:1px solid #dcdcdc; margin:0 3px;}
+.page_cell a{display:block;}
+.page_cell a:hover{text-decoration:none; font-weight:bold;}
+.page_cell2{width:22px; height:22px; line-height:22px; border:1px solid #fff; margin:0 3px; font-size:14px;}
+.page_input{width:30px; height:18px; line-height:18px; text-indent:2px; border:1px solid #dcdcdc; color:#999; margin:1px 2px; vertical-align:middle;}
+.page_submit{width:38px; height:22px; line-height:22px; border:none; background:url('../images/button/bt_sure.jpg') no-repeat 0 1px; margin-left:10px; cursor:pointer;}
+.page_span{display:inline-block; margin:0 10px;}
+/*---------------------------------------------------------------------------分页重写END-------------------------------------------------------------------------*/

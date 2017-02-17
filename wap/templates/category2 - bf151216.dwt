@@ -1,0 +1,335 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta content="telephone=no" name="format-detection"/>
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/category.css"/>
+<style>
+    *{margin:0;padding:0;}
+    body{font-size:1.1rem;}
+    .pull-left{float:left;}
+    .pull-right{float:right;}
+    .text-center{text-align:center;}
+    h2{font-weight:normal;}
+    #filters-box{font-family:"Microsoft Yahei";background:#f2f2f2;position:fixed;width:100%;height:100%;left:0;top:0;z-index:99;}
+    .filter-header{color:#333;background:#fff;position:fixed;left:0;top:0;width:100%;border-bottom:1px solid #dfdfdf;}
+    .filter-header h2{padding:0 1rem;line-height:4rem;font-size:1.5rem;}
+    .filter-header h2 span{font-size:1.1rem;color:#999;}
+    .filter-container{padding-top:5rem;}
+    .filter-option,.filter-item{padding:0 1rem;line-height:3.5rem;border-bottom:1px solid #dfdfdf;font-size:1.2rem;background:#fff;}
+    .filter-option span{color:#999;padding-right:1rem;background:url(http://file.easeeyes.com/wap/images/select_arrow.png) no-repeat right center;background-size:auto 1rem;}
+    .filter-clearbtn{padding-top:2rem;}
+    .filter-clearbtn button{background:#fff;border:1px solid #ccc;padding:0 2rem;line-height:3rem;}
+    .filter-item{display:block;}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<script type="text/javascript" src="{$image_url}wap/js/scrollpagination.js"></script>
+<div class="content">
+<div class="content sort">
+<a id="default" class="xz">默认</a>
+<a id="sales" class="down">销量</a>
+<a id="price" class="up">价格</a>
+<a id="nowChoose">筛选</a>
+{if $st==1}
+<a class="st" href="category.php?cat_id={$cat_id}" style="border-right:0px;width:10%;background: url('images/st.png') no-repeat 70% 50%;"></a>
+{else}
+<a class="st" href="category.php?cat_id={$cat_id}&st=1" style="border-right:0px;width:10%;background: url('images/st.png') no-repeat 70% 50%;"></a>
+{/if}
+</div>
+    {if $st!=1}
+    	<ul id="Scroll" class="content goods_list">
+        {if $goods_list}
+        <!--{foreach from=$goods_list key=k item=v}-->
+        <li {if $v.saving > 0} class="active11_badge"{/if}>
+            <a class="list_a" href="goods.php?id={$v.goods_id}">
+                <div class="goods_list_thumb pull-left">
+                    <img src="{$image_url}{$v.goods_thumb}"/>
+                </div>
+                <div class="goods_list_main">
+                    <h2>{$v.goods_name}</h2>
+                    <div class="pg-tags-list">
+                    {foreach from=$v.active key=key item=item}
+                        {if $item.act_type eq 0}
+                            <span class="pg-tags">赠</span>
+                        {elseif $item.act_type eq 1}
+                            <span class="pg-tags pg-tags-orange">减</span>
+                        {elseif $item.act_type eq 3}
+                            <span class="pg-tags pg-tags-yellow">加</span>
+                        {else}
+                        {/if}
+                    {/foreach}
+                    </div>
+                    <div class="goods_list_price">
+                        ￥{$v.shop_price} {if $v.saving > 0}<span class="pg-tags pg-tags-red">已优惠{$v.saving}元</span>{/if}
+                    </div>
+                    <p>已有 {$v.click_count} 人关注</p>
+                </div>
+            </a>
+        </li>
+        <!--{/foreach}-->
+        {else}
+        没有此类商品
+        {/if}
+        </ul>
+        <input id="st" value="0"  type="hidden"/>
+    {else}
+        <div id="Scroll" class="content list_zong">
+            <!--{foreach from=$goods_list key=k item=v}-->
+            <div class="list_zong_left">
+                <div {if $v.saving > 0} class="active11_badge_2"{/if}><a href="goods.php?id={$v.goods_id}"><img src="{$image_url}{$v.goods_thumb}"/></a></div>
+                <div><a href="goods.php?id={$v.goods_id}">{$v.goods_name}</a></div>
+                <div class="pg-tags-list">
+                    {foreach from=$v.active key=key item=item}
+                    {if $item.act_type eq 0}
+                    <span class="pg-tags">赠</span>
+                    {elseif $item.act_type eq 1}
+                    <span class="pg-tags pg-tags-orange">减</span>
+                    {elseif $item.act_type eq 3}
+                    <span class="pg-tags pg-tags-yellow">加</span>
+                    {else}
+                    {/if}
+                    {/foreach}
+                </div>
+                <div class="goods_list_price">
+                    ￥ {$v.shop_price} {if $v.saving > 0}<span class="pg-tags pg-tags-red">已优惠{$v.saving}元</span>{/if}
+                </div>
+                <p>已有 {$v.click_count} 人关注</p>
+                <div class="active"></div>
+            </div>
+           <!--<div class="list_zong_left">
+              <div><a href="goods.php?id={$v.goods_id}"><img src="{$image_url}{$v.goods_thumb}"/></a></div>
+              <div><a href="goods.php?id={$v.goods_id}">{$v.goods_name}</a></div>
+              <div class="list_price">
+                 <span class="xian_price">&yen;{$v.shop_price}</span><span class="yuan_price">&yen;{$v.market_price}</span>
+                 <div class="clear"></div>
+              </div>
+              <div>{$v.click_count}人购买</div>
+              <div class="active"></div>
+           </div>-->
+            <!--{/foreach}-->
+        </div>
+        <input id="st" value="1"  type="hidden"/>
+    {/if}
+    <div id="lookMore"></div> 
+    <div  class="loading" id="loading" style="display: none;"></div>
+    <div class="loading" id="nomoreresults" style="display: none;">没有更多了.</div>
+    <input type="hidden" id="pageStie" value="2" />
+    <input type="hidden" id="cat_id" value="{$cat_id}" />
+    <input type="hidden" id="nomore" value="0" />
+    <input type="hidden" id="sort" value="" />
+    <input type="hidden" id="keyword" value="{$keyword}" />
+
+<div id="loading"></div>
+
+</div>
+<!--筛选主体-->
+<div id="filters-box" class="filter filter-right" style="display:none;">
+    <div id="filter-option-box">
+        <div class="filter-header">
+            <h2 class="text-center">
+                <span class="pull-left" onclick="pop1.close();">取消</span>
+                <span class="pull-right" id="submit">确定</span>
+                筛选
+            </h2>
+        </div>
+        <div class="filter-container">
+            <div class="filter-option" id="filter-option_01" data-key="brand"><span class="pull-right">全部</span>品牌</div>
+            <div class="filter-option" id="filter-option_02" data-key="period"><span class="pull-right">全部</span>周期</div>
+            <div class="filter-option" id="filter-option_03" data-key="color"><span class="pull-right">全部</span>颜色</div>
+            <div class="filter-option" id="filter-option_04" data-key="moisture"><span class="pull-right" >全部</span>含水量</div>
+            <div class="filter-option" id="filter-option_05" data-key="diameter"><span class="pull-right">全部</span>直径</div>
+            <div class="filter-option" id="filter-option_06" data-key="curve"><span class="pull-right">全部</span>基弧</div>
+            <div class="filter-option" id="filter-option_07" data-key="price"><span class="pull-right">全部</span>价格</div>
+        </div>
+        <div class="filter-clearbtn text-center">
+            <button id="clearfilter">清除选项</button>
+        </div>
+    </div>
+    <div id="filter-detail-tpl-01" style="display:none">
+        <div class="filter-header">
+            <h2 class="text-center">
+                品牌
+            </h2>
+        </div>
+        <div class="filter-container">
+            <div class="filter-item" data-item='{"key":"brand","value":"","name":"全部"}'>全部</div>
+            <div class="filter-item" data-item='{"key":"brand","value":"qs","name":"强生"}'>强生</div>
+            <div class="filter-item" data-item='{"key":"brand","value":"hc","name":"海昌"}'>海昌</div>
+        </div>
+    </div>
+    <div id="filter-detail-tpl-02" style="display:none">
+        <div class="filter-header">
+            <h2 class="text-center">
+                周期
+            </h2>
+        </div>
+        <div class="filter-container">
+            <div class="filter-item" data-item='{"key":"period","value":"","name":"全部"}'>全部</div>
+            <div class="filter-item" data-item='{"key":"period","value":"1","name":"1周抛"}'>1周抛</div>
+            <div class="filter-item" data-item='{"key":"period","value":"2","name":"2周抛"}'>2周抛</div>
+        </div>
+    </div>
+    <div id="filter-detail-tpl-03" style="display:none">
+        <div class="filter-header">
+            <h2 class="text-center">
+                颜色
+            </h2>
+        </div>
+        <div class="filter-container">
+            <div class="filter-item" data-item='{"key":"color","value":"","name":"全部"}'>全部</div>
+            <div class="filter-item" data-item='{"key":"color","value":"red","name":"红"}'>红</div>
+            <div class="filter-item" data-item='{"key":"color","value":"yellow","name":"黄"}'>黄</div>
+        </div>
+    </div>
+    <div id="filter-detail-tpl-04" style="display:none">
+        <div class="filter-header">
+            <h2 class="text-center">
+                含水量
+            </h2>
+        </div>
+        <div class="filter-container">
+            <div class="filter-item" data-item='{"key":"moisture","value":"","name":"全部"}'>全部</div>
+            <div class="filter-item" data-item='{"key":"moisture","value":"1","name":"1ml"}'>1ml</div>
+            <div class="filter-item" data-item='{"key":"moisture","value":"1","name":"2ml"}'>2ml</div>
+        </div>
+    </div>
+    <div id="filter-detail-tpl-05" style="display:none">
+        <div class="filter-header">
+            <h2 class="text-center">
+                直径
+            </h2>
+        </div>
+        <div class="filter-container">
+            <div class="filter-item" data-item='{"key":"diameter","value":"","name":"全部"}'>全部</div>
+            <div class="filter-item" data-item='{"key":"diameter","value":"1","name":"1mm"}'>1mm</div>
+            <div class="filter-item" data-item='{"key":"diameter","value":"2","name":"2mm"}'>2mm</div>
+        </div>
+    </div>
+    <div id="filter-detail-tpl-06" style="display:none">
+        <div class="filter-header">
+            <h2 class="text-center">
+                基弧
+            </h2>
+        </div>
+        <div class="filter-container">
+            <div class="filter-item" data-item='{"key":"curve",value":"","name":"全部"}'>全部</div>
+            <div class="filter-item" data-item='{"key":"curve","value":"30","name":"30"}'>30</div>
+            <div class="filter-item" data-item='{"key":"curve","value":"60","name":"60"}'>60</div>
+        </div>
+    </div>
+    <div id="filter-detail-tpl-07" style="display:none">
+        <div class="filter-header">
+            <h2 class="text-center">
+                价格
+            </h2>
+        </div>
+        <div class="filter-container">
+            <div class="filter-item" data-item='{"key":"price","value":"","name":"全部"}'>全部</div>
+            <div class="filter-item" data-item='{"key":"price","value":"100","name":"100"}'>100</div>
+            <div class="filter-item" data-item='{"key":"price","value":"200","name":"200"}'>200</div>
+        </div>
+    </div>
+</div>
+<script src="http://file.easeeyes.com/wap/js/wappop.js"></script>
+<script>
+    //自适应代码
+    (function(){
+        var win=window||{},
+                doc=document,
+                root=doc.documentElement;
+        function changeSize(){
+            root.style.fontSize=parseInt(root.clientWidth)*20/640>20?"20px":parseInt(root.clientWidth)*20/640+"px";
+        }
+        if(doc.addEventListener){
+            var evt="orientationchange" in win?"orientationchange":"resize";
+            doc.addEventListener(evt,changeSize,false);
+            doc.addEventListener("DOMContentLoaded",changeSize,false);
+        }
+    })();
+
+    // 执行
+    var pop1=new Pop({id:"filters-box"}),
+            pop2=new Pop({id:"filter-option-box"});
+    document.getElementById("nowChoose").addEventListener("click",function(){
+        pop1.open();
+        pop2.open();
+    },false);
+
+    /*
+     *	key 为键值
+     *	value 为值
+     *	name 为显示数据
+     */
+    var options=Array.prototype.slice.call(document.querySelectorAll(".filter-option"),0),	// 筛选条件
+            items=Array.prototype.slice.call(document.querySelectorAll(".filter-item"),0),	// 选项
+            num,
+            filter={};	// 筛选结果
+    /*绑定条件和选项*/
+    options.forEach(function(option){
+        option.addEventListener("click",function(){
+            num=this.id.split("_")[1];
+            pop2.close();
+            document.getElementById("filter-detail-tpl-"+num).style.display="block";
+        },false);
+    });
+    /*保存数据和dom控制*/
+    items.forEach(function(item){
+        item.addEventListener("click",function(){
+            var itemData=JSON.parse(this.dataset.item);
+            filter[itemData.key]=itemData.value;	// 保存结果
+            //console.log(filter)
+            refresh(itemData);  // 选中数据前台显示
+            document.getElementById("filter-detail-tpl-"+num).style.display="none";
+            pop2.open();
+        },false);
+    })
+
+    function refresh(item){
+        options.forEach(function(option){
+            if(option.dataset.key==item.key){
+                option.getElementsByTagName("span")[0].innerHTML=item.name;
+            }
+        });
+    }
+    // 点击清除选项
+    document.getElementById("clearfilter").addEventListener("click",function(){
+        filter={};
+        options.forEach(function(option){
+            option.getElementsByTagName("span")[0].innerHTML="全部";
+        });
+    },false);
+    // 点击确定按钮，filter为所有条件
+    document.getElementById("submit").addEventListener("click",function(){
+        console.log(filter)
+
+    },false);
+</script>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+<script type="text/javascript" src="{$image_url}wap/js/category.js"></script>
+<script>
+//自适应代码
+(function(){
+    var win=window||{},
+        doc=document,
+        root=doc.documentElement;
+    function changeSize(){
+        root.style.fontSize=parseInt(root.clientWidth)*20/640>20?"20px":parseInt(root.clientWidth)*20/640+"px";
+    }
+    if(doc.addEventListener){
+        var evt="orientationchange" in win?"orientationchange":"resize"; 
+        doc.addEventListener(evt,changeSize,false);
+        doc.addEventListener("DOMContentLoaded",changeSize,false);
+    }
+})();    
+</script>
+</body>
+</html>

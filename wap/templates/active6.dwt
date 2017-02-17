@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>周末狂欢场</title><meta name="Keywords"  content="易视网，易视眼镜网，隐形眼镜，美瞳。透明片，护理液，海昌，视康，库博，博士伦" /><meta name="Description" content="钜惠48小时，爆品优惠券等你来疯抢" />
+<style>
+.ip-active-weekly-coupon{background:#f4c39a;padding:1rem 0;text-align:center;}
+.ip-active-weekly-coupon img{width:30rem;}
+.ip-active-weekly-recommend-navbar{
+    padding:.5rem 1rem;
+    line-height:1;
+    background:#FFC81D;
+}
+.ip-active-weekly-recommend-navsbox li{
+    display:inline-block;
+    vertical-align:middle;
+    padding:.5rem;
+}
+.ip-active-weekly-recommend-navsbox li[data-selected="true"]{
+    background:#C10402;
+    border-radius:5px;
+    color:#fff;
+}
+.ip-active-weekly-recommend-goods-cell,.ip-active-weekly-goods-cell{
+    width:15.25rem;
+    margin:0 .25rem;
+    display:inline-block;
+    vertical-align:middle;
+}
+.ip-active-weekly-recommend-goodsmain{
+    background:#FBEF41;
+}
+.ip-active-weekly-recommend-goodsmain .J_tab_main{
+    padding:.5rem .25rem;
+    white-space:nowrap;
+    text-align:center;
+    font-size:0;
+}
+#J_countdown_box span{
+    display:inline-block;
+    vertical-align:middle;
+    background:#000;
+    color:#fff;
+    border-radius:0.25rem;
+    padding:.5rem;
+}
+/** goodslist **/
+.box-goods{
+    background:#f53cc5;
+    font-size:0;
+    text-align:center;
+}
+.item-goods{
+    background:#fff;
+    font-size:1.1rem;
+    display:inline-block;
+    width:15.25rem;
+    margin:0 .25rem .5rem;
+    position:relative;
+}
+.item-goods .image{
+    text-align:center;
+    height:15.25rem;
+    line-height:15.25rem;
+}
+.item-goods .image img{
+    max-width:15.25rem;
+    max-height:15.25rem;
+}
+.item-goods .text{
+    color:#333;
+    padding:.25rem;
+}
+.item-goods h3{
+    padding:.25rem 0;
+    border-bottom:1px solid #df1f1e;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.item-goods p{
+    padding-top:.5rem;
+    overflow:hidden;
+    color:#db231b;
+    line-height:1.6;
+    text-align:left;
+}
+.item-goods button{
+    border:0 none;
+    background:#e31e15;
+    color:#fff;
+    line-height:1.5;
+    padding:0 .25rem;
+}
+.item-goods p b{
+    font-size:1.5rem;
+}
+.item-goods .layer{
+    position:absolute;
+    top:0;
+    right:0;
+    background:url(http://img.easeeyes.com/promotion/6/icon_cut.png) no-repeat center;
+    width:3.5rem;
+    height:3.25rem;
+    background-size:100% auto;
+    color:#fff;
+    padding-top:.25rem;
+    line-height:1.2;
+    box-sizing:border-box;
+}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<div class="container">
+    <!--头图-->
+    <div class="ip-active-weekly-banner">
+       <img src="http://file.easeeyes.com/wap/images/active/banner.jpg" />
+    </div>
+
+    <!--红包-->
+    <div class="ip-active-weekly-coupon">
+        <a href="javascript:;" onclick="get_bonus(1);">
+           	<img src="http://file.easeeyes.com/wap/images/active/01.jpg" />
+        </a>
+    </div>
+
+    <!--周末首推-->
+    <div class="ip-active-weekly-recommend">
+        <!--选项卡-->
+        <div class="ip-active-weekly-recommend-navbar">
+            <!--倒计时-->
+            {if $djs_6 eq 0}
+            <div class="pull-right" id="J_countdown_box" data-start="{$wk_start_fomart}">
+                距抢购还有
+                <span id="J_countdown_day"></span> 天
+                <span id="J_countdown_hour"></span> 时
+                <span id="J_countdown_minute"></span> 分
+                <span id="J_countdown_second"></span> 秒
+            </div>
+            {else}
+            <div class="pull-right">抢购已开始</div>
+            {/if}
+            <ul id="J_tab_nav_1" class="ip-active-weekly-recommend-navsbox">
+                <li>周六</li>
+                <li>周日</li>
+            </ul>
+        </div>
+        <!--产品-->
+        <div class="ip-active-weekly-recommend-goodsmain" id="J_tab_main_1">
+            <div class="J_tab_main">
+                <div class="ip-active-weekly-recommend-goods-cell">
+                    <a href="goods.php?id={$goods_6.0.goods_id}"><img src="http://file.easeeyes.com/wap/images/active/02.jpg" /></a>
+                </div>
+                <div class="ip-active-weekly-recommend-goods-cell">
+                    <a href="goods.php?id={$goods_6.1.goods_id}"><img src="http://file.easeeyes.com/wap/images/active/03.jpg" /></a>
+                </div>
+            </div>
+            <div class="J_tab_main">
+                <div class="ip-active-weekly-recommend-goods-cell">
+                    <a href="goods.php?id={$goods_7.0.goods_id}"><img src="http://file.easeeyes.com/wap/images/active/04.jpg" /></a>
+                </div>
+                <div class="ip-active-weekly-recommend-goods-cell">
+                    <a href="goods.php?id={$goods_7.1.goods_id}"><img src="http://file.easeeyes.com/wap/images/active/05.jpg" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--活动商品-->
+    <div class="ip-active-weekly-goodsbox">
+        <!--类别图-->
+        <div class="ip-active-weekly-goodsban"><img src="http://file.easeeyes.com/wap/images/active/06.jpg" /></div>
+        <!--产品-->
+        <div class="box-goods">
+            <!--{if $goodsArr1}-->
+            <!--{foreach from=$goodsArr1 item=goods}-->
+            <div class="item-goods">
+                <a href="{$goods.href}">
+                    <div class="image"><img src="http://www.easeeyes.com/{$goods.original_img}" /></div>
+                    <div class="text">
+                        <h3>{$goods.goods_name}</h3>
+                        <p>
+                            <button class="pull-right">立即疯抢</button>
+                            活动价:&yen;<b>{$goods.promote_price}</b>
+                        </p>
+                    </div>
+                    <span class="layer">{$goods.zk}</span>
+                </a>
+            </div>
+            <!--{/foreach}-->
+            <!--{/if}-->
+        </div>
+    </div>
+</div>
+<!--公共文件页脚-->
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+<script src="http://file.easeeyes.com/wap/js/tab.js"></script>
+<script src="http://file.easeeyes.com/wap/js/countdown_v2.js"></script>
+<script>
+// 选项卡
+var tab=new Tab({
+    navs:document.querySelectorAll("#J_tab_nav_1 li"),
+    tabs:document.querySelectorAll("#J_tab_main_1 .J_tab_main")
+});
+// 倒计时
+var startTime=document.getElementById("J_countdown_box").dataset.start.replace(/-/g,"/");
+var countdown=CountDown(startTime,{
+    day_box:document.getElementById("J_countdown_day"),
+    hour_box:document.getElementById("J_countdown_hour"),
+    minute_box:document.getElementById("J_countdown_minute"),
+    second_box:document.getElementById("J_countdown_second")
+}); 
+// 优惠券
+function get_bonus(bonus_id){
+    $.ajax({
+        type:'POST',
+        url:'active.php?id=6&act=get_bonus',
+        data:'&bonus_id='+bonus_id+'&m='+Math.random(),                         
+        cache:false,                    
+        success:
+        function(da)
+        {
+             if(da == 1){
+                 alert('您已成功领取优惠券！请至我的红包/优惠券查看^_^');
+             }else if(da == 2){
+                 alert('请登录后再试^_^');
+             }else if(da == 3){
+                 alert('您已领取过该优惠券^_^');
+             }
+        }
+    });
+}
+
+
+</script>
+</body>
+</html>

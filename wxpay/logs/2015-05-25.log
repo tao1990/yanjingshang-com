@@ -1,0 +1,4 @@
+[2015-05-25 15:42:31][debug] begin notify!
+[2015-05-25 15:42:31][debug] <xml><return_code><![CDATA[FAIL]]></return_code><return_msg><![CDATA[xml数据异常！]]></return_msg></xml>
+[2015-05-25 15:51:29][debug] begin notify!
+[2015-05-25 15:51:29][debug] <xml><return_code><![CDATA[FAIL]]></return_code><return_msg><![CDATA[xml数据异常！]]></return_msg></xml>

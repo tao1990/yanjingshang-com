@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+</head>
+<body>
+<!-- head -->
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<card id='ecshop' title='ECShop_WAP'>
+<p align='left'>
+站内新闻<br/>
+--------------<br/>
+{foreach from=$article_array item=article_data}
+    {$article_data.i}.<a href='article.php?act=detail&amp;a_id={$article_data.id}'>{$article_data.title}</a><br/>
+    发表时间:{$article_data.add_time}<br/>
+{/foreach}
+{if $pagebar}
+    {$pagebar}<br/>
+{/if}
+--------------<br/>
+</p>
+</card>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

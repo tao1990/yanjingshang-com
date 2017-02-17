@@ -1,0 +1,12 @@
+.clear{clear:both}
+#Scroll{margin:0;padding:0}
+.goods_list li{border-bottom: 1px solid #ccc}
+.list_a{margin: 0 auto;height: 120px;position: relative;display: block}
+.goods_list li img{width: 92px;height: 92px;border: 1px solid #ddd;float: left;margin-top:15px;margin-left:5px}
+.goods_list li .list_b{width:65%;float:left;margin-left:5px}
+.list_b div{margin-top:10px}
+.goods_list span{position: absolute;font-size: 14px;line-height: 150%;float: left;}
+.sp02 {top: 54px;width:100%}
+.sp04 {width:100%;top: 94px; display:block;overflow:hidden;zoom:1}
+.price1 {color: red;font-size: 18px;float:left;width:60%}
+.price2 {font-size: 12px;text-decoration: line-through;float:left;width:40%}

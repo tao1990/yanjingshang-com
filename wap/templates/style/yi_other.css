@@ -1,0 +1,18 @@
+﻿/*-----------------------------------其它页面寄存样式表-可删除----------------------------------------------*/
+#bigbanner{ margin:0 auto; width:1002px; height:300px; }
+#main{ margin:0 auto; width:1002px;  min-height:20px; background:url(../images/tj_main_bj.jpg)}
+#main_top{float:left; width:1002px;  min-height:20px;}
+#main_bot{ margin:0 auto; width:1002px; height:4px;}
+#main_botx{ margin:0 auto; width:1002px; height:10px;}
+.tj_main_top{ margin:0 auto; width:992px;  min-height:20px;}
+.tj_main_line{ margin:0 auto; width:992px; height:8px}
+.tj_main_top_left{ float:left; width:516px; min-height:232px}
+.tj_main_top_right{ float:left; width:472px; min-height:232px}
+.tj_main_top_t{ margin:0 auto; width:416px;  min-height:20px; text-align:left; font-size:24px; font-family:"榛戜綋"}
+.tj_main_top_r{ margin:0 auto; width:416px; min-height:20px; text-align:left; line-height:26px;font-size:18px; font-family:"榛戜綋"}
+.tj_main_r_left{float:left; margin-top:20px; width:280px;  min-height:20px; text-align:center;  line-height:26px;font-size:18px;}
+.tj_main_r_right{ float:left; width:160px; min-height:20px; text-align:center}
+.tj_main_r_right_text{ float:left; padding-left:40px; text-align:left; height:72px; padding-top:80px; }
+.tj_main_r_right_sub{float:right; text-align:left; padding-top:4px; height:48px;  }
+#spaces{ margin:0 auto;width:1002px; height:10px; line-height:10px; font-size:0px; }
+.tjjg{ color:#990000; font-size:16px;}

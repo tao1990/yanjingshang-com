@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="Keywords"    content="品牌商_眼镜行业全方位服务提供商" />
+	<meta name="Description" content="品牌商_眼镜行业全方位服务提供商" />	
+	<title>品牌商_眼镜行业全方位服务提供商</title>
+    <link rel="stylesheet" href="http://file.yunjingshang.com/css/style.css">
+</head>
+<body>
+	<!--导航-->
+	<div class="commonHeader-wrapper" id="headerNav">
+		<div class="clearfix commonHeader-container">
+			<a href="" class="commonHeader-logo"><img src="http://file.easeeyes.com/b2b/images/g_logo.png" alt=""></a>
+			<div class="commonHeader-navs">
+				<a href="/">首页</a>
+				<a href="/wslss.html">零售商</a>
+				<a href="/wspps.html">品牌商</a>
+				<a href="category_6.html">进货中心</a>
+				<a href="/service.html">服务中心</a>
+			</div>
+			<div class="commonHeader-btns">
+				<a href="user.html">登陆</a>
+				<a href="user_register.html">注册</a>
+			</div>
+		</div>
+	</div>
+	<!--sections-->
+	<div id="section-container">
+		<!--第一帧-->
+		<div class="section section-pps-01" data-title="品牌商">
+			<div class="section-container">
+				<div class="section-title" data-scroll-reveal="wait 0.1s, then enter top and move 40px over .5s">品牌集约化管理 首选云镜商</div>
+				<div class="section-subtitle" data-scroll-reveal="wait .8s, then enter from the bottom and move 40px over .5s">Brand intensive management of the first choice of cloud mirror providers</div>
+				<div class="ppsIntro" data-scroll-reveal="wait 1.2s, then enter from the bottom and move 40px over .5s">
+					<div style="font-size:65px;font-family:arial;line-height:1.6;">2015</div>
+					<p>帮您营造未来最赚钱的眼镜生意之路</p>
+					<p style="font-size:15px;">The most profitable way of doing business</p>
+					<a href="" class="ppsIntro-btn">了解更多</a>
+				</div>
+			</div>
+			<i class="section-btn"></i>
+		</div>
+		<!--第二帧-->
+		<div class="section section-pps-02" data-title="我们能做什么">
+			<div class="section-container">
+				<div class="section-title" data-scroll-reveal="wait 0.1s, then enter top and move 40px over .5s">我们能做什么</div>
+				<div class="section-subtitle" data-scroll-reveal="wait .8s, then enter from the bottom and move 40px over .5s">What We Can Do</div>
+				<div class="doWhat" data-scroll-reveal="wait 1.2s, then enter from the bottom and move 40px over .5s">
+					<p>提供一站式OAO解决方案</p>
+					云镜商-中国眼镜行业的优质供应链，由眼镜商信息科技有限公司创立的眼镜行业OAO服务提供商，整合营销、金融、信息技术资源、为眼镜品牌提供集约化管理，最专业的服务和最有价值的信息。
+				</div>
+			</div>
+			<i class="section-btn"></i>
+		</div>
+		<!--第三帧-->
+		<div class="section section-pps-03" data-title="四大危机">
+			<div class="section-container">
+				<div class="section-title" data-scroll-reveal="wait 0.1s, then enter top and move 40px over .5s">品牌商四大危机</div>
+				<div class="section-subtitle" data-scroll-reveal="wait .8s, then enter from the bottom and move 40px over .5s">Brands Face Four Crisis</div>
+				<div class="fourCrisis" data-scroll-reveal="wait 1.2s, then enter from the bottom and move 40px over .5s"><img src="http://file.easeeyes.com/b2b/images/pps/02.png" alt=""></div>
+			</div>
+			<i class="section-btn"></i>
+		</div>
+		<!--第四帧-->
+		<div class="section section-pps-04" data-title="解决方案">
+			<div class="section-container">
+				<div class="section-title" data-scroll-reveal="wait 0.1s, then enter top and move 40px over .5s">品牌商 · 解决方案</div>
+				<div class="section-subtitle" data-scroll-reveal="wait .4s, then enter from the bottom and move 40px over .5s">The Solution Of Brands</div>
+				<div class="section-description" data-scroll-reveal="wait .8s, then enter from the bottom and move 40px over .5s">云镜商，提供最全面的智慧眼镜OAO解决方案，完整流畅的优质供应链。我们集深度眼镜行业经验，整合了营销、金融、信息技术等资源，从多角度提供全方位支持，成为线下眼镜零售店的全方位孵化器。</div>
+				<div class="brandsSolution" data-scroll-reveal="wait 1.2s, then enter from the bottom and move 40px over .5s">
+					<div class="brandsSolution-item">
+						<div class="brandsSolution-thumb"><img src="http://file.easeeyes.com/b2b/images/pps/03.png" alt=""></div>
+						<div class="brandsSolution-title">销售渠道少</div>
+						<div class="brandsSolution-text">线上线下零售资源全面解决销售渠道难题及传统营销模式弊端。</div>
+					</div>
+					<div class="brandsSolution-item">
+						<div class="brandsSolution-thumb"><img src="http://file.easeeyes.com/b2b/images/pps/04.png" alt=""></div>
+						<div class="brandsSolution-title">营销推广效果不佳</div>
+						<div class="brandsSolution-text">采用最新的互联网营销手段整合行业资源，使时间减半效果加倍。</div>
+					</div>
+					<div class="brandsSolution-item">
+						<div class="brandsSolution-thumb"><img src="http://file.easeeyes.com/b2b/images/pps/05.png" alt=""></div>
+						<div class="brandsSolution-title">经销商管理繁琐</div>
+						<div class="brandsSolution-text">提供便捷的零售店集中管理平台，降低管理成本，提高企业利率。</div>
+					</div>
+					<div class="brandsSolution-item">
+						<div class="brandsSolution-thumb"><img src="http://file.easeeyes.com/b2b/images/pps/06.png" alt=""></div>
+						<div class="brandsSolution-title">供应链及资金不足</div>
+						<div class="brandsSolution-text">供应链金融服务全面提高企业资金周转率</div>
+					</div>
+				</div>
+			</div>
+			<i class="section-btn"></i>
+		</div>
+		<!--第五帧-->
+		<div class="section section-pps-05" data-title="我们的优势">
+			<div class="section-container">
+				<div class="section-title" data-scroll-reveal="wait 0.1s, then enter top and move 40px over .5s">我们的优势</div>
+				<div class="section-subtitle" data-scroll-reveal="wait .8s, then enter from the bottom and move 40px over .5s">Our Advantage</div>
+				<div class="ppsAdvantage" data-scroll-reveal="wait 1.2s, then enter from the bottom and move 40px over .5s">
+					<div class="ppsAdvantage-item">
+						<div class="ppsAdvantage-thumb"><img src="http://file.easeeyes.com/b2b/images/pps/07.png" alt=""></div>
+						<div class="ppsAdvantage-title">丰富资源</div>
+						<div class="ppsAdvantage-text">线上线下零售资源<br>全面解决销售难题</div>
+					</div>
+					<div class="ppsAdvantage-item">
+						<div class="ppsAdvantage-thumb"><img src="http://file.easeeyes.com/b2b/images/pps/08.png" alt=""></div>
+						<div class="ppsAdvantage-title">整合资源</div>
+						<div class="ppsAdvantage-text">10年以上互联网<br>营销经验整合资源</div>
+					</div>
+					<div class="ppsAdvantage-item">
+						<div class="ppsAdvantage-thumb"><img src="http://file.easeeyes.com/b2b/images/pps/09.png" alt=""></div>
+						<div class="ppsAdvantage-title">降低成本</div>
+						<div class="ppsAdvantage-text">提供集约化管理<br>平台降低成本</div>
+					</div>
+					<div class="ppsAdvantage-item">
+						<div class="ppsAdvantage-thumb"><img src="http://file.easeeyes.com/b2b/images/pps/10.png" alt=""></div>
+						<div class="ppsAdvantage-title">提高周转率</div>
+						<div class="ppsAdvantage-text">多样的供应链金融<br>支持提高周转率</div>
+					</div>
+				</div>
+			</div>
+			<i class="section-btn"></i>
+		</div>
+		<!--第六帧-->
+		<div class="section section-pps-06" data-title="招募须知">
+			<div class="section-container">
+				<div class="section-title" data-scroll-reveal="wait 0.1s, then enter top and move 40px over .5s">招募须知</div>
+				<div class="section-subtitle" data-scroll-reveal="wait .4s, then enter from the bottom and move 40px over .5s">Recruitment Information</div>
+				<p class="section-description" data-scroll-reveal="wait .8s, then enter from the bottom and move 40px over .5s">只要你有自己的注册品牌，有拓展的需求，都可以来云镜商！</p>
+				<div class="recruitmentInformation" data-scroll-reveal="wait 1.2s, then enter from the bottom and move 40px over .5s">
+					<div class="recruitmentInformation-items">
+						<div class="recruitmentInformation-item"><img src="http://file.easeeyes.com/b2b/images/lss/02.jpg" alt=""></div>
+						<div class="recruitmentInformation-item"><img src="http://file.easeeyes.com/b2b/images/lss/03.jpg" alt=""></div>
+						<div class="recruitmentInformation-item"><img src="http://file.easeeyes.com/b2b/images/lss/04.jpg" alt=""></div>
+					</div>
+				</div>
+			</div>
+			<i class="section-btn"></i>
+		</div>
+		<!--第七帧-->
+		<div class="section section-pps-07">
+			<div class="section-container">
+				<div class="section-title" data-scroll-reveal="wait 0.1s, then enter top and move 40px over .5s">欢 迎 入 驻</div>
+				<div class="section-subtitle" data-scroll-reveal="wait .4s, then enter from the bottom and move 40px over .5s">Welcome To Brands</div>
+				<div class="section-description" data-scroll-reveal="wait .8s, then enter from the bottom and move 40px over .5s">客服热线：4006-177-176</div>
+				<a target="_blank" href="" class="contactUs" data-scroll-reveal="wait 1.2s, then enter from the bottom and move 40px over .5s"><img src="http://file.easeeyes.com/b2b/images/pps/11.png" alt=""></a>
+			</div>
+		</div>
+		<!--第七帧-->
+		<div class="section section-lss-07" data-title="入驻流程">
+			<div class="section-fluid">
+				<div class="section-title" data-scroll-reveal="wait 0.1s, then enter top and move 40px over .5s">入驻流程</div>
+				<div class="section-subtitle" data-scroll-reveal="wait .4s, then enter from the bottom and move 40px over .5s">Registration Process</div>
+				<p class="section-description" data-scroll-reveal="wait .8s, then enter from the bottom and move 40px over .5s">入驻商户成为眼镜商专属用户，轻松管理店铺、导购、商品</p>
+				<div class="registrationProcess" data-scroll-reveal="wait 1.2s, then enter from the bottom and move 40px over .5s"><img src="http://file.easeeyes.com/b2b/images/lss/12.png" alt=""></div>
+				<a href="user.php" class="RegistNow" data-scroll-reveal="wait .1.6s, then enter from the bottom and move 40px over .5s"><img src="http://file.easeeyes.com/b2b/images/lss/13.png" alt=""></a>
+			</div>
+			
+			<div class="footer-wrapper section-fixed">
+					<div class="footer-container">
+						<div class="footer-info">
+							<p class="footer-info-title"><img src="http://file.easeeyes.com/b2b/images/g_icon_member.png" alt="">  联系我们</p>
+							<p class="footer-info-tel"><img src="http://file.easeeyes.com/b2b/images/g_icon_tel.png" alt="">  021-66286330</p>
+							<p>联系电话：18516233256  <br>企业邮箱：jackie@yunjingshang.com </p>
+						</div>
+						<div class="footer-ewms clearfix">
+							<div class="footer-ewm">
+								<p class="footer-ewm-title"><img src="http://file.easeeyes.com/b2b/images/g_icon_phone.png" alt=""/>  微信公众号</p>
+								<p><img src="http://img.yunjingshang.com/images/common/ys_wx.jpg" width="156px" height="156px" alt=""></p>
+							</div>
+							<div class="footer-ewm">
+								<p class="footer-ewm-title"><img src="http://file.easeeyes.com/b2b/images/g_icon_phone.png" alt="">  云镜商微博</p>
+								<p><img src="http://img.yunjingshang.com/images/common/ys_wb.jpg" width="156px" height="156px"  alt=""></p>
+							</div>
+						</div>
+                        <!-- #BeginLibraryItem "/library/index_page_aptitude.lbi" --><!-- #EndLibraryItem -->
+					</div>
+				</div>
+		</div>
+	</div>
+	<script src="http://file.yunjingshang.com/js/jquery.min.js"></script>
+	<script src="http://file.yunjingshang.com/js/page.js"></script>
+	<script src="http://file.yunjingshang.com/js/scrollReveal.min.js"></script>
+	<script>
+	// 自适应高度
+	$(window).load(function(){
+		var sections=$('.section-container')
+		sections.each(function(){
+			var height=$(this).height();
+			$(this).css('marginTop',-height/2)
+		})
+		try{
+			// 形式二
+			var sections2=$('.section-fluid')
+			var screenH=$(window).height()
+			sections2.each(function(){
+				var selfHeight=$(this).height()
+				var fixHeight=$(this).siblings('.section-fixed').height()
+				$(this).css('paddingTop',(screenH-fixHeight-selfHeight)/2+'px')
+			})
+		}catch(e){}
+	})	
+
+	try{
+		new scrollReveal({reset: true});
+	}catch(e){}
+
+	</script>
+</body>
+</html>

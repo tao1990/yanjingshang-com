@@ -1,0 +1,92 @@
+<!--新构页尾 author:yijangwen-->
+<div class="clear"></div>
+<!--{if $brand_listn}-->
+<div id="linkpic"><!--{foreach from=$brand_listn item=brand name=faa}--><!--{if $smarty.foreach.faa.index <= 23}--><!--{if $brand.brand_logo}--><a href="{$brand.url}" target="_blank"><img src="/data/brandlogo/{$brand.brand_logo}" width="91" height="42" alt="{$brand.brand_name}"/></a><!--{else}--><a href="{$brand.url}">{$brand.brand_name}</a><!--{/if}--><!--{/if}--><!--{/foreach}--></div>
+<!--{/if}-->
+<div class="foot_pan">
+    <div class="foot_center">
+        <ul class="help_pan1">
+            <li class="fl mt12"><img src="/themes/default/images/help_kefu.gif" width="185" height="124" alt="客服中心"></li> 
+            <!--{if $helps}-->
+            <!--{foreach from=$helps item=help_cat name=foo}-->        
+            <li class="help_cat_spance"></li><!--{if $smarty.foreach.foo.index}--><li class="help_line"><img src="/themes/default/images/line_s.jpg" width="2" height="90" alt=""/></li><!--{/if}-->        
+            <li class="help_con fl"><ul>
+                <li class="help_head fl">    
+                <!--{if $smarty.foreach.foo.iteration==1}--><a href='/{$help_cat.cat_id}' title="{$help_cat.cat_name}" rel="nofollow"><img src="/themes/default/images/how_to_shop.gif" width="78" height="17" alt=""></a><!--{/if}-->
+                <!--{if $smarty.foreach.foo.iteration==2}--><a href='/{$help_cat.cat_id}' title="{$help_cat.cat_name}" rel="nofollow"><img src="/themes/default/images/how_to_pay.gif" width="78" height="17" alt=""></a><!--{/if}-->
+                <!--{if $smarty.foreach.foo.iteration==3}--><a href='/{$help_cat.cat_id}' title="{$help_cat.cat_name}" rel="nofollow"><img src="/themes/default/images/how_to_post.gif" width="79" height="17" alt=""></a><!--{/if}-->
+                <!--{if $smarty.foreach.foo.iteration==4}--><a href='/{$help_cat.cat_id}' title="{$help_cat.cat_name}" rel="nofollow"><img src="/themes/default/images/after_service.gif" width="80" height="17" alt=""></a><!--{/if}-->
+                <!--{if $smarty.foreach.foo.iteration==5}--><a href='/{$help_cat.cat_id}' title="{$help_cat.cat_name}" rel="nofollow"><img src="/themes/default/images/how_to_my.gif" width="78" height="17" alt=""></a><!--{/if}-->
+                </li>                
+                <li class="help_text fl">                 
+                <!--{foreach from=$help_cat.article item=item}--><a href="/{$item.url}" target="_blank" title="{$item.title|escape:html}" rel="nofollow">{$item.short_title}</a><br/><!--{/foreach}-->
+                </li></ul>               
+            </li><!--{/foreach}--><!--{/if}-->
+        </ul>
+        <div class="trust">
+            <a href="/article-77.html" target="_blank" rel="nofollow"><img src="/themes/default/images/yi_ads/bg1.gif" width="293" height="31" alt="正品保障"/></a>
+            <a href="/article-76.html" target="_blank" rel="nofollow"><img src="/themes/default/images/yi_ads/bg2.gif" width="316" height="31" alt="30天退换"/></a>
+            <a href="/article-37.html" target="_blank" rel="nofollow"><img src="/themes/default/images/yi_ads/bg3.gif" width="312" height="31" alt="开箱验货"/></a>
+        </div>        
+        <!--{if $txt_links}-->  
+        <div class="friend_link">
+	    <div class="friend_link_left"><a href="/friend_link.html" target="_blank" title="更多友情链接">友情链接：</a></div>      
+            <div id="scrollDiv">
+                <ul><li>                
+<!--{foreach from=$txt_links item=link name=foo}--><a href="{$link.url}" target="_blank">{$link.name}</a><span class="width12"></span>
+{if $smarty.foreach.foo.iteration%12 eq 0 && $smarty.foreach.foo.index>0 && $smarty.foreach.foo.index neq $smarty.foreach.foo.last}</li><li>{/if}<!--{/foreach}-->     
+                </li></ul> 
+            </div> 
+        </div>        
+        <!--{else}--><div class="space15"></div><!--{/if}-->
+        <div class="help_bottom">         
+        <!--{foreach from=$botbanner item=cat name=foo}-->{if $smarty.foreach.foo.index < 5}
+        <!--{if $cat.ad_code}--><!--{if $cat.ad_link}--><a href="{$cat.ad_link}" target="_blank" rel="nofollow"><img src="{$cat.ad_code}" height="40px" alt=""/></a>{else}<img src="{$cat.ad_code}" height="40px" alt=""/><!--{/if}-->
+        <!--{/if}-->
+        {else}
+        <!-- 可信网站LOGO安装开始 -->
+        <script type="text/JavaScript">
+            function CNNIC_change(eleId){
+                var str= document.getElementById(eleId).href;
+                var str1 =str.substring(0,(str.length-6));
+                str1+=CNNIC_RndNum(6);  
+                document.getElementById(eleId).href=str1;
+            }
+            function CNNIC_RndNum(k){
+                var rnd="";                   
+                for (var i=0;i < k;i++)                   
+                rnd+=Math.floor(Math.random()*10); 
+                return rnd;
+            }
+         </script>
+        <a href="https://ss.cnnic.cn/verifyseal.dll?sn=2011050600100008401&pa=294005" tabindex="-1" id="urlknet" target="_blank" rel="nofollow"> 
+         <img alt="&#x53EF;&#x4FE1;&#x7F51;&#x7AD9;" name="CNNIC_seal" src="{$cat.ad_code}" height="40" oncontextmenu="return false;" onclick="CNNIC_change('urlknet')"/>
+        </a><!-- 可信网站LOGO安装结束 -->
+        {/if}<!--{/foreach}-->        
+        </div>
+        <!--{if $new_articles_botter}-->      
+        <div class="help_about_me" ><!--{foreach from=$new_articles_botter name=nav_bottom_list item=nav}--><!--{if $smarty.foreach.nav_bottom_list.iteration <= 5}-->
+        <!--{if $smarty.foreach.nav_bottom_list.index}--><font class="color9">|</font><!--{/if}-->            
+            <a href="/{$nav.url}" title="{$nav.short_title|escape:html}" target="_blank" rel="nofollow">&nbsp;&nbsp;{$nav.short_title|truncate:10:false}&nbsp;&nbsp;</a><!--{if !$smarty.foreach.nav_bottom_list.last}--><!--{/if}-->
+        <!--{elseif $smarty.foreach.nav_bottom_list.iteration eq 6}-->
+            <!--{if $smarty.foreach.nav_bottom_list.index}--><font class="color9">|</font><!--{/if}-->            
+            <a href="/sitemaps.html" title="{$nav.short_title|escape:html}" target="_blank">&nbsp;&nbsp;{$nav.short_title|truncate:10:false}&nbsp;&nbsp;</a><!--{if !$smarty.foreach.nav_bottom_list.last}--><!--{/if}--><!--{else}--><!--{/if}--><!--{/foreach}-->
+        </div>
+        <!--{/if}-->
+        <div id="copyright">
+            <font class="mark_a">&copy;</font>易视网 2008-2011 上海明庭贸易有限公司 版权所有 网站备案号：<a href="http://www.miibeian.gov.cn" target="_blank" rel="nofollow"><font color="#969696">沪ICP备08112987号-2</font></a>
+        </div>
+    </div>    
+</div>
+<script type="text/javascript">
+document.write(unescape("%3Cscript src='http://hm.baidu.com/h.js%3Fe48ccf4344d9eeb0415ec07e5c72096b' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="visibility:hidden;"><script type="text/javascript" src="http://js.tongji.linezing.com/2322564/tongji.js"></script></div>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-24020962-1'], ['_trackPageview'], ['b._setAccount', 'UA-24020781-1'], ['b._trackPageview'] );
+(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = 'http://www.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>

@@ -1,0 +1,22 @@
+<!--{foreach from=$new_articles item=article name=aa}-->
+	<!--{if $smarty.foreach.aa.index < 5}-->
+        <div class="newstitlehot">
+            <!--{if $smarty.foreach.aa.index < 4 }-->            
+                <!--{if $smarty.foreach.aa.index == 0 }-->
+                    <span class="reportline"><img alt="" src="../images/yi_tip/dot.gif" border="0">&nbsp;
+                        <a href="{$article.url}" title="{$article.title|escape:html}" target="_blank" style="color:#c30000;">    
+                    {$article.short_title|truncate:15:false}</a></span>
+                <!--{else}-->            
+                    <span class="reportline"><img alt="" src="../images/yi_tip/dot.gif" border="0">&nbsp;
+                        <a href="{$article.url}" title="{$article.title|escape:html}" target="_blank" >    
+                    {$article.short_title|truncate:15:false}</a></span>
+             	<!--{/if}-->             
+            <!--{else}-->
+                <span class="reportline"><img alt="" src="../images/yi_tip/dot.gif" border="0">&nbsp;
+                    <a href="{$article.url}" title="{$article.title|escape:html}" target="_blank">    
+                {$article.short_title|truncate:15:false}</a></span>                 
+            <!--{/if}-->                   
+        </div>        
+        <div class="clear"></div>
+    <!--{/if}-->
+<!--{/foreach}-->

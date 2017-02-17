@@ -1,0 +1,35 @@
+{if $here=='首页'}
+<div class="ys-nav">
+	<div class="ys-nav-left">
+        <!--{if !$ur_here}-->
+        <a  href="/wap" class="ys-home"></a>
+        <!--{/if}-->
+	</div>
+        <div class="ys-nav-title of">
+    	<!--{if $ur_here}-->
+    	<a class="here">{$ur_here}</a>
+    	<!--{/if}-->
+    	</div>
+	<div class="ys-nav-right">
+    	<a  href="menu.php" class="menu"></a>
+		<a  href="user.php" class="my-account"></a>
+		<a id="cartnum" href="flow.php" class="my-cart">
+        <span id="head_cart_num"><em>{insert name='cart_num'}</em></span>
+        </a>
+	</div>
+</div>
+{else}
+<div class="ys_smallnav">
+	<div class="ys_smallnav_left">
+        <a href="javascript:;" onClick="javascript:history.back(-1);"><img src="/wap/images/return.jpg"/></a>
+        <a href="menu.php"><img src="/wap/images/smallnav_index.jpg"/></a>
+    </div>
+    <div class="smallnav_intro">{$ur_here}</div>
+    <div class="ys_smallnav_right">
+       <a class="my-cart" id="cartnum" href="flow.php"><img src="/wap/images/car.jpg"/><span id="head_cart_num" style="right: 37px;
+top: 6px;"><em>{insert name='cart_num'}</em></span></a>
+       <a href="index.php"><img src="/wap/images/index.jpg"/></a>
+    </div>
+    <div class="clear"></div>
+</div>
+{/if}

@@ -1,0 +1,599 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/goods.css"/>
+<link href="/wap/css/focus_goods.css" rel="stylesheet" type="text/css" />
+<style>
+#ts-01 li{text-align:center;background:#fff;}
+#ts-01 li img{height:20rem;width:auto !important;}
+#slider-01 .points{text-align:center;}
+</style>
+</head>
+<body>
+
+<!-- head -->
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<script type="text/javascript" src="{$image_url}wap/js/koala.min.1.5.js"></script>
+<script type="text/javascript" src="{$image_url}js/common.js" ></script>
+<script type="text/javascript" src="{$image_url}wap/js/scrollpagination.js"></script>
+<script type="text/javascript" src="{$image_url}wap/js/transport2.js"></script>
+<div class="content">
+<div class="content flowbox">
+<a id="jbxx" class="xz" style="background: url('images/gt.png') right no-repeat;">基本信息</a>
+<a id="cpxq" style="background: url('images/gt.png') right no-repeat;">产品详情</a>
+<a id="yhpl">用户评论</a>
+</div>
+
+
+<div class="jbxx">
+
+  <div class="banMod container" id="slider-01">
+      <ul class="clearfix" id="ts-01">
+          <!--{foreach from=$gallery item=li name=foo}-->
+          <li><img src="{$image_url}{$li.thumb_url}" /></li>
+          <!--{/foreach}-->
+      </ul>
+  </div>
+
+<div class="brand">
+    <div class="brand_z">
+        <span class="price2">易视价：￥{$goods.shop_price}</span>
+        <span class="price2">市场价：{$goods.market_price}</span>
+        <span class="zk" style="font-size:1.4rem;color:rgb(13,152,180);">兑换积分：{$exgoods.exchange_integral}积分</span>
+    </div>
+    <div class="brand_y">
+    <a href="javascript:collect_ajax({$goods.goods_id})">收藏</a>
+    </div>
+</div>
+
+<div class="content goods_name">
+<span>{$goods.goods_name}</span>
+</div>
+<div class="content goods_name_tr">
+<span>
+{if $goods.goods_name_desc_wap}{$goods.goods_name_desc_wap}{else}{$goods.goods_brief}{/if}
+</span>
+</div>
+<form name="ECS_FORMBUY" id="ECS_FORMBUY" action="exchange.php?act=buy" method="post">
+    <!--{if $goods.eye_id > 0}积分兑换 有度数产品-->
+        <!--{if $goodsds}-->
+        <div class="content ds_choose fold">
+            <span>度数选择:</span>
+        </div>
+        <div class="content ds_choose_info">
+            <div class="ds_radio_list">
+                <!--{foreach from=$goodsds item=li}-->
+                <div class="ds_radio_div">
+                    <label for="radio-ds-{$li.pid}" class="ds_radio{if $li.status} ds_radio_disabled{/if}">{$li.val}</label>
+                    <input name="goods_ds" class="dsselect" id="radio-ds-{$li.pid}" value="{if $li.canbuy}{$li.val}{/if}" type="radio"/>
+                </div>
+                <!--{/foreach}-->
+            </div>
+        </div>
+        <!--{/if}-->
+    <!--{else}积分兑换 没度数商品-->
+        <input type="hidden" name="goods_ds" id="select_ds" value="0"/>
+    <!--{/if}-->
+    <div class="goods_count">
+        数量:
+        <ul class="goods_number">
+            <li class="bt_minus bt_minusjia"><a style="background: url('images/-.png') no-repeat;" href="javascript:void(0)"></a></li>
+            <li class="input_cunt_li"><input readonly="true" type="text" id="count" name="exchange_num" value="1" class="input_count"/></li>
+            <li class="input_count_unit">{$goods.unit|default:盒}</li>
+            <li class="bt_add bt_minusjian"><a style="background: url('images/+.png') no-repeat" href="javascript:void(0)"></a></li>
+        </ul>
+    </div>
+    <div class="content add_cart_div">
+        {if $goods.goods_number>0}
+        <a class="btn_to_cart" onclick="ck_exchange_goods_wap()">立即兑换</a>
+        {else}
+        <div class="pro_top_bem_bt-a fl goods_sale_out">已兑换完</div>
+        {/if}
+    </div>
+    <input type="hidden" name="goods_id" value="{$goods.goods_id}" />
+</form>
+<script>
+    //检查积分兑换商品表单数据
+    function ck_exchange_goods_wap()
+    {
+        var select_ds = $("input[name='goods_ds']:checked").val();
+        //alert(select_ds);return false;
+        if(!select_ds)
+        {
+            if($('#select_ds').val() == 0)
+            {
+                document.getElementById('ECS_FORMBUY').submit();
+            }else{
+                alert('请选择兑换的眼镜度数！');
+                return false;
+            }
+        }
+        else
+        {
+            document.getElementById('ECS_FORMBUY').submit();
+            /*alert($("#select_ds").val());
+            alert(select_ds);
+            return false;*/
+        }
+    }
+</script>
+<div class="tel clearfix">
+    <a href="javascript:;" onclick="win_onload()" class="pull-left">在线咨询 <img src="http://file.easeeyes.com/wap/images/kf.jpg" /></a>
+    <a href="tel:4006-117-176" class="pull-right">客服：4006-117-176</a>
+</div>
+<div class="content zzgm">
+    <div>买了此商品的会员通常还买了</div>
+    <ul>
+    <!--{foreach from=$bought_goods item=buyg}-->
+        <li>
+            <a href="goods.php?id={$buyg.goods_id}"><img src="{$image_url}{$buyg.goods_img}" /></a>
+            <p class="sp01">{$buyg.goods_name}</p>
+            <p class="sp02">￥{$buyg.shop_price}</p>
+            <p class="sp03">￥{$buyg.market_price}</p>
+        </li>
+    <!--{/foreach}-->
+     
+    </ul>
+</div>
+
+
+<div class="box_a" id="mydiv" style="width:20rem;height:8rem;left:50%;top:50%;margin-left:-10rem;margin-top:-4rem;border:0 none;background:rgba(0,0,0,.8);color:#fff;border-radius:.5rem;z-index:999;display:none;">
+    <div style="height:100%;">  
+            <p style="text-align:center;color:#fff;line-height:4.5rem;border-bottom:1px solid #999;font-size:1.3rem;">已成功添加到购物车！</p>     
+        <div style="height:3.5rem;line-height:3.5rem;overflow:hidden;font-size:1.2rem;">
+            <a onclick="$('#mydiv').css('display','none')" style="width:50%;float:left;text-align:center;border-right:1px solid #999;box-sizing:border-box;">继续购物</a>
+            <a href="flow.php" style="width:50%;float:left;text-align: center;">去结算</a>
+        </div>   
+    </div>
+</div>
+
+</div>
+
+<div class="cpxq">
+
+<div class="xiang_one">
+   <div><img src="{$image_url}wap/images/xiang_one.jpg"></div>
+   <div>
+       <!--{if $goods.goods_type eq 10 or $goods.goods_type eq 12}[隐形眼镜]-->
+            <!--{foreach from=$attrs item=attr name=foo}-->
+                <!--{if $attr.attr_id eq 211 or $attr.attr_id eq 219}-->
+                    <div class="xiang_detail">
+                      <div class="xiang_detail_left">更换周期:</div>
+                      <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                      <div class="clear"></div>
+                    </div>
+                <!--{/if}-->
+                <!--{if $attr.attr_id eq 212 or $attr.attr_id eq 220}-->
+                    <div class="xiang_detail">
+                      <div class="xiang_detail_left">颜色:</div>
+                      <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                      <div class="clear"></div>
+                    </div>
+                <!--{/if}-->
+                <!--{if $attr.attr_id eq 213 or $attr.attr_id eq 221}-->
+                    <div class="xiang_detail">
+                      <div class="xiang_detail_left">含水量:</div>
+                      <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                      <div class="clear"></div>
+                    </div>
+                <!--{/if}-->
+                <!--{if $attr.attr_id eq 214 or $attr.attr_id eq 222}-->
+                    <div class="xiang_detail">
+                      <div class="xiang_detail_left">直径:</div>
+                      <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                      <div class="clear"></div>
+                    </div>
+                <!--{/if}-->
+                <!--{if $attr.attr_id eq 215 or $attr.attr_id eq 223}-->
+                    <div class="xiang_detail">
+                      <div class="xiang_detail_left">基弧:</div>
+                      <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                      <div class="clear"></div>
+                    </div>
+                <!--{/if}-->
+                <!--{if $attr.attr_id eq 224 or $attr.attr_id eq 229}-->
+                    <div class="xiang_detail">
+                      <div class="xiang_detail_left">中心厚度:</div>
+                      <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                      <div class="clear"></div>
+                    </div>
+                <!--{/if}-->
+                <!--{if $attr.attr_id eq 240}-->
+                    <div class="xiang_detail">
+                      <div class="xiang_detail_left">透氧系数:</div>
+                      <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                      <div class="clear"></div>
+                    </div>
+                <!--{/if}-->
+                <!--{if $attr.attr_id eq 225 or $attr.attr_id eq 230}-->
+                    <div class="xiang_detail">
+                      <div class="xiang_detail_left">材质:</div>
+                      <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                      <div class="clear"></div>
+                    </div>
+                <!--{/if}-->
+                <!--{if $attr.attr_id eq 241 or $attr.attr_id eq 242}-->
+                    <div class="xiang_detail">
+                      <div class="xiang_detail_left">单位:</div>
+                      <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                      <div class="clear"></div>
+                    </div>
+                <!--{/if}-->
+                <!--{if $attr.attr_id eq 226 or $attr.attr_id eq 231}-->
+                    <div class="xiang_detail">
+                      <div class="xiang_detail_left">产地:</div>
+                      <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                      <div class="clear"></div>
+                    </div>
+                <!--{/if}-->
+                <!--{if $attr.attr_id eq 227 or $attr.attr_id eq 232}-->
+                    <div class="xiang_detail">
+                      <div class="xiang_detail_left " >有效期:</div>
+                      <div class="xiang_detail_right " >{$attr.attr_value}&nbsp;</div>
+                      <div class="clear"></div>
+                    </div>
+                <!--{/if}-->
+                <!--{if $attr.attr_id eq 228 or $attr.attr_id eq 233}-->
+                    <div class="xiang_detail">
+                      <div class="xiang_detail_left ">注册号:</div>
+                      <div class="xiang_detail_right" >{$attr.attr_value}&nbsp;</div>
+                      <div class="clear"></div>
+                    </div>
+                <!--{/if}-->
+                
+            <!--{/foreach}-->
+       <!--{/if}-->
+       
+       <!--{if $goods.goods_type eq 13 or $goods.goods_type eq 0}[护理液]-->
+                <div class="xiang_detail">
+                      <div class="xiang_detail_left">品牌:</div>
+                      <div class="xiang_detail_right">{$goods.goods_brand}&nbsp;</div>
+                      <div class="clear"></div>
+                </div>
+        <!--{foreach from=$attrs item=attr name=foo}-->
+            <!--{if $attr.attr_id eq 243}-->
+                    <div class="xiang_detail">
+                      <div class="xiang_detail_left">单位:</div>
+                      <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                      <div class="clear"></div>
+                    </div>
+            <!--{/if}-->
+            <!--{if $attr.attr_id eq 234}-->
+                    <div class="xiang_detail">
+                      <div class="xiang_detail_left">更换周期:</div>
+                      <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                      <div class="clear"></div>
+                    </div>
+            <!--{/if}-->
+            <!--{if $attr.attr_id eq 235}-->
+                    <div class="xiang_detail">
+                      <div class="xiang_detail_left">主要功能:</div>
+                      <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                      <div class="clear"></div>
+                    </div>
+            <!--{/if}-->
+            <!--{if $attr.attr_id eq 236}-->
+                    <div class="xiang_detail">
+                      <div class="xiang_detail_left">主要成分:</div>
+                      <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                      <div class="clear"></div>
+                    </div>
+            <!--{/if}-->
+            <!--{if $attr.attr_id eq 237}-->
+                    <div class="xiang_detail">
+                      <div class="xiang_detail_left">产地:</div>
+                      <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                      <div class="clear"></div>
+                    </div>
+            <!--{/if}-->
+            <!--{if $attr.attr_id eq 238}-->
+                    <div class="xiang_detail">
+                      <div class="xiang_detail_left">有效期:</div>
+                      <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                      <div class="clear"></div>
+                    </div>
+            <!--{/if}-->
+            <!--{if $attr.attr_id eq 239}-->
+                    <div class="xiang_detail">
+                      <div class="xiang_detail_left">注册号:</div>
+                      <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                      <div class="clear"></div>
+                    </div>
+            <!--{/if}-->
+        <!--{/foreach}-->
+       <!--{/if}-->
+       
+       <!--{if $goods.goods_type eq 14}[护理工具]-->
+            <div class="xiang_detail">
+                      <div class="xiang_detail_left">品牌:</div>
+                      <div class="xiang_detail_right">{$goods.goods_brand}&nbsp;</div>
+                      <div class="clear"></div>
+            </div>
+            <div class="xiang_detail">
+                      <div class="xiang_detail_left">单位:</div>
+                      <div class="xiang_detail_right">{$goods.unit|default:盒}&nbsp;</div>
+                      <div class="clear"></div>
+            </div>
+       <!--{/if}-->
+       
+       <!--{if $goods.goods_type eq 15}[框架眼镜]-->
+            <div class="xiang_detail">
+                      <div class="xiang_detail_left">品牌:</div>
+                      <div class="xiang_detail_right">{$goods.goods_brand}&nbsp;</div>
+                      <div class="clear"></div>
+            </div>
+            <!--{foreach from=$attrs item=attr name=foo}-->
+                <div class="xiang_detail">
+                      <div class="xiang_detail_left">
+                        <!--{if $attr.attr_id eq 244}-->款式
+                        <!--{elseif $attr.attr_id eq 245}-->框型
+                        <!--{elseif $attr.attr_id eq 246}-->尺寸
+                        <!--{elseif $attr.attr_id eq 247}-->材质
+                        <!--{elseif $attr.attr_id eq 248}-->颜色
+                        <!--{elseif $attr.attr_id eq 249}-->风格
+                        <!--{elseif $attr.attr_id eq 250}-->镜框尺寸
+                        <!--{elseif $attr.attr_id eq 251}-->鼻梁尺寸
+                        <!--{elseif $attr.attr_id eq 252}-->镜腿尺寸
+                        <!--{elseif $attr.attr_id eq 253}-->镜框高度
+                        <!--{elseif $attr.attr_id eq 254}-->总宽度
+                        <!--{else}--><!--{/if}-->:
+                      </div>
+                      <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                      <div class="clear"></div>
+                </div>
+            <!--{/foreach}--> 
+            <div class="xiang_detail">
+                      <div class="xiang_detail_left">单位:</div>
+                      <div class="xiang_detail_right">{$goods.unit|default:副}&nbsp;</div>
+                      <div class="clear"></div>
+            </div> 
+    
+       <!--{/if}--> 
+            
+       <!--{if $goods.goods_type eq 16}[太阳眼镜]-->
+        <div class="xiang_detail">
+          <div class="xiang_detail_left">品牌:</div>
+          <div class="xiang_detail_right">{$goods.goods_brand}</div>
+          <div class="clear"></div>
+        </div>
+        <!--{foreach from=$attrs item=attr name=foo}-->
+                  {if $attr.attr_id< 265 || $attr.attr_id> 257}
+                  <div class="xiang_detail">
+                      <div class="xiang_detail_left">
+                        <!--{if $attr.attr_id eq 258}-->款式
+                        <!--{elseif $attr.attr_id eq 259}-->框型
+                        <!--{elseif $attr.attr_id eq 260}-->尺码
+                        <!--{elseif $attr.attr_id eq 261}-->材质
+                        <!--{elseif $attr.attr_id eq 262}-->颜色
+                        <!--{elseif $attr.attr_id eq 263}-->产地
+                        <!--{elseif $attr.attr_id eq 264}-->尺寸
+                        <!--{else}--><!--{/if}-->:
+                      </div>
+                      <div class="xiang_detail_right">{$attr.attr_value}&nbsp;</div>
+                      <div class="clear"></div>
+                  </div>
+                  {/if}
+        <!--{/foreach}-->  
+       <!--{/if}-->           
+
+  
+   </div>
+</div><!--xiang_one end-->
+<div class="xiang_two">
+   <div><img src="{$image_url}wap/images/xiang_two.png"/></div>
+</div><!--xiang_one end-->
+<div style="text-align: center;padding-left:.5rem;
+padding-right:.5rem;">
+{$goods.goods_desc}
+</div>
+
+</div>
+
+
+<div class="yhpl">
+
+<div class="content discuss">
+   <div class="content discuss_one">
+      <div class="discuss_one_left">
+          <p>好评率</p>
+          <p class="percent">{$append.pre_haoping}%</p>
+      </div><!--discuss_one_left end-->
+      <div class="discuss_one_right">
+          <div class="ju_intro">
+             <div class="language">舒适度</div>
+             <div class="zhishu star{$append.star_shushi}"></div>
+          </div>
+          <div class="ju_intro">
+             <div class="language">美观度</div>
+             <div class="zhishu star{$append.star_meiguan}"></div>
+          </div>
+          <div class="ju_intro">
+             <div class="language">服务态度</div>
+             <div class="zhishu star{$append.star_fuwu}"></div>
+          </div>
+      </div><!--discuss_one_right end-->
+      <div class="clear"></div>
+   </div><!--discuss_one end-->
+   {if $comment}
+   <div class="content discuss_two" id="Scroll">
+    <!--{foreach from=$comment item=value key=key}-->
+      <div class="discuss_two_common">
+         <div>
+            <p class="discuss_name">{$value.user_name}</p>
+            <p class="discuss_date">发表于{$value.add_time}</p>
+         </div>
+         <div class="user_discuss">{$value.content}</div>
+         {if $value.re_comment}
+            {foreach from=$value.re_comment item=value2 key=key2}
+            <div class="content yishi">
+            <div class="ys_return">{$value2.user_name}:</div>
+            <div class="ys_return_con">{$value2.content}</div>
+            <div class="clear"></div>
+            </div>
+            {/foreach}
+        {/if}
+       <!--yishi end-->
+      </div>
+    <!--{/foreach}-->
+   </div>
+   <div class="loading" id="nomoreresults" ><a href="goods.php?id={$goods.goods_id}&act=all_comment">点击查看更多评论.</a></div>
+   {/if}
+
+</div>
+
+</div>
+
+
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+<script type="text/javascript" src="{$image_url}wap/js/goods.js"></script>
+<script src="http://file.easeeyes.com/wap/js/touch.js"></script>
+<script>
+//banner轮播
+function TouchSlide(opts){
+    var opts=opts||{};
+    this.count=0;
+    this.auto=opts.auto||false;
+    this.elem=opts.elem;
+    this.len=opts.len||this.elem.getElementsByTagName("li").length;
+    this.width=opts.width;
+    this.init.apply(this,arguments);
+}
+TouchSlide.prototype={
+    constructor:TouchSlide,
+    move:function(points){
+        if(this.count>=this.len-1){
+            this.count=0;
+        }else{
+            this.count++;
+        }
+        this.elem.style.left=-this.count*this.width+"px";
+        var i,
+                point=points.getElementsByTagName("li"),
+                len=point.length;
+        for(i=0;i<len;i++){
+            point[i].className="";
+        }
+        point[this.count].className="selected";
+    },
+    isAuto:function(points){
+        var that=this;
+        if(that.auto){
+            that.mover=setInterval(function(){
+                that.move(points);
+            },that.auto);
+        }
+    },
+    createPoints:function(){
+        var i,
+                points=document.createElement("ul");
+        points.className="points";
+        for(i=0;i<this.len;i++){
+            points.appendChild(document.createElement("li"));
+        }
+        this.elem.parentNode.appendChild(points);
+        return points;
+    },
+    binder:function(points){
+        var initp={},
+                movep={},
+                endp={},
+                xpos,
+                that=this;
+        this.elem.addEventListener("touchstart",function(e){
+            if(that.mover) clearInterval(that.mover);
+            xpos=parseInt(this.style.left)||0;
+            initp=touchEvent.getPos(e);
+        },false);
+        this.elem.addEventListener("touchmove",function(e){
+            movep=touchEvent.getPos(e);
+            this.style.left=xpos+movep.mx-initp.x+"px";
+        },false);
+        this.elem.addEventListener("touchend",function(e){
+            endp=touchEvent.getPos(e);
+            var dir=touchEvent.getDirect(initp.x,endp.ex,initp.y,endp.ey);
+            if(dir=="left"){
+                if(Math.abs(endp.ex-initp.x)>30){
+                    if(that.count>=that.len-1){
+                        that.count=that.len-1
+                    }else{
+                        that.count++;
+                    }
+                }
+            }else if(dir=="right"){
+                if(Math.abs(endp.ex-initp.x)>30){
+                    if(that.count<=0){
+                        that.count=0;
+                    }else{
+                        that.count--;
+                    }
+                }
+            }
+            var i,
+                    point=points.getElementsByTagName("li"),
+                    len=point.length;
+            for(i=0;i<len;i++){
+                point[i].className="";
+            }
+            this.style.left=-that.count*that.width+"px";
+            point[that.count].className="selected";
+            that.isAuto(points);
+        },false);
+    },
+    init:function(){
+        var points=this.createPoints();
+        points.getElementsByTagName("li")[0].className="selected";
+        this.binder(points);
+        this.isAuto(points);
+    }
+};
+window.addEventListener("load",function(){
+    //调用
+    var s1=new TouchSlide({
+        elem:document.getElementById("ts-01"),
+        width:parseInt(document.getElementById("slider-01").clientWidth),
+        auto:false
+    });
+},false);  
+</script>
+<script>
+    function checkPrice(id){
+        var status = $('#thunm_'+id).css("display");
+		var img_url = {$image_url};
+        if(status == 'none')
+        {
+            $('#thunm_'+id).show();
+            $('#icon_'+id).attr("src",img_url+"wap/images/aaa_top.png");
+        }else
+        {
+            $('#thunm_'+id).hide();
+            $('#icon_'+id).attr("src",img_url+"wap/images/aaa_bot.png");
+        }
+    }
+    function win_onload() {
+        var result = confirm("确认打开QQ与易视客服在线聊天？");
+        if (result == true) {
+            window.location.href = 'http://crm2.qq.com/page/portalpage/wpa.php?uin=4006177176&aty=0&a=0&curl=&ty=1';
+        }
+        else {
+            window.location.href = 'http://crm2.qq.com/page/portalpage/wpa.php?uin=4006177176&aty=0&a=0&curl=&ty=1';
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<meta name="Keywords"    content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<title>{$page_title}</title>
+<link rel="shortcut icon" href="/favicon.ico" mce_href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="http://file.easeeyes.com/index2015/css/base.css" />
+<link type="text/css" rel="stylesheet" href="http://file.easeeyes.com/css/base.css"/>
+<style type="text/css">
+.main{width:100%; height:auto; min-height:280px;  margin:0 auto; border:1px solid #dcdcdc; overflow:hidden;}
+.context{width:100%; {if $coupon_sn}margin:30px auto;{else}height:150px; margin:65px auto;{/if} text-align:center;}
+.mes_div span{font-size:14px; font-weight:bold; color:red; text-align:center;}
+.mes_block{width:100%; {if $coupon_sn}height:36px;{else}height:66px;{/if} overflow:hidden;}
+.mes_a{width:255px; height:34px; margin:0 auto;}
+
+</style>
+</head>
+<body>
+<!--【支付成功后返回结果页面】-->
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+
+<div class="main">
+	<div class="context">    	
+        <div class="mes_div"><span>{$message}</span></div> 
+        <div class="mes_block"></div>       
+        <div class="mes_a"><a href="/" title="返回首页"><img src="{$image_url}themes/default/images/mes_home.gif" width="112" height="34" alt="返回首页"/></a></div>
+    </div>
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

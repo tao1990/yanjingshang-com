@@ -1,0 +1,53 @@
+<!--{foreach from=$categoriesp item=cat name=aa}-->
+<!--{if $smarty.foreach.aa.index == 0}-->
+	    <div class="leftmain">
+		<img src="images/jsj.gif" width="6px" height="9px" border="0" />&nbsp;
+		<a href="{$cat.url}">
+		    <span class="yi_font13">{$cat.name|escape:html}</span>
+		</a>
+	    </div>
+		<div class="leftmaincontent">
+		 <!--{foreach from=$cat.cat_id item=child name=fooks}-->
+		   {if $smarty.foreach.fooks.index == 7 || $smarty.foreach.fooks.index == 9}
+			<a href="{$child.url}"><span class="classtype" {if $child.is_show_red}style="color:#c30000"{/if}>{$child.name|escape:html}</span></a><br/>
+		   {else}
+			<a href="{$child.url}"><span class="classtype" {if $child.is_show_red}style="color:#c30000"{/if}>{$child.name|escape:html}</span></a>
+		   {/if}
+		 <!--{/foreach}-->
+		</div>
+	    <div class="leftmainline"><img src="images/leftmainline.jpg" height="2px" /></div>
+	    <div class="clear"></div>
+<!--{else}-->
+	<!--{if $smarty.foreach.aa.index == 1}-->
+	    <div class="leftmain">
+		<img src="images/jsj.gif" width="6px" height="9px" border="0" />&nbsp;
+		<a href="{$cat.url}">
+		    <span class="yi_font13">{$cat.name|escape:html}</span>
+		</a>
+	    </div>
+
+		<div class="leftmaincontent"><!--{foreach from=$cat.cat_id item=child name=fooks}-->
+        <!--{if $smarty.foreach.fooks.index%2 == 0}-->
+            <a href="{$child.url}"><span class="yiaa" {if $child.is_show_red}style="color:#c30000"{/if}>{$child.name|escape:html}</span></a>
+        <!--{else}-->
+            <a href="{$child.url}"><span class="classtype_yi yihover" style="cursor:pointer;" {if $child.is_show_red}style="color:#c30000"{/if}>{$child.name|escape:html}</span></a><br/>
+        <!--{/if}--><!--{/foreach}-->
+		</div>
+	    <div class="leftmainline"><img src="images/leftmainline.jpg" height="2px" /></div>
+	    <div class="clear"></div>
+	<!--{else}-->
+	    <div class="leftmain">
+		<img src="images/jsj.gif" width="6px" height="9px" border="0" />&nbsp;
+		<a href="{$cat.url}">
+		    <span class="yi_font13" >{$cat.name|escape:html}</span>
+		</a>
+	    </div>
+		<div class="leftmaincontent" >
+		 <!--{foreach from=$cat.cat_id item=child name=fooks}-->
+		    <a href="{$child.url}"><span class="classtype" {if $child.is_show_red}style="color:#c30000"{/if}>{$child.name|escape:html}</span></a>
+		 <!--{/foreach}-->
+		</div>
+	    <div class="leftmainline"><img src="images/leftmainline.jpg" height="2px" /></div>
+	    <div class="clear"></div>
+	<!--{/if}-->
+<!--{/if}--><!--{/foreach}-->

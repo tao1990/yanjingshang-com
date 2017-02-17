@@ -1,0 +1,64 @@
+<div class='pagecontainer'>
+
+{foreach from=$order_list item=order}
+<div id="page{$order.index}" style="width:800px; height:460px;">
+
+<table width="720" cellpadding="1" border="0" style="margin-top:80px;">
+    <tr height="30">
+        <td width="34">&nbsp;</td>
+        <td width="167" style="text-align:left;">&nbsp;</td>              
+		<td colspan="2">&nbsp;</td>        
+        <td width="145" style="text-align:left;">{$order.order_sn}</td>
+        <td width="47">&nbsp;</td>
+    </tr>
+    <tr height="30">
+        <td rowspan="4">&nbsp;</td>
+        <td style="text-align:left; vertical-align:top; line-height:30px;">&nbsp;</td>              
+		<td colspan="2"><span style="text-align:left;">&nbsp;&nbsp;</span></td>        
+        <td width="145" style="text-align:left; vertical-align:top; line-height:30px;"><br /></td>
+        <td rowspan="4">&nbsp;</td>
+    </tr>
+    <tr height="30">
+      <td style="text-align:left; vertical-align:top; line-height:30px;"><span style="text-align:left;">&nbsp;{$order.consignee}</span></td>
+      <td colspan="2"><span style="text-align:left;">{if $order.tel}{$order.tel}{else}{$order.mobile}{/if}</span></td>
+      <td width="145" style="text-align:left; vertical-align:top; line-height:30px;">&nbsp;</td>
+    </tr>
+    <tr height="30">
+      <td colspan="3" rowspan="2" style="text-align:left; vertical-align:top; line-height:30px;"> &nbsp; &nbsp; &nbsp;{$order.province}&nbsp;{$order.city} {$order.district} <br />
+ &nbsp; &nbsp; &nbsp;{$order.address}</td>
+      <td width="145" style="text-align:left; vertical-align:top; line-height:30px;">上海宝山函件</td>
+    </tr>
+    <tr height="30">
+      <td style="text-align:left; vertical-align:top; line-height:30px;">朱晓明</td>
+    </tr>
+    <tr height="30">
+    	<td rowspan="3">&nbsp;</td>
+        <td height="32" style="text-align:left;">&nbsp;&nbsp;易视网</td>
+        <td colspan="2"><span style="text-align:left; vertical-align:top; line-height:30px;">4006-177-176</span></td>       
+        <td width="145" rowspan="3" style="text-align:left; vertical-align:top; line-height:30px;">&nbsp;</td>
+        <td rowspan="3">&nbsp;</td>
+    </tr>
+    <tr height="30">
+      <td height="32" colspan="3" style="text-align:left;"> &nbsp; &nbsp; &nbsp;上海 上海 闸北 江场西路299弄4号楼502室</td>
+      </tr>
+    <tr height="30">
+      <td style="text-align:left;">&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>已验视</td>
+    </tr>
+    <tr height="30">
+        <td>&nbsp;</td>
+        <td style="text-align:left;">&nbsp;</td>              
+		<td width="176">&nbsp;</td>      
+        <td width="125"><span style="text-align:left;"> 易视网<br />
+&nbsp;&nbsp;  {$order.today}</span></td>
+        <td style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+        <br /></td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+
+</div>
+{/foreach}
+
+</div>

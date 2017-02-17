@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>超值好货9.9元起</title>
+<meta name="Keywords"  content="易视网,易视眼镜网,美瞳,护理液,润眼液,博士伦,海昌,海俪恩,卫康,库博,视康,强生,sho-bi,GEO,NEO,BESCON" />
+<meta name="Description" content="易视网，24小时闪电发货，30天退换货保障" />
+<style>
+.goodsItems{
+    overflow:hidden;
+    background-color:#f2f0e3;
+}
+.goodsItem{
+    position:relative;
+    float:left;
+    width:15.75rem;
+    height:23.9rem;
+    padding:.25rem;
+    box-sizing:border-box;
+    background:url(http://img.easeeyes.com/promotion/2016041802/06.png) no-repeat center top;
+    background-size:100% auto;
+    margin-bottom:.25rem;
+}
+.goodsItem:nth-child(even){float:right;}
+.goodsItem-thumb{
+    background:#fff;
+    height:18rem;
+    line-height:18rem;
+    text-align:center;
+}
+.goodsItem-thumb img{
+    vertical-align:middle;
+    max-height:100%;
+}
+.goodsItem-title{
+    color:#968a8a;
+    font-size:1.1rem;
+    width:95%;
+    margin:auto;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.goodsItem-price{
+    overflow:hidden;
+    padding:1rem .25rem;
+}
+.goodsItem-btn{
+    float:right;
+    background:#f282aa;
+    padding:0 .35rem;
+    height:1.75rem;
+    line-height:1.75rem;
+    color:#fff;
+    border-radius:.2rem;
+}
+.goodsItem-price .red{color:#ed5880;}
+.goodsItem-price b{font-size:1.4rem;}
+.goodsItem-price del{color:#999;font-size:1rem;}
+.goodsItem-layer{
+    position:absolute;
+    left:.5rem;
+    top:0;
+    font-size:.9rem;
+    color:#fff;
+    width:2.8rem;
+    height:1.5rem;
+    line-height:1.1;
+    text-align:center;
+    padding:.5rem;
+    background:#f85479;
+}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<!--main-->
+<div class="container">
+    <div><img src="http://file.easeeyes.com/wap/images/2016041802/banner.jpg" alt="" style="display:block;"></div>
+    <div><img src="http://file.easeeyes.com/wap/images/2016041802/01.jpg" alt="" style="display:block;"></div>
+    <div class="goodsItems">
+        <!--{if $goodsArr1}-->
+        <!--{foreach from=$goodsArr1 item=goods name=goods}-->
+        <div class="goodsItem">
+            <a href="{$goods.href}">
+                <span class="goodsItem-layer">{$goods.zk}</span>
+                <div class="goodsItem-thumb"><img src="http://www.easeeyes.com/{$goods.goods_thumb}" alt=""></div>
+                <h3 class="goodsItem-title">{$goods.goods_name}</h3>
+                <div class="goodsItem-price">
+                    <span class="goodsItem-btn">立即购买</span>
+                    <span class="red">&yen;<b>{$goods.promote_price}</b></span>
+                    {$goods.fomart_price}
+                </div>
+            </a>
+        </div>
+        <!--{/foreach}-->
+        <!--{/if}-->
+    </div>
+        
+    <div><img src="http://file.easeeyes.com/wap/images/2016041802/02.jpg" alt="" style="display:block;"></div>
+    <div class="goodsItems">
+        <!--{if $goodsArr2}-->
+        <!--{foreach from=$goodsArr2 item=goods name=goods}-->
+        <div class="goodsItem">
+            <a href="{$goods.href}">
+                <span class="goodsItem-layer">{$goods.zk}</span>
+                <div class="goodsItem-thumb"><img src="http://www.easeeyes.com/{$goods.goods_thumb}" alt=""></div>
+                <h3 class="goodsItem-title">{$goods.goods_name}</h3>
+                <div class="goodsItem-price">
+                    <span class="goodsItem-btn">立即购买</span>
+                    <span class="red">&yen;<b>{$goods.promote_price}</b></span>
+                    {$goods.fomart_price}
+                </div>
+            </a>
+        </div>
+        <!--{/foreach}-->
+        <!--{/if}-->
+    </div>
+    
+    <div><img src="http://file.easeeyes.com/wap/images/2016041802/03.jpg" alt="" style="display:block;"></div>
+    <div class="goodsItems">
+        <!--{if $goodsArr3}-->
+        <!--{foreach from=$goodsArr3 item=goods name=goods}-->
+        <div class="goodsItem">
+            <a href="{$goods.href}">
+                <span class="goodsItem-layer">{$goods.zk}</span>
+                <div class="goodsItem-thumb"><img src="http://www.easeeyes.com/{$goods.goods_thumb}" alt=""></div>
+                <h3 class="goodsItem-title">{$goods.goods_name}</h3>
+                <div class="goodsItem-price">
+                    <span class="goodsItem-btn">立即购买</span>
+                    <span class="red">&yen;<b>{$goods.promote_price}</b></span>
+                    {$goods.fomart_price}
+                </div>
+            </a>
+        </div>
+        <!--{/foreach}-->
+        <!--{/if}-->
+    </div>
+
+    <div><img src="http://file.easeeyes.com/wap/images/2016041802/04.jpg" alt="" style="display:block;"></div>
+    <div class="goodsItems">
+        <!--{if $goodsArr4}-->
+        <!--{foreach from=$goodsArr4 item=goods name=goods}-->
+        <div class="goodsItem">
+            <a href="{$goods.href}">
+                <span class="goodsItem-layer">{$goods.zk}</span>
+                <div class="goodsItem-thumb"><img src="http://www.easeeyes.com/{$goods.goods_thumb}" alt=""></div>
+                <h3 class="goodsItem-title">{$goods.goods_name}</h3>
+                <div class="goodsItem-price">
+                    <span class="goodsItem-btn">立即购买</span>
+                    <span class="red">&yen;<b>{$goods.promote_price}</b></span>
+                    {$goods.fomart_price}
+                </div>
+            </a>
+        </div>
+        <!--{/foreach}-->
+        <!--{/if}-->
+    </div>
+
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

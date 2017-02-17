@@ -1,0 +1,44 @@
+<div class="header-tag">
+	<div class="container">
+		{insert name='member_info'}	
+	</div>
+</div>
+<!--头部-->
+<div class="m-header">
+	<div class="container">
+		<div class="header-logo fl" >
+			<a href="/"><img src="{$img_url}data/images/logo2.png" /></a>
+			<a href="user.php"><span>会员中心</span></a>
+		</div>
+		
+		<div class="header-nav fl">
+			<ul class="clearfix">
+				<li>
+					<a href="/" class="header-nav-btn">首页</a>
+				</li>
+				<li class="drop-pg">
+					<a href="user_profile.html" class="header-nav-btn">账户设置</a>
+					<div class="header-nav-drop drop-pg-main">
+						<a href="user_profile.html">个人信息</a>
+						<a href="user_member_rank.html">会员等级</a>
+						<a href="user_resetpw.html">密码修改</a>
+						<a href="user_address_list.html">收货地址</a>
+					</div>
+				</li>
+				<li>
+					<a href="user_msg.html" class="header-nav-btn">消息</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="header-search fr">
+			<form action="categorysea.php" method="get" id="sreachSub">
+                <input type="hidden" name="search" value="1">
+				<span class="header-search-box">
+					<input type="input" class="header-search-ipt" name="" placeholder="请输入商品名称/商品编号" />
+				</span>
+				<button class="header-search-btn">搜 索</button>
+			</form>
+		</div>
+	</div>
+</div>

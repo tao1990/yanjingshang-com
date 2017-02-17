@@ -1,0 +1,41 @@
+﻿/*-------------------------------------------------------------------------------------------所有文章页面-------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------公用样式-------------------------------------------------------------------------*/
+.ml20{margin-left:20px;}
+.dot{display:inline-block; width:14px; line-height:22px; font-weight:bold;}
+.art_more{width:50px; height:26px; display:block; float:right; background:url(../images/commonbg/article.png) no-repeat 0px -163px;}
+.art_more:hover{ background-position:0px -196px;}
+.com_h_body{margin-bottom:0;}
+.foot_pan{margin-top:0;}
+.main{width:990px; height:auto; margin:0 auto; overflow:hidden; margin-bottom:10px;}
+.ad_8{margin-bottom:0;}
+/*-----------------------------------------------------------------------------------公用样式end----------------------------------------------------------------------*/
+
+
+/*---------------------------------------------------------------------------[文章分类页面 article-cat]---------------------------------------------------------------*/
+.art_pan{width:696px; height:auto; border:1px #dcdcdc solid; border-top:none; text-align:left; overflow:hidden;}
+.art_list{width:696px; height:134px; color:#999; overflow:hidden;}
+.art_head{width:696px; height:26px; overflow:hidden; line-height:26px; background-color:#f2f2f2; border-bottom:1px #dcdcdc solid; border-top:1px #dcdcdc solid;}
+.art_head_left{width:485px; font-size:14px; color:#666;}
+.art_head_left span{color:#0ca6bd; display:inline-block; margin-left:10px;}
+.art_con{width:646px; height:76px; line-height:22px; padding:10px 25px; overflow:hidden;}
+
+.article_cat{width:266px; height:auto; float:right; overflow:hidden;}
+.acat_pan{width:266px; height:154px; background-color:#f2f2f2; margin-bottom:10px;}
+.acat_head{width:266px; height:26px; line-height:26px; border-bottom:1px #dcdcdc solid; background:url(../images/commonbg/article.png) no-repeat;}
+.acat_0{ background-position:10px -27px;}
+.acat_1{ background-position:10px -52px;}
+.acat_2{ background-position:10px -78px;}
+.acat_3{ background-position:10px -104px;}
+.acat_4{ background-position:10px -130px;}
+.acat_con{width:266px; height:126px; border-top:1px #fff solid;}
+.acat_dl{width:230px; height:96px; padding:5px 18px 15px 18px; overflow:hidden;}
+.acat_dl dd{width:100%; height:22px; line-height:22px; color:#333; overflow:hidden;}
+.acat_dl a{color:#333;}
+.acat_dl a:hover{color:#E43232; text-decoration:none;}
+
+.art_head_left a{color:#666;}
+.art_head_left a:hover{ color:#E43232; text-decoration:none;}
+.art_head{}
+.art_head a{color:#0ca6bd;}
+/*---------------------------------------------------------------------------[文章分类页面]end----------------------------------------------------------------------*/

@@ -1,0 +1,44 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<!-- {if $hot_goods} -->
+<div class="clear"></div>
+<div class="spaceclass" style=" height:10px;"></div>
+
+<div id="liulan">
+<div id="liulant">
+
+<div id="hotprotitle"><b><img src="images/rmsp.gif" /></b></div>
+</div>
+</div>
+
+<div id="liulanbj">
+  <!--{foreach from=$hot_goods item=goods}-->
+<div class="hoth">
+<div class="spaceclass" style=" height:2px;"></div>
+<div class="hothl">
+<a href="{$goods.url}"><img src="{$goods.thumb}" alt="{$goods.name|escape:html}" width="100" height="100"  class="goodsimg" border="0" /></a>
+</div>
+<div class="hothr">
+
+<div class="cptext">
+<div class="textlv">
+<a href="{$goods.url}" title="{$goods.name|escape:html}" class="textlv">{$goods.short_style_name}</a>
+</div>
+<div>
+<span class="shanchux"><s>{$goods.market_price}</s></span> <span class="redhong fontsize13" > <!-- {if $goods.promote_price neq ""} -->
+          {$goods.promote_price}
+          <!-- {else}-->
+          {$goods.shop_price}
+          <!--{/if}--></span>
+</div>
+</div>
+</div>
+</div>
+<div class="spaceclass" style=" height:2px;"></div>
+<div class="zhx"><img src="images/zhx.jpg" width="203px" /></div>
+   <!--{/foreach}-->
+   </div>
+
+
+<div  class="typebot"><img src="images/typebot.jpg" width="206px" height="6px" /></div>
+<!-- {/if} -->

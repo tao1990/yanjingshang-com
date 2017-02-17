@@ -1,0 +1,47 @@
+﻿/*------------------------------------------------------------------------------------------【弹窗公共样式表】【yijiangwen】【20130528】--------------------------------------------------------------------------------------*/
+
+
+/*---------------------------------------------------------------------【弹窗公共样式】-------------------------------------------------------------------------*/
+body{_height:180%;}
+.pop_shadow{width:100%; height:100%; position:fixed; left:0; top:0; z-index:5; filter:alpha(opacity=50); opacity:0.5; overflow:hidden; background:#666666; display:none;}
+#lg_pan, .pop_pan{ position:fixed; z-index:55; margin:0 auto; left:200px; top:200px; overflow:hidden; display:none; width:580px; height:auto; border:4px solid #d9dcda; background-color:#2BBDD6;}
+.pop_shadow, #lg_pan, .pop_pan{_position:absolute; _left:expression_r(documentElement.scrollLeft + documentElement.clientWidth - this.offsetWidth); _top:expression_r(documentElement.scrollTop + documentElement.clientHeight - this.offsetHeight); }
+/*-------------------------------------------------------------------------【弹窗公共样式】end-------------------------------------------------------------------------*/
+
+
+
+.lg_head{width:570px; height:38px; line-height:38px; color:white;}
+.lg_head_left{width:300px; height:38px; font-size:16px; font-weight:bold; margin-left:10px; _display:inline; text-align:left;}
+.lg_head_right{width:38px; height:38px; float:right;}
+.lg_head_right a{width:38px; height:38px; font-size:12px; background:url(../images/xu/more/xx.gif) no-repeat 0 -115px; display:block;}
+
+.lg_content{width:550px; height:210px; margin:0 auto 5px auto; background-color:white; padding:10px; _display:inline-block;}
+.lg_con_left{width:395px; height:210px;}
+.lg_con_right{width:154px; height:210px; border-left:1px solid #dcdcdc;}
+.lg_con_r_ul{width:120px; height:auto; margin:45px 0 0 25px; color:#666; _display:inline-block;}
+.lg_turn_bt a{width:117px; height:34px; margin-top:15px; background:url(../images/login/user.gif) no-repeat 0 -81px; display:block;}
+.lg_turn_li{width:100%; height:22px; line-height:22px;}
+.lg_con_tr1{width:100%; height:30px; line-height:30px; margin:5px auto; color:#666;}
+.lg_con_tr2{width:100%; height:18px; line-height:18px; margin:10px auto 15px auto; color:#666;}
+.lg_con_tr3{width:100%; height:27px; line-height:27px; margin:0px auto; color:#666;}
+.lg_con_tr4{width:100%; height:18px; line-height:18px; margin:0px auto; color:#666; margin-top:30px;}
+.lg_con_td1{width:102px; text-indent:12px;}
+.lg_con_td2{width:190px;}
+.lg_con_input{width:188px; height:26px; line-height:26px; border:1px solid #dcdcdc;}
+.lg_con_td3{width:18px; height:18px; line-height:18px; margin-left:99px; _display:inline;}
+.lg_con_td4{margin-left:4px; padding-top:1px; _display:inline;}
+.lg_btn1{width:90px; height:27px; margin-left:102px; background:url(../images/login/user.gif) no-repeat 0 -27px; cursor:pointer; display:block; _display:inline-block;}
+.lg_btn2{width:142px; height:27px; margin-left:10px; background:url(../images/login/user.gif) no-repeat 0 0; cursor:pointer; display:block; _display:inline-block;}
+.lg_btn3{background-position:0 -54px;}
+.lg_union{margin-left:12px; width:380px; _display:inline-block;}
+.lg_union a{width:auto; height:18px; border-right:1px solid #dcdcdc; padding:0 5px 0 23px; display:block; margin-right:5px; _display:inline-block;}
+.lg_union_t1{background:url(../images/login/login_tip1.gif) no-repeat;}
+.lg_union_t2{background:url(../images/login/login_tip2.gif) no-repeat;}
+.lg_union_t3{background:url(../images/login/login_tip3.gif) no-repeat;}
+.lg_union_t4{background:url(../images/login/login_tip4.gif) no-repeat;}
+.lg_union_a{width:88px; height:18px; line-height:18px; padding:0 5px 0 23px; display:block; margin:10px 0 0 0;}
+
+/*---------------------------------------------------------------------------【弹窗样式】-------------------------------------------------------------------------*/
+
+
+

@@ -1,0 +1,33 @@
+.default_welcome{padding:10px 0 10px 20px;box-shadow: 0 1px 1px rgba(0,0,0,.1);}
+.default_welcome div{line-height:30px;}
+.member_info{height:30px;}
+.vip_level{float: left;}
+.message{float:right;margin-right:20px;}
+
+.wealth{height:100px;box-shadow: 0 1px 1px rgba(0,0,0,.1);}
+.yue,.jifen{width:50%;height:100%;text-align: center;float: left;}
+.yue div,.jifen div{padding-top: 35px;}
+.wealth b{font-size: 18px;}
+
+.wuliu{width:100%;height:50px;box-shadow: 0 1px 1px rgba(0,0,0,.1);background: url('http://m.easeeyes.com/images/wuliu.png') no-repeat 10px 50%;}
+.wuliu a{width:73%;float:left;margin-left: 20%;margin-top: 17px;cursor: pointer;background: url('http://m.easeeyes.com/images/jt.png') top right no-repeat}
+
+.order{width:100%;height:50px;background: url('http://m.easeeyes.com/images/dingdanguanli.png') no-repeat 10px 50%;}
+.order .a1{float:left;margin-left: 20%;margin-top: 17px;cursor: pointer;}
+.order .a2{float:right;margin-top: 17px;cursor: pointer;}
+
+.order_list{width:100%;height:186px;box-shadow: 0 1px 1px rgba(0,0,0,.1);}
+.order_list ul{width:95%;height:auto;box-shadow: 0 1px 1px rgba(0,0,0,.1);margin:0 auto;}
+.order_list li{width: 100%;margin:0 auto;float:left;cursor: pointer;background-color: white;height:40px;border-radius: 10px;border-bottom: 1px solid rgba(0,0,0,.1);}
+.order_list li a{width:85%;height:100%;float: left;background: url('http://m.easeeyes.com/images/jt.png') right no-repeat;margin-left: 10%;line-height: 36px;}
+
+.account{width:100%;height:50px;background: url('http://m.easeeyes.com/images/zhanghuguanli.png') no-repeat 10px 50%;}
+.account .a1{float:left;margin-left: 20%;margin-top: 17px;cursor: pointer;}
+
+.account_list{width:100%;height:226px;box-shadow: 0 1px 1px rgba(0,0,0,.1);}
+.account_list ul{width:95%;height:auto;box-shadow: 0 1px 1px rgba(0,0,0,.1);margin:0 auto;}
+.account_list li{width: 100%;margin:0 auto;float:left;cursor: pointer;background-color: white;height:40px;border-radius: 10px;border-bottom: 1px solid rgba(0,0,0,.1);}
+.account_list li a{width:85%;height:100%;float: left;background: url('http://m.easeeyes.com/images/jt.png') right no-repeat;margin-left: 10%;line-height: 36px;}
+
+.message{background: url('http://m.easeeyes.com/images/message.png') no-repeat;width:30px;height:13px;}
+.com_um {width: 15px;height: 19px;background: url('http://m.easeeyes.com/images/o.png') no-repeat;line-height: 15px;color: #fff;display: block;text-align: center;font-size: 13px;margin-top: -10px;margin-left: 10px;}

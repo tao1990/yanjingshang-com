@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>易视网，聚年货，欧美尖货放肆挑</title>
+<meta name="Keywords"  content="易视网,易视眼镜网,美瞳,护理液,润眼液,博士伦,海昌,海俪恩,卫康,库博,视康,强生,sho-bi" />
+<meta name="Description" content="易视网，搞定全套200元都花不掉，24小时闪电发货，30天退换货保障" />
+<style>
+.box-items{background:#be3434;font-family:'Microsoft Yahei';overflow:hidden;}
+.box-items .item{width:15.75rem;float:left;margin-bottom:.5rem;position:relative;}
+.box-items .item:nth-child(even){float:right;}
+.box-items .image{height:16rem;line-height:16rem;text-align:center;background:#fff;padding:.5rem;}
+.box-items .layer{width:5rem;text-align:center;padding:.25rem;box-sizing:border-box;position:absolute;left:.5rem;top:0;background:#fa3458;color:#fff;font-size:1.1rem;}
+.box-items .image img{vertical-align:middle;max-height:100%;}
+.box-items .text{color:#fffbdd;font-size:1.1rem;}
+.box-items .text p{color:#fffbdd;}
+.box-items .text h3{font-size:1.2rem;background:#190334;color:#fff;font-weight:100;padding:.25rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.box-items .box-price{padding:.5rem;background:#750d0c url(http://img.easeeyes.com/promotion/20160121/buy_btn.jpg) no-repeat 10rem 1.5rem;background-size:5rem auto;overflow:hidden;}
+.box-items .box-price .txt{text-align:center;}
+.box-items .box-price b{font-size:1.3rem;}
+.box-items .box-price ._price{float:left;padding:1rem 0 0 .5rem;}
+.box-nav{font-size:0;text-align:center;padding:.5rem 0 1rem;background:#f9c79f;}
+.box-nav span{display:inline-block;font-size:1.2rem;width:7.7rem;height:2.05rem;line-height:2.05rem;background:url(http://file.easeeyes.com/wap/images/20160121/2.png) no-repeat center;background-size:100% auto;color:#972220;}
+.box-nav span[data-selected="true"]{background-image:url(http://file.easeeyes.com/wap/images/20160121/1.png);color:#faec09;}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<!--main-->
+<div class="container">
+    <div><img src="http://file.easeeyes.com/wap/images/20160121/banner.jpg" /></div>
+    <div class="box-nav">
+    	<span>强生</span>
+    	<span>博士伦</span>
+    	<span>视康</span>
+    	<span>库博</span>
+    </div>
+    <div class="container-box-items">
+    	<div class="box-items">
+            <!--{if $goodsArr1}-->
+            <!--{foreach from=$goodsArr1 item=goods name=goods}-->
+			<div class="item">
+				<a href="{$goods.href}">
+                    <div class="layer">{$goods.zk}</div>
+					<div class="image">
+						<img src="http://www.easeeyes.com/{$goods.goods_thumb}" />
+					</div>
+					<div class="text">
+						<h3>{$goods.goods_name}</h3>
+						<div class="box-price">
+							<p class="pull-left txt">年货<br />疯抢价</p>
+							<span class="_price">&yen;<b>{$goods.promote_price}</b></span>
+						</div>
+					</div>
+				</a>
+			</div>
+            <!--{/foreach}-->
+            <!--{/if}-->
+		</div>
+		<div class="box-items">
+            <!--{if $goodsArr2}-->
+            <!--{foreach from=$goodsArr2 item=goods name=goods}-->
+			<div class="item">
+				<a href="{$goods.href}">
+                    <div class="layer">{$goods.zk}</div>
+					<div class="image">
+						<img src="http://www.easeeyes.com/{$goods.goods_thumb}" />
+					</div>
+					<div class="text">
+						<h3>{$goods.goods_name}</h3>
+						<div class="box-price">
+							<p class="pull-left txt">年货<br />疯抢价</p>
+							<span class="_price">&yen;<b>{$goods.promote_price}</b></span>
+						</div>
+					</div>
+				</a>
+			</div>
+            <!--{/foreach}-->
+            <!--{/if}-->
+		</div>
+		<div class="box-items">
+            <!--{if $goodsArr3}-->
+            <!--{foreach from=$goodsArr3 item=goods name=goods}-->
+			<div class="item">
+				<a href="{$goods.href}">
+                    <div class="layer">{$goods.zk}</div>
+					<div class="image">
+						<img src="http://www.easeeyes.com/{$goods.goods_thumb}" />
+					</div>
+					<div class="text">
+						<h3>{$goods.goods_name}</h3>
+						<div class="box-price">
+							<p class="pull-left txt">年货<br />疯抢价</p>
+							<span class="_price">&yen;<b>{$goods.promote_price}</b></span>
+						</div>
+					</div>
+				</a>
+			</div>
+            <!--{/foreach}-->
+            <!--{/if}-->
+		</div>
+		<div class="box-items">
+            <!--{if $goodsArr4}-->
+            <!--{foreach from=$goodsArr4 item=goods name=goods}-->
+			<div class="item">
+				<a href="{$goods.href}">
+                    <div class="layer">{$goods.zk}</div>
+					<div class="image">
+						<img src="http://www.easeeyes.com/{$goods.goods_thumb}" />
+					</div>
+					<div class="text">
+						<h3>{$goods.goods_name}</h3>
+						<div class="box-price">
+							<p class="pull-left txt">年货<br />疯抢价</p>
+							<span class="_price">&yen;<b>{$goods.promote_price}</b></span>
+						</div>
+					</div>
+				</a>
+			</div>
+            <!--{/foreach}-->
+            <!--{/if}-->
+		</div>
+    </div>
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+<script src="http://file.easeeyes.com/wap/js/tab.js"></script>
+<script>
+var tab=new Tab({
+	'navs':document.querySelectorAll('.box-nav span'),
+	'tabs':document.querySelectorAll('.box-items')
+})
+	
+</script>
+</body>
+</html>

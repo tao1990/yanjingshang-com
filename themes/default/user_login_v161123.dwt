@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="Generator" content="ECSHOP v2.7.3" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$page_title}</title>
+<meta name="Keywords"    content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link href="http://file.easeeyes.com/b2b/css/base.css" rel="stylesheet" type="text/css" />
+<link href="http://file.easeeyes.com/b2b/css/dlzc.css" rel="stylesheet" type="text/css" />
+<body>
+<!--{if $action eq 'login'}-->
+<div class="main_dl">
+    <form name="formLogin" id="loginForm">
+    	<div class="yj_dl_left"><img src="http://file.easeeyes.com/b2b/images/yj_dl1.jpg" width="640" height="650" alt="" /></div>
+        <div class="yj_dl_right">
+        	<p class="yj_dl_logo"><a><img src="http://file.easeeyes.com/b2b/images/logo.png" width="200" height="63" alt="" /></a></p>
+            <p class="yj_dl_t1">零售商登录</p>
+        	<ul class="login_list">
+              <li>
+                <p class="login_user_bo">
+                <input type="text" value="" name="username" placeholder="请输入用户名/手机号" class="login_input" id="username" />
+                </p>
+              </li>
+              <li>
+                <p class="login_password_bo">
+                <input type="password" value="" name="password" placeholder="密码" class="login_password" id="password" />
+                </p>
+              </li>
+              <li id="msg"></li>
+              <li class="login-auto"><input type="checkbox" name="autologin" class="login_checkbox" checked="true" /><span class="car_auto">记住用户名</span><a href="user.php?act=get_password" class="login_wang">忘记密码？</a></li>
+              <li>
+                <input type="hidden" name="act" value="act_login_ajax" />
+                <input type="hidden" name="back_act" id="back_act" value="{$back_act}" />
+                <input type="submit" value="登录" class="yj_dl" />
+              </li>
+             <li class="f16" style="color:#333;">没有云镜商的账户？<a href="user.php?act=register" class="yj_dl_zhc">立即注册</a></li>
+          </ul>
+        </div>
+    </form>
+    <div class="clear"></div>
+</div>
+<!--{/if}-->
+<!--登录界面end-->
+<script src="http://file.easeeyes.com/js/jquery.min.js"></script>
+<script src="http://file.easeeyes.com/b2b/js/validate.js"></script>
+<script>
+var checkArr=[
+  {
+    "id":"username",
+    "title":"用户名",
+    "items":[{"rule":"required","err":"不能为空"}]
+  },{
+    "id":"password",
+    "title":"密码",
+    "items":[{"rule":"required","err":"不能为空"}]
+  }
+]
+validate.init({
+  formId:"loginForm",
+  checkArr:checkArr,
+  success:function(){
+    document.getElementById('msg').innerHTML='';
+  },
+  fall:function(res){
+    document.getElementById('msg').innerHTML=res.msg
+  },
+  pass:function(){
+    checkInfo(document.getElementById('username').value,document.getElementById('password').value,document.getElementById('back_act').value)
+  }
+}) 
+// 验证用户名密码
+function checkInfo(uname,psw,back_act){
+  $.ajax({
+    url:'user.php',
+    type:'post',
+    data:{act:'act_login_ajax',username:uname,password:psw,back_act:back_act},
+    dataType:'json',
+    success:function(data){
+      if(data.res){
+        var url=res.back_act || "user.html"
+        location.href=url
+      }else{
+        $('#msg').text('用户名或密码错误')
+      }
+    }
+  })
+}
+
+</script>

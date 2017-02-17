@@ -1,0 +1,78 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>{$page_title}</title>
+<meta name="Keywords"    content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link rel="stylesheet" href="http://file.easeeyes.com/b2b/css/index.css" />
+</head>
+<style type="text/css">
+.context{width:988px; {if $coupon_sn}margin:30px auto;{else}height:150px; margin:65px auto;{/if} text-align:center;}
+.mes_div span{font-size:14px; font-weight:bold; color:red; text-align:center;}
+.mes_block{width:100%; {if $coupon_sn}height:36px;{else}height:66px;{/if} overflow:hidden;}
+.mes_a{width:255px; height:34px; margin:0 auto;}
+
+.c_res_main{width:928px; height:420px; border-top:1px #dcdcdc solid; padding:30px; margin:0 auto; text-align:center;}
+.c_res_t1{color:red; font-size:14px; text-align:left; text-indent:60px;}
+.c_res_t2{color:#333; text-align:left; text-indent:84px; margin:10px auto;}
+.c_res_ul{width:812px; height:348px; background:url(../images/inner/coupon_res.gif) no-repeat; margin:0 auto; overflow:hidden;}
+.c_res_li{margin:140px 0 0 410px; width:350px; height:22px; line-height:22px; font-size:22px; letter-spacing:1px; color:#000; font-weight:bold; text-align:center;}
+.c_res_li2{float:left; text-align:left; margin:30px 0 0 40px; width:600px; height:22px; font-size:22px; letter-spacing:1px; color:#000; font-weight:bold;}
+</style>
+<body>
+
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+
+<div class="main">
+	<div class="context">    	
+        <div class="mes_div"><span>{$message}</span></div> 
+        <div class="mes_block"></div>       
+        <div class="mes_a"><a href="/" title="返回首页"><img src="images/mes_home.gif" width="112" height="34" alt="返回首页"/></a></div>   
+    </div>
+    
+    <!--{if $user_id gt 0}-->
+    
+        <!--{if $coupon_sn}-->
+        <div style="margin:0 auto;">
+            <div class="c_res_main">
+                <p class="c_res_t1">您好：<p>
+                <p class="c_res_t2">以下是赠送您的优惠券，<span class="redb">请妥善保管好。</span>您也可在会员中心的<strong><a href="user_bonus.html" target="_blank">我的优惠券/红包</a></strong>中查看。</p>    
+                <ul class="c_res_ul">
+                    <li class="c_res_li">{$coupon_sn}</li>
+                    <li class="c_res_li" style="margin:42px 0 0 410px;">凭优惠券代码直接使用</li>
+                    <li class="c_res_li2">截止使用日期：{$jzrq}</li>   
+                </ul>
+            </div>
+        </div>
+        <!--{/if}-->
+        
+    <!--{else}-->
+    
+        <!--{if $coupon_sn}-->
+        <div style="margin:0 auto;">
+            <div class="c_res_main">
+                <p class="c_res_t1">您好：<p>
+                <p class="c_res_t2">以下是赠送您的优惠券，<span class="redb">请务必复制下边的优惠券码,并妥善保管好,遗失不补。</span></p>    
+                <ul class="c_res_ul">
+                    <li class="c_res_li">{$coupon_sn}</li>
+                    <li class="c_res_li" style="margin:42px 0 0 410px;">凭优惠券代码直接使用</li>
+                    <li class="c_res_li2">截止使用日期：{$jzrq}</li>   
+                </ul>
+            </div>
+        </div>
+        <!--{/if}-->
+        
+    <!--{/if}-->
+    
+</div>
+
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+
+</html>

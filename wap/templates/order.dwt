@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="templates/style/base.css" rel="stylesheet" type="text/css"/>
+<link href="templates/style/user.css" rel="stylesheet" type="text/css"/>
+<!--[if lte IE 6]><link href="templates/style/ie6_in.css" rel="stylesheet" type="text/css"/><![endif]-->
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+</head>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<script type="text/javascript" src="templates/js/transport.js"></script>
+<script type="text/javascript" src="templates/js/common.js"></script>
+<script type="text/javascript" src="templates/js/user.js"></script>
+<script type="text/javascript" src="templates/js/inner.js"></script>
+<script type="text/javascript" src="{$image_url}wap/js/scrollpagination.js"></script>
+<ul class="pp_shadow"></ul>
+<h2 class="user_head mb20">我的订单</h2>
+<table class="tb_account_log" cellspacing="0" cellpadding="0" border="1" bordercolor="#dcdcdc" id="tb_ddd" >    
+    <colgroup>
+        <col class="col_order_id"/>        
+        <col class="col_order_time" />
+        <col class="col_order_sum" />
+        <col class="col_order_status"/>
+        <col class="col_order_option"/>           
+    </colgroup>    
+    <tr class="tb_head" style="line-height:2.5;"><th>订单号</th><th>下单时间</th><th>订单总金额</th><th>订单状态</th><th>操作</th></tr>
+    <!--{foreach from=$orders item=item}-->
+    <tr>
+        <td><a href="user.php?act=order_detail&order_id={$item.order_id}" class="order_id_a" id="{$item.order_id}">{$item.order_sn}</a></td>
+        <td>{$item.order_time}</td>
+        <td>{$item.total_fee}</td>
+        <td>{$item.order_status}</td>
+        <td style="white-space:nowrap">        	     
+        	{if $item.os neq 2 && $item.ps eq 0 && $item.os neq 3}<a href="user.php?act=order_detail&order_id={$item.order_id}" class="order_option_button1">付款</a>{/if}
+            
+            {if ($item.os eq 2||$item.os eq 3) && $item.ps eq 0 && $item.ss eq 0}<!--<a href="user.php?act=buy_again&order_id={$item.order_id}" class="order_option_button1 ml7">再买</a>-->{/if}
+            
+            
+            <a href="user.php?act=order_detail&order_id={$item.order_id}" class="order_option_button2">查看订单</a>
+            {if ($item.os eq 1||$item.os eq 5) && $item.ss eq 1 }<a href="wuliu.php?act=detail&order_id={$item.order_id}" class="order_option_button2">跟踪包裹</a>{/if}
+                            
+			{if ($item.os eq 1||$item.os eq 5) && $item.ss eq 1 && $item.ps eq 2}
+            	<a class="order_option_button2" href="user.php?act=affirm_received&order_id={$item.order_id}" onclick="if(!confirm('您确认已收到您的货物!'))return false;">确认收货</a>{/if}                
+			{if $item.os eq 0 && $item.ss eq 0 && $item.ps eq 0}
+            	<a class="order_option_button1" href="user.php?act=cancel_order&order_id={$item.order_id}" onclick="if(!confirm('您确实要取消该订单!'))return false;">取消</a>
+            {/if}               
+        </td>
+    </tr>
+    <!--{/foreach}--> 
+</table>
+<div id="lookMore"></div>
+<div  class="loading" id="loading" style="display: none;"></div>
+<div class="loading" id="nomoreresults" style="display: none;width: 100%; text-align: center">没有更多了.</div>
+<input type="hidden" id="pageStie" value="2" />
+<input type="hidden" id="states" value="{$states}" />
+<input type="hidden" id="nomore" value="0" />
+<script type="text/javascript">
+    // 订单列表翻页
+    $(window).scroll(function(e){
+        if($('#nomore').val()==0){
+            if ($(window).scrollTop() + $(window).height() > $("#lookMore").offset().top){
+                $.ajax({
+                    type : "get",
+                    async:false,
+                    url : "user.php?act=more",
+                    data:{page:$("#pageStie").val(),states:$("#states").val()},
+                    beforeSend :function(msg){
+                        $('#loading').fadeIn(500);
+                    },
+                    success : function(msg){
+                        $('#loading').fadeOut(500);
+                        if(msg){
+                            var  pageStie= parseInt($('#pageStie').val())+parseInt(1);
+                            $('#pageStie').val(pageStie);
+                            $("#tb_ddd").append(msg);//将数据叠加到列表页中
+                        }else{
+                            $('#nomore').val(1);
+                        }
+                    }
+                });
+            }
+        }else{
+            $('#nomoreresults').fadeIn(1000);
+        }
+    });
+    /*
+    //yi:跟踪包裹功能
+    function follow(oid)
+    {
+        //获得订单信息数组
+        $.ajax({
+            url:'user.php?act=fllow_ajax',
+            data:'&order_id='+oid+'&m='+Math.random(),
+            cache:false,
+            success:
+                    function(dd){
+                        dd = eval('('+dd+')');
+
+                        //显示面板信息dd[0]快递公司 dd[1]快递单号 dd[2]url
+                        if(dd[2]!=''){
+                            //加载包裹信息
+                            var dw = $(document).width();
+                            var dh = $(document).height();
+                            $(".pp_shadow").css({width:dw,height:dh}).show();
+                            //显示面板
+                            $("#fllow").show();
+                            $("#fllow_id").text(dd[1]);
+                            $("#fllow_con").text(dd[0]);
+
+                            if(dd[0]!='' && dd[1]!=''){
+                                //获取该订单的物流信息
+                                $.ajax({
+                                    url:'plugins/kuaidi100/express.php',
+                                    data:'com='+dd[0]+'&nu='+dd[1],
+                                    cache:false,
+                                    success:
+                                            function(dx){
+                                                $("#fllow_div").html(dx);
+                                            }
+                                });
+                            }else{
+                                $("#fllow_div").text("<br/><br/><br/>物流信息查询失败，请登录快递官网查询！！");
+                            }
+                        }else{
+                            //没有发货信息的情况
+                            $("#fllow_div").text("由于物流信息还未录入，暂无该物流信息，请稍后在试。");
+                        }
+                    }
+        });
+    }*/
+</script>
+
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->

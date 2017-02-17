@@ -1,0 +1,89 @@
+<div class="clear"></div>
+<div class="foot_pan">
+	<div class="f_pan">
+        <ul class="help_pan">
+            <li class="mt12"><img src="../images/pfooter/kefu.gif" width="185" height="124" alt="客服中心"></li> 
+            <!--{if $helps}-->
+            <!--{foreach from=$helps item=help_cat name=foo}-->        
+            <li class="help_cat_spance"></li><!--{if $smarty.foreach.foo.index}--><li class="help_line"><img src="../images/line_s.jpg" width="2" height="90" alt=""/></li><!--{/if}-->        
+            <li class="help_con"><ul>
+                <li class="help_head">    
+                <!--{if $smarty.foreach.foo.iteration==1}--><a href='{$help_cat.cat_id}' title="{$help_cat.cat_name}" rel="nofollow"><img src="../images/how_to_shop.gif" width="78" height="17" alt=""></a><!--{/if}-->
+                <!--{if $smarty.foreach.foo.iteration==2}--><a href='{$help_cat.cat_id}' title="{$help_cat.cat_name}" rel="nofollow"><img src="../images/how_to_pay.gif" width="78" height="17" alt=""></a><!--{/if}-->
+                <!--{if $smarty.foreach.foo.iteration==3}--><a href='{$help_cat.cat_id}' title="{$help_cat.cat_name}" rel="nofollow"><img src="../images/how_to_post.gif" width="79" height="17" alt=""></a><!--{/if}-->
+                <!--{if $smarty.foreach.foo.iteration==4}--><a href='{$help_cat.cat_id}' title="{$help_cat.cat_name}" rel="nofollow"><img src="../images/after_service.gif" width="80" height="17" alt=""></a><!--{/if}-->
+                <!--{if $smarty.foreach.foo.iteration==5}--><a href='{$help_cat.cat_id}' title="{$help_cat.cat_name}" rel="nofollow"><img src="../images/how_to_my.gif" width="78" height="17" alt=""></a><!--{/if}-->
+                </li>                
+                <li class="help_text"><!--{foreach from=$help_cat.article item=item}--><a href="{$item.url}" target="_blank" title="{$item.title|escape:html}" rel="nofollow">{$item.short_title}</a><br/><!--{/foreach}--></li></ul>               
+            </li><!--{/foreach}--><!--{/if}-->
+        </ul>          
+        <ul class="f_p_bao">
+			<img usemap="#fban" src="../images/pfooter/fbanner.gif" width="980" height="55" alt="易视保障"/>
+            <map name="fban">
+            	<area shape="rect" href="article-16.html" coords="0, 0, 177, 55" target="_blank"></area>
+                <area shape="rect" href="article-15.html" coords="177, 0, 380, 55" target="_blank"></area>
+                <area shape="rect" href="article-76.html" coords="380, 0, 571, 55" target="_blank"></area>
+                <area shape="rect" href="article-37.html" coords="571, 0, 770, 55" target="_blank"></area>
+                <area shape="rect" href="active120711.html" coords="770, 0, 980, 55" target="_blank"></area>
+            </map>
+        </ul>        
+        <!--{if $txt_links}-->  
+        <ul class="friend_link">
+	    	<li class="friend_link_left"><a href="friend_link.html" target="_blank" title="更多友情链接">友情链接：</a></li>      
+            <li id="scrollDiv">
+                <ul><li><!--{foreach from=$txt_links item=link name=foo}--><a href="{$link.url}" target="_blank">{$link.name}</a><span class="width12"></span>{if $smarty.foreach.foo.iteration%12 eq 0 && $smarty.foreach.foo.index>0 && $smarty.foreach.foo.index neq $smarty.foreach.foo.last}</li><li>{/if}<!--{/foreach}--></li></ul> 
+            </li> 
+        </ul>        
+        <!--{/if}-->        
+        <div class="help_bottom"><!--{foreach from=$botbanner item=cat name=foo}-->{if $smarty.foreach.foo.index < 6 && $smarty.foreach.foo.index neq 3}
+        <!--{if $cat.ad_code}--><a {if $smarty.foreach.foo.index neq 4}href="{$cat.ad_link|default:#}" target="_blank"{else}href="javascript:;"{/if} rel="nofollow"><img src="{$cat.ad_code}" height="40px" alt=""/></a><!--{/if}-->
+        {elseif $smarty.foreach.foo.index eq 3}
+        <!-- 可信网站LOGO安装开始 -->
+        <script type="text/JavaScript">
+            function CNNIC_change(eleId){
+                var str= document.getElementById(eleId).href;
+                var str1 =str.substring(0,(str.length-6));
+                str1+=CNNIC_RndNum(6);  
+                document.getElementById(eleId).href=str1;
+            }
+            function CNNIC_RndNum(k){
+                var rnd="";                   
+                for (var i=0;i < k;i++)                   
+                rnd+=Math.floor(Math.random()*10); 
+                return rnd;
+            }
+         </script>
+        <a href="https://ss.cnnic.cn/verifyseal.dll?sn=2011050600100008401&pa=294005" tabindex="-1" id="urlknet" target="_blank" rel="nofollow"> 
+         <img alt="&#x53EF;&#x4FE1;&#x7F51;&#x7AD9;" name="CNNIC_seal" src="{$cat.ad_code}" height="40" oncontextmenu="return false;" onclick="CNNIC_change('urlknet')"/>
+        </a><!-- 可信网站LOGO安装结束 -->
+        {else}{/if}<!--{/foreach}-->
+        <!--{if $txt_links}--><a href="http://www.zx110.org/" target="_blank" rel="nofollow"><img src="../images/inner/zhenxin.gif" width="100" height="40" alt=""/></a><!--{/if}--></div>       
+        <!--{if $new_articles_botter}--><div class="help_about_me">
+        <!--{foreach from=$new_articles_botter name=nav_bottom_list item=nav}-->        
+        <!--{if $smarty.foreach.nav_bottom_list.iteration <= 6}--><!--{if $smarty.foreach.nav_bottom_list.index}--><font class="color9">|</font><!--{/if}--><a href="{$nav.url}" title="{$nav.short_title|escape:html}" target="_blank" rel="nofollow">&nbsp;{$nav.short_title|truncate:10:false}</a>
+        <!--{elseif $smarty.foreach.nav_bottom_list.iteration eq 7}--><!--{if $smarty.foreach.nav_bottom_list.index}--><font class="color9">|</font><!--{/if}--><a href="sitemaps.html" title="{$nav.short_title|escape:html}" target="_blank">&nbsp;{$nav.short_title|truncate:10:false}</a><!--{else}--><!--{/if}--><!--{/foreach}-->            
+        </div>
+        <!--{/if}-->
+        <div id="copyright">
+            <font class="mark_a">&copy;</font>易视网 2008-2013 上海明庭贸易有限公司 版权所有 网站备案号：<a href="http://www.miibeian.gov.cn" target="_blank" rel="nofollow">沪ICP备08112987号-2</a> <a href="api/certify/yaoping_info.jpg" target="_blank" rel="nofollow">互联网药品信息服务资格证书</a>
+        </div>    
+    </div>    
+</div>
+<div style="visibility:hidden;"><script type="text/javascript" src="http://js.tongji.linezing.com/2322564/tongji.js"></script></div>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-24020962-1'], ['_trackPageview'], ['b._setAccount', 'UA-24020781-1'], ['b._trackPageview'] );
+(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = 'http://www.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+document.write(unescape("%3Cscript src='http://hm.baidu.com/h.js%3Fe48ccf4344d9eeb0415ec07e5c72096b' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<div style="display:none;">
+<script type="text/javascript">
+var google_conversion_id = 1009958411;
+var google_conversion_label = "rkNPCIX0sgMQi_zK4QM";
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+</script><script src="/js/ga/conversion.js" type="text/javascript"></script>
+</div>

@@ -1,0 +1,152 @@
+﻿/*---------------------------------------------------------------------------------------------品牌，参数分类页面 2011-6-2 yijiangwen---------------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------公共样式-------------------------------------------------------------------------*/
+.main_l{float:left; width:202px; height:auto;}
+/*---------------------------------------------------------------------------公共样式end----------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------重写样式-------------------------------------------------------------------------*/
+.ad_8{margin-bottom:0;}
+.hv_gift{display:inline-block; width:28px; height:16px; background:url(../images/common/gift3.gif) no-repeat;}
+/*---------------------------------------------------------------------------重写样式end----------------------------------------------------------------------*/
+
+
+
+/*---------------------------------------------------------------------------内页左侧导航-------------------------------------------------------------------------*/
+.cat_head{width:202px; height:32px; background:url(../images/inner/cat_head.gif) no-repeat;}
+.cat_pan{width:198px; padding:1px; border:1px solid #dcdcdc;}
+
+
+.cat_title{width:198px; height:26px; line-height:26px; text-indent:62px; border-bottom:1px inset #eee; margin-top:1px; background:url(../images/inner/tip_jia.gif) no-repeat 45px 8px #f9f9f9; color:#666; cursor:pointer;}
+.cat_content{width:198px; height:auto; border-bottom:1px inset #eee; overflow:hidden; display:none;}
+.cat_txt{width:178px; height:auto; line-height:22px; margin:6px 0 5px 26px; overflow:hidden;}
+.cs_space{display:inline-block; width:28px; line-height:22px;}
+.display_image{ background-image:url(../images/inner/tip_jian.gif);}
+.display{display:block;}
+/*---------------------------------------------------------------------------内页左侧导航end----------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------热销商品-------------------------------------------------------------------------*/
+.hot_sale_pan{width:198px; height:406px; padding:1px; border:1px solid #dcdcdc; margin-top:10px;}
+.hot_sale_head{width:198px; height:26px; background:url(../images/inner/bg_jb_26.gif) repeat-x;}
+.hot_sale_con{width:198px; height:380px;}
+.hot_sale_li{width:198px; height:60px; padding:8px 0;}
+.hot_sale_img{float:left; margin-left:10px; width:60px; height:60px; display:inline;}
+.hot_sale_txt{float:right; width:117px; height:60px; text-align:left; padding-right:3px;}
+.hot_sale_name{width:115px; height:36px; line-height:16px; padding-right:5px; text-align:left;}
+.hot_sale_price{color:#c30000; margin-top:4px;}
+/*---------------------------------------------------------------------------热销商品end----------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------商品列表-------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------商品列表end----------------------------------------------------------------------*/
+
+
+
+
+
+#topbanner{ margin:0 auto; text-align:center; width:1002px; height:44px;}
+.spaceclass{ margin:0; font-size:0px; line-height:0px; width:100%; }
+
+#main_yi{ margin:0 auto; width:1002px; height:auto;}
+
+#m_l{ float:left; width:206px; text-align:left; height:auto;}
+#m_l_t{float:rihgt; width:205px;}
+#m_l_t_l{ float:left; width:102px; background-image:url(../images/classtypeover.jpg); height:28px; line-height:28px; text-align:center}
+#m_l_t_r{ float:left; width:103px; background-image:url(../images/typeleft.jpg); height:28px; line-height:28px; text-align:center}
+#m_l_bj{ float:rihgt text-align:left; width:205px;  background-image:url(../images/typeleftbj.jpg)}
+
+/*----------------导航切换-------------------*/
+#lefttop12{ float:left; width:99px; font-size:14px; height:28px; text-align:center; line-height:28px; margin-left:1px; margin-top:0px; background-image:url(../images/yi_dao/2j.gif); background-repeat:no-repeat; background-position:9px 8px; border:none;}
+#lefttop22{ float:left; width:102px; font-size:14px; height:28px; background-image:url(../images/yi_dao/1b.jpg); background-repeat:repeat-x; line-height:28px; text-align:center; margin-right:1px; margin-top:0px; border:none;}
+#lefttopbg2{ float:left; width:204px;  height:28px;background-image:url(../images/leftbj.jpg); border-top:1px #d7d7d9 solid;}
+/*----------------*/
+
+#lefttopmain2{ margin:0 auto;text-align:center; width:192px;  }
+#lefttopmain1{ margin:0 auto;text-align:center; width:192px;  }
+.color_dhui{ color:#999999}
+
+#liulan{ float:left; width:206px; }
+#liulant{float:left; width:206px; height:36px; background:url(../images/hotprot.jpg);}
+#liulanttitle{ float:left; width:120px; height:36px; line-height:36px; padding-left:16px;}
+#liulanbj{ float:left; width:206px;  background-image:url(../images/hotbj.jpg)}
+
+.hoth{ width:204px; margin:0 auto; text-align:center;}
+.hothl{ width:104px; float:left; text-align:center; height:100px; }
+.hothr{ width:96px; float:left; text-align:center; padding-top:20px; }
+.zhx{  margin:0 auto; width:204px;}
+
+.cptext{ margin:0 auto; height:48px; text-align:left; padding-bottom:4px;}
+.redhong{ color:#900}
+.textlv{ color:#144C7D}
+.color_lv{ color:#144C7D}
+.color_qianfei{ color:#5E5E5E}
+.typebot{ float:left; width:206px; height:6px; background-image:url(../images/typebot.jpg)}
+
+/*历史记录*/
+.right_maincontent{ margin:0 auto; width:200px; height:80px;}
+.left_mainpic{ float:left; text-align:center;width:80px; height:74px;}
+.right_mainpic{ float:left; width:120px; height:80px; text-align:left;}
+.right_mainpic_top{float:left; width:120px; min-height:24px; text-align:left; line-height:16px; color:#C87F3A;}
+.right_mainpic_bot{float:left; width:120px; height:36px; text-align:left; line-height:18px; padding-top:4px;}
+.zhanhong{color:#990000;}
+
+/*历史记录*/
+
+#m_l_bot{ margin:0; line-height:0px; float:right; width:205px; height:1px; font-size:0px; background-image:url(../images/dotbot.jpg)}
+/*----------------整页布局------------------*/
+#m_r{ float:right; width:792px; text-align:center; margin-left:2px;}
+/*------------------参数交叉检索------------------*/
+#typebanner{ float:left; width:788px; height:150px; margin-left:3px;}
+.typerighthuizt{ float:right; text-align:center; width:786px;}
+.typerighthuiztbj{ float:left; width:786px; line-height:24px; text-align:center; }
+.ztr{ float:left;left-align:left; font-size:0px;  width:4px; background-image:url(../images/typerighthui.jpg)}
+
+.type_r_l{ float:left; text-align:right; width:73px;}
+.type_r_r{ float: left; width:710px;}
+.type_r_r_l{ float:left; text-align:right; width:48px;}
+.type_r_r_l_bj{ margin:0 auto; float:center; text-align:center; width:32px; background-color:#4698D2}
+.type_r_r_l_bjx{ margin:0 auto; float:center; text-align:center; width:32px; background-color:;}
+.type_r_r_r{ float:left; width:666px; text-align:left;}
+.sxmenu{  text-align:center; line-height:24px; padding-left:2px; padding-right:0px; min-width:32px; background-color:#4698D2;}
+.sxmenuout{  text-align:center; padding-left:2px; padding-right:0px; min-width:32px; }
+
+.typerighthui{ float:right;  font-size:0px; line-height:0px;  text-align:center;  width:790px; height:4px; background-image:url(../images/typerighthui.jpg);}
+.menuline{ margin:0 auto; width:780px; text-align:center; font-size:0px; height:2px; border:none; border-bottom:1px #dcdcdc dotted; overflow:hidden;}
+#dhongse{ float:right; width:790px; height:32px;  background-image:url(../images/dhongse.jpg)}
+#dh_l{ float:left; width:420px; line-height:32px; height:32px;}
+#dh_r{ float:right; height:26px; width:240px; line-height:26px; text-align:right;}
+.an2{ float:left; text-align:center; width:100px; height:20px; line-height:20px; padding-top:2px;}
+.dh_r_1{ float:left; width:48px; height:26px;}
+.dh_r_2{ float:left;  height:32px; line-height:32px; padding-left:6px;}
+
+.an21{ float:left; height:20px; width:76px; background-image:url(../images/sb.jpg)}
+.anleft1{ float:left; width:1px; height:20px; background-image:url(../images/sxh.jpg)}
+.antext1{ float:left;padding-left:4px; padding-top:1px; padding-right:6px;width:64px;  text-align:center }
+.anright1{ float: right; width:1px; height:20px; background-image:url(../images/sxh.jpg)}
+
+#dh_l_1{ float:left; width:80px;  line-height:32px; height:32px;}
+.dh_c_1{ float:left; width:80px; height:18px;line-height:18px; padding-top:3px;}
+
+.an1{ float:left; height:18px; width:76px; background-image:url(../images/sxhz.jpg)}
+.anleft{ float:left; width:1px; height:18px; background-image:url(../images/sxh.jpg)}
+.antext{ float:left; height:16px; padding-left:4px; padding-top:1px; padding-right:6px;width:64px;  text-align:center }
+.anright{ float: right; width:1px; height:18px; background-image:url(../images/sxh.jpg)}
+
+.pagelogo{     margin-left:10px;  min-width:10px; border:1px double #ccc; padding-left:4px; padding-right:4px; line-height:20px; float:left; text-align:center;}
+.pagelogohong{ margin-left:10px;  min-width:10px; border:1px double #ccc; padding-left:4px; padding-right:4px; line-height:20px; float:left; text-align:center; background-color:#FF0000; color:#FFFFFF;}
+.pages_num{}
+.pages_num_a{ color:#5E5E5E; margin-left:10px; border:1px double #ccc; padding-left:4px; padding-right:4px; line-height:20px; float:left; text-align:center; }
+
+.subclass{ float:left; padding-left:4px; padding-right:4px; min-width:24px; border:1px double #999999; line-height:18px; background-color:#eeeeee; margin-left:4px; height:18px; padding-top:2px; margin-top:4px; }
+.subclass A{color:#000000 }
+.subclasst{ float:left; padding-left:4px; padding-right:4px; min-width:24px; border:1px double #999999; line-height:18px; background-color:#FFFFFF;  margin-left:4px; height:18px; padding-top:2px; margin-top:4px;}
+
+/*-------------------------------------------------------分类商品 展示列表--------------------------------------------------------------------------*/
+.spacejx{float:left; width:24px; min-height:100px;}
+.showmain{ float:left; width:180px; text-align:center; min-height:150px; padding:2px 0;}
+.showmainpic{ width:160px; min-height:150px; padding:2px 0; border:1px #fff solid;}
+.showmaintxt{ width:180px; text-align:center; min-height:10px;}
+.showmaintxt2{ width:180px; text-align:center; min-height:10px; line-height:20px;}
+.showmaintxt1{ width:160px; text-align:left; min-height:10px; line-height:18px;}
+.xhux{  float:left; width:790px; height:12px; background-image:url(../images/xhux.jpg);}
+.loopshow{ float:right; width:790px; text-align:center; min-height:252px;}
+/*-------------------------------------------------------分类商品 展示列表end-----------------------------------------------------------------------*/

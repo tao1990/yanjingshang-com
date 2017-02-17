@@ -1,0 +1,112 @@
+{literal}
+<style type="text/css" media="print">
+body,td { font-size:12px; text-align:center;}
+table td{ height:22px;}
+.tb_head td{ text-align:right; height:20px; line-height:18px;}
+
+.table1 td{ padding-right:20px;}
+.table3{ border:1px #000 solid; margin-top:3px;}
+.msg_line{width:100%; height:26px; text-align:left; line-height:16px;}
+.msg_line_left{float:left; width:60px; height:16px; line-height:16px;}
+.msg_line_right{float:left; text-align:left; margin-left:5px;}
+.msg_btline{border-bottom:1px #dcdcdc solid;}
+
+.tb_total td{height:16px; line-height:16px;}
+#printbtn{ display:none;}
+</style>
+
+<style type="text/css" media="screen">
+body,td { font-size:13px; text-align:center;}
+table td{ height:22px;}
+.tb_head td{ text-align:right; height:20px; line-height:18px;}
+
+.table1 td{ padding-right:20px;}
+.table3{ border:1px #000 solid; margin-top:3px;}
+.msg_line{width:100%; height:26px; text-align:left; line-height:16px;}
+.msg_line_left{float:left; width:60px; height:16px; line-height:16px;}
+.msg_line_right{float:left; text-align:left; margin-left:5px;}
+.msg_btline{border-bottom:1px #dcdcdc solid;}
+
+.tb_total td{height:16px; line-height:16px;}
+</style>
+{/literal}
+<table class="tb_head" width="750px" cellpadding="1" border="0" style="margin-top:52px; margin-bottom:4px;" >
+        <td colspan="5" style="text-align:left; font-family:'宋体', Arial; font-size:16px;font-weight:bold;text-indent:270px;">购物清单</td>
+    </tr>
+</table>
+<table class="tb_head" width="750px" cellpadding="1" border="0"  style="margin-top:30px; margin-bottom:4px;">
+    <tr>
+        <td width="64px" align="left"></td><td  width="100px" style="text-align:left; font-size:16px;font-weight: bold;">{$result.jd_paytype}</td>
+		<td width="200px" align="right"></td><td width="100px" style="text-align:center; border: 2px solid #000000;font-size:14px;"> 订单金额：<br/>￥{if $result.jd_paytype eq "1-货到付款" }{$result.jd_price}{else if $result.jd_paytype eq "4-在线支付"}0{/if}元</td><td width="200px"></td>
+
+    </tr>
+
+    <tr>
+        <td align="left" width="64px"></td><td colspan="5" style="text-align:left; font-family:'宋体', Arial; font-size:16px;font-weight: bold;">客户信息</td>
+        <td align="right"></td><td style="text-align:left;"></td><td align="right"></td>
+    </tr>
+	<tr>
+        <td align="left" width="64px"></td><td colspan="2" style="text-align:left; font-family:'宋体', Arial; font-size:14px;">订单编号：{$result.jd_number}</td>
+        <td colspan="4"  style="text-align:left;font-size:14px;">出库时间：{$result.jd_data}</td><td align="right"></td>
+    </tr>
+	<tr>
+        <td align="left" width="64px"></td><td colspan="2" style="text-align:left; font-family:'宋体', Arial;font-size:14px; ">客户姓名：{$result.jd_realname}</td>
+        <td colspan="4" style="text-align:left;font-size:14px;">是否送货前通知：否</td><td align="right"></td>
+    </tr>
+	<tr>
+        <td align="left" width="64px"></td><td colspan="2" style="text-align:left; font-family:'宋体', Arial; font-size:14px;">联系电话：{if $result.jd_telphone}{$result.jd_telphone}{else}{$result.jd_homephone}{/if}</td>
+        <td colspan="4"  style="text-align:left;font-size:14px;">送货时间：只工作日送货（双休日、假日）</td><td align="right"></td>
+    </tr>
+	<tr>
+        <td align="left" width="64px"></td><td colspan="5" style="text-align:left; font-family:'宋体', Arial; font-size:14px;">客户地址：{$result.jd_address}</td>
+        <td align="right"></td><td style="text-align:left;"></td>
+    </tr>
+	<tr>
+        <td align="left" width="64px"></td><td colspan="5" style="text-align:left; font-family:'宋体', Arial; font-size:14px;">发票信息：{$result.jd_receipt}</td>
+        <td align="right"></td><td style="text-align:left;"></td>
+    </tr>
+	<tr>
+        <td align="left" width="64px"></td><td colspan="5" style="text-align:left; font-family:'宋体', Arial;font-size:14px;">备注：{$result.jd_remarks}</td>
+        <td align="right"></td><td style="text-align:left;"></td>
+    </tr>
+</table>
+<div style="width:770px; height:296px; text-align:left;">
+<div style="width:770px; height:255px;">
+<tr>
+<table class="tb_head" width="750px" cellpadding="1" border="0" >
+        <td align="left" width="74px"></td><td colspan="5" style="text-align:left; font-family:'宋体', Arial; font-size:16px;font-weight:bold;">商品信息</td>
+    </tr>
+</table>
+<table width="500px" border="1" cellspacing="0" cellpadding="0" style="text-align:left; margin-left:80px;">
+    <tr>
+        <td width="80px" style="text-align:center;font-size:14px">商品编号</td>
+        <td width="310px" style="text-align:center;font-size:14px">商品名称</td>
+        <td width="70px" style="text-align:center;font-size:14px">规格</td>
+        <td width="70px" style="text-align:center;font-size:14px">数量</td>
+        <td width="60px" style="text-align:center;font-size:14px">价格</td>
+        <td width="85px" style="text-align:center;font-size:14px">小计</td>
+    </tr>
+	<!--	<td>{$value.jd_goodcode}</td>
+    <td>{$value.jd_goodname}</td>
+    <td>{$value.jd_goodtype}</td>
+    <td>{$value.jd_manufacturer}</td>
+    <td>{$value.jd_count}</td>
+    <td>{$value.jd_oneprice}元</td>
+    <td>{$value.jd_taxprice}元</td>
+    <td>{$value.jd_payprice}元</td>
+    <td>{$value.jd_price}元</td>-->
+	{foreach from=$goods key=key item=value}
+    <tr>
+    <td style="text-align:center;font-size:14px">{$value.jd_goodcode}</td>
+    <td style="text-align:center;font-size:14px">{$value.jd_goodname}</td>
+    <td style="text-align:center;font-size:14px">{$value.jd_goodtype}</td>
+    <td style="text-align:center;font-size:14px">{$value.jd_count}</td>
+    <td style="text-align:center;font-size:14px">{$value.jd_oneprice}</td>
+    <td style="text-align:center;font-size:14px">{$value.jd_taxprice}</td>
+    </tr>
+	{/foreach}
+</table>
+</div>
+</div>
+<br/><br/>
+<input type="button" value="打印订单" id="printbtn" onclick="window.print();" />

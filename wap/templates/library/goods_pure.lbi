@@ -1,0 +1,43 @@
+<!--<div class="container">-->
+    <div>
+        <p class="goodsAttr-info">您选择<b>{$goods.goods_name}</b></p>
+        <!--{if $link_goods && $source.show_sk eq false}[关联商品]-->
+        <div class="goodsAttr-box">
+            <h3 class="goodsAttr-title">款式</h3>
+            <div class="goodsAttr-sliderbox" id="goodsAttr-sliderbox">
+                <ul class="goodsAttr-sliders" id="goodsAttr-sliders">
+                    <li class="current"><a href=""><img src="{$img_url}thumb/goods/60x60/goods_{$goods.goods_id}_60x60.jpg" /></a></li>
+                    <!--{foreach from=$link_goods item=li name=foo}-->
+                    <li><a href="goods.php?act=choose_goods_attr&id={$li.link_goods_id}"><img src="{$img_url}thumb/goods/60x60/goods_{$li.link_goods_id}_60x60.jpg" /></a></li>
+                    <!--{/foreach}-->
+                </ul>
+            </div>
+        </div>
+        <!--{/if}-->
+    </div>
+
+    <form action="" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY">
+        <div class="goodsAttr-box goodsAttr-num" style="margin-top:.65rem;">
+            <div class="item">
+                <h3 class="goodsAttr-title">数量</h3>
+                <div class="numbox">
+                    <a onclick="change_count('-');">-</a>
+                    <input type="text" readonly="true" value="1" id="count" name="goods_number" />
+                    <a onclick="change_count('+');">+</a>
+                </div>
+            </div>
+        </div>
+        <div style="height:5rem;"></div>
+        <div class="goodsBuyBottom" style="position:fixed;width:100%;left:0;bottom:0;">
+            {if $goods.is_on_sale eq 1}
+            {if $goods.goods_number>0}
+            <a href="javascript:;" onclick="add_to_cart_z({$goods.goods_id});" class="g-btn-large">确认购买</a>
+            {else}
+            <div class="g-btn-large">已售空</div>
+            {/if}
+            {else}
+            <div class="g-btn-large">已下架</div>
+            {/if}
+        </div>
+    </form>
+<!--</div>-->

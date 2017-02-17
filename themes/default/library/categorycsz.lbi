@@ -1,0 +1,35 @@
+
+<!--{foreach from=$categoriescsz item=cat name=arrts}-->
+
+    <div class="leftmain"><img src="images/jsj.gif" width="6px" height="9px" >&nbsp;&nbsp;
+        <a href="categorysea.php?attr{$smarty.foreach.arrts.index}=0"><span class="color_hei fontsize13" style="color:#C30000">{$cat.name|escape:html}</span></a>
+    </div>
+    
+    <div class="leftmaincontent">
+        <!--{foreach from=$cat.attr_values item=catz }-->
+            <a href="categorysea.php?&attr{$smarty.foreach.arrts.index}={$catz|escape:url}"><span class="classtype">{$catz}</span></a>
+        <!--{/foreach}-->
+    </div>
+    
+    <div class="leftmainline"><img src="images/leftmainline.jpg" height="2px" /></div>
+<!--{/foreach}--> 
+ 
+<div class="leftmain"><img src="images/jsj.gif" width="6px" height="9px">&nbsp;&nbsp;<a href="categorysea.php"><span class="color_hei fontsize13" style="color:#C30000">产品价格</span></a>
+</div>
+
+    <div class="leftmaincontent" style="width:180px;">
+    
+    
+     <!--{foreach from=$categoryjg item=catz name=bb}-->
+     
+        <!--{if $smarty.foreach.bb.index%2 == 0}-->
+            <span style="display:inline-block; width:85px;"><a href="categorysea.php?price_min={$catz.attr_type}&price_max={$catz.attr_input_type}">{$catz.name}</a></span>     
+        <!--{else}--> 
+            <span style="display:inline-block;"><a href="categorysea.php?price_min={$catz.attr_type}&price_max={$catz.attr_input_type}">{$catz.name}</a></span>
+        <!--{/if}--> 
+      
+     <!--{/foreach}--> 
+    
+    </div>
+    
+<div class="leftmainline"><img src="images/leftmainline.jpg" height="2px" /></div>

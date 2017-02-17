@@ -1,0 +1,12 @@
+<!--{foreach from=$new_articles_eypt item=article name=newslist}-->
+<!--{if $smarty.foreach.newslist.index < 5}-->
+    <div class="news190">
+        <div class="xyuandian" style="">
+        &nbsp;•
+        </div>
+        <div class="xnewstitle"><span><a href="{$article.url}" title="{$article.title|escape:html}" target="_blank">{$article.short_title|truncate:14:" ":true}</a></span>
+        </div>
+    </div>
+
+<!--{/if}--> 
+<!--{/foreach}-->

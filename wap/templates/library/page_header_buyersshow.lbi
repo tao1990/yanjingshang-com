@@ -1,0 +1,85 @@
+<script type="text/javascript">var process_request = "{$lang.process_request}";</script>
+<script type="text/javascript">
+function pan_hide(id) {
+	document.getElementById(id).style.display='none';
+}
+function pan_show(id) {
+	document.getElementById(id).style.display='block';
+}
+function pan_hide_h2()
+{
+	document.getElementById("help_tip_pan").style.display='none';
+	document.getElementById("help_tip_pan2").style.display='none';
+}
+function pan_show_h2()
+{
+	document.getElementById("help_tip_pan").style.display='block';
+	document.getElementById("help_tip_pan2").style.display='block';
+}
+</script>
+<div class="header">
+
+	<div class="lg_tr">
+        <ul class="lg_ul">
+        	<li><a href="javascript:;" class="lg_sc" onclick="add_book_mark('易视网 只售正品','http://www.easeeyes.com/')">收藏易视网</a></li>            
+            <li class="lg_tr_u">            
+                <ul>
+                	<li>
+                    	<ul class="lg_tr_tip3">
+                        	<li class="lg_tr_xu_gm"></li>
+                            <li>
+								<a href="flow.html">购物车&nbsp;<strong class="red" id="head_cart_num">{insert name='cart_num'}</strong>&nbsp;件</a>
+								<span id="head_cart_num2" style="display:none;"></span>
+							</li>
+                        </ul>
+                    </li>
+                    <li class="vline2"></li>                    
+                    <li style="position:relative;">
+                        <a href="user.html" onmouseover="pan_show('user_tip_pan')" onmouseout="pan_hide('user_tip_pan')"><ul class="lg_tr_tip">我的易视</ul></a>
+                        <ul id="user_tip_pan" onmouseover="pan_show('user_tip_pan')" onmouseout="pan_hide('user_tip_pan')">
+                            <a href="user.html"            target="_blank" rel="nofollow"><ul class="lg_tr_tip2">我的易视</ul></a>
+                            <a href="user_order_list.html" target="_blank" rel="nofollow">我的订单</a>
+                            <a href="user_transform_points.html" target="_blank" rel="nofollow">我的积分</a>
+                            <a href="user_collection_list.html"  target="_blank" rel="nofollow">我的收藏夹</a>
+                        </ul>
+                    </li><li class="vline2"></li>
+                    <li style="position:relative;">                           
+                        <a href="javascript:void();" onmouseover="pan_show_h2()" onmouseout="pan_hide_h2()"><ul class="lg_tr_tip">帮助中心</ul></a>                       
+                        <ul id="help_tip_pan"  onmouseover="pan_show_h2()" onmouseout="pan_hide_h2()"><a href="javascript:void();"><ul class="lg_tr_tip2">帮助中心</ul></a></ul>
+                        <ul id="help_tip_pan2" onmouseover="pan_show_h2()" onmouseout="pan_hide_h2()">
+                        	<li class="bh_p_li_1">
+                                <a href="article-35.html" target="_blank" rel="nofollow">如何购买</a>
+                                <a href="article-8.html"  target="_blank" rel="nofollow">运时运费</a>
+                                <a href="school.html"  target="_blank" rel="nofollow">眼镜学堂</a>
+                            </li>  
+                            <li class="bh_p_li_2">
+                                <a href="article-27.html" target="_blank" rel="nofollow">如何付款</a>
+                                <a href="article-7.html"  target="_blank" rel="nofollow">售后保障</a>
+                                <a href="questionlist.html" target="_blank" rel="nofollow">有问必答</a>
+                            </li>
+                        </ul>  
+                    </li><li class="vline2"></li>                   
+                    <li style="position:relative;"> 
+                    	<a href="javascript:void();" onmouseover="pan_show('kefu')" onmouseout="pan_hide('kefu')"><ul class="lg_tr_tip3"><li class="lg_tr_kf"></li><li>联系在线客服</li></ul></a>                       
+                        <ul id="kefu" onmouseover="pan_show('kefu')" onmouseout="pan_hide('kefu')">
+                            <a href="javascript:void();" ><ul class="lg_tr_tip3" style="margin-left:8px;"><li class="lg_tr_kf"></li><li>联系在线客服</li></ul></a>                
+                            <li class="kefu_time">服务时间 9:00~20:00</li>                                                 
+                            <li class="kefu_li bg_qq1"><a id="qq1" title="QQ:1340709840" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1340709840&amp;site=qq&amp;menu=yes" target="_blank" rel="nofollow">商品咨询</a></li>                  			<li class="kefu_li bg_qq2"><a id="qq2" title="QQ:1223819714" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1223819714&amp;site=qq&amp;menu=yes" target="_blank" rel="nofollow">订单查询</a></li>
+                            <li class="kefu_li bg_qq3"><a id="qq3" title="QQ:1282786616" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1282786616&amp;site=qq&amp;menu=yes" target="_blank" rel="nofollow">售后服务</a></li>
+                            <li class="kefu_li bg_ww"><a title="旺旺:易视网" href="http://amos.im.alisoft.com/msg.aw?v=2&uid=%E6%98%93%E8%A7%86%E7%BD%91&site=cntaobao&s=2&charset=utf-8" target="_blank" rel="nofollow">旺旺客服</a></li>
+                       </ul>           
+                    </li>
+                    <li class="vline2"></li> 
+                    <li>
+                    	<ul>
+                        	<li class="lg_tr_xu_dh"></li>
+                        	<li>客服热线&nbsp;<strong style="color:#72ce9d; font-size:13px;">4006-177-176</strong></li>
+                        </ul>
+                   	</li>
+                </ul>            
+            </li>
+            <li class="lg_mb_info"><div id="ECS_MEMBERZONE" class="mb_info">{insert name='member_info'}</div></li>                 
+        </ul>
+    </div>    
+      
+</div>

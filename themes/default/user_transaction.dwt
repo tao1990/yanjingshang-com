@@ -1,0 +1,591 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" --><title>{$page_title}</title><!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link rel="stylesheet" href="http://file.easeeyes.com/b2b/css/base.css" />
+<link rel="stylesheet" href="http://file.easeeyes.com/b2b/css/index.css" />
+<!--[if lte IE 6]><link href="themes/default/style/ie6_in.css" rel="stylesheet" type="text/css"/><![endif]-->
+<script type="text/javascript" src="/js/yijq.js"></script>
+<script type="text/javascript" src="/js/common.js"></script>
+<script type="text/javascript" src="/js/user.js"></script>
+<script type="text/javascript" src="/js/inner.js"></script>
+</head>
+<body>
+<!--header-tag-->
+<!-- #BeginLibraryItem "/library/user_header.lbi" --><!-- #EndLibraryItem -->
+<!--MAIN-->
+<div class="m-memberinfo container">
+	<!--LEFT-->
+	<!-- #BeginLibraryItem "/library/user_left_nav.lbi" --><!-- #EndLibraryItem -->
+	<!--CENTER-->
+	<div class="memberinfo-center fl">
+		
+        <!-- #BeginLibraryItem "/library/user_top.lbi" --><!-- #EndLibraryItem -->
+		<div class="memberinfo-center-order">
+			
+            <!-------------------------------------------no.1订单管理板块--------------------------------------------->
+            <!--#订单列表界面-->
+            <!--{if $action eq 'order_list'}-->
+            <ul class="pp_shadow"></ul>
+            <table class="tb_account_log" cellspacing="0" cellpadding="0" border="1" bordercolor="#dcdcdc" id="tb_ddd" >    
+                <colgroup>
+                    <col class="col_order_id"/>        
+                    <col class="col_order_time" />
+                    <col class="col_order_sum" />
+                    <col class="col_order_status"/>
+                    <col class="col_order_option"/>           
+                </colgroup>    
+                <tr class="tb_head" style="height:24px; line-height:24px;"><th>订单号</th><th>下单时间</th><th>订单总金额</th><th>订单状态</th><th>操作</th></tr>
+                <!--{foreach from=$orders item=item}-->
+                <tr>
+                    <td><a href="user_order_detail_{$item.order_id}.html" target="_blank" class="order_id_a" id="{$item.order_id}">{$item.order_sn}</a></td>
+                    <td>{$item.order_time}</td>
+                    <td>{$item.total_fee}</td>
+                    <td>{$item.order_status}</td>
+                    <td>        	     
+                    	{if $item.os neq 2 && $item.ps eq 0 && $item.os neq 3}<a href="user_order_detail_{$item.order_id}.html" target="_blank" class="order_option_button1 ml7">付款</a>{/if}
+                        
+                        {if ($item.os eq 2||$item.os eq 3) && $item.ps eq 0 && $item.ss eq 0}{/if}
+                        
+                        <a href="user_order_detail_{$item.order_id}.html" target="_blank" class="order_option_button2">查看订单</a>
+                        {if ($item.os eq 1||$item.os eq 5) && $item.ss eq 1 }<a href="javascript:void()" class="order_option_button2" onclick="fllow({$item.order_id})">跟踪包裹</a>{/if} 
+                                        
+            			{if ($item.os eq 1||$item.os eq 5) && $item.ss eq 1 && $item.ps eq 2}
+                        	<a class="order_option_button2" href="user.php?act=affirm_received&order_id={$item.order_id}" onclick="if(!confirm('您确认已收到您的货物!'))return false;">确认收货</a>{/if}                
+            			{if $item.os eq 0 && $item.ss eq 0 && $item.ps eq 0}
+                        	<a class="order_option_button1 ml4" href="user.php?act=cancel_order&order_id={$item.order_id}" onclick="if(!confirm('您确实要取消该订单!'))return false;">取消</a>
+                        {/if}               
+                    </td>
+                </tr>
+                <!--{/foreach}--> 
+            </table>
+            <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->
+            <!--{/if}-->
+            <!--#订单列表界面end-->
+            
+            
+            
+            <!--#订单详情页面(包括：订单状态，商品列表，费用总计，收货人信息，支付方式，其它信息)-->
+            <!--{if $action eq order_detail} -->
+            {if $order.pay_id neq 3}<!--非货到付款-->
+            <div style="padding:0 10px; height:132px; border:1px solid #dcdcdc; background-color:#f8f8f8; margin:0 auto;">
+            	<div style="height:72px; line-height:72px; border-bottom:1px dotted #dcdcdc; text-align:left;">
+                	<div class="fl" style="color:#666; font-size:14px; font-weight:bold; margin-right:20px;">订单号：{$order.order_sn}</div>
+                    <div class="fl" style="color:#666; font-size:14px; font-weight:bold; margin-right:20px;">状态：<font style="color:#12a000;">{if $order.order_status eq '未确认'}等待付款{else}{$order.order_status}{/if}</font></div>                
+                    {if $order.pay_online}<div class="fl" style="margin-right:20px;">{$order.pay_online}</div><div class="fl" style="color:#333;">点击进入{$order.pay_name}支付</div>{/if}   
+                </div>
+                <div style="height:58px; float:left; line-height:58px; color:#666; text-align:left; font-family:宋体;">
+                {if $order.order_flow eq 1}尊敬的客户, 我们还未收到该订单的款项，请您尽快打款，以便我们及时为您发货。(若支付过程报错，请重新下单即可！){/if}
+                {if $order.order_flow eq 2 || $order.order_flow eq 3}尊敬的客户，我们已收到您的款项，工作人员正在为您发货！{/if}
+                {if $order.order_flow eq 4}尊敬的客户，您的商品已经发出，请注意查收！{/if}
+                {if $order.order_flow eq 5}尊敬的客户，谢谢您的购买！您有什么问题，欢迎随时联系我们的客服！{/if}
+                </div>
+            </div>
+            
+            
+            <div style="width:726px; height:100px; text-align:center; margin-top:15px; color:#333;">
+            	<div style="width:712px; height:14px; line-height:14px; color:#12a000; text-align:left; text-indent:246px;">{if $order.order_flow eq 2}正在出库{/if}</div>
+            	<div style="width:712px; height:22px;"><img src="http://www.easeeyes.com/themes/default/images/cart/line_pay_{$order.order_flow}.gif" width="712" height="22" alt=""/></div>
+                <div style="width:726px; height:14px; line-height:14px; text-align:left;"><div class="fl" style="width:166px;">提交订单</div><div class="fl" style="width:174px; {if $order.order_flow > 1}color:#333;{/if}">等待付款</div><div class="fl color9" style="width:174px; {if $order.order_flow > 2}color:#333;{/if}">商品出库</div><div class="fl color9" style="width:183px; {if $order.order_flow > 3}color:#333;{/if}">等待收货</div><div class="fl color9" {if $order.order_flow eq 5}style="color:#333;"{/if}>完成</div></div>
+            </div>
+            
+            {else}<!--货到付款-->
+            <div style="width:746px; padding-left:10px; height:132px; border:1px solid #dcdcdc; background-color:#f8f8f8; margin:0 auto;">
+            	<div style="width:736px; height:72px; line-height:72px; float:left; border-bottom:1px dotted #dcdcdc; text-align:left;">
+                	<div class="fl" style=" color:#666; font-size:14px; font-weight:bold; margin-right:20px;">订单号：{$order.order_sn}</div>
+                    <div class="fl" style="color:#666; font-size:14px; font-weight:bold; margin-right:20px;">订单状态：<font style="color:#12a000;">{if $order.order_status eq '未确认'}确认审核中{else}{$order.order_status}{/if}</font></div>                
+                    {if $order.pay_online}<div class="fl">{$order.pay_online}</div><div class="fl" style="color:#333; margin-left:10px; padding-top:12px;">点击进入{$order.pay_name}支付</div>{/if}  
+                </div>
+                <div style="width:736px; height:58px; float:left; line-height:58px; color:#666; text-align:left; font-family:宋体;">    
+                {if $order.order_flow eq 11}尊敬的客户，您的订单正在处理中，请您耐心等待。{/if}
+                {if $order.order_flow eq 12}尊敬的客户，您的订单已取消。<!--<a href="user.php?act=buy_again&order_id={$order.order_id}" target="_blank">我要再买</a>-->{/if}
+                {if $order.order_flow eq 14}尊敬的客户，您的订单已退货成功，如有问题请联系客服。我要再买{/if}
+                {if $order.order_flow eq 1 || $order.order_flow eq 2}尊敬的客户，工作人员正在为您发货，请您耐心等待。{/if}
+                {if $order.order_flow eq 3}尊敬的客户，您的商品已经发出，请保持手机畅通并注意查收！{/if}
+                {if $order.order_flow eq 4}尊敬的客户，谢谢您的购买！您有什么问题或意见，欢迎随时联系我们客服！{/if}
+                </div>
+            </div>
+            <div style="width:726px; height:100px; text-align:center; margin-top:46px; color:#333;">
+            	<div style="width:712px; height:14px; line-height:14px; color:#12a000; text-align:left; text-indent:160px;">{if $order.order_flow eq 1||$order.order_flow eq 11}正在出库{/if}</div>
+            	<div style="width:712px; height:22px;"><img src="images/cart/upay_{$order.order_flow}.gif" width="712" height="22" alt=""/></div>
+                <div style="width:568px; height:14px; line-height:14px; text-align:left;"><div class="fl" style="width:174px; {if $order.order_flow > 0}color:#333;{/if}">提交订单</div><div class="fl color9" style="width:174px; {if $order.order_flow > 1}color:#333;{/if}">商品出库</div><div class="fl color9" style="width:183px; {if $order.order_flow > 2}color:#333;{/if}">等待收货</div><div class="fl color9" {if $order.order_flow eq 4}style="color:#333;"{/if}>完成</div></div>
+            </div>
+            {/if}
+            
+            <ul style="width:726px; height:22px; line-height:22px; color:#999; border-bottom:1px solid #dcdcdc; text-align:center;"><li class="fl" style="width:150px;">处理时间</li><li class="fl" style="width:446px;">处理信息</li><li class="fl" style="width:130px;">操作人</li></ul>
+            
+            {foreach from=$action_list item=action}
+            <ul class="order_action_li"><li class="fl" style="width:150px;">{$action.action_time}</li><li class="fl" style="width:446px;">{$action.order_status} {$action.pay_status} {$action.shipping_status}</li><li class="fl" style="width:130px;">{if $action.action_user eq '买家'}买家{else}易视网{/if}</li></ul> 
+            {/foreach}
+            
+            
+            
+            <h2 class="user_head">订单信息</h2>
+            {insert_scripts files='transport.js,region.js'}
+            
+            <div style="width:100%; height:10px; visibility:hidden;"></div>
+            <table class="tb_order" cellspacing="0" cellpadding="0" border="0" style="">
+            <caption style=" text-align:left; color:#666; font-size:12px; font-weight:bold; padding-bottom:12px;">收货人信息</caption>
+            <colgroup>
+            <col style="width:70px;"/><col style="width:636px;"/>
+            </colgroup>
+            	<tr><td class="color9">地<span class="width_24"></span>址：</td><td>{$order.provincena} {$order.cityna} {$order.districtna} {$order.address}</td></tr>
+                <tr><td class="color9">姓<span class="width_24"></span>名：</td><td>{$order.consignee}</td></tr>
+                <tr><td class="color9">电子邮箱：</td><td>{$order.email}</td></tr>
+                <tr><td class="color9">联系电话：</td><td>{if $order.tel}{$order.tel}{else}{$order.mobile}{/if}</td></tr>
+            </table>
+            <div class="order_detail_line"></div>
+            
+            <table class="tb_order" cellspacing="0" cellpadding="0" border="0" style="margin:0 auto;">
+            <caption style=" text-align:left; color:#666; font-size:12px; font-weight:bold; padding-bottom:12px;">支付及配送方式</caption>
+            <colgroup>
+            <col style="width:70px;"/><col style="width:636px;"/>
+            </colgroup>
+                <tr><td class="color9">支付方式：</td><td>{$order.pay_name}</td></tr>
+                <tr><td class="color9">配送方式：</td><td>{$order.shipping_name}</td></tr>
+            </table>
+            <div class="order_detail_line"></div>
+            
+            <table class="tb_order" cellspacing="0" cellpadding="0" border="0" style="margin:0 auto;">
+            <caption style=" text-align:left; color:#666; font-size:12px; font-weight:bold; padding-bottom:12px;">其它信息</caption>
+            <colgroup>
+            <col style="width:70px;"/><col style="width:636px;"/>
+            </colgroup>
+                <tr><td class="color9">购物凭证：</td><td>{if $order.inv_payee}购物清单+发票。发票抬头：{$order.inv_payee}{else}购物清单{/if}</td></tr>
+                {if $order.postscript}<tr><td class="color9">订单附言：</td><td>{$order.postscript}</td></tr>{/if}
+            </table>
+            <div class="order_detail_line"></div>
+            
+            
+            <div style="text-align:left;color:#666; font-size:12px; font-weight:bold; padding-bottom:12px;">商品清单</div>
+            <div style="height:auto; border:1px #dcdcdc solid; margin:0 auto;">            
+            <table id="tb_goods_info" width="726px" border="0" cellpadding="0" cellspacing="0">
+                <tr style="height:25px; line-height:25px;">
+                    <th class="tr_goods_info">商品名称</th>
+                    <th class="tr_goods_info">属性</th>
+                    <th class="tr_goods_info">易视价</th>
+                    <th class="tr_goods_info">购买数量</th>
+                    <th class="tr_goods_info">小计</th>
+                </tr>                
+                <!--{foreach from=$goods_list item=goods}-->
+                <tr>
+                    <td align="left" style="padding-left:10px;">
+                    <!--{if $goods.goods_id gt 0 && $goods.extension_code eq 'package_buy'}礼包-->
+                    <a href="goods{$goods.goods_id}.html" style="color:#333;">{$goods.goods_name}<span style="color:#f00;">（礼包）</span></a>
+            		<!--{elseif $goods.goods_id gt 0 && $goods.extension_code eq 'tuan_buy'}礼包-->
+            		<a href="goods{$goods.goods_id}.html" target="_blank" style="color:#333;">{$goods.goods_name}<span style="color:#f00;">（团购）</span></a>
+                    <!--{else}-->
+                    <a href="goods{$goods.goods_id}.html" target="_blank" style="color:#333;">{$goods.goods_name}</a>
+                        <!--{if $goods.parent_id > 0}-->
+                        <span style="color:#f00">（{$lang.accessories}）</span>
+                        <!--{elseif $goods.is_gift && $goods.goods_price eq '0.00'}-->
+                        <span style="color:#f00">（赠品）</span>
+                        <!--{elseif $goods.is_gift && $goods.goods_price neq '0.00'}-->
+                        <span style="color:#f00">（特惠商品）</span>
+                        <!--{/if}-->
+                    <!--{/if}-->          
+                    <!--{if $goods.is_shipping}-->(<span style="color:#f00">{$lang.free_goods}</span>)<!--{/if}-->
+                    </td>                    
+                    <td>
+                        <!--{if goods.goods_attr}-->{$goods.goods_attr|nl2br}<br/><!--{/if}-->
+                        <!--{if $goods.zcount > 0}--> 左眼度数：{$goods.zselect} 数量：{$goods.zcount}<br/><!--{/if}-->
+                        <!--{if $goods.ycount > 0}--> 右眼度数：{$goods.yselect} 数量：{$goods.ycount}<br/><!--{/if}-->
+                        <!--{if $goods.ds_extention}--> 瞳距：{$goods.ds_extention}<!--{/if}-->
+                    </td>
+                    <td>{$goods.goods_price}</td>
+                    <td>{$goods.goods_number}</td>
+                    <td>{$goods.subtotal}</td>
+                </tr>
+                <!--{/foreach}-->
+            </table> 
+            </div>
+            <ul class="order_detail_total">
+            	<li class="fr"><ul class="order_total_ul fr"><li class="order_total_li1 fl">商品总价：</li><li class="order_total_li2 fr">{$order.formated_goods_amount}</li></ul></li>
+                <!--{if $order.discount gt 0}折扣-->
+                <li class="fr"><ul class="order_total_ul fr"><li class="order_total_li1 fl">- 折扣：</li><li class="order_total_li2 fr">{$order.formated_discount}</li></ul></li><!--{/if}-->
+                <!--{if $order.bonus > 0}红包-->
+            	<li class="fr"><ul class="order_total_ul fr"><li class="order_total_li1 fl">- 红包/优惠券：</li><li class="order_total_li2 fr">{$order.formated_bonus}</li></ul></li><!--{/if}-->
+                <!--{if $order.integral_money > 0}积分-->
+            	<li class="fr"><ul class="order_total_ul fr"><li class="order_total_li1 fl">- 积分：</li><li class="order_total_li2 fr">{$order.formated_integral_money}</li></ul></li><!--{/if}-->
+                <!--{if $order.money_paid > 0}现金支付-->
+            	<li class="fr"><ul class="order_total_ul fr"><li class="order_total_li1 fl">- 现金支付：</li><li class="order_total_li2 fr">{$order.formated_money_paid}</li></ul></li><!--{/if}-->        
+                <!--{if $order.surplus > 0}使用余额-->
+            	<li class="fr"><ul class="order_total_ul fr"><li class="order_total_li1 fl">- 使用余额：</li><li class="order_total_li2 fr">{$order.formated_surplus}</li></ul></li><!--{/if}-->
+                <li class="fr"><ul class="order_total_ul fr"><li class="order_total_li1 fl">邮资运费：</li><li class="order_total_li2 fr">{if $order.shipping_fee > 0}{$order.formated_shipping_fee}{else}￥0.00{/if}</li></ul></li>
+                <li class="fr"><ul class="order_total_ul fr"><li class="order_total_li1 fl">应付款金额：</li><li class="order_total_li2 fr">￥<font class="font_14_red">{$order.order_amount}</font></li></ul></li>
+            </ul>
+            <!--{/if}-->
+            <!--#订单详情页end--> 
+
+            
+            <!--#个人资料-->
+            <!--{if $action eq 'profile'}-->
+            <table class="tb_account_log" cellspacing="0" cellpadding="0" border="0" style="text-align:left;">
+            <form name="formEdit" action="user.html" method="post" onSubmit="return userEdit();">
+            	<tr class="bg_f2"><td class="pr10 ta_r" style="width:260px;">用户名：</td><td>{$profile.user_name}</td></tr>
+            	<tr>
+                	<td class="pr10 ta_r">邮箱：</td><td><input type="text" name="email" value="{$profile.email}" class="addres_input"/><span class="spark-indeed"> *</span></td>
+                </tr>
+                <!--{foreach from=$extend_info_list item=field}-->
+       
+            	<tr class="bg_f2" {if $field.id eq 2}style="display:none"{/if}>
+                    <td class="pr10 ta_r" {if $field.is_need}id="extend_field{$field.id}i"{/if} >{$field.reg_field_name}：</td>
+                    <td>
+                    	<input type="text" name="extend_field{$field.id}" value="{$field.content}" class="addres_input"/><!--{if $field.is_need}--><span class="spark-indeed"> *</span><!--{/if}-->
+                    </td>        
+                </tr>        
+                <!--{/foreach}-->
+            	<tr>
+                	<td class="pr10"></td>
+                    <td>
+                        <input type="hidden" name="act" value="act_edit_profile" />
+                        <input type="submit" name="submit" value="保存"  style="height: 34px;line-height: 34px;width: 120px;display: block;background: #015287;color: #fff; text-align: center;border-radius: 5px;"/>
+                    </td>
+                </tr>               
+            </form>
+            </table>
+            <!--{/if}-->
+            <!--#个人资料end-->
+            
+            
+            <!--#收货地址页面-->
+            <!--{if $action eq 'address_list'} -->
+            {insert_scripts files='utils.js,transport2.js,region.js,shopping_flow.js,jquery.form.js'}
+            <script type="text/javascript">
+            	region.isAdmin = false;
+            	if(!document.all)
+            	{
+            	  document.forms['theForm'].reset();
+            	}
+            	
+            	//ajax提交表单: 新建收货人地址数据
+            	$('#add_addres_form').ajaxForm({
+            		beforeSubmit: function(){
+            			//地址表单数据的验证.
+            			if( $("#consignee").val() == '') {
+            				//局部刷新的方式提示验证.
+            				$("#consignee ~ span").html('&nbsp;请输入收货人姓名!');
+            				return false;
+            			}else{
+            				$("#consignee ~ span").html('&nbsp;*');
+            			}
+            			if( $('#selCountries').val() == 0 || $('#selProvinces').val() == 0 ||$('#selCities').val() == 0 ||$('#selDistricts').val() == 0){
+            				$('#add_addres_form .spark-indeed').eq(1).html('&nbsp;请选择好配送区域!');
+            				return false;				
+            			}else{
+            				$('#add_addres_form .spark-indeed').eq(1).html('&nbsp;*');
+            			}
+            			
+            			if( $('#add_addres_form input[name="address"]').val() == '' ){
+            				$('#add_addres_form .spark-indeed').eq(2).html('&nbsp;请输入街道地址!');
+            				return false;
+            			}else{
+            				$('#add_addres_form .spark-indeed').eq(2).html('&nbsp;*');
+            			}
+            			
+            			//联系电话
+            			if( $('#add_addres_form input[name="tel"]').val() == ''){
+            				$('#add_addres_form .spark-indeed').eq(3).html('&nbsp;请输入电话或手机!');
+            				return false;
+            			}else{
+            				$('#add_addres_form .spark-indeed').eq(3).html('&nbsp;*');
+            			}
+            		},
+            		success:	
+            		function(){
+            			//获取表单数据, 追加到表格后面.(暂未完成, 先做个刷新)
+            
+            		}
+            	});
+            </script>
+            <h2 class="user_head mb10">管理收货地址</h2>
+            <div>
+            <table id="tb_manage_addres" class="tb_account_log tb_address_list" cellspacing="0" cellpadding="0" border="1" bordercolor="#dcdcdc" bgcolor="#dcdcdc">    
+            <colgroup style="background-color:white">
+                <col style="width:76px;"/>        
+                <col style="width:156px;"/>  
+                <col style="width:196px;"/>        
+                <col style="width:126px;"/>
+                <col style="width:110px;"/>     
+                <col style="width:92px;"/>                   
+            </colgroup>    
+                <tr class="tb_head" style="height:24px; line-height:24px;"><th>收货人</th><th>所在地区</th><th>街道地址</th><th>电话/手机</th><th></th><th>操作</th></tr>
+            <!--{foreach from=$consignee_list item=consignee key=sn}-->    
+                <tr>
+                	<td>{$consignee.consignee|escape}</td>
+                    <td>{$consignee.provincena} {$consignee.cityna} {$consignee.districtna}</td>
+                    <td>{$consignee.address|escape}</td>
+                    <td>{if $consignee.tel && $consignee.mobile}<div style="line-height:17px; color:#333; font-size:14px;">{$consignee.tel|escape}<br/>{$consignee.mobile|escape}</div>{else}{$consignee.tel|escape}{$consignee.mobile|escape}{/if}</td>
+                    <td>{if $default_add eq $consignee.address_id}默认地址{/if}</td>       
+                    
+                    <td>
+                    <button onclick="location.href='user.php?act=address_list&id={$consignee.address_id}#addres_modify'"  style="border:0; background-color:#fff; cursor:pointer; width:35px; margin-right:10px;"><img src="images/user/bt_modify.gif" width="35" height="22" alt=""/></button>
+                    <button style="border:0; background-color:#fff; cursor:pointer; width:35px;" onclick="if(confirm('{$lang.confirm_drop_address}'))location.href='user.php?act=drop_consignee&id={$consignee.address_id}'">
+                    <img src="images/user/bt_delete.gif" width="35" height="22" alt=""/></button>
+                    </td>
+                </tr>
+            <!--{/foreach}--> 
+            </table>
+            </div>
+            
+            <h2 id="addres_modify" class="user_head mt20">新增收货地址</h2>
+            
+            
+            <table class="tb_account_log" cellspacing="0" cellpadding="0" border="0" bordercolor="#dcdcdc" style=" color:#404040; font-family:Tahoma;" >
+            <form name="theForm" id="add_addres_form" action="user.html" method="post" onsubmit="return checkConsignee(this)">
+            <colgroup>
+            	<col style="width:100px; text-align:right; line-height:35px;"/>
+                <col class="col_addres_input" style="text-align:left;"/>
+            </colgroup>
+            <caption style="height:45px; line-height:45px; text-align:left;">电话号码、手机号可选填一项,其余均为必填项</caption>
+                <tr>
+                	<td class="pr10">收货人姓名：</td><td><input type="text" name="consignee" id="consignee" value="{$add_display.consignee}" class="addres_input"/><span class="spark-indeed"> &nbsp;*</span></td>
+                </tr>
+                <tr>
+                	<td class="pr10" style="line-height:34px;">所在地区：</td><td>
+                    <select name="country" id="selCountries" onchange="region.changed(this, 1, 'selProvinces')">
+                        <option value="0">请选择{$name_of_region[0]}</option>
+                        <!--{foreach from=$country_list item=country}-->
+                        <option value="{$country.region_id}" {if $add_display.country eq $country.region_id}selected{/if}>{$country.region_name}</option>
+                        <!--{/foreach}-->
+                    </select>
+                    <select name="province" id="selProvinces" onchange="region.changed(this, 2, 'selCities')">
+                        <option value="0">请选择{$name_of_region[1]}</option>
+                        <!--{foreach from=$province_list item=province}-->
+                        <option value="{$province.region_id}" {if $add_display.province eq $province.region_id}selected{/if}>{$province.region_name}</option>
+                        <!--{/foreach}-->
+                    </select>
+                    <select name="city" id="selCities" onchange="region.changed(this, 3, 'selDistricts')">
+                        <option value="0">请选择{$name_of_region[2]}</option>
+                        <!--{foreach from=$city_list item=city}-->
+                        <option value="{$city.region_id}" {if $add_display.city eq $city.region_id}selected{/if}>{$city.region_name}</option>
+                        <!--{/foreach}-->
+                    </select>
+                    <select name="district" id="selDistricts" {if !$district_list}style="display:none"{/if}>
+                        <option value="0">请选择{$name_of_region[3]}</option>
+                        <!--{foreach from=$district_list item=district}-->
+                        <option value="{$district.region_id}" {if $add_display.district eq $district.region_id}selected{/if}>{$district.region_name}</option>
+                        <!--{/foreach}-->
+                    </select>        
+                    <span class="spark-indeed"> &nbsp;*</span></td>
+                </tr>
+                <tr>
+                	<td class="pr10" style="vertical-align:text-top; line-height:40px;">街道地址：</td><td><input type="text" name="address" id="address_{$sn}" value="{$add_display.address}" class="addres_input" style="width:318px; height:46px; margin-top:6px; margin-bottom:6px;"/><span class="spark-indeed"> &nbsp;*</span></td>
+                </tr>
+                <tr>
+                	<td class="pr10">电话或手机：</td><td><input type="text" name="tel" id="tel_{$sn}" value="{$add_display.tel}" class="addres_input"/><span class="spark-indeed"> &nbsp;*</span></td>
+                </tr>
+                <tr>
+                	<td class="pr10">设为默认：</td><td><input type="checkbox" name="default_add"  id="default_add" /></td>
+                </tr>
+                <tr><td class="pr10"></td>
+                <td>
+                	<input type="hidden" name="mobile"  id="mobile_{$sn}" value="{$add_display.mobile}" class="addres_input"/>
+                    <input type="hidden" name="act" value="act_edit_address_def" />
+                    <input type="hidden" name="address_id" value="{$add_display.address_id}" />
+                    <input type="hidden" name="email" value="{$default_email}" />
+                    
+                    <button type="submit" style="width:60px; height:25px; border:0; background-image:url(images/user/addres_save.gif); cursor:pointer;"></button>
+                	<button type="reset" style="width:60px; height:25px; border:0; background-image:url(images/user/addres_reset.gif); cursor:pointer; margin-left:20px;"></button>
+                </td>
+                </tr>
+            </form>    
+            </table>
+            <!--{/if} -->
+            <!--#收货地址添加页面end-->
+            
+            
+            
+            <!--#修改密码-->
+            <!--{if $action eq "resetpw"}-->
+            <h2 class="user_head">修改密码</h2>
+            
+            <div class="resetpw">
+            <form name="formPassword" action="user.html" method="post" onSubmit="return editPassword();" >
+            <table  cellspacing="0" cellpadding="0" border="0" bordercolor="#dcdcdc">
+            <colgroup style="line-height:45px; width:320px;">
+            	<col style="text-align:right; color:#666;"/>
+            	<col style="width:180px;"/>
+            	<col style="width:287px;"/>        
+            </colgroup>
+            	<tr>
+                	<td>旧密码：</td><td><input type="password" name="old_password" class="input_password"/></td><td></td>
+                </tr>
+                <tr>
+                	<td>新密码：</td><td><input type="password" name="new_password" class="input_password"/></td><td></td>
+                </tr>
+                <tr>
+                	<td>确认新密码：</td><td><input type="password" name="comfirm_password" class="input_password"/></td><td></td>
+                </tr>
+                <tr><input name="act" type="hidden" value="act_edit_password"/>
+                	<td colspan="3" align="center" height="80px"><input type="submit" name="submit" value="保存" class="input_save_pw" style="height: 34px;line-height: 34px;width: 120px;display: block;background: #015287;color: #fff; text-align: center;border-radius: 5px;"/></td>
+                </tr>
+            </table>
+            </form>    
+            </div>
+            <!--{/if}-->
+            <!--#修改密码end-->
+            
+            
+            <!--#会员等级-->
+            <!--{if $action eq "member_rank"}-->
+            <h2 class="user_head">会员等级</h2>
+            <div class="user_rank">
+            	<div class="user_rank_title">您目前的等级是：<font class="red">{$rank_name}</font>，累计的等级积分为 {$user_rank} 分{if $next_rank_name}，还差<font class="red"> {$next_rank_point} </font>分达到<strong class="red"> {$next_rank_name} </strong>{/if}。</div>    
+                <div class="user_rank_note">
+                    <div class="color9">如何升级为vip账户：</div>         
+                    <p class="color6">在商城消费1元可获得1等级积分,等级积分满1000分{if !$email_is_validate} 并 通过邮箱验证的账户, 可享受	vip会员价待遇哦! 点此<a href="javascript:void(0);" onclick="sendHashMail()" title="点击发送认证邮件" class="color_blue_underline">发送认证邮件</a>{else}即可。{/if}</p>        
+                </div>
+            </div>
+            <!--{/if}-->
+            <!--#会员等级end-->
+
+            <!--#店铺信息-->
+            <!--{if $action eq "storeInfo"}-->
+            <table  cellspacing="0" cellpadding="0" border="0" bordercolor="#dcdcdc">
+            <colgroup style="line-height:45px; width:320px;">
+            	<col style="text-align:right; color:#666;"/>
+            	<col style="width:180px;"/>
+            	<col style="width:287px;"/>        
+            </colgroup>
+            	<tr>
+                	<td>眼镜商名称：</td><td>{$store_info.store_name}</td><td></td>
+                </tr>
+                
+                <tr>
+                	<td>店铺地址：</td><td>{$store_info.address}</td><td></td>
+                </tr>
+                <tr>
+                	<td>负责人手机号：</td><td>{$store_info.phone}</td><td></td>
+                </tr>
+                <tr>
+                	<td>负责人身份证：</td><td>{$store_info.id_card}</td><td></td>
+                </tr>
+           
+            </table>
+            <!--{/if}-->
+            <!--#店铺信息end-->
+            
+            <!--#系统通知-->
+            <!--{if $action eq 'msg'}-->
+            <h2 class="user_head memberinfo-title">系统通知</h2>
+            <div class="u_msg_h memberinfo-nav" id="u_msg_h"><span>未读信息({$user.unread_msg})</span> | <span class="fb6">全部信息({$list_size})</span></div>
+            
+            <div id="all_user_msg">
+            	<!-- #BeginLibraryItem "/library/pap_user_msg_list.lbi" --><!-- #EndLibraryItem --> 
+                <!-- #BeginLibraryItem "/library/pap_user_msg_list_page.lbi" --><!-- #EndLibraryItem --> 
+            </div><input type="hidden" id="user_msg_size" value="{$pager.size}" /><input type="hidden" id="user_msg_count" value="{$pager.record_count}" />
+            
+            <div id="un_read_msg" style="display:none; overflow:hidden;">
+            	<!-- #BeginLibraryItem "/library/pap_user_msg_unread.lbi" --><!-- #EndLibraryItem --> 
+                <!-- #BeginLibraryItem "/library/pap_user_msg_unread_page.lbi" --><!-- #EndLibraryItem --> 
+            </div><input type="hidden" id="unread_msg_size" value="{$pager1.size}" /><input type="hidden" id="unread_msg_count" value="{$pager1.record_count}" />
+            
+            <ul style="width:100%; height:20px;"><input type="hidden" id="get_com_pap" value="user_msg"/></ul>
+            <script type="text/javascript">
+            $(document).ready(function(){
+            	$("#u_msg_h > span").click(function(){
+            		var span = $(this).index();
+            		if(1==span)
+            		{
+            			$("#un_read_msg").hide();
+            			$("#all_user_msg").show();
+            			$("#get_com_pap").val('user_msg');
+            		}
+            		else
+            		{			
+            			$("#un_read_msg").show();//0
+            			$("#all_user_msg").hide();	
+            			$("#get_com_pap").val('unread_msg');
+            		}
+            		$(this).addClass('fb6').siblings().removeClass('fb6');		
+            	});
+            });
+            
+            function com_page_ajax(page)
+            {
+            	var pan_kind = $("#get_com_pap").val();
+            	var size     = $("#"+pan_kind+"_size").val();
+            	var count    = $("#"+pan_kind+"_count").val();	
+            	$.ajax({		
+            		type:'POST',
+            		url:'user.php?act=pages',	
+            		data:'&page='+page+'&count='+count+'&size='+size+'&pan_kind='+pan_kind+'&m='+Math.random(),		
+            		cache:false,
+            		success:
+            			function(da)
+            			{
+            				if('user_msg' == pan_kind)
+            				{
+            					$("#all_user_msg").html(da);
+            				}
+            				else if('unread_msg' == pan_kind)
+            				{
+            					$("#un_read_msg").html(da);
+            				}
+            			}		
+            	});	
+            }
+            function com_page_ajax_submit()
+            {
+            	var page       = document.getElementById("get_submit_page").value;
+            	var page_count = document.getElementById("get_page_count").value; 
+            	page = page*1; page_count = page_count*1;
+            	if(page>0 && page<=page_count)
+            	{
+            		com_page_ajax(page);
+            	}
+            	else
+            	{
+            		alert("请输入正确页码！");
+            	}
+            }
+            </script>
+            <!--{/if}-->
+            <!--#系统通知end-->
+            
+            
+            
+            <!--#站内信内容页面-->
+            <!--{if $action eq 'msg_info'}-->
+            <h2 class="user_head memberinfo-title">系统通知</h2>
+            <div class="u_msg_h memberinfo-nav">
+				<a href="user_msg.html" title="" class="u_msg_return fr">返回我的消息</a>
+				<span style="cursor:default;">未读信息({$user.unread_msg})</span> | <a href="user_msg.html" class="fb6">全部信息({$list_size})</a>
+			</div>
+            
+            <ul class="u_msg_ul">
+            	<li class="memberinfo-item" style="margin-bottom:20px;">
+                	<dl style="overflow:hidden;">
+                    	<dd class="u_m_l_d1">{$msg.f_add_time}</dd>
+                        <dd class="u_m_l_d2 fb6" style="overflow:hidden">
+							<form action="user.html" name="rm_msg_fm" method="post" class="fr"><input type="hidden" name="act" value="user_msg_remove" /><input type="hidden" name="rec_id" value="{$msg.rec_id}"/><input type="submit" value="删除" style="background:#015286;color:#fff;font-size:12px;padding:0 10px;height:20px;line-height:20px;border:0 none;" /></form>
+							{$msg.title}
+						</dd>
+                    </dl>
+                </li>           
+                <li style="line-height:1.4; background-color:#f2f2f2; background-image:none; font-size:14px; overflow:hidden; border:1px solid #dcdcdc; padding:20px; word-wrap:break-word;">{$msg.msg}</li>
+            
+            </ul>
+            <!--{/if}-->
+            <!--#站内信内容end-->
+		</div>
+        <!-- #BeginLibraryItem "/library/user_bottom.lbi" --><!-- #EndLibraryItem -->
+	</div>
+	<!--RIGHT-->
+	<!-- #BeginLibraryItem "/library/user_right.lbi" --><!-- #EndLibraryItem -->
+</div>
+<!--底部-->
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+
+<script src="http://file.easeeyes.com/b2b/js/goodslide3.js"></script>
+
+</body>
+</html>

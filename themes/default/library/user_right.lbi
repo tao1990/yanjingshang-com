@@ -1,0 +1,89 @@
+<div class="memberinfo-right fr right-common-Mod">
+		<div class="tab">
+			<ul class="tab-title JS_tab_title" id="J-tab-03-title">
+				<li>公告</li>
+				<li>规则</li>
+				<li>买家</li>
+				<li>卖家</li>
+			</ul>
+			<div class="main JS_tab_main" id="J-tab-03-main">
+				<ul class="JS_tab_m">
+                        {foreach from=$article_1 key=k item=list}
+                            <li><a href="{$list.url}">{$list.short_title}</a></li>
+                        {/foreach}
+					</ul>
+                    <ul class="JS_tab_m">
+                        {foreach from=$article_2 key=k item=list}
+                            <li><a href="{$list.url}">{$list.short_title}</a></li>
+                        {/foreach}
+					</ul>
+                    <ul class="JS_tab_m">
+                        {foreach from=$article_3 key=k item=list}
+                            <li><a href="{$list.url}">{$list.short_title}</a></li>
+                        {/foreach}
+					</ul>
+                    <ul class="JS_tab_m">
+                        {foreach from=$article_4 key=k item=list}
+                            <li><a href="{$list.url}">{$list.short_title}</a></li>
+                        {/foreach}
+					</ul>
+			</div>
+		</div>
+
+		<div class="adv">
+						<a target="_blank" href="{$ad_B1.0.ad_link}"><img src="{$img_url}{$ad_B1.0.ad_code}"/></a>
+		</div>
+
+		<div class="move-slider hotgoods">
+			<div class="title">热销商品推荐</div>
+			<div class="goods">
+				<ul class="main">
+					<li>
+                        <!--{foreach from=$sales_charts1 item=li name=foo}-->     
+						{if $li.b2b_goods_thumb}
+                        <div class="thumb-pg">
+							<div class="image">
+								<a href="goods{$li.goods_id}.html" target="_blank"><img src="{$img_url}data/goods_img/60x60/G_{$li.goods_id}.jpg" /></a>
+							</div>
+							<div class="text">
+								<a href="goods{$li.goods_id}.html" target="_blank">{$li.goods_name}</a><br />
+								<span class="price">¥ {$li.shop_price}</span>
+							</div>
+						</div>
+                        {/if}
+			             <!--{/foreach}-->   
+					</li>
+					<li>
+                        <!--{foreach from=$sales_charts2 item=li name=foo}-->     
+						{if $li.b2b_goods_thumb}
+                        <div class="thumb-pg">
+							<div class="image">
+								<a href="goods{$li.goods_id}.html" target="_blank"><img src="{$img_url}data/goods_img/60x60/G_{$li.goods_id}.jpg" /></a>
+							</div>
+							<div class="text">
+								<a href="goods{$li.goods_id}.html" target="_blank">{$li.goods_name}</a><br />
+								<span class="price">¥ {$li.shop_price}</span>
+							</div>
+						</div>
+                        {/if}
+			             <!--{/foreach}-->   
+					</li>
+                    <li>
+                        <!--{foreach from=$sales_charts3 item=li name=foo}-->     
+						{if $li.b2b_goods_thumb}
+                        <div class="thumb-pg">
+							<div class="image">
+								<a href="goods{$li.goods_id}.html" target="_blank"><img src="{$img_url}data/goods_img/60x60/G_{$li.goods_id}.jpg" /></a>
+							</div>
+							<div class="text">
+								<a href="goods{$li.goods_id}.html" target="_blank">{$li.goods_name}</a><br />
+								<span class="price">¥ {$li.shop_price}</span>
+							</div>
+						</div>
+                        {/if}
+			             <!--{/foreach}-->   
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>

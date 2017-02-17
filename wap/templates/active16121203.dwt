@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>易视双十二，强生值击底价</title>
+<meta name="Keywords"  content="易视网,易视眼镜网,美瞳,护理液,润眼液,博士伦,海昌,海俪恩,卫康,库博,视康,强生,sho-bi,GEO,NEO,BESCON" />
+<meta name="Description" content="易视网，易视双十二，强生热销好货直击底价，满199返300再送好礼，24小时闪电发货，30天退换货保障" />
+<link rel="stylesheet" href="http://file.easeeyes.com/js/mlayer.css"/>
+<link rel="stylesheet" href="http://file.easeeyes.com/index2015/css/ani.css" />
+<style>
+.goodsItems{background:#7ab8e1;padding:0 .5rem;}
+.goodsItem{float:left;width:15.25rem;background:#fff;position:relative;margin-bottom:.5rem;padding-bottom:.5rem;}
+.goodsItem:nth-child(even){float:right;}
+.goodsItem-thumb{height:13rem;line-height:13rem;text-align:center;}
+.goodsItem-thumb img{max-width:100%;max-height:100%;vertical-align:middle;}
+.goodsItem-info{width:85%;margin:auto;border:1px dashed #ffba83;color:#ffba83;text-align:center;margin:auto;height:1.6rem;line-height:1.6rem;font-size:1rem;}
+.goodsItem-title{color:#333;padding:.5rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.goodsItem-price{background:#fba45f;margin:0 .5rem;overflow:hidden;padding:.5rem;color:#fff;font-size:.9rem;}
+.goodsItem-price b{font-size:1.3rem;font-weight:100;}
+.goodsItem-btn{float:right;width:4rem;height:1.6rem;line-height:1.6rem;background:#fdfdfd;color:#faa35e;font-size:.9rem;text-align:center;}
+.goodsItem-layer{position:absolute;right:.5rem;top:.5rem;width:2rem;height:2rem;background:url(http://img.easeeyes.com/promotion/2016110111/icon.png) no-repeat center;background-size:2rem auto;}
+.links{position:relative;}
+.links span{width:5.1rem;height:8.35rem;position:absolute;top:.65rem;}
+</style>
+</head>
+<!--tpl
+<div><img src="http://file.easeeyes.com/wap/images/2016080101/banner.jpg" alt="" style="display:block;"></div>
+<div><a href=""><img src="http://file.easeeyes.com/wap/images/2016080101/banner.jpg" alt="" style="display:block;"></a></div>
+<div style="height:;background:url(http://file.easeeyes.com/wap/images/2016080108/01.jpg);background-size:auto;"></div>
+-->
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<!--main-->
+<div class="container">
+	<div><img src="http://file.easeeyes.com/wap/images/2016121203/banner.jpg" alt="" style="display:block;"></div>
+    <div class="links" style="height:21rem;background:url(http://file.easeeyes.com/wap/images/2016121203/01.jpg);background-size:100% auto;">
+        <span style="left:.5rem;" onclick="get_bonus(1);"></span>
+        <span style="left:5.65rem;" onclick="get_bonus(2);"></span>
+        <span style="left:10.85rem;" onclick="get_bonus(3);"></span>
+        <span style="left:16rem;" onclick="get_bonus(4);"></span>
+        <a href="javascript:openLayer('yhq');" style="width:9rem;height:2.8rem;right:1rem;top:5.65rem;position:absolute;"></a>
+	</div>
+    
+	<div><a><img src="http://file.easeeyes.com/wap/images/2016121203/02.jpg" alt="" style="display:block;"></a></div>
+	
+    <div class="clearfix" style="height:14.9rem;background:url(http://file.easeeyes.com/wap/images/2016121203/03.jpg);background-size:100% auto;">
+        <div style="height:100%;position:relative;">
+		  <a href="category.php?search=1&keyword=强生安视优define美瞳日抛彩色隐形眼镜5片装" style="position:absolute;width:12rem;height:2rem;left:1.4rem;bottom:3.5rem;"></a>
+		  <a href="category.php?search=1&keyword=强生安视优define美瞳日抛彩色隐形眼镜30片装" style="position:absolute;width:12rem;height:2rem;left:1.4rem;bottom:1rem;"></a>
+        </div>
+	</div>
+	
+    <div class="clearfix" style="height:14.4rem;background:url(http://file.easeeyes.com/wap/images/2016121203/04.jpg);background-size:100% auto;">
+        <div style="height:100%;position:relative;">
+		  <a href="goods91.html" style="position:absolute;width:12rem;height:2rem;left:19.2rem;bottom:3.5rem;"></a>
+		  <a href="goods92.html" style="position:absolute;width:12rem;height:2rem;left:19.2rem;bottom:1rem;"></a>
+        </div>
+	</div>
+    
+    <div class="clearfix" style="height:12rem;background:url(http://file.easeeyes.com/wap/images/2016121203/05.jpg);background-size:100% auto;">
+        <div style="height:100%;position:relative;">
+		  <a href="goods227.html" style="position:absolute;width:12rem;height:2rem;left:1.4rem;bottom:1.6rem;"></a>
+        </div>
+	</div>
+    
+    <div class="clearfix" style="height:12.4rem;background:url(http://file.easeeyes.com/wap/images/2016121203/06.jpg);background-size:100% auto;">
+        <div style="height:100%;position:relative;">
+		  <a href="goods1251.html" style="position:absolute;width:12rem;height:2rem;left:19.2rem;bottom:1.6rem;"></a>
+        </div>
+	</div>
+    
+	<div><a href="http://www.easeeyes.com/goods3373.html"><img src="http://file.easeeyes.com/wap/images/2016121203/07.jpg" alt="" style="display:block;"></a></div>
+	
+    <div class="clearfix" style="height:13.8rem;background:url(http://file.easeeyes.com/wap/images/2016121203/08.jpg);background-size:100% auto;">
+        <div style="height:100%;position:relative;">
+		  <a href="goods93.html" style="position:absolute;width:12rem;height:2rem;left:19.2rem;bottom:1rem;"></a>
+        </div>
+	</div>
+	
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+<script type="text/tpl" id="mlayer-yhq">
+    <img src="http://img.easeeyes.com/promotion/20161212/pop.png" style="width:30rem;height:28.5rem;">
+    <span id="yhq_close" style="position:absolute;right:.8rem;top:.8rem;width:2rem;height:2rem;"></span>
+</script>
+<script src="http://file.easeeyes.com/js/mlayer.js"></script>
+<script>
+function openLayer(id){
+    layer.open({
+        content:document.getElementById('mlayer-'+id).innerHTML,
+        shadow:1,
+        closeBtns:[id+'_close']
+    })
+}
+function get_bonus(bonus_id){
+    $.ajax({
+        type:'POST',
+        url:'ajax_active.php?act=get_bonus_161101_2',
+        data:'&bonus_id='+bonus_id+'&m='+Math.random(),
+        cache:false,
+        success:
+                function(da)
+                {
+                    if(da == 1){
+                        alert('您已成功领取优惠券！请至我的红包/优惠券查看^_^');
+                    }else if(da == 2){
+                        alert('请登录后再试^_^');
+                    }else if(da == 3){
+                        alert('您已领取过该优惠券^_^');
+                    }
+                }
+    });
+}
+</script>
+</body>
+</html>

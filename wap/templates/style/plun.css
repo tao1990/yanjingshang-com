@@ -1,0 +1,11 @@
+﻿#main{ margin:0 auto; width:990px;}
+#main_left{ float:left; width:678px;min-height:200px; border:1px solid #dddddd;}
+#main_right{ float:left; width:320px;min-height:20px;  border:1px solid #dddddd;}
+
+#headmain{ width:678px; line-height:32px;height:32px; border-bottom:1px dashed #999999;}
+#headmaintxt{ float:left; width:600px; padding-left:10px; text-align:left;}
+#pluncontent{ margin:0 auto; text-align:left; width:678px; min-height:20px; line-height:24px; padding-top:2px;}
+#puntex{ margin:0 auto; padding-left:0px; padding-right:0px; text-align:left; min-height:24px; line-height:24px;}
+.pluntitle { min-height:24px; line-height:24px; background-color:#eeeeee; padding-left:20px;; padding-top:2px; }
+.pluntitleq { min-height:24px; line-height:24px; background-color:; padding-left:20px;; padding-top:2px; }
+.retext{ color:#990000;}

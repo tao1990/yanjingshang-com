@@ -1,0 +1,845 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="telephone=no" name="format-detection" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="viewport" content="width=320, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!--<link href="templates/style/base.css" rel="stylesheet" type="text/css" />-->
+<!--<link href="templates/style/html.css" rel="stylesheet" type="text/css" />-->
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<!--[if IE 6]><link href="themes/default/style/ie6_in.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<style>
+/*login*/
+.login{width: 282px;margin: 0 auto;padding: 20px 19px;overflow: hidden;min-height:40rem;}
+.login ul{width:100%}
+.login li{width:100%;margin-bottom: 10px;float: left;}
+.user-info input {width: 241px;height: 42px;padding-left: 41px;font-size: 12px;color: #afafaf;background-color: transparent;line-height: 42px;-webkit-appearance: none;box-sizing: content-box;border: 0;border-radius: 0;box-shadow: none;outline: none;}
+
+.user-info.name{width: 282px;height: 42px;background: url({$image_url}wap/images/user_input.png) no-repeat;}
+.user-info.pwd{width: 282px;height: 42px;background: url({$image_url}wap/images/pw_input.png) no-repeat;}
+
+.user_lg_submit{width:100%;background-color: #76d5e9;border: 0;border-radius: 5px;height:3rem;font-size:1.2rem;color:white; font-weight: bold;  }
+
+.zc_button{width: 66px;height: 34px;background: url({$image_url}wap/images/zc_button.png) no-repeat;line-height: 34px;text-align: center;color: #7c7c7c;float: left;display: inline-block;float:right}
+.alipay{width:3rem;height:3rem;background: url({$image_url}wap/images/zfb.jpg) no-repeat ;float: left;background-size:100% auto;margin-right:.2rem;}
+.qq{width:3rem;height:3rem;background: url({$image_url}wap/images/qq.jpg) no-repeat ;float: left;background-size:100% auto;margin-right:.2rem;}
+.wb{width:3rem;height:3rem;background:url({$image_url}wap/images/wbpng.png) no-repeat;float:left;background-size:100% auto;}
+
+/*zhuce*/
+.register{margin: 0 auto;padding:2rem;overflow: hidden;min-height:40rem;}
+.register ul{width:100%}
+.register li{width:100%;margin-bottom: 10px;float: left;}
+.user-info input {width: 241px;height: 42px;padding-left: 41px;font-size: 12px;color: #afafaf;background-color: transparent;line-height: 42px;-webkit-appearance: none;box-sizing: content-box;border: 0;border-radius: 0;box-shadow: none;outline: none;}
+
+.user-info.name{width: 282px;height: 42px;background: url({$image_url}wap/images/user_input.png) no-repeat;}
+.user-info.pwd{width: 282px;height: 42px;background: url({$image_url}wap/images/pw_input.png) no-repeat;}
+
+.us_Submit_reg{width:100%;background-color: #76d5e9;border: 0;border-radius: 5px;height:3rem;font-size:1.2rem;color:white; font-weight: bold;  margin-top:2rem;}
+
+.zc_button{width: 66px;height: 34px;background: url({$image_url}wap/images/zc_button.png) no-repeat;line-height: 34px;text-align: center;color: #7c7c7c;float: left;display: inline-block;float:right}
+
+/*forget pwd*/
+.for_pwd{margin: 0 auto;padding:2rem;overflow: hidden;}
+.for_pwd ul{width:100%}
+.for_pwd li{width:100%;margin-bottom:.5rem;}
+.user-info input {width: 24rem;height:2.2rem;padding:1rem 0 1rem 4rem;font-size: 12px;color: #afafaf;background-color: transparent;line-height:2.2rem;-webkit-appearance: none;box-sizing: content-box;border: 0;border-radius: 0;box-shadow: none;outline: none;}
+
+.user-info.name{width: 100%;height:4.2rem;background: url({$image_url}wap/images/user_input.png) no-repeat;background-size:100% auto;position:relative;}
+.user-info #username_r{}
+.user-info #get_code{
+    overflow: hidden;
+    width: 30%;
+    height:3rem;
+    border-left: 1px solid #ccc;
+    line-height:3rem;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    background:none;
+	color:#76d5e9;
+    padding: 0;
+    position:absolute;
+    right:.5rem;
+    top:.5rem;
+}
+.user-info.pwd{width: 100%;height:4.2rem;background: url({$image_url}wap/images/pw_input.png) no-repeat;background-size:100% auto;}
+.user-info.yz_code{width: 100%;height:4.2rem;background: url({$image_url}wap/images/yz_input.png) no-repeat;background-size:100% auto;}
+.step_2{display: none}
+
+/*account_list*/
+.account_list li,.account_list_div{border-top: 1px solid #fff;border-bottom: 1px solid #ccc;padding-left: 5%;}
+.account_list li{background:#fff;}
+.account_list_div{
+    line-height:4rem;
+    font-size:1.4rem;
+}
+
+.ui-checkbox{
+    display:inline-block;
+    width:15px;
+    height:15px;
+    vertical-align:middle;
+    position:relative;
+    border:1px solid #ccc;
+    border-radius:50%;
+}
+.ui-checkbox input[type="checkbox"]{
+    opacity:0;
+    width:100%;
+    height:100%;
+}
+.ui-checkbox input[type="checkbox"]:checked+.icon-checked{
+    position:absolute;
+    left:0;
+    top:0;
+    display:table;
+    background:#2BBDD6;
+    border-radius:50%;
+    color:#fff;
+    width:100%;
+    height:100%;
+    text-align:center;
+}
+.icon-checked:after{
+    content:"\2713";
+    display:table-cell;
+    vertical-align:middle;
+    width:100%;
+    line-height:1;
+}
+.ui-checkbox input[type="checkbox"]+.icon-checked{
+    display:none;
+}
+</style>
+<!--|登录界面start|-->
+<!--{if $action eq 'login'}-->
+
+<div class="content">
+    <div class="login">
+            <form name="formLogin" action="user.php" method="post" id="loginForm">
+            <ul>
+                <li>
+                    <a style="padding-top: 6px; color: red; font-size: 16px; " id="err_msg"></a>
+                </li>
+                <li class="user-info name">
+                    {if $smarty.get.uname}
+                    <input class="user_input" value="{$smarty.get.uname}" onfocus="if (value =='用户名/手机号'){value =''}"onblur="if (value ==''){value='用户名/手机号'}" type="text" name="username" id="username" />
+                    <input name="account_choose" value="{$smarty.get.account_choose}" type="hidden" />
+                    {else}
+                    <input class="user_input" value="用户名/手机号" onfocus="if (value =='用户名/手机号'){value =''}"onblur="if (value ==''){value='用户名/手机号'}" type="text" name="username" id="username" />
+                    {/if}
+
+                </li>
+
+                <li class="user-info pwd">
+
+                    <input class="password1" type="text" value="密码" />
+                    <input name="password" type="password" id="password1" style="display: none;"/>
+
+                    <input type="hidden" name="back" value=""/>
+                </li>
+
+                <li>
+                    <label class="ui-checkbox" for="remerber">
+                        <input type="checkbox" id="remerber" name="autologin" checked="checked" />
+                        <i class="icon-checked"></i>
+                    </label>
+                    一个月内自动登录
+                </li>
+                <li>
+                        <input type="hidden" name="act" value="act_login" />
+                        <input type="hidden" name="back_act" value="{$back_act}" />
+                        <input type="button" name="button" value="登  录" class="user_lg_submit" id="login_sub" />
+                </li>
+                <li>
+                    <span style="float:left" ><a href="user.php?act=register">快速注册</a></span>
+                    <span style="float: right;" ><a href="user.php?act=get_password">忘记密码?</a></span>
+                </li>
+
+                <li class="sinn clearfix" style="margin-top: 14px;width:100%">
+                合作网站账号登陆:
+                </li>
+                <li class="otherlg" style="width:100%">
+                    <a class="alipay" href="http://m.easeeyes.com/api/alipay/alipay_auth_authorize.php?defined_url={$back_act}"></a>
+                    <a class="qq" href="http://m.easeeyes.com/api/qq2.1/oauth/index.php?back_act={$back_act}"></a>
+                    <a class="wb" href="http://m.easeeyes.com/api/weibodemo/index.php?defined_url={$back_act}"></a>
+                </li>
+            </ul>
+            </form>
+    </div>
+</div>
+<script type="text/javascript">
+    $("#login_sub").click(function(){
+        var username = $('#username').val(),
+            password = $('#password1').val(),
+            url = "user.php?act=check_login";
+        if(username == '' || password == ''){
+            $("#err_msg").text('用户名或密码不能为空！');
+            return false;
+        }
+
+        $.get(url,{username:username,password:password},function(data){
+
+            if(data=='1'){
+                //$("#loginForm").submit();
+                $("#err_msg").text('');
+                document.getElementById("loginForm").submit();
+            }else{
+                $("#err_msg").text('用户名或密码不匹配！');
+                //alert(33333);
+                return false;
+            }
+        });
+    });
+</script>
+<!--底部-->
+<div class="f-commitMod container">
+    <ul class="f-commit clearfix">
+        <li>
+            <div class="image"><span><img src="http://file.easeeyes.com/wap/images/f1.png" /></span></div>
+            <div class="text">24小时<br />闪电发货</div>
+        </li>
+        <li>
+            <div class="image"><span><img src="http://file.easeeyes.com/wap/images/f2.png" /></span></div>
+            <div class="text">100%<br />正品保障</div>
+        </li>
+        <li>
+            <div class="image"><span><img src="http://file.easeeyes.com/wap/images/f3.png" /></span></div>
+            <div class="text"> <br />30天退换货</div>
+        </li>
+        <li>
+            <div class="image"><span><img src="http://file.easeeyes.com/wap/images/f4.png" /></span></div>
+            <div class="text"> <br />满68元包邮</div>
+        </li>
+        <li>
+            <div class="image"><span><img src="http://file.easeeyes.com/wap/images/f5.png" /></span></div>
+            <div class="text">600城市<br />货到付款</div>
+        </li>
+        <li>
+            <div class="image"><span><img src="http://file.easeeyes.com/wap/images/f6.png" /></span></div>
+            <div class="text">医疗器械<br />许可证</div>
+        </li>
+    </ul>
+</div>
+
+<!--{/if}-->
+<!--登录界面end-->
+
+<!--会员注册界面start-->
+<!--{if $action eq 'register'}-->
+<style>
+
+</style>
+<div class="content">
+<div class="register">
+<form action="user.php" method="post" name="formUser" onsubmit="return register();">
+    <!--<ul>
+			<li>
+				<a style="float: left;padding-top: 6px;">欢迎注册易视眼镜！</a>
+			</li>
+			<li class="user-info name">
+				<input value="用户名/手机号" onfocus="if (value =='用户名/手机号'){value =''}" onblur="if (value ==''){value='用户名/手机号'}" name="username" type="text" id="username_r"/>
+                
+			</li>
+            
+			<li class="user-info pwd">
+            <input class="password1"  type="text"  value="密码" style="display: block;"/>
+            <input id="password1" type="password" value="" name="password" style="display: none;"/>
+			</li>
+            
+            <li class="user-info pwd">
+            
+            <input class="confirm_password"  type="text"  value="再次输入密码" style="display: block;"/>
+            <input id="confirm_password" type="password" value="" name="confirm_password" style="display: none;"/>
+			</li>
+            
+            <li>
+                <label class="ui-checkbox" for="remerber">
+                    <input type="checkbox" id="remerber" name="autologin" checked="checked" />
+                    <i class="icon-checked"></i>
+                </label>
+                同意易视网眼镜协议
+			</li>
+            <li>
+                    {if $from}<input type="hidden" name="from" value="{$from}"/>{/if}
+                      <input type="hidden" name="act" value="act_register" />
+                      <input type="hidden" name="back_act" value="{$back_act}" />
+                      <input name="Submit" type="submit" id="reg_usersub" value=" 注  册" class="us_Submit_reg" style="cursor:pointer;" />
+            </li>
+            <li>
+				<span style="float:left" ><a href="user.php">已有账号，直接登录>></a></span>
+			
+			</li>
+    </ul>-->
+    <ul>
+        <li>
+            <a style="padding-top: 6px; color: red; font-size: 16px; " id="err_msg"></a>
+        </li>
+        <li class="user-info name">
+            <input onfocus="if (value =='请输入手机号'){value =''}" onblur="if (value ==''){value='请输入手机号'}" name="username" type="text" id="username_r"/>
+            <input type="button" id="get_code" onclick="get_yz_code_reg()" value="获取验证码" />
+        </li>
+        <li class="user-info yz_code">
+            <input value="请输入短信验证码" onfocus="if (value =='请输入短信验证码'){value =''}" onblur="if (value ==''){value='请输入短信验证码'}" name="yz_code" type="text" id="yz_code"/>
+        </li>
+        <li class="user-info pwd">
+            <input class="password1"  type="text"  value="密码" style="display: block;"/>
+            <input id="password1" type="password" value="" name="password" style="display: none;"/>
+        </li>
+        <li class="user-info pwd">
+
+            <input class="confirm_password"  type="text"  value="再次输入密码" style="display: block;"/>
+            <input id="confirm_password" type="password" value="" name="confirm_password" style="display: none;"/>
+        </li>
+        <li>
+            <label class="ui-checkbox" for="remerber">
+                <input type="checkbox" id="remerber" name="autologin" checked="checked" />
+                <i class="icon-checked"></i>
+            </label>
+            同意易视网眼镜协议
+        </li>
+        <li>
+            {if $from}<input type="hidden" name="from" value="{$from}"/>{/if}
+            <input type="hidden" name="act" value="act_register" />
+            <input type="hidden" name="back_act" value="{$back_act}" />
+            <input name="Submit" type="submit" id="reg_usersub" value=" 注  册" class="us_Submit_reg" style="cursor:pointer;" />
+        </li>
+    </ul>
+</form>
+</div>
+</div>
+<!--底部-->
+<div class="f-commitMod container">
+    <ul class="f-commit clearfix">
+        <li>
+            <div class="image"><span><img src="http://file.easeeyes.com/wap/images/f1.png" /></span></div>
+            <div class="text">24小时<br />闪电发货</div>
+        </li>
+        <li>
+            <div class="image"><span><img src="http://file.easeeyes.com/wap/images/f2.png" /></span></div>
+            <div class="text">100%<br />正品保障</div>
+        </li>
+        <li>
+            <div class="image"><span><img src="http://file.easeeyes.com/wap/images/f3.png" /></span></div>
+            <div class="text"> <br />30天退换货</div>
+        </li>
+        <li>
+            <div class="image"><span><img src="http://file.easeeyes.com/wap/images/f4.png" /></span></div>
+            <div class="text"> <br />满68元包邮</div>
+        </li>
+        <li>
+            <div class="image"><span><img src="http://file.easeeyes.com/wap/images/f5.png" /></span></div>
+            <div class="text">600城市<br />货到付款</div>
+        </li>
+        <li>
+            <div class="image"><span><img src="http://file.easeeyes.com/wap/images/f6.png" /></span></div>
+            <div class="text">医疗器械<br />许可证</div>
+        </li>
+    </ul>
+</div>
+
+<script>
+var waitime=120;
+function time_reg(){
+    if(waitime==0){
+        $("#get_code").attr("disabled", false);
+        $('#get_code').val('获取验证码');
+        waitime=120;
+    }else{
+        $("#get_code").attr("disabled", true);
+        $("#get_code").css("color", '#76D5E9');
+        $('#get_code').val(waitime+'秒后重新获取');
+        setTimeout(function(){time_reg()},1000);
+        waitime--;
+    }
+}
+function get_yz_code_reg() {
+    $("#get_code").attr("disabled", true);
+    var mobile = $('#username_r').val();
+    var myreg = /^^[1][3578][0-9]{9}$/;
+    if(myreg.test(mobile)){
+        var url = "user.php?act=msgSendReg";
+        document.getElementById("m-pop-text").innerHTML="我们将发送短信验证码至<br />"+mobile;
+        myPop.set(document.getElementById('myPop'));
+        document.getElementById("m-pop-submit").addEventListener("click",function(){
+            myPop.unset(document.getElementById("myPop"));
+            $.get(url,{mobile:mobile},function(data){
+                if(data=='1'){
+                    $("#get_code").attr("disabled", false);
+                    $("#err_msg").text("该手机号已绑定账号");
+                }else if(data=='2'){
+                    $("#err_msg").text("");
+                    time();
+                                    
+                }else{
+                    $("#get_code").attr("disabled", false);
+                    document.write(data);
+                }
+            })
+        },false);
+        document.getElementById("m-pop-cancal").addEventListener("click",function(){
+            $("#get_code").attr("disabled", false);
+        },false);
+        
+    }else{
+        //alert("请输入有效的手机号");
+        $("#err_msg").text("请输入有效的手机号");
+        $("#get_code").attr("disabled", false);
+    }
+    return false;
+}
+// 提交验证
+$('#reg_usersub').click(function(){
+    var myreg = /^(((1[0-9][0-9]{1}))+\d{8})$/;
+    var percode=$('#username_r').val();
+    var pwd=$('#password1').val();
+    var repwd=$('#confirm_password').val();
+    if(percode=='' || myreg.test(percode)==false){
+        $("#err_msg").text("请输入正确的手机号");
+        return false;
+    }
+    var yzcode=$('#yz_code').val();
+    if(yzcode==''){
+        $("#err_msg").text("请输入验证码");
+        return false;
+    }else{
+        var result=checkYzcode(percode,yzcode);
+        if(result==0){
+            $("#err_msg").text('验证码错误');
+            return false;
+        }
+    }
+    if(pwd==''){
+        $("#err_msg").text("请设置密码");
+        return false;
+    }else{
+        if(pwd.length < 6){
+            $("#err_msg").text("密码长度不得少于6位");
+            return false;
+        }
+    }
+    if(repwd==''){
+        $("#err_msg").text("请确认密码");
+        return false;
+    }else{
+        if(pwd!=repwd){
+            $("#err_msg").text("两次输入的密码不一致");
+            return false;
+        }
+    }
+    if($("#remerber").attr('checked')==false){
+        $("#err_msg").text("请勾选易视网眼镜协议");
+        return false;
+    }
+    $("#err_msg").text("");
+    return true;
+})
+// 检测验证码是否正确
+function checkYzcode(mobile,code){
+    var yz_url="user.php?act=check_code_reg";
+    var bool='';
+    $.ajax({
+        type:"GET",
+        dataType:'json',
+        async:false,
+        url:yz_url,
+        data:{mobile:mobile,code:code},
+        success:function(data){
+            //alert(data);
+            if(data!='1'){
+                bool=0;
+            }else{
+                bool=1;
+            }
+        }
+    })
+    return bool;
+}
+</script>
+
+<!--{/if}-->
+<!--#会员注册界面 end-->
+
+<!--#多账号选择 start-->
+<!--{if $action eq 'account_list'} -->
+
+<div class="account_list_div">请选择以下对应账号：</div>
+<ul class="account_list">
+{foreach from=$account_list item=item key=key}
+
+<li>
+    <a href="user.php?uname={$item}&account_choose=1">
+        <h3 class="menu_h3" id="menu_h3_0">
+            {$item}
+        </h3>
+    </a>
+</li>
+
+{/foreach} 
+</ul>
+<!--{/if}-->
+<!--#多账号选择 end-->
+
+<!--找回密码界面 -->
+<!--{if $action eq 'get_password'} -->
+<div id="getback_pwd" class="for_pwd">
+<form action="" method="post" name="getPassword">
+    <ul>
+        <li>
+            <a style="padding-top: 6px; color: red; font-size: 16px; " id="err_msg"></a>
+        </li>
+        <li class="user-info name step_1">
+            <input value="{if $mobile}{$mobile}{else}请输入手机号{/if}" onfocus="if (value =='请输入手机号'){value =''}" onblur="if (value ==''){value='请输入手机号'}" name="mobile" type="text" id="username_r"/>
+            <input type="button" id="get_code" onclick="get_yz_code()" value="获取验证码" />
+            <input type="hidden" value="{$user_name}" name="user_name" id="user_name_y" />
+            <input type="hidden" value="{$is_only}" name="is_only" id="is_only" />
+        </li>
+        <li class="user-info yz_code step_1">
+            <input value="请输入短信验证码" onfocus="if (value =='请输入短信验证码'){value =''}" onblur="if (value ==''){value='请输入短信验证码'}" name="yz_code" type="text" id="yz_code"/>
+        </li>
+        <li class="step_1">
+            <input name="button" type="button" id="next" value="下 一 步" class="us_Submit_reg" style="cursor:pointer;" />
+        </li>
+        <li class="user-info pwd step_2">
+            <input class="password1"  type="text"  value="密码" style="display: block;"/>
+            <input id="password1" type="password" value="" name="password" style="display: none;"/>
+        </li>
+        <li class="user-info pwd step_2">
+
+            <input class="confirm_password"  type="text"  value="再次输入密码" style="display: block;"/>
+            <input id="confirm_password" type="password" value="" name="confirm_password" style="display: none;"/>
+        </li>
+        <li class=" step_2">
+            <input name="sub" type="button" id="sub" value=" 确 认" class="us_Submit_reg" style="cursor:pointer;" />
+        </li>
+    </ul>
+</form>
+</div>
+<script type="text/javascript">
+    var waitime=120;
+    function time(){
+        if(waitime==0){
+            $("#get_code").attr("disabled", false);
+           // $("#get_code").css("color", '#76d5e9');
+           // $("#get_code").css("border", '1px solid #76d5e9');
+            $('#get_code').val('获取验证码');
+            waitime=120;
+        }else{
+            $("#get_code").attr("disabled", true);
+            $("#get_code").css("color", '#76D5E9');
+           // $("#get_code").css("border", '1px solid #CCC');
+            $('#get_code').val(waitime+'秒后重新获取');
+            setTimeout(function(){time()},1000);
+            waitime--;
+        }
+    }
+    function get_yz_code() {
+        $("#get_code").attr("disabled", true);
+        var mobile = $('#username_r').val();
+        var user_name =$('#user_name_y').val();
+        var is_only =$('#is_only').val();
+        var myreg = /^^[1][3578][0-9]{9}$/;
+        if(myreg.test(mobile)){
+            if(is_only==1){
+                document.getElementById("m-pop-text").innerHTML="我们将发送短信验证码至<br />"+mobile;
+                myPop.set(document.getElementById('myPop'));
+                document.getElementById("m-pop-submit").addEventListener("click",function(){
+                    myPop.unset(document.getElementById("myPop"));
+                    var url = "user.php?act=msgSend";
+                    $.get(url,{mobile:mobile,user_name:user_name,is_only:is_only},function(data){
+                        if(data=='1'){
+                            $("#get_code").attr("disabled", false);
+                            $("#err_msg").text("该手机号未绑定账号");
+                        }else if(data=='2'){
+                            $("#err_msg").text("");
+                            time();
+                        }else{
+                            $("#get_code").attr("disabled", false);
+                            document.write(data);
+                        }
+                    }) 
+                },false);
+                document.getElementById("m-pop-cancal").addEventListener("click",function(){
+                    $("#get_code").attr("disabled", false);
+                },false);
+            }else{
+                var url = "user.php?act=msgSend";
+                    $.get(url,{mobile:mobile,user_name:user_name,is_only:is_only},function(data){
+                        if(data=='1'){
+                            $("#get_code").attr("disabled", false);
+                            $("#err_msg").text("该手机号未绑定账号");
+                        }else if(data=='2'){
+                            $("#err_msg").text("");
+                            time();
+                        }else{
+                            $("#get_code").attr("disabled", false);
+                            document.write(data);
+                        }
+                    }) 
+            }
+            
+        }else{
+            //alert("请输入有效的手机号");
+            $("#err_msg").text("请输入有效的手机号");
+            $("#get_code").attr("disabled", false);
+        }
+        return false;
+    }
+    // 下一步验证
+    $('#next').click(function(){
+        var myreg = /^(((1[0-9][0-9]{1}))+\d{8})$/;
+        var percode=$('#username_r').val();
+        if(percode=='' || myreg.test(percode)==false){
+            $("#err_msg").text("请输入正确的手机号");
+            return false;
+        }
+        var yzcode=$('#yz_code').val();
+        if(yzcode==''){
+            $("#err_msg").text("请输入验证码");
+            return false;
+        }else{
+            var result=checkYzcode(percode,yzcode);
+            if(result==0){
+                $("#err_msg").text('验证码错误');
+                return false;
+            }
+        }
+        $(".step_1").hide();
+        $(".step_2").show();
+        $("#err_msg").text("");
+    })
+    // 提交验证
+    $('#sub').click(function(){
+        var pwd=$('#password1').val();
+        var repwd=$('#confirm_password').val();
+        if(pwd==''){
+            $("#err_msg").text("请设置密码");
+            return false;
+        }else{
+            if(pwd.length<6){
+                $("#err_msg").text("密码长度不得少于6位");
+                return false;
+            }
+        }
+        if(repwd==''){
+            $("#err_msg").text("请确认密码");
+            return false;
+        }else{
+            if(pwd!=repwd){
+                $("#err_msg").text("确认密码与密码不一致");
+                return false;
+            }
+        }
+        $("#err_msg").text("");
+        var url = "user.php?act=get_password";
+        var user_name =$('#user_name_y').val();
+        $.post(url,{password:pwd,user_name:user_name},function(data){
+            alert("密码修改成功");
+            document.write(data);
+        })
+    })
+    // 检测验证码是否正确
+    function checkYzcode(mobile,code){
+        var yz_url="user.php?act=check_code";
+        var bool='';
+        $.ajax({
+            type:"GET",
+            dataType:'json',
+            async:false,
+            url:yz_url,
+            data:{mobile:mobile,code:code},
+            success:function(data){
+                //alert(data);
+                if(data!='1'){
+                    bool=0;
+                }else{
+                    bool=1;
+                }
+            }
+        })
+        return bool;
+    }
+</script>
+<!--{/if}-->
+
+<!--找回密码多账号-->
+<!--{if $action eq 'forget_list'} -->
+<div class="account_list_div">请选择以下对应账号：</div>
+<ul class="account_list">
+    <!--{foreach from=$account_list item=item key=key}-->
+    <li>
+        <a href="user.php?act=msgSend&user_name={$item.user_name}">
+            <h3 class="menu_h3" id="menu_h3_0">
+                {$item.user_name}
+            </h3>
+        </a>
+    </li>
+    <!--{/foreach}-->
+</ul>
+<!--{/if}-->
+
+
+<!--*通过问题找回密码的确认找回账号界面 -->
+    <!--{if $action eq 'qpassword_name'} -->
+<div class="usBox">
+  <div class="usBox_2 clearfix">
+    <form action="user.php" method="post">
+        <br />
+        <table width="70%" border="0" align="center">
+          <tr>
+            <td colspan="2" align="center"><strong>{$lang.get_question_username}</strong></td>
+          </tr>
+          <tr>
+            <td width="29%" align="right">{$lang.username}</td>
+            <td width="61%"><input name="user_name" type="text" size="30" class="inputBg" /></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><input type="hidden" name="act" value="get_passwd_question" />
+              <input type="submit" name="submit" value="{$lang.submit}" class="bnt_blue" style="border:none;" />
+              <input name="button" type="button" onclick="history.back()" value="{$lang.back_page_up}" style="border:none;" class="bnt_blue_1" />
+	    </td>
+          </tr>
+        </table>
+        <br />
+      </form>
+  </div>
+</div>
+<!--{/if}-->
+
+<!--*根据输入账号显示密码问题界面 -->
+    <!--{if $action eq 'get_passwd_question'} -->
+<div class="usBox">
+  <div class="usBox_2 clearfix">
+    <form action="user.php" method="post">
+        <br />
+        <table width="70%" border="0" align="center">
+          <tr>
+            <td colspan="2" align="center"><strong>{$lang.input_answer}</strong></td>
+          </tr>
+          <tr>
+            <td width="29%" align="right">{$lang.passwd_question}：</td>
+            <td width="61%">{$passwd_question}</td>
+          </tr>
+          <tr>
+            <td align="right">{$lang.passwd_answer}：</td>
+            <td><input name="passwd_answer" type="text" size="20" class="inputBg" /></td>
+          </tr>
+          <!-- 判断是否启用验证码{if $enabled_captcha} -->
+          <tr>
+            <td align="right">{$lang.comment_captcha}</td>
+            <td><input type="text" size="8" name="captcha" class="inputBg" />
+            <img src="captcha.php?is_login=1&{$rand}" alt="captcha" style="vertical-align: middle;cursor: pointer;" onClick="this.src='captcha.php?is_login=1&'+Math.random()" /> </td>
+          </tr>
+          <!--{/if}-->
+          <tr>
+            <td></td>
+            <td><input type="hidden" name="act" value="check_answer" />
+              <input type="submit" name="submit" value="{$lang.submit}" class="bnt_blue" style="border:none;" />
+              <input name="button" type="button" onclick="history.back()" value="{$lang.back_page_up}" style="border:none;" class="bnt_blue_1" />
+	    </td>
+          </tr>
+        </table>
+        <br />
+      </form>
+  </div>
+</div>
+<!--{/if}-->
+
+<!--{if $action eq 'reset_password'} -->
+<script type="text/javascript">
+<!---->{foreach from=$lang.password_js item=item key=key}
+<!---->	var {$key} = "{$item}";
+<!---->{/foreach}
+</script>
+
+<div style="width:988px; height:282px; border:1px #dcdcdc solid; text-align:center;">
+<form action="user.php" method="post" name="getPassword2" onSubmit="return submitPwd()">
+	<div class="space10" style="height:63px;"></div>
+    <div style="width:435px; height:32px;">
+    	<div style="width:90px; height:32; line-height:32px; text-align:right; float:left; color:#666; font-size:14px;">新密码：</div>
+        <div style="width:345px; float:right;"><input name="new_password" type="password" size="25" class="inputcon" /></div>
+    </div>
+    <div class="space10" style="height:16px;"></div>
+    <div style="width:435px; height:32px;">
+    	<div style="width:90px; height:32; line-height:32px; text-align:right; float:left; color:#666; font-size:14px;">确认新密码：</div>
+        <div style="width:345px; float:right;"><input name="confirm_password" type="password" size="25"  class="inputcon"/></div>
+    </div>
+    <div style="margin-top:20px;">
+        <input type="hidden" name="act" value="act_edit_password" />
+        <input type="hidden" name="uid" value="{$uid}" />
+        <input type="hidden" name="code" value="{$code}" />    
+    	<input type="submit" name="submit" value="" style="width:115px; height:34px; background-color:#ffffff; border:0px #ffffff solid; background-image:url(images/login/submit.gif); cursor:pointer;"/>
+    </div> 
+</form>  
+</div>
+<!--{/if}-->
+<!--#找回密码界面 end-->
+
+<!--弹窗-->
+<div class="m-pop-box" id="myPop" style="display:none;">
+    <div class="m-pop">
+        <div class="m-pop-text" id="m-pop-text">
+            我们将发送短信验证码至<br />12321212121
+        </div>
+        <div class="m-pop-btns">
+            <a href="javascript:myPop.cancal(document.getElementById('myPop'));" id="m-pop-cancal">取消</a>
+            <a href="javascript:;" id="m-pop-submit">确定</a>
+        </div>
+    </div>
+</div>
+<script>
+// 弹窗
+var myPop={
+    submit:function(obj,callback){
+        callback();
+        this.unset(obj);
+    },
+    cancal:function(obj){
+        this.unset(obj);
+    },
+    set:function(obj){
+        obj.style.display="block";
+    },
+    unset:function(obj){
+        obj.style.display="none";
+    }
+};  
+</script>
+
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+<script>
+    // 将click改为focus解决用键盘切换无法实现的问题   zhang：20150821
+$(".password1").focus(function(){
+    $(".password1").hide();
+    $("#password1").show().select();
+});
+$("#password1").blur(function(){
+   if($("#password1").val()==''||$("#password1").val()=='密码'){
+       $(".password1").show();
+       $("#password1").hide();
+   }
+});
+
+$(".confirm_password").focus(function(){
+    $(".confirm_password").hide();
+    $("#confirm_password").show().select();
+});
+$("#confirm_password").blur(function(){
+   if($("#confirm_password").val()==''||$("#confirm_password").val()=='再次输入密码'){
+       $(".confirm_password").show();
+       $("#confirm_password").hide();
+   }
+});
+</script>
+</html>

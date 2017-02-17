@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>B2B</title>
+<link rel="stylesheet" href="http://file.easeeyes.com/b2b/css/index.css" />
+</head>
+<body>
+
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<!--main-->
+<div class="container artMod">
+	<div class="fl left">
+		<div class="position-pg">
+			<span class="fr">
+				<!--第 1-10 条 / 共 <b>150</b> 条-->
+			</span>
+			{$lang.ur_here} {$ur_here}
+		</div>
+		<div class="main">
+        
+            <!--{foreach from=$artciles_list item=list name=fb}-->                   
+                <div class="list">
+				<h2><a href="{$list.url}" target="_blank" style="font-size: 20px;">{$list.short_title}</a></h2>
+    				<p>{if $list.short_content}{$list.short_content}{else}文章正在编辑中。。。{/if}</p>
+    			</div>     
+            <!--{/foreach}-->
+        
+			<!--
+			<div class="page-pg">
+				<a href="#" class="disabled">上一页</a>
+				<span>1</span>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+				<span>...</span>
+				<a href="#">15</a>
+				<a href="#">下一页</a>
+			</div>
+            -->
+            <!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem -->
+            
+            
+		</div>
+	</div>
+	<div class="fr right-common-Mod">
+		<div class="adv">
+			<a href="#"><img src="http://file.easeeyes.com/b2b/images/adv01.png" /></a>
+		</div>
+		<div class="move-slider hotgoods">
+			<div class="title">热销商品推荐</div>
+			<div class="goods">
+				<ul class="main">
+      
+					<li>
+                        <!--{foreach from=$sales_charts1 item=li name=foo}-->     
+						<div class="thumb-pg">
+							<div class="image">
+								<a href="goods{$li.goods_id}.html" target="_blank"><img src="thumb/goods/60x60/goods_{$li.goods_id}_60x60.jpg" /></a>
+							</div>
+							<div class="text">
+								<a href="goods{$li.goods_id}.html" target="_blank">{$li.goods_name}</a><br />
+								<span class="price">¥ {$li.shop_price}</span>
+							</div>
+						</div>
+			             <!--{/foreach}-->   
+					</li>
+					<li>
+                        <!--{foreach from=$sales_charts2 item=li name=foo}-->     
+						<div class="thumb-pg">
+							<div class="image">
+								<a href="goods{$li.goods_id}.html" target="_blank"><img src="thumb/goods/60x60/goods_{$li.goods_id}_60x60.jpg" /></a>
+							</div>
+							<div class="text">
+								<a href="goods{$li.goods_id}.html" target="_blank">{$li.goods_name}</a><br />
+								<span class="price">¥ {$li.shop_price}</span>
+							</div>
+						</div>
+			             <!--{/foreach}-->   
+					</li>
+                    <li>
+                        <!--{foreach from=$sales_charts3 item=li name=foo}-->     
+						<div class="thumb-pg">
+							<div class="image">
+								<a href="goods{$li.goods_id}.html" target="_blank"><img src="thumb/goods/60x60/goods_{$li.goods_id}_60x60.jpg" /></a>
+							</div>
+							<div class="text">
+								<a href="goods{$li.goods_id}.html" target="_blank">{$li.goods_name}</a><br />
+								<span class="price">¥ {$li.shop_price}</span>
+							</div>
+						</div>
+			             <!--{/foreach}-->   
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="adv">
+			<a href="#"><img src="http://file.easeeyes.com/b2b/images/adv02.png" /></a>
+		</div>
+	</div>
+</div>
+<!--footer-->
+
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

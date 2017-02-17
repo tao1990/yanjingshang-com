@@ -1,0 +1,23 @@
+ <!--{if $pifa_confirm eq 1}显示批发价格-->
+                        <ul>
+    					    <li>起批量</li>
+				            <li>价格</li>
+    					</ul>
+    <!--{foreach from=$wholesale_arr item=li key=key name=foo}-->      
+    								<ul>
+    									<li>≥{$li.quantity}{$goods.unit}</li>
+    									<li>¥ {$li.price}/{$goods.unit}</li>
+    								</ul>
+    <!--{/foreach}-->
+<!--{else}显示正常价格-->
+                            
+                            {if $user_rank > 0}
+                            
+                                <p class="goodsInfo-del">vip价:{$rank_prices.7.price} - {$vip_prices}/{$goods.unit}</p>
+                                <p class="goodsInfo-price">&yen;{$rank_price}/{$goods.unit}  </p>
+                    
+                            {else}
+                                <p class="goodsInfo-del">vip价:{$rank_prices.7.price} - {$vip_prices}/{$goods.unit}</p>
+                                <p class="goodsInfo-price">&yen;{$shop_price}/{$goods.unit}  </p>
+                            {/if}
+<!--{/if}-->

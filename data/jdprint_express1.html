@@ -1,0 +1,69 @@
+{literal}
+<style type="text/css" media="print">
+body,td { font-size:15px; text-align:center;  font-family:"黑体";}
+#printbtn{ display:none;}
+</style>
+<style type="text/css" media="screen">
+body,td { font-size:15px; text-align:center; font-family:"黑体";}
+</style>
+{/literal}
+<!--中通快递单打印模板2011-5-30-->
+<table width="720px" height="160px" cellpadding="1" border="0" style="margin-top:52px;border-collapse:collapse;">
+    <tr height="30px">
+        <td width="5px"></td>
+        <td width="265px" style="text-align:left;">好药师网上药店</td>              
+		<td width="90px"></td>        
+        <td width="260px" style="text-align:left;">{$result.jd_realname}</td>
+        <td width="100px"></td>
+    </tr>
+    <tr height="30px">
+        <td width="5px"></td>
+        <td width="265px" style="text-align:left;"><table style="margin-left:-5px;"><tr><td>{$result.jd_ordertype}</td><td style="text-indent:120px;">{$result.jd_number}</td></tr></table></td>           
+		<td width="90px"></td>        
+        <td width="260px" rowspan="2" style="text-align:left; vertical-align:top; line-height:30px;">{$result.jd_province} {$result.jd_city} {$result.jd_area} {$result.jd_address}</td>
+        <td width="100px"></td>
+    </tr>
+	    <tr height="30px">
+        <td width="5px"></td>
+        <td width="265px"   style="text-align:left; vertical-align:top; line-height:30px;text-indent:0px;">上海市闸北区江场西路299弄4号楼502室（邓钰芬）</td>  
+    </tr>
+    <tr height="30px">
+        <td width="5px"></td>
+        <td width="265px" style="text-align:left;text-indent:10px;">021-60703017</td>              
+		<td width="90px"></td>        
+        <td width="260px" style="text-align:left;">{if $result.jd_telphone}{$result.jd_telphone}{else}{$result.jd_homephone}{/if}</td>
+        <td width="100px"></td>
+    </tr> 
+    <tr height="100px">
+        <td width="5px"></td>
+        <td width="265px"></td>              
+		<td width="90px"></td>        
+        <td width="260px"></td>
+        <td width="100px"></td>
+    </tr> 
+    <tr height="30px">
+        <td width="5px"></td>
+        <td width="265px" style="text-align:left;text-indent:10px;">眼镜<br />邓钰芬&nbsp;&nbsp;&nbsp;&nbsp;{$result.jd_adddate}</td>              
+		<td width="90px"></td>        
+        <td width="260px" style="text-align:left;"><span style="text-align:left; vertical-align:top; line-height:30px;font-size: larger;"> {$result.jd_city} {$result.jd_area} </span></td>
+        <td width="100px"></td>
+    </tr> 
+    <tr height="100px">
+        <td width="5px"></td>
+        <td width="265px"></td>              
+		<td width="90px"></td>        
+        <td width="260px"></td>
+        <td width="100px"></td>
+    </tr> 
+    <!--<tr height="30px">
+        <td width="5px"></td>
+        <td width="265px" style="text-align:left;"><table><tr><td colspan="3"></td></tr><tr><td width="28px" style="text-align:left;"></td><td width="24px" style="text-align:left;"></td><td></td></tr></table></td>              
+		<td width="90px"></td>        
+        <td width="260px"></td>
+        <td width="100px"></td>
+    </tr>-->
+	<!--<tr>
+		<td colspan="5" style="text-align:left">眼镜<br />邓钰芬&nbsp;&nbsp;&nbsp;&nbsp;{$result.jd_adddate}</td>
+	</tr>-->
+</table>
+<input type="button" value="打印快递单" id="printbtn" onclick="window.print();" />

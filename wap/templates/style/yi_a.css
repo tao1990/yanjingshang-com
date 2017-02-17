@@ -1,0 +1,15 @@
+﻿/*---------------------------------------问答表格样式----------------------------------------------*/
+/*左边问*/
+.yi_1{	padding-top:5px;	padding-right:20px;	padding-bottom:5px;	text-align:justify;	vertical-align:top;	color:#333;}
+
+/*左边答*/
+.yi_2{	padding-top:5px;	padding-right:20px;	padding-bottom:5px;	text-align:justify;	vertical-align:top;	color:#EBA32A;}
+
+/*我要提问样式 右边*/
+.in_t{	color:#333;	font-size:14px;	font-family:宋体, Arial, Helvetica, sans-serif;}
+.in_t td{ padding-left:30px;	text-align:left;}
+.yi_left{ text-align:left;}
+.yi_left_t{	margin-left:25px; margin-top:5px;}
+.yi_left_t textarea{ background-image:url('../images/yi_tip/yi_t1.jpg'); background-repeat:repeat;}
+.yi_left_f{	font-size:14px;	font-family:宋体, Arial, Helvetica, sans-serif;	color:#333;	margin-left:8px;}
+.yi_font{font-family:宋体, Arial, Helvetica, sans-serif;font-weight:bold;color:#666;line-height:20px;}

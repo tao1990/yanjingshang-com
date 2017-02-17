@@ -1,0 +1,132 @@
+*{margin:0;padding:0;}
+img{border:0;}
+body{font-family:'Microsoft Yahei'}
+.clearfix{*zoom:1;}
+.clearfix:after{content:'';display:block;height:0;visibility:hidden;clear:both;}
+.commonHeader-wrapper{position:fixed;top:0;left:0;width:100%;z-index:9;padding:15px 0;}
+.commonHeader-wrapper *{transition:all .5s;-webkit-transition:all .5s;-ms-transition:all .5s;}
+.commonHeader-wrapper.fixNav{background:rgba(0,0,0,.2);padding:5px 0;filter:progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7F000000,endcolorstr=#7F000000);}
+.commonHeader-wrapper.fixNav .commonHeader-logo img{height:80px;}
+.commonHeader-wrapper.fixNav .commonHeader-navs{padding-top:30px;}
+.commonHeader-wrapper.fixNav .commonHeader-btns{padding-top:30px;}
+.commonHeader-container{width:1156px;margin:0 auto;}
+.commonHeader-logo{float:left;}
+.commonHeader-navs{padding:70px 0 0 140px;float:left;}
+.commonHeader-navs a{float:left;padding:0 15px;margin-right:20px;border:1px solid transparent;border-radius:4px;font-size:18px;height:33px;line-height:33px;color:#fff;text-decoration:none;}
+.commonHeader-navs a.selected,.commonHeader-navs a:hover{border-color:#fff;}
+.commonHeader-btns{padding-top:75px;float:right;}
+.commonHeader-btns a{padding:0 20px;background:#00529b;border-radius:4px;font-size:18px;line-height:30px;height:30px;margin-left:5px;display:inline-block;*display:inline;*zoom:1;vertical-align:middle;color:#fff;text-decoration:none;}
+.commonHeader-btns a:hover{opacity:.75;filter:alpha(opacity=75);}
+.section{position:relative;background:url(http://file.easeeyes.com/b2b/images/index/bj-01.jpg) no-repeat center top;}
+.section-02{background-image:url(http://file.easeeyes.com/b2b/images/index/bj-02.jpg);}
+.section-03{background-image:url(http://file.easeeyes.com/b2b/images/index/bj-03.jpg);}
+.section-04{background-image:url(http://file.easeeyes.com/b2b/images/index/bj-04.jpg);}
+.section-05{background:url(http://file.easeeyes.com/b2b/images/index/bj-05.jpg) no-repeat center top;}
+.section-container{position:absolute;left:0;width:100%;top:50%;}
+.section-title{font-size:48px;color:#444;font-weight:100;margin-bottom:30px;text-align:center;}
+.section-description{font-size:18px;line-height:1.5;color:#333;text-align:center;width:900px;margin:0 auto;}
+.section-btn{cursor:pointer;position:absolute;width:50px;height:38px;background:url(http://file.easeeyes.com/b2b/images/index/arrow_bottom.png) no-repeat center;left:50%;bottom:60px;margin-left:-25px;animation:float 1s infinite;-webkit-animation:float 1s infinite;-ms-animation:float 1s infinite;}
+.goLink{display:block;width:255px;margin:100px auto 0;}
+.section-01 .section-title,.section-01 .section-description{color:#fff;}
+.aboutShow{height:400px;background:url(http://file.easeeyes.com/b2b/images/index/about2.png) no-repeat center top;margin-top:30px;}
+.advantage-container{width:1000px;margin:30px auto 0;}
+.advantage-items{width:1020px;}
+.advantage-item{width:320px;height:230px;float:left;color:#666;text-align:center;margin:0 20px 20px 0;background:rgba(255,255,255,.5);filter:progid:DXImageTransform.Microsoft.gradient(startcolorstr=#7Fffffff,endcolorstr=#7Fffffff);;border-radius:4px;}
+.advantage-thumb{padding:10px 0;text-align:center;}
+.advantage-thumb img{height:80px;width:auto;}
+.advantage-title{font-size:25px;margin-bottom:10px;}
+.advantage-detail{width:300px;margin:0 auto;font-size:14px;line-height:1.4;}
+.joinProgress{height:176px;background:url(http://file.easeeyes.com/b2b/images/index/process.png) no-repeat center top;margin-top:120px;}
+/*.brands-wrapper{padding-top:100px;}*/
+.logoShow{width:730px;height:235px;background:url(http://file.easeeyes.com/b2b/images/index/logos_bg2.png) no-repeat center top;padding:40px 60px 30px;margin:0 auto;}
+.logoShow span{float:left;width:182px;height:75px;text-align:center;line-height:75px;}
+.logoShow img{vertical-align:middle;max-width:100px;max-height:40px;}
+.logoMore{display:block;width:81px;margin:0 auto;}
+.footer-wrapper{width:100%;background:#272727;position:absolute;bottom:0;left:0;}
+.footer-container{width:1040px;margin:0 auto;padding:25px 0;overflow:hidden;}
+.footer-info{float:left;padding-left:215px;color:#9b9b9b;font-size:14px;}
+.footer-info-tel,.footer-info-title{color:#fff;}
+.footer-info-tel{font-size:24px;margin:10px 0;}
+.footer-ewms{margin-left:570px;}        
+.footer-ewm{float:left;margin-right:30px;color:#fff;}
+.footer-ewm-title{margin-bottom:10px;}
+.footer-ewm-title img,.footer-info-title img{vertical-align:middle;}
+
+/**闆跺敭鍟?**/
+.section-lss-01{background-image:url(http://file.easeeyes.com/b2b/images/lss/bj-1.jpg);}
+.section-lss-02{background-image:url(http://file.easeeyes.com/b2b/images/lss/bg-2.jpg);color:#fff;}
+.section-lss-03,.section-lss-07{background:#fff;}
+.section-lss-04{background:#f2f2f2;}
+.section-lss-05{background-image:url(http://file.easeeyes.com/b2b/images/lss/bg-5.jpg);}
+.section-lss-06{background-image:url(http://file.easeeyes.com/b2b/images/lss/bg-6.jpg);}
+.section-subtitle{font-size:25px;text-align:center;margin-top:-25px;}
+.section-lss-01 .section-title,.section-lss-01 .section-description{text-align:left;width:1200px;margin:0 auto;color:#035388;}
+.section-lss-01 .section-title{margin-bottom:30px;}
+.section-lss-01 .section-description{padding-right:595px;width:605px;}
+.goodsProvide{text-align:right;width:1200px;margin:-60px auto 0;}
+.aboutUs,.doWhat{padding:400px 135px 0 90px;background:url(http://file.easeeyes.com/b2b/images/lss/15.png) no-repeat center;width:975px;margin:-20px auto 0;text-align:left;font-size:18px;line-height:1.3;}
+.section-lss-02 .section-title{color:#fff;}
+.painPoints,.solutionRetailers{text-align:center;margin-top:20px;}
+.section-lss-03,.section-lss-03 .section-title,.section-lss-04,.section-lss-04 .section-title,.section-lss-06,.section-lss-06 .section-title{color:#236eba;}
+.ourAdvantage{width:1200px;margin:0 auto;text-align:center;}
+.ourAdvantage-item{width:260px;height:260px;display:inline-block;*display:inline;*zoom:1;margin:0 20px 15px;vertical-align:top;}
+.ourAdvantage-thumb{padding:20px 0;}
+.ourAdvantage-text{width:180px;margin:0 auto;}
+.recruitmentInformation{text-align:center;}
+.recruitmentInformation-item{display:inline-block;*display:inline;*zoom:1;margin:0 20px;}
+.joinNow{height:190px;background:#0f408f;line-height:190px;position:absolute;width:100%;bottom:0;left:0;text-align:center;}
+.joinNow a{width:256px;height:65px;line-height:65px;border:1px solid #fff;display:inline-block;*display:inline;*zoom:1;vertical-align:middle;color:#fff;text-decoration:none;font-size:18px;}
+.joinNow a:hover{color:#0f408f;background:#fff;}
+.section-lss-06 .section-description{padding:30px 0;}
+.section-lss-07,.section-lss-07 .section-title,.section-lss-07 .section-description{color:#023d77;}
+.section-lss-07 .section-description{padding:30px 0 20px;}
+.registrationProcess{text-align:center;}
+.RegistNow{display:block;margin:50px auto 0;width:279px;}
+
+/**鍝佺墝鍟?**/
+.section-pps-01{background-image:url(http://file.easeeyes.com/b2b/images/pps/bg-1.jpg);color:#fff;text-align:center;}
+.section-pps-02{background-image:url(http://file.easeeyes.com/b2b/images/pps/bg-2.jpg);}
+.section-pps-03{background:#fff;}
+.section-pps-04{background:#f5f5f5;}
+.section-pps-05{background-image:url(http://file.easeeyes.com/b2b/images/pps/bg-5.jpg);color:#fff;}
+.section-pps-06{background:#0f408f;color:#fff;}
+.section-pps-07{background-image:url(http://file.easeeyes.com/b2b/images/pps/bg-7.jpg);}
+.section-pps-01 .section-title,.section-pps-05 .section-title,.section-pps-06 .section-title{color:#fff;}
+.section-pps-02 .section-title,.section-pps-02 .section-subtitle,.section-pps-03 .section-title,.section-pps-03 .section-subtitle{color:#0f457b;}
+.ppsIntro-btn{display:block;width:205px;height:40px;line-height:40px;border:1px solid #fff;color:#fff;text-decoration:none;margin:40px auto 0;}
+.ppsIntro-btn:hover{color:#00529b;background:#fff;}
+.doWhat{background-image:url(http://file.easeeyes.com/b2b/images/pps/01.png);color:#fff;}
+.doWhat p{margin-bottom:15px;font-size:24px;}
+.fourCrisis{text-align:center;padding-top:20px;}
+.section-pps-04 .section-description{margin-top:30px;}
+.brandsSolution{text-align:center;width:1200px;margin:50px auto 0;}
+.brandsSolution-item{display:inline-block;*display:inline;*zoom:1;vertical-align:top;text-align:left;color:#a3a4a4;overflow:hidden;margin:0 20px 30px;}
+.brandsSolution-thumb{float:left;}
+.brandsSolution-title{font-size:19px;color:#6a7272;margin-left:130px;padding-top:15px;}
+.brandsSolution-text{width:340px;font-size:15px;margin-left:130px;}
+.ppsAdvantage{text-align:center;width:1200px;margin:auto;padding-top:60px;}
+.ppsAdvantage-item{display:inline-block;*display:inline;*zoom:1;width:165px;vertical-align:top;text-align:center;margin:0 40px;}
+.ppsAdvantage-title{padding:10px 0;font-size:30px;}
+.ppsAdvantage-text{font-size:18px;}
+.section-pps-06 .section-description{color:#fff;padding:15px 0 50px;}
+.contactUs{width:279px;display:block;margin:0 auto;}
+.section-pps-07 .section-description{padding:50px 0 45px;}
+
+/**pageJS**/
+.sectionPoints{position:fixed;right:20px;top:50%;margin-top:-30px;z-index:999;}
+.sectionPoints li{width:9px;height:9px;border:1px solid #0f408f;border-radius:50%;display:block;margin-bottom:5px;cursor:pointer;}
+.sectionPoints li a{display:block;height:100%;}
+.sectionPoints li.active{background:#0f408f;}
+.smallScreenFix .footer-ewm-pic img{height:80px;width:auto;}
+@keyframes float{
+	0%{}
+	100%{transform:translate(0,30px);}
+}
+@-webkit-keyframes float{
+	0%{}
+	100%{-webkit-transform:translate(0,30px);}
+}
+@-ms-keyframes float{
+	0%{}
+	100%{-ms-transform:translate(0,30px);}
+}

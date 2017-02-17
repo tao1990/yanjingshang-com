@@ -1,0 +1,11 @@
+		<div class="active_main">
+		<div style="margin:0 auto; padding:10px 0px; width:990px;">
+			<ul id="weekly_active">
+				<li id="week1" {if $week eq 1}class="current_week"{/if}><a href="miaosha.html" target="_blank"></a></li>
+				<li id="week2" {if $week eq 2}class="current_week"{/if}><a href="active2.html" target="_blank"></a></li>
+				<li id="week3" {if $week eq 3}class="current_week"{/if}><a href="active3.html" target="_blank"></a></li>
+				<li id="week4" {if $week eq 4}class="current_week"{/if}><a href="active4.html" target="_blank"></a></li>
+				<li id="week5" {if $week gt 4 || $week eq 0}class='current_week'{/if}><a href="tuan.html" target="_blank"></a></li>
+			</ul>
+		</div>
+	</div>

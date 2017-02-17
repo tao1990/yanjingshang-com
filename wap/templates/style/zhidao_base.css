@@ -1,0 +1,93 @@
+﻿/*---------------------------------------------------------------------------------------------zhidao样式---------------------------------------------------------------------------------*/
+body{padding:0; margin:0;}
+img{border:0;}
+ul{list-style-type:none;}
+.fl{ float:left;}
+.fr{ float:right;}
+.red{ color:#c30000;}
+#logotr a{ color:#666; text-decoration:none;}
+#logotr a:hover{ color:#c30000;}
+.foot_center a{ color:#666; text-decoration:none;}
+.foot_center a:hover{ color:#c30000; text-decoration:underline;}
+/*-------------------------------------------------------------所有页的头部-------------------------------------------------------------*/
+#top_bg{width:100%; height:138px; background:url(http://www.easeeyes.com/themes/default/images/topbg.jpg) repeat-x; text-align:center; font-size:12px; font-family:宋体, Arial, Helvetica, sans-serif,"Arial Unicode MS"; }
+#top_line{margin:0 auto; width:950px; height:30px; overflow:hidden;}
+.hfd{  float:left; text-align:left; margin-top:8px; font-size:12px; height:3px; width:4px;}
+.hfdbt{float:left; margin:0; height:30px; line-height:30px;}
+
+#logotr{margin:0 auto; width:950px; height:80px; text-align:left;}
+#logo{float:left; width:160px; height:70px; padding-top:8px;}
+/*------------------------------------------头部信息文字行------------------------------------------------------*/
+.logo_txt{ float:right; width:405px; height:80px;}
+.logo_txt_tr{width:401px; height:14px; line-height:14px; margin:8px 4px 0 0;}
+.logo_txt_tr li{ float:left;}
+.logo_text_tip{width:15px; height:12px; background:url(http://www.easeeyes.com/themes/default/images/common/bg_cart_jt.gif) no-repeat 2px 0px; cursor:pointer; display:inline-block;}
+.kefu_r{ padding-right:9px;}
+#user_tip_pan{ width:79px; height:72px; border:1px #dcdcdc solid; background-color:white; border-top:none; padding-top:7px;  padding-top:5px\9; _padding-top:8px; text-align:left; overflow:hidden; position:absolute; top:-8px; left:-9px; z-index:200; display:none;}
+#user_tip_pan a{ margin-left:8px; height:17px;line-height:17px;}
+#user_tip_pan a:hover{ text-decoration:underline;}
+
+#help_tip_pan{ width:80px; height:90px;  border:1px #dcdcdc solid; background-color:white; border-top:none; padding-top:7px;  padding-top:5px\9; _padding-top:8px; text-align:left; overflow:hidden; position:absolute; top:-8px; left:-11px; z-index:200; display:none;}
+#help_tip_pan a{ margin-left:10px; height:17px;line-height:17px;}
+#help_tip_pan a:hover{ text-decoration:underline;}
+
+.kefu_tip{display:inline-block; width:24px; _width:20px; height:14px; background:url(http://www.easeeyes.com/themes/default/images/common/bg_kefu.gif) no-repeat 0 0;}
+#kefu{width:122px; height:145px; border:1px #dcdcdc solid; background-color:white; border-top:none; padding-top:8px; text-align:left; overflow:hidden; position:absolute; top:-8px; left:-9px; z-index:200; display:none;}
+.wid12{ display:inline-block; width:12px; cursor:pointer;}
+.logints{float:right; width:auto; min-width:277px; height:16px; line-height:14px; text-align:right; margin-top:7px; color:#999;}
+.logints font,.logints a{ font-family:宋体;}
+.logints a:hover{color:#c30000;}
+.vline{ width:1px; height:6px; font-size:6px; vertical-align:middle; color:#999;}
+/*------------------------------------------kefu-----------------------------------------------------------*/
+.ml8{ margin-left:8px;}
+.ht4px{width:122px; height:4px; overflow:hidden;}
+.kefu_list{width:122px; height:26px; line-height:26px; text-align:left; text-indent:32px;}
+.bg_qq{background:url(http://www.easeeyes.com/themes/default/images/common/qq.jpg) no-repeat 7px 4px;}
+.bg_ww{background:url(http://www.easeeyes.com/themes/default/images/common/ww.gif) no-repeat 7px 5px;}
+.bg_msn{background:url(http://www.easeeyes.com/themes/default/images/common/msn.gif) no-repeat 7px 5px;}
+.kefu_time{line-height:18px; width:100%; color:#666; padding:3px 0 3px 10px; margin-bottom:2px; background-color:#f7f7f7;}
+/*------------------------------------------kefu end-------------------------------------------------------*/
+.vline2{width:1px; height:6px; font-size:7px; vertical-align:middle; color:#999;}
+.padding_lr_5{padding:0 5px;}
+.padding_lr_8{padding:0 7px;}
+.padding_l4_r7{padding:0 7px 0 4px;}
+.padding_l6_r7{padding:0 7px 0 6px;}
+.padding_l6_r9{padding:0 8px 0 6px;}
+.padding_l7_r9{padding:0 8px 0 6px;}
+
+.tel400{ float:right; width:138px; height:40px; margin-right:2px; margin-top:8px; _margin-top:4px; background:url(http://www.easeeyes.com/themes/default/images/common/bg_400.gif) no-repeat 2px 4px; text-align:left; line-height:18px;}
+.text400{float:right; width:133px; line-height:24px; text-indent:24px; color:#666;}
+.font400{float:right; width:122px; font-size:18px; color:#c30000; margin-right:2px; font-weight:bold;}
+/*------------------------------------------头部信息文字行end------------------------------------------------------*/
+.line_both_4px{width:1px; padding:0 4px;}
+.line_padding_r_4px{width:1px; padding-right:4px;}
+.line_padding_r_5px{width:1px; padding-right:5px;}
+.head_middle{width:375px; height:auto;overflow:hidden;}
+.shop_word{width:375px; height:70px; background:url(http://www.easeeyes.com/themes/default/images/common/shop_word.gif) no-repeat 0px 46px; _background-position:0px 34px;}
+/*---------------------------------------------------------头部 菜单条 块----------------------------------------------------------------*/
+#menu{margin:0 auto; width:950px; height:28px;}
+.menu_left{width:805px; height:28px; line-height:28px; text-align:left; float:left; overflow:hidden; padding-top:0px;}
+/*---------------------------------------------------------头部 菜单条 块end-------------------------------------------------------------*/
+/*-------------------------------------------------------------所有页头部end----------------------------------------------------------------*/
+
+/*-------------------------------------------------------------所有页尾部-------------------------------------------------------------------*/
+.foot_pan{width:100%; height:auto; background-color:#f6f6f6; text-align:center; font-size:12px; font-family:宋体, Arial, Helvetica, sans-serif,"Arial Unicode MS";}
+.foot_center{width:950px; height:auto; margin:0 auto; padding-bottom:13px;}
+.mt12{ margin-top:12px;}
+.help_pan1{width:950px; height:150px; padding-top:8px; text-align:left; overflow:hidden;}
+
+.help_cat_spance{width:26px; height:146px; float:left;}
+.help_con ul{ margin-left:-20px\9;}
+.help_line{float:left; width:6px; height:140px; padding-top:24px;}
+.help_con{ width:120px; padding-top:12px;}
+.help_head{width:78px; height:17px; margin-left:8px;}
+.help_text{width:110px; height:auto; line-height:22px; padding:6px 0 0 20px; overflow:hidden;}
+.trust{border:3px #e9e9e9 solid; height:45px; width:942px; margin:20px auto 0 auto; padding-top:15px; background-color:white; _margin-top:10px; margin-bottom:10px;}
+.color9{ color:#999;}
+.help_about_me a{      color:#999;}
+.help_about_me a:hover{color:#c30000;}
+.help_bottom img{ margin-right:5px;}
+.help_about_me{width:950px; height:20px; line-height:20px; margin:10px auto 7px auto;}
+#copyright{text-align:center; line-height:18px; color:#999;}
+.mark_a{   font-size:15px; line-height:15px;}
+/*-------------------------------------------------------------所有页尾部-end-----------------------------------------------------------*/

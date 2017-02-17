@@ -1,0 +1,104 @@
+/*---------------------------------------------------------------ie6内页兼容，不能破坏原先的已经布好的局,ie6兼容只能用覆盖-------------------------------------*/
+
+/*--------------------------------------base.css-----------------------------------------*/
+/*-------------ie6公共部分兼容-----------------*/
+#cart_fold{overflow:hidden;}
+#kuang{ margin-left:11px;}
+/*----------------------导航条---------------------*/
+.leftmain{ height:5px; padding-top:6px;}
+
+/*评论的兼容*/
+.overlay{display:none;top:0;left:0;width:100%;height:100%;background-color:black; z-index:1001;-moz-opacity:0.8;opacity:.80;filter:alpha(opacity=80); position:absolute;}
+
+
+/*----------------------------------------------------------------------------产品页面-----------------------------------------------------------------------*/
+/*----------------------菜单错位问题兼容-------------*/
+#rtopleft{width:295px;}
+#answer{margin-left:0px;}
+#pluntophead{ background-repeat:no-repeat; overflow:hidden;}
+#plheadbj{ background-repeat:no-repeat;}
+.show_body{overflow:hidden; }
+.show_body1{ margin-left:6px;}
+
+/*----------------------加入购物车div-----------------*/
+.mydiv_close{ margin-top:2px;}
+.cart_btn{margin-top:6px;}
+
+/*----------------解决ie6bug的框架:只在ie6下存在------------*/
+#framediv{width:310px; height:108px; top:-228px; left:-78px; position:relative; z-index:1; filter:alpha(opacity=0);-moz-opacity:0; display:none;}
+
+/*-------category--右边顶部----------------*/
+#typebanner{ width:792px; height:150px; margin-left:0px;}
+#dtoptxtb{ padding-left:4px;}
+
+/*-------------导航栏1px问题-------------*/
+#lefttopbg{ margin-left:-1px;}
+.indexband{ padding-bottom:7px; }
+#lefttop{overflow:hidden;}
+
+
+/*---------------文章--帮助中心-------------*/
+.help_pan_top{margin-left:32px;}
+.mag_left55{margin-left:48px;}
+
+/*---文章--网站信息----------------------*/
+.webinfoleft{background-image:url('../images/yi/grey_ban.gif');FILTER: Alpha(Opacity=40);}
+.webinfoleft a{color:#000;}
+
+/*---网站页脚pager.lib间距过宽兼容------------------*/
+.trust{ margin-top:15px;}
+/*----------------------------------------------------------------------------首席推荐-----------------------------------------------------------------------*/
+.recom_img{margin-bottom:-5px;}
+#main_botx{ overflow:hidden;}
+.tj_main_top{ margin-bottom:10px;}
+/*---历史浏览记录的图片宽度--------------------*/
+.left_mainpic{ width:74px;}
+
+/*----------------------------------产品促销------------------------------------*/
+.h_left{margin-left:25px;}
+.conh_title{ margin-left:5px;}
+
+/*-----------------------------------产品页面--参数块------------------------------------*/
+#cat_goods{height:350px;}
+#rtopright{ float:left; width:485px; min-height:282px; overflow:hidden;}
+#text_title{ margin-left:0px;}
+#rtophead{ margin-left:0px;}
+.yh_context{margin-left:5px;}
+.good_order_span{margin-top:15px;}
+.txtline_l{margin-left:10px;}
+
+/*-------------------------------------------------------------------------礼包列表页面-----------------------------------------------------------------------*/
+.goods_pan{width:775px;}
+.goods_img{float:left; width:100px; height:100px; margin:6px 5px 6px 5px;}
+.jiahao{width:10px; height:100px; float:left; color:#c30000; font-size:26px; font-weight:bolder; padding-top:50px; overflow:hidden;}
+
+.lb_msg{ margin-right:0px; }
+.tobuy_txt{ margin-left:2px;}
+.tobuy{margin-top:4px;}
+.tobuy_bt{width:168px; height:59px; float:left; padding-top:31px;}
+.youhui_con{margin-left:12px;}
+.jiahao{ font-size:18px; font-weight:bolder;}
+
+/*-------------------------------------------------------------------------礼包详情页面-----------------------------------------------------------------------*/
+.first_title{margin-left:10px;}
+.packagepan{ margin-left:10px; margin-right:10px;}
+
+/*----------------------------------文章内容--------------------------------*/
+.article_con{width:750px; margin-left:-8px; padding-left:30px; padding-right:0px; padding-top:5px; overflow:hidden;}
+
+/*----------------------------------学堂--------------------------------------*/
+.linkdot{margin-top:10px; margin-left:18px; margin-right:10px;}
+
+/*----------------------------------会员中心----------------------------------*/
+
+/*----------------------------------登录注册----------------------------------*/
+.gb_head1{margin-left:175px;}
+.gb_text{ margin-left:200px;}
+.gb_btdiv{margin-left:200px;}
+.ul_head{ margin-left:14px;}
+.ul_form{ margin-left:32px;}
+.ul_right_txt{margin-left:100px;}
+.ul_right_img{margin-left:50px;}
+.rg_head{ margin-left:14px;}
+.rg_table{margin-left:45px;}
+/*----------------------------------登录注册【end】--------------------------*/

@@ -1,0 +1,13 @@
+<div class="memberinfo-left fl">
+		<h3 class="mt20">交易前</h3>
+		<a href="flow.php" target="_blank">购物车</a>
+		<!--<a href="user_collection_list.html">收藏夹</a>-->
+		<h3>交易中</h3>
+		<a href="user_order_list.html">我的订单</a>
+		<h3>交易后</h3>
+		<!--<a href="user_comment_list.html">我的评价</a>-->
+		<a href="user.php?act=order_list&type=5">退款退货</a>
+        
+        <h3>店铺管理</h3>
+        <a href="user.php?act=storeInfo">修改店铺资料</a>
+</div>

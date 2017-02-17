@@ -1,0 +1,43 @@
+<div><!--{foreach from=$categoriescsz item=cat name=arrts}--><!--{if $smarty.foreach.arrts.index < 3}--><!--{if $smarty.foreach.arrts.index eq 0 }-->
+	<div>
+        <div class="cattitle">
+        	<div class="catimg"><img src="../images/yi_tip/jtou.gif" width="5" height="7" border="0" alt=""/></div>
+            <a target="_blank" href="categorysea.php?attr{$smarty.foreach.arrts.index}=0"><font class="red">按{$cat.name|escape:html}分类</font></a>
+        </div>        
+        <div class="catline"><!--{foreach from=$cat.attr_values item=catz name=foo}-->             	
+            <span class="catspan"><a target="_blank" href="categorysea.php?&attr{$smarty.foreach.arrts.index}={$catz|escape:url}">{$catz}</a></span>
+            <!--{if $smarty.foreach.foo.index == 2}--></div><div class="catline"><!--{/if}--><!--{/foreach}-->
+        </div>
+    </div><!--{/if}--><!--{if $smarty.foreach.arrts.index eq 1 }-->
+	<div>
+        <div class="cattitle">
+        	<div class="catimg"><img alt="" src="../images/yi_tip/jtou.gif" width="5" height="7" border="0"/></div>
+            <a target="_blank" href="categorysea.php?attr{$smarty.foreach.arrts.index}=0"><font class="red">按{$cat.name|escape:html}分类</font></a>
+        </div>        
+        <div class="catline"><!--{foreach from=$cat.attr_values item=catz name=foo}--><!--{if $smarty.foreach.foo.index neq 3 && $smarty.foreach.foo.index neq 7}-->     	
+            <span class="catspan"><a target="_blank" href="categorysea.php?&attr{$smarty.foreach.arrts.index}={$catz|escape:url}">{$catz}</a></span>
+            <!--{if $smarty.foreach.foo.index == 2 || $smarty.foreach.foo.index == 4}--></div><div class="catline"><!--{/if}--> 
+        <!--{elseif $smarty.foreach.foo.index eq 3 && $smarty.foreach.foo.index neq 7}-->
+            <span  class="catspan" style="width:110px;"><a target="_blank" href="categorysea.php?&attr{$smarty.foreach.arrts.index}={$catz|escape:url}">{$catz}</a></span>
+        <!--{else}--><span  class="catspan" style="margin-left:6px;"><a target="_blank" href="categorysea.php?&attr{$smarty.foreach.arrts.index}={$catz|escape:url}">{$catz}</a></span><!--{/if}--><!--{/foreach}-->
+        </div>
+    </div><!--{/if}--><!--{if $smarty.foreach.arrts.index eq 2}-->
+	<div>
+        <div class="cattitle">
+            <div class="catimg"><img alt="" src="../images/yi_tip/jtou.gif" width="5" height="7" border="0"/></div>
+            <a target="_blank" href="category.php?id=12"><font class="red">功能片</font></a>
+        </div>    
+        <div class="catline">            
+             <span  class="catspan"><a target="_blank" href="category.php?id=14">高度近视</a></span>
+             <span  class="catspan" style="margin-left:8px; width:44px;"><a target="_blank" href="category.php?id=15">散光片</a></span>
+             <span  class="catspan"><a target="_blank" href="category.php?id=13">远视片</a></span>
+       </div>
+       <div class="catline">
+             <span  class="catspan"><a target="_blank" href="category.php?id=63">防紫外线</a></span>
+             <span  class="catspan" style="width:102px; margin-left:8px;"><a target="_blank" href="category.php?id=62">艺术片cosplay</a></span>
+	   </div>
+       <div class="catline">             
+             <span  class="catspan" style="width:110px;"><a target="_blank" href="category.php?id=61">色盲片|美容片</a></span>
+       </div>
+    </div><!--{/if}--><!--{/if}--><!--{/foreach}--> 
+</div>

@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta content="telephone=no" name="format-detection"/>
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" --><title>{$page_title}</title><!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link type="text/css" rel="stylesheet" href="/wap/css/common.css" />
+<link type="text/css" rel="stylesheet" href="/wap/css/buyer_show.css" />
+<script type="text/javascript" src="{$image_url}wap/js/buyersshow.js"></script>
+</head>
+<body style="background:#f2f2f2;">
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+
+<div class="buy_show_detail">
+  <div class="buy_show_title">
+    <img src="{$image_url}wap/images/buy_show_one.png" width="100" height="21">
+  </div>
+  <div class="buy_img">
+    <img src="{$image_url}{$mjx_info.thumb_img}"/>
+  </div>
+  <div class="buy_fav">
+    <div class="buy_fav_left">
+       <a onclick="showUser({$mjx_info.vote},{$mjx_info.goods_id},{$mjx_info.user_id},{$mjx_info.id});"><img src="{$image_url}wap/images/buy_zan.png"/></a>
+       <span id="vote_num">{if $mjx_info.vote gt 0}{$mjx_info.vote}{else}1{/if}</span>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="buy_show_say">
+     <div>
+        <span>{$mjx_info.user_name}</span>
+        <em>发表于{$mjx_info.publish_time}</em>
+        <div class="clear"></div>
+     </div>
+     <div>{$mjx_info.detail}</div>
+  </div>
+  
+  
+  <div class="buy_goods">
+      <div class="buy_goods_top">
+         <div class="buy_goods_left">
+            <img src="{$image_url}{$goods.goods_thumb}" width="62" height="62" style="border: 1px solid #dddddd;"/>
+         </div>
+         <div class="buy_goods_right">
+            <div>{$goods.goods_name}</div>
+            <div class="buy_goods_price">
+              <!--<div class="buy_cu">
+                <img src="{$image_url}/themes/default/images/cu.jpg">
+                <img src="{$image_url}/themes/default/images/zeng.jpg">
+              </div>-->
+              <div class="buy_price">
+                 <span>易视价:&yen;{$goods.shop_price}</span><br />
+                 <em>市场价:{$goods.market_price}</em>
+              </div>
+              <div class="clear"></div>
+            </div>
+         </div>
+         <div class="clear"></div>
+         <div class="buy_goods_bottom">
+            <input type="button" value="立即购买同款产品" onclick="javascript:window.location.href='goods.php?id={$goods.goods_id}'"/>
+         </div>
+      </div>
+  </div>
+  
+  <div class="buy_other">
+      <div class="buy_other_left">
+         <img src="{$image_url}wap/images/mess_one.png">
+      </div><!--buy_other_left end-->
+      <div class="buy_other_right">
+         <p class="buy_ping">其他瞳学的评论</p>
+         <p>温馨提示：</p>
+         <p>买家秀图片均由客户上传，非易视网官方模特，图片上镜片的颜色和效果仅供参考！若由此给您带来不便请多多谅解，谢谢！</p>
+      </div><!--buy_other_right end-->
+      <div class="clear"></div>
+      <!--{foreach from=$mjx_comments item=comment}-->
+      <div class="buy_show_one">
+         <div>
+           <span>{$comment.user_name_commentator} </span>
+           <em>发表于{$comment.datetime}</em>
+           <div class="clear"></div>
+          </div>
+         <div class="buy_onedetail">{$comment.comment}</div>
+      </div>
+      <!--{/foreach}-->
+      <div class="buy_goods_pinglun">
+            <textarea name="comment" id="comment" class="comme_textarea" style="padding:2% 40% 0 10%; height:50px;margin-top: 3%;{if $user_info.user_id==''}display:none;{/if}"></textarea>
+      
+            <input type="button" value="我要评论"  onclick="checkForm();" />
+            <input type="hidden" name="user_id_commentator" id="user_id_commentator" value="{$user_info.user_id}" />
+            <input type="hidden" name="user_name_commentator" id="user_name_commentator" value="{$user_info.user_name}" />
+      </div>
+  </div>
+  
+            
+  <div class="buy_other_goods">
+     <div>{$mjx_info.user_name}还买了:</div>
+     <div class="buy_other_bottom">
+     <!--{foreach from=$hot_goods item=mygoods}-->
+        <div class="buy_other_one">
+        <a href="goods.php?id={$mygoods.goods_id}">
+           <div class="buy_other_img"><img src="{$image_url}{$mygoods.goods_img}" width="81" height="81" /></div>
+           <div class="buy_other_name">{$mygoods.goods_name}</div>
+        </a>
+        </div>
+     <!--{/foreach}-->  
+        <div class="clear"></div>
+     </div><!--buy_other_bottom end-->
+  </div><!--buy_other_goods end-->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$("img").lazyload({placeholder:"/js/img/white.gif", effect:"fadeIn"});
+	
+	//yi:用户表单登录
+	$("#yi_login_bt").click(function(){
+		
+		var username = $("#yi_login_form input[name='username']").val();
+		var password = $("#yi_login_form input[name='password']").val();
+		var autologin= $("#yi_login_form input[name='autologin']").attr('checked');
+		
+		//数据提交之前进行数据验证
+		if(username == ''){
+		}
+		if(password == ''){   
+		}		
+		$("#yi_login_form").submit(false);	
+		
+		$.ajax({
+				type:'post',
+				url: 'ajax_step.php?act=ajax_user_login',	
+				data:'&username='+username+'&password='+password+'&autologin='+autologin+'&m='+Math.random(),		
+				cache:false,
+				success:
+				function(da)
+				{
+					var da = eval('('+da+')');
+										
+					if(da.error == 1)
+					{
+						//登录成功
+						document.location.reload();					
+					}
+					else
+					{
+						//登录失败
+						alert(da.content);
+					}																							
+				}					
+		});
+		
+	});	
+	//登录结束
+	
+});
+
+//发表评论
+function checkForm() {
+	var user_id = document.getElementById("user_id_commentator").value;
+	var user_name = document.getElementById('user_name_commentator').value;
+	var comment = document.getElementById("comment").value;
+	
+	if (user_id == "" || user_id == "0") { 
+	      //alert("您未登录，请先登录后再评论！"); 
+          window.location.href="user.php"; 
+		  return (false); 
+	}
+	if (comment == "") { 
+	      alert("说两句吧，发表您的高见！"); 
+		  document.getElementById("comment").focus(); 
+		  return (false); 
+	}
+	
+	$(document).ready(function() {
+		$.ajax({
+			type: 'POST',
+			url: 'buyersshow_goods.php?mjxid={$mjxid}&act=comment&user_id_commentator='+user_id+'&user_name_commentator='+encodeURIComponent(user_name)+'&comment='+encodeURIComponent(comment),
+			success:function(d){
+				document.location.reload();
+			},
+			error:function(d){
+				alert('error:'+d.toSource());
+			} 
+		});
+	});
+	
+} 
+
+</script>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+</html>

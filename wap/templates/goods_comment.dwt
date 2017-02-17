@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta content="telephone=no" name="format-detection"/>
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/goods.css"/>
+</head>
+<body>
+<!-- head -->
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<div class="content" >
+<div class="content discuss">
+   <div class="content discuss_one">
+      <div class="discuss_one_left">
+          <p>好评率</p>
+          <p class="percent">{$append.pre_haoping}%</p>
+      </div><!--discuss_one_left end-->
+      <div class="discuss_one_right">
+          <div class="ju_intro">
+             <div class="language">舒适度</div>
+             <div class="zhishu star{$append.star_shushi}"></div>
+          </div>
+          <div class="ju_intro">
+             <div class="language">美观度</div>
+             <div class="zhishu star{$append.star_meiguan}"></div>
+          </div>
+          <div class="ju_intro">
+             <div class="language">服务态度</div>
+             <div class="zhishu star{$append.star_fuwu}"></div>
+          </div>
+      </div><!--discuss_one_right end-->
+      <div class="clear"></div>
+   </div><!--discuss_one end-->
+   {if $comment}
+   <div class="content discuss_two" id="Scroll">
+    <!--{foreach from=$comment item=value key=key}-->
+      <div class="discuss_two_common">
+         <div>
+            <p class="discuss_name">{$value.user_name}</p>
+            <p class="discuss_date">发表于{$value.add_time}</p>
+         </div>
+         <div class="user_discuss">{$value.content}</div>
+         {if $value.re_comment}
+            {foreach from=$value.re_comment item=value2 key=key2}
+            <div class="content yishi">
+            <div class="ys_return">{$value2.user_name}:</div>
+            <div class="ys_return_con">{$value2.content}</div>
+            <div class="clear"></div>
+            </div>
+            {/foreach}
+        {/if}
+      </div>
+    <!--{/foreach}-->
+   </div>
+   {/if}
+    <div id="lookMore"></div> 
+    <div  class="loading" id="loading" style="display: none;"></div>
+    <div class="loading" id="nomoreresults" style="display: none;">没有更多了.</div>
+    <input type="hidden" id="pageStie" value="2" />
+    <input type="hidden" id="goods_id" value="{$goods_id}" />
+    <input type="hidden" id="nomore" value="0" />
+    <div id="loading"></div>
+</div>
+
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+<script>
+//ajax下拉获取商品
+$(window).scroll(function(e){
+    if($('#nomore').val()==0){
+        if ($(window).scrollTop() + $(window).height() > $("#lookMore").offset().top){  
+            $.ajax({
+            type : "get",
+            async:false,
+            url : "goods.php?act=all_comment&get_more=1",
+            data:{page:$("#pageStie").val(),id:$("#goods_id").val()},
+    		beforeSend :function(msg){
+    	           $('#loading').fadeIn(500);
+    		},
+            success : function(msg){ 
+                    $('#loading').fadeOut(500);
+                if(msg){
+                    $("#Scroll").append(msg);
+                    var  pageStie= parseInt($('#pageStie').val())+parseInt(1); 
+                    $('#pageStie').val(pageStie);
+                }else{
+                    $('#nomore').val(1);
+                }
+            }
+        });
+        }
+    }else{
+        $('#nomoreresults').fadeIn(1000);
+    }
+}); 
+
+</script>
+</body>
+</html>

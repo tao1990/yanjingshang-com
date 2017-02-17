@@ -1,0 +1,31 @@
+﻿/*-----------------------------------------------------------------------------------------网站地图--+其它的--------------------------------------------------------------------------*/
+/*---------------flow.dwt----------*/
+/*--显示红色数字---*/
+.yi_font_n{	color:#CC0000;border-bottom:1px solid #eeeeee;font-size:14px;font-weight:bold;}
+.yi_font_a{	color:#CC0000;font-size:14px;font-weight:bold;}
+.yi_a{	color:#999999;padding-left:20px;padding-top:5px;padding-bottom:5px; line-height:20px;}
+/*flow css end*/
+/**--------------------------------------------------------------------*/
+/*site map css*/
+.ban{ width:100%; height:auto; background-color:#f1f1f1; border:1px #bfbfbf solid;}
+
+a{ target="_blank"}
+.ban_pp{padding-left:50px;}
+
+.pp_a:link{	text-decoration:none; font-weight:bold; color:#912CEE; }
+.pp_a:visited{ text-decoration:none; font-weight:bold; color:#912CEE;}
+.pp_a:hover{ text-decoration:none; font-weight:bold; color:red;}
+.pp_a:active{ text-decoration:none;font-weight:bold;}
+/*-----pp_b----------*/
+
+.pp_b:link{	text-decoration:none; font-weight:bold; color:#cc00ff; }
+.pp_b:visited{ text-decoration:none; font-weight:bold; color:#cc00ff;}
+.pp_b:hover{ text-decoration:none; font-weight:bold; color:red;}
+.pp_b:active{ text-decoration:none;font-weight:bold;}
+
+.ban_table{	margin-left:90px;}
+.ban_table a:link{	text-decoration:none; font-weight:bold; color:#4433bb; }
+.ban_table a:visited{ text-decoration:none; font-weight:bold; color:#4433bb;}
+.ban_table a:hover{ text-decoration:none; font-weight:bold; color:red;}
+.ban_table a:active{ text-decoration:none;font-weight:bold;}
+.ban_table span{width:38px; text-align:right; padding-right:8px; font-size:14px;line-height:24px;}

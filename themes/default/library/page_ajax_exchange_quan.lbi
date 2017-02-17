@@ -1,0 +1,39 @@
+<!--------------------------------------【翻页条】【20120914】start------------------------------------->
+<div id="pagebar">
+    <ul id="pager">  
+        <li class="page_h">{if $pager2.page_prev}<a href="javascript:;" onclick="change_page_ajax({$pager2.page_prev_num});" title="上一页">&lt;上一页</a>{else}&lt;上一页{/if}</li>          
+        {if $pager2.page_count< 11}<!--10页以内-->       
+        <!--{foreach from=$pager2.page_number key=key item=item}-->        
+        <!--{if $pager2.page eq $key}--><li class="page_cell red">{$key}</li><!--{else}--><li class="page_cell"><a href="javascript:;" onclick="change_page_ajax({$key});">{$key}</a></li><!--{/if}-->
+        <!--{/foreach}-->        
+        {else}<!--超过10页-->            
+            {if $pager2.page_biao eq 1}        
+            <!--{foreach from=$pager2.page_number key=key item=item name=pp}-->
+            	{if $smarty.foreach.pp.index < 8}                
+                <!--{if $pager2.page eq $key}--><li class="page_cell red">{$key}</li><!--{else}--><li class="page_cell"><a href="javascript:;" onclick="change_page_ajax({$key});">{$key}</a></li><!--{/if}-->
+                {/if}
+            <!--{/foreach}-->              
+            <li class="page_cell2">...</li><li class="page_cell"><a href="javascript:;" onclick="change_page_ajax({$pager2.page_last_num});">{$pager2.page_count}</a></li>            
+            {elseif $pager2.page_biao eq 2}            
+            	<li class="page_cell"><a href="javascript:;" onclick="change_page_ajax(1);">1</a></li><li class="page_cell2">...</li>            
+                <!--{foreach from=$pager2.page_number key=key item=item name=fa}-->
+                    {if $smarty.foreach.fa.index < 6}                    
+                    <!--{if $pager2.page eq $key}--><li class="page_cell red">{$key}</li><!--{else}--><li class="page_cell"><a href="javascript:;" onclick="change_page_ajax({$key});">{$key}</a></li><!--{/if}-->
+                    {/if}
+                <!--{/foreach}-->                  
+                <li class="page_cell2">...</li><li class="page_cell"><a href="javascript:;" onclick="change_page_ajax({$pager2.page_last_num});">{$pager2.page_count}</a></li>
+            {elseif $pager2.page_biao eq 3}           
+            	<li class="page_cell"><a href="javascript:;" onclick="change_page_ajax(1);">1</a></li><li class="page_cell2">...</li>   
+                <!--{foreach from=$pager2.page_number key=key item=item name=pe}-->
+                    {if $key > $pager2.yi_count}                    
+                    <!--{if $pager2.page eq $key}--><li class="page_cell red">{$key}</li><!--{else}--><li class="page_cell"><a href="javascript:;" onclick="change_page_ajax({$key});">{$key}</a></li><!--{/if}-->
+                    {/if}
+                <!--{/foreach}-->
+            {/if}         
+        {/if}
+        <li class="page_h">{if $pager2.page_next}<a href="javascript:;" onclick="change_page_ajax({$pager2.page_next_num});" title="下一页">下一页</a>{else}下一页{/if}&gt;</li>
+        <li><span class="page_span">共{$pager2.page_count}页</span>到第<input type="text" id="get_submit_page" class="page_input" value=""/>页</li>        
+        <li><input type="hidden" id="get_page_count" value="{$pager2.page_count}" /><input type="button" class="page_submit" onClick="change_page_ajax_submit();"/></li>   
+    </ul>
+</div>
+<!--------------------------------------【翻页条】【20120914】END------------------------------------->

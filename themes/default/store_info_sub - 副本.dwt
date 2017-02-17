@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="Generator" content="ECSHOP v2.7.3" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+<title>店铺信息提交_镜库网-眼镜业采购批发第1品牌</title>
+<link href="http://file.easeeyes.com/b2b/css/base.css" rel="stylesheet" type="text/css" />
+<link href="http://file.easeeyes.com/b2b/css/dlzc.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="http://file.easeeyes.com/b2b/css/index.css" />
+<script type="text/javascript" src="http://file.easeeyes.com/b2b/js/user.js"></script>
+<script type="text/javascript" src="http://file.easeeyes.com/b2b/js/transport.js"></script>
+<script type="text/javascript" src="http://file.easeeyes.com/b2b/js/utils.js"></script>
+
+    
+    <script type="text/javascript" src="/js/transport.js"></script>
+    {insert_scripts files='common.js,user.js'}
+    <script type="text/javascript" src="/js/inner.js"></script>
+    
+    
+<body>
+<!--header-tag-->
+
+<div class="header-tag">
+	<div class="container">
+        {insert name='member_info'}	
+	</div>
+</div>
+
+<!--{if $b2b_ck eq 1}-->
+    <p class="zhuce_logo"><a href="index.php"><img src="http://file.easeeyes.com/b2b/images/logo.png" width="200" height="63" alt="" /></a></p>
+        <div class="zhuce_box">
+        	<p class="zhuce_t1">镜商信息审结果</p>
+            <div class="zhuce_di">
+            	<p class="zhu_t2">我的镜商</p>
+          		 <ul class="zhuce_list">
+                    <li>恭喜您 您的镜商信息已经验证通过！</li>
+                	<li>
+                    	<a href="category_1.html">立即前往进货中心</a>
+                    </li>
+                 
+                </ul>
+            </div>
+        	
+        </div>
+
+<!--{else}-->
+
+ <!--{if $is_sub eq 1}-->
+    <p class="zhuce_logo"><a href="index.php"><img src="http://file.easeeyes.com/b2b/images/logo.png" width="200" height="63" alt="" /></a></p>
+        <div class="zhuce_box">
+        	<p class="zhuce_t1">镜商信息审核中……</p>
+            <div class="zhuce_di">
+            	<p class="zhu_t2">我的镜商(本页调整样式，图片固定高宽)</p>
+          		 <ul class="zhuce_list">
+                    <li>您的信息已经提交:</li>
+                    <li>工作人员会在2个工作日内验证您的信息</li>
+                	<li>
+                    	<span class="zhu_name"><b class="zhu_xing">*</b>眼镜商名称：</span>
+                        <p class="zhece_user01">{$storeInfo.store_name}</p>
+                    </li>
+                    <li>
+                    	<span class="zhu_name"><b class="zhu_xing">*</b>眼镜商地址：</span>
+                        <p class="zhece_user01">{$storeInfo.address}</p>
+                    </li>
+                    <li>
+                    	<span class="zhu_name"><b class="zhu_xing">*</b>负责人联系方式：</span>
+                        <p class="zhece_user01">{$storeInfo.phone}</p>
+                    </li>
+                    <li>
+                    	<span class="zhu_name"><b class="zhu_xing">*</b>负责人身份证号：</span>
+                        <p class="zhece_user01">{$storeInfo.id_card}</p>
+                    </li>
+                    <li>
+                    	<span class="zhu_name"><b class="zhu_xing">*</b>营业执照：</span>
+                        <p class="zhece_user01"><img width="500px" height="500px" src="{$img_url}{$storeInfo.license}" /></p>
+                    </li>
+                    
+                    <li>
+                    	<span class="zhu_name"><b class="zhu_xing">*</b>负责人身份证扫描件：</span>
+                        <p class="zhece_user01"><img width="500px" height="500px" src="{$img_url}{$storeInfo.id_card_img}" /></p>
+                    </li>
+                    <li><a style="color: red;" href="user.php?act=cancel_sub">提交有误，撤回修改(此处加layer-comfirm判断)</a></li>
+                    <li><a style="color: red;" href="index.php#one">云镜商介绍</a></li>
+                    <li><a style="color: red;" href="wslss.html">我是零售商</a></li>
+                    <li><a style="color: red;" href="wspps.html">我是品牌商</a></li>
+                </ul>
+            </div>
+        	
+        </div>
+ <!--{else}-->
+    <form action="user.php" method="post" name="formUser" enctype="multipart/form-data" >
+          
+       <p class="zhuce_logo"><a href="index.php"><img src="http://file.easeeyes.com/b2b/images/logo.png" width="200" height="63" alt="" /></a></p>
+        <div class="zhuce_box">
+        	<p class="zhuce_t1">镜商信息提交</p>
+            <div class="zhuce_di">
+            	<p class="zhu_t2">镜商信息(本页加js验证，提示用layer插件)</p>
+          		 <ul class="zhuce_list">
+                	<li>
+                    	<span class="zhu_name"><b class="zhu_xing">*</b>镜商名称：</span>
+                        <p class="zhece_user01">
+                        <input name="store_name" type="text" size="25" class="zhu_input01" onblur="is_registered(this.value);" class="inputBg"/>
+    					
+                        <i class="i_name"></i></p><span id="username_notice" style="color:#FF0000;width:150px;text-align: center; font-size: 14px;line-height: 34px;"></span>
+                    </li>
+                    <li>
+                    	<span class="zhu_name"><b class="zhu_xing">*</b>镜商地址:</span>
+                        <p class="zhece_user01">
+                        <input name="address" type="text" size="25" class="zhu_input01" onblur="is_registered(this.value);" class="inputBg"/>
+    					</li>
+            
+                    <li>
+                    <li>
+                    	<span class="zhu_name"><b class="zhu_xing">*</b>负责人联系方式：</span>
+                        <p class="zhece_user01">
+                        <input name="phone" type="text" size="25" class="zhu_input01" onblur="is_registered(this.value);" class="inputBg"/>
+    					
+                        <i class="i_name"></i></p><span id="username_notice" style="color:#FF0000;width:150px;text-align: center; font-size: 14px;line-height: 34px;"></span>
+                    </li>
+                    <li>
+                    	<span class="zhu_name"><b class="zhu_xing">*</b>负责人身份证号：</span>
+                        <p class="zhece_user01">
+                        <input name="id_card" type="text" size="25" class="zhu_input01" onblur="is_registered(this.value);" class="inputBg"/>
+    					
+                        <i class="i_name"></i></p><span id="username_notice" style="color:#FF0000;width:150px;text-align: center; font-size: 14px;line-height: 34px;"></span>
+                    </li>
+                    <li>
+                    
+                    	<span class="zhu_name"><b class="zhu_xing">*</b>营业执照：</span>
+                        <p class="zhece_user01">
+                        <input name="licences" type="file" size="25" class="zhu_input01" class="inputBg"/>
+                    </li>
+                    
+                    <li>
+                    	<span class="zhu_name"><b class="zhu_xing">*</b>负责人身份证(正反面)：</span>
+                        <p class="zhece_user01">
+                        <input name="id_card_img" type="file" size="25" class="zhu_input01" class="inputBg"/>
+                    </li>
+                    
+                  <li>
+                  <input name="act" type="hidden" value="act_store_sub" />
+                  <input type="hidden" name="back_act" value="" />
+                  <input name="submit" type="submit" value="" class="yj_zhuce"/>(改为立即提交)
+                  </li>
+                </ul>
+            </div>
+        	
+        </div>
+    </form>
+ <!--{/if}-->
+    
+
+
+<!--{/if}-->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+
+</body>
+
+</html>
+
+<script type="text/javascript">
+	var process_request = "{$lang.process_request}";
+	<!---->{foreach from=$lang.passport_js item=item key=key}
+	<!---->var {$key} = "{$item}";
+	<!---->{/foreach}
+	var username_exist = "{$lang.username_exist}";
+</script>
+</html>

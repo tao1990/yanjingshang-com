@@ -1,0 +1,10 @@
+<!--专用购物车页尾2 最简洁版-->
+<div class="foot_center2">
+    <div id="copyright">
+        <font class="mark_a">&copy;</font>易视网 2008-2011 上海明庭贸易有限公司 版权所有 网站备案号：<a href="http://www.miibeian.gov.cn" target="_blank" rel="nofollow">沪ICP备08112987号-2</a> <a href="api/certify/yaoping_info.jpg" target="_blank" rel="nofollow">互联网药品信息服务资格证书</a>
+    </div>    
+    <div class="help_bottom mt10">
+    	<a id='___szfw_logo___' href='https://search.szfw.org/cert/l/CX20140807008688008780' target='_blank'><img src='http://img.easeeyes.com/common/ceca.png'></a>
+<script type='text/javascript'>(function(){document.getElementById('___szfw_logo___').oncontextmenu = function(){return false;}})();</script>
+    </div>
+</div>

@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta content="telephone=no" name="format-detection"/>
+	<meta name="keywords" content="易视网手机版"/> 
+	<meta name="description" content="易视网手机版"/>
+	<title>易视网手机版</title>
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/address.css"/>
+
+</head>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<!--{if $action eq 'address_list'} -->
+
+
+
+<div class="goods_address">
+  <div class="app_kuang">
+    <div class="app_address">
+       <a href="user.php?act=edit_address&method=add_new">+<span>添加新地址</span></a>
+    </div><!--app_address end-->
+  </div><!--app_kuang end-->
+  
+  <!--{foreach from=$consignee_list item=consignee key=sn}-->   
+  <div class=" address">
+     <div class="address_name">
+        <div class="address_name_left">{$consignee.consignee|escape}</div>
+        <div class="address_name_right">{if $consignee.tel && $consignee.mobile}<div style="line-height:17px; color:#333; font-size:14px;">{$consignee.tel|escape}<br/>{$consignee.mobile|escape}</div>{else}{$consignee.tel|escape}{$consignee.mobile|escape}{/if}</div>
+     </div>
+     <div class="address_intro">
+        {$consignee.provincena} {$consignee.cityna} {$consignee.districtna} {$consignee.address|escape}</span>
+     </div>
+     <div class="address_select">
+         <div class="zhuangtai">
+         {if $default_add eq $consignee.address_id}
+         <img src="{$image_url}wap/images/select.png"/><span>[默认]</span>
+        {else}
+         <a href="user.php?act=act_edit_address_def&method=set_default&default_add={$consignee.address_id}"><img src="{$image_url}wap/images/not_select.png"/></a>
+        {/if}
+         
+         </div>
+         <div class="add_act">
+            <span><a href="user.php?act=edit_address&address_id={$consignee.address_id}">编辑</a></span>
+            <span><a  onclick="if(confirm('{$lang.confirm_drop_address}'))location.href='user.php?act=drop_consignee&id={$consignee.address_id}'">删除</a></span>
+         </div>
+         <div class="clear"></div>
+     </div>
+  </div>
+  <!--{/foreach}--> 
+
+</div>
+
+<!--{else if $action eq 'edit_address'} -->
+
+<form name="theForm" id="add_addres_form" action="user.php" method="post" onsubmit="return checkSubmitJ();">
+<div class="append_address">
+   <div class="minute">
+      <div class="minute_one">收货人</div><!--minute_one end-->
+      <div class="minute_con"><input type="text" name="consignee" id="consignee" value="{$consignee_info.consignee}"/></div><!--minute_con end-->
+   </div><!--minute end-->
+   <div class="minute">
+      <div class="minute_one">电话或手机</div><!--minute_one end-->
+      <div class="minute_con"><input type="text" name="tel" id="tel" value="{$consignee_info.tel}" class="addres_input"/></div><!--minute_con end-->
+   </div><!--minute end-->
+   <div class="minute_add">
+      <div class="minute_add_one">省</div><!--minute_add_one end-->
+      <div class="minute_add_con">
+            <select name="province" id="selProvinces" onchange="getDistrict(2, this.value);">
+            <option value="0">请选择</option>
+            <!--{foreach from=$provinces item=province}-->
+            <option value="{$province.region_id}" {if $consignee_info.province eq $province.region_id}selected{/if}>{$province.region_name}</option>
+            <!--{/foreach}-->
+            </select>
+      </div><!--minute_add_con end-->
+   </div><!--minute_add end-->
+   
+   <div class="minute_add">
+      <div class="minute_add_one">市</div><!--minute_add_one end-->
+      <div class="minute_add_con">
+            <select name="city" id="selCities" onchange="getDistrict(3, this.value);">
+            <option value="0">请选择</option>
+            <!--{foreach from=$city item=city}-->
+            <option value="{$city.region_id}" {if $consignee_info.city eq $city.region_id}selected{/if}>{$city.region_name}</option>
+            <!--{/foreach}-->
+            </select>
+      </div><!--minute_add_con end-->
+   </div><!--minute_add end-->
+   <div class="minute_add">
+      <div class="minute_add_one">区</div><!--minute_add_one end-->
+      <div class="minute_add_con">
+            <select name="district" id="selDistricts" >
+            <option value="0">请选择{$name_of_region[3]}</option>
+            <!--{foreach from=$district item=district}-->
+            <option value="{$district.region_id}" {if $consignee_info.district eq $district.region_id}selected{/if}>{$district.region_name}</option>
+            <!--{/foreach}-->
+            </select> 
+      </div><!--minute_add_con end-->
+   </div><!--minute_add end-->
+   <div class="minute_jiedao">
+         <div class="minute_one">街道地址</div><!--minute_one end-->
+      <div class="minute_con"><input  name="address" id="address" value="{$consignee_info.address}" style="height: 40px;" /></div><!--minute_con end--> 
+   </div><!--minute_jiedao end-->
+   <div class="minute">
+      <div class="minute_cur">设为默认</div><!--minute_one end-->
+      <div class="minute_cur_one">
+      {if $default_add eq $consignee_info.address_id}
+        <input type="checkbox" checked="true" name="default_add"/>
+      {else}
+        <input type="checkbox" name="default_add"/>
+      {/if}
+      </div><!--minute_con end-->
+   </div><!--minute end-->
+   
+   
+   <input type="hidden" name="mobile"  id="mobile_{$sn}" value="{$consignee_info.mobile}" class="addres_input"/>
+   <input type="hidden" name="act" value="act_edit_address_def" />
+   <input type="hidden" name="address_id" value="{$consignee_info.address_id}" />
+   <input type="hidden" name="email" value="{$default_email}" />
+   <input type="hidden" name="method" value="{$method}" />
+   
+   <div class="address_button">
+       <a href="#"><input  type="submit" id="form_button" value="保存地址"></a>
+   </div><!--address_button end-->
+</div>
+</form>
+
+
+           
+<script>
+//根据上级地区,获取下级地区
+function getDistrict(level, parent) {
+	if (parseInt(level) > 0 && parseInt(parent) > 0) {
+		$.ajax({
+			type: "POST",
+			url: "ajax_util.php?act=get_district_option",
+			data: {region_type:level, parent_id:parent},
+			success:function(d){
+				//alert(d);
+				if (level == 2) {
+					$("#selCities").html("<option value='0'>请选择城市</option>" + d);
+					$("#selDistricts").html("<option value='0'>请选择区县</option>");
+				} else {
+					$("#selDistricts").html("<option value='0'>请选择区县</option>" + d);
+				}
+			},
+			error:function(d){
+				alert('error:'+d.toSource());
+			}
+		});
+	}
+}
+</script>
+<script type="text/javascript">
+
+
+	
+	//ajax提交表单: 新建收货人地址数据
+		function checkSubmitJ(){
+
+            if ($("#consignee").val() =="" )
+            {
+            alert("请输入收货人姓名！");
+            $("#consignee").select();
+            return false;
+            }
+            
+			if( $('#selCountries').val() == 0 || $('#selProvinces').val() == 0 ||$('#selCities').val() == 0 ||$('#selDistricts').val() == 0){
+                alert("请选择好配送区域!");
+				return false;				
+			}
+			
+			if( $('#address').val() == '' ){
+                alert("请输入街道地址!");
+                $("#address").select();
+				return false;
+			}
+			
+			//联系电话
+			if( $('#tel').val() == ''){
+                alert("请输入电话或手机!");
+                $("#tel").select();
+				return false;
+			}
+		}
+</script>
+<!--{/if} -->
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->

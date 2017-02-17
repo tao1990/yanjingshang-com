@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>易视网，黑色星期五 1000万现金免费送</title>
+<meta name="Keywords"  content="易视网，易视眼镜网，美瞳，护理液，润眼液，博士伦，海昌，海俪恩，卫康，库博，视康，强生，sho-bi" />
+<meta name="Description" content="易视网，买二付一限时抢，1000万现金免费送，大牌洋货3折起，24小时闪电发货，30天退换货保障" />
+<style>
+.goods-lists-box{padding:.5rem 0;background:#ef0954;text-align:center;font-size:0;}
+.goods-list{background:#fff;width:15.1rem;position:relative;display:inline-block;margin:0 .25rem .5rem;font-size:1.1rem;}
+.goods-list .image{height:12.8rem;overflow:hidden;text-align:center;line-height:12.8rem;}
+.goods-list .image img{vertical-align:middle;max-height:100%;}
+.goods-list .text-description{line-height:1.7rem;padding:0 .5rem;background-color:#ffdc8b;color:#f80847;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:1rem;}
+.goods-list .text-info{background:#feb211;height:7.9rem;overflow:hidden;}
+.goods-list .text-info h3{font-size:1rem;color:#762013;font-weight:normal;padding:0 .5rem;line-height:2rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.goods-list .text-price{padding:.5rem .5rem 0;text-align:left;}
+.goods-list .text-price>img.pull-right{width:5.35rem;}
+.goods-list .text-price .price-ds,.goods-list .text-price .price-xj,.goods-list .text-price .price-yj{color:#fd0012;font-size:1.1rem;display:block;padding-bottom:.2rem;line-height:1.1;}
+.goods-list .text-price .price-xj span{font-size:1.4rem;}
+.goods-list .text-price .price-yj{padding:0 .25rem;color:#fff;background:#600622;line-height:1.4rem;display:inline-block;border-radius:.25rem;font-size:1rem;}
+.goods-list .layer{position:absolute;right:1rem;top:0;color:#fff;text-align:center;width:4rem;height:3.2rem;padding-top:.1rem;background:url(http://img.easeeyes.com/promotion/20151127/ico.png) no-repeat center top;font-size:1rem;background-size:100% auto;}
+.m-yhq{background:#c90042;text-align:center;}
+.m-yhq>div{display:inline-block;width:14.25rem;margin:0 .25rem .5rem;}
+.m-hg{background:#ef0954;padding:.5rem 0;text-align:center;font-size:0;}
+.m-hg>div{margin:0 .25rem .25rem;display:inline-block;width:15.15rem;}
+.m-hg>div img{display:block;}
+.m-hg>div:nth-child(3){width:30.75rem;}
+.m-tuan{background:#ef0952;text-align:center;padding:.5rem 0;font-size:0;}
+.m-tuan>div{display:inline-block;margin:0 .2rem .5rem;width:15.5rem;}
+.J-tab-navbar{text-align:center;font-size:0;}
+.J-tab-navbar>div{display:inline-block;line-height:4rem;background:#cd0043;color:#fff;font-size:1.1rem;width:25%;}
+.J-tab-navbar>div[data-selected="true"]{background:#8C001B;color:#FBFF04;}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<!--main-->
+<div class="container">
+    <div><img src="http://file.easeeyes.com/wap/images/20151127/banner.jpg" /></div>
+    <div><img src="http://file.easeeyes.com/wap/images/20151127/01.jpg" /></div>
+    <!--优惠券-->
+    <div class="m-yhq">
+        <div class=""><img src="http://file.easeeyes.com/wap/images/20151127/02.jpg" {if $user_id eq 0}onclick="alert('请先登录后再进行领取！');"{else} onclick="get_bonus(1);"{/if} /></div>
+        <div class=""><img src="http://file.easeeyes.com/wap/images/20151127/03.jpg" {if $user_id eq 0}onclick="alert('请先登录后再进行领取！');"{else} onclick="get_bonus(2);"{/if} /></div>
+        <div class=""><img src="http://file.easeeyes.com/wap/images/20151127/04.jpg" {if $user_id eq 0}onclick="alert('请先登录后再进行领取！');"{else} onclick="get_bonus(4);"{/if} /></div>
+        <div class=""><img src="http://file.easeeyes.com/wap/images/20151127/05.jpg" {if $user_id eq 0}onclick="alert('请先登录后再进行领取！');"{else} onclick="get_bonus(5);"{/if} /></div>
+    </div>
+    <div><img src="http://file.easeeyes.com/wap/images/20151127/06.jpg" /></div>
+    <div><img src="http://file.easeeyes.com/wap/images/20151127/07.jpg" /></div>
+    <!--goodsLists-->
+    <div class="goods-lists-box">
+        <!--{foreach from=$goodsArr1 item=li name=li}-->
+        <div class="goods-list">
+            <a href="{$li.href}">
+                <div class="image"><img data-origin="http://www.easeeyes.com/{$li.goods_thumb}" class="lazy" /></div>
+                <div class="text">
+                    <!--<p class="text-description">凯文老师推荐，适合亚洲人的彩片</p>-->
+                    <div class="text-info">
+                        <h3>{$li.goods_name}</h3>
+                        <div class="text-price">
+                            <img src="http://img.easeeyes.com/promotion/20151127/btn.jpg" class="pull-right" />
+                            <span class="price-ds">折后价</span>
+                            <strong class="price-xj">&yen;<span>{$li.promote_price}</span></strong>
+                            <span class="price-yj">易视价:{$li.shop_price}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="layer">{$li.zk}</div>
+            </a>
+        </div>
+        <!--{/foreach}-->
+    </div>
+
+    <div><img src="http://file.easeeyes.com/wap/images/20151127/08.jpg" /></div>
+    <div class="m-tuan">
+    	<div><a href="http://m.easeeyes.com/goods101.html"><img src="http://file.easeeyes.com/wap/images/20151127/14.jpg" /></a></div>
+    	<div><a href="http://m.easeeyes.com/goods767.html"><img src="http://file.easeeyes.com/wap/images/20151127/15.jpg" /></a></div>
+    	<div><a href="http://m.easeeyes.com/goods5057.html"><img src="http://file.easeeyes.com/wap/images/20151127/16.jpg" /></a></div>
+    	<div><a href="http://m.easeeyes.com/goods4805.html"><img src="http://file.easeeyes.com/wap/images/20151127/17.jpg" /></a></div>
+    	<div><a href="http://m.easeeyes.com/category.php?search=1&keyword=强生安视优define美瞳日抛彩色隐形眼镜30片装"><img src="http://file.easeeyes.com/wap/images/20151127/18.jpg" /></a></div>
+    	<div><a href="http://m.easeeyes.com/goods589.html"><img src="http://file.easeeyes.com/wap/images/20151127/19.jpg" /></a></div>
+		<div><a href="http://m.easeeyes.com/category.php?search=1&keyword=安瞳美感系列日抛型彩色隐形眼镜5片装"><img src="http://file.easeeyes.com/wap/images/20151127/20.jpg" /></a></div>
+    	<div><a href="http://m.easeeyes.com/goods4527.html"><img src="http://file.easeeyes.com/wap/images/20151127/21.jpg" /></a></div>
+    </div>
+
+    <div><img src="http://file.easeeyes.com/wap/images/20151127/09.jpg" /></div>
+    <!--换购商品-->
+    <div class="m-hg">
+        <div><a href="http://m.easeeyes.com/goods4909.html"><img src="http://file.easeeyes.com/wap/images/20151127/10.jpg" /></a></div>
+        <div><a href="http://m.easeeyes.com/goods4934.html"><img src="http://file.easeeyes.com/wap/images/20151127/11.jpg" /></a></div>
+        <div><a href="http://m.easeeyes.com/goods5054.html"><img src="http://file.easeeyes.com/wap/images/20151127/12.jpg" /></a></div>
+    </div>
+
+    <div><img src="http://file.easeeyes.com/wap/images/20151127/13.jpg" /></div>
+	<!--选项卡导航-->
+	<!--<div class="J-tab-navbar">
+		<div>舒适双眸</div>
+		<div>美目利器</div>
+		<div>清润来袭</div>
+		<div>我型我秀</div>
+	</div>-->
+	<!--选项卡内容-->
+	<div class="J-tab-item">
+        <!--舒适双眸goodsLists-->
+        <div class="goods-lists-box">
+            <!--{foreach from=$goodsArr2 item=li name=li}-->
+            <div class="goods-list">
+                <a href="{$li.href}">
+                    <div class="image"><img data-origin="http://www.easeeyes.com/{$li.goods_thumb}" class="lazy" /></div>
+                    <div class="text">
+                        <!--<p class="text-description">凯文老师推荐，适合亚洲人的彩片</p>-->
+                        <div class="text-info">
+                            <h3>{$li.goods_name}</h3>
+                            <div class="text-price">
+                                <img src="http://img.easeeyes.com/promotion/20151127/btn.jpg" class="pull-right" />
+                                <span class="price-ds">剁手价</span>
+                                <strong class="price-xj">&yen;<span>{$li.promote_price}</span></strong>
+                                <span class="price-yj">易视价:{$li.shop_price}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layer">{$li.zk}</div>
+                </a>
+            </div>
+            <!--{/foreach}-->
+        </div>
+	</div>
+	<div class="J-tab-item">
+        <!--美目利器goodsLists-->
+        <div class="goods-lists-box">
+            <!--{foreach from=$goodsArr3 item=li name=li}-->
+            <div class="goods-list">
+                <a href="{$li.href}">
+                    <div class="image"><img data-origin="http://www.easeeyes.com/{$li.goods_thumb}" class="lazy" /></div>
+                    <div class="text">
+                        <!--<p class="text-description">凯文老师推荐，适合亚洲人的彩片</p>-->
+                        <div class="text-info">
+                            <h3>{$li.goods_name}</h3>
+                            <div class="text-price">
+                                <img src="http://img.easeeyes.com/promotion/20151127/btn.jpg" class="pull-right" />
+                                <span class="price-ds">剁手价</span>
+                                <strong class="price-xj">&yen;<span>{$li.promote_price}</span></strong>
+                                <span class="price-yj">易视价:{$li.shop_price}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layer">{$li.zk}</div>
+                </a>
+            </div>
+            <!--{/foreach}-->
+        </div>
+		
+	</div>
+	<div class="J-tab-item">
+        <!--清润来袭goodsLists-->
+        <div class="goods-lists-box">
+            <!--{foreach from=$goodsArr4 item=li name=li}-->
+            <div class="goods-list">
+                <a href="{$li.href}">
+                    <div class="image"><img data-origin="http://www.easeeyes.com/{$li.goods_thumb}" class="lazy" /></div>
+                    <div class="text">
+                        <!--<p class="text-description">凯文老师推荐，适合亚洲人的彩片</p>-->
+                        <div class="text-info">
+                            <h3>{$li.goods_name}</h3>
+                            <div class="text-price">
+                                <img src="http://img.easeeyes.com/promotion/20151127/btn.jpg" class="pull-right" />
+                                <span class="price-ds">剁手价</span>
+                                <strong class="price-xj">&yen;<span>{$li.promote_price}</span></strong>
+                                <span class="price-yj">易视价:{$li.shop_price}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layer">{$li.zk}</div>
+                </a>
+            </div>
+            <!--{/foreach}-->
+        </div>
+		
+	</div>
+	<div class="J-tab-item">
+        <!--我型我秀goodsLists-->
+        <div class="goods-lists-box">
+            <!--{foreach from=$goodsArr5 item=li name=li}-->
+            <div class="goods-list">
+                <a href="{$li.href}">
+                    <div class="image"><img data-origin="http://www.easeeyes.com/{$li.goods_thumb}" class="lazy" /></div>
+                    <div class="text">
+                        <!--<p class="text-description">凯文老师推荐，适合亚洲人的彩片</p>-->
+                        <div class="text-info">
+                            <h3>{$li.goods_name}</h3>
+                            <div class="text-price">
+                                <img src="http://img.easeeyes.com/promotion/20151127/btn.jpg" class="pull-right" />
+                                <span class="price-ds">剁手价</span>
+                                <strong class="price-xj">&yen;<span>{$li.promote_price}</span></strong>
+                                <span class="price-yj">易视价:{$li.shop_price}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layer">{$li.zk}</div>
+                </a>
+            </div>
+            <!--{/foreach}-->
+        </div>
+	</div>
+    <div class="goods-lists-box clearfix">
+    </div>
+
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+<script src="http://file.easeeyes.com/wap/js/tab.js"></script>
+<script>
+   // var tab=new Tab({
+//        "navs":document.querySelectorAll('.J-tab-navbar div'),
+//        "tabs":document.querySelectorAll(".J-tab-item")
+//    })
+</script>
+<script type="text/javascript">
+    function get_bonus(bonus_id){
+        $.ajax({
+            type:'POST',
+            url:'ajax_active.php?id=151127&act=get_bonus_151127',
+            data:'&bonus_id='+bonus_id+'&m='+Math.random(),
+            cache:false,
+            success:
+                    function(da)
+                    {
+                        if(da == 1){
+                            alert('您已成功领取优惠券！请至我的红包/优惠券查看^_^');
+                        }else if(da == 2){
+                            alert('请登录后再试^_^');
+                        }else if(da == 3){
+                            alert('您已领取过该优惠券^_^');
+                        }
+                    }
+        });
+    }
+</script>
+<script src="http://file.easeeyes.com/wap/js/lazy.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded",function(){
+        var elem=document.getElementsByClassName("lazy");
+        lazyLoad.init(elem,{
+            placehold:"http://img.easeeyes.com/index2015/white.gif"
+        });
+    },false)
+</script>
+</html>

@@ -1,0 +1,117 @@
+﻿/*------------------------------------------------------------简单页面+所有的静态页面样式---------------------------------------------------------------------*/
+body{margin:0 auto;}
+.f_r_b{color:#E43232; font-weight:bold; font-size:13px;}
+.f_3_b{color:#333; font-weight:bold;}
+
+/*------------------------学堂------------------------*/
+.goodpan{}
+/*---------------文章内容------------*/
+.text{height:152px; padding-left:15px; overflow:hidden;}
+.textout{width:300px; height:115px; margin-top:18px;}
+.textpic{width:113px; height:115px; float:left;}
+.textpan{width:177px; height:115px; float:right;}
+.texttitle{width:100%; height:16px; line-height:16px; font-weight:bold; font-size:13px; text-align:center; color:#666; overflow:hidden;}
+.textcon{width:100%; height:89px; margin-top:8px; line-height:18px; text-align:left; color:#999; overflow:hidden;}
+
+/*---------------链接内容------------*/
+.linkcon{width:236px; height:198px; float:left;}
+.linkdiv{width:236px; height:7px; overflow:hidden;}
+.linkpan{width:236px; height:27px; line-height:27px;}
+.linkdot{width:4px; height:4px; overflow:hidden; float:left; margin-top:12px; margin-left:30px; margin-right:20px;}
+.linktitle{width:180px; height:27px; float:left; overflow:hidden; text-align:left;}
+
+/*-----------------------购买什么样的隐形眼镜-------------------*/
+.pantitle{width:925px; height:18px; text-align:left; margin-left:8px; margin-top:20px;}
+.pancon{width:925px; height:auto; text-align:left; margin-left:8px; margin-top:8px;}
+.panleft{width:340px; height:320px; float:left;}
+.pandesc{width:100%; height:100px; line-height:20px; margin-top:10px; font-size:12px; color:#999; overflow:hidden;}
+.panright{width:555px; height:320px;float:right;}
+
+.goodpan{width:185px; height:320px; float:left;}
+.goodpic{width:100%; height:160px; text-align:center;}
+.goodtitle{width:160px; height:16px; line-height:16px; margin-top:10px; margin-bottom:10px; margin-left:12px; color:#FC6; text-align:center; overflow:hidden;}
+.goodtitle a{ color:#c87f3a;}
+.goodtitle a:hover{ color:#c30000;}
+.gooddesc{width:160px; height:32px; line-height:16px; margin-bottom:10px; margin-left:12px; text-align:center; color:#666; overflow:hidden;}
+.goodprice{width:100%; height:22px; line-height:22px; text-align:center;}
+.cartbt{width:100%; height:23px; text-align:center; margin-top:5px;}
+
+/*------------------------登录和注册页面------------------------*/
+
+/* 用户登录:user_passport.dwt */
+#user_login{width:988px; height:380px; border:1px #dcdcdc solid;}
+
+.user_login_pan{width:988px; height:300px; overflow:hidden;}
+.ul_form{width:580px; height:235px; margin:44px 0 0 65px;}
+.user_login_foget_pwd{width:95px; height:14px; line-height:14px; display:inline-block; margin:16px 0 0 15px;}
+.user_login_foget_pwd a{color:#144C7D;}
+.user_login_foget_pwd a:hover{color:#E43232;}
+.user_login_auto{width:300px; height:13px; line-height:13px; color:#999; margin:15px 0; overflow:hidden;}
+.user_login_submit{width:118px; height:33px; background:url(../images/login/login_bt.gif) no-repeat; cursor:pointer; border:none;}
+
+.user_login_tip_pan{width:510px; height:18px; line-height:18px; float:left; margin-left:6px;}
+.user_login_tip{width:auto; height:18px; line-height:18px; text-indent:22px; overflow:hidden;}
+.user_login_tip a{display:block;}
+.login_line_tip{width:1px; height:12px; margin-top:5px; border-right:1px #dcdcdc solid; margin-left:8px; margin-right:8px;}
+
+
+.ul_right_txt{width:237px; height:14px; line-height:14px; margin-left:88px; text-align:left; color:#666;}
+.ul_right_img{width:237px; height:36px; float:left; text-align:left; margin:28px 0 20px 88px;}
+
+
+
+
+
+
+
+/* 快速注册:user_passport.dwt */
+#regiter{width:988px; height:450px; border:1px #dcdcdc solid; overflow:hidden;}
+.reg_h{width:100%; height:38px; line-height:38px; color:#999; overflow:hidden; background:url(../images/login/login_text.gif) no-repeat 25px 10px; text-align:left; text-indent:146px;}
+.reg_h_line{width:100%; height:3px; background:url(../images/login/line.gif) no-repeat; overflow:hidden;}
+.regiter_pan{width:988px; height:408px; overflow:hidden;}
+.regiter_table{width:640px; height:408px;}
+.rg_table{border-collapse:collapse; margin:46px 0 0 56px;}
+
+.notice_txt{color:#E43232; line-height:30px; margin-left:10px;}
+
+.reg_login_line{width:1px; height:150px; margin-top:126px; border-left:1px #dcdcdc dashed;}
+.reg_login{width:346px; height:408px;}
+
+.reg_login_ul{width:120px; height:180px; margin:106px 0 0 112px; text-align:left;}
+.reg_login_ul a{ display:block;}
+.reg_login_title{width:100%; height:16px; line-height:16px; color:#666;}
+.reg_login_bt{width:100%; height:34px; margin:15px 0;}
+
+.login_tip{width:100%; height:18px; line-height:18px; margin-bottom:8px; text-indent:26px; overflow:hidden;}
+.lg_tip_bg1{background:url(../images/login/login_tip1.gif) no-repeat;}
+.lg_tip_bg2{background:url(../images/login/login_tip2.gif) no-repeat;}
+.lg_tip_bg3{background:url(../images/login/login_tip3.gif) no-repeat;}
+.lg_tip_bg4{background:url(../images/login/login_tip4.gif) no-repeat;}
+.lg_tip_bg5{background:url(../images/login/login_tip5.gif) no-repeat;}
+.last_word{width:988px; height:36px; line-height:36px; color:#666; font-size:12px; text-align:center;}
+
+.login_h_bg{background:url(../images/login/logintxt.gif) no-repeat 25px 10px;}
+
+/* 可以删除 */
+.rg_head{width:89px; height:18px; margin-top:10px; margin-left:28px; margin-right:28px; float:left;}
+
+.rg_head_txt{float:left; height:38px; line-height:40px; color:#999;}
+
+.rg_right_txt{width:237px; text-align:center; margin-top:15px; margin-bottom:18px; margin-left:37px; color:#666;}
+.rg_right_img{width:237px; margin-left:50px;}
+
+.inputcon{width:300px; height:28px; line-height:28px; font-size:16px; border:1px #dcdcdc solid; float:left;}
+.foget a{ color:#144C7D;}
+.foget a:hover{ color:#c30000;}
+.lab_name{ font-size:14px; color:#666;}
+
+
+/*找回密码*/
+#getback_pwd{width:988px; height:282px; border:1px #dcdcdc solid;}
+.gb_head1{width:54px; height:45px; float:left; margin-left:350px;}
+.gb_head2{width:300px; height:45px; line-height:45px; font-size:18px; font-weight:bold; color:#666; text-align:left; float:left; margin-left:10px;}
+.gb_text{width:300px; margin-left:400px; float:left; text-align:left; color:#999; margin-top:15px;}
+.gb_input{width:1000px; text-align:left; margin-bottom:24px; margin-top:10px;}
+.gb_btdiv{width:80px; margin-left:400px; float:left;}
+.gb_bt1{background:url(../images/login/loginbt2.gif) no-repeat 0px 0px; width:80px; height:24px;text-align:center; line-height:24px; color:#fff; border:none; cursor:pointer;}
+.gb_bt2{background:url(../images/login/loginbt1.gif) no-repeat 0px 0px; width:84px; height:28px;text-align:center; line-height:28px; color:#fff; border:none; cursor:pointer;}

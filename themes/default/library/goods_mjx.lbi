@@ -1,0 +1,39 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="show_body">
+	<div class="show_body_pan" style="line-height:26px;">
+    	<div style="width:76px; height:16px; margin-left:10px; margin-top:5px; float:left;">
+        	<div style="float:left; width:16px; height:16px; margin-right:10px;"><img src="../images/yi_tip/pan/haha.gif" border="0" /></div>
+        	<div style="float:left; width:50px; height:16px; line-height:16px; color:#000; font-family:'宋体', Arial; font-size:14px; font-weight:bold;">买家秀</div>
+        </div>
+        <div style="float:right; margin-right:28px; width:98px; height:26px; line-height:26px;">
+        <a href="buyersshow.html" target="_blank"><img src="../images/yi_tip/pan/bt.gif" border="0" width="98" height="26"/></a></div>
+    </div>
+    
+    <div class="show_body1">
+    <div class="space20"></div>
+    <div class="panel">    
+       <!-- {foreach from=$mjx_info item=valsh name=foosh} -->
+       			<div class="p_head">
+                	<div style="float:left; padding-left:10px; font-weight:bold; font-family:inherit;">会员名：<font color="#cc0013"><!-- {$valsh.user_name} --></font></div>
+                    <div style="float:right; padding-right:10px;">                    
+                        <span style="display:inline-block; vertical-align:top; margin-top:5px;"><img alt="" src="../images/yi_tip/pan/jt.gif"/></span>
+                        <span id="vote{$valsh.mjxid}" style="height:26px; line-height:20px; margin-right:10px; display:inline-block; margin-left:10px;">{$valsh.vote}</span>
+                        <span style="cursor:pointer;" onclick="showUser({$valsh.vote},{$valsh.goods_id},{$valsh.user_id},{$valsh.mjxid})"><img src="../images/yi_tip/pan/top.gif" style="margin-top:4px;" /></span>
+                    </div>
+                </div>                
+                <div class="loopshowtext" style="margin-top:10px; margin-bottom:15px; margin-left:10px;">                                
+                    <font style="color:#000; font-size:12px;">{$valsh.detail}</font>                             
+                </div>
+                <div class="loopshowmenu" style="margin-bottom:15px; width:750px; height:auto;"><center>
+                    <!-- {if $valsh.goods_id} -->                   	
+                        <a href="{$valsh.img}" target="_blank"><img src="{$valsh.img}"  title="{$valsh.detail}" border="0" style="max-width:750px;"/></a>
+                    {else}
+                        <a href="{$valsh.img}" target="_blank"><img src="{$valsh.img}"  title="{$valsh.detail}"/></a>
+                    <!--{/if}-->
+                    </center>
+                </div>
+     <!-- {/foreach} --> 
+     <hr />
+    </div>
+    </div>
+</div>

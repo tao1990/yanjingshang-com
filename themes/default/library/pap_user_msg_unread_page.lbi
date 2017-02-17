@@ -1,0 +1,23 @@
+<!--------------------------------------【翻页条】【20120914】start------------------------------------->
+<div id="pagebar">
+    <ul id="pager">   
+        <li class="page_h">{if $pager1.page_prev}<a href="javascript:;" onclick="com_page_ajax({$pager1.page_prev_num});" title="上一页">上一页</a>{else}上一页{/if}</li>          
+        <!--{if $pager1.page_count< 11}10页以内-->       
+        <!--{foreach from=$pager1.page_number key=key item=item}-->        
+        <!--{if $pager1.page eq $key}--><li class="page_cell red">{$key}</li><!--{else}--><li class="page_cell"><a href="javascript:;" onclick="com_page_ajax({$key});">{$key}</a></li><!--{/if}-->
+        <!--{/foreach}-->        
+        <!--{else}超过10页--> 
+            <!--{if $pager1.page eq 1}--><li class="page_cell red">1</li><!--{else}--><li class="page_cell"><a href="javascript:;" onclick="com_page_ajax(1);">1</a></li><!--{/if}-->
+            <!--{foreach from=$pager1.page_number key=key item=item name=pp}-->
+            	{if $smarty.foreach.pp.index < 9 && $smarty.foreach.pp.index>0}                
+                <!--{if $pager1.page eq $key}--><li class="page_cell red">{$key}</li><!--{else}--><li class="page_cell"><a href="javascript:;" onclick="com_page_ajax({$key});">{$key}</a></li><!--{/if}-->
+                {/if}
+            <!--{/foreach}-->
+            <!--{if $pager1.page eq $pager1.page_count}--><li class="page_cell red">{$pager1.page_count}</li><!--{else}--><li class="page_cell"><a href="javascript:;" onclick="com_page_ajax({$pager1.page_count});">{$pager1.page_count}</a></li><!--{/if}-->        
+        <!--{/if}-->
+        <li class="page_h">{if $pager1.page_next}<a href="javascript:;" onclick="com_page_ajax({$pager1.page_next_num});" title="下一页">下一页</a>{else}下一页{/if}</li>
+        <li class="page_large"><span class="page_span">共{$pager1.page_count}页</span> 到第 <input type="text" id="get_submit_page" class="page_input" value=""/> 页</li>        
+        <li class="page_submit"><input type="hidden" id="get_page_count" value="{$pager1.page_count}" /><input type="button" class="page_submit" onClick="com_page_ajax_submit();" value="跳转"/></li>   
+    </ul>
+</div>
+<!--------------------------------------【翻页条】【20120914】END------------------------------------->

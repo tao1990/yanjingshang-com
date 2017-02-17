@@ -1,0 +1,86 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div id="ECS_ORDERTOTAL">
+<table width="96%" border="0" cellpadding="0" cellspacing="0" style="line-height:32px; margin:0 auto;" >
+  <!--{if $smarty.session.user_id > 0 and ($config.use_integral or $config.use_bonus)}订单完成获得的红包,积分-->
+  <tr>
+    <td align="right" style="border-bottom:1px solid #ccc; display:none;">
+      {$lang.complete_acquisition}<span class="yi_font_sum">{$total.will_get_integral}</span> {$points_name}
+      <!--{if $total.will_get_bonus}-->，{$lang.with_price} <span class="yi_font_sum">{$total.will_get_bonus}</span>{$lang.de}{$lang.bonus}。<!--{/if}-->    
+    </td>
+  </tr>
+  <!--{/if}-->
+  <tr>
+    <td align="right" style="border-bottom:1px solid #ccc;" >
+      <b class="fs_14">{$lang.goods_all_price}:</b> <span class="yi_font_sum" id="temp_goods_amount">{$total.goods_price_formated}</span><br/>
+      <!--{if $total.discount gt 0}折扣-->
+      - {$lang.discount}: <span class="yi_font_sum">{$total.discount_formated}</span>
+      <!--{/if}-->
+      <!--{if $total.tax gt 0 }税-->
+      + {$lang.tax}: <span class="yi_font_sum">{$total.tax_formated}</span>
+      <!--{/if}-->
+      <!--{if $total.shipping_insure > 0}保价费用-->
+      + {$lang.insure_fee}: <span class="yi_font_sum">{$total.shipping_insure_formated}</span>
+      <!--{/if}-->      
+      <!--{if $total.pay_fee > 0}支付费用-->
+      + {$lang.pay_fee}: <span class="yi_font_sum">{$total.pay_fee_formated}</span>
+      <!--{/if}-->      
+      <!--{if $total.pack_fee > 0}包装费用-->
+      + {$lang.pack_fee}: <span class="yi_font_sum">{$total.pack_fee_formated}</span>
+      <!--{/if}-->      
+      <!--{if $total.card_fee > 0}贺卡费用-->
+      + {$lang.card_fee}: <span class="yi_font_sum">{$total.card_fee_formated}</span>
+      <!--{/if}-->      
+      <!--{if $total.shipping_fee > 0}配送费用--> 
+      <ul class="fr">         
+      {if $total.ship_cart_wei < 2 && $total.shipping_over_fee<=0}
+		<li><b class="fs_14">运费:</b> <span class="yi_font_sum" id="temp_BOC">{$total.shipping_fee_formated}</span><span id="temp_BOC_memo"></span></li>
+      {else}
+ 		<li class="fr">
+        	{if $total.level.next_level_sump eq 0 && $total.level.next_level_weight eq 0}
+            <span class="total_weight">商品总重：{$total.ship_cart_wei}kg{if $total.overload>0}（超重{$total.overload}kg）{/if}</span>
+            {/if}
+      		<b class="fs_14">运费</b>：{if $total.goods_price>=68 && !$total.yi_cod && $total.area_id neq 22}首重已免{else}首重<span class="yi_font_sum">{$total.shipping_base_fee_f}</span>{/if} + 超重费
+            <span class="yi_font_sum">{$total.shipping_over_fee_f}</span>  
+      	</li>
+        {if $total.level.next_level_sump>0 && $total.level.next_level_weight>0}        
+        <li class="li_total_tip">   
+            <span class="total_weight">商品总重：{$total.ship_cart_wei}kg{if $total.overload>0}（超重{$total.overload}kg）{/if}</span><span>再买{$total.level.next_level_sump}元，总重不超过{$total.level.next_level_weight}kg 可全免运费</span> <a href="./" class="total_add_bt" target="_blank">去凑凑单</a>
+        </li>
+        {/if}
+      {/if} 
+      </ul>     
+      <!--{/if}-->
+    </td>
+  </tr>
+  <!--{if $total.surplus > 0 or $total.integral > 0 or $total.bonus > 0}使用余额或积分或红包-->
+  <tr>
+    <td align="right" style="border-bottom:1px solid #ccc;">
+      <!--{if $total.surplus > 0}余额-->
+      <b class="fs_14">- {$lang.use_surplus}:</b> <span class="yi_font_sum">{$total.surplus_formated}</span>
+      <!--{/if}-->
+      <!--{if $total.integral > 0}积分-->
+      <b class="fs_14">- {$lang.use_integral}:</b> <span class="yi_font_sum">{$total.integral_formated}</span>
+      <!--{/if}-->
+      <!--{if $total.bonus > 0}红包-->
+      <b class="fs_14">- {$lang.use_bonus}:</b> <span class="yi_font_sum">{$total.bonus_formated}</span>
+      <!--{/if}-->
+    </td>
+  </tr>
+  <!--{/if}使用余额或积分或红包end-->
+  
+  <tr>
+    <td align="right"> <b class="fs_14">{$lang.total_fee}:</b> <font class="f4_b"><span id="payables" class="yi_font_sum">{$total.amount_formated}</span></font>
+  	{if $is_group_buy}<br/>{$lang.notice_gb_order_amount}{/if}
+  	<!--{if $total.exchange_integral }消耗积分--><br/>
+	<b class="fs_14">{$lang.notice_eg_integral}</b><font class="f4_b">{$total.exchange_integral}</font>
+	<!--{/if}-->
+	</td>
+  </tr>
+</table>
+<input type="hidden" id="save_total_shipping_fee_formated" value="{$total.shipping_fee_formated}" />
+<input type="hidden" id="save_total_amount_formated" value="{$total.amount_formated}" />
+</div>
+
+<!--{if $special_bouns == 1}-->
+<div style="padding:10px; color:#FF0000; font-weight:bold;">您已成功使用该优惠券，赠品将在提交订单成功后，自动加入到您的购物清单!</div>
+<!--{/if}-->

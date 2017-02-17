@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta content="telephone=no" name="format-detection"/>
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/wuliu.css"/>
+<!--<link  type="text/css" rel="stylesheet" href="/themes/default/style/xu_css.css"/>-->
+<link href="/wap/css/focus_goods.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!-- head -->
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<script type="text/javascript" src="{$image_url}js/common.js" ></script>
+<div class="check">
+<!--{if $wuliu_list}-->
+<!--{foreach from=$wuliu_list item=item}-->
+  <div class="check_one">
+    <div class="check_top">
+       <p class="check_top_color">订单号：{$item.order_sn}</p>
+       <p>下单时间：{$item.add_time} </p>
+    </div>
+    <div class="check_bottom">
+       <div class="check_bottom_left">
+          <img src="{$image_url}{$item.other.goods_thumb}" width="84" height="85"/>
+       </div>
+       <div class="check_bottom_right">
+           <p class="check_name">{$item.other.goods_name}</p>
+           <div class="check_price">
+             <div class="check_price_left">共<span>{$item.other.num}</span>件商品</div>
+             <div class="check_price_right">总金额：<span>&yen;{$item.total_fee}</span></div>
+             <div class="clear"></div>
+           </div>
+       </div>
+       <div class="clear"></div>
+    </div>
+    <div class="check_wuliu">
+       <input type="button" onclick="javascript:window.location.href='wuliu.php?act=detail&order_id={$item.order_id}'" value="查看物流详情"/>
+    </div>
+  </div>
+<!--{/foreach}-->
+<!--{else}-->
+    <div style="text-align: center; margin: 20px auto">您暂时没有物流信息！</div>
+<!--{/if}-->
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->

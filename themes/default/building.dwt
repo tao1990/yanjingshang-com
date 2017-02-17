@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>正在建设中</title>
+<style>
+body{background:#f6f6f6;}
+*{margin:0;padding:0;}
+.build-box{width:411px;height:222px;position:absolute;left:50%;top:50%;margin-left:-205px;margin-top:-111px;background:url(http://img.easeeyes.com/b2b/common/building.png) no-repeat center;}
+.btns{position:absolute;right:20px;bottom:40px;}
+.btns a{display:inline-block;*display:inline;*zoom:1;font-size:13px;color:#123d8b;margin:0 3px;text-decoration:none;}
+.btns a:hover{text-decoration:underline;}
+</style>
+</head>
+<body>
+<div class="build-box">
+	<div class="btns">
+		<a href="/">返回首页</a>
+		<a href="javascript:history.go(-1);">返回上一页</a>
+	</div>
+</div>
+</body>
+</html>

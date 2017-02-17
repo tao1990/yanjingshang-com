@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link type="text/css" rel="stylesheet" href="/wap/css/common.css" />
+<link type="text/css" rel="stylesheet" href="/wap/css/buyer_show.css" />
+<script type="text/javascript" src="{$image_url}js/xu/jquery.form.js"></script>
+<script type="text/javascript" src="{$image_url}js/buyersshow.js"></script>
+<script type="text/javascript" src="{$image_url}js/p_thickbox.js"></script>
+
+</head>
+
+<body>
+
+<div id="upload_buyersshow">
+<!-- 晒单表单 start -->
+<div class="clearfix" style="margin:10px 0;">
+    <div class="pub_content clearfix">
+        <textarea id="detail" name="detail" class="pub_txt fl rl5"></textarea>
+        <!--<input type="button" id="pub_submit" class="pub_btn fl rr5 pub_submit" value="发表" onclick="return checkForm(document.getElementById('upload_buyersshow'));" />-->
+        <input type="reset" id="reset_from" style="display:none;" value="" />
+        <input type="hidden" id="select_img" name="select_img" value="" />
+        <input type="hidden" id="thumb_img" name="thumb_img" value="" />
+		<input type="hidden" id="index_img" name="index_img" value="" />
+    </div>
+</div>
+
+<div class="upload_pic" style="position:relative;">
+	<div>
+        
+        <div id="myOnPageContent1" >
+	<div style="border:4px solid #d9dcda; height:132px;">
+        <p style="margin:5px 0 5px 5px; padding:5px 0 5px 20px; line-height:20px;">点击从电脑选择一张图片！图片上传成功后，点击上面“发表”</p>
+        <div style="margin:5px; padding-left:20px; background-color:#fcfcfc;">
+              <form id="imageform" method="post" enctype="multipart/form-data" action="buyersshow_upload_img.php">
+				<div class="fileInput">
+						<input type="submit" id="upload" value="submit" style="display:none;" />
+						<a href="javascript:void(0);" class="btn_addPic"><span><em>+</em>添加图片</span>
+						<input type="file" name="photoimg" id="photoimg" tabindex="3" title="点击选择图片" size="3" class="filePrew"></a>
+			
+				</div>
+            </form>
+        </div>
+        <p style="margin:5px 0 0 5px; padding:5px 0 0 20px; line-height:20px;">支持JPG、GIF、PNG等图片格式，图片大小不超过1MB</p>
+    </div>
+</div>
+        
+        
+        
+		<div class="sync">
+			<ul>
+				<li class="sync_submit"><input type="button" id="pub_submit" class="publish pub_submit" value="发表" onclick="return checkForm();" /></li>
+				
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+	
+	<div id="preview" style="display:none; float:none; position:absolute; top:1px; left:25px; text-align:left; padding-top:10px; line-height:20px; z-index:99;"></div>
+</div>
+</div>
+
+<!--{if $newsshow}--><div>{$newsshow}</div><!--{/if}-->
+
+
+
+
+<script type="text/javascript" src="{$image_url}js/xu/openwindow/zDrag.js"></script>
+<script type="text/javascript" src="{$image_url}js/xu/openwindow/zDialog.js"></script>
+<script type="text/javascript">
+$(document).ready(function() { 
+	$('#photoimg').change(function() {
+		$('#imageform').ajaxForm({
+				target:		'#preview',
+				success:	function() {
+					$("#select_img").val($("#filename").val());
+					$("#thumb_img").val($("#filename2").val());
+					$("#index_img").val($("#filename3").val());
+					$('#TB_closeWindowButton').click(); //关闭弹出层
+					$("#preview").css('display', 'block');
+				}
+		}).submit(); //加.submit()自动提交，否则手动提交
+		$('#imageform').ajaxSubmit();
+		return false;
+	});
+});
+</script>
+
+
+<script>
+//验证表单
+function checkForm() {
+	if ($("#upload_type").val() == "" || $("#upload_type").val() == "0") { 
+	      alert("请选择晒单类型！"); 
+		  $("#upload_type").focus(); 
+		  return (false); 
+	}
+	if ($("#cat_id").val() == "" || $("#cat_id").val() == "0") { 
+	      alert("请选择商品分类！"); 
+		  $("#cat_id").focus(); 
+		  return (false); 
+	}
+	if ($("select[name='goods_id']").val() == "" || $("select[name='goods_id']").val() == "0") { 
+	      alert("请选择产品！"); 
+		  $("select[name='goods_id']").focus(); 
+		  return (false); 
+	}
+	if ($("#detail").val() == "") { 
+	      alert("说两句吧！"); 
+		  $("#detail").focus(); 
+		  return (false); 
+	}
+	if ($("#select_img").val() == "") { 
+	      alert("请选择图片上传！"); 
+		  return (false); 
+	}
+	if ($("#thumb_img").value == "") { 
+	      alert("您未保存图片！"); 
+		  return (false); 
+	}
+	
+    
+    
+    $.ajax({
+    	type : "post",
+    	async:false,
+    	url : "buyersshow_upload.php",
+        data:{
+                upload_type:$("#upload_type").val(),
+                cat_id:$("#cat_id").val(),
+                goods_id:$("select[name='goods_id']").val(),
+                detail:$("#detail").val(),
+                select_img:$("#select_img").val(),
+                thumb_img:$("#thumb_img").val(),
+                index_img:$("#index_img").val()
+                
+                },
+    	success : function(json){
+    	   var data = jQuery.parseJSON(json).data;
+    		alert(data);
+    	}
+    });
+    
+    
+    
+    
+	//document.getElementById('upload_buyersshow').submit();
+	//document.getElementById('reset_from').click();
+}
+
+</script>
+
+
+
+<div class="buyshow_shangchuan">
+    <div class="buy_pinpai">
+      请选择内容:
+      <select id="upload_type" name="upload_type" class="pro_top_link_selss mr10 clearfix fl">
+        <option value="0">请选择晒单内容</option>
+        <option value="1">晒佩戴效果图</option>
+        <option value="2">晒订单</option>
+        <option value="3">随便晒晒</option>
+      </select>
+   </div>
+   <div class="buy_pinpai">
+      请选择品牌:
+      <select  name="cat_id" id="cat_id" onchange="keycheck(this.value)" class="pro_top_link_selss mr10 clearfix fl">
+        <option value="buyersshow.php?ut={$smarty.get.ut}&cat_id=0">全部</option>
+        <!--{foreach from=$categoriesp item=cat}-->
+                        <!--{foreach from=$cat.cat_id item=child name=hh}-->    
+        <option  value="buyersshow.php?ut={$smarty.get.ut}&cat_id={$child.id}"{if $smarty.get.cat_id eq $child.id}selected="selected"{/if}>{$child.name}</option>
+                        <!--{/foreach}-->                    
+        <!--{/foreach}-->
+      </select>
+   </div>
+   <div class="buy_pinpai buy_peidai">
+      请选择效果:
+      <select name="goods_id" id="goods_id" class="pro_top_link_selss">
+        <option value="buyersshow.php?ut={$smarty.get.ut}&cat_id={$smarty.get.cat_id}&ef=0" {if $smarty.get.ef eq 0}selected="selected"{/if}>全部</option>
+        <option value="buyersshow.php?ut={$smarty.get.ut}&cat_id={$smarty.get.cat_id}&ef=1" {if $smarty.get.ef eq 1}selected="selected"{/if}>自然(黑色、棕色)</option>
+        <option value="buyersshow.php?ut={$smarty.get.ut}&cat_id={$smarty.get.cat_id}&ef=2" {if $smarty.get.ef eq 2}selected="selected"{/if}>混血(灰色)</option>
+        <option value="buyersshow.php?ut={$smarty.get.ut}&cat_id={$smarty.get.cat_id}&ef=3" {if $smarty.get.ef eq 3}selected="selected"{/if}>全夸张(蓝色、紫色、绿色、粉红色)</option>
+      </select>
+   </div>
+   <div class="showUp_text"><textarea></textarea></div>
+
+   <div class="add_pic"><a href="#"><img src="{$image_url}wap/images/m_01.jpg" alt="">点击添加图片</a></div>
+   <div class="showUp_intro">点击相册选择一张照片，图片上传成功后，请单机“发表”。支持JPG、GIF、PNG等图片格式，图片大小不超过1MB</div>
+   <div class="add_pic add_fabu"><a href="#">发布</a></div>
+
+   <div class="showUp_off">
+      <p>您已上传的买家秀：</p>
+       <!--{if $user_mjx}-->
+          <!--{foreach from=$user_mjx item=mjx name=foo}-->
+          <div class="showUp_img">
+            <div class="showUp_del">
+                <img src="{$image_url}{$mjx.thumb_img}" alt="" class="show_pic"/>
+              <a href="javascript:;" onclick="javascript:if(confirm('确实要删除吗?')) remove_mjx('{$mjx.id}');" class="del_1">
+                <img src="{$image_url}wap/images/close_img.png" alt="" class="show_del_img"/>
+              </a>
+            </div>
+             <p>发布时间：</p>
+             <p>2014-10-15</p>
+          </div>
+    
+          <!--{/foreach}-->
+      <!--{/if}-->
+      <div class="clear"></div>
+   </div><!--showUp_off end-->
+</div>
+</body>
+</html>

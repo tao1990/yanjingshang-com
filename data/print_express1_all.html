@@ -1,0 +1,64 @@
+<div class='pagecontainer'>
+
+{foreach from=$order_list item=order}
+<div id="page{$order.index}" style="width:800px; height:460px;">
+
+<table width="720" cellpadding="1" border="0" style="margin-top:80px;">
+    <tr height="30">
+        <td width="5">&nbsp;</td>
+        <td width="265" style="text-align:left;">易视网</td>              
+		<td width="90">&nbsp;</td>        
+        <td width="260" style="text-align:left;">{$order.consignee}</td>
+        <td width="100">&nbsp;</td>
+    </tr>
+    <tr height="60">
+        <td>&nbsp;</td>
+        <td style="text-align:left; vertical-align:top; line-height:30px;">上海市闸北区江场西路299弄4号楼502室</td>              
+		<td>&nbsp;</td>        
+        <td width="260" rowspan="2" style="text-align:left; vertical-align:top; line-height:30px;">{$order.province} {$order.city} {$order.district} {$order.address}</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr height="30">
+    	<td>&nbsp;</td>
+        <td style="text-align:left;">上海明庭贸易有限公司</td>
+        <td>&nbsp;</td>       
+        <td>&nbsp;</td>
+    </tr>
+    <tr height="30">
+        <td>&nbsp;</td>
+        <td style="text-align:left;">4006-177-176</td>              
+		<td>&nbsp;</td>      
+        <td style="text-align:left;">{if $order.tel}{$order.tel}{else}{$order.mobile}{/if}</td>
+        <td>&nbsp;</td>
+    </tr> 
+    <tr height="60">
+        <td colspan="5"><br /><br /><br /></td>
+    </tr> 
+    <tr height="60">
+        <td>&nbsp;</td>
+        <td style="text-align:left;">
+			<table border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td><br /><br />眼镜</td>
+				</tr>
+				<tr>
+					<td><br />易视网&nbsp;&nbsp;&nbsp;{$order.today}</td>
+				</tr>
+			</table>
+		</td>              
+		<td>&nbsp;</td>     
+        <td style="text-align:left;" valign="bottom">
+			<table border="0" cellpadding="0" cellspacing="0" align="right">
+				<tr>
+                    <td width="260" style="font-size:30px; font-weight:bold;" align="right">{$order.city}{$order.district}</td>
+				</tr>
+			</table>
+		</td> 
+        <td>&nbsp;</td>
+    </tr>
+</table>
+
+</div>
+{/foreach}
+
+</div>

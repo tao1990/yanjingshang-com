@@ -1,0 +1,13 @@
+.content,.content1,.content2{width:320px;margin:0 auto;padding-bottom:32px;}
+
+
+/*首页-焦点图*/
+.banner{position:relative;width:320px;height:176px;overflow:hidden;}
+.banner .bar_list{width:320px;height:174px;overflow:hidden;}
+.banner .bar_list ul{position:relative;overflow:hidden;}
+.banner .bar_list ul li,.banner .bar_btn ul li{float:left;}
+.banner .bar_list ul li a,.banner .bar_list ul li a img{display:block;width:320px;height:174px;}
+.banner .bar_btn{width:320px;overflow:hidden;}
+.banner .bar_btn ul li{width:80px;height:2px;background:#cacfcb;}
+.banner .bar_btn ul li.cur{background:#1293dc;}
+.banner .small_btn{position:absolute;bottom:8px;right:8px;}

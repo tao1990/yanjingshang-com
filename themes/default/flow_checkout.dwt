@@ -1,0 +1,407 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="x-ua-compatible" content="ie=7"/>
+<meta http-equiv="Content-Type"    content="text/html; charset=utf-8" />
+<title>购物流程_云镜商</title>
+<meta name="Keywords"    content="购物流程_云镜商" />
+<meta name="Description" content="购物流程_云镜商" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="themes/default/style/cart.css" rel="stylesheet" type="text/css" />
+<link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
+<link href="http://file.easeeyes.com/b2b/css/index.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="/js/transport.js"></script>
+<script type="text/javascript" src="/js/yijq.js"></script>
+<script type="text/javascript" src="/js/jquery.form.js"></script>
+<script type="text/javascript" src="/js/common.js"></script>
+<script type="text/javascript" src="/js/region.js"></script>
+<script type="text/javascript" src="/js/shopping_flow.js"></script>
+<script type="text/javascript" src="/js/flow.js"></script>
+<script src="http://file.easeeyes.com/b2b/js/common.js"></script>
+</head>
+<body><div class="pop_shadow"></div>
+<!-- #BeginLibraryItem "/library/flow_header.lbi" --><!-- #EndLibraryItem -->
+
+<div class="block mt10 mb20" style="background:#f2f2f2">
+
+<!-----------------------------------------------------------------------购物车的第二步【订单最终确认】---------------------------------------------------------------------------------------->
+<!--{if $step eq "checkout"}-->
+{insert_scripts files='utils.js'}
+<script type="text/javascript">
+	region.isAdmin = false;
+	var flow_no_payment  = "{$lang.flow_no_payment}";
+	var flow_no_shipping = "{$lang.flow_no_shipping}";
+</script>  
+
+<div id="main" class="container">
+  
+<div class="bo_con"><!--整个页面的外框-->
+<!--<div class="bo_con_head">填写并核对订单信息</div>-->
+	<!--收货人地址栏-->
+	<div id="div_addres" class="clearfix" style="{if $user_id && $consignee_list.0.tel!='' && $consignee_list.0.address!=''}display:none;{/if}">
+    	<div class="cart_part_title fl"><font class="font_title">收货信息</font><a href="javascript:void(0)" id="add_addres" class="a_title" onclick="add_addres()" >[关闭]</a></div>        
+		<div class="cart_part_main fl">
+        <!------登录用户保存的收货地址列表------->
+        <div id="div_usually_address" {if $add_not_null && $user_id > 0}class="ds_block"{else}class="ds_none"{/if}>        
+        <table id="tb_usually">
+            
+            <caption style="color:#333; font-size:14px; text-align:left; {if !$add_not_null}display: none;{/if}">常用地址</caption>
+            <colgroup><col style="width:12px;"/><col style="width:88px;"/><col style="width:660px;"/><col style="width:43px;"/></colgroup>
+            
+            <!--{foreach from=$consignee_list item=consignee name=con}-->
+            <tr {if !$add_not_null} style="display: none;"{/if}>
+            	<td>
+                	<input type="radio"  name="usual_addres" {if $smarty.foreach.con.index eq 0}checked="checked"{/if}/>                    
+                    <input type="hidden" name="hide_address_id" value="{$consignee.address_id}"/>
+                    <input type="hidden" name="hide_pro"        value="{$consignee.province}"/>
+                    <input type="hidden" name="hide_city"       value="{$consignee.city}"/>
+                    <input type="hidden" name="hide_dist"       value="{$consignee.district}"/>
+                    <input type="hidden" name="hide_address"    value="{$consignee.address}"/>
+                    <input type="hidden" name="hide_email"      value="{$consignee.email}" />
+                    <input type="hidden" name="hide_tel"        value="{$consignee.tel}" />                
+                </td>
+                <td class="ta_l ti_12" style="width:200px;">{$consignee.consignee}</td><td class="ta_l">{$consignee.provincena} {$consignee.cityna} {$consignee.districtna} {$consignee.address}</td><td class="delete_address" onclick="drop_consignee({$consignee.address_id})">[删除]</td>
+            </tr>
+            <!--{/foreach}-->
+        </table>
+        </div>        
+        <!--{foreach from=$consignee_list item=consignee key=sn name=aa}-->
+        <!--{if $smarty.foreach.aa.index eq 0}显示第一个地址作为默认地址-->  
+        <form id="addres_form" action="flow_ajax.php" method="post" name="theForm">        
+        <table id="tb_addres" width="100%" height="230px" cellspacing="0" cellpadding="0" border="0" style="margin-top:10px; margin-bottom:15px;">
+            <tr>
+                <td class="td_tb_addres1">*</td><td class="td_tb_addres2">收货人姓名：</td>
+                <td class="td_tb_addres3"><input type="text" name="consignee" id="consignee" value="{$consignee.consignee|escape}" class="login_input"/></td>
+                <td class="td_tb_addres4">请填写收货人全名</td>
+            </tr>
+            
+            <tr>
+                <td class="td_tb_addres1">*</td><td class="td_tb_addres2">配送区域：</td>
+                <td colspan="2" align="left">
+                <select name="country" id="selCountries" onchange="region.changed(this, 1, 'selProvinces')" class="border2">
+                    <option value="0">请选择{$name_of_region[0]}</option>
+                    <!--{foreach from=$country_list item=country}-->
+                    <option value="{$country.region_id}" {if $consignee.country eq $country.region_id}selected{/if}>{$country.region_name}</option>
+                    <!--{/foreach}-->
+                </select>
+                <select name="province" id="selProvinces" onchange="region.changed(this, 2, 'selCities')" class="border1">
+                    <option value="0" selected="selected">请选择{$name_of_region[1]}</option>
+                    <!--{foreach from=$province_list item=province}-->
+                    <option value="{$province.region_id}" {if $consignee.province eq $province.region_id && $province.region_id}selected{/if}>{$province.region_name}</option>
+                    <!--{/foreach}-->
+                </select>
+                <select name="city" id="selCities" onchange="region.changed(this, 3, 'selDistricts')" class="border1">
+                    <option value="0">请选择{$name_of_region[2]}</option>
+                    <!-- {foreach from=$city_list item=city} -->
+                    <option value="{$city.region_id}" {if $consignee.city eq $city.region_id && $city.region_id}selected{/if}>{$city.region_name}</option>
+                    <!-- {/foreach} -->            
+                </select> 
+                <select name="district" id="selDistricts" {if !$district_list}style="display:none"{/if} class="border1">
+                    <option value="0">请选择{$name_of_region[3]}</option>
+                    <!-- {foreach from=$district_list item=district} -->
+                    <option value="{$district.region_id}" {if $consignee.district eq $district.region_id && $district.region_id}selected{/if}>{$district.region_name}</option>
+                    <!-- {/foreach} -->
+                </select>        
+                </td>
+            </tr>
+            <tr>
+                <td class="td_tb_addres1">*</td><td class="td_tb_addres2">详细地址：</td>
+                <td class="td_tb_addres3"><input type="text" name="address" id="address" value="{$consignee.address|escape}" class="login_input" /></td>
+                <td class="td_tb_addres4">请填写详细地址</td>
+            </tr>
+            <tr>
+                <td class="td_tb_addres1">*</td><td class="td_tb_addres2">电子邮箱：</td>
+                <td class="td_tb_addres3"><input type="text" name="email" id="email" value="{$consignee.email|escape}" class="login_input"/></td>
+                <td class="td_tb_addres4">我们会发邮件告知您订单的详细情况</td>
+            </tr>
+            <tr>
+                <td class="td_tb_addres1">*</td><td class="td_tb_addres2">电话或手机：</td>
+                <td class="td_tb_addres3"><input type="text" name="tel" id="tel" value="{$consignee.tel}" class="login_input"/></td>
+                <td class="td_tb_addres4">方便及时与您取得联系</td>
+            </tr>
+        </table>  
+            <input type="hidden" name="action" value="add_new_address"/>
+            <input type="hidden" name="address_id" id="address_id" value="{$consignee.address_id}" /> 
+            <input type="hidden" name="flow_type"  id="flow_type" value="{$shipping_flow_type}" />
+            <input type="hidden" name="user_default_addres" id="user_default_addres" value="{$user_default_addres}" />
+        	{if $user_id > 0}<input type="hidden" name="hide_user_id" id="hide_user_id" value="{$user_id}" />{/if}
+            <div class="submit_address"><input type="submit" src="images/cart/save_addres.gif" width="119" height="28" value="确认"/></div>        
+        </form>
+        <!--{/if}-->
+        <!--{/foreach}-->       
+    </div>  
+	</div>  
+    <div id="now_addres" class="clearfix" style="{if $user_id && $consignee_list.0.tel!='' && $consignee_list.0.address!=''}display:block;{/if}">    
+    	<div class="cart_part_title fl"><font class="font_title">收货信息</font><a href="javascript:void(0)" id="add_addres" class="a_title" onclick="add_addres()" style="color: #015287;">[修改]</a></div>    
+    	<div class="cart_part_main fl">
+        	<table id="tb_now_addres">
+                <tr><td class="td_now_addres">收货地址：</td><td align="left">{$consignee_list.0.provincena} {$consignee_list.0.cityna} {$consignee_list.0.districtna} {$consignee_list.0.address}</td></tr>
+                <tr><td class="td_now_addres">收 货 人：</td><td align="left">{$consignee_list.0.consignee}</td></tr>
+                <tr><td class="td_now_addres">电子邮箱：</td><td align="left">{$consignee_list.0.email}</td></tr>
+                <tr><td class="td_now_addres">联系电话：</td><td align="left">{$consignee_list.0.tel}</td></tr>                
+            </table>
+        </div>    
+    </div>      
+<!--收货人地址栏end-->
+
+
+
+
+<!--支付方式和配送方式-->
+<div id="div_pay" class="clearfix">
+    <div class="cart_part_title fl"><font class="font_title">支付及配送方式</font><a href="javascript:void(0)" id="add_pay" class="a_title" onclick="add_pay()" style="color: #015287;">[关闭]</a></div>          
+	<form id="pay_form" class="cart_part_main fl" name="pay_form" action="flow_ajax.php" method="post">
+    <table id="tb_pay_list" width="885px" border="0" cellpadding="0" cellspacing="0">
+        <caption class="tb_head_title">支付方式</caption><colgroup><col style="width:25px;"/><col style="width:116px;"/><col/></colgroup>
+        <tr>        
+            <td><input type="radio" name="payment" value="0" isCod="0" checked="checked"/></td>
+            <td>在线支付</td><td class="td_pay_list">线上支付，即时到账，支持绝大多数银行卡及部分银行信用卡。</td>          
+        </tr>
+        <tr class="online_tb_tr">
+        	<td>&nbsp;</td>
+            <td colspan="2" align="left">
+            
+            <ul class="pay_online_ul" style="height: auto;">
+                <li class="online_head1">支持以下支付平台：</li>
+                <li> 
+                    <ul class="online_tr clearfix">
+                        <li class="online_tr_li"><input type="radio" id="rd_81" name="bank" value="4"/></li><li><img src="images/cart/bank/51.gif" width="120" height="42" alt="支付宝"/></li>
+                        <li class="online_tr_li"><input type="radio" id="rd_85" name="bank" value="18"/></li><li><img src="images/cart/bank/18.gif" width="120" height="42" alt="微信支付"/></li>
+                        <!--<li class="online_tr_li"><input type="radio" id="rd_201" name="bank" value="201"/></li><li><img src="images/cart/bank/201.gif" width="120" height="42" alt="中国招商银行网银"/></li>
+                        <li class="online_tr_li"><input type="radio" id="rd_105" name="bank" value="105"/></li><li><img src="images/cart/bank/105.gif" width="120" height="42" alt="中国交通银行网银"/></li>
+						<li class="online_tr_li"><input type="radio" id="rd_101" name="bank" value="101"/></li><li><img src="images/cart/bank/101.gif" width="120" height="42" alt="中国工商银行网银"/></li>-->
+                        <!--<li class="online_tr_li"><input type="radio" id="rd_201" name="bank" value="15"/></li><li><img src="images/cart/bank/201.gif" width="120" height="42" alt="中国招商银行网银"/></li>-->
+                        <!--<li class="online_tr_li"><input type="radio" id="rd_105" name="bank" value="12"/></li><li><img src="images/cart/bank/105.gif" width="120" height="42" alt="中国交通银行网银"/></li>   -->  
+                        <!--<li class="online_tr_li"><input type="radio" id="rd_101" name="bank" value="16"/></li><li><img src="images/cart/bank/101.gif" width="120" height="42" alt="中国工商银行网银"/></li>-->
+                    </ul>
+                </li>     
+                
+            </ul>   
+               
+            </td>
+        </tr>  
+        <tr height="8px"><td colspan="3"></td></tr> 
+        <!--{foreach from=$payment_list item=payment}循环显示其他的支付方式-->
+        {if $payment.pay_id eq 1 || $payment.pay_id eq 9}
+            <tr>        
+                <td><input type="radio" name="payment" value="{$payment.pay_id}" isCod="{$payment.is_cod}"/></td>
+                <td>{$payment.pay_name}</td>
+                <td class="td_pay_list">{$payment.pay_desc}</td>          
+            </tr>
+            <tr height="8px"><td colspan="3"></td></tr>         
+        {/if}
+        <!--{/foreach}-->
+    </table>
+    
+    
+    
+    
+    <!--配送方式-->       
+    <table id="tb_shipping_list" width="885px" border="0" cellpadding="0" cellspacing="0">
+        <caption class="tb_head_title">配送方式</caption><colgroup><col style="width:25px;"/><col style="width:125px;"/><col/><col style="width:60px;"/></colgroup>
+        <!--{foreach from=$shipping_list item=shipping}循环显示配送方式-->    
+        <tr>                 
+            <td><input type="radio" name="shipping" value="{$shipping.shipping_id}" {if $order.shipping_id eq $shipping.shipping_id}checked="true"{/if} supportCod="{$shipping.support_cod}"
+            insure="{$shipping.insure}" onclick="selectShipping(this)"/></td>
+            <td align="left">{$shipping.shipping_name}</td>
+            <td class="td_shipping_desc">默认圆通快递，全国范围通达，送货上门</td>
+            
+            <td class="td_shipping_fee">{if $shipping.shipping_id != 8}{$shipping.format_shipping_fee}{/if}</td>
+        </tr>
+        <!--{/foreach}-->
+    </table>
+    
+    
+    
+    
+    <input type="hidden" name="user_surplus" value="{$your_surplus|default:0}" />
+    <input type="hidden" id="get_pay_id" value="{$order.pay_id|default:0}" />
+    <div class="sb_pay"><input type="submit" value="确认支付方式" /></div>  
+</form>  
+</div>
+<ul id="now_pay" class="clearfix" style="display:none;">
+    <li class="cart_part_title fl"><font class="font_title">支付及配送方式</font><a href="javascript:void(0)" id="add_pay" class="a_title" onclick="add_pay()" style="color: #015287;">[修改]</a></li>     
+    <li class="show_pay cart_part_main fl">
+        <table id="tb_now_pay" width="926px" height="52px" border="0" cellpadding="0" cellspacing="0">
+            <tr><td class="td_now_addres">支付方式：</td><td align="left">{if $order.pay_id}{$order.pay_name}{/if}</td></tr>
+            <tr><td class="td_now_addres">配送方式：</td><td align="left">{if $order.shipping_id}{$order.shipping_name}{/if}</td></tr>                
+        </table>
+    </li>    
+</ul>
+<!--支付和配送end-->
+
+<!--其它信息-->
+<div id="div_info" class="clearfix" style="display:none;">
+
+    <div class="cart_part_title fl"><font class="font_title">订单附言</font><a href="javascript:void(0)" id="add_info" class="a_title" onclick="add_info()">[关闭]</a></div>
+
+<form id="info_form" class="cart_part_main fl" name="other_info" action="flow_ajax.php" method="post">
+    <table id="tb_other_info" width="100%">        
+        <colgroup><col style="width:66px;"/><col /><col /></colgroup>
+        
+        <!--{if $allow_use_integral && $order_max_integral gt 0}使用积分-->
+        <tr>
+        	<td class="td_tb_info2">使用积分：</td>
+            <td class="td_tb_info3"><input type="text" name="integral" class="input" id="ECS_INTEGRAL" onblur="changeIntegral(this.value)" value="{$order.integral|default:0}" size="10" />
+          ({$lang.can_use_integral}:{$your_integral|default:0} {$points_name}，{$lang.noworder_can_integral}{$order_max_integral}  {$points_name}.<span id="ECS_INTEGRAL_NOTICE" class="notice"></span>)
+            </td>
+        </tr>
+        <!--{/if}--> 
+        
+        <tr>
+        	<td class="td_tb_info2">订单附言：</td>
+            <td class="td_tb_info3"><textarea name="postscript" cols="90" rows="4" id="postscript" style="border:1px solid #dcdcdc; background-image:none; width:482px; height:50px;">{$order.postscript|escape}</textarea> <font style="color:#999;">(30个字内)</font>
+            </td>
+        </tr>        
+        <tr>
+        	<td class="td_tb_info2">购物凭证：</td>
+            <td class="td_tb_info3">
+            	<div style="width:100%; height:30px; margin-top:5px;">                
+                    <select name="list_kind" onchange="changelist(this);" style="float:left; margin-top:4px; width:120px; height:22px;">
+                        <option value="0" selected="selected">购物清单</option>
+                        <option value="1">购物清单+发票</option>
+                    </select>                
+                	<div id="inv_head" style="display:none; float:left; line-height:16px; margin-top:4px;padding-left:20px;">发票抬头：<input type="text" name="inv_payee" id="ECS_INVPAYEE" value="{$order.inv_payee}" /></div>
+                </div>
+            </td>
+        </tr>                    
+        <input type="hidden" name="action" value="other_info" />
+    </table>    
+    <div class="cart_part_submit"><input type="submit" value="添加附言" /></div> 
+</form> 
+</div>
+
+<div id="now_info" class="clearfix">
+
+    <div class="cart_part_title fl"><font class="font_title">订单附言</font><a href="javascript:void(0)" id="add_info" class="a_title" onclick="add_info()" style="color: #015287;">[修改]</a></div>
+    
+    <div class="cart_part_main fl">
+        <table id="tb_now_otherinfo">
+            <tr><td class="td_now_addres">购物凭证：</td><td align="left">购物清单</td></tr> 
+            <tr><td class="td_now_addres">订单附言：</td><td align="left">无</td></tr>                               
+        </table>
+    </div>    
+</div>
+<!--其它信息end-->
+
+
+<!--商品清单----->    
+	<div class="clearfix" style="margin-top:30px;">
+    	<div class="cart_part_title fl"><font>商品清单</font><a href="flow.html">[返回修改购物车]</a></div>
+        <div class="cart_part_main fl">              
+            <table id="tb_goods_info" width="100%">
+                <tr>
+                    <th class="tr_goods_info">商品名称</th>
+                    <th class="tr_goods_info">属性</th>
+                    <th class="tr_goods_info">本店价</th>
+                    <th class="tr_goods_info">购买数量</th>
+                    <th class="tr_goods_info">小计</th>
+                </tr>                
+                <!--{foreach from=$goods_list item=goods}-->
+                <tr>
+                    <td align="left">
+                    <!--{if $goods.goods_id gt 0 && $goods.extension_code eq 'package_buy'}礼包-->
+                    <a href="javascript:void(0)" onclick="setSuitShow({$goods.goods_id})" style="color:#333;">{$goods.goods_name}<span style="color:#f00;">（礼包）</span></a>
+                    <div id="suit_{$goods.goods_id}" style="display:none">
+                        <!--{foreach from=$goods.package_goods_list item=package_goods_list} -->
+                        <a href="goods{$package_goods_list.goods_id}.html" target="_blank">{$package_goods_list.goods_name}</a><br/>
+                        <!--{/foreach}-->
+                    </div>
+					<!--{elseif $goods.goods_id gt 0 && $goods.extension_code eq 'tuan_buy'}团购-->
+                    <a href="goods{$goods.goods_id}.html" target="_blank" style="color:#333;">{$goods.goods_name}<span style="color:#f00;">（团购）</span></a>
+					<!--{elseif $goods.goods_id gt 0 && $goods.extension_code eq 'miaosha_buy'}秒杀-->
+                    <a href="goods{$goods.goods_id}.html" target="_blank" style="color:#333;">{$goods.goods_name}<span style="color:#f00;">（秒杀）</span></a>
+                    <!--{ else }-->
+                    <a href="goods{$goods.goods_id}.html" target="_blank" style="color:#333;">{$goods.goods_name}</a>
+                        <!--{if $goods.parent_id > 0}-->
+                        <span style="color:#f00">（{$lang.accessories}）</span>
+                        <!--{elseif $goods.is_gift && $goods.goods_price eq '0.00'}-->
+                        <span style="color:#f00">（赠品）</span>
+                        <!--{elseif $goods.is_gift && $goods.goods_price neq '0.00'}-->
+                        <span style="color:#f00">{if $goods.extension_code eq 'group_buy'}（组合购买）{else}（特惠商品）{/if}</span>
+                        <!--{/if}-->
+                    <!--{/if}-->          
+                    <!--{if $goods.is_shipping}-->(<span style="color:#f00">{$lang.free_goods}</span>)<!--{/if}-->
+                    </td>                    
+                    <td>
+                    	<!--{if $goods.is_gift && $goods.goods_price eq '0.00' && $goods.eye_id>0 && $goods.zselect eq ''}--><span class="red"><!--度数请写在订单附言中--></span><!--{/if}-->
+                    	<!--{if $goods.goods_attr neq ''}-->{$goods.goods_attr|nl2br}<br/><!--{/if}-->
+                        <!--{if $goods.zcount>0}-->左眼度数：{$goods.zselect} 数量：{$goods.zcount}<br/><!--{/if}-->
+                        <!--{if $goods.ycount>0}-->右眼度数：{$goods.yselect} 数量：{$goods.ycount}<!--{/if}-->
+                    </td>
+                    <td>{$goods.formated_goods_price}</td>
+                    <td>{$goods.goods_number}</td>
+                    <td>{$goods.formated_subtotal}</td>
+                </tr>
+                <!--{/foreach}-->
+			</table>       
+        </div>
+    </div>
+<!--商品清单end-->
+<!--结算信息板块【最后一步】-->
+<form name="cart_submit" id="form_cart" action="flow.php?step=done" method="post">
+	{if $order.pay_id && $order.shipping_id}<!----------是否已经保存了上次的支付方式和配送方式----------->
+    <input type="hidden" name="payment"  value="{$order.pay_id}" />
+    <input type="hidden" name="shipping" value="{$order.shipping_id}" />    
+    {/if}
+    <div class="sb_cart">
+    	<div class="sb_con">
+			<!--{foreach from=$goods_list item=goods}-->
+				{if $goods.goods_id eq 3298}<div style="text-align:left; padding:5px; color:#FF0000">温馨提示：0元领取的商品,提交订单后,实际首重运费统一为12元</div>{/if}
+			<!--{/foreach}-->
+			<!-- #BeginLibraryItem "/Library/order_total.lbi" --><!-- #EndLibraryItem --> 
+            <div class="sb_boon clearfix">
+                <div class="redbag fr">
+                    <div id="use_redbag" class="redhead">使用优惠券</div>                
+                    <div class="redbag_pan clearfix" {if $user_id && $bonus_list} style="width:578px;"{/if}>
+                        {if $user_id && $bonus_list}
+                        <div style="float:left;">选择已有优惠券</div>                    
+                        <select name="bonus" id="ECS_BONUS" onchange="changeBonus(this.value)" style="width:120px; vertical-align:middle; float:left; height:22px;">
+                            <option value="0" {if $order.bonus_id eq 0}selected="selected"{/if}>请选择</option>
+                            <!--{foreach from=$bonus_list item=bonus}-->
+                            <option value="{$bonus.bonus_id}" {if $order.bonus_id eq $bonus.bonus_id}selected{/if}>{$bonus.type_name}[{$bonus.bonus_money_formated}]</option>
+                            <!--{/foreach}-->
+                        </select>    
+                        <div style="float:left; margin-left:15px; width:30px; font-weight:bold; color:#333;">或者</div>
+                        {/if}
+                        {if !$no_use_bonus}
+                        <div style="float:left;">输入优惠券编号：</div>                    
+                        <input type="text" name="bonus_sn" id="bonus_sn" value="{$order.bonus_sn}" style="border:1px solid #dcdcdc; width:120px; height:15px; line-height:15px; float:left; padding:3px;"/>
+                        <div class="redbag_bt fl"><img src="images/flow_use.jpg" width="60" height="20" alt="" onclick="validateBonus(document.forms['cart_submit'].elements['bonus_sn'].value)"/></div>
+                        {else}<div style="float:left; margin-left:10px; width:300px;">您的订单中已包含优惠商品，该商品不能使用优惠券。</div>{/if}
+                    </div>
+                    <div style="width:100%; height:8px; overflow:hidden;"></div>                
+                    <!--{if $allow_use_surplus}使用余额-->
+                    <div id="use_yue" class="redhead" style="padding:5px 0;">使用账户余额</div>                
+                    <div class="yue_pan">                
+                        <div class="yue_txt fl" style="padding-right:10px;">余额：{$your_surplus|default:0}</div>
+                        <div class="yue_input fl">使用余额： <input type="text" name="surplus" id="ECS_SURPLUS" value="{$order.surplus|default:0}" style="width:78px; height:15px; line-height:15px; border:1px #dcdcdc solid; padding:3px;" {if $disable_surplus}disabled="disabled"{/if}/><span id="ECS_SURPLUS_NOTICE" class="notice" style="display:none;"></span>                        
+                        </div><img src="images/flow_use.jpg" width="60" height="20" alt="" style="cursor:pointer;" onclick="use_yue(document.forms['cart_submit'].elements['surplus'].value)"/>
+                    </div><input type="hidden" name="able_use_surplus" value="{$your_surplus|default:0}"/>
+                    <!--{/if}-->                
+                </div>  
+            </div>
+		</div>
+        <div id="cart_submit_form" style="padding-top:10px;"><input type="submit" id="cart_submit" value="提交订单"/></div>        
+    </div>
+</form>    
+<!--结算信息end-->
+
+</div><!--外框结束-->
+</div>
+<!--{/if}-->
+
+</div>
+</body>
+<script type="text/javascript">
+	var process_request = "{$lang.process_request}";
+	<!---->{foreach from=$lang.passport_js item=item key=key}var {$key} = "{$item}";{/foreach}
+	var username_exist = "{$lang.username_exist}";
+	var compare_no_goods = "{$lang.compare_no_goods}";
+	var btn_buy = "{$lang.btn_buy}";
+	var is_cancel = "{$lang.is_cancel}";
+	var select_spe = "{$lang.select_spe}";
+</script>
+</html>

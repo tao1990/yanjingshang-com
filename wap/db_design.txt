@@ -1,0 +1,77 @@
+ecs_carts 购物车
+
+rec_id	mediumint
+user_id
+session_id
+promotion_type //购物车商品类型：0.普通商品（或一些诸如满减之类的促销活动范围内的商品）; 1.团购商品; 2.秒杀商品; 3.全额积分兑换 4.积分加钱购买; 5.外部渠道购买
+promotion_id
+goods_id
+goods_name
+goods_price
+goods_number
+category_id //栏目ID
+property_degree
+property_sg
+property_zw
+property_kj
+#r_degree
+#r_number
+#l_degree //左眼度数
+#l_number //左眼数量
+#r_sg
+#l_sg	//左眼散光
+#r_zw
+#l_zw	//左轴位
+#kj_tongju //框架瞳距（后改为：property_kj 框架镜片的左右眼度数和散光、瞳距等信息） 
+		$l_degree.','.$l_sg,','.$l_zw. '|' . $r_degree.','.$r_sg,','.$r_zw . '|' . $kj_tongju,
+parent_id //父产品id：0.没有 其他rec_id,表示该rec_id下的商品,一删全删
+is_gift
+is_promotion
+is_free_postage //包邮标记：1.包邮
+add_time	//创建时间
+expiry_date	//当期时间
+
+
+==========================================
+ecs_promotion 促销活动表
+
+rec_id
+subject
+start_time
+end_time
+is_compossible //本活动能否和其他活动并存**************
+user_rank
+scope_type //适用范围类别 0.全场 1.分类 2.具体商品
+scope_detail //对应的具体范围
+min_amount
+max_amount
+promotion_type //促销方式: 0.赠品 1.满减  2.加价购 3.满折扣(暂不考虑)
+promotion_off //满减的金额、满折扣的折扣数、加价购的加价，如“满200元减promotion_off元”
+repeatedly //是否支持多次（多买多送，多买多减）1
+gift_option //赠品选项：1.活动同时赠送单个或多个商品 2.赠送的商品只能选择一个
+gift_value //赠品情况，数组序列化
+
+show_in_goods //是否显示在商品详情页
+
+
+==========================================
+ecs_shipping	配送方式
+
+shipping_id
+shipping_code
+shipping_name
+shipping_desc
+insure
+support_cod
+enabled
+
+===========================================
+ecs_shipping_area 配送区域的运费情况
+
+shipping_area_id
+shipping_area_name
+shipping_id
+configure
+
+============================================
+加入购物车方法：

@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>海俪恩新品专场</title><meta name="Keywords"  content="易视网，易视眼镜网，美瞳、海俪恩、海昌" /><meta name="Description" content="全场任意消费加3.8元送菲士康护理液，美瞳全场第二件半价" />
+
+<link type="text/css" rel="stylesheet" href="http://file.easeeyes.com/css/base.css"/>
+<link href="themes/default/style/pop_com.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="http://file.easeeyes.com/index2015/css/base.css" />
+</head>
+
+<style>
+@charset "utf-8";
+/* CSS Document */
+/**修正相关搜索位置**/
+.ac_results{top:85px !important;}
+
+body,div,span { margin:0; padding:0; }
+img { border:0; }
+.clear {clear:both; width:0; height:0; }
+.mb10{margin-bottom:10px;}
+.banner{
+	height:680px;
+	background:url(http://img.easeeyes.com/promotion/2_new/01.jpg) no-repeat center top;
+}
+.banner2{
+	height:620px;
+	background:url(http://img.easeeyes.com/promotion/2_new/02.jpg) no-repeat center top;
+}
+.container{
+	width:990px;
+	margin:auto;
+}
+.active-main{
+	/*margin-top:-10px;*/
+	background:#85eee0;
+}
+.active-main .clear{
+	width:auto;
+	height:auto;
+}
+.ysMod .colorbox a,.ysMod .colorbox img{display:block;}
+.active-weekly{
+	padding:20px 0;
+}
+.folMod{
+	padding-bottom:20px;
+}
+.active-nav{
+	position:fixed;
+	right:10px;
+	top:140px;
+}
+.active-nav-left{
+	right:auto;
+	left:10px;
+}
+.bjMod .title2{
+	text-align:center;
+	background:#d92265;
+}
+.ppMod{
+	margin-top:25px;
+}
+.logo {width:36px; height: 36px}
+/*每周活动css*/
+#weekly_active { margin:0; padding:0; width:990px; height:224px; overflow:hidden; }
+#weekly_active li { float:left; list-style:none; width:120px; height:224px; background-color:white; cursor:pointer; }
+.current_week { width:510px !important; background-position:-120px 0px !important; }
+#week1 { background: url(http://img.easeeyes.com/promotion/weekly/1.jpg) no-repeat; }
+#week2 { background: url(http://img.easeeyes.com/promotion/weekly/2.jpg) no-repeat; }
+#week3 { background: url(http://img.easeeyes.com/promotion/weekly/3.jpg) no-repeat; }
+#week4 { background: url(http://img.easeeyes.com/promotion/weekly/4.jpg) no-repeat; }
+#week5 { background: url(http://img.easeeyes.com/promotion/weekly/5.jpg) no-repeat; }
+</style>
+
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<div class="active-main">
+	<!--导航-->
+	<div class="active-nav">
+		
+  	</div>
+	<!--banner-->
+	<div class="banner" id="f0"></div>
+	<div class="banner2"></div>
+	<!--颜色专题-->
+	<div class="ysMod">
+		<div class="container">
+			<div class="title">
+				<img src="http://img.easeeyes.com/promotion/2_new/03.jpg" />
+			</div>
+			<div class="colorbox">
+				<div class="fl">
+					<a href="#f1"><img src="http://img.easeeyes.com/promotion/2_new/c1.jpg" /></a>
+				</div>
+				<div class="fl">
+					<a href="#f2"><img src="http://img.easeeyes.com/promotion/2_new/c2.jpg" /></a>
+				</div>
+				<div class="fl">
+					<a href="#f3"><img src="http://img.easeeyes.com/promotion/2_new/c3.jpg" /></a>
+				</div>
+				<div class="fl">
+					<a href="#f4"><img src="http://img.easeeyes.com/promotion/2_new/c4.jpg" /></a>
+				</div>
+				<div class="fl">
+					<a href="#f5"><img src="http://img.easeeyes.com/promotion/2_new/c5.jpg" /></a>
+				</div>
+				<div class="clear">
+					<img src="http://img.easeeyes.com/promotion/2_new/c6.jpg" />
+				</div>
+			</div>
+			<div style="margin-top:60px;">
+				<img src="http://img.easeeyes.com/promotion/2_new/05.jpg" border="0" usemap="#Map2" />
+<map name="Map2" id="Map2"><area shape="rect" coords="17,394,599,542" href="http://www.easeeyes.com/categorysea.php?search=1&keyword=%E9%A9%AC%E5%8D%A1%E9%BE%99" />
+</map>
+		  </div>
+		</div>
+	</div>
+	<!--第二件半价-->
+	<div class="bjMod">
+		<div class="title2">
+			<img src="http://img.easeeyes.com/promotion/2_new/06.jpg" />
+		</div>
+		<div class="container">
+			<div id="f1">
+				<a href="http://www.easeeyes.com/goods4882.html"><img src="http://img.easeeyes.com/promotion/2_new/07.jpg" /></a>
+			</div>
+			<div id="f2">
+				<a href="http://www.easeeyes.com/goods4878.html"><img src="http://img.easeeyes.com/promotion/2_new/08.jpg" /></a>
+			</div>
+			<div id="f3">
+				<a href="http://www.easeeyes.com/goods4879.html"><img src="http://img.easeeyes.com/promotion/2_new/09.jpg" /></a>
+			</div>
+			<div id="f4">
+				<a href="http://www.easeeyes.com/goods4880.html"><img src="http://img.easeeyes.com/promotion/2_new/10.jpg" /></a>
+			</div>
+			<div id="f5">
+				<a href="http://www.easeeyes.com/goods4881.html"><img src="http://img.easeeyes.com/promotion/2_new/11.jpg" /></a>
+			</div>
+		</div>
+	</div>
+	<!--品牌介绍-->
+	<div class="ppMod">
+		<div class="container">
+			<img src="http://img.easeeyes.com/promotion/2_new/12.jpg" />
+		</div>
+	</div>
+	<!--底部-->
+	<div class="container">
+		<!--每周活动-->
+		<div class="active-weekly">
+			<!-- #BeginLibraryItem "/library/weekly_new.lbi" --><!-- #EndLibraryItem -->
+		</div>
+		<!--follow-->
+		<div class="folMod">
+			<img src="http://img.easeeyes.com/promotion/2_new/13.jpg" border="0" usemap="#Map" />
+<map name="Map" id="Map"><area shape="rect" coords="434,69,543,181" href="http://weibo.com/easeeyes?sudaref=www.easeeyes.com." />
+<area shape="rect" coords="568,70,685,182" href="http://e.t.qq.com/yishiyanjingwang" />
+<area shape="rect" coords="705,71,826,182" href="http://user.qzone.qq.com/1282786616/" />
+<area shape="rect" coords="847,75,960,181" href="http://www.meilishuo.com/person/u/4351999?type=book" />
+</map>
+	  </div>
+	</div>
+</div>
+
+<!--公共文件页脚-->
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+
+</body>
+<!--<script type="text/javascript" src="http://file.easeeyes.com/js/tip-totop.js"></script>-->
+<script type="text/javascript" src="http://file.easeeyes.com/js/yi_common.js"></script>
+<script type="text/javascript" src="http://file.easeeyes.com/js/lazyload.js"></script>
+<script type="text/javascript" src="http://file.easeeyes.com/js/pop_login.js"></script>
+<script type="text/javascript" src="http://file.easeeyes.com/index2015/js/common.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("img").lazyload({placeholder:"/js/img/white.gif", effect:"fadeIn"});
+	//-----每周活动 START----
+	$('#weekly_active li').click(function() {
+		window.open($(this).find('a').attr('href'));
+	});
+	$('#weekly_active li').mouseover(function() {
+		$(this).siblings().removeClass('current_week').animate({width:"120px"}, "slow");
+		$(this).siblings().animate({backgroundPosition:"0px"}, "fast");
+		$(this).animate({width:"510px"}, "slow");
+		$(this).animate({backgroundPosition:"-120px"}, "normal");
+	});
+	//---- 每周活动 END----
+    
+     $('#agree_view').bind('click',function(){
+            $("#agree_div").fadeIn();
+       
+    })
+	
+	function get_bonus(bonus_id){
+    
+		$.ajax({
+				type:'POST',
+				url:'active.php?id=150801&act=get_bonus',
+				data:'&bonus_id='+bonus_id+'&m='+Math.random(),							
+				cache:false,					
+				success:
+				function(da)
+				{
+					 if(da == 1){
+						 alert('您已成功领取优惠券！请至我的红包/优惠券查看^_^');
+					 }else if(da == 2){
+						 alert('请登录后再试^_^');
+					 }else if(da == 3){
+						 alert('您已领取过该优惠券^_^');
+					 }
+				}
+			});
+	}
+	
+	//--- 导航隐显控制 ---
+	$('.active-nav').hide();
+	$(window).scroll(function(){
+		var scrollTop=document.documentElement.scrollTop=="0"?document.body.scrollTop:document.documentElement.scrollTop;
+		if(parseInt(scrollTop)>=300){
+			$('.active-nav').fadeIn(200);
+		}else{
+			$('.active-nav').fadeOut(200);
+		}
+	});
+	
+	//鼠标经过效果
+	$(".colorbox img").hover(function(){
+		$(this).stop().animate({
+			"opacity":".6"
+		},200)
+	},function(){
+		$(this).stop().animate({
+			"opacity":"1"
+		},200)
+	});
+	
+	
+});
+</script>
+</html>

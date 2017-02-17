@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>迷人桃花眼</title>
+<meta name="Keywords"  content="易视网,易视眼镜网,美瞳,护理液,润眼液,博士伦,海昌,海俪恩,卫康,库博,视康,强生,sho-bi,GEO,NEO,BESCON" />
+<meta name="Description" content="易视网，19.9起秒尖货，试戴大牌全新登场，新老客户下单有礼，24小时闪电发货，30天退换货保障" />
+<style>
+.link{position:absolute;width:8.7rem;height:8.7rem;top:50%;margin-top:-4.35rem;right:.8rem;}
+.link2{right:10.2rem;}
+.red{color:#ff0400;}
+.items-goods{padding-top:.5rem;background:#ffd6e2;}
+.items-goods .item{width:15.75rem;float:left;margin-bottom:.5rem;background:#fff;position:relative;}
+.items-goods .item:nth-child(even){float:right;}
+.items-goods .item .layer{position:absolute;left:.5rem;padding:.25rem .5rem;background:#fe3e4b;color:#fff;font-size:1.1rem;}
+.items-goods .item .image{text-align:center;height:12rem;line-height:12rem;}
+.items-goods .item .image img{max-width:95%;max-height:95%;vertical-align:middle;}
+.items-goods .item .text{padding:0 .8rem 1rem;}
+.items-goods .item .text h3{font-size:1.1rem;line-height:2.5;color:#333;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.items-goods .item ._price{color:#666;background:url(http://img.easeeyes.com/promotion/20160218/btn.jpg) no-repeat right .75rem;background-size:auto 2rem;}
+.items-goods .item ._price p{color:#666;}
+.items-goods .item ._price b{font-size:1.3rem;}
+.items-goods .item ._price del{color:#888;}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<!--main-->
+<div class="container">
+    <div><img src="http://file.easeeyes.com/wap/images/20160317/banner.jpg" style="display:block;" /></div>
+	<div style="position:relative;">
+		<a href="javascript:;" class="link link2" onclick="get_bonus(1);"></a>
+		<a href="javascript:;" class="link" onclick="get_bonus(2);"></a>
+		<img src="http://file.easeeyes.com/wap/images/20160317/01.jpg" style="display:block;" />
+	</div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160317/02.jpg" style="display:block;" /></div>
+	<div><a href="http://m.easeeyes.com/category.php?search=1&keyword=%E7%A7%91%E5%B0%94%E8%A7%86"><img src="http://file.easeeyes.com/wap/images/20160317/new.jpg" style="display:block;" /></a></div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160317/03.jpg" style="display:block;" /></div>
+	<!-- 商品列表 -->
+	<div class="items-goods clearfix">
+        <!--{if $goodsArr1}-->
+        <!--{foreach from=$goodsArr1 item=goods name=goods}-->
+        <div class="item">
+            <a href="{$goods.href}">
+                <span class="layer">{$goods.zk}</span>
+                <div class="image"><img src="http://www.easeeyes.com/{$goods.goods_thumb}" /></div>
+                <div class="text">
+                    <h3>{$goods.goods_name}</h3>
+                    <div class="_price">
+                        <p>囤货价<span class="red">&yen;<b>{$goods.promote_price}</b></span></p>
+                        <p><del>{$goods.fomart_price}</del></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!--{/foreach}-->
+        <!--{/if}-->
+	</div>
+	
+	<div><img src="http://file.easeeyes.com/wap/images/20160317/04.jpg" style="display:block;" /></div>
+	<!-- 商品列表 -->
+	<div class="items-goods clearfix">
+        <!--{if $goodsArr2}-->
+        <!--{foreach from=$goodsArr2 item=goods name=goods}-->
+        <div class="item">
+            <a href="{$goods.href}">
+                <span class="layer">{$goods.zk}</span>
+                <div class="image"><img src="http://www.easeeyes.com/{$goods.goods_thumb}" /></div>
+                <div class="text">
+                    <h3>{$goods.goods_name}</h3>
+                    <div class="_price">
+                        <p>囤货价<span class="red">&yen;<b>{$goods.promote_price}</b></span></p>
+                        <p><del>{$goods.fomart_price}</del></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!--{/foreach}-->
+        <!--{/if}-->
+	</div>
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+<script type="text/javascript">
+function get_bonus(bonus_id){
+    $.ajax({
+        type:'POST',
+        url:'ajax_active.php?id=160317&act=get_bonus_160317',
+        data:'&bonus_id='+bonus_id+'&m='+Math.random(),
+        cache:false,
+        success:
+                function(da)
+                {
+                    if(da == 1){
+                        alert('您已成功领取优惠券！请至我的红包/优惠券查看^_^');
+                    }else if(da == 2){
+                        alert('请登录后再试^_^');
+                    }else if(da == 3){
+                        alert('您已领取过该优惠券^_^');
+                    }else if(da == 4){
+                        alert('您不是新会员，不能领取过该优惠券^_^');
+                    }else if(da == 5){
+                        alert('您不是老会员，不能领取过该优惠券^_^');
+                    }
+                }
+    });
+}
+</script>
+</body>
+</html>

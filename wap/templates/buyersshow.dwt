@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta content="telephone=no" name="format-detection"/>
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link type="text/css" rel="stylesheet" href="themes/default/style/base.css" />
+<link type="text/css" rel="stylesheet" href="themes/default/style/xu_buyer.css" />
+<link type="text/css" rel="stylesheet" href="themes/default/style/xu_css.css" />
+
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link type="text/css" rel="stylesheet" href="{$image_url}wap/css/buyer_show.css" />
+</head>
+<style>
+
+
+/*买家晒图*/
+
+</style>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<script type="text/javascript" src="{$image_url}js/buyersshow.js"></script>
+<body style="background:#f2f2f2;">
+       
+<div class="buy_show">
+   <div class="buy_pinpai">
+      按眼镜品牌:
+      <select onchange="javascript:self.location.href=options[selectedIndex].value">
+        <option value="buyersshow.php?ut={$smarty.get.ut}&cat_id=0">全部</option>
+        <!--{foreach from=$categoriesp item=cat}-->
+                        <!--{foreach from=$cat.cat_id item=child name=hh}-->    
+        <option  value="buyersshow.php?ut={$smarty.get.ut}&cat_id={$child.id}"{if $smarty.get.cat_id eq $child.id}selected="selected"{/if}>{$child.name}</option>
+                        <!--{/foreach}-->                    
+        <!--{/foreach}-->
+      </select>
+   </div><!--buy_pinpai end-->
+   <div class="buy_pinpai buy_peidai">
+      按佩戴效果:
+      <select onchange="javascript:self.location.href=options[selectedIndex].value">
+        <option value="buyersshow.php?ut={$smarty.get.ut}&cat_id={$smarty.get.cat_id}&ef=0" {if $smarty.get.ef eq 0}selected="selected"{/if}>全部</option>
+        <option value="buyersshow.php?ut={$smarty.get.ut}&cat_id={$smarty.get.cat_id}&ef=1" {if $smarty.get.ef eq 1}selected="selected"{/if}>自然(黑色、棕色)</option>
+        <option value="buyersshow.php?ut={$smarty.get.ut}&cat_id={$smarty.get.cat_id}&ef=2" {if $smarty.get.ef eq 2}selected="selected"{/if}>混血(灰色)</option>
+        <option value="buyersshow.php?ut={$smarty.get.ut}&cat_id={$smarty.get.cat_id}&ef=3" {if $smarty.get.ef eq 3}selected="selected"{/if}>全夸张(蓝色、紫色、绿色、粉红色)</option>
+      </select>
+   </div><!--buy_pinpai end-->
+   <div class="shaitu_my">
+      <input type="button" value="我也来晒一晒" class="shai_button"/>
+   </div><!--shaitu_my end-->
+   
+   
+   
+<!-- 买家秀内容 start-->
+
+
+   <ul id="lxf-box">
+   <!--{foreach from=$listmjx item=valsh name=foosh}-->
+            <!--{if $smarty.foreach.foosh.index lt 20 }-->
+        <li class="shaitu_detail">
+           <div class="shaitu_img">
+                 <a href="buyersshow_goods.php?mjxid={$valsh.mjxid}"><img src="{$image_url}{if $valsh.index_img}{$valsh.index_img}{else}{$valsh.img}{/if}"/></a>
+              </div>
+              <div class="shaitu_fav">
+                  <span><img onclick="showUser({$valsh.vote},{$valsh.goods_id},{$valsh.user_id},{$valsh.mjxid})" src="{$image_url}wap/images/fav.png"><em id="vote{$valsh.mjxid}">{$valsh.vote}</em></span>
+                  <span><img src="{$image_url}wap/images/mess_one.png"><em>{$valsh.comments}</em></span>
+              </div>
+              <div class="shaitu_name">
+                  <span>{$valsh.user_name}</span>说
+              </div>
+              <div class="shaitu_time">
+                  {$valsh.datetime}
+              </div>
+              <div class="shaitu_mess">
+                  {$valsh.detail}
+              </div>
+        </li>
+            <!--{else}-->
+            <!--{/if}-->
+    <!--{/foreach}-->
+        
+    </ul>
+<!-- 买家秀内容 end -->    
+<div style="clear: both;"></div>
+    
+    <div class="load_site">
+        <div id="lookMore">下拉查看更多</div> 
+        <div  class="loading" id="loading" style="display: none;"></div>
+        <div class="loading" id="nomoreresults" style="display: none;">没有更多了.</div>
+    </div>
+    
+    <input type="hidden" id="pageStie" value="2" />
+    <input type="hidden" id="cat_id" value="{$cat_id}" />
+    <input type="hidden" id="nomore" value="0" />
+    <input type="hidden" id="bt_site" />
+<script type="text/javascript" src="{$image_url}wap/js/waterfall.js"></script><!-- 必须放在此位置，否则不管用 -->
+</div>
+
+<script>
+//ajax下拉获取商品
+$(window).scroll(function(e){
+    bt_site = $("#bt_site").val()*1+$(document.body).height()*1;
+    $(".load_site").css('top',bt_site+'px');
+    if($('#nomore').val()==0){
+        if ($(window).scrollTop() + $(window).height() > $("#lookMore").offset().top){  
+            $.ajax({
+            type : "get",
+            async:false,
+            url : 'buyersshow_json.php?' + encodeURI('ut={$smarty.get.ut}&cat_id={$smarty.get.cat_id}&attr={$smarty.get.attr}') + '&beginRow=' + $("#pageStie").val(), 
+            data:{},
+    		beforeSend :function(msg){
+    	           $('#loading').fadeIn(500);
+    		},
+            success : function(msg){ 
+                    $('#loading').fadeOut(500);
+                if(msg){
+                    $("#lxf-box").append(msg);//替换为异步加载 
+                    liuxiaofan();
+                    var  pageStie= parseInt($('#pageStie').val())+parseInt(1); 
+                    $('#pageStie').val(pageStie);
+                }else{
+                    $('#nomore').val(1);
+                }
+            }
+        });
+        }
+    }else{
+        $('#nomoreresults').fadeIn(1000);
+        $('#lookMore').hide();
+    }
+     
+}); 
+</script>
+
+<div id="goTop" style="">返回顶部</div>
+<script>
+$("#goTop").click(function(){$('html, body').animate({scrollTop: 0},500);})
+</script>
+</body>
+</html>

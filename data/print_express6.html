@@ -1,0 +1,79 @@
+{literal}
+<style type="text/css" media="print">
+body,td { font-size:15px; text-align:center;  font-family:"黑体";}
+#printbtn{ display:none;}
+</style>
+<style type="text/css" media="screen">
+body,td { font-size:15px; text-align:center; font-family:"黑体";}
+</style>
+{/literal}
+<!--顺丰快递模板2011-5-30-->
+<table width="800px" height="248px" cellpadding="1" border="0" style="margin-top:115px;border-collapse:collapse;">
+    <tr height="24px">
+        <td width="1px"></td>
+        <td width="299px" style="text-align:left;"><table><tr><td>上海明庭贸易有限公司</td><td style="text-indent:50px;">易视网</td></tr></table></td>              
+		<td width="50px"></td>        
+        <td width="270px"></td>
+        <td width="190px"></td>
+    </tr>
+    <tr height="28px;">
+    	<td width="1px"></td>
+        <td width="299px" style="text-align:left;text-indent:6px;"> 上海 上海市 闸北区</td>
+        <td width="50px"></td>
+        <td width="270px"></td>
+        <td width="190px"></td>
+    </tr>
+    <tr height="28px;">
+    	<td width="1px"></td>
+        <td width="299px" style="text-align:left; text-indent:6px;">上海市闸北区江场西路299弄4号楼502室</td>
+        <td width="50px"></td>
+        <td width="270px"></td>
+        <td width="190px"></td>
+    </tr> 
+    <tr height="28px;">
+    	<td width="1px"></td>
+        <td width="299px" style="text-align:left; text-indent:70px;">4006-177-176</td>
+        <td width="50px"></td>
+        <td width="270px"></td>
+        <td width="190px"></td>
+    </tr>  
+    <tr height="2px">
+    	<td width="1px"></td>
+        <td width="299px"></td>
+        <td width="50px"></td>
+        <td width="270px"></td>
+        <td width="190px"></td>
+    </tr>
+    <tr height="28px">
+        <td width="1px"></td>
+        <td width="299px" style="text-align:left; text-indent:215px;">{$order.consignee}</td>              
+		<td width="50px"></td>        
+        <td width="460px" colspan="2">        	
+        </td>
+    </tr>
+	<tr height="25px">
+        <td width="1px"></td>
+        <td width="299px" style="text-align:left; text-indent:6px;">{if $order.tel}{$order.tel}{else}{$order.mobile}{/if}</td>              
+		<td width="50px"></td>        
+        <td width="460px" colspan="2">        	
+        </td>
+    </tr>
+    <tr height="22px;">
+    	<td width="1px"></td>
+        <td width="299px" style="text-align:left;text-indent:6px;">{$province} {$city} {$district}</td>
+        <td width="50px"></td>
+        <td width="270px" rowspan="2" style="float:right; text-align:right;">
+        	<table border="0" width="180px" style="margin-top:-5px;"><tr><td style="text-align:right">易视网</td></tr><tr><td style="text-align:right">{$pr_m}&nbsp;&nbsp;{$pr_d}&nbsp;&nbsp;{$pr_h}&nbsp;&nbsp;{$pr_i}</td></tr></table>
+        </td>
+        <td width="190px"></td>
+    </tr>
+    <tr height="22px;">
+    	<td width="1px"></td>
+        <td width="299px" style="text-align:left;text-indent:6px;">{$order.address}</td>
+        <td width="50px"></td>
+ 
+        <td width="190px"></td>
+    </tr>
+     
+</table>
+<input type="button" value="打印快递单" id="printbtn" onclick="window.print();" />

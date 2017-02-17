@@ -1,0 +1,307 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>女人节我最大</title>
+<meta name="Keywords"  content="易视网,易视眼镜网,美瞳,护理液,润眼液,博士伦,海昌,海俪恩,卫康,库博,视康,强生,sho-bi,GEO,NEO,BESCON" />
+<meta name="Description" content="易视网，全场满238抽神秘礼品，百分百有奖，大牌尖货直降至3.8折起，24小时闪电发货，30天退换货保障" />
+<style>
+body{background-color:#fff !important;}
+.box-links{font-size:0;text-align:center;}
+.box-links .link{display:inline-block;width:10.55rem;}
+.btn-link{position:absolute;width:7.35rem;height:2rem;bottom:1.35rem;left:12.6rem;}
+.btn-link2{left:22.35rem;}
+.items-goods{width:31.2rem;margin:auto;padding:.5rem 0;}
+.item-goods{width:15.4rem;border:1px solid #ff5c87;float:left;box-sizing:border-box;margin-bottom:.5rem;position:relative;}
+.item-goods .layer{position:absolute;left:.5rem;top:0;padding:.5rem;background:#ff5c87;color:#fff;font-size:1.1rem;}
+.item-goods:nth-child(even){float:right;}
+.item-goods .top{height:13.8rem;line-height:13.8rem;text-align:center;}
+.item-goods .top img{max-width:95%;max-height:95%;vertical-align:middle;}
+.item-goods .middle{line-height:1.2rem;font-size:1.1rem;height:2.4rem;overflow:hidden;padding:0 1rem;color:#464646;}
+.item-goods .bottom{margin-top:.75rem;padding:1rem 0;overflow:hidden;background:url(http://img.easeeyes.com/promotion/20160301/title_bg.jpg) no-repeat center top;background-size:auto 1px;}
+.item-goods .bottom .left{width:8.1rem;text-align:right;color:#fe5888;font-size:1.2rem;line-height:1;}
+.item-goods .bottom .left b{font-size:1.8rem;font-weight:100;}
+.item-goods .bottom .right{margin-left:8.2rem;text-align:left;font-size:.8rem;}
+.item-goods .bottom .right del{color:#8f8f8f;}
+.item-goods .bottom .btn-buy{display:block;width:4.8rem;}
+/** 抽奖 **/
+.lucky{background:url(http://file.easeeyes.com/wap/images/20160301/lucky.jpg) no-repeat center top;height:17.4rem;background-size:100% auto;}
+.lucky li{height:5.8rem;width:25%;float:left;position:relative;}
+.lucky li.current:after{
+	content:"";
+	position:absolute;
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	background:rgba(0,0,0,.3);
+	border-radius:.5rem;
+}
+#ipt-box-lucky{width:50%;background:url(http://file.easeeyes.com/wap/images/20160301/ipt_box.jpg) no-repeat center top;padding:1rem 1.1rem 0 1.25rem;box-sizing:border-box;background-size:100% auto;line-height:1;}
+#ipt-box-lucky input{border:0 none;width:12.6rem;height:1.8rem;line-height:1.4rem;padding:.2rem .5rem;box-sizing:border-box;background:#fff;}
+#btn-lucky{height:3rem;}
+.luckyer{margin-top:.5rem;height:8.5rem;background:url(http://file.easeeyes.com/wap/images/20160301/md.jpg) no-repeat center top;box-sizing:border-box;padding:1rem 1.5rem 1rem 3.75rem;background-size:100% auto;}
+.luckyer .items-box{overflow:hidden;height:6.6rem;}
+.luckyer li{float:left;width:50%;line-height:1.625rem;font-size:.9rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.luckyer ul{position:relative;}
+.luckyer ul.ani{animation:move 1s;-webkit-animation:move 1s;}
+@keyframes move{
+	0%{}
+	100%{
+		transform:translate(0,-1.625rem);
+		-webkit-transform:translate(0,-1.625rem);
+	}
+}
+@-webkit-keyframes move{
+	0%{}
+	100%{
+		transform:translate(0,-1.625rem);
+		-webkit-transform:translate(0,-1.625rem);
+	}
+}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<!--main-->
+<div class="container">
+    <div><img src="http://file.easeeyes.com/wap/images/20160301/banner.jpg" style="display:block;"></div>
+	<div style="position:relative;">
+		<img src="http://file.easeeyes.com/wap/images/20160301/01.jpg" style="display:block;">
+		<a href="#f_02" class="btn-link"></a>
+		<a href="#f_01" class="btn-link btn-link2"></a>
+	</div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160301/02.jpg" style="display:block;"></div>
+	<div class="box-links">
+		<div class="link"><a href="http://m.easeeyes.com/active160223.html"><img src="http://file.easeeyes.com/wap/images/20160301/03.jpg" style="display:block;"></a></div>
+		<div class="link"><a href="http://m.easeeyes.com/active160225.html"><img src="http://file.easeeyes.com/wap/images/20160301/04.jpg" style="display:block;"></a></div>
+		<div class="link"><a href="http://m.easeeyes.com/active160309.html"><img src="http://file.easeeyes.com/wap/images/20160301/05.jpg" style="display:block;"></a></div>
+	</div>
+	<div id="f_01"><img src="http://file.easeeyes.com/wap/images/20160301/06.jpg" style="display:block;"></div>
+	<div class="items-goods clearfix">
+        <!--{if $goodsArr1}-->
+        <!--{foreach from=$goodsArr1 item=goods name=goods}-->
+		<div class="item-goods">
+			<a href="{$goods.href}">
+				<span class="layer">{$goods.zk}</span>
+				<div class="top">
+					<img src="http://www.easeeyes.com/{$goods.goods_thumb}" />
+				</div>
+				<div class="middle">
+					{$goods.goods_name}
+				</div>
+				<div class="bottom">
+					<div class="pull-left left">
+						&yen;<b>{$goods.promote_price}</b><b>/</b>
+					</div>
+					<div class="right">
+						<del>{$goods.fomart_price}</del>
+						<img src="http://img.easeeyes.com/promotion/20160301/buy_btn.jpg" class="btn-buy" />
+					</div>
+				</div>
+			</a>
+		</div>
+        <!--{/foreach}-->
+        <!--{/if}-->
+	</div>
+	<div id="f_02"><img src="http://file.easeeyes.com/wap/images/20160301/07.jpg" style="display:block;"></div>
+	<div style="padding:.9rem .65rem 0;border:1px solid #ff648c;width:31.25rem;margin:auto;box-sizing:border-box;background:#fff6f7;">
+		<!-- 抽奖 -->
+		<div class="lucky">
+			<ul class="clearfix">
+				<li class="item-lucky" id="lucky-1"></li>
+				<li class="item-lucky" id="lucky-2"></li>
+				<li class="item-lucky" id="lucky-3"></li>
+				<li class="item-lucky" id="lucky-4"></li>
+				<li class="item-lucky" id="lucky-10"></li>
+				<li class="item-lucky" id="ipt-box-lucky">
+					<input type="text" id="order" value="" placeholder="请输入订单号" />
+					<div id="btn-lucky"></div>
+				</li>
+				<li class="item-lucky" id="lucky-5"></li>
+				<li class="item-lucky" id="lucky-9"></li>
+				<li class="item-lucky" id="lucky-8"></li>
+				<li class="item-lucky" id="lucky-7"></li>
+				<li class="item-lucky" id="lucky-6"></li>
+			</ul>
+
+		</div>
+		
+		<!-- 中奖名单 -->
+		<div class="luckyer">
+			<div class="luckyer-slider">
+				<div class="items-box">
+					<ul class="clearfix" id="ulist-slide">
+                        <li>恭喜 小k星星 抽中蚕丝面膜两片装</li>
+                        <li>恭喜 geishel 抽中蚕丝面膜两片装</li>
+                        <li>恭喜 D3E1Q89 抽中蚕丝面膜两片装</li>
+                        <li>恭喜 草莓 抽中丽塔芙睫毛套装</li>
+                        <li>恭喜 suzka01 抽中旅行套装</li>
+                        <li>恭喜 牛麦麦 抽中卡通自拍杆</li>
+                        <li>恭喜 cocomini 抽中KAPO面膜</li>
+                        <li>恭喜 jonshong 抽中旅行套装</li>
+                        <li>恭喜 笨笨的刺猬 抽中KAPO面膜</li>
+                        <li>恭喜 usahana 抽中丽塔芙睫毛套装</li>
+                        <li>恭喜 hczxg 抽中HelloKitty化妆棉</li>
+                        <li>恭喜 ava41791454 抽中旅行套装</li>
+                        <li>恭喜 紫夜心晨 抽中丽塔芙睫毛套装</li>
+                        <li>恭喜 miracle曦曦 抽中旅行套装</li>
+                        <li>恭喜 蓝蓝1985 抽中卡通自拍杆</li>
+                        <li>恭喜 6BB4247D 抽中KAPO面膜</li>
+                        <li>恭喜 亚亚2134 抽中HelloKitty化妆棉</li>
+                        <li>恭喜 傲雪飞鱼 抽中HelloKitty化妆棉</li>
+                        <li>恭喜 雨汐123 抽中旅行套装</li>
+                        <li>恭喜 这么灿烂 抽中卡通自拍杆</li>
+                        <li>恭喜 贾愚 抽中丽塔芙睫毛套装</li>
+                        <li>恭喜 钟恋浅浅浅 抽中KAPO面膜</li>
+                        <li>恭喜 笑依依Sophia 抽中KAPO面膜</li>
+                        <li>恭喜 wing_Tsui0128 抽中旅行套装！</li>
+                        <li>恭喜 1718490@51fanli 抽中旅行套装</li>
+                        <li>恭喜 水一方 抽中HelloKitty化妆棉</li>
+                        <li>恭喜 ing1215 抽中KAPO面膜</li>
+                        <li>恭喜 三一九 抽中丽塔芙睫毛套装</li>
+                        <li>恭喜 evata 抽中KAPO面膜</li>
+                        <li>恭喜 plus_V 抽中卡通自拍杆</li>
+                        <li>恭喜 张洲 抽中HelloKitty化妆棉</li>
+                        <li>恭喜 粉蓝色眼药水 抽中旅行套装</li>
+                        <li>恭喜 swj713 抽中KAPO面膜</li>
+                        <li>恭喜 玩偶的部落 抽中蚕丝面膜两片装</li>
+                        <li>恭喜 猫咪的哥哥是小熊 抽中KAPO面膜</li>
+                        <li>恭喜 D18CF2CA 抽中蚕丝面膜两片装</li>
+                        <li>恭喜 xiaopp 抽中蚕丝面膜两片装</li>
+                        <li>恭喜 linger 抽中卡通自拍杆</li>
+                        <li>恭喜 020202 抽中丽塔芙睫毛套装</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 活动规则 -->
+		<div><img src="http://file.easeeyes.com/wap/images/20160301/gz.jpg" style="display:block;"></div>
+	</div>
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+<script>
+;(function(){
+	// 配置信息
+	var options={
+		indexRange:[3,6],	// 开始加速或减速的范围
+		roundRange:[3,4],	// 旋转的圈数范围
+		interval:500,		// 初始速度
+		num:10				// 奖品个数
+	}
+
+	// 声明相关变量
+	var interval=options.interval,	// 间隔
+		index,	// 位置
+		fast,	// 开始加速或减速的位置
+		round,	// 剩余圈数
+		luckys,	// 奖品
+		started=false;	// 是否开始
+
+	// 随机数
+	function range(arr){
+		var n=Math.round(Math.random()*(arr[1]-arr[0])+arr[0]);
+		return n;
+	}	
+
+	// 抽奖过程
+	function lucky(){
+		// 圈数计数
+		if(index>options.num){
+			index=1;
+			round--;
+		}
+
+		// 状态显示
+		var items=document.querySelectorAll('.item-lucky');
+		Array.prototype.slice.call(items,0).forEach(function(item){
+			item.classList.remove('current');
+		});
+		document.getElementById('lucky-'+index).classList.add('current');
+
+		// 开始加速
+		if(index>fast){
+			interval=200;
+		}
+
+		// 开始减速
+		if(round==0 && luckys.id-index<fast){
+			interval+=200;
+		}
+		
+		if(round<=0 && index==luckys.id){
+			// 选中奖品，结束
+			clearTimeout(luckyMover);
+			setTimeout(function(){alert("恭喜获得"+luckys.name)},1000);
+			started=false;
+		}else{
+			// 没有结束
+			luckyMover=setTimeout(lucky,interval);
+		}
+		index++;
+	}
+
+	// 开始抽奖
+	function start(){
+	    // 获取订单号
+        var order=$('#order').val();
+        if(order > 0){
+            if(started){
+                return;
+            }
+            started=true;
+            index=1;
+            fast=range(options.indexRange);
+            round=range(options.roundRange);
+            var xhr=new XMLHttpRequest();
+            xhr.open('get',"ajax_active.php?act=160301&order_sn="+order,true);
+            xhr.send(null);
+            xhr.onreadystatechange=function(){
+                if(xhr.status==200 && xhr.readyState==4){
+                    luckys=JSON.parse(xhr.responseText);
+                    if(luckys.err){
+                        started=false;
+                        alert(luckys.err);
+                    }else{
+                        lucky();
+                    }
+                }
+            }
+        }else{
+            alert("请输入订单号进行抽奖！");return false;
+        }
+	}
+
+	// 绑定事件
+	document.getElementById('btn-lucky').addEventListener('click',start,false);
+
+})();    
+
+// 名单滚动
+window.addEventListener('load',luckyer_slide,false);
+
+function luckyer_slide(){
+	var ulist=document.getElementById('ulist-slide');
+	function slide(){
+		ulist.classList.add('ani');
+		setTimeout(function(){
+			ulist.appendChild(ulist.getElementsByTagName('li')[0]);
+			ulist.appendChild(ulist.getElementsByTagName('li')[0]);
+			ulist.classList.remove('ani');
+		},1000);
+	}
+	setInterval(slide,3000);
+}
+
+</script>
+</body>
+</html>

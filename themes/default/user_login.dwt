@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="Generator" content="ECSHOP v2.7.3" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$page_title}</title>
+<meta name="Keywords"    content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link href="http://file.yunjingshang.com/css/login.css" rel="stylesheet" />
+<body>
+<!--{if $action eq 'login'}-->
+<div class="container">
+	<div class="loginForm-wrapper">
+		<div class="loginForm">
+			<div class="loginForm-logo"><img src="http://file.easeeyes.com/b2b/images/login_logo.jpg" alt=""></div>
+			<div class="loginForm-title">零售商登录</div>
+			<form action="" id="loginForm" name="formLogin">				
+				<div class="loginForm-item">
+					<input type="text" name="username" placeholder="请输入用户名/手机号" id="username" />
+				</div>
+				<div class="loginForm-item password">
+					<input type="password" name="password" placeholder="密码" id="password" />
+				</div>
+				<div class="loginForm-msg" id="msg"></div>
+				<div class="loginForm-options">
+					<a href="user.php?act=get_password">忘记密码</a>
+					<label for="autologin"><input type="checkbox" id="autologin" name="autologin" checked="true" /> 记住用户名</label>
+				</div>
+				<input type="hidden" name="act" value="act_login_ajax" />
+        <input type="hidden" name="back_act" id="back_act" value="{$back_act}" />
+        <input type="submit" value="登录" class="loginForm-btn" />
+			</form>
+		</div>
+		<div class="loginForm-tip">没有云镜商的账户？<a href="user.php?act=register">立即注册</a></div>		
+	</div>
+</div>
+<!--{/if}-->
+
+<!--登录界面end-->
+<script src="http://file.easeeyes.com/js/jquery.min.js"></script>
+<script src="http://file.easeeyes.com/b2b/js/validate.js"></script>
+<script>
+var checkArr=[
+  {
+    "id":"username",
+    "title":"用户名",
+    "items":[{"rule":"required","err":"不能为空"}]
+  },{
+    "id":"password",
+    "title":"密码",
+    "items":[{"rule":"required","err":"不能为空"}]
+  }
+]
+validate.init({
+  formId:"loginForm",
+  checkArr:checkArr,
+  success:function(){
+    document.getElementById('msg').innerHTML='';
+  },
+  fall:function(res){
+    document.getElementById('msg').innerHTML=res.msg
+  },
+  pass:function(){
+    checkInfo(document.getElementById('username').value,document.getElementById('password').value,document.getElementById('back_act').value)
+  }
+}) 
+// 验证用户名密码
+function checkInfo(uname,psw,back_act){
+  $.ajax({
+    url:'user.php',
+    type:'post',
+    data:{act:'act_login_ajax',username:uname,password:psw,back_act:back_act},
+    dataType:'json',
+    success:function(data){
+      if(data.res){
+        var url=res.back_act || "user.html"
+        location.href=url
+      }else{
+        $('#msg').text('用户名或密码错误')
+      }
+    }
+  })
+}
+
+</script>

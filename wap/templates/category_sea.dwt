@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta content="telephone=no" name="format-detection"/>
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/category.css"/>
+<link rel="stylesheet" type="text/css" href="http://file.easeeyes.com/wap/css/style.css" />
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<script type="text/javascript" src="{$image_url}wap/js/scrollpagination.js"></script>
+<div class="content">
+<div class="content sort">
+<a id="default" class="xz">默认</a>
+<a id="sales" class="down">销量</a>
+<a id="price" class="up">价格</a>
+<!--<a>筛选</a>-->
+{if $st==1}
+<a class="st" href="category.php?cat_id={$cat_id}" style="border-right:0px;width:19%;background: url('images/st.png') no-repeat center;"></a>
+{else}
+<a class="st" href="category.php?cat_id={$cat_id}&st=1" style="border-right:0px;width:19%;background: url('images/st.png') no-repeat center;"></a>
+{/if}
+</div>
+    {if $st!=1}
+    	<ul id="Scroll" class="content goods_list">
+        {if $goods_list}
+        <!--{foreach from=$goods_list key=k item=v}-->
+        <li {if $v.saving > 0} class="active11_badge"{/if}>
+            <a class="list_a" href="goods.php?id={$v.goods_id}">
+                <div class="goods_list_thumb pull-left">
+                    <img src="{$image_url}{$v.goods_thumb}"/>
+                </div>
+                <div class="goods_list_main">
+                    <h2>{$v.goods_name}</h2>
+                    <div class="pg-tags-list">
+                    {foreach from=$v.active key=key item=item}
+                        {if $item.act_type eq 0}
+                            <span class="pg-tags">赠</span>
+                        {elseif $item.act_type eq 1}
+                            <span class="pg-tags pg-tags-orange">减</span>
+                        {elseif $item.act_type eq 3}
+                            <span class="pg-tags pg-tags-yellow">加</span>
+                        {else}
+                        {/if}
+                    {/foreach}
+                    </div>
+                    <div class="goods_list_price">
+                        ￥{$v.shop_price} {if $v.saving > 0}<span class="pg-tags pg-tags-red">已优惠{$v.saving}元</span>{/if}
+                    </div>
+                    <p>已有 {$v.click_count} 人关注</p>
+                </div>
+            </a>
+        </li>
+        <!--{/foreach}-->
+        {else}
+        没有此类商品
+        {/if}
+        </ul>
+        <input id="st" value="0"  type="hidden"/>
+    {else}
+        <div id="Scroll" class="content list_zong">
+            <!--{foreach from=$goods_list key=k item=v}-->
+            <div class="list_zong_left">
+                <div {if $v.saving > 0} class="active11_badge_2"{/if}><a href="goods.php?id={$v.goods_id}"><img src="{$image_url}{$v.goods_thumb}"/></a></div>
+                <div><a href="goods.php?id={$v.goods_id}">{$v.goods_name}</a></div>
+                <div class="pg-tags-list">
+                    {foreach from=$v.active key=key item=item}
+                    {if $item.act_type eq 0}
+                    <span class="pg-tags">赠</span>
+                    {elseif $item.act_type eq 1}
+                    <span class="pg-tags pg-tags-orange">减</span>
+                    {elseif $item.act_type eq 3}
+                    <span class="pg-tags pg-tags-yellow">加</span>
+                    {else}
+                    {/if}
+                    {/foreach}
+                </div>
+                <div class="goods_list_price">
+                    ￥ {$v.shop_price} {if $v.saving > 0}<span class="pg-tags pg-tags-red">已优惠{$v.saving}元</span>{/if}
+                </div>
+                <p>已有 {$v.click_count} 人关注</p>
+                <div class="active"></div>
+            </div>
+           <!--<div class="list_zong_left">
+              <div><a href="goods.php?id={$v.goods_id}"><img src="{$image_url}{$v.goods_thumb}"/></a></div>
+              <div><a href="goods.php?id={$v.goods_id}">{$v.goods_name}</a></div>
+              <div class="list_price">
+                 <span class="xian_price">&yen;{$v.shop_price}</span><span class="yuan_price">&yen;{$v.market_price}</span>
+                 <div class="clear"></div>
+              </div>
+              <div>{$v.click_count}人购买</div>
+              <div class="active"></div>
+           </div>-->
+            <!--{/foreach}-->
+        </div>
+        <input id="st" value="1"  type="hidden"/>
+    {/if}
+    <div id="lookMore"></div> 
+    <div  class="loading" id="loading" style="display: none;"></div>
+    <div class="loading" id="nomoreresults" style="display: none;">没有更多了.</div>
+    <input type="hidden" id="pageStie" value="2" />
+    <input type="hidden" id="cat_id" value="{$cat_id}" />
+    <input type="hidden" id="nomore" value="0" />
+    <input type="hidden" id="sort" value="" />
+    <input type="hidden" id="keyword" value="{$keyword}" />
+
+<div id="loading"></div>
+
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+<script type="text/javascript" src="{$image_url}wap/js/category.js"></script>
+<script>
+//自适应代码
+(function(){
+    var win=window||{},
+        doc=document,
+        root=doc.documentElement;
+    function changeSize(){
+        root.style.fontSize=parseInt(root.clientWidth)*20/640>20?"20px":parseInt(root.clientWidth)*20/640+"px";
+    }
+    if(doc.addEventListener){
+        var evt="orientationchange" in win?"orientationchange":"resize"; 
+        doc.addEventListener(evt,changeSize,false);
+        doc.addEventListener("DOMContentLoaded",changeSize,false);
+    }
+})();    
+</script>
+</body>
+</html>

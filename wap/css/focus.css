@@ -1,0 +1,10 @@
+.swipe {overflow: hidden;visibility: hidden;margin:auto;width: 320px;height: 170px;	position: relative;}
+.swipe-wrap {overflow: hidden;position: relative;}
+.swipe-wrap > figure {float: left;width: 320px;position: relative;}
+.index-slide-trigger{position: absolute;bottom: -9px;left: 0;height: 12px;display: -webkit-box;width: 100%;}
+.page-swipe header #slider figure div.wrap{max-width:320px;height:174px;display:block;margin:0px auto 15px;position:relative}
+.page-swipe header #slider figure div.wrap{ max-width:320px;height:174px;margin-bottom:5px}
+.page-swipe header #slider figure div.image{display:block;height:inherit;width:320px;}
+.page-swipe header nav #position{text-align:center;list-style:none;margin:0;padding:0}
+.page-swipe header nav #position li{margin-right: 2px;width: 60px;height: 3px;background: #fff;opacity: .7;overflow: hidden;text-align: center;line-height: 11px;color: #000;-webkit-box-flex: 1;}
+.page-swipe header nav #position li.on{box-shadow:inset 0 1px 3px -1px #28b4ea,0 1px 2px rgba(0,0,0,.5);background-color:#1293dc;background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#1293dc),color-stop(100%,#0f6297));background-image:-webkit-linear-gradient(top,#1293dc,#0f6297);background-image:-moz-linear-gradient(top,#1293dc,#0f6297);background-image:-ms-linear-gradient(top,#1293dc,#0f6297);background-image:-o-linear-gradient(top,#1293dc,#0f6297);background-image:linear-gradient(top,#1293dc,#0f6297)}

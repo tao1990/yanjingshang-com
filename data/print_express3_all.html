@@ -1,0 +1,62 @@
+<div class='pagecontainer'>
+
+{foreach from=$order_list item=order}
+<div id="page{$order.index}" style="width:800px; height:460px;">
+
+<table width="720" cellpadding="1" border="0" style="margin-top:80px;">
+    <tr height="30">
+        <td width="30">&nbsp;</td>
+        <td width="265" style="text-align:left;">易视网</td>              
+		<td width="90">&nbsp;</td>        
+        <td width="260" style="text-align:left;">{$order.consignee}</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr height="30">
+        <td>&nbsp;</td>
+        <td style="text-align:left; vertical-align:top; line-height:30px;">上海明庭贸易有限公司</td>              
+		<td>&nbsp;</td>        
+        <td width="260" style="text-align:left; vertical-align:top; line-height:30px;"><br /></td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr height="30">
+    	<td>&nbsp;</td>
+        <td style="text-align:left;">上海 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上海&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 闸北<br /><br />江场西路299弄4号楼502室</td>
+        <td>&nbsp;</td>       
+        <td width="260" style="text-align:left; vertical-align:top; line-height:30px;">{$order.province}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$order.city}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {$order.district} <br />{$order.address}</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr height="30">
+        <td>&nbsp;</td>
+        <td style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4006-177-176</td>              
+		<td>&nbsp;</td>      
+        <td style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{if $order.tel}{$order.tel}{else}{$order.mobile}{/if}</td>
+        <td>&nbsp;</td>
+    </tr> 
+    <tr height="50">
+        <td colspan="5"><br /><br /></td>
+    </tr> 
+    <tr height="60">
+        <td>&nbsp;</td>
+        <td style="text-align:left;">
+			<table border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td><br /><br /><!--眼镜-->易视网</td>
+				</tr>
+				<tr>
+					<td><!--易视网-->{$order.today}</td>
+				</tr>
+			</table>		</td>              
+		<td colspan="2">
+			<table border="0" cellpadding="0" cellspacing="0" align="right">
+				<tr>
+                    <td style="font-size:66px; font-weight:bold;" align="right">{$order.city}{$order.district}</td>
+				</tr>
+		</table></td>     
+        <td>&nbsp;</td>
+    </tr>
+</table>
+
+</div>
+{/foreach}
+
+</div>

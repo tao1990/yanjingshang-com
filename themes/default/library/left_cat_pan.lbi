@@ -1,0 +1,56 @@
+<!--[商品列表页，左侧分类导航]-->
+<div class="cat_dao_pan"><h2></h2></div>   
+<div class="cat_pan">
+    <div class="cat_li_1 cat_title {if $cat2}display_image{/if}">透明隐形眼镜</div>
+    <div id="cat_content_1" class="cat_content {if $cat2}display{/if}">
+        <ul class="cat_tab_ul">
+            <!--{foreach from=$cat_all.1.cat_id item=cat name=aa}-->
+            <li><a href="{$cat.url}" {if $cat.is_show_red}class="red"{/if}>{$cat.name}</a></li>
+            <!--{/foreach}-->                    
+        </ul>   
+    </div>                               
+    <div class="cat_li_6 cat_title {if $cat3}display_image{/if}">彩色隐形眼镜</div>
+    <div id="cat_content_6" class="cat_content {if $cat3}display{/if}">
+        <div class="cat_txt">
+        <!--{foreach from=$cat_all.6.cat_id item=child name=aa}-->
+            <!--{if $smarty.foreach.aa.index%2 == 0}-->
+            <a href="{$child.url}"><span class="yiaa {if $child.is_show_red}red{/if}">{$child.name}</span></a>
+            <!--{else}-->
+            <a href="{$child.url}"><span class="classtype_yi yihover {if $child.is_show_red}red{/if}" style="cursor:pointer;">{$child.name}</span></a><br/>
+            <!--{/if}-->                
+        <!--{/foreach}-->
+        </div>            
+    </div> 
+    <div class="cat_li_159 cat_title {if $cat6}display_image{/if}">框架眼镜</div>
+    <div id="cat_content_159" class="cat_content {if $cat6}display{/if}">
+        <ul class="cat_tab_ul">
+            <!--{foreach from=$cat_all.159.cat_id item=cat name=aa}-->
+            <li><a href="{$cat.url}" {if $cat.is_show_red}class="red"{/if}>{$cat.name}</a></li>
+            <!--{/foreach}-->                    
+        </ul>  
+    </div>    
+    <div class="cat_li_190 cat_title {if $cat7}display_image{/if}">太阳眼镜</div>
+    <div id="cat_content_190" class="cat_content {if $cat7}display{/if}">
+        <ul class="cat_tab_ul">
+            <!--{foreach from=$cat_all.190.cat_id item=cat name=aa}-->
+            <li {if $smarty.foreach.aa.index eq 8}style="width:150px;"{else}{if $smarty.foreach.aa.index%2 eq 1}style="width:84px;"{/if}{/if}><a href="{$cat.url}" {if $cat.is_show_red}class="red"{/if}>{$cat.name}</a></li>
+            <!--{/foreach}-->                    
+        </ul>  
+    </div>                       
+    <div class="cat_li_64 cat_title {if $cat4}display_image{/if}">护理液润眼液</div>
+    <div id="cat_content_64" class="cat_content {if $cat4}display{/if}">
+        <ul class="cat_tab_ul">
+            <!--{foreach from=$cat_all.64.cat_id item=cat name=aa}-->
+            <li><a href="{$cat.url}" {if $cat.is_show_red}class="red"{/if}>{$cat.name}</a></li>
+            <!--{/foreach}-->                    
+        </ul>  
+    </div>  
+    <div class="cat_li_76 cat_title {if $cat5}display_image{/if}" style="border:none;">隐形眼镜护理工具</div>            
+    <div id="cat_content_76" class="cat_content {if $cat5}display{/if}" style="border:none;">
+        <ul class="cat_tab_ul">
+            <!--{foreach from=$cat_all.76.cat_id item=cat name=aa}-->
+            <li><a href="{$cat.url}" {if $cat.is_show_red}class="red"{/if}>{$cat.name}</a></li>
+            <!--{/foreach}-->                    
+        </ul>
+    </div> 
+</div>

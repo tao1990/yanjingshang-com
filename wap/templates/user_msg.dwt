@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta content="telephone=no" name="format-detection"/>
+<title>{$page_title}</title>
+<meta name="Keywords" content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/user.css"/>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+
+
+<!--{if $action eq 'list'}-->
+<div class="my_mess">
+   <ul class="my_mess_one">
+      <li class="li_foucs">未读信息（<span>{$user.unread_msg}</span>）</li>
+      <li>全部信息（<span>{$list_size}</span>）</li>
+      <div class="clear"></div>
+   </ul>
+   <div class="my_mess_main">
+      <div class="my_mess_div_unlist">
+        <!--{foreach from=$unlist item=unlist name=unlist}-->
+             <div class="my_mess_divone">
+                <a class="my_mess_left" href="user.php?act=msg_info&rec_id={$unlist.rec_id} ">
+                   <div class="my_chess_time">{$unlist.f_add_time}</div>
+                   <div class="my_mess_con"  {if $unlist.is_read}style="font-weight:normal; color:#999;"{/if}>{$unlist.title}</div>
+                </a>
+                <a class="my_mess_right" href="user.php?act=msg_info&rec_id={$unlist.rec_id} ">
+                  查看
+                </a>
+                <div class="clear"></div>
+             </div>
+        <!--{foreachelse}-->
+            暂无未读的站内信！
+        <!--{/foreach}--> 
+      </div>
+      
+      <div class="my_mess_div_list">
+        <!--{foreach from=$list item=list name=list}-->
+             <div class="my_mess_divone">
+                <a class="my_mess_left" href="user.php?act=msg_info&rec_id={$list.rec_id} ">
+                   <div class="my_chess_time">{$list.f_add_time}</div>
+                   <div class="my_mess_con"  {if $list.is_read}style="font-weight:normal; color:#999;"{/if}>{$list.title}</div>
+                </a>
+                <a class="my_mess_right"  href="user.php?act=msg_info&rec_id={$list.rec_id} ">
+                   查看
+                </a>
+                <div class="clear"></div>
+             </div>
+        <!--{foreachelse}-->
+            暂无未读的站内信！
+        <!--{/foreach}--> 
+      </div>
+ 
+   </div>
+</div>
+<script>
+$(".my_mess_one li:eq(0)").click(function(){
+    $(".my_mess_div_unlist").show();
+    $(".my_mess_div_list").hide();
+    $(this).addClass('li_foucs').next().removeClass();
+})
+$(".my_mess_one li:eq(1)").click(function(){
+    $(".my_mess_div_unlist").hide();
+    $(".my_mess_div_list").show();
+    $(this).addClass('li_foucs').prev().removeClass();
+})
+</script>
+<!--{else if $action eq 'info'}-->
+
+    <div class="mess_detail">
+       <div class="mess_detil_one">
+         {$msg.f_add_time}
+       </div><!--mess_detil_one end-->
+       <div class="mess_detail_two">
+          <p>{$msg.title}</p>
+          <p>亲爱的 {$user_name}:</p>
+          {$msg.msg}
+       </div><!--mess_detail_two end-->
+       <div class="mess_detail_three">
+       
+          <form action="user.php" name="rm_msg_fm" method="post" onsubmit="return checkSubmitJ();"><input type="hidden" name="act" value="user_msg_remove" /><input type="hidden" name="rec_id" value="{$msg.rec_id}"/><input type="submit" value="删除" /></form>
+       </div><!--mess_detail_three end-->
+    </div>
+
+<script>
+function checkSubmitJ(){
+    if(!confirm('确定删除此调信息吗？')){
+        return false;
+    };
+}
+
+</script>
+<!--{/if}-->
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

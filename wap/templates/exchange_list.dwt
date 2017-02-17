@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<meta http-equiv="Content-Type"    content="text/html; charset=utf-8" />
+<meta name="Keywords"    content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" --><title>{$page_title}</title><!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<link href="themes/default/style/base.css"     rel="stylesheet" type="text/css" />
+<link href="themes/default/style/exchange.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="http://file.easeeyes.com/index2015/css/base.css" />
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e48ccf4344d9eeb0415ec07e5c72096b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header_new.lbi" --><!-- #EndLibraryItem -->
+<ul id="dtop"><li id="dtoptxt">{$lang.ur_here} {$ur_here}</li></ul>
+
+<div class="main"> 
+	<div class="main_left">  
+    	<!--签到板块-->
+    	<div class="sign_pan">
+            <div style="position:relative;">
+                <div id="sign_desc_div" style="width:520px; height:230px; border:3px #0CF solid; background-color:white; display:none; position:absolute; left:230px; z-index:99;">
+                    <div style="width:510px; text-align:right; height:20px; padding-top:5px; margin-right:10px;"><a href="javascript:void(0)" onclick="close_sign_div();">关闭</a></div>
+                    <div style="font-size:14px; font-weight:bold; color:#c30000; margin-top:10px; margin-bottom:10px; text-align:center;">签到说明</div>
+                    <div style="text-align:left; line-height:28px; padding:0 20px 0 30px;">
+                        <div> 注册成为易视网会员，点击<font class="red">"我要签到"</font>按钮，即签到成功。</div>
+                        <div>（一）参加条件：已<a href="user.html">登录</a>会员， 每天可以签到<font class="red">一次</font>。</div>
+                        <div>（二）具体规则：完成当日签到，<font class="red">立即获得1积分。</font>累积积分可以换取心仪的礼品，一天内不可重复签到。</div>
+                    </div>    
+                </div>
+                <div id="fade" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%; background-color:#666;z-index:1;-moz-opacity:0.5;opacity:.50;filter:alpha(opacity=50);"></div>
+            </div>        
+        	<span><a href="javascript:void(0)" onclick="open_sign_div();" class="showbox_b color9">查看签到说明&gt;&gt;</a></span>
+            <ul class="sign_ul">
+            	<li class="red">每日签到 赚积分换奖品</li>
+                <!--{if !$have_sign}-->
+                <li><input type="button" class="sign_p_but" onclick="sign()" style="cursor:pointer;" title="我要签到"/></li>
+                <!--{else}-->
+                <li><img src="{$image_url}/themes/default/images/inner/sign_bt2.gif" width="105" height="27" alt="今天您已签到" /></a></li>
+                <!--{/if}-->                
+                <li>今天签到人数<strong class="red" id="sign_sum">{$all_sign}</strong>人</li>                
+            	<!--{if $sign_info}-->
+                <li style="margin-top:45px;">您已签到：<strong class="red" id="sign_day_num">{$sign_info.sign_sum}</strong>天</li>
+            	<li style="margin-top:2px;">当前积分：<strong class="red" id="sign_integral">{$sign_info.pay_points}</strong>分</li>
+                <!--{else}--><li id="sign_login">签到前请先<a href="user.html">登录</a></li><!--{/if}-->
+            </ul>
+        </div>        
+        <div class="mt10">
+			<h2 class="exch_jfgz"></h2>
+            <div id="colee">
+                <div id="colee1">
+                    <!--{foreach from=$integral_list item=list name=foo}-->
+                    {if $smarty.foreach.foo.index%2 eq 0}
+                    <p class="bgc_f6">{$list.user_name|truncate:12:true} 获得了<span class="red">{$list.pay_points}</span> 积分</p>
+                    {else}
+                    <p>{$list.user_name|truncate:12:true} 获得了<span class="red">{$list.pay_points}</span> 积分</p>        
+                    {/if}
+                    <!--{/foreach}-->
+                </div>
+                <div id="colee2"></div> 
+                <script type="text/javascript">
+                var speed = 60;
+                var colee2=document.getElementById("colee2");
+                var colee1=document.getElementById("colee1");
+                var colee =document.getElementById("colee");
+                colee2.innerHTML=colee1.innerHTML;
+                function Marquee1(){
+					if(colee2.offsetTop-colee.scrollTop<=0){
+					 colee.scrollTop-=colee1.offsetHeight; //colee跳到最顶端
+					}else{
+					 colee.scrollTop++;
+					}
+                }
+                var MyMar1=setInterval(Marquee1,speed);  
+                colee.onmouseover=function() {clearInterval(MyMar1)}      
+                colee.onmouseout=function(){MyMar1=setInterval(Marquee1,speed)}
+                </script>
+			</div>
+        </div> 
+        <div style="width:200px; height:300px; margin-top:10px; overflow:hidden;"><a href="javascript:;" onclick="play_luck();return false;" title="去玩大转盘"><img src="{$image_url}/themes/default/images/exchange/zhuanpan.gif" width="200" height="300" alt="去玩大转盘"/></a></div>
+        
+        <div class="mt10">
+        	<h2 class="jf_text_head"></h2>
+            <ul class="jf_text_1">
+                <li>易视网会员级别分为：</li><li style="padding-left:10px; width:80%;">普通会员、VIP会员、白金VIP会员、钻石VIP会员四种。不同的会员等级享受不同的购物优惠及会员福利。</li>
+                <li>如何成为易视网会员：<a href="article-917.html" target="_blank">点击查看</a>。</li>
+            </ul>
+        </div>
+            
+        <ul class="jf_text_ul">
+            <li style="margin-left:0; background:url(../images/xu/exchange/bg.png) -281px -113px no-repeat #f2f2f2; width:198px; height:26px;"></li>
+            <li style="color:#333;">如何获得积分？</li>
+            <li>1.购买商品，商品消费1元累计1个<span class="jf_text_span">积分</span></li>
+            <li>2.评论一次已购买的商品累计10积<span class="jf_text_span">分</span></li>  
+            <li>3.上传一次商品晒单图或真人佩戴<span class="jf_text_span">图累计25积分</span></li>  
+            <li>4.真人佩戴图被推荐为美瞳达人奖励200积分</li>
+            <li>5.每日签到可获得5积分</li>
+            <li>6.邮箱验证，一次性奖励300积分</li>
+            <li>7.手机验证，一次性奖励400积分</li>            
+            <li style="border-bottom:1px #dcdcdc dashed; width:100%; height:1px; margin:0; margin-bottom:10px; overflow:hidden;"></li>
+            <li style="color:#333;">积分有什么用？</li>
+            <li>积分可以兑换商品、兑换优惠券、换购优惠、抽奖等。</li>         
+        </ul>
+                
+        <ul class="top_pan">
+        	<li class="top_bg"></li>
+            <!--{foreach from=$hot_sort item=hot name=foo}-->
+            <li class="top_li"> 
+            	<dl>
+                	<dd class="{if $smarty.foreach.foo.iteration lt 4}list_number{else}list_number2{/if}">{$smarty.foreach.foo.iteration}</dd>
+                    <dd><a href="{if $hot.type == 1}exchange{$hot.goods_id}.html{else}exchange{$hot.rec_id}_zk.html{/if}" target="_blank" title="{$hot.goods_name}" class="top_li_a"><img src="{$image_url}{$hot.goods_img}" width="60" height="60" alt="{$hot.goods_name}"/></a></dd>
+                    <dd class="top_detail"><a href="exchange{$hot.goods_id}.html" target="_blank" title="{$hot.goods_name}" class="top_name" {if $hot.type == 2}style="height:16px;"{/if}>{$hot.goods_name}</a><span class="redb" style="margin-right:2px;">{$hot.exchange_integral}</span>积分
+                        {if $hot.type == 2}<span class="redb" style="margin-right:2px;">￥{$hot.exchange_money}</span>{/if}
+                    </dd>
+                </dl>           
+            </li>
+            <!--{/foreach}-->
+        </ul> 
+        
+        
+                
+        <div style="display:none;"><form name="sign_info"><input type="hidden" id="user_sign_id" value="{$user_sign_id}"/><input type="hidden" id="user_have_buy" value="{$user_have_buy}"/></form></div>        
+    </div>
+    
+    <div class="main_right jf_main_right">
+    	<div><img src="{$image_url}/themes/default/images/exchange/gg.jpg" width="780" height="220" alt=""/></div>
+        
+        <div class="exchange_top">
+        	<h2></h2>
+            <ul>
+            	<!--{foreach from=$coupon_list item=list name=foo}-->
+                <li>
+                	<a class="ex_img_a1" href="ex_coupon-{$list.coupon_id}.html" target="_blank" title="{$list.coupon_name}"><img src="{$image_url}{$list.s_image}" width="169" height="100" alt="{$list.coupon_name}"/></a>
+                    <a class="ex_img_a2" href="ex_coupon-{$list.coupon_id}.html" target="_blank">{$list.coupon_name}</a>
+                    <p>{$lang.exchange_integral}<span class="red">{$list.use_integral}</span></p>
+                    <a class="ex_img_a3" href="ex_coupon-{$list.coupon_id}.html" target="_blank"></a>                    
+                </li>
+                <!--{/foreach}-->                               
+            </ul>
+        </div>
+	
+    	<div class="fl" id="menubox"><input type="hidden" id="get_exchange_pan" value="0"/><input type="hidden" id="get_page_size" value="{$page_size}"/>
+            <ul class="ex_tabs" id="exchange_menu"><li class="hover">积分折扣</li><li class="none">积分换礼</li><li class="none">积分换券</li></ul>
+		</div>
+        
+		<div id="conten" class="fl"><input type="hidden" id="get_exchange_zhe_count" value="{$exchange_zhe_count}" /> 
+            <div id="exchange_pan0" class="ex_goods_pan" style="display:block;">
+                <!-- #BeginLibraryItem "/library/pan_exchange_zhe.lbi" --><!-- #EndLibraryItem --> 
+                <!-- #BeginLibraryItem "/library/page_ajax_exchange_zhe.lbi" --><!-- #EndLibraryItem --> 
+            </div><input type="hidden" id="get_exchange_count" value="{$exchange_count}" />  
+            <div id="exchange_pan1" class="ex_goods_pan">         
+				<!-- #BeginLibraryItem "/library/pan_exchange_list.lbi" --><!-- #EndLibraryItem --> 
+                <!-- #BeginLibraryItem "/library/page_ajax_exchange_list.lbi" --><!-- #EndLibraryItem --> 
+            </div><input type="hidden" id="get_exchange_quan_count" value="{$exchange_quan_count}" /> 
+            <div id="exchange_pan2" class="ex_goods_pan"> 
+                <!-- #BeginLibraryItem "/library/pan_exchange_quan.lbi" --><!-- #EndLibraryItem --> 
+                <!-- #BeginLibraryItem "/library/page_ajax_exchange_quan.lbi" --><!-- #EndLibraryItem --> 
+			</div>            
+		</div>
+    </div>
+</div>
+<!-- #BeginLibraryItem "/library/page_footer_new.lbi" --><!-- #EndLibraryItem -->
+</body>
+<script type="text/javascript" src="http://file.easeeyes.com/index2015/js/common.js"></script>
+<script type="text/javascript" src="{$image_url}js/yi_common.js"></script>
+<script type="text/javascript" src="{$image_url}js/tip-totop.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#exchange_menu").children('li').mouseover(function(){
+		var this_idx = $(this).index();
+		$(this).removeClass('none').addClass('hover').siblings().removeClass('hover').addClass('none');
+		$(".ex_goods_pan").hide();
+		$("#exchange_pan"+this_idx).show();
+		$("#get_exchange_pan").val(this_idx);
+	});	
+});
+
+//yi：翻页函数
+function change_page_ajax(page)
+{
+	var pank  = $("#get_exchange_pan").val();
+	var count = 0;
+	var size  = $("#get_page_size").val();	
+	var pan_kind  = pank*1+1;
+	if(pank == 0)
+	{
+		count = $("#get_exchange_zhe_count").val();
+	}
+	else if(pank == 1)
+	{
+		count = $("#get_exchange_count").val();		
+	}
+	else if(pank == 2)
+	{
+		count = $("#get_exchange_quan_count").val();		
+	}	
+	$.ajax({		
+		type:'POST',
+		url:'exchange.php?act=list_page',	
+		data:'&page='+page+'&count='+count+'&size='+size+'&pan_kind='+pan_kind+'&m='+Math.random(),		
+		cache:false,
+		success:
+			function(da)
+			{
+				$("#exchange_pan"+pank).html(da);
+			}		
+	});	
+}
+function change_page_ajax_submit()
+{
+	var page = document.getElementById("get_submit_page").value;
+	var page_count = document.getElementById("get_page_count").value; 
+	if(page > 0 && page <= page_count)
+	{
+		change_page_ajax(page);
+	}
+	else
+	{
+		alert("请输入正确页码！");
+	}
+}
+//yi:翻页函数 END
+
+//我要签到功能
+function sign(){
+	var user_id = $('#user_sign_id').val();
+	
+	//验证用户是否登录
+	if(user_id < 1){
+		/*
+		if(confirm('^_^ 对不起，您还未登录，请您先登录后再签到！')){
+			window.location.href="user.html";
+		}else{			
+		}*/
+		alert('^_^ 对不起，您还未登录，请您先登录后再签到！');
+		return false;
+	}	
+	
+	//签到实现
+	$.ajax({
+		type:'POST',
+		url:'exchange.php?act=sign',	
+		data:'&user_id='+user_id+'&m='+Math.random(),		
+		cache:false,
+		success:
+		function(dd){
+			var dd = eval('('+dd+')');
+			var code = dd['info_code'];
+	
+			if(code==1){
+								
+				//签到成功，更新面板数据
+				var day  = $('#sign_day_num').text();
+				var t_day= parseInt(day)+1;
+				$('#sign_day_num').text(t_day);	
+				//积分
+				var jifen   = $('#sign_integral').text();
+				var t_jifen = parseInt(jifen)+5;
+				$('#sign_integral').text(t_jifen);				
+				//总签到人数
+				var sign_sum  = $('#sign_sum').text();
+				var tsign_sum = parseInt(sign_sum)+1;
+				$('#sign_sum').text(tsign_sum);	
+				
+				//显示信息
+				alert(dd['info_msg']);			
+			}else{
+				alert(dd['info_msg']);
+			}
+		}
+	});
+}
+function play_luck(){
+	var user_id  = $('#user_sign_id').val();
+	var user_buy = $('#user_have_buy').val();
+	
+	//验证用户是否登录
+	if(user_id < 1){
+		alert('^_^ 对不起，您还未登录，请您先登录后才能玩大转盘哦！');
+		return false;
+	}else{
+		//验证用户是否在易视购买过商品
+		//window.location.href="luck2/";
+		if(user_buy>0){
+			window.location.href="luck/";
+			return false;
+		}else{
+			alert('^_^ 对不起，您没有在商城购买过商品，不能参加快乐大转盘活动哦！');
+			return false;
+		}
+	}
+}
+
+function open_sign_div(){
+	if($.browser.msie && $.browser.version == '6.0'){
+		//ie6中的代码
+		return false;
+	}
+	if( $('#sign_desc_div').css("display") == 'none'){
+		$('#fade').show();
+		$('#sign_desc_div').show();
+		
+	}
+}
+function close_sign_div(){
+	if( $('#sign_desc_div').css("display") != 'none'){
+		$('#sign_desc_div').hide();
+		$('#fade').hide();
+	}
+}
+</script>
+</html>

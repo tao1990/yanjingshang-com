@@ -1,0 +1,51 @@
+/*list*/
+.clear{clear:both}
+.go_jiesuan{margin-top:10px}
+.go_jiesuan_left{float:left}
+.go_jiesuan_left span{color:#F00;font-weight:bold}
+.go_jiesuan_left div{margin-bottom:5px}
+.go_jiesuan_right{float:right;margin-top:10px}
+.check_one,.check_two,.check_three,.my_mess_one{padding-left:5%;padding-right:5%;border-bottom:1px solid #e9e9e9}
+.check_two,.check_three{border-top:1px solid #e5e5e5}
+.check_three{border-bottom:none}
+.check_top{padding-top:10px;padding-bottom:5px;border-bottom:1px solid #e9e9e9}
+.check_top_color{color:#009aaf;font-weight:bold;}
+.check_bottom{border-top:1px solid #e5e5e5;padding-top:10px}
+.check_bottom_left{width:30%;float:left}
+.check_bottom_left img{width:84px;height:85px;border: 1px solid #ddd}
+.check_bottom_right{width:67%;float:left;margin-left:5px}
+.check_name{font-weight:bold}
+.check_price{margin-top:20px;}
+.check_price span{color:#f00;font-weight:bold}
+.check_price_left{float:left;width:45%}
+.check_price_right{float:left;width:55%}
+.check_wuliu input,.mess_detail_three input{margin-top:15px;display:block;background-color:#75D6E9;color:#fff;border:none;font-size:15px;font-weight:bold;border-radius:5px;width:100%;padding:6px 0}
+.check_wuliu{padding-bottom:15px}
+
+
+
+
+/*info*/
+.check{ background-color:#f2f2f2}
+.order_num{height:50px; text-align:center;line-height:50px; border-bottom:1px solid #e9e9e9}
+.order_num_left{width:60%;float:left;border-right:1px solid #e5e5e5}
+.order_num_left span,.order_bianhao span{font-size:1em;font-weight:bold;color:#707070}
+.order_num_right{width:37%;float:left;border-left:1px solid #e9e9e9}
+.order_num_right span{font-size:1em;font-weight:bold;color:#009aaf}
+.order_bianhao{padding-top:10px;padding-bottom:10px;border-bottom:1px solid #e9e9e9;border-top:1px solid #e5e5e5}
+.order_bianhao div{margin-bottom:5px;padding-left:5%}
+
+.goods_title{height:50px;line-height:50px;font-size:1.05em; text-align:center;border-bottom:1px solid #e9e9e9;border-top:1px solid #e5e5e5}
+.goods_title img{margin-left:7px; vertical-align:middle}
+.goods_num{border-bottom:1px solid #e9e9e9;border-top:1px solid #e5e5e5;padding-bottom:10px; background-color:#fff}
+.goods_num_one{padding-top:10px;padding-left:5%}
+.goods_num_one em,.goods_price span{color:#f00}
+.goods_num_one span{margin-right:10%}
+.goods_fenge{border-bottom:1px dashed #707070;margin-top:2%;width:67%;margin-left:10%}
+.goods_all{margin-left:50%;margin-top:5%}
+.goods_price{font-weight:bold}
+.state{padding-top:5%;border-top:1px solid #e5e5e5}
+.state .end { background:url(http://m.easeeyes.com/images/blue_wuliu.png) no-repeat;}
+.state .yi_fachu{ background:url(http://m.easeeyes.com/images/yi_fachu.png) no-repeat}
+.state li{background:url(http://m.easeeyes.com/images/wuliu_one.png) no-repeat;margin-left:5%;padding-left:6%;padding-bottom:10px}
+.current1{color:#009aaf}

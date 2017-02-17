@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>全场包邮三天，招行卡支付满199送热敷蒸汽眼罩一盒，十大品牌联合钜惠，低至2折</title>
+<meta name="Keywords"  content="易视网,易视眼镜网,美瞳,护理液,润眼液,博士伦,海昌,海俪恩,卫康,库博,视康,强生,sho-bi,GEO,NEO,BESCON" />
+<meta name="Description" content="易视网，全场包邮三天，招行卡支付满199送热敷蒸汽眼罩一盒，十大品牌联合钜惠，低至2折，24小时闪电发货，30天退换货保障" />
+<link rel="stylesheet" href="http://file.easeeyes.com/index2015/css/ani.css" />
+<style>
+.goodsItems{padding-top:.5rem;background:#fed3e6;}
+.goodsItem{float:left;width:15.75rem;background:#fff;padding-bottom:.5rem;margin-bottom:.5rem;}
+.goodsItem:nth-child(even){float:right;}
+.goodsItem-thumb{text-align:center;height:12.5rem;line-height:12.5rem;font-size:0;}
+.goodsItem-thumb img{max-width:95%;max-height:95%;}
+.goodsItem-title{color:#666;line-height:2rem;height:2rem;border-bottom:1px solid #bdbcba;width:90%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin:auto;}
+.goodsItem-price{color:#575757;padding:.25rem 0 .5rem;text-align:center;}
+.goodsItem-price span{color:#ff0056;}
+.goodsItem-price b{font-size:1.4rem;font-weight:100;line-height:1;}
+.goodsItem-btn{display:block;width:10.25rem;height:1.75rem;line-height:1.75rem;text-align:center;color:#fff;background:#ff89b1;margin:auto;}
+</style>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<!--main-->
+<div class="container">
+	<div><img src="http://file.easeeyes.com/wap/images/20160617/banner.jpg" alt="" style="display:block;"></div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160617/01.jpg" alt="" style="display:block;"></div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160617/02.jpg" alt="" style="display:block;"></div>
+	<div class="goodsItems clearfix">
+        <!--{foreach from=$goodsArr1 item=it}-->
+		<div class="goodsItem">
+			<a href="{$it.goods_link}">
+				<div class="goodsItem-thumb"><img src="http://img.easeeyes.com/{$it.goods_img}" alt=""></div>
+				<div class="goodsItem-title">{$it.goods_name}</div>
+				<div class="goodsItem-price">专享价<span><b>&yen;{$it.shop_price}</b>/盒</span></div>
+				<span class="goodsItem-btn">立即购买</span>
+			</a>
+		</div>
+		<!--{/foreach}-->
+	</div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160617/03.jpg" alt="" style="display:block;"></div>
+    <div class="goodsItems clearfix">
+        <!--{foreach from=$goodsArr2 item=it}-->
+		<div class="goodsItem">
+			<a href="{$it.goods_link}">
+				<div class="goodsItem-thumb"><img src="http://img.easeeyes.com/{$it.goods_img}" alt=""></div>
+				<div class="goodsItem-title">{$it.goods_name}</div>
+				<div class="goodsItem-price">专享价<span><b>&yen;{$it.shop_price}</b>/盒</span></div>
+				<span class="goodsItem-btn">立即购买</span>
+			</a>
+		</div>
+		<!--{/foreach}-->
+	</div>
+	<div><img src="http://file.easeeyes.com/wap/images/20160617/04.jpg" alt="" style="display:block;"></div>
+    <div class="goodsItems clearfix">
+        <!--{foreach from=$goodsArr3 item=it}-->
+		<div class="goodsItem">
+			<a href="{$it.goods_link}">
+				<div class="goodsItem-thumb"><img src="http://img.easeeyes.com/{$it.goods_img}" alt=""></div>
+				<div class="goodsItem-title">{$it.goods_name}</div>
+				<div class="goodsItem-price">专享价<span><b>&yen;{$it.shop_price}</b>/盒</span></div>
+				<span class="goodsItem-btn">立即购买</span>
+			</a>
+		</div>
+		<!--{/foreach}-->
+	</div>
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

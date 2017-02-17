@@ -1,0 +1,65 @@
+<!--header-tag-->
+<link rel="stylesheet" href="http://file.easeeyes.com/b2b/css/base.css" />
+
+<div class="header-tag">
+	<div class="container">
+        {insert name='member_info'}	
+	</div>
+</div>
+
+<!--header-search-->
+<div class="header container">
+	<div class="fl logo">
+		<a href="#">
+			<img src="http://file.easeeyes.com/b2b/images/logo.png" />
+		</a>
+	</div>
+	<div class="fr ewm">
+		<img src="http://file.easeeyes.com/b2b/images/bz.png" />
+	</div>
+	<div class="search-box">
+		<form  method="get" action="categorysea.php" id="sreachSub">
+            <input type="hidden" name="search" value="1"/>
+			<div class="main">
+				<input type="text" name="keyword" id="keyword" class="input" placeholder="请输入商品名称/商品编号" />
+				<button class="btn">搜索</button>
+			</div>
+			<div class="keyword clearfix">
+				<div class="fl main">
+					<img src="http://file.easeeyes.com/b2b/images/search.jpg" /> <a href="#">强生美瞳</a> <a href="#">博士伦清朗</a> <a href="#">海昌星眸</a> <a href="#">彩色隐形眼镜</a> <a href="#">日抛</a> <a href="#">年抛</a>
+				</div>
+				<div class="fl arrow-btns">
+					<a href="#"><</a><a href="#">></a>
+				</div>
+			</div>
+		</form>
+	</div>	
+</div>
+<!--nav-->
+<div class="nav">
+	<div class="container">
+		<div class="fl">
+			<div class="nav-title">
+				<img src="http://file.easeeyes.com/b2b/images/cd.jpg" />　全部商品分类
+			</div>
+		</div>
+		<div class="fr">
+			<div class="gocart">
+				<a href="flow.html">
+					<img src="http://file.easeeyes.com/b2b/images/car.jpg" /> 去购物车结算 <span class="caret caret-right"></span>
+					<span class="badge">8</span>
+				</a>
+			</div>
+		</div>
+		<div class="main">
+			<ul class="inline-ulist">
+				<li><a href="/">首页</a></li>
+				<li><a href="#">我是零售商</a></li>
+				<li><a href="#">我是品牌商</a></li>
+				<li><a href="#">进货中心</a></li>
+				<li><a href="#">服务中心</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!--nav-banner-->

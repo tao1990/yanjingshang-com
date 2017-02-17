@@ -1,0 +1,628 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$page_title}</title>
+<meta name="Keywords"    content="{$keywords}" />
+<meta name="Description" content="{$description}" />
+<!-- TemplateBeginEditable name="doctitle" --><title>{$page_title}</title><!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+<!--[if lte IE 6]><link href="themes/default/style/ie6_in.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+{insert_scripts files='common.js,user.js'}
+<script type="text/javascript" src="/js/inner.js"></script>
+<script language="javascript">
+function fllow(oid)
+{
+	//获得订单信息数组
+	$.ajax({
+		url:'user.php?act=fllow_ajax',
+		data:'&order_id='+oid+'&m='+Math.random(),
+		cache:false,
+		success:
+		function(dd){
+			dd = eval('('+dd+')');
+			
+			//显示面板信息dd[0]快递公司 dd[1]快递单号 dd[2]url 
+			if(dd[2]!=''){
+				//加载包裹信息
+				var dw = $(document).width();
+				var dh = $(document).height();					
+				$(".pp_shadow").css({width:dw,height:dh}).show();
+				//显示面板
+				$("#fllow").show();	
+				$("#fllow_id").text(dd[1]);
+				$("#fllow_con").text(dd[0]);
+				
+				if(dd[0]!='' && dd[1]!=''){			
+				//获取该订单的物流信息
+					$.ajax({		
+						url:'plugins/kuaidi100/express.php',
+						data:'com='+dd[0]+'&nu='+dd[1],
+						cache:false,
+						success:
+						function(dx){
+							$("#fllow_div").html(dx);
+						}
+					});	
+				}else{
+					$("#fllow_div").text("<br/><br/><br/>物流信息查询失败，请登录快递官网查询！！");
+				}								
+			}else{
+				//没有发货信息的情况
+				$("#fllow_div").text("由于物流信息还未录入，暂无该物流信息，请稍后在试。");
+			}	
+		}
+	});	
+}
+
+/*=============关闭模态窗口===============*/
+function pclose(){
+	$(".pp_shadow").hide();
+	$("#fllow").hide();
+}
+</script>
+</head>
+<body>
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
+<div id="dtop"><div id="dtoptxt">{$lang.ur_here} {$ur_here}</div></div>
+
+<div id="main">
+<!-- #BeginLibraryItem "/library/user_menu.lbi" --><!-- #EndLibraryItem --><!--main_left-->
+
+<div class="main_right">
+<!--#用户中心默认显示页面-->
+<!--{if $action eq 'default'}-->
+<ul class="pp_shadow"></ul>
+<div class="default_welcome">
+    <div class="default_w_title"><font class="default_red">{$info.username}</font> 欢迎您回到 易视网!</div>    
+    <div class="welcome_list">您目前的等级是 <font class="red">{$rank_name}</font></div>    
+    <div class="welcome_list">邮箱：<font class="red">{$info.email}</font><!--{if $info.is_validate eq 0}--><!--您未通过邮件验证 <a href="javascript:sendHashMail()" style="color:#006bd0;">[去验证]</a>--><!--{/if}--></div>
+    <div class="welcome_list">易视积分：<a href="user_transform_points.html" style="color:#c30000">{$info.integral}</a></div>
+    <div class="welcome_list">账户余额：<a href="user_account_log.html" style="color:#c30000">{$info.surplus}</a></div>
+    <!--{if $info.credit_line gt 0}如果有信用额度-->
+    <div class="welcome_list">信用额度：<font class="red">{$info.formated_credit_line}</font></div><!--{/if}-->
+    <div class="welcome_list">优惠券/红包：<a href="user_bonus.html" style="color:#666;">{$info.bonus}</a></div>    
+</div>
+
+<div class="user_note"><div class="user_note_text">{$user_notice}</div><div class="clear"></div></div>
+<div class="user_head_div mb10"><div class="user_head_left">最近3个订单</div><div class="user_head_right"><a href="user_order_list.html" class="a_and_font">更多订单>></a></div></div>
+
+<table class="tb_account_log" cellspacing="0" cellpadding="0" border="1" bordercolor="#dcdcdc" >    
+    <colgroup>
+        <col class="col_order_id" />        
+        <col class="col_order_time" />
+        <col class="col_order_sum" />
+        <col class="col_order_status"/>
+        <col class="col_order_option"/>           
+    </colgroup>    
+    <tr class="tb_head" style="height:24px; line-height:24px;"><th>订单号</th><th>下单时间</th><th>订单总金额</th><th>订单状态</th><th>操作</th></tr>
+    <!--{foreach from=$order_list item=item}-->
+    <tr>
+        <td><a href="user_order_detail_{$item.order_id}.html">{$item.order_sn}</a></td>
+        <td>{$item.order_time}</td>
+        <td>{$item.total_fee}</td>
+        <td>{$item.order_status}</td>
+        <td>
+        	{if $item.os neq 2 && $item.ps eq 0}<a href="user_order_detail_{$item.order_id}.html" target="_blank" class="order_option_button1 ml7">付款</a>{/if}
+            <a href="user_order_detail_{$item.order_id}.html" target="_blank" class="order_option_button2">查看订单</a>
+            {if ($item.os eq 1||$item.os eq 5) && $item.ss eq 1 }<a href="javascript:void()" class="order_option_button2" onclick="fllow({$item.order_id})">跟踪包裹</a>{/if} 
+                            
+			{if ($item.os eq 1||$item.os eq 5) && $item.ss eq 1 && $item.ps eq 2}
+            	<a class="order_option_button2" href="user.php?act=affirm_received&order_id={$item.order_id}" onclick="if(!confirm('您确认已收到您的货物!'))return false;">确认收货</a>{/if}                
+			{if $item.os eq 0 && $item.ss eq 0 && $item.ps eq 0}
+            	<a class="order_option_button1 ml4" href="user.php?act=cancel_order&order_id={$item.order_id}" onclick="if(!confirm('您确实要取消该订单!'))return false;">取消</a>
+            {/if}          
+        </td>
+    </tr>
+    <!--{/foreach}--> 
+</table>
+<!--显示某个订单的物流信息-->
+<div id="fllow">
+    <div class="fl_border1"></div>    
+    <div class="fllow_body">   
+    	<div class="fllow_title">包裹信息</div>        
+        <div class="fllow_line"></div>         
+        <ul class="fllow_info"><li style="text-indent:50px;">快递单号：<span id="fllow_id"></span></li><li>快递公司：<span id="fllow_con"></span></li></ul>        
+        <div id="fllow_div"></div>      
+    </div>
+    <div class="fl_border2"></div>   
+    <div class='pclose' title='关闭' onclick='pclose()'>关闭</div>           
+</div>
+<!--显示某个订单的物流信息-->
+
+<div class="user_head_div mt20"><div class="user_head_left">热销推荐</div><div class="user_head_right"><a href="new_product.php" target="_blank" class="a_and_font">更多热销>></a></div></div>
+<div class="user_hot_goods">
+    <!--{foreach from=$goods_list item=item name=foo}-->
+    <div class="user_hot_list">
+    	<div class="hot_list_img"><a href="goods{$item.goods_id}.html" target="_blank"><img src="{$item.goods_img}" width="100" height="100" alt="{$item.goods_name}"/></a></div>
+    	<div class="hot_list_name"><a href="goods{$item.goods_id}.html" target="_blank" style="color:#144C7D;">{$item.goods_name|truncate:11:false}</a></div>
+        <div class="hot_list_price"><span class="color9"><s>{$item.market_price}</s></span>&nbsp;<span class="red">{$item.shop_price}</span></div>
+    </div>    
+    <!--{if $smarty.foreach.foo.index eq 4}-->
+    <div class="space20" style="clear:both;"></div>
+    <!--{/if}-->
+    <!--{/foreach}--> 
+</div>
+<!--{/if}-->
+<!--#用户中心默认显示页面endok-->
+<!-------------------------------------------no.1订单管理板块--------------------------------------------->
+<!--#已经购买过的商品-->
+<!--{if $action eq 'have_buy'}-->
+<h2 class="user_head">购买过的商品</h2>
+<div class="com_head_title">
+	<a href="javascript:void(0)" class="bt_buy_now text_case">立即购买</a>
+	<a href="javascript:void(0)" onclick="add_collect();" class="bt_add_collect text_case" style="display:none;">加入收藏夹</a> 
+    <div style="float:right; width:400px;"></div>
+</div>
+
+<div class="com_tb_head">
+	<div style="float:left; width:60px; text-align:left;">
+    	<input type="checkbox" name="all_select" id="have_buy_all" style="height:25px; margin-left:5px; float:left;"/>
+    	<span style="display:inline-block; width:30px; height:25px; line-height:25px; text-align:center;">全选</span>
+    </div>
+    <div style="float:left; width:329px;">商品名称</div>
+    <div style="float:left; width:150px; ">上次购买的度数</div>
+    <div style="float:left; width:80px; ">单价</div>
+    <div style="float:left; width:132px;">操作</div>
+</div>
+<table class="tb_account_log" cellspacing="0" cellpadding="0" border="0" bordercolor="#dcdcdc">   
+<colgroup style="text-align:center;">
+	<col style="width:28px;"/>
+	<col style="width:140px;"/>
+	<col style="width:220px;"/>
+	<col style="width:150px;"/>
+    <col style="width:80px;"/>
+	<col style="width:130px;"/>        
+</colgroup>
+<!--{foreach from=$goods_list item=goods}-->
+<tr class="col_goods_list_tr">
+	<td><input type="checkbox" name="select_col_goods"/></td>
+    <td><a href="goods{$goods.goods_id}.html" target="_blank"><img src="{$goods.goods_img}" width="100" height="100" alt="{$goods.goods_name}"/></a></td>
+    <td><a href="goods{$goods.goods_id}.html" target="_blank" class="f6">{$goods.goods_name|escape:html}</a></td>
+    <td>
+    	<!--{if $goods.zselect}-->左眼度数:{$goods.zselect}<br/><!--{/if}-->
+        <!--{if $goods.yselect}-->右眼度数:{$goods.yselect}<!--{/if}-->
+    </td>
+    <td>
+    	<!--{if $goods.goods_price neq "￥0.00"}--><span class="goods-price">{$goods.goods_price}</span>
+        <!--{else}--><span class="goods-price">{$goods.market_price}</span><!--{/if}-->     
+    </td>
+    <td>
+        <a href="goods{$goods.goods_id}.html" target="_blank"><img src="images/user/collect_buy.gif" width="89" height="22" alt="" style="margin:5px auto"/></a>
+        <a href="goods{$goods.goods_id}.html#detail3" target="_blank"><img src="images/user/collect_comment.gif" width="47" height="22" alt="" style="margin:5px auto"/></a>
+    </td>
+</tr>
+<!--{/foreach}-->
+</table>
+<div class="com_head_title">
+	<a href="javascript:void(0)" class="bt_buy_now text_case">立即购买</a>
+	<a href="javascript:void(0)" onclick="add_collect();" class="bt_add_collect text_case" style="display:none;">加入收藏夹</a>
+    <div style="float:right; width:400px; margin-top:-10px; display:none;"><!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem --></div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#have_buy_all").click(function(){
+		$(".col_goods_list_tr input[type='checkbox']").attr("checked",$("#have_buy_all").attr("checked"));		
+	});
+});
+</script>
+<!--{/if}-->
+<!--#已经购买过的商品end-->
+<!--#我的收藏-->
+<!--{if $action eq 'collection_list'}-->
+{insert_scripts files='transport.js,utils.js'}
+<h2 class="user_head">我的收藏</h2>
+<div style="width:756px; height:42px; line-height:42px;">
+    <a href="javascript:void(0)" style="float:left; width:40px; height:20px; line-height:20px; margin-top:10px; margin-right:10px;" class="text_case" onclick="delete_col_all()">删除</a>
+    <a style="float:left; width:40px; height:20px; line-height:20px; margin-top:10px; display:none;" class="text_case">关注</a>
+    <div style="float:right; width:400px;"></div>
+</div>
+
+<div style="width:756px; height:25px; line-height:25px; border:1px #dcdcdc solid; background-color:#eee;">
+	<div style="float:left; width:60px; text-align:left;">
+    	<input type="checkbox" name="all_select" id="collect_select_all" style="height:25px; margin-left:5px; float:left;"/>
+    	<span style="display:inline-block; width:30px; height:25px; line-height:25px; text-align:center;">全选</span>
+    </div>
+    <div style="float:left; width:400px;">商品名称</div>
+    <div style="float:left; width:100px;">单价</div>
+    <div style="float:left; width:195px;">操作</div>
+</div>
+<table class="tb_account_log" cellspacing="0" cellpadding="0" border="0" bordercolor="#dcdcdc" style="" >   
+<colgroup>
+	<col style="width:28px;"/>
+	<col style="width:152px;"/>
+	<col style="width:280px; text-align:left; text-indent:20px;"/>
+	<col style="width:100px;"/>
+	<col style="width:196px;"/>        
+</colgroup>
+<!--{foreach from=$goods_list item=goods}-->
+<tr class="col_goods_list_tr">
+	<td><input type="checkbox" name="select_col_goods" id="{$goods.rec_id}"/></td>
+    <td><a href="goods{$goods.goods_id}.html" target="_blank"><img src="{$goods.goods_img}" width="100" height="100" alt="{$goods.goods_name}"/></a></td>
+    <td><a href="{$goods.url}" class="f6">{$goods.goods_name|escape:html}</a></td>
+    <td>
+    	<!--{if $goods.promote_price neq ""}--><span class="goods-price">{$goods.promote_price}({$lang.promote_price})</span>
+        <!--{else}--><span class="goods-price">{$goods.shop_price}</span><!--{/if}--> 
+    </td>
+    <td>
+    	<div style="width:95px; height:50px;">		
+        <a href="goods{$goods.goods_id}.html" target="_blank" class="text_case" style="margin:15px auto;">立即购买</a>
+        <a href="javascript:if(confirm('{$lang.remove_collection_confirm}')) location.href='user.php?act=delete_collection&collection_id={$goods.rec_id}'" style="float:right;">
+        	<img src="images/user/bt_delete.gif" width="35" height="22" alt=""/>
+        </a>
+        </div>
+    </td>
+</tr>
+<!--{/foreach}-->
+</table>
+<div style="width:756px; height:42px; line-height:42px;">
+    <a href="javascript:void(0)" style="float:left; width:40px; height:20px; line-height:20px; margin-top:10px; margin-right:10px;" class="text_case" onclick="delete_col_all()">删除</a>
+    <a style="float:left; width:40px; height:20px; line-height:20px; margin-top:10px; display:none;" class="text_case">关注</a>
+    <div style="float:right; width:400px; margin-top:-10px; overflow-x:hidden;"><!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem --></div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#collect_select_all").click(function(){
+		$(".col_goods_list_tr input[type='checkbox']").attr("checked",$("#collect_select_all").attr("checked"));		
+	});	
+});
+
+function delete_col_all(){
+	//所有选中的表单框 数组 记录那行的id
+	$(".col_goods_list_tr input[type='checkbox'][checked='true']").each(
+		function(name,obj){	
+			var col_id = obj['id'];
+			/*
+			if( confirm('{$lang.remove_collection_confirm}') ){			
+				window.location.href='user.php?act=delete_collection&collection_id='+col_id;
+			}*/
+			
+			//不验证直接删除
+			window.location.href='user.php?act=delete_collection&collection_id='+col_id;		
+		}
+	);
+}
+</script>
+<!--{/if}-->
+<!--#我的收藏end-->
+
+
+<!--#缺货登记-->
+<!--{if $action eq 'booking_list'}-->
+<h2 class="user_head">缺货登记</h2>
+<!--{if $booking_list}-->
+<div class="booking_head"><a href="javascript:void(0);" onclick="delete_booking()" class="booking_delete_bt text_case">删除</a></div>
+<div class="booking_title_tr">
+	<div class="booking_title_td1"><input type="checkbox" name="all_select" id="book_select_all" class="ck_all_select"/><span class="all_select_text">全选</span></div>
+    <div style="float:left; width:168px;">商品名称</div>
+ 	<div style="float:left; width:130px;">登记时间</div>   
+	<div style="float:left; width:148px;">处理备注</div>    
+    <div style="float:left; width:120px;">库存状态</div>
+    <div style="float:left; width:128px;">操作</div>
+</div>
+<table class="tb_account_log" cellspacing="0" cellpadding="0" border="0">  
+<colgroup>
+	<col style="width:28px;"/>
+	<col style="width:200px;"/>
+	<col style="width:130px;"/>
+    <col style="width:148px;"/>
+	<col style="width:120px;"/>
+    <col style="width:128px;"/>        
+</colgroup>
+<tbody class="booking_list">
+<!--{foreach from=$booking_list item=item}-->
+<tr>
+	<td><input type="checkbox" name="select_col_goods" id="{$item.rec_id}"/></td>  
+    <td><a href="{$item.url}" target="_blank">{$item.goods_name}</a></td>
+    <td>{$item.booking_time}</td>
+    <td>{$item.dispose_note}</td>
+    <td><!--{if $item.goods_number eq 0}-->缺货<!--{else}--><font color="red">可立即发货</font><!--{/if}--></td>
+    <td>    
+    <!--{if $item.goods_number eq 0}--><a href="{$item.url}" target="_blank"><img src="images/user/goods_detail.gif" width="89" height="22" alt=""/></a><!--{else}--><a href="{$item.url}" target="_blank"><img src="images/user/collect_buy.gif" width="89" height="22" alt=""/></a><!--{/if}-->
+     </td>
+</tr>
+<!--{/foreach}-->
+</tbody>
+</table>
+<!--<a href="javascript:if(confirm('{$lang.confirm_remove_account}')) location.href='user.php?act=act_del_booking&id={$item.rec_id}'">删除</a>-->
+<div class="booking_head"><a href="javascript:void(0);" onclick="delete_booking()" class="booking_delete_bt text_case">删除</a>
+	<div class="booking_page"><!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem --> </div>
+</div>
+<!--{else}--><div style="width:100%; padding-top:30px; text-align:center;">您暂时没有缺货商品记录!</div><!--{/if}-->
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#book_select_all").click(function(){
+		$(".booking_list input[type='checkbox']").attr("checked",$("#book_select_all").attr("checked"));	
+			
+	});
+	
+
+});
+
+function delete_booking()
+{
+	//所有选中的表单框 数组 记录那行的id
+	$(".booking_list input[type='checkbox'][checked='true']").each(
+		function(name,obj){
+			var col_id = obj['id'];		
+			//不验证直接删除
+			window.location.href='user.php?act=act_del_booking&id='+col_id;		
+		}
+	);	
+}
+</script>
+<!--{/if}-->
+<!--#缺货登记end-->
+
+<!--#系统通知-->
+<!--{if $action eq 'msg'}-->
+<h2 class="user_head">系统通知</h2>
+<div class="u_msg_h" id="u_msg_h"><span>未读信息({$user.unread_msg})</span> | <span class="fb6">全部信息({$list_size})</span></div>
+
+<div id="all_user_msg">
+	<!-- #BeginLibraryItem "/library/pap_user_msg_list.lbi" --><!-- #EndLibraryItem --> 
+    <!-- #BeginLibraryItem "/library/pap_user_msg_list_page.lbi" --><!-- #EndLibraryItem --> 
+</div><input type="hidden" id="user_msg_size" value="{$pager.size}" /><input type="hidden" id="user_msg_count" value="{$pager.record_count}" />
+
+<div id="un_read_msg" style="display:none; overflow:hidden;">
+	<!-- #BeginLibraryItem "/library/pap_user_msg_unread.lbi" --><!-- #EndLibraryItem --> 
+    <!-- #BeginLibraryItem "/library/pap_user_msg_unread_page.lbi" --><!-- #EndLibraryItem --> 
+</div><input type="hidden" id="unread_msg_size" value="{$pager1.size}" /><input type="hidden" id="unread_msg_count" value="{$pager1.record_count}" />
+
+<ul style="width:100%; height:20px;"><input type="hidden" id="get_com_pap" value="user_msg"/></ul>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#u_msg_h > span").click(function(){
+		var span = $(this).index();
+		if(1==span)
+		{
+			$("#un_read_msg").hide();
+			$("#all_user_msg").show();
+			$("#get_com_pap").val('user_msg');
+		}
+		else
+		{			
+			$("#un_read_msg").show();//0
+			$("#all_user_msg").hide();	
+			$("#get_com_pap").val('unread_msg');
+		}
+		$(this).addClass('fb6').siblings().removeClass('fb6');		
+	});
+});
+
+function com_page_ajax(page)
+{
+	var pan_kind = $("#get_com_pap").val();
+	var size     = $("#"+pan_kind+"_size").val();
+	var count    = $("#"+pan_kind+"_count").val();	
+	$.ajax({		
+		type:'POST',
+		url:'user.php?act=pages',	
+		data:'&page='+page+'&count='+count+'&size='+size+'&pan_kind='+pan_kind+'&m='+Math.random(),		
+		cache:false,
+		success:
+			function(da)
+			{
+				if('user_msg' == pan_kind)
+				{
+					$("#all_user_msg").html(da);
+				}
+				else if('unread_msg' == pan_kind)
+				{
+					$("#un_read_msg").html(da);
+				}
+			}		
+	});	
+}
+function com_page_ajax_submit()
+{
+	var page       = document.getElementById("get_submit_page").value;
+	var page_count = document.getElementById("get_page_count").value; 
+	page = page*1; page_count = page_count*1;
+	if(page>0 && page<=page_count)
+	{
+		com_page_ajax(page);
+	}
+	else
+	{
+		alert("请输入正确页码！");
+	}
+}
+</script>
+<!--{/if}-->
+<!--#系统通知end-->
+
+
+
+<!--#站内信内容页面-->
+<!--{if $action eq 'msg_info'}-->
+<h2 class="user_head">系统通知</h2>
+<div class="u_msg_h" style="width:600px; float:left;"><span style="cursor:default;">未读信息({$user.unread_msg})</span> | <a href="user_msg.html" class="fb6">全部信息({$list_size})</a></div><a href="user_msg.html" title="" class="u_msg_return">返回我的消息</a>
+
+<ul class="u_msg_ul">
+	<li style="margin-bottom:20px;">
+    	<dl style="overflow:hidden;">
+        	<dd class="u_m_l_d1">{$msg.f_add_time}</dd>
+            <dd class="u_m_l_d2 fb6">{$msg.title}</dd><dd class="u_m_l_d3">
+            <form action="user.html" name="rm_msg_fm" method="post"><input type="hidden" name="act" value="user_msg_remove" /><input type="hidden" name="rec_id" value="{$msg.rec_id}"/><input type="submit" value="删除" /></form></dd>
+        </dl>
+    </li>           
+    <li style="width:645px; height:auto; min-height:260px; line-height:32px; background-color:#f2f2f2; background-image:none; font-size:14px; overflow:hidden; border:1px solid #dcdcdc; padding:20px; text-indent:2em; word-wrap:break-word;">{$msg.msg}</li>
+
+</ul>
+<!--{/if}-->
+<!--#站内信内容end-->
+
+
+
+<!-------------------------------------------no.2账户信息板块--------------------------------------------->
+<!--{if $action eq 'affiliate'}-->
+<h2 class="user_head">我的零用钱计划</h2>
+<div class="big_bg" style="width:770px; height:auto; background-image:url(images/user/big_bg.gif); background-repeat:no-repeat; background-position:422px 10px;">
+
+	<div style=" float:left; margin-left:12px; width:100%; text-align:left; margin-top:30px; margin-bottom:30px;"><img src="images/user/u_title1.gif" width="428" height="47" alt=""/></div>
+    <p style=" background-color:$fcc; width:400px; height:90px; line-height:30px; float:left; margin-left:12px; text-align:left;">
+    你邀请来的朋友，72小时内在易视网注册，即认定该朋友是您推荐来的。<br/>    
+    您可获得：<font class="red" style="font-size:14px;">该用户今后在本站的一切消费所得消费积分的30%</font><br/>    
+    （如：您朋友本次购物获得1000消费积分，您就可获得300消费积分）
+    </p>
+	<div style=" float:left; margin-left:12px; width:100%; text-align:left; margin-top:30px; margin-bottom:10px;"><img src="images/user/u_title3.gif" width="196" height="19" alt=""/></div><div class="clear"></div>    
+    <div style="width:768px; height:138px; border:1px #dcdcdc solid; text-align:center;">
+    
+    <div style="height:16px; line-height:16px; color:#666; margin:20px auto; font-size:15px;">选择你最常出没的社区......</div>
+    
+    <a href="javascript:void(0)" onclick="window.open('http://v.t.sina.com.cn/share/share.php?title='+encodeURIComponent('易视网')+'&url='+encodeURIComponent('http://www.easeeyes.com/?u={$userid}')+'&source=bookmark','_blank','width=450,height=400');" style="width:175px; height:50px; float:left; margin-right:10px; margin-left:20px;"><img src="images/user/lyq1.gif" width="175" height="50" alt=""/></a>    
+    
+    <a href="javascript:void(0)" onclick="window.open('http://www.kaixin001.com/repaste/share.php?rtitle='+encodeURIComponent('易视网')+'&rurl='+encodeURIComponent('http://www.easeeyes.com/?u={$userid}')+'&rcontent=');" style="width:175px; height:50px; float:left; margin-right:10px;"><img src="images/user/lyq2.gif" width="175" height="50" alt=""/></a>
+
+    <a href="javascript:void(0)" onclick="window.open('http://share.renren.com/share/buttonshare.do?link='+encodeURIComponent('http://www.easeeyes.com/?u={$userid}')+'&title='+encodeURIComponent(document.title))" style="width:175px; height:50px; float:left; margin-right:10px;"><img src="images/user/lyq3.gif" width="175" height="50" alt=""/></a>
+    
+    <a href="javascript:void(0)" onclick="window.open('http://www.douban.com/recommend/?url='+encodeURIComponent('http://www.easeeyes.com/?u={$userid}')+'&title='+encodeURIComponent(document.title))" style="width:175px; height:50px; float:left; margin-right:10px;"><img src="images/user/lyq4.gif" width="175" height="50" alt=""/></a>    
+    
+    </div>
+    
+    <div style=" float:left; margin-left:12px; width:100%; text-align:left; margin-top:26px; margin-bottom:10px;"><img src="images/user/u_title2.gif" width="194" height="19" alt=""/></div><div class="clear"></div>
+    <div style="width:768px; height:650px; border:1px #dcdcdc solid;">
+    	<div style="width:740px; height:85px; margin-top:12px">
+        	<p style="text-align:left;color:#999; font-size:13px; margin-bottom:10px;">将分享链接，通过ＱＱ，ＭＳＮ等聊天工具发给朋友，或者在论坛发个帖子，将下面的链接放到帖子里，分享这个活动．</p>
+        	<input type="text" value="http://www.easeeyes.com/?u={$userid}" style="width:720px; height:20px; line-height:20px; float:left;"/><br/>
+            <button type="button" onclick="copyToClipboard('http://www.easeeyes.com/?u={$userid}')" style="float:left; margin-top:8px;">复制分享链接</button>
+        </div>
+    	<div style="width:746px; height:512px; text-align:center;"><img src="images/user/img_myself_money.jpg" width="746" height="512" alt=""/></div>
+    
+    </div>
+    
+    <div style=" float:left; margin-left:12px; width:100%; text-align:left; margin-top:26px; margin-bottom:10px;"><img src="images/user/u_title4.gif" width="196" height="19" alt=""/></div>
+    <p style="width:700px; height:214px; line-height:30px; float:left; margin-left:12px; text-align:left; padding-top:10px;">
+        １、将本站提供给您的推荐代码，发送到社区、论坛、博客上。<br/>
+        ２、访问者点击链接，访问易视网。<br/>    
+        ３、在访问者点击链接的 72小时 内，若该访问者在本站注册，即认定该用户是您推荐的。<br/>    
+        ４、该用户今后在本站的一切消费所得的消费积分，您均能获得一定比例的提成。<br/>    
+        ５、提成的消费积分由管理员人工审核发放，请您耐心等待。<br/>    
+        ６、您可以通过分成明细来查看您的介绍、积分提成情况。<br/>
+    </p>
+</div>
+<script type="text/javascript">
+function copyToClipboard(txt) {
+      if(window.clipboardData) {
+              window.clipboardData.clearData();
+              window.clipboardData.setData("Text", txt);
+            alert("复制成功");
+      } else if(navigator.userAgent.indexOf("Opera") != -1) {
+           window.location = txt;
+      } else if (window.netscape) {
+           try {
+                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+           } catch (e) {
+                alert("如果您正在使用FireFox！\n请在浏览器地址栏输入'about:config'并回车\n然后将 'signed.applets.codebase_principal_support'设置为'true'");
+                var urltxt = document.getElementById('textfield4');
+                urltxt.select();
+           }
+           var clip = Components.classes['@mozilla.org/widget/clipboard;1'].createInstance(Components.interfaces.nsIClipboard);
+           if (!clip)
+                return;
+           var trans = Components.classes['@mozilla.org/widget/transferable;1'].createInstance(Components.interfaces.nsITransferable);
+           if (!trans)
+                return;
+           trans.addDataFlavor('text/unicode');
+           var str = new Object();
+           var len = new Object();
+           var str = Components.classes["@mozilla.org/supports-string;1"].createInstance(Components.interfaces.nsISupportsString);
+           var copytext = txt;
+           str.data = copytext;
+           trans.setTransferData("text/unicode",str,copytext.length*2);
+           var clipid = Components.interfaces.nsIClipboard;
+           if (!clip)
+                return false;
+           clip.setData(trans,null,clipid.kGlobalClipboard);
+           alert("复制成功！")
+      }
+}
+</script>
+<!--{/if}-->
+<!-------------------------------------------no.3个人信息板块(2个)--------------------------------------------->
+<!--#我的评论-->
+<!--{if $action eq 'comment_list'}-->
+<h2 class="user_head">我的评论</h2>
+<div class="user_comment">
+	<div class="user_comment_pan">
+        <!--{foreach from=$comment_list item=comment}-->
+        <div class="user_comment_list">
+            <div class="comment_goods_name">商品名称：<a href="goods{$comment.id_value}.html" target="_blank">{$comment.cmt_name}</a></div>           
+            <div class="button_delete"><a href="user.php?act=del_cmt&amp;id={$comment.comment_id}" title="删除评论" onclick="if(!confirm('{$lang.confirm_remove_msg}')) return false;" class="a_block">删除</a></div>
+            <div class="user_comment_rank"><img src="../images/stars{$comment.comment_rank}.gif" width="78" height="15" alt="等级"/></div>
+        </div>
+        <div class="user_comment_text">{$comment.content|escape}</div>
+        <!--{/foreach}--> 
+        <!--{if $comment_list}-->       
+        <div><!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem --> </div> 
+        <!--{else}-->您暂时还没有评论!<!--{/if}-->    
+    </div>
+</div>
+<!--{/if}-->
+<!--#我的评论end-->
+<!--#我的留言-->
+<!--{if $action eq 'message_list'}-->
+<h2 class="user_head">我的留言</h2>
+<div class="user_comment">
+	<div class="user_answer_pan">
+        <!--{foreach from=$message_list item=message key=key name=msg}-->
+        <div style="width:754px; height:auto; min-height:30px; <!--{if $smarty.foreach.msg.index mod 2==1}-->background-color:#f0f0f0;<!--{/if}--> ">
+        	<div style="width:100%; text-align:left;">
+            	<div class="msg_type_tip1"></div>                
+                <div class="msg_type_text">{$message.msg_type}：</div>                
+                <div class="msg_content">{$message.msg_content}</div>                
+            </div><div class="clear"></div>
+            <!--{if $message.re_msg_content}-->
+        	<div class="msg_reply">
+            	<div class="msg_type_tip2"></div>                
+                <div class="msg_type_text">易视回答：</div>
+                <div class="msg_content">{$message.re_msg_content}</div>
+            </div><div class="clear"></div>            
+            <!--{/if}-->        
+        </div>
+        <!--{/foreach}-->        
+        <div style="width:100%;"><!-- #BeginLibraryItem "/library/pages.lbi" --><!-- #EndLibraryItem --> </div>        
+    </div>
+</div><div class="clear"></div>
+<div class="user_answer_head">有问必答</div>
+<div class="user_answer_form">
+<form action="user.html" method="post" enctype="multipart/form-data" name="formMsg" onSubmit="return submitMsg()">	
+    <div class="answer_type">
+        <div class="answer_type_text">留言类型：</div>
+        <div class="answer_type_radio">
+            <input type="radio" name="msg_type" value="0" checked="checked"/>{$lang.type[0]}
+            <input type="radio" name="msg_type" value="1" />{$lang.type[1]}
+            <input type="radio" name="msg_type" value="2" />{$lang.type[2]}
+            <input type="radio" name="msg_type" value="3" />{$lang.type[3]}
+            <input type="radio" name="msg_type" value="4" />{$lang.type[4]}
+            <input type="radio" name="msg_type" value="5" />{$lang.type[5]}
+        </div>
+    </div>
+    <div class="answer_tr">
+        <div class="answer_email_lable">邮箱/电话：</div>
+        <div class="answer_email_input"><input type="text" name="msg_title" class="answer_input"/></div>
+    </div><div class="clear"></div>
+    <div class="answer_tr">
+        <div class="answer_email_lable">内容：</div>
+        <div class="answer_email_input" style="height:auto;"><textarea name="msg_content" cols="50" rows="4" wrap="virtual" class="answer_textarea"></textarea></div>	
+    </div>    
+    <div style="width:756px; height:40px;">
+    	<input type="hidden" name="act" value="act_add_message" />
+        <input type="submit" value="" class="answer_submit" />
+    </div>
+</form>
+</div> 
+<!--{/if}-->
+<!--#我的留言end-->
+</div>
+</div><!--main_end-->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+<script type="text/javascript" src="../../js/tip-totop.js"></script>
+</html>

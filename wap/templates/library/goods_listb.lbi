@@ -1,0 +1,68 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<!--{foreach from=$goods_list item=goods name=foo}-->
+    <!-- {if $goods.goods_id} -->	
+
+<!-- {if $smarty.foreach.foo.index mod 4 !=0} -->
+<div class="spacejx" style="width:16px" ></div>
+<!--{/if}--> 
+
+<div class="showmain">
+<div class="showmainpic">
+<a href="{$goods.url}" target="_blank"><img src="{$goods.goods_thumb}" alt="{$goods.goods_name}" class="goodsimg" border="0" width="150" height="150"  /></a>
+</div>
+<div class="showmaintxt">
+ <div class="showmaintxt1">
+ <a href="{$goods.url}" class="color_qianfei" target="_blank">{$goods.goods_brief|truncate:42:"...":true}</a>
+ </div>
+ <div class="showmaintxt2">
+ <div>
+  <a href="{$goods.url}" title="{$goods.name|escape:html}" class="textlv" target="_blank">{$goods.goods_name}</a>
+ </div>
+
+
+ <div>
+<span class="shanchux"><s><!-- {if $show_marketprice} -->{$goods.market_price}<!-- {/if} --></s></span> <span class="redhong"><b><!--{if $goods.promote_price neq "" } -->{$goods.promote_price}<!--{else}-->{$goods.shop_price}<!--{/if}--></b></span>
+</div>
+
+ </div>
+</div>
+</div>
+
+
+ <!--{/if}--> 
+ <!-- {if $smarty.foreach.foo.index mod 4 ==3} -->
+<div class="xhux" style=" width:750px;"></div>
+<!--{/if}--> 
+ <!--{/foreach}-->
+
+
+		
+<script type="Text/Javascript" language="JavaScript">
+<!--
+{literal}
+function selectPage(sel)
+{
+  sel.form.submit();
+}
+{/literal}
+//-->
+</script>
+<script type="text/javascript">
+window.onload = function()
+{
+  Compare.init();
+  fixpng();
+}
+{foreach from=$lang.compare_js item=item key=key}
+{if $key neq 'button_compare'}
+var {$key} = "{$item}";
+{else}
+var button_compare = '';
+{/if}
+{/foreach}
+var compare_no_goods = "{$lang.compare_no_goods}";
+var btn_buy = "{$lang.btn_buy}";
+var is_cancel = "{$lang.is_cancel}";
+var select_spe = "{$lang.select_spe}";
+</script>

@@ -1,0 +1,6 @@
+.settings/
+.project
+.pydevproject
+.DS_Store
+.vagrant/
+.buildpath

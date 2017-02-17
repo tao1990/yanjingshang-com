@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="screen-orientation" content="portrait" />
+<meta name="x5-orientation" content="portrait" />
+<meta name="full-screen" content="yes" />
+<meta name="x5-fullscreen" content="true" />
+<title>周末新推，周末爆款不惧比价，买贵就赔</title>
+<meta name="Keywords"  content="易视网,易视眼镜网,美瞳,护理液,润眼液,博士伦,海昌,海俪恩,卫康,库博,视康,强生,sho-bi,GEO,NEO,BESCON" />
+<meta name="Description" content="易视网，周末爆款不惧比价，买贵就赔，周六周日，每天四款，底价限时抢，数量有限，先到先得，24小时闪电发货，30天退换货保障" />
+<style>
+.show{display:block}
+.hide{display:none}
+</style>
+</head>
+<!--tpl
+<div><img src="http://file.easeeyes.com/wap/images/20160901/banner.jpg" alt="" style="display:block;"></div>
+<div><a href=""><img src="http://file.easeeyes.com/wap/images/20160901/banner.jpg" alt="" style="display:block;"></a></div>
+-->
+<body>
+<!-- #BeginLibraryItem "/library/header.lbi" --><!-- #EndLibraryItem -->
+<!--main-->
+<div class="container">
+	<div><img src="http://file.easeeyes.com/wap/images/weekendActive/banner.jpg" alt="" style="display:block;"></div>
+    <div><img src="http://file.easeeyes.com/wap/images/weekendActive/01.jpg" alt="" style="display:block;"></div>
+    <div><a href="http://m.easeeyes.com/goods3630.html"><img src="http://file.easeeyes.com/wap/images/weekendActive/02.jpg" alt="" style="display:block;"></a></div>
+    <div><a href="http://m.easeeyes.com/category.php?search=1&keyword=%E7%A7%91%E8%8E%B1%E5%8D%9A%E5%8D%A1%E7%8B%AE%E5%9B%BE%E7%B3%BB%E5%88%97%E5%B9%B4%E6%8A%9B%E5%9E%8B%E5%BD%A9%E8%89%B2%E9%9A%90%E5%BD%A2%E7%9C%BC%E9%95%9C1%E7%89%87%E8%A3%85"><img src="http://file.easeeyes.com/wap/images/weekendActive/03.jpg" alt="" style="display:block;"></a></div>
+    <div><a href="http://m.easeeyes.com/goods105.html"><img src="http://file.easeeyes.com/wap/images/weekendActive/04.jpg" alt="" style="display:block;"></a></div>
+    <div><a href="http://m.easeeyes.com/goods1121.html"><img src="http://file.easeeyes.com/wap/images/weekendActive/05.jpg" alt="" style="display:block;"></a></div>
+</div>
+<!-- #BeginLibraryItem "/library/footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+<script>
+
+</script>
+</html>

@@ -1,0 +1,24 @@
+*{margin:0;padding:0;}
+html,body{height:100%;}
+img{border:0;}
+body{font-family:'Microsoft Yahei';background:url(http://file.easeeyes.com/b2b/images/login_bg.jpg) no-repeat center;}
+a{text-decoration:none;}
+.clearfix{*zoom:1;}
+.clearfix:after{content:'';display:block;height:0;visibility:hidden;clear:both;}
+
+.container{width:1200px;height:100%;margin:0 auto;position:relative;}
+.loginForm-wrapper{width:350px;padding:30px;border-radius:5px;box-shadow:0 0 5px 1px rgba(0,0,0,.2);position:absolute;right:80px;top:50%;height:440px;margin-top:-250px;background:#fff;}
+.loginForm-title{font-size:26px;margin:20px 0 15px;color:#444;}
+.loginForm-item{height:53px;padding-left:30px;border:1px solid #777;margin-bottom:20px;color:#fff;background:url(http://file.easeeyes.com/b2b/images/login_member.jpg) no-repeat 8px center;}
+.loginForm-item input{display:block;width:318px;height:53px;line-height:53px;background:none;color:#333;font-size:14px;font-family:'Microsoft Yahei';border:0 none;}
+.loginForm-item input:focus{outline:0;}
+.loginForm-item.password{background-image:url(http://file.easeeyes.com/b2b/images/login_psw.jpg);}
+.loginForm-options{font-size:13px;margin-bottom:25px;}
+.loginForm-options input{vertical-align:middle;}
+.loginForm-options a{float:right;color:#015287;}
+.loginForm-options a:hover{text-decoration:underline;}
+.loginForm-btn{display:block;cursor:pointer;width:100%;height:50px;line-height:50px;background:#015287;border:0 none;color:#fff;font-size:15px;font-family:'Microsoft Yahei';text-align:center;margin-bottom:25px;}
+.loginForm-msg{margin:10px 0;font-size:13px;color:#ff7676;}
+.loginForm-tip{font-size:13px;}
+.loginForm-tip a{color:#015287;}
+.loginForm-tip a:hover{text-decoration:underline;}

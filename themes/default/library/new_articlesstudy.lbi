@@ -1,0 +1,9 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div style="text-align:left; padding-top:10px; padding-bottom:12px;">
+<!--{foreach from=$new_articles_eypt item=article name=newslist}-->
+    <div class="margin_left" style="line-height:32px;"><span><img src="images/yi_tip/dot.gif" /></span>
+        <a href="{$article.url}" title="{$article.title|escape:html}" target="_blank">{$article.short_title}</a>
+    </div>
+    <div class="xhux"></div> 
+<!--{/foreach}-->
+</div>

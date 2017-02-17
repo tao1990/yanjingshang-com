@@ -1,0 +1,27 @@
+<div id="indexsearch">
+<div id="search_left"><img  src="images/index_r16_c1.jpg" width="233" height="30" /></div>
+<form method="get" action="categorysea.php">
+<div id="search_mid">
+<div id="search_tb">
+<img name="index_r17_c61" src="images/index_r17_c61.jpg" width="25" height="24" border="0" id="index_r17_c61" alt="" />
+</div>
+<div id="kuang">
+<input type="text" name="keywords" style="height:14px; width:176px;">
+</div>
+<div id="searchtj"><input type="image"  src="images/index_r18_c87.jpg" width="52" height="21" border="0" id="index_r18_c87" alt="" /><input type="hidden" name="search" value="1" /></div>
+</div>
+</form>
+
+<div id="search_right">
+  <div id="search_left_js">
+  <a href="flow.php"><img name="index_r20_c128" src="images/index_r20_c128.jpg" width="53" height="19" border="0" id="index_r20_c128" alt="" style="padding-left:10px;" /></a>
+  </div>
+<div id="search_texg_right">
+  {insert name='cart_infotop'}  </div>
+
+<div id="xiaoc">
+<a href="flow.php"><img src="images/index_r21_c103.jpg" width="16" height="16" border="0"  style="padding-right:6px;"  /></a></div>
+
+</div>
+
+</div>

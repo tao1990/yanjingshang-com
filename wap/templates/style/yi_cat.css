@@ -1,0 +1,68 @@
+﻿/*------------------------------------------------------------------------------------------分类页面--------------------------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------本页公用样式---------------------------------------------------------------------*/
+.blue{color:#0ca6bd;}
+.com_h_body{ margin-bottom:0;}
+.main{width:990px; height:auto; margin:0 auto;}
+.main_left{  float:left; width:200px; height:auto; overflow:hidden;}
+.main_right{float:right; width:780px; height:auto; overflow:hidden;}
+.hv_gift{display:inline-block; width:28px; height:16px; background:url(../images/common/gift3.gif) no-repeat;}
+/*---------------------------------------------------------------------------公用样式end-----------------------------------------------------------------*/
+
+
+/*---------------------------------------------------------------------------内页左侧导航-------------------------------------------------------------------------*/
+.cat_dao_pan h2{width:200px; height:32px; background:url(../images/xu/classified/bg.png) no-repeat;}
+.cat_pan{width:196px; height:auto; padding:1px; border:1px solid #EFEFEF; overflow:hidden;}
+.cat_title{width:196px; height:28px; line-height:28px; text-indent:60px; border-bottom:1px inset #EFEFEF; margin-top:1px; background:url(../images/inner/tip_jia.gif) no-repeat 38px 9px #f9f9f9; color:#666; cursor:pointer;}
+
+.cat_content{width:196px; height:auto; border-bottom:1px inset #EFEFEF; overflow:hidden; display:none;}
+.cat_txt{width:176px; height:auto; line-height:22px; margin:6px 0 5px 26px; overflow:hidden;}
+.cs_space{display:inline-block; width:28px; line-height:22px;}
+.display_image{background-image:url(../images/inner/tip_jian.gif);}
+.display{display:block;}
+.red{ color:#E43232;}
+.cat_tab_ul{width:172px; height:auto; line-height:22px; margin-left:20px; overflow:hidden;}
+.cat_tab_ul li{width:76px; margin-left:6px; text-align:left;}
+/*---------------------------------------------------------------------------内页左侧导航end----------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------热销排行start-----------------------------------------------------------------------*/
+.classfd_hot ul li{width:178px; margin:5px 10px;_display:inline;}
+.classfd_hot_shu ,.classfd_hot_shus{ line-height:12px; text-align:center; color:#FFF;width:12px; height:12px; margin-right:10px; display:inline}
+.classfd_hot_h2{background:#f2f2f2 url(../images/xu/classified/bg.png) -108px -262px no-repeat; height:27px;}
+.classfd_hot_ul{ border:1px solid #f2f2f2; overflow:hidden; padding-top:5px; width:198px;}
+.hot_sale_a{width:60px; height:60px; float:left; border:1px #fff solid;}
+.hot_sale_a:hover{border:1px #99ddb9 solid;}
+.hot_sale_tip_title{float:left; width:70px; padding-left:10px;}
+.hot_sale_tip_title p{height:32px; line-height:20px; overflow:hidden;}
+/*---------------------------------------------------------------------------热销排行END-------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------商品列表块start---------------------------------------------------------------------*/
+.goods_list{width:760px; height:auto; overflow:hidden; padding:10px; float:right;}
+.goods_li{width:190px; height:238px; text-align:center; overflow:hidden;}
+.goods_dl{width:162px; height:auto; margin:0 auto;}
+.goods_tip{width:42px; height:23px; display:inline-block; overflow:hidden; position:relative; top:3px; left:136px; margin-bottom:-23px;}
+.goods_li_name{width:100%; height:36px; line-height:18px; overflow:hidden;}
+.goods_li_pr{width:100%; height:14px; line-height:14px; margin:10px 0 5px 0;}
+.goods_li_num{text-align:center; width:100%; height:14px; line-height:14px;}
+.goods_li_img{width:150px; height:150px; border:1px #fff solid; margin:0 0 4px 5px; display:block;}
+.goods_li_img:hover{ border:1px #99ddb9 solid;}
+.goods_li_line{width:100%; height:10px; border-bottom:1px #dcdcdc dashed; margin:10px auto; overflow:hidden;}
+/*---------------------------------------------------------------------------商品列表块end-----------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------分页重写start-------------------------------------------------------------------------*/
+#pagebar{width:780px; height:24px; margin:10px auto 0 auto; text-align:center; overflow:hidden;}
+#pager{width:630px; height:24px; margin:0 auto;}
+
+.page_h{width:66px; height:22px; line-height:22px; border:1px solid #dcdcdc; margin:0 3px;}
+
+.page_cell{width:22px; height:22px; line-height:22px; border:1px solid #dcdcdc; margin:0 3px;}
+.page_cell a{display:block;}
+.page_cell a:hover{text-decoration:none; font-weight:bold;}
+.page_cell2{width:22px; height:22px; line-height:22px; border:1px solid #fff; margin:0 3px; font-size:14px;}
+
+.page_input{width:30px; height:18px; line-height:18px; text-indent:2px; border:1px solid #dcdcdc; color:#999; margin:1px 2px; vertical-align:middle;}
+
+.page_submit{width:38px; height:22px; line-height:22px; border:none; background:url('../images/button/bt_sure.jpg') no-repeat 0 1px; margin-left:10px; cursor:pointer;}
+
+.page_span{display:inline-block; margin:0 10px;}
+/*---------------------------------------------------------------------------分页重写END-------------------------------------------------------------------------*/

@@ -1,0 +1,20 @@
+﻿#main{ margin:0 auto; width:1002px; min-height:320px; }
+#zmain{ margin:0 auto; width:1002px; min-height:320px; }
+#zmain_left{ float:left; text-align:left; width:500px; }
+#zmain_right{ float:right; text-align:left; width:500px; }
+
+#zfk{  float:left; text-align:left; width:496px; height:232px; border:1px solid #cccccc;}
+#zfkt{  float:left; text-align:left; width:496px; height:160px; border:1px solid #cccccc; margin-top:8px;}
+#yfk{  float:right; text-align:left; width:496px; height:402px; border:1px solid #cccccc;}
+
+.spacehang{ float:left; width:10px; font-size:0px; height:100px;}
+.fk{ float:left; width:492px; height:396px;  border:2px solid #dddddd;}
+.fkmain{ float:left; width:476px; margin-left:10px; margin-top:20px; text-align:left;}
+.fkhead{ float:left; width:472px; line-height:24px; padding-bottom:4px; height:24px; border-bottom:1px solid #dd0000; }
+.fkheadh{ float:left; width:472px; line-height:28px; height:28px; color:#FF0000; text-align:center}*/
+.fkheadhdd{ float:left; width:472px; line-height:32px; height:48px; color:#FF0000; text-align:center}
+.fktable{ float:left; width:472px; line-height:24px; min-height:30px; text-align:center}
+.fktext{ float:left; width:472px; line-height:72px; height:72px; text-align:center}
+.feise{ color:#9B9B9B}
+.hongse{ color:#FF0000;}
+.qhei{color:#666666;}

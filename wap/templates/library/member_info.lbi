@@ -1,0 +1,18 @@
+<!--{if $user_info}-->
+<ul class="com_umh"><li>您好，</li><li class="com_umn"><a href="user.html" onfocus="this.blur()" title="进入会员中心">{if $user_info.alias}{$user_info.alias}{else}{$user_info.username}{/if}</a>！</li>
+<li style="position:relative;"><a href="user_msg.html" id="com_um" {if !$user_info.slur}class="com_um"{/if}>消息<font class="red">（{$user_info.unread_msg}）</font></a> <a href="user_logout.html" onfocus="this.blur()"><font class="red">[退出]</font></a>
+{if !$user_info.slur}<div id="slur"><font class="red">{$user_info.unread_msg}</font>个新提醒，<a href="user_msg.html">查看</a> <a href="javascript:;" onclick="slur({$user_info.user_id})">忽略</a></div>{/if}
+<script type="text/javascript">
+function slur(uid)
+{
+	var exp = new Date();
+	exp.setTime(exp.getTime() + 1*1*100*1000);
+	document.getElementById('slur').style.display='none';
+	document.getElementById("com_um").className='';
+	document.cookie = 'slur_'+uid+'=1;expires='+exp.toGMTString();
+}
+</script>
+</li></ul>
+<!--{else}-->
+欢迎来到易视网！<a href="user.html" onfocus="this.blur()">[请登录]</a>，新用户？<a href="user_register.html" onfocus="this.blur()"><font class="red">[免费注册]</font></a>
+<!--{/if}-->

@@ -1,0 +1,100 @@
+﻿/* =======================================================================================================================
+ * 商品页面 全部样式【2012/9/27】【Author:yijiangwen】
+ * =======================================================================================================================
+ */
+/*-------------------------------------------------【单页公共样式】-------------------------------------------------*/
+.fs20{ font-size:20px;}
+.dao_tip{width:990px; height:21px; background:url(../images/goods/tip_line.jpg) no-repeat 0 20px; overflow:hidden; margin-bottom:8px;}
+.dao_gen{width:100%; height:12px; line-height:12px; color:#333;}
+.dao_gen a,.dao_gen code{color:#999;}
+.dao_gen a:hover{color:#E43232; text-decoration:none;}
+
+.goods_sh_tb{margin:0 auto; border-collapse:collapse; border: 1px solid #D0EBF9; font-size:12px;}
+.goods_sh_tb td{ text-align:center; line-height:20px; border: 1px solid #D0EBF9; padding:3px 0;}
+.goods_sh_tb th{ text-align:center; line-height:20px; border: 1px solid #D0EBF9; background-color: #EBF9FC;}
+.goods_sh_tb .blue{background-color:#EBF9FC; text-align:center; line-height:20px;}
+/*-------------------------------------------------【单页公共样式 end】---------------------------------------------*/
+
+/*-------------------------------------------------【xu_css修改】--------------------------------------------------*/
+.pro_top_bem_brm{ margin-top:8px;}
+.g_desc_tr{margin:6px 0 3px 0; line-height:14px; height:14px;}
+.g_desc_tr1{width:280px; font-size:12px; line-height:12px;}
+.g_desc_gift{width:20px; height:25px; background:url(../images/common/gift1.gif) no-repeat; margin-top:-8px; margin-right:3px;}
+/*-------------------------------------------------【xu_css end】-------------------------------------------------*/
+
+/*-------------------------------------------------【商品详情】----------------------------------------------------*/
+.g_desc_pic{width:778px; height:auto; font-size:0; margin-top:10px;}
+.kuang_cs{width:778px; height:auto; overflow:hidden;}
+.kuang_cs_txt{width:778px; height:14px; margin-top:10px;}
+.kuang_cs_txt dd{text-align:center; width:150px; height:14px; line-height:14px; color:#2bbdd5;}
+.kuang_cs_txt dd span{color:#666;}
+
+.append_li{width:200px; height:66px; margin:0 12px 8px 0; }
+.goods_append{width:198px; height:64px; display:block; border:1px #dcdcdc solid; background:url(../images/goods/kj1.jpg) no-repeat;}
+.goods_append:hover{ border:1px solid #2cbcd4;}
+.g_append_img2{background-image:url(../images/goods/kj2.jpg);}
+.g_append_img3{background-image:url(../images/goods/kj3.jpg);}
+.g_append_img4{background-image:url(../images/goods/kj4.jpg);}
+.g_append_img5{background-image:url(../images/goods/kj5.jpg);}
+.g_append_img6{background-image:url(../images/goods/kj6.jpg);}
+.goods_append_b{ border:1px #2cbcd4 solid;}
+.kj_ck_tip{width:198px; height:64px; background:url(../images/goods/kj_tip2.gif) no-repeat 184px 49px; cursor:pointer;}
+/*-------------------------------------------------【商品详情end】-------------------------------------------------*/
+
+
+/*-------------------------------------------------【商品购买板块】----------------------------------------------------*/
+.g_buy_tip1{width:42px; height:22px; line-height:22px; color:#999; text-align:center;}
+
+/*-------------------------------------------------【商品购买板块end】-------------------------------------------------*/
+
+/*-------------------------------------------------【商品价格板块】----------------------------------------------------*/
+#vip_pr_p{width:186px; height:101px; overflow:hidden; margin:-8px 0 0 74px; position:absolute; display:none; z-index:100;}
+#vip_h{width:100%; height:8px; line-height:8px; border:none; background:url(../images/goods/vip_tip.gif) no-repeat;}
+.vip_pr_p dd{height:30px; line-height:30px; border-top:none; background-color:#f6f6f6;}
+.vip_td{width:116px; border:1px solid #dcdcdc; color:#0CA6BD; text-indent:32px; font-weight:bold; background:url(../images/goods/vip1.gif) no-repeat 10px 8px;}
+.vip_td2{background:url(../images/goods/vip2.gif) no-repeat 10px 8px;}
+.vip_td3{background:url(../images/goods/vip3.gif) no-repeat 10px 8px;}
+.vip_td1{width:67px; text-indent:10px; border:1px solid #dcdcdc; border-left:none; color:#e43232;}
+.how_vip{ margin-left:10px; color:#999;}
+.how_vip_tip{display:inline-block; width:12px; height:12px; background:url(../images/xu/productmore/bg.png) no-repeat 2px -1290px; vertical-align:middle;}
+#show_vip_tip{display:inline-block; width:45px; height:15px; margin-left:10px; text-indent:2px; background-color:#e43232; color:white; font-family:'微软雅黑'; cursor:pointer;}
+.vip_tip_line{display:inline-block; margin:-2px 3px 0 4px; width:6px; height:1px; border-bottom:1px solid #999; vertical-align:middle;}
+.vip_del{color:#999;}
+/*-------------------------------------------------【商品价格板块end】-------------------------------------------------*/
+
+
+
+/*-------------------------------------------------【买家秀】-------------------------------------------------*/
+.mjx_pan{width:780px; height:auto; overflow:hidden; margin-bottom:10px;}
+#mjx_detail{width:100%; height:14px; line-height:14px; margin:10px auto; text-align:center;}
+
+.mjx_img{width:780px; height:auto; margin:0 auto; margin-bottom:10px; overflow:hidden; text-align:center;}
+.mjx_thumb_pan{width:100%; height:170px; background-color:#f2f2f2;}
+.mjx_thumb_li{width:720px; height:100%;}
+.mjx_thumb{width:720px; height:152px; margin-top:9px; overflow:hidden;}
+.mjx_thumb dd{width:120px; height:150px; margin:0 11px; border:1px solid #f2f2f2; cursor:pointer;}
+
+.prev_mjx{width:30px; height:100%; background:url(../images/goods/mjx_left.png) no-repeat 10px 73px; cursor:pointer;}
+.next_mjx{width:30px; height:100%; background:url(../images/goods/mjx_right.png) no-repeat 10px 73px; cursor:pointer;}
+/*-------------------------------------------------【买家秀 end】-------------------------------------------------*/
+
+
+
+.goods_name_tr{width:650px; height:auto; font-size:14px;color:#0ca5bd; line-height:22px; margin-bottom:10px; overflow:hidden;}
+.goods_name_tr span{font-size:16px; color:#333; display:inline-block; margin-right:4px;}
+.goods_shoucang{width:90px; height:16px; line-height:16px; display:block; margin:23px 0 0 30px; float:left; cursor:pointer; color:#84a801; text-align:left; text-indent:20px; background:url(../images/goods/tip_jia.gif) no-repeat;}
+.goods_shoucang:hover{color:#84a801; text-decoration:none;}
+
+#group_buy_h{background:url(../images/goods/group_buy_h.jpg) no-repeat #f2f2f2; height:25px; line-height:25px; color:white; font-size:16px; font-weight:bold; text-indent:40px;}
+
+
+/*-------------------------------------------------【新增板块beg】-------------------------------------------------*/
+#g_zselect,#g_yselect{width:90px; margin-left:3px;}
+/*-------------------------------------------------【新增板块end】-------------------------------------------------*/
+
+
+/*-----------------------yi:商品购买按钮图标 ------------------------------------*/
+.goods_sale_out{background:url('../images/cart/sale_out.png') no-repeat 0 0 transparent;}
+.not_on_sale{background:url('../images/cart/not_on_sale.png') no-repeat 0 0 transparent;}
+.goods_sale_out2{background:url('../images/cart/sale_out2.png') no-repeat 0 0 transparent;}
+.goods_sale_out3{background:url('../images/cart/sale_out3.png') no-repeat 0 0 transparent;}
